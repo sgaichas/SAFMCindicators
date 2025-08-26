@@ -1,0 +1,66 @@
+---
+title: "Report Structure"
+author: "Sarah Gaichas"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Objectives
+
+1) Review the different types of ecosystem data and information including data products and
+decision-support tools (e.g. Ecosystem Status Reports, Climate Vulnerability Assessments, risk
+assessments) currently available to the regional management councils and evaluate how they are
+used in council management processes;
+
+2) Identify opportunities and methods for incorporating identified ecosystem information into
+SAFMC management processes, including inter-jurisdictional management decision-making
+processes, and identify practical requirements for successful implementation (e.g. data quality,
+frequency of information updates, regional council process consistency, implementation
+timelines); and
+
+3) Identify opportunities to continue to expand cooperative, constituent-engaged data collection
+and research to improve the available ecosystem information in the South Atlantic region (e.g.,
+study fleets, cooperative research, citizen science).
+
+
+# Methods
+
+## Conduct an ecosystem information review across Councils, including SAFMC
+
+Comprehensive literature review: peer reviewed literature and Council webpage search for current and past ecosystem approaches
+
+Structured interviews of key regional personnel to document ecosystem information sources, data products, and processes where ecosystem information is used for each U.S. Fishery Management Council, including SAFMC. 
+
+This comprehensive review will place current SAFMC practice and products in the context of the experience of all other U.S. Councils, and set the stage to identify opportunities to use its existing ecosystem information resources, including an ecosystem status report, climate vulnerability analyses for fish and fishing communities, and citizen science program.
+
+## Develop recommendations for ways to incorporate ecosystem information into SAFMC fisheries management processes
+
+Annual catch specification--ESPs into assessments, SSC processes for ABC buffers. Can ESPs work in SEDAR and SAFMC SSC processes?
+
+To identify opportunities specific to SAFMC processes beyond catch decisions, I will review both SEDAR processes and Council actions for the past 3-5 years to evaluate current and potential pathways for the use of ecosystem information. This review will include inter-jurisdictional processes such as the East Coast Climate Scenario Planning and subsequent East Coast Climate Coordination Group. Noting that the Council is also currently requesting proposals to review its fisheries management process, I would coordinate with that project if practical given project timelines. Based on this review, I will classify management decisions by data needs and process timelines to develop a prioritized list of processes linked to ecosystem information and recommend practical pathways for implementation. Below are several examples that could be further refined for the South Atlantic context during the project.
+
+# Results
+
+## Ecosystem information review across Councils
+
+PRELIMINARY THOUGHTS/HYPOTHESES TO TEST
+
+Three general categories for current use of ecosystem products: FMP/indicator based, FEP/geographically based, and developing
+
+PFMC and CFMC: island based FEPs structure decisions for species within a defined ecoregion, done because each island has distinct social, economic, and ecological conditions and conducting species assessments across all islands was probably never practical. Characterized by a lot of species, many data limited
+
+NPFMC, PFMC, MAFMC, NEFMC: species based FMPs structure decisions although many species can be within an FMP. Annual ecosystem indicator reports are produced and presented to each Council. Ecosystem indicators have been examined and sometimes used at the full ecosystem, ecoregion (subset of area within Council jurisdiction), species, and stock levels for decision making. Characterized by high value data rich stocks with complex quantitative assessments although data limited stocks and species complexes are also in the region
+
+SAFMC, GFMC: developing. species based FMPs structure decisions although many species can be within an FMP. SAFMC has a voluminous FEP and a recent ecosystem indicator report, though not annual.  I need to look at GFMC that is the only one where I have no idea right now.
+
+WHAT DO THE COUNCILS THINK ABOUT THEIR APPROACHES?
+
+
+
+## Recommendations for SAFMC
+
+SAFMC shares a mix of reef-type or rockfish complex like data limited species with some high value data rich stocks, so a mix of approaches from the above may be warranted.
