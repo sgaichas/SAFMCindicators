@@ -51,3 +51,5 @@ rsconnect/
 # Mac junk
 .DS_Store
 
+# local folders
+test_*/
