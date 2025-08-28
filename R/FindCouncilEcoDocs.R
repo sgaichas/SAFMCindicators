@@ -124,10 +124,10 @@ analyze_search_results(results)
 # Export found documents
 export_found_documents(results, format = "csv")
 
-######## GFMC
+######## GFMC Didn't work, new website may not be crawlable
 
 results <- search_domain_for_string(
-  base_url = "https://gulfcouncil.org/",
+  base_url = "https://gulfcouncil.org/about/policies-procedures/",
   search_string = c("ecosystem approach|ecosystem indicator|ecosystem report|ecosystem status|ecosystem based"),
   max_pages = 500,        # Maximum pages to crawl; 
   max_depth = 3,          # How deep to crawl; 
