@@ -42,7 +42,6 @@ library(httr)
 library(stringr)
 library(purrr)
 library(dplyr)
-library(infix)
 
 # Step 1: Website crawler to find all pages
 crawl_website <- function(base_url, max_pages = 100, max_depth = 3, 
@@ -415,6 +414,8 @@ search_domain_for_string <- function(base_url, search_string,
       filename <- paste0("domain_search_", 
                          gsub("[^A-Za-z0-9]", "_", search_string), "_",
                          format(Sys.Date(), "%Y%m%d"), ".csv")
+    }else{
+      filename <- save_filename
     }
     utils::write.csv(results_df, filename, row.names = FALSE)
     cat(paste("Results saved to:", filename, "\n"))
