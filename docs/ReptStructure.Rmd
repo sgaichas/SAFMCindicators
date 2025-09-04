@@ -33,6 +33,12 @@ study fleets, cooperative research, citizen science).
 
 Comprehensive literature review: peer reviewed literature and Council webpage search for current and past ecosystem approaches
 
+Lit search terms 
+
+Google search and google scholar: "ecosystem indicators US fishery management councils"
+
+NOAA IR: "ecosystem status report" "climate vulnerability analysis" "fisheries ecosystem plan"
+
 Structured interviews of key regional personnel to document ecosystem information sources, data products, and processes where ecosystem information is used for each U.S. Fishery Management Council, including SAFMC. 
 
 This comprehensive review will place current SAFMC practice and products in the context of the experience of all other U.S. Councils, and set the stage to identify opportunities to use its existing ecosystem information resources, including an ecosystem status report, climate vulnerability analyses for fish and fishing communities, and citizen science program.
@@ -51,13 +57,37 @@ PRELIMINARY THOUGHTS/HYPOTHESES TO TEST
 
 Three general categories for current use of ecosystem products: FMP/indicator based, FEP/geographically based, and developing
 
-PFMC and CFMC: island based FEPs structure decisions for species within a defined ecoregion, done because each island has distinct social, economic, and ecological conditions and conducting species assessments across all islands was probably never practical. Characterized by a lot of species, many data limited
+WPFMC and CFMC: island based FEP/FMPs structure decisions for species within a defined ecoregion, done because each island has distinct social, economic, and ecological conditions and conducting species assessments across all islands was probably never practical. Characterized by a lot of species, many data limited
 
 NPFMC, PFMC, MAFMC, NEFMC: species based FMPs structure decisions although many species can be within an FMP. Annual ecosystem indicator reports are produced and presented to each Council. Ecosystem indicators have been examined and sometimes used at the full ecosystem, ecoregion (subset of area within Council jurisdiction), species, and stock levels for decision making. Characterized by high value data rich stocks with complex quantitative assessments although data limited stocks and species complexes are also in the region
 
 SAFMC, GFMC: developing. species based FMPs structure decisions although many species can be within an FMP. SAFMC has a voluminous FEP and a recent ecosystem indicator report, though not annual.  I need to look at GFMC that is the only one where I have no idea right now.
 
 WHAT DO THE COUNCILS THINK ABOUT THEIR APPROACHES?
+
+Interview Template:
+
+Review Data products from lit review
+
+Review Uses of record from lit review
+
+Validate the above, then:
+
+What other uses not recorded?
+
+What are successes with current information and processes
+
+What are and challenges with current information and processes
+
+What might be done differently to better meet each Council’s objectives
+
+### In depth each Council, pre interview
+
+##### NPFMC
+
+
+##### 
+
 
 
 
