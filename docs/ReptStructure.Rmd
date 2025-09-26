@@ -45,7 +45,7 @@ This comprehensive review will place current SAFMC practice and products in the 
 
 ## Develop recommendations for ways to incorporate ecosystem information into SAFMC fisheries management processes
 
-Annual catch specification--ESPs into assessments, SSC processes for ABC buffers. Can ESPs work in SEDAR and SAFMC SSC processes?
+Annual catch specification--ESRs/ESPs into assessments, SSC processes for ABC buffers. Can ESPs work in SEDAR and SAFMC SSC processes?
 
 To identify opportunities specific to SAFMC processes beyond catch decisions, I will review both SEDAR processes and Council actions for the past 3-5 years to evaluate current and potential pathways for the use of ecosystem information. This review will include inter-jurisdictional processes such as the East Coast Climate Scenario Planning and subsequent East Coast Climate Coordination Group. Noting that the Council is also currently requesting proposals to review its fisheries management process, I would coordinate with that project if practical given project timelines. Based on this review, I will classify management decisions by data needs and process timelines to develop a prioritized list of processes linked to ecosystem information and recommend practical pathways for implementation. Below are several examples that could be further refined for the South Atlantic context during the project.
 
@@ -85,8 +85,69 @@ What might be done differently to better meet each Council’s objectives
 
 ##### NPFMC
 
+The North Pacific Region has three Ecosystem Status Reports (ESRs), one for each ecoregion: Eastern Bering Sea, Gulf of Alaska, and Aleutian Islands. In this region, Ecosystem and Socio-economic Profiles (ESPs), an ecosystem status report tailored to an individual stock, were invented [@shotwell] and are produced for select stocks: Alaska sablefish, Eastern Bering Sea Pacific cod, Eastern Bering Sea snow crab, Bristol Bay red king crab, Bering Sea and Aleutian Islands tanner crab, Gulf of Alaska pollock, and Gulf of Alaska Pacific cod. A separate annual economic status report is also presented. All are available online https://www.npfmc.org/library/safe-reports/. 
 
-##### 
+ESRs are produced annually, and ESPs are updated annually (?), with both presented alongside updated stock assessments in the Council's annual specifications process. Both ESRs and ESPs feed into annual catch specification through risk tables presented in stock assessments [@dorn]. Both data products draw on process research conducted in the region to develop indicators. 
+
+![Figure 1. North Pacific ecosystem data in management processes, reprinted from Siddon, E. 2024 Fig. 1](images/NPFMC_EcoDataUse.png)
+![Figure 1 alt. North Pacific ecosystem data in management processes, reprinted from Siddon, E. 2025 Fig. 1](images/Honeycomb Graphic.png)
+
+Still working within FMP but this process in two, groundfish and crab.
+
+FEPs have been developed for the Aleutian Islands (shelved) and the Bering Sea (active).
+
+A Climate Vulnerability Analysis for Bering Sea species has been published, however its direct use in management processes is unclear. 
+
+ESRs have been produced since 1995,  are also presented as contextual information, and have been used to adjust TAC advice in the past [@zador]
+
+##### PFMC
+
+ESR and risk tables in progress
+
+CVA exists
+
+FEP developed
+
+##### WPFMC
+
+ESR and CVAs exist
+
+Island based FEPs
+
+##### NEFMC
+
+The New England region gets a State of the Ecosystem (SOE) report each year that covers two ecoregions: the Gulf of Maine and Georges Bank. Coastwide Northeast U.S. indicators are also included. Ecosystem profiles and ESPs have been produced for X stocks during research track assessments: Atlantic herring, 
+
+The Council is developing a risk policy that will use some indicators from the SOE and possibly ESPs. 
+
+A climate vulnerability analysis for Northeast U.S. species has been published, and provides input to the new risk policy currently in development by the Council. 
+
+The Council previously developed an example Fisheries Ecosystem Plan with ecosystem and aggregate stock level catch limits (ceilings) and stock level minimum biomass thresholds (floors) for 10 species on Georges Bank. The Council has suspended development of this FEP approach in favor of the new indicator-based risk policy. 
+
+##### MAFMC
+
+The Mid-Atlantic region gets a State of the Ecosystem (SOE) report each year that covers one ecoregion: the Mid-Atlantic Bight. Coastwide Northeast U.S. indicators are also included. Ecosystem socio-economic profiles have been produced for X stocks during research track assessments: bluefish, black sea bass, golden tilefish, 
+
+The Council uses indicators from both the SOE and ESPs in an annual ecosystem-level risk assessment. This risk assessment has been used to identify priority fisheries for further analysis with conceptual modeling and managment strategy evaluation. The risk assessment was expaneded in 2024 to include additional risk elements, indicators, and risk criteria.
+
+A climate vulnerability analysis for Northeast U.S. species has been published, and is considered within the SSC's ABC deliberation process as part of ecosystem factors contributing to uncertainty in the OFL. 
+
+##### CFMC
+
+Newest ESR, never had one before. No CVA?
+
+Island based FMPs
+
+EBFM approach is based on stakeholder derived conceptual models for each Island
+
+##### GFMC
+
+ESR and CVA exists
+
+
+##### SAFMC
+
+ESR, FEP, and CVA all exist
 
 
 
