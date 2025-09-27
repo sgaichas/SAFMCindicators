@@ -117,6 +117,8 @@ The first two FEP action modules have been initiated, and a final report is avai
 
 A Climate Vulnerability Analysis for Bering Sea species has been published, however its direct use in management processes is unclear... The Climate Ready Synthesis recommended inclusion of climate vulnerability information in status reports/risk assessments; perhaps this is being done?
 
+A climate scenario planning workshop took place in June 2024. How has this been integrated?
+
 The Climate Change Task Force recommended several next steps and the Council took action in Dec 2024 to address the steps. The SSC held a [workshop in June 2025](https://meetings.npfmc.org/Meeting/Details/3093) to address a Council October 2024 motion ‘Consider to what extent, and whether, to revise groundfish and crab harvest control rules (HCRs) to be more climate-resilient." This is a step towards bringing alternative harvest management measures with more climate awaremess and flexibility to the Council. 
 
 It appears the NPFMC IRA projects were to address some of these steps and the Council may also be initiating a programmatic EIS to encompass climate-ready/resilient management goals and objectives. This would likely expand beyond ABC/TAC specification to other management measures such as spatial management (noted in the Climate Ready Synthesis). 
@@ -133,13 +135,18 @@ The North Pacific Council region includes multiple large marine ecosystems, a si
 The Pacific Council a single ESR produced annually for the California Current ecoregion, consisting of a graphical summary and ~40 page main report with many detailed appendices for indciators and methods. Additional appendices are included for both short term and long term ecological and climate forecasts. Forecast uncertainty and evaluation of previous forecasts are included. 
 
 ESPs or ESP like products exist for X species.
-The SSC is evaluating risk tables in progress for stock assessments and ABC decisions
 
-CVA exists
+The SSC is evaluating risk tables in progress for stock assessments and ABC decisions (see below), but they are reframed as uncertainty tables using IPCC "confidence" language on degree of agreement of indicatots and robustness of evidence). 
+
+CVA exists and is proposed for use as a component in the process determining ABC uncertainty buffers (see below).
 
 FEP developed (2013 and 2022) and requests annual ESRs. The 2022 FEP is informational an d not prescriptive, retaining Council discretion to act on ecosystem information. It specifies goals and objectievs as well as "ecosystem initiatives" that focus on priority actions (described below). The FEP and includes an outline of ecosystem science uses in the Council process. 
 
-FEP Initiative 1 prohibited directed fishing on currently unexploited, unmanaged forage fish in the region and was completed in 2015. FEP Initiative 2 reviewed the ESR 2015-2016 to better inform the Council of both ecosystem indicators and processes and the potential use of this information in management. FEP Initiative 3 is the Climate and Communities initiative to evalaute potential impacts of climate change and identify ways to improve flexibility and responsiveness of management. 
+FEP Initiative 1 prohibited directed fishing on currently unexploited, unmanaged forage fish in the region and was completed in 2015. FEP Initiative 2 reviewed the ESR 2015-2016 to better inform the Council of both ecosystem indicators and processes and the potential use of this information in management. FEP Initiative 3, completed in 2019, was the Climate and Communities initiative to evalaute potential impacts of climate change and identify ways to improve flexibility and responsiveness of management. As part of this initiative, climate scenario planning was completed. How is this being used?
+
+FEP Initiative 4, [Ecosystem and Climate Information for Species, Fisheries, and FMPs](https://www.pcouncil.org/actions/ecosystem-and-climate-information-for-species-fisheries-and-fmps/), is currently active and is developing an ecosystem and climate risk assessment framework for use in the catch specification process. This is patterned on the use of risk tables in NPFMC harvest specification, but is tailored to the p* process used in PFMC. The ecosystem team tested options and recommended one where ecosystem and climate risks would alter the sigma applied to characterize scientific uncertainty in the OFL  (sigma is equivalent to the MAFMC SSC OFL CV). PFMC sigmas are 0.5 for high certainty assessments, 1 for data moderate assessments, and 2 for data limited assessments, with additional increases in sigma as time passes since the most recent assessment. Ecosystem and climate risks could further inform sigma, increasing or decreasing it as these factors increase or decrease uncertainty. 
+
+In lieu of an ESP type product, the proposal would be for ecosystem and stock scientists to have a structured conversation to identify key uncertainties in the assessment and evaluate ecosystem drivers of the stock not included in the assessment to fill out a table indicating whether ecosystem conditions are favorable, neutral, or unfavorable for the stock. This draws on previous literature and the indicators reported in the ESR. Information from the CVA for each stock is included in this discussion. The structured discussion template is included in the [2024 report](https://www.pcouncil.org/documents/2024/08/h-1-a-cciea-team-report-1-cciea-risk-table-report-on-fep-initiative-4.pdf/).
 
 Use in other management processes?
 
@@ -173,7 +180,7 @@ To date, ecosystem indicators have been integrated into the operational black se
 
 The Council uses indicators from both the SOE and ESPs in an annual ecosystem-level risk assessment. This risk assessment has been used to identify priority fisheries for further analysis with conceptual modeling and managment strategy evaluation. The risk assessment was expaneded in 2024 to include additional risk elements, indicators, and risk criteria.
 
-A climate vulnerability analysis for Northeast U.S. species has been published, and is considered within the SSC's ABC deliberation process as part of ecosystem factors contributing to uncertainty in the OFL. 
+A climate vulnerability analysis for Northeast U.S. species has been published, and is considered within the SSC's ABC deliberation process as part of ecosystem factors contributing to uncertainty in the OFL. A habitat-species climate vulnerability crosswalk is also being condidered during deliberations, but is not yet formally part of the OFL CV protocol. 
 
 #### CFMC
 
