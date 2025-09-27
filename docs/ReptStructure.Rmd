@@ -61,6 +61,8 @@ To identify opportunities specific to SAFMC processes beyond catch decisions, I 
 
 ## Ecosystem information review across Councils
 
+ADD TABLES: ESR sections and indicator contents by Council, CVA species by Council, ESP species by Council, FEP structure by Council
+
 PRELIMINARY THOUGHTS/HYPOTHESES TO TEST
 
 Three general categories for current use of ecosystem products: FMP/indicator based, FEP/geographically based, and developing
@@ -93,7 +95,7 @@ What might be done differently to better meet each Council’s objectives
 
 #### NPFMC
 
-The North Pacific Region has three Ecosystem Status Reports (ESRs), one for each ecoregion: Eastern Bering Sea, Gulf of Alaska, and Aleutian Islands. In this region, Ecosystem and Socio-economic Profiles (ESPs), an ecosystem status report tailored to an individual stock, were invented [@shotwell_introducing_2023] and are produced for select stocks: Alaska sablefish, Eastern Bering Sea Pacific cod, Eastern Bering Sea snow crab, Bristol Bay red king crab, Bering Sea and Aleutian Islands tanner crab, Gulf of Alaska pollock, and Gulf of Alaska Pacific cod. A separate annual economic status report is also presented. All are available online https://www.npfmc.org/library/safe-reports/. 
+The North Pacific Region has three Ecosystem Status Reports (ESRs), one for each ecoregion: Eastern Bering Sea, Gulf of Alaska, and Aleutian Islands. Reports include graphical and text report cards for each region, ecosystem assessment sections, and detailed indicator sections, with multiple appendices. In this region, Ecosystem and Socio-economic Profiles (ESPs), an ecosystem status report tailored to an individual stock, were invented [@shotwell_introducing_2023] and are produced for select stocks: Alaska sablefish, Eastern Bering Sea Pacific cod, Eastern Bering Sea snow crab, Bristol Bay red king crab, Bering Sea and Aleutian Islands tanner crab, Aleutian Islands Atka mackerel, Gulf of Alaska pollock, Gulf of Alaska Pacific cod, and Gulf of Alaska arrowtooth flounde. A separate annual economic status report is also presented. All are available online https://www.npfmc.org/library/safe-reports/. 
 
 To date ecosystem indicators have been used directly in X stock assessments. 
 
@@ -107,7 +109,7 @@ NPFMC is still working within FMPs but this process is used in two, groundfish a
 
 FEPs have been developed for the Aleutian Islands (shelved) and the Bering Sea (active). The Bering Sea FEP intends to use ESRs for monitoring progress against ecosystem objectives, and has "action modules" focusing on climate readiness, incorporation of local and traditional knowledge, evaluating current management alongside EBFM best practice, developing conceptual models, and alignment of Council priorites with research funding. 
 
-The BS FEP team appears to meet annually, the most recent meeting was January 2024.
+The BS FEP team appears to meet annually, the most recent meeting was January 2024. Are other action modules to be activated, or are they at capacity? 
 
 The first two FEP action modules have been initiated, and a final report is available from the Climate Change Task Force, as well as a ranking of climate readiness completed by the Climate Change Task force. Climate readiness was ranked 2-3 out of a possible scale of 5 This report noted the importance of ESRs in providing links between observed trends and long term climate change.
 
@@ -115,22 +117,35 @@ The first two FEP action modules have been initiated, and a final report is avai
 
 A Climate Vulnerability Analysis for Bering Sea species has been published, however its direct use in management processes is unclear... The Climate Ready Synthesis recommended inclusion of climate vulnerability information in status reports/risk assessments; perhaps this is being done?
 
-The Climate Change Task Force recommended several next steps and it appears the NPFMC IRA projects were to address some of these steps and the Council may also be initiating a programmatic EIS to encompass climate-ready/resilient management goals and objectives. This would likely expand beyond ABC/TAC specification to other management measures such as spatial management (noted in the Climate Ready Synthesis). 
+The Climate Change Task Force recommended several next steps and the Council took action in Dec 2024 to address the steps. The SSC held a [workshop in June 2025](https://meetings.npfmc.org/Meeting/Details/3093) to address a Council October 2024 motion ‘Consider to what extent, and whether, to revise groundfish and crab harvest control rules (HCRs) to be more climate-resilient." This is a step towards bringing alternative harvest management measures with more climate awaremess and flexibility to the Council. 
+
+It appears the NPFMC IRA projects were to address some of these steps and the Council may also be initiating a programmatic EIS to encompass climate-ready/resilient management goals and objectives. This would likely expand beyond ABC/TAC specification to other management measures such as spatial management (noted in the Climate Ready Synthesis). 
 
 ESRs have been produced since 1995, are also presented as contextual information, and have been used to adjust TAC advice in the past [@zador_ecosystem_2016]. AFSC staff produce the reports as part of their regular duties (dedicated resources), while contributors range from NOAA staff to academic researchers in the region who have varying availability or resources to update indicators. The Council's FEP driven Climate Change Task Force identified a need for additional resources to implement recommendations for improving climate readiness.
+
+The North Pacific Council region includes multiple large marine ecosystems, a single U.S. state (Alaska) and federal waters. Stock and ecosystem areas are spatially aligned, and stock and ecosystem assessments are temporally aligned. Commercial fisheries dominate landings.
 
 **Contacts:** Diana Evans, Diana Stram, Katie Latanich? climate program mgr
 
 
 #### PFMC
 
-ESR and risk tables in progress for stock assessments and ABC decisions
+The Pacific Council a single ESR produced annually for the California Current ecoregion, consisting of a graphical summary and ~40 page main report with many detailed appendices for indciators and methods. Additional appendices are included for both short term and long term ecological and climate forecasts. Forecast uncertainty and evaluation of previous forecasts are included. 
+
+ESPs or ESP like products exist for X species.
+The SSC is evaluating risk tables in progress for stock assessments and ABC decisions
 
 CVA exists
 
-FEP developed
+FEP developed (2013 and 2022) and requests annual ESRs. The 2022 FEP is informational an d not prescriptive, retaining Council discretion to act on ecosystem information. It specifies goals and objectievs as well as "ecosystem initiatives" that focus on priority actions (described below). The FEP and includes an outline of ecosystem science uses in the Council process. 
+
+FEP Initiative 1 prohibited directed fishing on currently unexploited, unmanaged forage fish in the region and was completed in 2015. FEP Initiative 2 reviewed the ESR 2015-2016 to better inform the Council of both ecosystem indicators and processes and the potential use of this information in management. FEP Initiative 3 is the Climate and Communities initiative to evalaute potential impacts of climate change and identify ways to improve flexibility and responsiveness of management. 
 
 Use in other management processes?
+
+Both the Northwest and Southwest fisheries science centers have dedicated staff supporting ESR production. 
+
+The Pacific Council region includes one large marine ecosystem spanning three states and federal waters. 
 
 #### WPFMC
 
