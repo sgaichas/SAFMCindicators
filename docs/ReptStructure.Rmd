@@ -127,7 +127,7 @@ ESRs have been produced since 1995, are also presented as contextual information
 
 The North Pacific Council region includes multiple large marine ecosystems, a single U.S. state (Alaska) and federal waters. Stock and ecosystem areas are spatially aligned, and stock and ecosystem assessments are temporally aligned. Commercial fisheries dominate landings.
 
-**Contacts:** Diana Evans, Diana Stram, Katie Latanich? climate program mgr
+**Contacts:** Diana Evans deputy and ecosystems, Diana Stram co led CCTF, Katie Latanich? climate program mgr
 
 
 #### PFMC
@@ -152,13 +152,23 @@ Use in other management processes?
 
 Both the Northwest and Southwest fisheries science centers have dedicated staff supporting ESR production. 
 
-The Pacific Council region includes one large marine ecosystem spanning three states and federal waters. 
+The Pacific Council region includes one large marine ecosystem spanning three states and federal waters. Mostly commercial fisheries?
+
+**Contacts**: No one is listed as ecosystems! Marlena Bellman SSC lead , Gilly Lyons leads climate initiatives or call Kelly Ames, deputy
 
 #### WPFMC
 
-ESR and CVAs exist
+Manages with 5 place-based Fishery Ecosystem Plans established in 2010: Hawaii, American Samoa, Mariana, Pacific remote islands, Pelagic. An ESR for Hawaii with the same geographic scope as FEP was last produced in 2022. It includes socioeconomic, fisheries, coral reef, climate, human impact, and coral reef climate vulnerability sections. Identifies cumulative impacts. Aspects included at the request of the Council. 
 
-Island based FEPs
+Has the Council seen this? Do they use it?
+
+State is using layers on [cumulative impacts](https://www.arcgis.com/home/item.html?id=ca750b9476fb429b809d1300628f3bb7), habitat efforts are also using the information. 
+
+Have regional ecosystem advisory committees REACs
+
+CVAs are by species group and unclear what spatial scale? 
+
+The Hawaii EEZ is slightly bigger than the West Coast EEZ. Resources for ecosystem reporting are limited in PIFSC. 
 
 #### NEFMC
 
