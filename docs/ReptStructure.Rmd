@@ -158,17 +158,21 @@ The Pacific Council region includes one large marine ecosystem spanning three st
 
 #### WPFMC
 
-Manages with 5 place-based Fishery Ecosystem Plans established in 2010: Hawaii, American Samoa, Mariana, Pacific remote islands, Pelagic. An ESR for Hawaii with the same geographic scope as FEP was last produced in 2022. It includes socioeconomic, fisheries, coral reef, climate, human impact, and coral reef climate vulnerability sections. Identifies cumulative impacts. Aspects included at the request of the Council. 
+Manages with 5 place-based Fishery Ecosystem Plans established in 2010: Hawaii, American Samoa, Mariana, Pacific remote islands, Pelagic. Online organization places fishery and protected species management on the same page for each FEP. Council guiding principles include promoting an ecosystem approach. 
+
+An ESR for Hawaii with the same geographic scope as FEP was last produced in 2022. It includes socioeconomic, fisheries, coral reef, climate, human impact, and coral reef climate vulnerability sections. Identifies cumulative impacts. Aspects on nearshore fisheries included at the request of the Council. Habitat recovery depends on both land based and fishery management. 
 
 Has the Council seen this? Do they use it?
 
 State is using layers on [cumulative impacts](https://www.arcgis.com/home/item.html?id=ca750b9476fb429b809d1300628f3bb7), habitat efforts are also using the information. 
 
-Have regional ecosystem advisory committees REACs
+Have regional ecosystem advisory committees REACs include land based activities. 
 
 CVAs are by species group and unclear what spatial scale? 
 
 The Hawaii EEZ is slightly bigger than the West Coast EEZ. Resources for ecosystem reporting are limited in PIFSC. 
+
+**Contacts**: Mark Fitchett Pelagic fisheries, Ecosystem scientist, Joshua DeMellow, Island fisheries coordinator
 
 #### NEFMC
 
@@ -182,6 +186,8 @@ A climate vulnerability analysis for Northeast U.S. species has been published, 
 
 The Council previously developed an example Fisheries Ecosystem Plan with ecosystem and aggregate stock level catch limits (ceilings) and stock level minimum biomass thresholds (floors) for 10 species on Georges Bank. The Council has suspended development of this FEP approach in favor of the new indicator-based risk policy. 
 
+**Contacts**:  
+
 #### MAFMC
 
 The Mid-Atlantic region gets a State of the Ecosystem (SOE) report each year that covers one ecoregion: the Mid-Atlantic Bight. Coastwide Northeast U.S. indicators are also included. Ecosystem socio-economic profiles have been produced for X stocks during research track assessments: bluefish, black sea bass, golden tilefish, 
@@ -190,7 +196,9 @@ To date, ecosystem indicators have been integrated into the operational black se
 
 The Council uses indicators from both the SOE and ESPs in an annual ecosystem-level risk assessment. This risk assessment has been used to identify priority fisheries for further analysis with conceptual modeling and managment strategy evaluation. The risk assessment was expaneded in 2024 to include additional risk elements, indicators, and risk criteria.
 
-A climate vulnerability analysis for Northeast U.S. species has been published, and is considered within the SSC's ABC deliberation process as part of ecosystem factors contributing to uncertainty in the OFL. A habitat-species climate vulnerability crosswalk is also being condidered during deliberations, but is not yet formally part of the OFL CV protocol. 
+A climate vulnerability analysis for Northeast U.S. species has been published, and is considered within the SSC's ABC deliberation process as part of ecosystem factors contributing to uncertainty in the OFL. A habitat-species climate vulnerability crosswalk is also being considered during deliberations, but is not yet formally part of the OFL CV protocol. 
+
+**Contacts**: Brandon Muffley, Ecosystems and SSC, 
 
 #### CFMC
 
@@ -200,14 +208,19 @@ Island based FMPs
 
 EBFM approach is based on stakeholder derived conceptual models for each Island
 
+**Contacts**:
+
 #### GFMC
 
 ESR and CVA exists
 
+**Contacts**: 
 
 #### SAFMC
 
 ESR, FEP, and CVA all exist
+
+**Contacts**:
 
 
 ### Interviews
