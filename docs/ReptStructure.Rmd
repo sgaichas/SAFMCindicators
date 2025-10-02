@@ -186,7 +186,7 @@ A climate vulnerability analysis for Northeast U.S. species has been published [
 
 The Council previously developed an example Fisheries Ecosystem Plan with ecosystem and aggregate stock level catch limits (ceilings) and stock level minimum biomass thresholds (floors) for 10 species on Georges Bank. The Council has suspended development of this FEP approach in favor of the new indicator-based risk policy. 
 
-**Contacts**:  
+**Contacts**: Jonathan Peros Fisheries management and Risk policy lead, Jamie Cournane Science and assessment lead, Rachel Feeney SSC lead, Michelle Bachman Habitat lead, Andy Applegate EAFM
 
 #### MAFMC
 
@@ -198,7 +198,7 @@ The Council uses indicators from both the SOE and ESPs in an annual ecosystem-le
 
 A climate vulnerability analysis for Northeast U.S. species has been published [@hare_vulnerability_2016], and is considered within the SSC's ABC deliberation process as part of ecosystem factors contributing to uncertainty in the OFL. Both community climate vulnerability [@colburn_indicators_2016] and habitat climate vulnerability [@farr_assessment_2021] have also been assessed in the Northeast U.S., and marine mammal climate vulnerability has been assessed for the entire Atlantic Coast [@lettrich_vulnerability_2023]. A habitat-species climate vulnerability crosswalk is also being considered during deliberations, but is not yet formally part of the OFL CV protocol. 
 
-**Contacts**: Brandon Muffley, Ecosystems and SSC, 
+**Contacts**: Brandon Muffley, Ecosystems SSC and EOP, Jessica Coakley Habitat and EOP, Chris Moore Exec director
 
 #### CFMC
 
