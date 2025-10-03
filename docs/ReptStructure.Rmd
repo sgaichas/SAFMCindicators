@@ -95,17 +95,17 @@ What might be done differently to better meet each Council’s objectives
 
 #### NPFMC
 
-The North Pacific Region has three Ecosystem Status Reports (ESRs), one for each ecoregion: Eastern Bering Sea [@siddon_ecosystem_2024], Gulf of Alaska [@ferriss_ecosystem_2024], and Aleutian Islands [@ortiz_ecosystem_2024]. Reports include graphical and text report cards for each region, ecosystem assessment sections, and detailed indicator sections, with multiple appendices. In this region, Ecosystem and Socio-economic Profiles (ESPs), an ecosystem status report tailored to an individual stock, were invented [@shotwell_introducing_2023] and are produced for select stocks: Alaska sablefish [@shotwell_ecosystem_2024-2], Eastern Bering Sea Pacific cod [@shotwell_ecosystem_2024-1], Eastern Bering Sea snow crab [@fedewa_appendix_2024], Bristol Bay red king crab [@fedewa_appendix_2024-1], Bering Sea and Aleutian Islands tanner crab [@fedewa_ecosystem_2024], Aleutian Islands Atka mackerel [@sullivan_proposed_2025], Gulf of Alaska pollock [@shotwell_appendix_2024], Gulf of Alaska Pacific cod[@shotwell_ecosystem_2024], and Gulf of Alaska arrowtooth flounder [@shotwell_appendix_2025]. A separate annual economic status report is also presented. All are available online https://www.npfmc.org/library/safe-reports/. 
+The North Pacific Region has three Ecosystem Status Reports (ESRs), one for each ecoregion: Eastern Bering Sea [@siddon_ecosystem_2024], Gulf of Alaska [@ferriss_ecosystem_2024], and Aleutian Islands [@ortiz_ecosystem_2024]. Reports include graphical and text report cards for each region, ecosystem assessment sections, and detailed indicator sections, with multiple appendices. In this region, Ecosystem and Socio-economic Profiles (ESPs), an ecosystem status report tailored to an individual stock, were invented [@shotwell_introducing_2023] and are produced for select stocks: Alaska sablefish [@shotwell_ecosystem_2024-2], Eastern Bering Sea Pacific cod [@shotwell_ecosystem_2024-1], Eastern Bering Sea snow crab [@fedewa_appendix_2024], Bristol Bay red king crab [@fedewa_appendix_2024-1], Bering Sea and Aleutian Islands tanner crab [@fedewa_ecosystem_2024], Aleutian Islands Atka mackerel [@sullivan_proposed_2025], Gulf of Alaska pollock [@shotwell_appendix_2024], Gulf of Alaska Pacific cod [@shotwell_ecosystem_2024], and Gulf of Alaska arrowtooth flounder [@shotwell_appendix_2025]. In addition to these ecosystem and stock specific indicator reports, the Council recieves reports on unmanaged forage fish [@vollenweider_2024_2024], grenadiers [@siwicke_assessment_2024], and a multispecies model incorporating climate drivers for Eastern Bering Sea pollock, cod, and arrowtooth flounder [@holsman_2024_2024]. A separate annual economic status report [@abelman_stock_2024] is also presented. All are available online https://www.npfmc.org/library/safe-reports/. 
 
 To date ecosystem indicators have been used directly in X stock assessments. 
 
-ESRs are produced annually, and ESPs are updated annually (?), with both presented alongside updated stock assessments in the Council's annual specifications process. Both ESRs and ESPs feed into annual catch specification through risk tables presented in stock assessments [@dorn_risk_2020]. Both data products draw on process research conducted in the region to develop indicators. 
+ESRs are produced annually, and many ESPs are updated annually, with both presented alongside updated stock assessments in the Council's annual specifications process. Both ESRs and ESPs feed into annual catch specification through risk tables presented in stock assessments [@dorn_risk_2020]. Both data products draw on process research conducted in the region to develop indicators. 
 
 <!--![Figure 1. North Pacific ecosystem data in management processes, reprinted from Siddon, E. 2024 Fig. 1](images/NPFMC_EcoDataUse.png)-->
 ![Figure 1 alt. North Pacific ecosystem data in management processes, reprinted from Siddon, E. 2025 Fig. 1](images/Honeycomb Graphic.png)
 
 
-NPFMC is still managing using FMPs; this process is used in two, the groundfish and crab FMPs. Not used in other FMPs for scallop and salmon. 
+NPFMC is still managing using FMPs; this process is used in two, the groundfish and crab FMPs. It is not used in other FMPs for scallop and salmon. 
 
 FEPs have been developed for the Aleutian Islands (shelved) and the Bering Sea (active). The Bering Sea FEP intends to use ESRs for monitoring progress against ecosystem objectives, and has "action modules" focusing on climate readiness, incorporation of local and traditional knowledge, evaluating current management alongside EBFM best practice, developing conceptual models, and alignment of Council priorities with research funding. 
 
@@ -119,22 +119,22 @@ A Climate Vulnerability Analysis for Bering Sea species has been published [@spe
 
 A climate scenario planning workshop took place in June 2024. How has this been integrated?
 
-The Climate Change Task Force recommended several next steps and the Council took action in Dec 2024 to address the steps. The SSC held a [workshop in June 2025](https://meetings.npfmc.org/Meeting/Details/3093) to address a Council October 2024 motion ‘Consider to what extent, and whether, to revise groundfish and crab harvest control rules (HCRs) to be more climate-resilient." This is a step towards bringing alternative harvest management measures with more climate awaremess and flexibility to the Council. 
+The Climate Change Task Force recommended several next steps and the Council took action in Dec 2024 to address the steps. The SSC held a [workshop in June 2025](https://meetings.npfmc.org/Meeting/Details/3093) to address a Council October 2024 motion "Consider to what extent, and whether, to revise groundfish and crab harvest control rules (HCRs) to be more climate-resilient." This is a step towards bringing alternative harvest management measures with more climate awaremess and flexibility to the Council. 
 
 It appears the NPFMC IRA projects were to address some of these steps and the Council may also be initiating a programmatic EIS to encompass climate-ready/resilient management goals and objectives. This would likely expand beyond ABC/TAC specification to other management measures such as spatial management (noted in the Climate Ready Synthesis). 
 
 ESRs have been produced since 1995, are also presented as contextual information, and have been used to adjust TAC advice in the past [@zador_ecosystem_2016]. AFSC staff produce the reports as part of their regular duties (dedicated resources), while contributors range from NOAA staff to academic researchers in the region who have varying availability or resources to update indicators. The Council's FEP driven Climate Change Task Force identified a need for additional resources to implement recommendations for improving climate readiness.
 
-The North Pacific Council region includes multiple large marine ecosystems, a single U.S. state (Alaska) and federal waters. Stock and ecosystem areas are spatially aligned, and stock and ecosystem assessments are temporally aligned. Commercial fisheries dominate landings.
+The North Pacific Council region includes multiple large marine ecosystems, a single U.S. state (Alaska) and federal waters. Stock and ecosystem areas are spatially aligned, and stock and ecosystem assessments are temporally aligned for the groundfish and crab FMPs. Commercial fisheries dominate landings.
 
-**Contacts:** Diana Evans deputy and ecosystems, Diana Stram co led CCTF, Katie Latanich? climate program mgr
+**Contacts:** Diana Evans deputy and ecosystems, Diana Stram co led CCTF, Katie Latanich climate program mgr, David Witherell Exec dir
 
 
 #### PFMC
 
-The Pacific Council a single ESR produced annually for the California Current ecoregion [@], consisting of a graphical summary and ~40 page main report with many detailed appendices for indicators and methods. Additional appendices are included for both short term and long term ecological and climate forecasts. Forecast uncertainty and evaluation of previous forecasts are included. 
+The Pacific Council a single ESR produced annually for the California Current ecoregion [@leising_2024-2025_2025-1], consisting of a graphical summary and ~40 page main report with many detailed appendices for indicators and methods. Additional appendices are included for both short term and long term ecological and climate forecasts. Forecast uncertainty and evaluation of previous forecasts are included. 
 
-ESPs or ESP like products exist for X species.
+ESP like products [@tolimieri_oceanographic_2018; @haltuch_oceanographic_2020] exist for at least 2 species.
 
 The SSC is evaluating risk tables in progress for stock assessments and ABC decisions (see below), but they are reframed as uncertainty tables using IPCC "confidence" language on degree of agreement of indicatots and robustness of evidence). 
 
@@ -154,15 +154,17 @@ Both the Northwest and Southwest fisheries science centers have dedicated staff 
 
 The Pacific Council region includes one large marine ecosystem spanning three states and federal waters. Mostly commercial fisheries?
 
-**Contacts**: No one is listed as ecosystems! Marlena Bellman SSC lead, Gilly Lyons leads climate initiatives or call Kelly Ames, deputy
+**Contacts**:  Gilly Lyons Ecosystems and climate initiatives, Marlena Bellman SSC lead,  Kerry Griffin habitat, Kelly Ames deputy, Merrick Burden Exec dir
 
 #### WPFMC
 
-The Western Pacific Council manages with 5 place-based Fishery Ecosystem Plans established in 2010: Hawaii, American Samoa, Mariana, Pacific remote islands, Pelagic. Online organization places fishery and protected species management on the same page for each FEP. The Council guiding principles include promoting an ecosystem approach. The Council has Regional Ecosystem Advisory Committees (REACs) made up of Council members and government officials, business, academic, and NGO representatives who are responsible for or interested in activities on land and outside fisheries that may affect fishery management; REACs represent Hawaii, American Samoa, and Mariana Archipelago.  
+The Western Pacific Council manages with 5 place-based Fishery Ecosystem Plans established in 2010: Hawaii, American Samoa, Mariana, Pacific remote islands, Pelagic. The Council established the first US ecosystem based FMP for coral reefs in 2004, and initiated development of its FEPs in 2005 with a series of workshops introducing and developing EAFM, focusing on biophysical, social science, and policy aspects of EAFM [@martell_fishery_2020]. Online description place fishery and protected species management on the same page for each FEP. The Council guiding principles include promoting an ecosystem approach. The Council has Regional Ecosystem Advisory Committees (REACs) made up of Council members and government officials, business, academic, and NGO representatives who are responsible for or interested in activities on land and outside fisheries that may affect fishery management; REACs represent Hawaii, American Samoa, and the Mariana Archipelago.  
 
-An ESR for Hawaii with the same geographic scope as Hawaii FEP was produced in 2022 [@gove_2022_2022]; prior reports were for West Hawaii only. The 2022 report includes socioeconomic, fisheries, coral reef, climate, human impact, and coral reef climate vulnerability sections. Identifies cumulative impacts. Aspects on nearshore fisheries were included at the request of the Council. Habitat recovery depends on both land based and fishery management. Has the Council seen this? Do they use it?  PIFSC is on the Hawaii REAC for the Council. 
+Western Pacific SAFE reports for each FEP include three sections: fishery performance, ecosystem considerations, and data integration, and are available at https://www.wpcouncil.org/annual-reports/. Fishery performance includes catch and effort information. The ecosystem considerations include fisher observations, coral reef fish biomass and habitat condition indicators, life history parameters, socioeconomics, protected species, climate and ocean indicators, EFH, and marine planning sections (updated through 2024). The data integration section is intended to link environmental indicators with managed stocks. These sections are less developed in each SAFE. The Hawaii example is uku, but it appears it has not been updated since 2018 and includes data through 2012 [@]. There is an ESP for Uku [@] The American Samoa secion includes multivariate analysis updated through 2016 [@]. 
 
-CVA was conducted for the full Pacific Islands region [@giddens_assessing_2022]. 
+An ESR for Hawaii with the same geographic scope as Hawaii FEP was produced in 2022 [@gove_2022_2022]; prior reports were for West Hawaii only. The 2022 report includes socioeconomic, fisheries, coral reef, climate, human impact, and coral reef climate vulnerability sections. Identifies cumulative impacts. Aspects on nearshore fisheries were included at the request of the Council. Habitat recovery depends on both land based and fishery management. PIFSC is on the Hawaii REAC for the Council. Has the ecosystem considerations portion of each SAFE replaced this? How related are they? 
+
+CVA was conducted for the full Pacific Islands region [@giddens_assessing_2022]. Included in FEP SAFE reports?
 
 Active spatial ecosystem indicators include [turtle watch](https://oceanwatch.pifsc.noaa.gov/turtlewatch.html) that is updated daily to indicate regions of potential turtle bycatch for pelagic fisheries based on temperature, and [ocean watch](https://oceanwatch.pifsc.noaa.gov/indicators.html) that summarizes ocean conditions in key fishing and coral areas. Ocean watch data includes coral reef bleaching hotspot and alert area data but I can't find how this translates into an indicator being used.  
 
@@ -172,7 +174,7 @@ The State of Hawaii is using layers on [cumulative impacts](https://www.arcgis.c
 
 The Hawaii EEZ is slightly bigger than the West Coast EEZ. Resources for ecosystem reporting are limited in PIFSC. 
 
-**Contacts**: Mark Fitchett Pelagic fisheries, Ecosystem scientist, Joshua DeMellow, Island fisheries coordinator
+**Contacts**: Mark Fitchett Pelagic fisheries, Ecosystem scientist, Joshua DeMellow, Island fisheries coordinator, Kitty Simonds Exec dir
 
 #### NEFMC
 
@@ -186,7 +188,7 @@ A climate vulnerability analysis for Northeast U.S. species has been published [
 
 The Council previously developed an example Fisheries Ecosystem Plan with ecosystem and aggregate stock level catch limits (ceilings) and stock level minimum biomass thresholds (floors) for 10 species on Georges Bank. The Council has suspended development of this FEP approach in favor of the new indicator-based risk policy. 
 
-**Contacts**: Jonathan Peros Fisheries management and Risk policy lead, Jamie Cournane Science and assessment lead, Rachel Feeney SSC lead, Michelle Bachman Habitat lead, Andy Applegate EAFM
+**Contacts**: Jonathan Peros Fisheries management and Risk policy lead, Jamie Cournane Science and assessment lead, Rachel Feeney SSC lead, Michelle Bachman Habitat lead, Andy Applegate EAFM, Cate O'Keefe Exec dir
 
 #### MAFMC
 
@@ -202,26 +204,29 @@ A climate vulnerability analysis for Northeast U.S. species has been published [
 
 #### CFMC
 
-Newest ESR [@southeast_integrated_ecosystem_assessment_program_caribbean_2025], never had one before. No fish or invertebrate CVA identified, but marine mammal climate vulnerability has been assessed for the entire Atlantic Coast including the Caribbean [@lettrich_vulnerability_2023]. 
+Newest ESR [@southeast_integrated_ecosystem_assessment_program_caribbean_2025], never had one before. No fish or invertebrate CVA yet but a project is in progress: "Evaluating Priority Species Vulnerability to Changing Environmental Conditions" and marine mammal climate vulnerability has been assessed for the entire Atlantic Coast including the Caribbean [@lettrich_vulnerability_2023]. 
 
 Island based FMPs were instituted in 
 
 EBFM approach is based on stakeholder derived conceptual models for each Island [@seara_development_2024]
 
-**Contacts**:
+Current projects include "Developing a US Caribbean Hub to Operationalize EBFM in the US Caribbean" and "Understanding Impacts of Extreme Events on the Fishery Ecosystem and the Fishers’ Communities in the U.S. Caribbean"
+
+**Contacts**: Liajay Rivera García FMP and EBFM, Graciela García-Moliner FMP and Habitat, Miguel A. Rolón Exec dir
 
 #### GFMC
 
 ESR and CVA [@quinlan_results_2023] exists, and marine mammal climate vulnerability has been assessed for the entire Atlantic Coast, including the Gulf [@lettrich_vulnerability_2023]. 
 
 
-**Contacts**: 
+**Contacts**: Verena Wang Ecosystems, Ryan Rindone Fishery bio and SEDAR, John Froeschke Deputy, Zeenatul Basher Coral and Habitat, Carrie Simmons Exec director
 
 #### SAFMC
 
 ESR [@craig_ecosystem_2021], FEP, and CVAs for fishery resources [@burton_climate_2023; @craig_climate_2025] and fishing communities [@seara_community_2022] Marine mammal climate vulnerability has been assessed for the entire Atlantic Coast [@lettrich_vulnerability_2023]. 
 
-**Contacts**:
+**Contacts**: Kathleen Howington Habitat & Ecosystem Scientist, Meg Withers Citizen Science Project Coordinator, John Hadley
+Fishery Management Plan Coordinator & Fishery Economist, Chip Collier Deputy Director for Science, Myra Brouwer Deputy Director for Management, John Carmichael Executive Director
 
 
 ### Interviews
