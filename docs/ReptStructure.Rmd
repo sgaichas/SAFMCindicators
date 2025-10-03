@@ -132,11 +132,11 @@ The North Pacific Council region includes multiple large marine ecosystems, a si
 
 #### PFMC
 
-The Pacific Council a single ESR produced annually for the California Current ecoregion [@leising_2024-2025_2025-1], consisting of a graphical summary and ~40 page main report with many detailed appendices for indicators and methods. Additional appendices are included for both short term and long term ecological and climate forecasts. Forecast uncertainty and evaluation of previous forecasts are included. 
+The Pacific Council recieves a single ESR produced annually for the California Current ecoregion [@leising_2024-2025_2025-1], consisting of a graphical summary and ~40 page main report with many detailed appendices for indicators and methods. Additional appendices are included for both short term and long term ecological and climate forecasts. Forecast uncertainty and evaluation of previous forecasts are included. 
 
 ESP like products [@tolimieri_oceanographic_2018; @haltuch_oceanographic_2020] exist for at least 2 species.
 
-The SSC is evaluating risk tables in progress for stock assessments and ABC decisions (see below), but they are reframed as uncertainty tables using IPCC "confidence" language on degree of agreement of indicatots and robustness of evidence). 
+The SSC is evaluating risk tables in progress for stock assessments and ABC decisions (see below), but they are reframed as uncertainty tables using IPCC "confidence" language on degree of agreement of indicators and robustness of evidence). 
 
 CVA exists [@mcclure_vulnerability_2023] and is proposed for use as a component in the process determining ABC uncertainty buffers (see below).
 
@@ -150,7 +150,7 @@ In lieu of an ESP type product, the proposal would be for ecosystem and stock sc
 
 Use in other management processes?
 
-Both the Northwest and Southwest fisheries science centers have dedicated staff supporting ESR production. 
+Both the Northwest and Southwest fisheries science centers have dedicated staff supporting ESR production. The CCIEA team developed the recommendation for use of assessment and ecosystem information in the SSC's ABC decision process. 
 
 The Pacific Council region includes one large marine ecosystem spanning three states and federal waters. Mostly commercial fisheries?
 
@@ -160,11 +160,11 @@ The Pacific Council region includes one large marine ecosystem spanning three st
 
 The Western Pacific Council manages with 5 place-based Fishery Ecosystem Plans established in 2010: Hawaii, American Samoa, Mariana, Pacific remote islands, Pelagic. The Council established the first US ecosystem based FMP for coral reefs in 2004, and initiated development of its FEPs in 2005 with a series of workshops introducing and developing EAFM, focusing on biophysical, social science, and policy aspects of EAFM [@martell_fishery_2020]. Online description place fishery and protected species management on the same page for each FEP. The Council guiding principles include promoting an ecosystem approach. The Council has Regional Ecosystem Advisory Committees (REACs) made up of Council members and government officials, business, academic, and NGO representatives who are responsible for or interested in activities on land and outside fisheries that may affect fishery management; REACs represent Hawaii, American Samoa, and the Mariana Archipelago.  
 
-Western Pacific SAFE reports for each FEP include three sections: fishery performance, ecosystem considerations, and data integration, and are available at https://www.wpcouncil.org/annual-reports/. Fishery performance includes catch and effort information. The ecosystem considerations include fisher observations, coral reef fish biomass and habitat condition indicators, life history parameters, socioeconomics, protected species, climate and ocean indicators, EFH, and marine planning sections (updated through 2024). The data integration section is intended to link environmental indicators with managed stocks. These sections are less developed in each SAFE. The Hawaii example is uku, but it appears it has not been updated since 2018 and includes data through 2012 [@]. There is an ESP for Uku [@] The American Samoa secion includes multivariate analysis updated through 2016 [@]. 
+Western Pacific SAFE reports for each FEP include three sections: fishery performance, ecosystem considerations, and data integration, and are available at https://www.wpcouncil.org/annual-reports/. Fishery performance includes catch and effort information. The ecosystem considerations include fisher observations, coral reef fish biomass and habitat condition indicators, life history parameters, socioeconomics, protected species, climate and ocean indicators, EFH, and marine planning sections (updated through 2024). The data integration section is intended to link environmental indicators with managed stocks. These sections are less developed in each SAFE. The Hawaii example is uku, but it appears it has not been updated since 2018 and includes data through 2012 [@wprfmc_annual_2025]. There is an ESP for Hawaii uku [@ayers_ecosystem_2022]. The American Samoa [@wprfmc_annual_2025-1] and Marianas Archipelago data integration sections includes multivariate analysis updated through 2016 [@wprfmc_annual_2025-2]. Pelagic [@wprfmc_annual_2025-3] and Pacific Remote Island Area [@wprfmc_annual_2025-4] all include updated climate and ocean indicators. 
 
 An ESR for Hawaii with the same geographic scope as Hawaii FEP was produced in 2022 [@gove_2022_2022]; prior reports were for West Hawaii only. The 2022 report includes socioeconomic, fisheries, coral reef, climate, human impact, and coral reef climate vulnerability sections. Identifies cumulative impacts. Aspects on nearshore fisheries were included at the request of the Council. Habitat recovery depends on both land based and fishery management. PIFSC is on the Hawaii REAC for the Council. Has the ecosystem considerations portion of each SAFE replaced this? How related are they? 
 
-CVA was conducted for the full Pacific Islands region [@giddens_assessing_2022]. Included in FEP SAFE reports?
+CVA was conducted for the full Pacific Islands region [@giddens_assessing_2022]. Included/referenced in FEP SAFE reports? Not that I can see
 
 Active spatial ecosystem indicators include [turtle watch](https://oceanwatch.pifsc.noaa.gov/turtlewatch.html) that is updated daily to indicate regions of potential turtle bycatch for pelagic fisheries based on temperature, and [ocean watch](https://oceanwatch.pifsc.noaa.gov/indicators.html) that summarizes ocean conditions in key fishing and coral areas. Ocean watch data includes coral reef bleaching hotspot and alert area data but I can't find how this translates into an indicator being used.  
 
