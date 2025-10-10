@@ -193,10 +193,10 @@ HumanD <- c("Human population",
 "Coastal and urban land use",
 "Total ocean economy (employment, GDP)",
 "Social connectedness",
-"Commercial and recreational fishing engagement and reliance",
+"Commercial and recreational fishing engagement and reliance"
 )
 
-SA_ESRdat <- data.frame()
+#SA_ESRdat <- data.frame()
 
 ```
 
