@@ -12,7 +12,7 @@ Prompt:
 
 # South Atlantic ESR
 
-Summary
+## Summary
 This NOAA Ecosystem Status Report for the U.S. South Atlantic Region (2021) provides a comprehensive assessment of ecosystem health from North Carolina through the Florida Keys. The report synthesizes 154 indicators across seven categories to support ecosystem-based fisheries management.
 Key findings include:
 Climate and Physical Changes: The Atlantic Multidecadal Oscillation shifted to a warm phase in the mid-1990s and remains positive. Multiple temperature indicators show warming trends, particularly since the 2010s, in seasonal, annual, and decadal measurements. Coastal upwelling has declined since the early 2010s while primary productivity was low from 2010-2015. These changes suggest significant shifts in ocean dynamics.
@@ -24,8 +24,10 @@ Stock Status: The proportion of stocks experiencing overfishing has declined sin
 Protected Species: Marine bird abundances have been stable or increasing since the 1990s. Loggerhead Sea Turtle nest counts have increased since the mid-2000s. Marine mammal strandings have been sporadic with no long-term trend, though a major 2013 Bottlenose Dolphin mortality event occurred.
 Human Dimensions: The four South Atlantic states rank among the nation's fastest growing in population. Urban land cover increased 18-23% from 1996-2010. Ocean economy employment and GDP are at record highs. Social connectedness has declined overall, with greatest losses in North and South Carolina.
 The synthesis reveals an ecosystem experiencing gradual but accelerating change, with significant shifts evident around 2005/2006, 2013/2014, and most recently. The report identifies critical data gaps for habitats, lower trophic levels, and human dimensions, recommending expanded monitoring and integrated ecosystem management approaches.
-Section Headings and Ecosystem Indicators
-1. Climate Drivers
+
+## Section Headings and Ecosystem Indicators
+
+### 1. Climate Drivers
 Indicators:
 
 Atlantic Multidecadal Oscillation (AMO)
@@ -35,7 +37,8 @@ North Atlantic Sea Surface Temperature Tripole
 Atlantic Warm Pool (AWP)
 
 Management Implications: Climate drivers influence temperature, precipitation, storm frequency, and ocean circulation patterns that affect fish distribution, spawning timing, recruitment success, and habitat availability. Understanding these patterns helps managers anticipate regime shifts and adjust harvest strategies accordingly.
-2. Physical and Chemical Pressures
+
+### 2. Physical and Chemical Pressures
 Indicators:
 
 Sea surface temperature
@@ -53,7 +56,8 @@ Storms and hurricanes
 Ocean acidification
 
 Management Implications: These indicators affect fish growth rates, distribution shifts, spawning habitat quality, larval survival, and nursery ground productivity. Rising temperatures may require adjusting stock boundaries, harvest regulations, and protected areas. Ocean acidification threatens shellfish and reef ecosystems supporting commercial fisheries.
-3. Habitat States
+
+### 3. Habitat States
 Indicators:
 
 Wetlands and forests
@@ -63,7 +67,8 @@ Coral demographics
 Coral bleaching
 
 Management Implications: Habitat loss and degradation directly reduce carrying capacity for fish populations. Declining wetlands, seagrasses, oyster reefs, and coral reefs diminish nursery grounds and spawning areas, requiring more conservative harvest limits and habitat restoration priorities in management plans.
-4. Lower Trophic Level States
+
+### 4. Lower Trophic Level States
 Indicators:
 
 Primary productivity (chlorophyll-a)
@@ -72,7 +77,8 @@ Ichthyoplankton diversity and abundance
 Forage fish abundance (Atlantic Menhaden)
 
 Management Implications: Lower trophic levels form the food web foundation. Declining primary productivity or forage fish abundance can limit growth and recruitment of commercial species, necessitating ecosystem-based harvest control rules that account for prey availability and predator-prey relationships.
-5. Upper Trophic Level States
+
+### 5. Upper Trophic Level States
 Indicators:
 
 Nearshore demersal fish diversity and abundance
@@ -83,7 +89,8 @@ Mean trophic level
 Life history parameters (age/length at maturity, maximum size/age)
 
 Management Implications: Changes in fish community structure, diversity, and life history traits indicate ecosystem health and fishing impacts. Declining diversity and shifts toward smaller, faster-growing species suggest overfishing. Mean trophic level declines indicate "fishing down the food web," requiring multispecies management approaches.
-6. Ecosystem Services
+
+### 6. Ecosystem Services
 Indicators:
 
 Biomass of economically important species (12 assessed stocks)
@@ -97,7 +104,8 @@ Marine mammal strandings
 Sea turtle nest counts
 
 Management Implications: Stock assessment outputs directly inform harvest limits and rebuilding plans. Declining recruitment may require reduced quotas. The shift toward recreational dominance necessitates sector-specific regulations. Protected species indicators identify ecosystem stress and potential fishery interactions requiring mitigation measures.
-7. Human Dimensions
+
+### 7. Human Dimensions
 Indicators:
 
 Human population
@@ -111,7 +119,7 @@ Management Implications: Rapid population growth and coastal development increas
 
 # Gulf ESR
 
-Summary
+## Summary
 This 2017 Gulf of Mexico Ecosystem Status Report provides a comprehensive assessment of the ecosystem to support ecosystem-based management. The report examines trends across physical, biological, and socioeconomic components using refined indicators from the original 2013 report.
 Key Findings:
 Climate Drivers: The Atlantic Multidecadal Oscillation (AMO), which increased consistently from the 1980s to 2010, has begun slightly declining in recent years but remains in its positive phase. This climate mode influences temperature, precipitation, Loop Current strength, and hypoxia development, and has been identified as a major driver of ecosystem-wide reorganization in the mid-1990s.
@@ -123,8 +131,10 @@ Ecosystem Services: Commercial landings and revenues, which had been declining, 
 Human Dimensions: Coastal population reached 24.4 million in 2010, with continued growth concentrated in urban centers like Houston and Tampa. Urban land cover increased over 15% between 1996-2010, with much higher rates in specific areas (80%+ in Harris County, TX). Social connectedness shows slight decline over time, varying considerably by county.
 Synthesis: The mid-1990s ecosystem reorganization coinciding with the AMO phase shift is evident across multiple indicators. Recent trends (2011-2016) show accelerating rates of change for several physical drivers (temperature, sea level rise) while biological states remain relatively stable. Both commercial and recreational fishery indicators show recent positive trends, suggesting recovery from earlier declines. The report emphasizes that indicators at Gulf-wide scales may mask important regional variation requiring finer-scale analysis.
 The report identifies critical data gaps for protected species (corals, sea turtles, marine mammals), zooplankton species composition, estuarine habitat monitoring, and integration between ecological and human dimensions indicators.
-Section Headings and Ecosystem Indicators
-1. Climate Drivers
+
+## Section Headings and Ecosystem Indicators
+
+### 1. Climate Drivers
 Indicators:
 
 Atlantic Multidecadal Oscillation (AMO)
@@ -132,7 +142,8 @@ Sea surface temperature (SST) by subregion (western, central, eastern)
 Sea level rise by state
 
 Management Implications: The AMO drives ecosystem-wide changes affecting temperature, hypoxia, and higher trophic levels. The mid-1990s AMO shift from negative to positive phase caused major ecosystem reorganization, affecting stock productivity, distribution, and recruitment. Accelerating SST increases (particularly in western and eastern Gulf) may drive species distribution shifts requiring adjusted spatial management boundaries. Differential warming patterns between regions may explain observed fish migrations. Rising sea levels threaten coastal infrastructure and habitats, requiring long-term adaptation planning for fishing communities and essential fish habitat protection.
-2. Physical and Chemical Pressures
+
+### 2. Physical and Chemical Pressures
 Indicators:
 
 Eutrophication (nutrient loading: Total Nitrogen, Total Phosphorus, Nitrogen Oxides from five major rivers)
@@ -140,7 +151,8 @@ Hypoxia (bottom dissolved oxygen concentrations by region and season)
 Carbon fluxes and ocean acidification (modeled pH change)
 
 Management Implications: Declining nutrient loads from most rivers (except increasing in Mobile River and Mississippi-Atchafalaya for TP) suggest some improvement in water quality, though Mississippi River remains dominant source. However, recent worsening hypoxia off Texas (declining dissolved oxygen) may affect fish distribution, growth, and survival, potentially altering fishery harvest patterns and bycatch rates. Improved Louisiana hypoxia may reflect cooling temperatures in that region. Ocean acidification threatens shellfish (oysters, shrimp) through reduced calcification and survival. Management must consider these stressors when setting catch limits, as fish condition and productivity decline under hypoxic and acidified conditions. Spatial closures may need adjustment as hypoxic zones shift.
-3. Habitat State
+
+### 3. Habitat State
 Indicators:
 
 Areal extent of estuarine habitats (seagrass coverage in six bays)
@@ -148,7 +160,8 @@ Artificial structures (oil platforms, artificial reefs)
 Wetland land use and land cover
 
 Management Implications: Declining seagrass in most areas (Pensacola Bay, Mississippi Sound, Galveston) except Florida Bay and Mobile Bay reduces nursery habitat for commercially important species, potentially affecting recruitment. Tampa Bay increases demonstrate restoration success. Dramatic wetland loss (1,000 sq mi, 1996-2010), especially in Louisiana, eliminates critical spawning and nursery grounds for shrimp, crabs, and finfish. Explosive growth in artificial reefs (now 6x oil platforms) creates new habitat for reef-associated species like red snapper, potentially increasing local abundance but raising questions about whether reefs increase overall production or just concentrate existing fish. Declining oil platforms may reduce habitat for some species. Management must account for habitat-mediated changes in stock productivity and carrying capacity when setting quotas.
-4. Lower Trophic States
+
+### 4. Lower Trophic States
 Indicators:
 
 Net primary productivity (NPP)
@@ -156,7 +169,8 @@ Zooplankton biomass (biovolume from spring and fall surveys)
 Forage fish abundance (Gulf menhaden age-1+ biomass)
 
 Management Implications: Stable primary productivity with slight recent increases suggests baseline food web support remains adequate. However, high variability in zooplankton (spring showing quasi-decadal oscillation; fall declining from 1985-1997) indicates changes in prey availability for larval and juvenile fish that could affect recruitment success. Dramatically increasing menhaden biomass (due to reduced fishing from market forces and fleet consolidation) provides abundant forage for predators. However, menhaden comprises only 2-3% of most predator diets (versus 11% for all forage species combined), so menhaden abundance alone may not fully represent forage base health. Management should monitor forage base holistically rather than focusing solely on menhaden, and consider ecosystem-based reference points that maintain adequate forage for predators.
-5. Upper Trophic States
+
+### 5. Upper Trophic States
 Indicators:
 
 Upper trophic level biodiversity (species richness and Shannon-Weiner diversity from SEAMAP survey by region and season)
@@ -164,14 +178,16 @@ Mean trophic level (MTL) from commercial catch (multiple calculations: all finfi
 Overfishing status (proportion of stocks overfished vs. undergoing overfishing)
 
 Management Implications: Slight declining trends in species richness (except summer Louisiana) driven by absence of pelagic species may indicate recruitment issues or distribution shifts requiring investigation. Marked diversity declines in Louisiana after 2005 reflect reduced shrimping effort and resulting dominance by sciaenids (spot, croaker), demonstrating how fishing activity itself shapes community structure. Stable MTL of commercial catch indicates no "fishing down the food web," suggesting relatively balanced exploitation across trophic levels. Dramatic success in reducing overfishing (from >33% to <5% of stocks) demonstrates effective management implementation. However, persistent overfished status (~20% of stocks) despite reduced fishing pressure indicates that factors beyond fishing mortality (environmental conditions, predator-prey dynamics, management implementation error) are preventing rebuilding. This suggests need for ecosystem-based approaches addressing multiple limiting factors, not just fishing mortality reduction. Some species (gray triggerfish) continue declining despite rebuilding plans, indicating environmental effects on recruitment requiring more precautionary management.
-6. Ecosystem Services
+
+### 6. Ecosystem Services
 Indicators:
 
 Abundance of economically important species (biomass/abundance from stock assessments for 11 species)
 Bird abundance (relative abundance indices for 5 waterbird species: brown pelican, magnificent frigatebird, roseate spoonbill, white ibis, wood stork)
 
 Management Implications: Most commercially important species (snapper, grouper, mackerel) show recovery trajectories over past two decades, indicating management success. However, recent recruitment declines for some species (gray triggerfish, king mackerel) due to environmental effects warn that past productivity assumptions may not hold. First principal component of stock abundances explains >50% of variation, suggesting shared environmental influences that could inform ecosystem-based management. The 2005 red tide event's clear signal in the composite index demonstrates how environmental perturbations affect multiple stocks simultaneously, requiring management flexibility. Caution warranted for recent years of stock assessments due to high uncertainty. Increasing bird abundances (particularly brown pelican, white ibis, wood stork) since 1990s-2000s indicate improving ecosystem conditions and prey availability. Wood stork increases suggest hydrological restoration benefits. However, lack of pelagic seabird indicators (due to data limitations) leaves gap in offshore ecosystem status. Birds as indicators help managers assess ecosystem health beyond target species, providing early warning of food web disruptions.
-7. Human Dimensions
+
+### 7. Human Dimensions
 Indicators:
 
 Human population (total population by state)
@@ -184,7 +200,8 @@ Commercial and recreational fishing engagement and reliance
 Recreational fishing effort (angler trips, angler days)
 
 Management Implications: Rapid population growth (24.4 million in coastal counties) concentrating in urban centers (Houston, Tampa) increases fishing pressure, coastal development impacts, and user conflicts. 15% increase in urban land cover (1996-2010) with extreme hotspots (80%+ in Houston area) degrades water quality and coastal habitat. Hurricane Katrina's impacts (population loss in low-lying areas, concentration near Houston) demonstrate how natural disasters interact with fishing communities. Rebounding commercial landings, revenues, employment, and GDP since 2010 (after historical declines) indicate fishery recovery, though driven partly by market dynamics. Substantially increasing recreational effort (both trips and days) since 2010, with 2015 first year both above average, indicates growing fishing pressure requiring enhanced monitoring and potentially more restrictive regulations. Declining social connectedness in some areas suggests reduced community resilience to regulatory changes or disasters. Counties with high commercial reliance (Louisiana, Texas parishes) or recreational reliance (Monroe County FL, Plaquemines Parish LA) are most vulnerable to fishery disruptions and require targeted support in management decisions. Fuel prices significantly influence headboat effort (shorter, more frequent trips with high prices), requiring managers to account for economic drivers of fishing patterns. Management must balance growing recreational demand with sustainability, consider differential community impacts of regulations, and support vulnerable fishing-dependent communities through transitions.
-8. Integrated Ecosystem Perspectives
+
+### 8. Integrated Ecosystem Perspectives
 Synthesis Analysis:
 
 Traffic light plot showing temporal patterns across all indicators
@@ -196,13 +213,17 @@ Management Implications: The mid-1990s ecosystem reorganization driven by AMO ph
 
 # Mid-Atlantic State of the Ecosystem
 
-Summary
+## Summary
 This 2025 State of the Ecosystem Report for the Mid-Atlantic provides a comprehensive assessment of ecosystem conditions to support the Mid-Atlantic Fishery Management Council (MAFMC). The report evaluates performance against fishery management objectives and identifies risks from climate change and offshore wind development.
-Key Findings:
+
+### Key Findings:
 Management Objective Performance: Commercial landings reached historic lows in 2023, driven by menhaden fishery consolidation and declining MAFMC-managed species (particularly surfclams and ocean quahogs). Total revenue hit all-time lows in 2022-2023 due to both declining prices and volumes. Recreational harvest is declining despite increasing effort, with a shift toward shore-based fishing reducing fleet diversity. Stock status is generally good, with only three stocks not meeting objectives, though six have unknown status.
+
 Protected Species: Harbor porpoise and gray seal bycatch remain below thresholds, but North Atlantic Right Whales continue declining (fewer than 70 adult females remain) due to vessel strikes and entanglements. Unusual mortality events continue for three large whale species.
 Community Vulnerability: Four Mid-Atlantic communities rank among the most engaged in commercial and recreational fishing. Many highly engaged communities show medium-high or above social vulnerability, presenting adaptation challenges. A majority have high to very high revenue climate vulnerability.
+
 Ecosystem Stability: Multiple indicators suggest instability. While fish species richness is stable, zooplankton diversity is increasing, and biological trait changes are observed in fish communities. Commercial fleet count has declined though species revenue diversity remains stable. Recreational species catch diversity is maintained by different species over time.
+
 Climate Risks: The region faces three major climate-related management risks:
 
 Spatial Management Risks: Species distributions continue shifting northeast and into deeper water, potentially causing spatial misallocation of quotas and reduced effectiveness of bycatch measures.
@@ -213,59 +234,90 @@ Catch Limit Risks: Fish productivity has declined since early 2000s, with mixed 
 Offshore Wind: Four projects were under construction in 2024, with 30 proposed through the next decade covering 2.3+ million acres. Up to 15% of maximum annual fisheries revenue for major Mid-Atlantic species occurs in lease areas. Development overlaps North Atlantic Right Whale habitat, potentially altering oceanography and prey availability while increasing vessel strike risk.
 Drivers: Long-term ocean warming continues (though 2024 was cooler), Gulf Stream instability is increasing, the Mid-Atlantic Cold Pool is shrinking and warming, and forage fish quality and abundance are changing. These environmental shifts interact with fishing pressure and market dynamics to affect managed species productivity and distribution.
 The report emphasizes that climate-driven ecosystem changes create significant uncertainty for management, requiring adaptive approaches that account for shifting distributions, changing productivity, and altered seasonal patterns.
-Section Headings and Ecosystem Indicators
-1. Performance Relative to Fishery Management Objectives
-Seafood Production
+
+## Section Headings and Ecosystem Indicators
+
+### 1. Performance Relative to Fishery Management Objectives
+
+#### Seafood Production
 Indicators: Commercial landings (total, U.S. seafood, MAFMC-managed); landings by feeding guild; community climate vulnerability of landings; recreational harvest; recreational shark landings; aquaculture production
 Management Implications: Declining landings driven by market dynamics (surfclams, ocean quahogs) rather than stock status or ecosystem biomass changes. Climate vulnerability indicates increasing risk from temperature-sensitive species. Recreational harvest declines require investigation of drivers beyond management changes. Species shifting distributions may affect quota allocations and fishing patterns. Surfclam and ocean quahog overlapping distributions require regulatory adjustments for mixed landings.
-Commercial Profits
+
+#### Commercial Profits
 Indicators: Total and MAFMC-managed revenue; Bennet Indicator (price vs. volume decomposition); community climate vulnerability of revenue
 Management Implications: All-time low revenues (2022-2023) driven by both declining prices and volumes, particularly for benthos. High climate vulnerability (high to very high 2000-2021) indicates revenue heavily dependent on climate-sensitive species. Falling benthos prices (departure from historical trend) combined with lower volumes suggest market structural changes requiring monitoring. Multiple stressors (warming, acidification) affecting high-value shellfish species necessitate integrated management approaches.
-Recreational Opportunities
+
+#### Recreational Opportunities
 Indicators: Angler trips (effort); recreational fleet diversity
 Management Implications: Above-average effort but declining fleet diversity indicates narrowing range of fishing opportunities. Party/charter sector contraction (down to 1.3% of trips) while shore-based fishing increases to 60% requires different management approaches for different modes. Shore anglers access different species and smaller individuals than vessel-based anglers, necessitating mode-specific regulations. Sector separation proposals should account for these access differences.
-Stability
+
+#### Stability
 Indicators: Commercial fleet count and revenue diversity; permit revenue species diversity; recreational catch diversity; total primary production; zooplankton diversity; adult fish diversity; fish community functional traits (length at maturity, maximum size, fecundity, trophic level)
 Management Implications: Declining commercial fleet count indicates reduced capacity to respond to fishing opportunities, though species revenue diversity remains stable. Recreational catch diversity maintained by different species over time suggests ecosystem restructuring requiring management flexibility. Increasing zooplankton diversity may affect managed species food availability. Opposing spring vs. fall fish community trait shifts (spring toward slower life histories, fall toward faster) indicates seasonal instability requiring continued monitoring. Low species revenue diversity suggests concentration risk in few species.
-Social & Cultural (Community Vulnerability)
+
+#### Social & Cultural (Community Vulnerability)
 Indicators: Commercial and recreational fishing engagement indices; population-relative engagement; social vulnerability indicators (poverty, personal disruption, population composition); community climate change risk (total climate vulnerability of revenue)
 Management Implications: Communities with high fishing engagement plus high social vulnerability (e.g., Atlantic City, Bivalve, Morehead City) face disproportionate impacts from regulatory changes and require targeted support. Majority of Mid-Atlantic communities show high to very high climate vulnerability, indicating widespread dependence on climate-sensitive species requiring proactive adaptation planning. Communities ranking high on multiple vulnerability dimensions need priority consideration in impact analyses and mitigation planning. Gentification pressure in some high-engagement communities threatens fishing infrastructure and access.
-Protected Species
+
+#### Protected Species
 Indicators: Harbor porpoise bycatch; gray seal bycatch; North Atlantic Right Whale abundance and calf counts; Unusual Mortality Events (UMEs)
 Management Implications: Bycatch management measures maintaining harbor porpoise below PBR thresholds are effective. Gray seal bycatch near PBR with increasing uncertainty requires enhanced monitoring. Right whale population decline (fewer than 70 adult females) driven by entanglements and vessel strikes demands immediate additional mitigation measures. Distribution shifts related to prey changes (reduced Calanus finmarchicus in Gulf of Maine) require dynamic management approaches. Offshore wind development overlapping critical right whale habitat necessitates comprehensive impact assessments and mitigation protocols. UMEs for three large whale species require investigation of multiple stressors including climate change and human interactions.
-2. Risks to Meeting Fishery Management Objectives
-Climate and Ecosystem Change - Risks to Managing Spatially
+
+### 2. Risks to Meeting Fishery Management Objectives
+
+#### Climate and Ecosystem Change - Risks to Managing Spatially
 Indicators: Fish and cetacean distribution shifts (aggregate species center of gravity—distance and depth); individual species distribution shifts; forage fish distribution; macrobenthos distribution; copepod distribution; annual and seasonal ocean temperature; Gulf Stream position; Mid-Atlantic Cold Pool temperature and extent
+
 Management Implications: Continued northeast and deeper distribution shifts (48 species combined) create spatial misallocation of quotas within and across jurisdictions, leading to unmet quotas or increased discards. Gear management areas may no longer align with species presence, reducing bycatch measure effectiveness. Diverging distribution patterns between pelagic forage (northeast shift) and benthic prey (westward shift) may alter predator-prey dynamics affecting managed species productivity. Long-term warming trend (though 2024 cooler) and shrinking/warming Cold Pool reduce suitable habitat for cold-water species. Gulf Stream instability altering shelf water masses creates unpredictable habitat changes. Survey catchability changes as species move within or out of survey footprints complicate stock assessment. Management requires dynamic spatial allocations, coordinated multi-jurisdictional approaches, and continued monitoring to track distribution changes.
-Climate and Ecosystem Change - Risks to Managing Seasonally
+
+#### Climate and Ecosystem Change - Risks to Managing Seasonally
 Indicators: Spawning timing shifts (haddock, yellowtail flounder maturity stages); migration timing shifts (tunas, large whales); cetacean seasonal presence patterns; ocean summer length; Cold Pool persistence; monthly chlorophyll timing (phytoplankton bloom phenology)
+
 Management Implications: Earlier spawning (haddock, yellowtail flounder) reduces effectiveness of spawning closures if peak spawning occurs outside closure periods. Changed migration timing (bigeye tuna 50 days earlier; bluefin tuna 38-80 days earlier; right whales 18-19 days later in Cape Cod Bay) means seasonal fishery openings and exemption areas may not align with species availability. Seasonal quota allocations misaligned with availability can lead to race-to-fish or unmet quotas. Longer ocean summers and shorter Cold Pool persistence alter habitat availability windows for temperature-sensitive species. Shifting phytoplankton bloom timing (January increase, September decrease) cascades through food web affecting larval fish survival. Management must regularly evaluate seasonal timing assumptions and develop flexible seasonal measures that can adapt to phenological shifts.
-Climate and Ecosystem Change - Risks to Setting Catch Limits
+
+#### Climate and Ecosystem Change - Risks to Setting Catch Limits
 Indicators: Fish productivity (small-fish-per-large-fish anomaly from surveys; recruitment per spawning stock biomass from assessments); fish condition by species; forage fish energy density; forage fish abundance index; macrobenthos and megabenthos abundance; total primary production; zooplankton abundance (large copepods, small copepods, euphausiids); extreme temperature events and marine heatwaves; ocean acidification (aragonite saturation state); low oxygen events; shark and seal abundance
+
 Management Implications: System-wide productivity declines since early 2000s indicate changing stock-recruitment relationships, making short-term projections more uncertain and potentially invalidating biological reference points. Mixed fish condition (generally improving since 2021 but variable by species) affects growth, reproduction, and survival rates used in stock assessments. Declining forage fish energy content (herring, silver hake, squids below historical levels) and declining fall forage abundance reduce energy available to predators, potentially lowering managed species productivity. Increasing metabolic demands from warming combined with changing prey availability creates productivity squeeze. Declining small copepods with increasing euphausiids represents zooplankton community shift affecting prey quality for forage fish and filter-feeding whales. Extreme OA conditions (2024 highest since 2007 for summer Mid-Atlantic; winter/spring Gulf of Maine near cod/lobster sensitivity) threaten shellfish and may affect fish recruitment. Multiple stressors (temperature, acidification, low oxygen) interact to compound impacts. Management requires: 1) incorporating environmental covariates in stock assessments, 2) updating biological reference points as productivity changes, 3) developing ecosystem-based harvest control rules accounting for forage availability and environmental conditions, 4) building buffers into catch advice to account for increased uncertainty, 5) faster response to observed productivity changes through more frequent assessments.
-Other Ocean Uses: Offshore Wind Risks
+
+### Other Ocean Uses: Offshore Wind Risks
 Indicators: Development timeline and spatial footprint; commercial fishery revenue and landings from lease areas by species and port; survey area overlap; community social and climate vulnerability; protected species habitat overlap
+
 Management Implications: Up to 15% of maximum annual revenue for major MAFMC species (especially surfclams at 15-16% maximum) occurs in existing lease areas and may be displaced if all sites developed. Individual operators may depend even more heavily on lease areas. Displaced fishing effort can alter historical fishing patterns, creating new habitat impacts, species interactions, and user conflicts. Displacement locations depend on fishery regulations, species availability, and competing uses—unknown outcomes require adaptive management. Surfclam fishery most affected; distribution shifts from climate change may increase overlap with wind areas. Survey impacts (1-70% overlap across surveys; up to 96% individual strata for scallop survey) reduce data quality, increase stock assessment uncertainty, require new survey designs for altered habitats, and may reduce sampling productivity through navigation delays. Right whale habitat overlap creates multiple risks: altered oceanography potentially affecting prey (Calanus) availability, increased vessel strike risk from construction/operation vessels, pile driving noise impacts during construction, operational noise causing displacement and communication masking. Communities with highest revenue overlap plus social vulnerability (Beaufort NC, Cape May/Barnegat Light/Long Beach NJ, Atlantic City NJ) require targeted mitigation and support. Management must: 1) account for increased uncertainty in stock assessments due to survey impacts, 2) develop adaptive spatial management for displaced effort, 3) enhance monitoring of displaced fishing patterns and resulting impacts, 4) prioritize vulnerable communities in mitigation planning, 5) require comprehensive monitoring of wind development effects on species distribution and productivity, 6) strengthen right whale protection measures in and around wind areas, 7) coordinate across jurisdictions as regional buildout proceeds.
-3. 2024 Highlights
+
+### 3. 2024 Highlights
 Indicators: Global temperatures; Northeast U.S. temperatures; Labrador Slope Water proportion; Gulf Stream position; zooplankton community composition (Arctic Calanus presence); species migration timing observations; species distribution observations; Chesapeake Bay conditions (temperature, oxygen, salinity); upwelling events; coccolithophore bloom; whale aggregations; ocean acidification risk; scallop recruitment
+
 Management Implications: 2024 anomalous conditions (globally warmest but Northeast U.S. cooler due to Labrador water influx, southward Gulf Stream shift) demonstrate high interannual variability that management must accommodate. Delayed migration of multiple species (longfin squid, black sea bass, haddock) and unusual distributions (mackerel, pollock, bluefin tuna) indicate that species availability to fisheries can be highly unpredictable year-to-year, requiring flexible in-season management. Near-term forecasts being evaluated for ability to predict such episodic events could improve management responsiveness. Extreme summer OA in Mid-Atlantic (highest since 2007) and high winter/spring Gulf of Maine OA near cod/lobster sensitivity thresholds warn of increasing habitat stress requiring enhanced monitoring and potential precautionary reductions in fishing mortality. Strong scallop recruitment in Nantucket Lightship (contrasting with 2022-2023 Elephant Trunk die-off) demonstrates high spatial variability in climate impacts requiring fine-scale management. Arctic zooplankton presence in Gulf of Maine indicates potential regime shift with unknown food web consequences. These highlights emphasize that: 1) long-term trends may be punctuated by extreme interannual events, 2) management must be responsive to observed anomalies, 3) near-term forecasting could improve proactive management, 4) continued comprehensive monitoring across multiple ecosystem components is essential for detecting and responding to changes.
 
 # Mid Atlantic State of the Ecosystem (2)
 
-Summary
+## Summary
 The 2025 State of the Ecosystem Report for the Mid-Atlantic evaluates performance against fishery management objectives and identifies risks to meeting those objectives. The report reveals mixed trends across multiple management goals.
+
 Seafood Production shows declining commercial landings at historic lows in 2023, driven primarily by menhaden fishery consolidation and market-driven reductions in surfclam and ocean quahog landings rather than stock depletion. MAFMC-managed landings have declined since the mid-2000s, while recreational harvest continues a long-term decline despite recent stabilization. However, most stocks meet management objectives with biomass above thresholds and fishing mortality below limits.
+
 Commercial Profits reached an all-time low in 2022-2023 due to both declining volumes and falling prices across nearly all species groups. The decline is particularly driven by reduced benthos landings and prices. Mid-Atlantic ports show high to very high climate vulnerability in revenue, indicating heavy dependence on climate-sensitive species.
+
 Recreational Opportunities show increasing effort above long-term averages, but fleet diversity is declining due to party/charter contraction and a shift toward shore-based fishing. This reduces the range of recreational fishing options, as shore anglers access different species and smaller fish than vessel-based anglers.
+
 Stability indicators reveal ecosystem instability. While commercial species revenue diversity remains stable for continuing fleets, fleet count has declined. Recreational species catch diversity is maintained by a different species mix over time. Zooplankton diversity is increasing, but fish community trait distributions show concerning long-term changes in both spring and fall, suggesting instability in life history strategies.
+
 Social and Cultural indicators identify four Mid-Atlantic communities ranking among the most engaged in both commercial and recreational fishing, with many showing medium-high or higher social vulnerability, suggesting challenges in adapting to change. A majority of communities have high to very high revenue climate vulnerability.
+
 Protected Species show mixed results. Harbor porpoise and gray seal bycatch remain below Potential Biological Removal thresholds, meeting objectives. However, North Atlantic Right Whales continue declining, with fewer than 70 adult females remaining. The population experienced stable but concerning numbers after management interventions, with Unusual Mortality Events continuing for three large whale species.
+
 Climate and Ecosystem Risks are substantial. Species distributions continue shifting northeast and deeper. Ocean temperatures show long-term warming trends, though 2024 was cooler than recent years due to increased Labrador Slope Water influx. The cold pool is warming and shrinking. Fish productivity has declined since the early 2000s, with mixed body condition. Ocean acidification reached unprecedented levels in summer 2024 for the Mid-Atlantic.
+
 Offshore Wind Development poses significant risks, with up to 15% of maximum annual fisheries revenue for major species potentially displaced from lease areas. Development overlaps North Atlantic Right Whale habitat and affects scientific surveys, potentially increasing stock assessment uncertainty.
+
 2024 Highlights documented unusual oceanographic conditions with cooler, fresher water entering the Northwest Atlantic, delayed species migrations, and unprecedented summer ocean acidification in the Mid-Atlantic—the highest recorded since 2007.
-Section Headings and Ecosystem Indicators
-Performance Relative to Fishery Management Objectives
-Seafood Production
+
+## Section Headings and Ecosystem Indicators
+
+### Performance Relative to Fishery Management Objectives
+
+#### Seafood Production
 Indicators:
 
 Total and MAFMC commercial landings - Tracks food provision; at historic lows, indicating market-driven issues rather than stock depletion, requiring attention to non-biological factors affecting fisheries
@@ -277,7 +329,7 @@ Stock status relative to reference points - Most stocks meeting objectives demon
 Catch relative to limits (ABC/ACL) - Most species well below limits indicates quotas not constraining; landings declines driven by other factors
 Survey biomass by guild - Stable or increasing trends suggests ecosystem not driving landings decline; management focus should be on market dynamics
 
-Commercial Profits
+#### Commercial Profits
 Indicators:
 
 Total and MAFMC revenue - At all-time lows signals serious economic concerns requiring market analysis and potential economic support
@@ -285,13 +337,13 @@ Bennet Indicator (price vs volume) - Decomposes revenue drivers; both declining 
 Revenue by feeding guild - Identifies which groups drive economic changes; benthos price decline is concerning departure from historical trends
 Climate vulnerability of revenue - High to very high vulnerability indicates economic risk from climate change; diversification strategies may be needed
 
-Recreational Opportunities
+#### Recreational Opportunities
 Indicators:
 
 Angler trips - Above long-term average shows healthy participation but needs continued access maintenance
 Fleet diversity - Declining diversity from party/charter contraction reduces fishing options; may require sector-specific management to maintain opportunities
 
-Stability
+#### Stability
 Indicators:
 
 Commercial fleet count - Declining count suggests reduced industry capacity and resilience to change
@@ -303,7 +355,7 @@ Zooplankton diversity - Increasing diversity may indicate community shifts affec
 Adult fish diversity - Stable expected species number masks potential species substitutions (warm for cold water species)
 Fish community functional traits - Opposing seasonal trends (spring slower, fall faster life histories) indicates ecosystem instability requiring further investigation
 
-Social and Cultural (Community Engagement and Vulnerability)
+#### Social and Cultural (Community Engagement and Vulnerability)
 Indicators:
 
 Commercial and recreational fishing engagement - Identifies communities most dependent on fishing for targeted outreach and impact mitigation
@@ -311,7 +363,7 @@ Population relative engagement - Shows communities with high fishing importance 
 Social vulnerability (poverty, personal disruption, population composition) - Communities with high engagement and high social vulnerability face compounded adaptation challenges requiring enhanced support
 Community climate vulnerability - Majority of communities at high/very high risk indicates widespread economic exposure to climate impacts on target species
 
-Protected Species
+#### Protected Species
 Indicators:
 
 Harbor porpoise bycatch - Below PBR meets objectives; declining trend may reflect reduced abundance/overlap or management success
@@ -320,8 +372,9 @@ North Atlantic Right Whale abundance - Declining population below recovery objec
 Right whale calf counts - Recent improvement toward average after 2018 low is encouraging but insufficient for recovery
 Unusual Mortality Events - Ongoing UMEs for three whale species indicate systemic threats from human interactions requiring continued mitigation
 
-Risks to Meeting Fishery Management Objectives
-Climate and Ecosystem Change - Risks to Managing Spatially
+### Risks to Meeting Fishery Management Objectives
+
+#### Climate and Ecosystem Change - Risks to Managing Spatially
 Indicators:
 
 Fish and cetacean distribution shifts - Northeast and deeper movements create spatial misallocation of quotas and bycatch management challenges; requires dynamic spatial management
@@ -331,7 +384,7 @@ Sea surface temperature - Long-term warming drives distribution shifts; requires
 Gulf Stream position - Northward shift with 2024 southward anomaly affects shelf water properties and species habitat; requires adaptive monitoring
 Cold pool temperature and extent - Warming and shrinking reduces essential habitat; 2024 recovery temporary; species dependent on cold pool face long-term habitat loss
 
-Climate and Ecosystem Change - Risks to Managing Seasonally
+#### Climate and Ecosystem Change - Risks to Managing Seasonally
 Indicators:
 
 Spawning timing shifts - Earlier spawning for haddock and yellowtail flounder makes seasonal closures less effective; closures need adjustment
@@ -341,7 +394,7 @@ Ocean summer length - Longer warm seasons alter biological timing; phenology-bas
 Cold pool persistence - Shorter duration reduces habitat availability; affects species dependent on seasonal cold water refuge
 Phytoplankton bloom timing - Fall bloom extending into winter with September decline suggests shifting seasonal productivity affecting food web timing
 
-Climate and Ecosystem Change - Risks to Setting Catch Limits
+#### Climate and Ecosystem Change - Risks to Setting Catch Limits
 Indicators:
 
 Fish productivity (small per large fish) - Declining since early 2000s indicates reduced recruitment per spawner; reference points may be overestimated
@@ -357,7 +410,7 @@ Ocean acidification - 2024 summer MAB highest on record; unprecedented risk to c
 Low oxygen (hypoxia) - Not detected 2024 but 2023 events cause growth impacts and mortality; episodic events create assessment uncertainty
 Shark and seal predator abundance - Stable to increasing populations suggest stable to increasing predation pressure; natural mortality assumptions may need adjustment
 
-Other Ocean Uses: Offshore Wind Risks
+### Other Ocean Uses: Offshore Wind Risks
 Indicators:
 
 Development timeline and areas - 3.1+ million acres leased with more proposed creates extensive spatial conflicts requiring coordinated planning
@@ -368,7 +421,7 @@ Community social vulnerability in wind-impacted areas - Top fishing communities 
 Right whale habitat overlap - Development overlaps mother-calf corridors and year-round foraging habitat; adds vessel strike risk and noise impacts to already declining population
 Survey area overlap - 1-70% survey overlap (up to 96% some scallop strata) compromises scientific data; increases stock assessment uncertainty
 
-2024 Highlights
+### 2024 Highlights
 Observations (not formal indicators but notable events):
 
 Labrador Slope Water influx - Increased cold, fresh northern water altered entire system; shows importance of oceanographic variability to predictions
@@ -382,7 +435,7 @@ Scallop recruitment - Strong 2024 Nantucket Lightship recruitment after 2022-202
 
 # Caribbean ESR
 
-Summary
+## Summary
 The Caribbean Ecosystem Status Report (April 2025) synthesizes diverse information sources to support ecosystem-based fisheries management in Puerto Rico and the U.S. Virgin Islands. The report tracks progress toward fishery management objectives while identifying risks that could impact these goals.
 The report organizes indicators into two main categories: tracking performance toward management objectives and potential risks to meeting those objectives. Management objectives include food production, socioeconomic health, equity, engagement and participation, bycatch reduction, governance, and ecosystem protection.
 Key findings reveal mixed trends across the region. For food production, fishery-independent surveys show that most economically important fish species maintain at or above average densities, though stoplight parrotfish have declined in St. Croix. Commercial landings have decreased significantly since 2010, particularly for finfish, coinciding with implementation of annual catch limits. Lobster landings have increased in Puerto Rico but decreased in St. Croix.
@@ -391,8 +444,10 @@ Major environmental risks have intensified. Sea surface temperatures have increa
 Water quality concerns are rising, with enterococcus bacteria counts increasing substantially since 2020. Sargassum inundation, largely absent before 2011, has become increasingly prevalent with major events in 2018 and 2021. Coastal development continues to expand impervious surfaces, particularly around San Juan.
 The report identifies critical data gaps, including limited recreational catch monitoring, uncertainties in commercial landings due to reporting changes and suspected underreporting, and lack of standardized monitoring for marine debris and certain pollution impacts. Changes in reporting methods, particularly the 2020 introduction of electronic reporting in Puerto Rico, complicate trend interpretation.
 Multivariate analysis reveals that indicators underwent rapid changes during 2017-2021, driven by major stressors including hurricanes and the COVID-19 pandemic, suggesting destabilizing impacts on the Caribbean fishery ecosystem. The report emphasizes the need for improved monitoring, particularly for human dimensions, recreational fisheries, and local ecological knowledge. It recommends continued development of fishery-independent surveys and better integration of social indicators to capture cultural significance and community resilience beyond monetary metrics.
-Section Headings and Ecosystem Indicators
-2.1 Food Production
+
+## Section Headings and Ecosystem Indicators
+
+### 2.1 Food Production
 Indicators:
 
 Abundance of economically important species - Tracks population health of key commercial/recreational species; informs stock status and harvest sustainability
@@ -400,7 +455,7 @@ Pelagic:demersal ratio of landings - Reflects habitat productivity and availabil
 Maximum length in landings - Signals whether large-bodied species are being depleted; indicates fishing pressure impacts
 Commercial landings - Measures food provision capacity; reflects abundance, effort, and regulatory compliance
 
-2.2 Socioeconomic Health
+### 2.2 Socioeconomic Health
 Indicators:
 
 Commercial revenues - Shows economic viability and species dependencies; guides economic impact assessments
@@ -408,23 +463,23 @@ Commercial fishing trips - Captures effort levels and gear usage; indicates part
 Economic activity (GDP, employment) - Provides broader economic context; helps assess fishing industry's relative importance
 Ocean economy metrics - Quantifies marine sector contributions; demonstrates ocean dependency
 
-2.3 Equality
+### 2.3 Equality
 Indicators:
 
 Commercial revenue distribution (Gini index) - Measures fishery consolidation; indicates equity in benefit distribution
 
-2.4 Engagement and Participation
+### 2.4 Engagement and Participation
 Indicators:
 
 Recreational landings - Quantifies non-commercial harvest; essential for total removals assessment
 Commercial fishing engagement and reliance - Identifies fishing-dependent communities; targets management support and outreach
 
-2.5 Bycatch Reduction
+### 2.5 Bycatch Reduction
 Indicators:
 
 Changes in gear type - Proxies for bycatch levels through gear selectivity; tracks progress toward reducing unintended catch
 
-2.6 Governance
+### 2.6 Governance
 Indicators:
 
 Regulatory trends - Documents management action frequency; reflects adaptive management responsiveness
@@ -432,12 +487,12 @@ Species with informative catch limits - Tracks data-driven management progress; 
 Education and outreach events - Measures stakeholder engagement; builds compliance and trust
 Enforcement actions - Monitors compliance support; deters illegal activity
 
-2.7 Protection of Ecosystems
+### 2.7 Protection of Ecosystems
 Indicators:
 
 Coral cover and species diversity - Assesses essential fish habitat health; critical for reef-dependent fisheries sustainability
 
-3. Risks to Meeting Objectives
+### 3. Risks to Meeting Objectives
 Indicators:
 
 Sea surface temperature - Affects species distributions and coral health; climate change indicator
@@ -456,7 +511,7 @@ Human activity - Measures pressure on resources; contextualizes fishing demand
 
 # California Current ESR
 
-Summary
+## Summary
 The 2024-2025 California Current Ecosystem Status Report synthesizes environmental, biological, economic, and social indicators to assess ecosystem health and inform fishery management. The California Current experienced a strong El Niño during winter/spring 2023-2024 that caused widespread warmer ocean temperatures and delayed spring upwelling by approximately two weeks in the central region. However, the system rapidly transitioned to favorable upwelling conditions, though large marine heatwaves again impacted the system during summer and fall.
 Despite initial El Niño effects, ecological indicators reflected mixed to good marine conditions throughout most of 2024. Strong spring upwelling brought cool, productive waters supporting a diverse and productive forage community. Anchovy and juvenile groundfishes remained abundant in the Central and Southern California Current, serving as important prey for top predators. Juvenile groundfishes were also abundant in the Northern California Current. Krill abundance was near average despite El Niño conditions (typically associated with low krill), and the forage community showed high diversity.
 Ocean conditions for Chinook salmon returning to the Columbia Basin indicate improving returns in 2025, while California salmon stocks showed improvements toward average conditions for adults returning in 2025 and 2026. However, multiple harmful algal blooms significantly impacted marine life, shellfish fisheries, and human health throughout 2024. An unusual toxic dinoflagellate bloom caused paralytic shellfish poisoning in 44 people in Oregon, and persistent Pseudo-nitzschia blooms led to extensive fishery closures and marine mammal strandings.
@@ -464,8 +519,10 @@ Seabird indicators showed mixed results. Fledgling production decreased at north
 Human wellbeing indicators revealed concerning trends. Washington and Oregon experienced shifts in key commercial fishing communities, generally reflecting reductions in fishing diversity and participation. Social vulnerability increased for most Oregon and Washington commercial and recreational fishing communities in 2022, potentially reducing resilience to ecological impacts. Coastwide revenue diversification decreased by 5% in 2023 to the lowest level since 1981, though revenue concentrations increased in specific fisheries including Salmon, Coastal Pelagic Species, and Groundfish.
 Fisheries participation networks showed that most port groups experienced reductions in the number of fisheries vessels participate in, with some ports also showing less connectivity between fisheries. This potentially reduces fisher resilience to environmental and market pressures. Total coastwide commercial landings declined 12% in 2024, largely due to a 31% decrease in Pacific whiting landings, though revenues increased slightly by 3%.
 The report concludes that while the system showed resilience to El Niño and marine heatwaves through productive upwelling, multiple stressors including harmful algal blooms, social vulnerability, and reduced fleet diversity pose significant challenges for West Coast fishing communities and ecosystem health.
-Section Headings and Ecosystem Indicators
-2. Climate and Ocean Drivers
+
+## Section Headings and Ecosystem Indicators
+
+### 2. Climate and Ocean Drivers
 Indicators:
 
 Oceanic Niño Index (ONI) - Describes El Niño/La Niña conditions; positive values indicate El Niño with lower productivity, weaker upwelling, and warmer temperatures in the California Current
@@ -481,7 +538,7 @@ Snow-water equivalent (SWE) - Water content in snowpack; supplies cool freshwate
 Streamflow (maximum and minimum) - River flow volumes; affects salmon migration, spawning, and rearing success
 Stream temperature - Water temperatures in rivers; high temperatures stress salmon during migration and rearing
 
-3. Focal Components of Ecological Integrity
+### 3. Focal Components of Ecological Integrity
 Indicators:
 
 Copepod biomass anomalies - Northern (lipid-rich) vs southern (lipid-poor) copepods; northern copepods correlate with stronger salmon returns and indicate favorable feeding conditions
@@ -502,7 +559,7 @@ California sea lion pup counts and condition - Numbers and weight of pups; corre
 Whale entanglements - Reports of whales in fishing gear; reflects distribution changes, habitat compression, and risk from fishing operations
 Harmful algal blooms (domoic acid, PSP) - Toxic phytoplankton concentrations; causes fishery closures, marine mammal/seabird mortality, and human illness
 
-4. Human Wellbeing
+### 4. Human Wellbeing
 Indicators:
 
 Community Social Vulnerability Index (CSVI) - Composite of demographics, poverty, housing, labor; identifies communities less able to adapt to fishing changes
@@ -514,7 +571,7 @@ Temporal diversification - Revenue spread across weeks of year; more weeks fishe
 Revenue concentration (Theil Index) - Geographic concentration of fishery revenue among ports; high values indicate consolidation in fewer ports
 Fisheries participation networks - Vessels fishing multiple fisheries; more connected networks provide resilience and ability to substitute when fisheries close
 
-5. Fishing and Non-fishing Human Activities
+### 5. Fishing and Non-fishing Human Activities
 Indicators:
 
 Commercial landings by major fisheries - Total catch by fishery type; reflects ecosystem services provided and removals from ecosystem
@@ -523,28 +580,28 @@ Recreational landings - Harvest from recreational fisheries; tracks non-commerci
 Offshore wind energy - ecosystem suitability - Upwelling, fronts, primary production, krill, juvenile fish, groundfish nursery habitat; identifies areas important to ecosystem function that may have conflicts with wind development
 Offshore wind energy - fishery interactions - Groundfish trawl activity patterns; identifies potential spatial conflicts between fishing operations and wind development areas
 
-Climate and Ecosystem Forecasts (Appendix D)
+### Climate and Ecosystem Forecasts (Appendix D)
 Indicators:
 
 ENSO forecasts - Predicted El Niño/La Niña conditions months ahead; primary source of California Current predictability for management planning
 Marine heatwave forecasts - Predicted warm water events; allows advance warning of ecosystem disruptions and species distribution changes
 TOTAL (Temperature Observations To Avoid Loggerheads) - SST anomaly predictions for Southern California Bight; forecasts months in advance increased loggerhead turtle interaction risk
 
-Developing Indicators of Climate Variability and Change (Appendix E)
+### Developing Indicators of Climate Variability and Change (Appendix E)
 Indicators:
 
 Projected ocean changes - Long-term warming, stratification, deoxygenation, acidification trends under climate scenarios; magnitude varies but direction consistent across models
 Projected species distribution and abundance changes - Groundfish and CPS responses to climate including spatial shifts and biomass changes; combined effects of warming and distribution shifts affect predator-prey overlap and fisheries harvest
 Climate-altered offshore wind interactions - How future species distributions change potential conflicts with wind development; fundamentally affects spatial planning inferences from historical data alone
 
-Salmon Indicators (Appendix J)
+### Salmon Indicators (Appendix J)
 Indicators:
 
 Columbia Basin Chinook outlook models - Stoplight PC1 and CMISST (SST covariance) approaches; predict adult returns 2 years ahead to inform harvest management and risk assessment
 California Chinook key indicators - Spawner counts, incubation/outmigration temperatures and flows, marine conditions, hatchery factors; distilled set of most predictive indicators for Sacramento River Fall, Central Valley Spring, and Klamath River Fall Chinook
 Thiamine deficiency - Egg thiamine concentrations; high deficiency can cause 25%+ egg-fry mortality affecting rebuilding trajectories
 
-Groundfish (Appendix K)
+### Groundfish (Appendix K)
 Indicators:
 
 Juvenile abundance indices - Young fish from bottom trawl surveys; strong year classes determine age structure, indicate favorable conditions, predict catches, and signal potential bycatch issues
@@ -552,13 +609,13 @@ Juvenile sablefish availability to ports - Biomass within fishing radius of spec
 Groundfish center of gravity - Latitude/depth of biomass distribution; northward/deeper shifts affect quota allocation across regions and fishery access
 Groundfish availability to ports - Biomass accessible within typical fishing distances; determines fishing opportunities and how they vary among ports
 
-Highly Migratory Species (Appendix L)
+### Highly Migratory Species (Appendix L)
 Indicators:
 
 HMS stock assessment biomass and recruitment - Spawning stock and young fish from formal assessments; provides stock status relative to reference points for international management
 HMS diet composition from stomach samples - Prey proportions for albacore, bluefin, swordfish; direct measure of forage use complementing surveys, shows opportunistic feeding on available prey
 
-Seabirds (Appendix M)
+### Seabirds (Appendix M)
 Indicators:
 
 Colony-specific productivity - Fledglings per pair at monitored colonies (Destruction Island WA, Yaquina Head OR, SE Farallon Island CA); tracks local marine conditions
@@ -566,52 +623,52 @@ Species-specific diets at colonies - Prey delivered to chicks for rhinoceros auk
 At-sea density by region - Birds observed on surveys in Northern, Central, Southern California Current; establishes habitat use and detects population movements
 Beachcast bird encounter rates - Dead birds per survey effort for multiple species; indicates unusual mortality events requiring investigation
 
-Marine Mammals (Appendix N)
+### Marine Mammals (Appendix N)
 Indicators:
 
 California sea lion pup weight and growth - March weights of previous summer's pups; indicates prey availability during winter nursing period
 Whale entanglement details - Species, location, gear type, management actions taken; tracks mitigation effectiveness and identifies needed actions
 
-Harmful Algal Blooms (Appendix O)
+### Harmful Algal Blooms (Appendix O)
 Indicators:
 
 Domoic acid concentrations by state and species - Monthly maxima in razor clams, crab viscera, other shellfish; triggers fishery closures/evisceration when exceeding thresholds
 Paralytic shellfish toxins - PSP levels in bivalves; causes human illness and fishery closures when exceeding action levels
 HAB-related fishery management actions - Closures, delays, evisceration orders mapped spatially and temporally; documents economic and social impacts of biotoxins
 
-Social Vulnerability (Appendix P)
+### Social Vulnerability (Appendix P)
 Indicators:
 
 CSVI over time for top fishing communities - Annual categorical rankings (low to high vulnerability) 2009-2022; tracks how vulnerability changes in most fishing-dependent places
 Engagement vs reliance comparisons - Total fishing activity vs per-capita for 2021 and 2022; distinguishes large fishing centers from small highly-dependent communities
 
-Fleet Diversification (Appendix Q)
+### Fleet Diversification (Appendix Q)
 Indicators:
 
 Port-level revenue diversification - Effective Shannon Index for major ports; declining diversity indicates reduced resilience to individual fishery failures
 Temporal diversification by vessel class - Revenue spread across weeks by state, size, revenue level; fishing more weeks reduces income variability even in single fisheries
 
-Port-Level Revenue Concentration (Appendix R)
+### Port-Level Revenue Concentration (Appendix R)
 Indicators:
 
 Theil Index by management group - Revenue concentration across 21 IO-PAC port groups for total fisheries, CPS, HMS, groundfish, salmon, crab; identifies which fisheries are consolidating geographically
 Revenue maps by port and fishery - Spatial distribution of landings value; shows which ports are gaining/losing shares of specific fisheries
 
-Fisheries Participation Networks (Appendix S)
+### Fisheries Participation Networks (Appendix S)
 Indicators:
 
 Network node count (number of fisheries) - How many economically important fisheries are present; more fisheries indicate greater diversity of opportunities
 Network edge density (connectivity) - How interconnected fisheries are through shared vessel participation; higher connectivity allows effort substitution when fisheries close
 Time series of node count and edge density - Annual values 2004-2024 for each port group; identifies ports losing diversity or becoming less connected, reducing resilience
 
-State-by-State Landings and Revenues (Appendix T)
+### State-by-State Landings and Revenues (Appendix T)
 Indicators:
 
 Commercial landings by fishery and state - Annual catch volumes for Washington, Oregon, California by major fishery; tracks state-specific trends and status relative to long-term averages
 Commercial revenue by fishery and state - Inflation-adjusted ex-vessel value; shows economic trends and which fisheries are gaining/losing value in each state
 Recreational landings by state - Harvest from recreational fishing; documents non-commercial removals and participation trends
 
-Potential Interactions: Offshore Wind and Ecosystems (Appendix U)
+### Potential Interactions: Offshore Wind and Ecosystems (Appendix U)
 Indicators:
 
 Upwelling intensity - Average wind-driven upwelling during spring/summer; identifies high productivity areas where development may conflict with ecosystem function
@@ -623,4 +680,149 @@ Juvenile Pacific hake hotspots - Young-of-year hake abundance; indicates product
 Groundfish nursery habitat - Summed juvenile densities from 13 species on seafloor; essential habitat that may be affected by bottom-mounted infrastructure
 Combined ecosystem suitability score - Geometric mean across all 7 ecosystem indicators; lower scores indicate less suitable areas due to ecosystem importance
 Groundfish trawl activity patterns - Duration trawled, trends, frequency, recency by grid cell; identifies current fishing grounds and potential spatial conflicts with development
+
+# New England State of the Ecosystem
+
+## Summary
+The 2025 State of the Ecosystem Report for New England evaluates performance against fishery management objectives for Georges Bank and the Gulf of Maine. Both regions face significant challenges despite some positive indicators.
+Seafood production shows long-term declines in New England managed species landings, currently below long-term averages in both regions. Total commercial landings are also below average, driven primarily by management actions addressing mandated rebuilding of depleted stocks. Recreational harvest remains well below long-term averages despite slight recovery from 2020 lows. Thirteen stocks are currently estimated below biomass targets, with thirteen additional stocks having unknown status, indicating stock status and associated management constraints are contributing to decreased landings.
+Commercial profits tell different regional stories. Georges Bank revenue remains below 1982 baseline levels throughout the time series, primarily driven by volumes before 2010 and prices thereafter. The Gulf of Maine exceeded 1982 levels in all but four years, largely due to high lobster prices and landings. However, revenue from New England managed species hit an all-time low in both regions in 2023. Both regions show moderate total climate vulnerability with no long-term trend.
+Stability indicators reveal concerning ecosystem changes. Commercial fleet count is declining with 2023 below long-term average, and species revenue diversity reflects reliance on relatively few species. Recreational species diversity is increasing due to southerly species increases and lower catch limits on traditional species. Fish species richness is stable on Georges Bank but increasing in Gulf of Maine, while zooplankton diversity is increasing on Georges Bank. Functional trait analysis shows long-term changes including declining fecundity in both regions, suggesting ecosystem instability.
+Protected species objectives are being met for harbor porpoise and gray seal bycatch, both remaining below Potential Biological Removal thresholds. However, North Atlantic Right Whales continue declining with fewer than 70 adult females remaining. The population experiences annual mortalities above recovery thresholds primarily from entanglements and vessel strikes. Unusual Mortality Events continue for three large whale species.
+Social and climate vulnerability varies by community. Three New England communities rank among top engaged for both commercial and recreational fishing. New Bedford and Boston, MA show medium-high vulnerability across multiple socio-demographic indicators, suggesting challenges adapting to change. Community climate risk on revenue is shifting from moderate to high/very high, indicating increased dependence on climate-vulnerable species.
+Climate and ecosystem risks are substantial. Species distributions continue shifting northeast and deeper. Fish productivity has declined since the early 2000s in the Gulf of Maine. Fish condition in 2024 was poor for most species in both regions. Ocean summer length is increasing, and spawning timing is shifting earlier for multiple stocks including haddock and yellowtail flounder.
+Offshore wind development poses significant risks. Up to 20% and 19% of annual commercial revenue and landings respectively for NEFMC managed species occurred within existing lease areas between 2008-2023 and may be displaced. Five new lease areas for floating offshore wind were leased in Gulf of Maine in 2024. Development overlaps North Atlantic Right Whale critical habitat and may alter oceanography affecting prey availability.
+2024 Highlights documented unusual conditions including increased Labrador Slope Water influx creating cooler, fresher conditions; delayed species migrations; species redistribution; and record high summer ocean acidification in the Mid-Atlantic—the highest since monitoring began in 2007.
+
+## Section Headings and Ecosystem Indicators
+
+### Performance Relative to Fishery Management Objectives
+
+#### Seafood Production
+Indicators:
+
+Total commercial landings - Below long-term average both regions; reflects ecosystem services provided and removals; declining trends driven by management for rebuilding depleted stocks
+Total U.S. seafood landings - Long-term declines except Georges Bank total commercial; indicates food production capacity
+NEFMC managed seafood landings - Significant long-term declines both regions; direct measure of Council-managed species performance
+Landings by feeding guild - Benthos high in Gulf of Maine (lobster-driven), increasing on Georges Bank (clams/scallops); identifies which trophic groups drive changes
+Total Community Climate Vulnerability of landings - Moderate with no trend; indicates moderate reliance on climate-sensitive species; future risk indicator
+Recreational harvest - Well below long-term average with significant decline in Gulf of Maine; reflects non-commercial removals and participation
+Recreational shark landings - Declining since 2018 for pelagic/prohibited species; shows management effectiveness for rebuilding mako stocks
+Stock status (F/Fmsy, B/Bmsy) - Thirteen stocks below Bmsy, thirteen unknown status; explains landings declines through quota constraints; guides rebuilding timelines
+Survey biomass by feeding guild - Stable to increasing both regions; planktivores increasing, benthivores spiked then declining; ecological changes not driving landings declines; management/markets more influential
+
+#### Commercial Profits
+Indicators:
+
+Total revenue - Below long-term mean Georges Bank, variable Gulf of Maine; economic health indicator for fishing industry
+NEFMC managed species revenue - All-time low both regions with long-term Gulf of Maine decline; managed species economic viability
+Bennet Indicator (price vs volume decomposition) - Georges Bank driven by volumes pre-2010 then prices; Gulf of Maine driven by prices (lobster); identifies whether economic changes from harvest levels or market dynamics
+Revenue by feeding guild - Georges Bank driven by benthos (scallops/clams); Gulf of Maine driven by benthivores (lobster); shows economic dependence on specific groups
+Total Community Climate Vulnerability of revenue - Moderate with no trend; economic risk from climate change on target species; continued moderate reliance on climate-sensitive species
+
+#### Recreational Opportunities
+Indicators:
+
+Angler trips (recreational effort) - Near long-term average after declining from 2010 peak; measures overall recreational participation and access
+Recreational fleet diversity - Stable over latter half of time series; relative importance of private vessels, shore-based, party-charter; stable diversity suggests maintained range of opportunities
+
+#### Stability
+Indicators:
+
+Commercial fleet count - Below time series average and declining; reduced industry capacity and resilience; fewer participants to respond to opportunities
+Commercial species revenue diversity - Well below series average despite 2021 rebound; reliance on few species (scallops, lobster); reduces capacity to respond to future opportunities
+Recreational species catch diversity - Above average since 2008 with long-term positive trend; ASMFC/MAFMC species offsetting traditional regional species; maintained diversity from different species mix
+Total annual primary production - 2023 record high Gulf of Maine from unusual bloom, 2024 near average; baseline ecosystem energy; unclear how much reached upper trophic levels
+Zooplankton diversity (Shannon Index) - Increasing Georges Bank, variable without trend Gulf of Maine; increasing diversity from overall abundance increase and declining dominance of Centropages typicus
+Adult fish diversity (expected number of species) - Increasing trend Gulf of Maine, no trend Georges Bank; Gulf of Maine increase suggests warm-water species influx requiring monitoring
+Fish community functional traits (fecundity) - Declining both regions in fall and spring; indicates reduced reproductive output; potential ecosystem reorganization signal
+Fish community functional traits (length at maturity, pace of life) - Gulf of Maine increasing pace of life; Georges Bank/Gulf of Maine declining fecundity; ecosystem-scale resilience changes
+
+#### Community Social and Climate Vulnerability
+Indicators:
+
+Commercial fishing engagement - New Bedford, MA particularly high; measures fishing importance relative to other communities; targets outreach/impact mitigation
+Commercial fishing per capita engagement (population relative) - Frenchboro, ME highest; small communities disproportionately impacted by changes
+Social vulnerability (poverty, personal disruption, population composition) - New Bedford and Boston, MA medium-high all three indicators; disadvantaged in responding to change; requires enhanced support
+Recreational fishing engagement - Narragansett/Point Judith RI, Gloucester MA, Newington NH top for both commercial and recreational; simultaneous impacts from both sectors' regulatory changes
+Recreational per capita engagement and social vulnerability - Provincetown and Falmouth, MA medium-high multiple indicators; future recreational changes disproportionately impact these communities
+Community total climate vulnerability of revenue - Proportion shifting from moderate to high/very high; communities increasingly dependent on climate-vulnerable species, particularly shellfish
+
+#### Protected Species
+Indicators:
+
+Harbor porpoise bycatch - Below PBR, meeting objectives; declining trend from abundance decrease, distribution shift, or management success
+Gray seal bycatch - Below PBR meeting objectives but increasing with high uncertainty; population increase (pup births rising) increases bycatch risk; among highest U.S. marine mammal bycatch
+North Atlantic Right Whale abundance - Below recovery objective, declining since 2010; fewer than 70 adult females; requires continued aggressive mortality reduction
+North Atlantic Right Whale calf counts - Declined after 2009, zero in 2018, closer to average since 2020; improving but insufficient for recovery
+Gray seal pup births at U.S. colonies - Dramatic rise over three decades; increasing population increases bycatch and may affect predation on managed species
+Unusual Mortality Events - Ongoing for right whales (2017-present), humpbacks (2016-present); human interactions (entanglements/vessel strikes) primary cause; gray/harbor seals (avian influenza 2022)
+
+### Risks to Meeting Fishery Management Objectives
+
+#### Climate and Ecosystem Change - Risks to Managing Spatially
+Indicators:
+
+Fish distribution shifts (center of gravity) - 48 species moving northeast and deeper; creates spatial quota misallocation, unmet quotas, increased discards, bycatch management challenges
+Marine mammal distribution shifts - Multiple species shifting northeast 2010-2017 most seasons; changes predator-prey overlap and protected species interaction risk
+Forage fish distribution shifts - Northeast/eastward fall since 1982, spring variable; affects managed species feeding success and distribution
+Small copepod distribution - Similar northeast/east shift as forage fish; widespread prey for larvae/juveniles shifting affects early life survival
+Calanus finmarchicus distribution - No long-term trends; important right whale prey not showing directional shifts unlike other zooplankton
+Macrobenthos distribution - Westward shift opposite to finfish; creates spatial mismatch for benthivores; prey availability decoupled from predator distributions
+Sea surface temperature - Continued warming all seasons; drives distribution shifts; 2024 cooler than normal from Labrador water influx but long-term trend continues
+Gulf Stream position - Less stable last decade, long-term northward trend; more Warm Slope Water in Gulf of Maine; 2024 southward position increased cold/fresh Labrador water
+
+#### Climate and Ecosystem Change - Risks to Managing Seasonally
+Indicators:
+
+Spawning timing shifts (haddock, yellowtail flounder) - Earlier spawning both stocks; more resting (post-spawn) fish in 2010s; seasonal closures less effective if peak spawning outside closure period
+Spawning timing and environmental relationships - Yellowtail spawning related to bottom temperature, week, decade; environmental cues changing with warming
+HMS and whale migration timing changes - Bigeye tuna 50 days earlier, bluefin 38-80 days earlier, blue marlin 27 days earlier; right/humpback whale Cape Cod Bay 18-19 days later; seasonal regulations misaligned with availability
+Ocean summer length - Increasing due to earlier spring transition and later fall transition; alters biological processes triggered by seasonal events
+Cold Pool persistence - Declining since mid-2000s, 2024 near average from northern water; shorter seasonal habitat availability for Cold Pool-dependent species like yellowtail flounder
+Phytoplankton bloom timing - Increased fall bloom Georges Bank/Gulf of Maine, chlorophyll increasing October/November/December; seasonal food availability changes affect food web timing
+
+#### Climate and Ecosystem Change - Risks to Setting Catch Limits
+Indicators:
+
+Fish productivity (small per large fish biomass) - Below long-term average Gulf of Maine since early 2000s except 2006, 2013; declining recruitment per spawner; reference points may overestimate productivity
+Fish productivity (recruitment per spawning stock biomass from assessments) - Declining trend confirms survey observations; short-term projections and rebuilding plans potentially optimistic
+Common tern productivity (chicks per nest) - Declining in Gulf of Maine; seabird productivity indicates forage availability for managed species
+Atlantic salmon return rates - Continued low despite short-term adult increases; anadromous species productivity indicator; multiple stressors affecting survival
+Fish condition - Poor for most species both regions in 2024, mixed 2011-present, poor 2001-2010; affects growth, reproduction, survival; variable condition complicates catch advice
+Forage fish energy density - Most observations below 1980s/1990s estimates except some summer herring; reduced prey quality affects predator productivity; Atlantic herring, silver hake, squids all low
+Forage fish biomass - Stable fall, long-term increase spring Gulf of Maine; prey availability for piscivores; highest fall biomass 1980s
+Macrobenthos biomass - Long-term spring declines both regions; reduces prey for benthivores (flatfish, juvenile cod/haddock, skates)
+Megabenthos biomass - Long-term fall increases both regions; may partially offset macrobenthos decline for some benthivores
+Zooplankton biomass and composition - Increasing Gulf of Maine small copepods, declining Georges Bank large copepods, increasing euphausiids both regions; changing prey field quality; less energy-rich small copepods, more energy-rich euphausiids
+Calanus finmarchicus abundance - Declined 2020-2022 to 20-40% of 2005-2008 levels, rebounded to 60-70% in 2024 from colder water; primary right whale prey and key forage for fish; seasonal differences reflect reproductive output, source water supply, predation
+Temperature extremes and marine heatwaves - 2012 among warmest; large Georges Bank/Mid-Atlantic areas exceeded 15°C groundfish tolerance; 2024 only one Gulf of Maine heatwave 12 days; extreme temperatures cause mortality not captured in assessments
+Ocean acidification - Higher OA risk 2016, 2018, 2019, 2023, 2024 for scallops/squid Long Island Sound and New Jersey shelf; 2024 summer Mid-Atlantic highest on record; 2024 winter/spring Gulf of Maine near cod/lobster sensitivity levels; reduces survival, growth, reproduction of calcifiers
+Hypoxia - Detected off New Jersey 2023, caused fish/lobster/crab mortalities, none observed 2024; episodic low oxygen affects growth and can cause mortality
+Gray seal and HMS predator populations - Gray seals increasing (pup births), HMS mixed status some at/above target; increasing gray seals may increase predation; stable HMS suggests stable predation pressure
+
+### Other Ocean Uses: Offshore Wind Risks
+Indicators:
+
+Development timeline and lease areas - 30 projects proposed next decade, 2.3+ million acres by 2030, four Gulf of Maine commercial leases October 2024, one research lease approved; extensive spatial conflicts requiring coordinated planning
+NEFMC fishery revenue from lease areas by species - 2-15% total annual revenue 2008-2023; scallop $52M maximum, monkfish $2.5M, haddock $1.1M, pollock $943K; individual operators may lose larger proportions
+NEFMC fishery landings from lease areas by species - 1-20% and 1-19% annual revenue and landings respectively 2008-2023; yellowtail flounder 15% maximum, pollock 11%, redfsh/white hake 9%; displacement affects fishing patterns and creates new conflicts
+Port-level revenue from lease areas - Little Compton, RI 17-32% overlap 2008-2023; communities need targeted support for high dependency
+Community social vulnerability in wind-impacted areas - New Bedford, MA and New London, CT high socio-demographic concerns and undergoing port infrastructure changes; compounded impacts require enhanced engagement and resources
+Right whale habitat overlap - Overlaps mother-calf corridors, year-round foraging, primary winter foraging; adds vessel strike risk, pile driving noise, may alter oceanography affecting prey
+Survey area overlap - 1-70% survey overlap, scallop survey up to 96% some strata, bottom trawl survey up to 60%, right whale survey 50%; increases stock assessment uncertainty from reduced data collection
+
+### 2024 Highlights
+Observations (not formal indicators but notable events):
+
+Labrador Slope Water influx - Over 50% source water entering Gulf of Maine in 2023; colder, fresher conditions throughout Northwest Atlantic; demonstrates oceanographic variability importance
+Gulf Stream position anomaly - Eastern portion southward in 2024; increased Labrador/Scotian Shelf water supply; episodic events can temporarily reverse long-term trends
+Arctic Calanus presence in Gulf of Maine - Uncommon species observed; indicates unusual northern water intrusion affecting zooplankton community
+Species migration delays - Longfin squid, black sea bass, haddock delayed by cooler water; affects fishing timing and demonstrates climate impacts on behavior
+Species redistribution - Pollock, bluefin tuna, Atlantic mackerel, longfin squid, bluefish, bonito in unusual locations; Atlantic mackerel outside typical grounds in higher abundance; rapid ecosystem shifts require flexible management
+Chesapeake Bay conditions - Warm temperatures, low dissolved oxygen reduced striped bass and blue crab habitat; lower salinity impacted oyster hatcheries, increased invasive catfish habitat; regional conditions affect coastal stocks
+Upwelling events and unusual bloom - Multiple prolonged upwelling New Jersey coast; coccolithophore bloom late June-early July 2024 from upwelling; unusual but not harmful; ecosystem variability requiring monitoring
+Whale aggregations - Multiple species near Hudson Canyon May-August; suggests prey aggregations; important for understanding habitat use
+Ocean acidification extremes - Summer 2024 Mid-Atlantic OA risk highest on record; winter/spring 2024 Gulf of Maine near cod/lobster sensitivity; driven by fresher less-buffered Labrador water and cooler conditions; calcifiers face increasing stress
+Scallop recruitment variability - Die-off Mid-Atlantic Elephant Trunk 2022-2023, strong recruitment Nantucket Lightship 2024; spatial variability and climate sensitivity affecting fishery
 
