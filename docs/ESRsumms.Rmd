@@ -295,6 +295,11 @@ Indicator categorization (drivers, states, responses)
 
 Management Implications: The mid-1990s ecosystem reorganization driven by AMO phase shift affected nearly all ecosystem components simultaneously, demonstrating that climate drivers can cause regime shifts requiring adaptive management approaches. Recent period (2011-2016) shows accelerating rates of change for key physical drivers (SST, sea level rise) while biological states remain relatively stable, suggesting potential lags in biological responses that could manifest as future productivity changes. Different trends between western/eastern Gulf (accelerating warming) and central Gulf (slower warming) may require region-specific management approaches. Recent increases in both commercial and recreational fishery indicators suggest recovery, but must be interpreted cautiously given uncertainties in most recent stock assessment years. Stabilization of many indicators in recent period (diversity indices, MTL, bird abundances) may reflect either true ecosystem stabilization following the mid-1990s reorganization or methodological standardization. The composite analysis reveals that single-indicator approaches miss critical ecosystem context—multiple indicators changing in concert suggest fundamental ecosystem shifts requiring management responses beyond single-species quota adjustments. Gulf-wide indicators may mask important regional variation, requiring finer-scale analyses for management decisions. The framework demonstrates value of integrated ecosystem assessments for identifying climate-driven regime shifts, evaluating cumulative impacts of multiple stressors, and detecting early warning signals of ecosystem change that should trigger adaptive management responses.
 
+```{r GulfESRdat}
+
+```
+
+
 # Mid-Atlantic State of the Ecosystem
 
 ## Summary
@@ -1323,6 +1328,226 @@ Juvenile Pacific hake hotspots - Young-of-year hake abundance; indicates product
 Groundfish nursery habitat - Summed juvenile densities from 13 species on seafloor; essential habitat that may be affected by bottom-mounted infrastructure
 Combined ecosystem suitability score - Geometric mean across all 7 ecosystem indicators; lower scores indicate less suitable areas due to ecosystem importance
 Groundfish trawl activity patterns - Duration trawled, trends, frequency, recency by grid cell; identifies current fishing grounds and potential spatial conflicts with development
+
+```{r CalCurESRdat}
+# California Current Ecosystem Status Report 2024-2025
+# Section Headings and Indicators Dataframe
+
+# Create comprehensive dataframe with sections and indicators
+calcurrent_esr <- data.frame(
+  Section = c(
+    # Climate and Ocean Drivers
+    rep("Climate and Ocean Drivers", 11),
+    # Focal Components of Ecological Integrity
+    rep("Copepods and Krill", 2),
+    rep("CPS and Regional Forage", 3),
+    rep("Salmon Indicators", 3),
+    rep("Groundfish", 2),
+    rep("Highly Migratory Species", 2),
+    rep("Seabird Indicators", 3),
+    rep("Marine Mammals", 2),
+    rep("Harmful Algal Blooms", 1),
+    # Human Wellbeing
+    rep("Human Wellbeing", 3),
+    # Fishing and Non-fishing Activities
+    rep("Fishing Activities", 2)
+  ),
+  
+  Indicator = c(
+    # Climate and Ocean Drivers
+    "Oceanic Niño Index (ONI)",
+    "Pacific Decadal Oscillation (PDO)",
+    "North Pacific Gyre Oscillation (NPGO)",
+    "Sea Surface Temperature",
+    "Coastal Upwelling Transport Index (CUTI)",
+    "Biologically Effective Upwelling Transport Index (BEUTI)",
+    "Habitat Compression Index (HCI)",
+    "Dissolved Oxygen (Hypoxia)",
+    "Ocean Acidification (Aragonite Saturation)",
+    "Snow-Water Equivalent (SWE)",
+    "Streamflow and Stream Temperature",
+    
+    # Copepods and Krill
+    "Northern Copepod Biomass Anomaly",
+    "Krill (Euphausia pacifica) Length and Biomass",
+    
+    # CPS and Regional Forage
+    "Coastwide CPS Abundance",
+    "Northern CCE Forage (JSOES)",
+    "Central CCE Forage (RREAS)",
+    
+    # Salmon
+    "Juvenile Salmon Abundance (CPUE)",
+    "Columbia Basin Chinook Stoplight Table",
+    "California Chinook Stoplight Table",
+    
+    # Groundfish
+    "Juvenile Groundfish Abundance",
+    "Groundfish Distribution (Center of Gravity)",
+    
+    # HMS
+    "HMS Spawning Stock Biomass",
+    "HMS Diet Composition",
+    
+    # Seabirds
+    "Seabird Fledgling Production",
+    "Seabird Diet Composition",
+    "Seabird Mortality Events",
+    
+    # Marine Mammals
+    "California Sea Lion Pup Counts",
+    "Whale Entanglements",
+    
+    # HABs
+    "Domoic Acid Concentrations",
+    
+    # Human Wellbeing
+    "Community Social Vulnerability Index (CSVI)",
+    "Fishery Revenue Diversification (ESI)",
+    "Fisheries Participation Networks",
+    
+    # Fishing Activities
+    "Commercial Landings by Fishery",
+    "Recreational Landings"
+  ),
+  
+  Indicator_Type = c(
+    # Climate
+    "Climate Index", "Climate Index", "Climate Index",
+    "Temperature", "Upwelling", "Upwelling",
+    "Habitat", "Biogeochemistry", "Biogeochemistry",
+    "Freshwater", "Freshwater",
+    
+    # Copepods/Krill
+    "Zooplankton", "Zooplankton",
+    
+    # Forage
+    "Forage Fish", "Forage Community", "Forage Community",
+    
+    # Salmon
+    "Fish Abundance", "Ecosystem Conditions", "Ecosystem Conditions",
+    
+    # Groundfish
+    "Fish Abundance", "Fish Distribution",
+    
+    # HMS
+    "Stock Assessment", "Trophic Interactions",
+    
+    # Seabirds
+    "Productivity", "Diet", "Mortality",
+    
+    # Marine Mammals
+    "Productivity", "Bycatch/Interaction",
+    
+    # HABs
+    "Toxin",
+    
+    # Human Wellbeing
+    "Social", "Economic", "Economic",
+    
+    # Fishing
+    "Landings", "Landings"
+  ),
+  
+  Recent_Status_2024 = c(
+    # Climate
+    "Positive (El Niño winter, then neutral)",
+    "Negative (5th consecutive year)",
+    "Negative",
+    "Warm offshore, cool nearshore summer",
+    "Below average north, above average central",
+    "Strong after spring delay",
+    "Average values summer/fall",
+    "Favorable (mostly above hypoxic threshold)",
+    "Below threshold summer (corrosive)",
+    "Normal/above normal (El Niño pattern)",
+    "Close to median levels",
+    
+    # Copepods/Krill
+    "Average (improved after El Niño)",
+    "Near/above average spring-summer",
+    
+    # Forage
+    "High abundance (anchovy ~2.75M tons)",
+    "Moderate abundance, high diversity",
+    "High YOY rockfish and anchovy",
+    
+    # Salmon
+    "Close to average (yearling coho above average)",
+    "Mixed conditions (improving for 2025 returns)",
+    "Improved conditions for 2025-2026 returns",
+    
+    # Groundfish
+    "High (sablefish, longspine thornyhead)",
+    "Northward shift for several species",
+    
+    # HMS
+    "Variable (bluefin increasing, yellowfin below avg)",
+    "Anchovy 35% swordfish, hake above average",
+    
+    # Seabirds
+    "Decreased at Yaquina Head/Destruction Is.",
+    "Smelts dominated north, shift to rockfish central",
+    "Cassin's auklet event (Jan 2024), pelican die-off",
+    
+    # Marine Mammals
+    "Declined (lower than recent years)",
+    "Higher than 2023, below 2015-2018 peak",
+    
+    # HABs
+    "Multiple events, unusual dinoflagellate blooms",
+    
+    # Human Wellbeing
+    "Increased vulnerability OR/WA communities",
+    "Declined 5% (lowest since 1981)",
+    "Reduced fisheries, less connectivity in some ports",
+    
+    # Fishing
+    "Decreased 12% (primarily due to whiting)",
+    "Among lowest of last 20 years"
+  ),
+  
+  stringsAsFactors = FALSE
+)
+
+# Display the dataframe
+print(calcurrent_esr)
+
+# Summary statistics
+cat("\n=== Summary ===\n")
+cat("Total number of indicators:", nrow(calcurrent_esr), "\n")
+cat("Number of major sections:", length(unique(calcurrent_esr$Section)), "\n")
+
+cat("\nIndicators by section:\n")
+print(table(calcurrent_esr$Section))
+
+cat("\nIndicators by type:\n")
+print(table(calcurrent_esr$Indicator_Type))
+
+# Create a summary table of sections
+section_summary <- data.frame(
+  Section_Number = c("2", "3.1", "3.2", "3.3", "3.4", "3.5", "3.6", "3.7", "3.8", "4", "5"),
+  Section_Name = c(
+    "Climate and Ocean Drivers",
+    "Copepods and Krill", 
+    "CPS and Regional Forage",
+    "Salmon Indicators",
+    "Groundfish",
+    "Highly Migratory Species",
+    "Seabird Indicators",
+    "Marine Mammals",
+    "Harmful Algal Blooms",
+    "Human Wellbeing",
+    "Fishing Activities"
+  ),
+  Number_of_Indicators = c(11, 2, 3, 3, 2, 2, 3, 2, 1, 3, 2),
+  stringsAsFactors = FALSE
+)
+
+cat("\n=== Section Summary ===\n")
+print(section_summary)
+```
+
 
 # New England State of the Ecosystem
 
