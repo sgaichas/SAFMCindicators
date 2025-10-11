@@ -2911,13 +2911,552 @@ Each indicator provides specific information about ecosystem components, process
 
 ```{r GOAESRdat}
 
+# Create a comprehensive dataframe of GOA ESR sections and indicators
+
+goa_esr_indicators <- data.frame(
+  Section = c(
+    # Physical Environment - Climate
+    rep("Physical Environment - Climate", 4),
+    # Physical Environment - Ocean Temperature
+    rep("Physical Environment - Ocean Temperature", 4),
+    # Physical Environment - Ocean Transport
+    rep("Physical Environment - Ocean Transport", 4),
+    # Habitat
+    rep("Habitat", 2),
+    # Primary Production
+    rep("Primary Production", 3),
+    # Zooplankton
+    rep("Zooplankton", 5),
+    # Forage Fish
+    rep("Forage Fish", 6),
+    # Salmon
+    rep("Salmon", 3),
+    # Groundfish
+    rep("Groundfish", 6),
+    # Benthic Communities
+    rep("Benthic Communities", 2),
+    # Seabirds
+    rep("Seabirds", 4),
+    # Marine Mammals
+    rep("Marine Mammals", 3),
+    # Prince William Sound
+    rep("Prince William Sound", 4),
+    # Fishing Indicators
+    rep("Fishing Indicators", 3),
+    # Habitat Quality
+    rep("Habitat Quality", 1),
+    # Sustainability
+    rep("Sustainability", 2),
+    # Disease & Toxins
+    rep("Disease & Toxins", 2),
+    # Ecosystem Community
+    rep("Ecosystem Community Indicators", 4),
+    # Citizen Science
+    rep("Citizen Science", 1)
+  ),
+  
+  Indicator = c(
+    # Physical Environment - Climate
+    "State of the North Pacific Ocean",
+    "Wintertime Aleutian Low Index",
+    "Seasonal Projections (NMME)",
+    "Predicted Ocean Temperatures (Sitka Air Temperature)",
+    
+    # Physical Environment - Ocean Temperature
+    "Long-term SST trends (1900-2024)",
+    "Satellite-derived SST",
+    "Survey-based temperatures (surface and depth)",
+    "Marine Heatwave Status",
+    
+    # Physical Environment - Ocean Transport
+    "Eddy Kinetic Energy",
+    "Papa Trajectory Index",
+    "Northern GOA Oscillation/Downwelling Index",
+    "Coastal Wind Patterns (April-May)",
+    
+    # Habitat
+    "Ocean Acidification (pH levels)",
+    "Dissolved Oxygen",
+    
+    # Primary Production
+    "Satellite Chlorophyll-a",
+    "Seward Line Phytoplankton Size Index",
+    "GAK1 Mooring Oceanography",
+    
+    # Zooplankton
+    "Continuous Plankton Recorder",
+    "Copepod Biomass and Community Size",
+    "Euphausiid Biomass (Seward Line)",
+    "Zooplankton Density (Icy Strait)",
+    "Zooplankton Lipid Content",
+    
+    # Forage Fish
+    "Larval Fish Abundance",
+    "Age-0 Pollock Body Condition",
+    "Seabird Diet Composition",
+    "Capelin Abundance Indices",
+    "Herring Biomass (SE Alaska)",
+    "Eulachon Returns",
+    
+    # Salmon
+    "Commercial Salmon Catch",
+    "Juvenile Salmon Abundance/Condition (Icy Strait)",
+    "Auke Creek Salmon Survival",
+    
+    # Groundfish
+    "Groundfish Body Condition",
+    "ADF&G Trawl Survey",
+    "Predation Mortality (CEATTLE model)",
+    "Survey Biomass Trends",
+    "Environmental Conditions Experienced by Groundfish",
+    "Groundfish Diets",
+    
+    # Benthic Communities
+    "Motile Epifauna Biomass",
+    "Structural Epifauna",
+    
+    # Seabirds
+    "Seabird Breeding Timing",
+    "Seabird Reproductive Success",
+    "Seabird Mortality Events",
+    "Seabird At-sea Distribution (Seward Line)",
+    
+    # Marine Mammals
+    "Humpback Whale Calving (Glacier Bay/Icy Strait)",
+    "Marine Mammal Strandings",
+    "Steller Sea Lion Population Trends",
+    
+    # Prince William Sound
+    "Intertidal Temperature",
+    "Intertidal Communities (mussels, rockweed, sea stars)",
+    "Prince William Sound Herring Biomass",
+    "Humpback Whale Fall Surveys (PWS)",
+    
+    # Fishing Indicators
+    "Groundfish Discards",
+    "Non-target Species Catch",
+    "Seabird Bycatch",
+    
+    # Habitat Quality
+    "Fishing Effects on Essential Fish Habitat",
+    
+    # Sustainability
+    "Fish Stock Sustainability Index (FSSI)",
+    "Surplus Production/Exploitation Rate",
+    
+    # Disease & Toxins
+    "Harmful Algal Blooms (PSP toxins)",
+    "Mushy Halibut Syndrome Occurrence",
+    
+    # Ecosystem Community
+    "Foraging Guild Biomass",
+    "Community Stability",
+    "Mean Length/Lifespan of Fish Community",
+    "Species Richness/Diversity",
+    
+    # Citizen Science
+    "Skipper Science Observations"
+  ),
+  
+  Metric_Type = c(
+    # Climate
+    "Climate index", "Climate index", "Model forecast", "Predictive model",
+    # Temperature
+    "Temperature", "Temperature", "Temperature", "Temperature extremes",
+    # Transport
+    "Circulation", "Circulation", "Circulation", "Wind/mixing",
+    # Habitat
+    "Water chemistry", "Water chemistry",
+    # Primary Production
+    "Phytoplankton biomass", "Phytoplankton composition", "Physical oceanography",
+    # Zooplankton
+    "Zooplankton community", "Zooplankton biomass", "Zooplankton biomass", 
+    "Zooplankton biomass", "Prey quality",
+    # Forage Fish
+    "Abundance", "Body condition", "Diet composition", "Abundance", "Biomass", "Abundance",
+    # Salmon
+    "Harvest", "Abundance/condition", "Survival",
+    # Groundfish
+    "Body condition", "Abundance", "Natural mortality", "Biomass", "Temperature", "Diet composition",
+    # Benthic
+    "Biomass", "Biomass",
+    # Seabirds
+    "Phenology", "Reproductive success", "Mortality", "Distribution",
+    # Marine Mammals
+    "Reproductive success", "Mortality", "Abundance",
+    # PWS
+    "Temperature", "Community composition", "Biomass", "Abundance",
+    # Fishing
+    "Bycatch", "Bycatch", "Bycatch",
+    # Habitat Quality
+    "Fishing impact",
+    # Sustainability
+    "Stock status", "Harvest rate",
+    # Disease & Toxins
+    "Biotoxins", "Disease",
+    # Ecosystem Community
+    "Functional groups", "Variance", "Size/age structure", "Biodiversity",
+    # Citizen Science
+    "Observational data"
+  ),
+  
+  Frequency = c(
+    # Climate
+    "Monthly", "Annual", "Seasonal forecast", "Annual forecast",
+    # Temperature
+    "Continuous", "Daily", "Survey-dependent", "Daily",
+    # Transport
+    "Daily", "Annual", "Monthly", "Daily",
+    # Habitat
+    "Survey-dependent", "Survey-dependent",
+    # Primary Production
+    "Daily", "Annual", "Continuous",
+    # Zooplankton
+    "Monthly", "Annual", "Annual", "Monthly", "Annual",
+    # Forage Fish
+    "Biennial", "Biennial", "Annual", "Biennial", "Annual", "Annual",
+    # Salmon
+    "Annual", "Annual", "Annual",
+    # Groundfish
+    "Biennial", "Annual", "Model-based", "Biennial", "Biennial", "Biennial",
+    # Benthic
+    "Biennial", "Biennial",
+    # Seabirds
+    "Annual", "Annual", "Monthly", "Annual",
+    # Marine Mammals
+    "Annual", "Continuous", "Biennial",
+    # PWS
+    "Continuous", "Annual", "Annual", "Annual",
+    # Fishing
+    "Annual", "Annual", "Annual",
+    # Habitat Quality
+    "Annual",
+    # Sustainability
+    "Annual", "Annual",
+    # Disease & Toxins
+    "Seasonal", "Opportunistic",
+    # Ecosystem Community
+    "Biennial", "Biennial", "Biennial", "Biennial",
+    # Citizen Science
+    "Opportunistic"
+  ),
+  
+  Management_Relevance = c(
+    # Climate
+    "High", "High", "High", "High",
+    # Temperature
+    "High", "High", "High", "High",
+    # Transport
+    "Medium", "Medium", "Medium", "Medium",
+    # Habitat
+    "Medium", "Medium",
+    # Primary Production
+    "Medium", "Medium", "Medium",
+    # Zooplankton
+    "High", "High", "High", "Medium", "High",
+    # Forage Fish
+    "High", "High", "High", "High", "High", "Medium",
+    # Salmon
+    "High", "High", "High",
+    # Groundfish
+    "High", "High", "High", "High", "High", "High",
+    # Benthic
+    "Medium", "Low",
+    # Seabirds
+    "Medium", "High", "Medium", "Medium",
+    # Marine Mammals
+    "High", "Medium", "High",
+    # PWS
+    "Medium", "Medium", "Medium", "Medium",
+    # Fishing
+    "High", "Medium", "High",
+    # Habitat Quality
+    "High",
+    # Sustainability
+    "High", "High",
+    # Disease & Toxins
+    "Medium", "Low",
+    # Ecosystem Community
+    "Medium", "Medium", "Medium", "Low",
+    # Citizen Science
+    "Medium"
+  ),
+  
+  stringsAsFactors = FALSE
+)
+
+# # Display the dataframe
+# print(goa_esr_indicators)
+# 
+# # Summary statistics
+# cat("\n=== GOA ESR Indicator Summary ===\n")
+# cat("Total number of indicators:", nrow(goa_esr_indicators), "\n")
+# cat("\nIndicators by section:\n")
+# print(table(goa_esr_indicators$Section))
+# 
+# cat("\nIndicators by management relevance:\n")
+# print(table(goa_esr_indicators$Management_Relevance))
+# 
+# cat("\nIndicators by frequency:\n")
+# print(table(goa_esr_indicators$Frequency))
+
+# Save to CSV (optional)
+# write.csv(goa_esr_indicators, "goa_esr_indicators.csv", row.names = FALSE)
 
 ```
 
 # Eastern Bering Sea ESR
 
 
+
 # Hawaii ESR
+
+The 2022 Hawai'i Ecosystem Status Report report assesses the health and trends of marine ecosystems across the main Hawaiian Islands (MHI) from 2010-2019, emphasizing the circular relationship between human communities and ocean environments. The population of approximately 1.5 million (20% increase since 2000) lives predominantly near the coast, with 83% within 5 km of the ocean. Tourism adds significant pressure, with 10.3 million visitors in 2019—6.7 times the resident population.
+
+Small boat commercial fisheries show concerning declines. Total catch decreased 53-68% across pelagic, Deep 7 bottomfish, and nearshore fisheries from 1990-2019, while revenues dropped 35-58% from 2000-2019. Active fishers declined 16-31% between periods, though catch-per-trip remained stable or increased, suggesting fewer but more experienced fishers remain active.
+
+Coral reef health presents a mixed picture. In 2019, 50% of surveyed sectors had relatively low coral cover, with only 32% showing high cover. Between 2010-2019, 30% of sectors experienced declining coral cover, while only one sector (north Lānaʻi) showed improvement. Fish biomass followed similar patterns, with 50% of sectors showing low biomass and minimal significant changes over time.
+
+Climate indicators reveal accelerating changes. Sea surface temperatures increased 0.15-0.25°C per decade from 1991-2020, with projections showing annual severe coral bleaching by 2048 under current emissions scenarios. Sea level has risen 0.30 meters over 120 years. Brown water advisories—indicators of pollution runoff—occur most frequently on O'ahu (approximately 60 annually). Peak rainfall events have increased at most locations except Hilo.
+
+Human impacts vary dramatically across islands. South O'ahu between Diamond Head and Pearl Harbor shows the highest cumulative impact scores, where nearly all stressors co-occur at maximum intensity. West Hawai'i also shows high impacts despite fewer stressors, due to the prevalence of highly vulnerable coral reef habitat. Key stressors include fishing pressure, wastewater pollution, and sediment input.
+
+Climate vulnerability assessments reveal significant spatial variation. Lānaʻi, Moloka'i, and Kaho'olawe have the greatest percentages (>30%) of low-vulnerability sites, while Hawai'i Island, O'ahu, and Kaua'i have the highest percentages of high-vulnerability sites (20-25%). The projected onset of annual severe bleaching ranges from 2030 to 2066 across different reefs, highlighting that some locations have decades more time to adapt than others.
+
+The report emphasizes that strong collaborations among government, academic, non-governmental organizations, and communities are essential for effective management. Research priorities include understanding fishery declines, mitigating climate impacts, reducing cumulative stressors, and expanding vulnerability assessments to support conservation planning in this changing environment.
+
+---
+
+# Section Headings and Ecosystem Indicators
+
+## 1. Human Connections
+**Indicators:**
+- Population density and growth
+- Resource use participation rates
+- Awareness of threats
+- Perceptions of ecosystem status and trends
+
+**Fishery Management Implications:** Understanding human connections helps managers anticipate community responses to regulations, identify stakeholder priorities, and design culturally appropriate management strategies. High awareness of threats (>70%) suggests communities may support conservation measures.
+
+## 2. Small Boat Commercial Fishers
+**Indicators:**
+- Fishing Engagement Index (FEI)
+- Regional Quotient for revenue
+- Total catch by fishery
+- Catch per trip
+- Spatial distribution of catch
+
+**Fishery Management Implications:** Declining catch (53-68%) and fisher participation (16-31%) signal potential stock depletion, economic hardship, or regulatory impacts requiring intervention. Stable catch-per-trip suggests remaining fishers maintain efficiency, indicating possible fleet consolidation rather than resource collapse. Spatial shifts in fishing effort help identify emerging hotspots and areas needing protection.
+
+## 3. Coral Reefs and Reef Fish
+**Indicators:**
+- Hard coral cover
+- Calcifiers cover
+- Reef-builder ratio
+- Total fish biomass
+- Herbivore biomass
+- Resource fish biomass
+
+**Fishery Management Implications:** Coral cover and reef-builder ratios indicate habitat quality supporting fisheries productivity. Low coral cover (50% of sectors) suggests degraded fish habitat. Herbivore biomass reflects reef resilience to algal overgrowth, while resource fish biomass directly indicates fishery stock status and fishing pressure. These metrics help identify areas requiring harvest restrictions or habitat restoration.
+
+## 4. Climate and Ocean
+**Indicators:**
+- El Niño-Southern Oscillation (ENSO) index
+- Pacific Decadal Oscillation (PDO) index
+- Annual rainfall and peak events
+- Brown water advisories
+- Sea level rise
+- Sea surface temperature trends and projections
+
+**Fishery Management Implications:** Temperature increases affect fish distribution, recruitment, and productivity, requiring adaptive management. ENSO/PDO cycles influence fish abundance and availability, informing quota adjustments. Brown water advisories indicate pollution affecting nearshore fish habitat. Rising seas threaten coastal infrastructure supporting fisheries.
+
+## 5. Human Impacts
+**Indicators:**
+- Cumulative impact scores (vulnerability-weighted stressor intensities)
+- Individual stressor maps (fishing, wastewater, sediment, etc.)
+
+**Fishery Management Implications:** Cumulative impact mapping identifies priority areas for management intervention. High-impact zones (e.g., south O'ahu) may require multiple simultaneous actions—reducing fishing pressure alone is insufficient. Understanding stressor interactions helps managers design ecosystem-based approaches addressing both land and sea impacts to support fishery productivity.
+
+## 6. Vulnerability of Coral Reefs to Climate Change
+**Indicators:**
+- Projected timing of annual severe bleaching
+- Climate vulnerability scores (combining exposure, impacts, and resilience)
+- Reef resilience assessments
+
+**Fishery Management Implications:** Vulnerability assessments identify reefs most likely to persist under climate change, guiding spatial prioritization for protection. Low-vulnerability sites (e.g., Lānaʻi, Moloka'i) are conservation priorities supporting future fisheries. Areas with delayed bleaching onset (decades more time) justify greater management investment. Climate-resilient reefs serve as refugia maintaining fish populations and supporting recovery elsewhere.
+
+```{r HIESRdat}
+
+# Create dataframe of section headings and indicators from Hawaii Ecosystem Status Report
+
+hawaii_esr_indicators <- data.frame(
+  section_number = c(1, 1, 1, 1,
+                     2, 2, 2, 2, 2,
+                     3, 3, 3, 3, 3, 3,
+                     4, 4, 4, 4, 4, 4,
+                     5, 5,
+                     6, 6, 6),
+  
+  section_name = c(rep("Human Connections", 4),
+                   rep("Small Boat Commercial Fishers", 5),
+                   rep("Coral Reefs and Reef Fish", 6),
+                   rep("Climate and Ocean", 6),
+                   rep("Human Impacts", 2),
+                   rep("Vulnerability of Coral Reefs to Climate Change", 3)),
+  
+  indicator_name = c(
+    # Human Connections
+    "Population density and growth",
+    "Resource use participation rates",
+    "Awareness of threats",
+    "Perceptions of ecosystem status and trends",
+    
+    # Small Boat Commercial Fishers
+    "Fishing Engagement Index (FEI)",
+    "Regional Quotient for revenue",
+    "Total catch by fishery",
+    "Catch per trip",
+    "Spatial distribution of catch",
+    
+    # Coral Reefs and Reef Fish
+    "Hard coral cover (%)",
+    "Calcifiers cover (%)",
+    "Reef-builder ratio",
+    "Total fish biomass (kg/ha)",
+    "Herbivore biomass (kg/ha)",
+    "Resource fish biomass (kg/ha)",
+    
+    # Climate and Ocean
+    "El Niño-Southern Oscillation (ENSO) index",
+    "Pacific Decadal Oscillation (PDO) index",
+    "Annual rainfall and peak events (mm)",
+    "Brown water advisories (count/year)",
+    "Sea level rise (m)",
+    "Sea surface temperature (°C)",
+    
+    # Human Impacts
+    "Cumulative impact scores",
+    "Individual stressor intensities",
+    
+    # Vulnerability
+    "Projected timing of annual severe bleaching (year)",
+    "Climate vulnerability scores",
+    "Reef resilience assessments"
+  ),
+  
+  indicator_type = c(
+    # Human Connections
+    "Social", "Social", "Social", "Social",
+    
+    # Small Boat Commercial Fishers
+    "Economic", "Economic", "Biological", "Biological", "Spatial",
+    
+    # Coral Reefs and Reef Fish
+    "Biological", "Biological", "Biological", 
+    "Biological", "Biological", "Biological",
+    
+    # Climate and Ocean
+    "Physical", "Physical", "Physical", 
+    "Environmental", "Physical", "Physical",
+    
+    # Human Impacts
+    "Integrated", "Environmental",
+    
+    # Vulnerability
+    "Projected", "Integrated", "Biological"
+  ),
+  
+  units = c(
+    # Human Connections
+    "people/km²", "percent", "percent", "perception score",
+    
+    # Small Boat Commercial Fishers
+    "index value", "proportion", "pounds", "pounds/trip", "spatial change",
+    
+    # Coral Reefs and Reef Fish
+    "percent", "percent", "ratio", "kg/ha", "kg/ha", "kg/ha",
+    
+    # Climate and Ocean
+    "index value", "index value", "mm", "count/year", "meters", "°C",
+    
+    # Human Impacts
+    "score", "intensity",
+    
+    # Vulnerability
+    "year", "score", "score"
+  ),
+  
+  trend_observed = c(
+    # Human Connections
+    "Increasing (+20% 2000-2020)", 
+    "High participation (78% beach, 52% snorkel)",
+    "Increasing (>70% aware of all threats)",
+    "Declining (59-72% perceive worsening)",
+    
+    # Small Boat Commercial Fishers
+    "Honolulu & North Kona highest",
+    "Declining (-35 to -58% 2000-2019)",
+    "Declining (-53 to -68% 1990-2019)",
+    "Stable or increasing",
+    "Shifting spatially",
+    
+    # Coral Reefs and Reef Fish
+    "50% sectors low, 30% declining",
+    "Similar to coral cover",
+    "Similar to coral cover",
+    "50% sectors low, minimal change",
+    "Similar to total biomass",
+    "Similar to total biomass",
+    
+    # Climate and Ocean
+    "Variable (2015 strong El Niño)",
+    "Variable (2022 strong cool phase)",
+    "Variable; peak events increasing",
+    "~60/year O'ahu (highest)",
+    "+0.30m over 120 years",
+    "+0.15 to +0.25°C/decade",
+    
+    # Human Impacts
+    "Highest: south O'ahu",
+    "Variable by stressor",
+    
+    # Vulnerability
+    "2048 average (range 2030-2066)",
+    "Variable; Lāna'i, Moloka'i lowest",
+    "Variable by location"
+  ),
+  
+  stringsAsFactors = FALSE
+)
+
+# # Display the dataframe
+# print(hawaii_esr_indicators)
+# 
+# # Summary by section
+# cat("\n=== SUMMARY BY SECTION ===\n")
+# section_summary <- aggregate(indicator_name ~ section_name, 
+#                              data = hawaii_esr_indicators, 
+#                              FUN = length)
+# names(section_summary) <- c("Section", "Number_of_Indicators")
+# print(section_summary)
+# 
+# # Summary by indicator type
+# cat("\n=== SUMMARY BY INDICATOR TYPE ===\n")
+# type_summary <- table(hawaii_esr_indicators$indicator_type)
+# print(type_summary)
+# 
+# # Create a more detailed view for specific sections
+# cat("\n=== FISHERIES SECTION DETAIL ===\n")
+# fisheries_indicators <- subset(hawaii_esr_indicators, 
+#                                section_name == "Small Boat Commercial Fishers")
+# print(fisheries_indicators[, c("indicator_name", "units", "trend_observed")])
+# 
+# cat("\n=== REEF HEALTH SECTION DETAIL ===\n")
+# reef_indicators <- subset(hawaii_esr_indicators, 
+#                           section_name == "Coral Reefs and Reef Fish")
+# print(reef_indicators[, c("indicator_name", "units", "trend_observed")])
+
+```
 
 
 # Indicator Comparison
