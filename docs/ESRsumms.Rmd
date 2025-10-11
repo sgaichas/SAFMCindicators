@@ -2346,3 +2346,476 @@ table(ne_soe_indicators$Section)
 cat("\nTotal number of indicators:", nrow(ne_soe_indicators), "\n")
 ```
 
+# Aleutian Islands ESR
+
+## Summary of the Aleutian Islands Ecosystem Status Report 2024
+
+The 2024 Aleutian Islands Ecosystem Status Report reveals a gradient of ecosystem conditions from poor productivity in the west to high productivity in the east. Despite overall relaxation of multi-year warm conditions and a low abundance year in the biennial Kamchatka pink salmon cycle, groundfish condition remained poor across the ecosystem—unusual for a cooler year with fewer pink salmon. Winter sea surface temperatures were among the ten warmest on record, though strong winds and storminess during 2023-2024 contributed to cooler conditions during late spring and summer, with a deeper mixed layer that may have impacted prey availability.
+
+### Regional Conditions:
+In the Western Aleutians, sustained high winter temperatures resulted in moderate marine heatwaves, with over 75% of the region experiencing heatwave status in late summer. Planktivorous auklets at Buldir Island experienced particularly poor reproductive success, with three species showing extremely late hatch dates and below-average breeding success, suggesting limited zooplankton availability. Steller sea lion numbers continue declining (-5.7% for non-pups, 2008-2023) with no signs of recovery. Pelagic forager biomass increased slightly (6%), driven by northern rockfish and pollock, while apex predator biomass declined 16%, driven by Pacific cod and arrowtooth flounder decreases.
+
+The Central Aleutians experienced shorter marine heatwaves with near-average spring temperatures and no summer heatwave. Pelagic forager biomass decreased 13%, driven by Atka mackerel declines, while apex predator biomass increased 7%. Steller sea lion non-pup counts were statistically stable overall, though the two westernmost rookery areas declined while eastern areas remained stable. School enrollment continued declining, with Adak's school closing in 2023 after the fish processing plant closed in 2020.
+
+In the Eastern Aleutians, marine heatwaves were brief with no summer occurrence. Seabird reproductive success was average to above-average across all monitored species, indicating uniformly high prey availability. Tufted puffin chicks were fed primarily capelin (50%) and pollock (34%), suggesting potentially good pollock recruitment. Apex predator biomass decreased 24%, driven by arrowtooth flounder declines. In contrast to other regions, Steller sea lion non-pup and pup counts continue increasing significantly (2.1% and 1.5% from 2008-2023), offsetting declines elsewhere.
+
+### Key Concerns:
+Fish condition deteriorated across most species despite cooler temperatures, particularly for Pacific cod, northern rockfish, and Pacific ocean perch, which have been below long-term means since 2012. The decline may indicate poor prey quality, low prey availability, competition, and increased metabolic rates. Eastern Kamchatka pink salmon abundance in 2024 was similar to 2022 (around 60,000 mt), close to the current total biomass estimate for Aleutian Islands Pacific cod stock. Paralytic shellfish toxins decreased significantly from 2023 but remained 7x above FDA regulatory limits, posing continued seasonal concerns for human health and food webs.
+
+## Section Headings and Ecosystem Indicators
+
+### 1. Climate Overview
+Indicators: North Pacific Index, Aleutian Low Index, sea surface temperature (SST), sea level pressure (SLP), seasonal wind patterns
+
+Implications: Atmospheric forcing affects ocean circulation, mixed layer depth, nutrient transport through passes, and ultimately prey availability for commercial groundfish. Strong/weak Aleutian Low influences storm frequency, temperature patterns, and sea ice extent, which cascade through the food web.
+
+### 2. State of the North Pacific Ocean
+Indicators: ENSO indices (NINO3.4), Pacific Decadal Oscillation (PDO), North Pacific Gyre Oscillation (NPGO), Arctic Oscillation (AO)
+
+Implications: Basin-scale climate patterns drive regional oceanographic conditions affecting fish distribution, recruitment timing, and productivity. These indices help predict ecosystem responses and inform adaptive management strategies.
+
+### 3. Seasonal Projections of SST
+Indicators: National Multi-Model Ensemble (NMME) forecast models
+
+Implications: Short-term temperature forecasts (1-5 months) allow managers to anticipate potential impacts on fish spawning, larval survival, and distribution shifts, enabling proactive management adjustments.
+
+### 4. Regional Long-term Sea Surface Temperature
+Indicators: Extended Reconstructed SST (ERSST) data (1900-2024)
+
+Implications: Long-term warming trends provide context for interpreting recent conditions and understanding species' thermal tolerance limits, crucial for assessing climate change impacts on stock productivity and distribution.
+
+### 5. Regional Sea Surface Temperature and Marine Heatwaves
+Indicators: Daily SST, marine heatwave (MHW) frequency, intensity, and spatial extent
+
+Implications: Marine heatwaves dramatically influence ecosystem dynamics, affecting fish growth rates, metabolic demands, distribution patterns, and survival. Tracking MHW intensity helps explain recruitment failures and mortality events.
+
+### 6. Bottom and Surface Temperatures from Survey
+Indicators: Survey-collected water temperatures at surface and bottom
+
+Implications: Temperature measurements during bottom trawl surveys directly correlate with fish habitat use, species distribution, and community composition. Temperature anomalies can indicate shifts in available habitat for managed species.
+
+### 7. Ocean Transport: Eddies in the Aleutian Islands
+Indicators: Eddy kinetic energy (EKE) from satellite altimetry
+
+Implications: Eddies influence flow through Aleutian passes, affecting nutrient transport, heat distribution, and phytoplankton/zooplankton distributions. Lower EKE suggests decreased nutrient flux, potentially reducing productivity for forage fish and commercial groundfish.
+
+### 8. Zooplankton: Continuous Plankton Recorder Data
+Indicators: Mesozooplankton biomass, diatom abundance, copepod community size
+
+Implications: Zooplankton abundance and size structure affect prey availability and quality for planktivorous fish (Pacific ocean perch, northern rockfish) and seabirds. Smaller copepods indicate potentially lower nutritional value for predators, affecting recruitment success.
+
+### 9. Structural Epifauna in the Aleutian Islands
+Indicators: Biomass of sponges, corals, anemones, sea pens from bottom trawl surveys
+
+Implications: Structure-forming invertebrates provide essential fish habitat (refuge, spawning areas, enhanced prey) for commercially important rockfish and Atka mackerel. Declining epifauna biomass suggests habitat degradation, potentially affecting fish recruitment and survival.
+
+### 10. Jellyfish in the Aleutian Islands
+Indicators: Jellyfish biomass from bottom trawl surveys
+
+Implications: High jellyfish abundance indicates potential competition with planktivorous fish for prey and predation on fish eggs/larvae. Jellyfish may also serve as prey for some groundfish species, representing complex food web interactions.
+
+### 11. Eastern Kamchatka Pink Salmon
+Indicators: Pink salmon abundance and biomass (odd-year peaks)
+
+Implications: Exceptionally high pink salmon abundance creates competition for prey with other salmon species, groundfish, seabirds, and marine mammals. Biennial patterns in pink salmon correlate with seabird reproductive success, sockeye salmon growth, and potentially seabird bycatch rates.
+
+### 12. Aleutian Islands Groundfish Condition
+Indicators: Length-weight residuals (body condition) for multiple groundfish species
+
+Implications: Fish condition indicates prey availability, growth potential, and population health. Poor condition suggests nutritional stress, which can reduce survival, reproductive success, and recruitment, informing concerns about stock productivity and potential ABC reductions.
+
+### 13. Distribution of Rockfish Species
+Indicators: Mean weighted distributions along depth, temperature, and geographic gradients
+
+Implications: Shifts in rockfish distribution (particularly to shallower depths) may indicate changing environmental conditions or habitat availability. Understanding distribution changes helps refine survey designs and habitat protection measures.
+
+### 14. Miscellaneous Benthic Fauna
+Indicators: Biomass of eelpouts, poachers, shrimps, sea stars from bottom trawl surveys
+
+Implications: These species are important prey for apex predators (Pacific cod, Pacific halibut). Declining benthic prey biomass suggests reduced food availability for commercially important groundfish, potentially affecting their condition and productivity.
+
+### 15. Integrated Seabird Information
+Indicators: Breeding chronology (hatch dates), reproductive success, puffin chick diet composition, beached bird surveys, seabird bycatch
+
+Implications: Seabirds are ecosystem sentinels; their reproductive success and diet composition reflect forage fish availability and ecosystem productivity. Poor seabird performance may indicate low prey availability affecting commercial fish stocks. Diet composition provides indices of forage fish recruitment absent direct surveys.
+
+### 16. Steller Sea Lions
+Indicators: Non-pup and pup counts at rookeries and haulouts
+
+Implications: As apex piscivorous predators consuming commercially fished species (Atka mackerel, Pacific cod, pollock), Steller sea lion population trends indicate prey availability and ecosystem health. Continued declines in western/central regions raise concerns about fishery impacts and ecosystem productivity. As an endangered species, their status directly influences fishery management decisions.
+
+### 17. Marine Mammal Strandings
+Indicators: Number and species of stranded marine mammals
+
+Implications: Strandings may signal ecosystem stress, harmful algal blooms, disease outbreaks, or human interactions (vessel strikes, entanglement). Tracking strandings provides early warning of environmental changes or events affecting multiple species.
+
+### 18. Stability of Groundfish Biomass
+Indicators: Inverse coefficient of variation (1/CV) of total groundfish biomass
+
+Implications: Community stability indicates ecosystem resistance to perturbations. Increasing stability suggests a more resilient ecosystem, while decreasing stability may indicate increasing fishing pressure or environmental stress, relevant for ecosystem-based management approaches.
+
+### 19. Mean Length of Fish Community
+Indicators: Biomass-weighted mean length of groundfish community
+
+Implications: Declining mean length may indicate selective removal of large predatory fish by fisheries or shifts toward smaller, shorter-lived species. Maintaining size structure helps populations buffer environmental variability, supporting sustainable harvest levels.
+
+### 20. Mean Lifespan of Fish Community
+Indicators: Biomass-weighted mean lifespan of groundfish community
+
+Implications: Community lifespan reflects ecosystem stability and resistance to environmental variability. Longer-lived species buffer populations through unfavorable conditions. Trends toward shorter-lived species suggest increased sensitivity to environmental change and potentially reduced resilience.
+
+### 21. Harmful Algal Blooms
+Indicators: Paralytic shellfish toxin (PST) levels in blue mussels, presence of toxic algal species (Alexandrium, Pseudo-nitzschia, Dinophysis)
+
+Implications: HABs pose direct human health risks from consuming contaminated shellfish and marine mammals. Toxins bioaccumulate in food webs, potentially affecting marine mammal and seabird populations. Monitoring protects subsistence and commercial harvest safety.
+
+### 22. Time Trends in Non-Target Species Catch
+Indicators: Bycatch of jellyfish, structural epifauna, assorted invertebrates in groundfish fisheries
+
+Implications: Non-target catch trends may indicate ecosystem changes (e.g., jellyfish blooms) or impacts of fishing on benthic habitat. High structural epifauna bycatch raises concerns about habitat damage in areas important for commercial species.
+
+### 23. Seabird Bycatch Estimates
+Indicators: Estimated seabird mortality in groundfish and halibut fisheries by species and gear type
+
+Implications: Seabird bycatch monitoring is legally required for ESA-listed species (short-tailed albatross) and informs management measures to reduce mortality (seabird avoidance devices, area/seasonal closures). Bycatch patterns may reflect changes in seabird or fish distributions.
+
+### 24. Fish Stock Sustainability Index (FSSI)
+Indicators: Points awarded based on overfishing status, overfished status, and biomass relative to BMSY for 21 BSAI stocks
+
+Implications: FSSI tracks overall sustainability of federally managed stocks, demonstrating effectiveness of fisheries management. The index directly informs National Standard guidelines and communicates management performance to stakeholders and the public. High scores (93% for BSAI) indicate successful sustainable management.
+
+```{r AIESRdat}
+
+# Create dataframe of Aleutian Islands ESR sections and indicators
+
+aleutian_esr <- data.frame(
+  section_number = c(1:24),
+  
+  section_heading = c(
+    "Climate Overview",
+    "State of the North Pacific Ocean",
+    "Seasonal Projections of SST",
+    "Regional Long-term Sea Surface Temperature",
+    "Regional Sea Surface Temperature and Marine Heatwaves",
+    "Bottom and Surface Temperatures from Survey",
+    "Ocean Transport: Eddies in the Aleutian Islands",
+    "Zooplankton: Continuous Plankton Recorder Data",
+    "Structural Epifauna in the Aleutian Islands",
+    "Jellyfish in the Aleutian Islands",
+    "Eastern Kamchatka Pink Salmon",
+    "Aleutian Islands Groundfish Condition",
+    "Distribution of Rockfish Species",
+    "Miscellaneous Benthic Fauna",
+    "Integrated Seabird Information",
+    "Steller Sea Lions",
+    "Marine Mammal Strandings",
+    "Stability of Groundfish Biomass",
+    "Mean Length of Fish Community",
+    "Mean Lifespan of Fish Community",
+    "Harmful Algal Blooms",
+    "Time Trends in Non-Target Species Catch",
+    "Seabird Bycatch Estimates",
+    "Fish Stock Sustainability Index (FSSI)"
+  ),
+  
+  primary_indicators = c(
+    "North Pacific Index; Aleutian Low Index; SST; SLP; wind patterns",
+    "NINO3.4; PDO; NPGO; Arctic Oscillation",
+    "NMME forecast models (1-5 month projections)",
+    "Extended Reconstructed SST 1900-2024",
+    "Daily SST; MHW frequency, intensity, spatial extent",
+    "Survey surface and bottom water temperatures",
+    "Eddy kinetic energy from satellite altimetry",
+    "Mesozooplankton biomass; diatom abundance; copepod community size",
+    "Biomass of sponges, corals, anemones, sea pens",
+    "Jellyfish biomass from bottom trawl surveys",
+    "Pink salmon abundance and biomass (biennial)",
+    "Length-weight residuals (body condition index)",
+    "Mean weighted depth, temperature, geographic position",
+    "Biomass of eelpouts, poachers, shrimps, sea stars",
+    "Hatch dates; reproductive success; diet composition; beached birds; bycatch",
+    "Non-pup and pup counts at rookeries",
+    "Number and species of stranded marine mammals",
+    "Inverse CV of total groundfish biomass",
+    "Biomass-weighted mean length",
+    "Biomass-weighted mean lifespan",
+    "PST levels in mussels; toxic algal species presence",
+    "Bycatch of jellyfish, epifauna, invertebrates",
+    "Seabird mortality by species and gear type",
+    "Overfishing/overfished status; biomass relative to BMSY"
+  ),
+  
+  report_card_indicator = c(
+    "Yes - NPI Nov-Mar average",
+    "No",
+    "No",
+    "No",
+    "No",
+    "No",
+    "No",
+    "No",
+    "No",
+    "No",
+    "No - but recommended for inclusion",
+    "No",
+    "No",
+    "No",
+    "Yes - Auklet reproductive success, Puffin diet composition",
+    "Yes - SSL non-pup counts",
+    "No",
+    "No",
+    "No",
+    "No",
+    "No",
+    "No",
+    "No",
+    "No"
+  ),
+  
+  trophic_level = c(
+    "Physical environment",
+    "Physical environment",
+    "Physical environment",
+    "Physical environment",
+    "Physical environment",
+    "Physical environment",
+    "Physical environment",
+    "Lower trophic (zooplankton)",
+    "Benthic habitat/invertebrates",
+    "Gelatinous zooplankton",
+    "Upper trophic (forage species)",
+    "Mid-upper trophic (groundfish)",
+    "Mid-upper trophic (groundfish)",
+    "Benthic invertebrates",
+    "Upper trophic (apex predators)",
+    "Upper trophic (apex predators)",
+    "Upper trophic (marine mammals)",
+    "Community-level",
+    "Community-level",
+    "Community-level",
+    "Lower trophic (phytoplankton/toxins)",
+    "Multiple trophic levels",
+    "Upper trophic (seabirds)",
+    "Community-level (sustainability)"
+  ),
+  
+  management_implication = c(
+    "Influences prey availability and fish distribution",
+    "Predicts ecosystem responses and recruitment patterns",
+    "Allows proactive management adjustments",
+    "Context for climate change impacts on stocks",
+    "Explains recruitment failures and mortality events",
+    "Correlates with habitat use and distribution",
+    "Affects nutrient transport and productivity",
+    "Indicates prey quality for planktivorous fish",
+    "Essential habitat for rockfish and Atka mackerel",
+    "Competition with fish; predation on eggs/larvae",
+    "Competition affects salmon, groundfish, seabirds",
+    "Indicates stock health and recruitment potential",
+    "Refines surveys and habitat protection",
+    "Prey availability for commercial groundfish",
+    "Ecosystem productivity and forage fish availability",
+    "Ecosystem health; constrains fishery decisions",
+    "Early warning of ecosystem stress or HABs",
+    "Ecosystem resilience to fishing and environment",
+    "Indicates fishing pressure and community shifts",
+    "Ecosystem stability and environmental buffering",
+    "Human health risk; food web contamination",
+    "Fishing impacts on benthic habitat",
+    "Legally required; informs mitigation measures",
+    "Tracks management effectiveness and sustainability"
+  ),
+  
+  update_frequency = c(
+    "Monthly/Annual",
+    "Monthly/Annual",
+    "Monthly",
+    "Annual",
+    "Daily/Annual",
+    "Biennial (survey years)",
+    "Monthly/Annual",
+    "Seasonal/Annual",
+    "Biennial (survey years)",
+    "Biennial (survey years)",
+    "Annual",
+    "Biennial (survey years)",
+    "Biennial (survey years)",
+    "Biennial (survey years)",
+    "Annual",
+    "Annual",
+    "Continuous/Annual",
+    "Biennial (survey years)",
+    "Biennial (survey years)",
+    "Biennial (survey years)",
+    "Seasonal/Annual",
+    "Annual",
+    "Annual",
+    "Quarterly"
+  ),
+  
+  stringsAsFactors = FALSE
+)
+
+# Display the dataframe
+print(aleutian_esr)
+
+# Create a summary by trophic level
+trophic_summary <- aggregate(
+  section_heading ~ trophic_level, 
+  data = aleutian_esr, 
+  FUN = length
+)
+colnames(trophic_summary) <- c("Trophic_Level", "Number_of_Indicators")
+
+print("\nSummary by Trophic Level:")
+print(trophic_summary)
+
+# Count report card indicators
+report_card_count <- sum(grepl("Yes", aleutian_esr$report_card_indicator))
+print(paste("\nNumber of Report Card Indicators:", report_card_count))
+
+# Export to CSV (optional)
+# write.csv(aleutian_esr, "aleutian_islands_esr_indicators.csv", row.names = FALSE)
+
+```
+
+# Gulf of Alaska ESR
+
+Summary of 2024 Gulf of Alaska Ecosystem Status Report
+The 2024 Gulf of Alaska (GOA) Ecosystem Status Report provides a comprehensive assessment of marine ecosystem conditions to inform fishery management decisions. The GOA experienced moderate El Niño conditions during winter/spring 2023-2024, which brought warmer surface waters but had more moderate impacts than initially predicted due to its short duration, a weaker Aleutian Low, and eastward winds that tempered increased circulation.
+The ecosystem showed signs of improved productivity compared to 2023. Spring conditions supported high energy transfer through the food web, with diatom-dominated phytoplankton communities and above-average spring zooplankton biomass (particularly euphausiids). This provided good prey resources for zooplankton-eating groundfish and resulted in above-average reproductive success for planktivorous seabirds across the GOA.
+Forage fish populations varied but were generally average to above average. Notably, capelin populations continued rebounding from their 2014-2016 marine heatwave decline for the second consecutive year, benefiting seabirds, marine mammals, and piscivorous groundfish. Herring maintained relatively high populations due to strong 2016 and 2020 year classes. However, eulachon, sand lance, and juvenile salmon showed lower abundance.
+A significant concern was the unexpectedly low pink salmon returns in 2024, particularly in Prince William Sound, representing some of the lowest commercial landings since 1985. Potential causes include reduced early marine survival in 2023 due to low zooplankton biomass and poor offshore survival conditions.
+Marine heatwave conditions were less severe than recent years, with the eastern GOA experiencing prolonged winter/spring marine heatwaves while the western GOA remained mostly below the heatwave threshold. Long-term trends show continued warming of GOA surface temperatures since 1900, primarily driven by summer warming.
+Community dynamics reflect both short-term responses to the 2023-2024 conditions and longer-term shifts. Pacific ocean perch has replaced arrowtooth flounder as the dominant groundfish by biomass since 2017. Some populations severely impacted by the 2014-2016 marine heatwave continue recovering (capelin rebounding, humpback whale crude birth rates returning to pre-2014 levels for the first time), while others remain depressed (Pacific cod, sand lance).
+Seabird indicators suggested adequate to good prey availability, with reproductive success for fish-eating and plankton-eating seabirds generally above average across the GOA. No large-scale seabird mortality events were recorded. Marine mammal observations included 24 humpback whale calves in Glacier Bay/Icy Strait (the highest since monitoring began in 1985) and a crude birth rate exceeding pre-heatwave averages for the first time.
+Looking ahead to 2025, La Niña conditions are predicted to develop, bringing cooler sea surface temperatures. Despite this prediction, integrated water column temperatures at GAK1 are forecast to remain slightly warmer than average, reflecting delayed La Niña onset and long-term warming trends.
+Section Headings and Ecosystem Indicators
+Physical Environment
+Climate Indicators:
+
+State of the North Pacific Ocean: Tracks SST anomalies, wind patterns, and sea level pressure. Implications: Influences ocean circulation, mixing, and heat distribution affecting fish distribution and productivity.
+Wintertime Aleutian Low Index: Measures intensity and position of Aleutian Low pressure system. Implications: Determines storm patterns, ocean mixing, and sea ice extent affecting habitat conditions.
+Seasonal Projections (NMME): Forecasts SST anomalies for upcoming seasons. Implications: Provides advance warning for management to anticipate ecosystem changes.
+Predicted Ocean Temperatures (Sitka Air Temperature): Predicts GAK1 water temperatures based on Sitka air temperatures. Implications: Early indicator of thermal conditions affecting fish growth and distribution.
+
+Ocean Temperature:
+
+Long-term SST trends (1900-2024): Tracks century-scale warming patterns. Implications: Indicates climate change impacts on thermal habitat suitability.
+Satellite-derived SST: Daily surface temperatures across GOA regions. Implications: Identifies temperature stress periods and optimal spawning/rearing conditions.
+Survey-based temperatures: Measurements from various surveys at surface and depth. Implications: Validates satellite data and tracks subsurface thermal habitat.
+Marine Heatwave Status: Duration, intensity, and spatial extent of warm events. Implications: Extreme temperatures can cause mass mortality, reproductive failure, and ecosystem reorganization.
+
+Ocean Transport:
+
+Eddy Kinetic Energy: Measures mesoscale ocean circulation features. Implications: Affects larval transport, nutrient distribution, and cross-shelf exchange critical for recruitment.
+Papa Trajectory Index: Tracks surface current patterns. Implications: Indicates transport pathways affecting larval dispersal and connectivity.
+Northern GOA Oscillation/Downwelling Index: Measures upwelling/downwelling intensity. Implications: Controls nutrient supply, oxygen levels, and deep water intrusion onto shelf.
+Coastal Wind Patterns: Spring wind speed and direction. Implications: Drives upwelling/downwelling affecting larval retention and prey availability.
+
+Habitat
+
+Ocean Acidification: pH levels and aragonite saturation. Implications: Affects shellfish survival, particularly crab and pteropods in food web.
+Dissolved Oxygen: Oxygen concentration at depth. Implications: Limits available habitat for groundfish, especially at depth during warm periods.
+
+Primary Production
+
+Satellite Chlorophyll-a: Phytoplankton biomass from remote sensing. Implications: Indicates ecosystem productivity baseline supporting food web.
+Seward Line Phytoplankton Size Index: Ratio of large to small phytoplankton. Implications: Large diatoms support efficient energy transfer; small cells indicate less productive conditions.
+GAK1 Mooring Oceanography: Temperature, salinity, stratification at nearshore station. Implications: Long-term trends show warming, freshening, increased stratification affecting mixing and productivity.
+
+Zooplankton
+
+Continuous Plankton Recorder: Large-scale zooplankton community patterns. Implications: Indicates prey quality and quantity for larval/juvenile fish.
+Copepod Biomass and Community Size: Abundance and size structure of copepods. Implications: Large copepods are energy-rich prey; low biomass indicates poor foraging conditions.
+Euphausiid Biomass: Krill abundance along Seward Line. Implications: Critical prey for juvenile pollock, salmon, and many groundfish.
+Zooplankton Density (Icy Strait): Regional abundance in SE Alaska. Implications: Indicates juvenile salmon foraging conditions.
+Zooplankton Lipid Content: Nutritional quality of prey. Implications: High lipid content supports fish growth and overwinter survival.
+
+Forage Fish
+
+Larval Fish Abundance: Early life stage surveys. Implications: Early warning indicator of recruitment for groundfish stocks.
+Age-0 Pollock Condition: Body condition of juvenile pollock. Implications: Predicts overwinter survival and year-class strength.
+Seabird Diet Composition: Forage fish in seabird diets. Implications: Indicates availability of capelin, sand lance, herring for upper trophic levels.
+Capelin Abundance Indices: Survey-based abundance estimates. Implications: Key forage species for cod, salmon, seabirds, and marine mammals.
+Herring Biomass (SE Alaska): Stock assessment estimates. Implications: Important forage supporting commercial fisheries and ecosystem.
+Eulachon Returns: Spawning run observations. Implications: Critical early spring prey for marine mammals and cultural resource.
+
+Salmon
+
+Commercial Salmon Catch: Total harvest by species. Implications: Indicates salmon productivity affecting competition for zooplankton prey.
+Juvenile Salmon Abundance/Condition (Icy Strait): CPUE, size, energy density. Implications: Predicts marine survival and return strength; indicates ecosystem productivity.
+Auke Creek Salmon Survival: Long-term survival indices. Implications: Sensitive indicator of nearshore ecosystem productivity.
+
+Groundfish
+
+Groundfish Condition: Weight-at-length from surveys. Implications: Integrates environmental conditions and prey availability affecting stock resilience.
+ADF&G Trawl Survey: Nearshore abundance trends. Implications: Provides additional data on juvenile groundfish and ecosystem state.
+Predation Mortality (CEATTLE model): Time-varying natural mortality from multispecies model. Implications: Quantifies trophic interactions affecting stock productivity.
+Survey Biomass Trends: Design-based abundance estimates. Implications: Tracks population trends and community composition shifts.
+Environmental Conditions Experienced: Temperature distributions where fish occur. Implications: Indicates whether fish experience thermal stress or optimal conditions.
+Groundfish Diets: Stomach content analysis. Implications: Reveals trophic interactions and energy flow through ecosystem.
+
+Benthic Communities
+
+Motile Epifauna Biomass: Invertebrate biomass from surveys. Implications: Prey base for groundfish and indicator of benthic productivity.
+Structural Epifauna: Corals, sponges providing habitat. Implications: Essential fish habitat and ecosystem structure.
+
+Seabirds
+
+Breeding Timing: Hatch dates for multiple species. Implications: Indicates pre-breeding foraging conditions and phenological shifts.
+Reproductive Success: Chicks fledged per nest/egg. Implications: Integrates prey availability and quality during breeding season.
+Mortality Events: Beach-cast bird surveys. Implications: Indicates starvation events or ecosystem disruption.
+At-sea Distribution (Seward Line): Densities across shelf domains. Implications: Reveals spatial distribution of prey resources.
+
+Marine Mammals
+
+Humpback Whale Calving: Birth rates in Glacier Bay/Icy Strait. Implications: Requires 2-3 years good foraging; indicates ecosystem productivity.
+Marine Mammal Strandings: Dead/distressed animals reported. Implications: Early warning of disease, toxins, or food web disruption.
+Steller Sea Lion Trends: Population abundance. Implications: Top predator indicating forage fish availability; protected species considerations.
+
+Prince William Sound
+
+Intertidal Temperature: Nearshore thermal conditions. Implications: Affects nearshore productivity and early life stages.
+Intertidal Communities (mussels, rockweed, sea stars): Abundance and composition. Implications: Indicates nearshore ecosystem state and recovery from disturbances.
+Herring Biomass: PWS herring stock assessment. Implications: Key forage species and ecosystem indicator.
+Humpback Whale Surveys: Fall abundance in PWS. Implications: Indicates prey availability in enclosed waters.
+
+Fishing Indicators
+
+Groundfish Discards: Non-retained catch trends. Implications: Reflects fishing impacts on non-target species.
+Non-target Species Catch: Invertebrate bycatch. Implications: Indicates ecosystem effects of fishing on benthic communities.
+Seabird Bycatch: Incidental mortality in fisheries. Implications: Conservation concern for protected species; indicates fishing/seabird overlap.
+
+Habitat Quality
+
+Fishing Effects on EFH: Spatial footprint of bottom contact gear. Implications: Assesses habitat disturbance from fishing.
+
+Sustainability
+
+Fish Stock Sustainability Index (FSSI): Composite metric of stock status. Implications: Tracks progress toward sustainable fisheries goals.
+Surplus Production/Exploitation Rate: Population productivity metrics. Implications: Indicates if harvest levels are sustainable.
+
+Disease & Toxins
+
+Harmful Algal Blooms: PSP toxin levels, phytoplankton monitoring. Implications: Human health risk; can cause marine mammal mortality.
+Mushy Halibut Syndrome: Occurrence of nutritional myopathy. Implications: Indicates poor prey quality or availability for juvenile halibut.
+
+Ecosystem Community Indicators
+
+Foraging Guild Biomass: Grouped species by feeding ecology. Implications: Tracks functional groups and energy flow pathways.
+Community Stability: Variance in biomass. Implications: Measures ecosystem resilience to perturbations.
+Mean Length/Lifespan: Community size and longevity structure. Implications: Indicates fishing effects and community reorganization.
+Species Richness/Diversity: Number and evenness of species. Implications: Biodiversity indicator related to ecosystem function.
+
+Citizen Science (Skipper Science)
+
+Fisher Observations: Forage fish in salmon stomachs, predator interactions, marine mammal interactions. Implications: Provides real-time, broad spatial coverage of ecosystem changes; engages stakeholders; fills data gaps.
+
+Each indicator provides specific information about ecosystem components, processes, or stressors that can affect fish stocks managed by the North Pacific Fishery Management Council. Collectively, they inform risk assessments, acceptable biological catch recommendations, and ecosystem-based management decisions.
+
+```{r GOAESRdat}
+
+
+```
+
