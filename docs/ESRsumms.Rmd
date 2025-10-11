@@ -132,7 +132,7 @@ The synthesis reveals an ecosystem experiencing gradual but accelerating change,
 
 **Management Implications:** Rapid population growth and coastal development increase fishing pressure, habitat degradation, and user conflicts. Understanding fishing community dependence and social connectedness helps managers design equitable regulations, allocate resources fairly between sectors, and anticipate stakeholder responses to management changes. Declining social connectedness may reduce community resilience to management restrictions.
 
-```{r SAESRdat}
+```{r SAESRdat, echo=FALSE, warning=FALSE, message=FALSE}
 
 # Create a comprehensive dataframe of sections and indicators from the South Atlantic ESR
 
@@ -163,7 +163,8 @@ sa_esr_indicators <- tibble(
     rep("Human Dimensions", 4)
   ),
   
-  Subsection = c(
+  #Subsection = c(
+  Indicator = c(  
     # Climate Drivers
     "Atlantic Multidecadal Oscillation (AMO)",
     "North Atlantic Oscillation (NAO)",
@@ -275,24 +276,24 @@ sa_esr_indicators <- tibble(
   )
 )
 
-# Display the dataframe
-print(sa_esr_indicators)
-
-# Summary statistics
-cat("\n=== Summary Statistics ===\n")
-sa_esr_indicators %>%
-  group_by(Section) %>%
-  summarise(
-    Number_of_Subsections = n(),
-    Total_Indicators = sum(Total_Indicators)
-  ) %>%
-  print()
-
-# Overall totals
-cat("\n=== Overall Totals ===\n")
-cat("Total Sections:", length(unique(sa_esr_indicators$Section)), "\n")
-cat("Total Subsections:", nrow(sa_esr_indicators), "\n")
-cat("Total Indicators:", sum(sa_esr_indicators$Total_Indicators), "\n")
+# # Display the dataframe
+# print(sa_esr_indicators)
+# 
+# # Summary statistics
+# cat("\n=== Summary Statistics ===\n")
+# sa_esr_indicators %>%
+#   group_by(Section) %>%
+#   summarise(
+#     Number_of_Subsections = n(),
+#     Total_Indicators = sum(Total_Indicators)
+#   ) %>%
+#   print()
+# 
+# # Overall totals
+# cat("\n=== Overall Totals ===\n")
+# cat("Total Sections:", length(unique(sa_esr_indicators$Section)), "\n")
+# cat("Total Subsections:", nrow(sa_esr_indicators), "\n")
+# cat("Total Indicators:", sum(sa_esr_indicators$Total_Indicators), "\n")
 
 # 
 # 
@@ -646,54 +647,54 @@ gom_esr <- data.frame(
   stringsAsFactors = FALSE
 )
 
-# Display the dataframe
-print(gom_esr)
-
-# Summary statistics
-cat("\n=== Summary ===\n")
-cat("Total number of indicators:", nrow(gom_esr), "\n")
-cat("Number of major sections:", length(unique(gom_esr$Section)), "\n")
-
-cat("\nIndicators by section:\n")
-print(table(gom_esr$Section))
-
-cat("\nIndicators by type:\n")
-print(table(gom_esr$Indicator_Type))
-
-# Create a summary table of sections
-section_summary <- data.frame(
-  Section_Number = c("4", "5", "6", "7", "8", "9", "10"),
-  Section_Name = c(
-    "Climate Drivers",
-    "Physical and Chemical Pressures",
-    "Habitat State",
-    "Lower Trophic States",
-    "Upper Trophic States",
-    "Ecosystem Services",
-    "Human Dimensions"
-  ),
-  Number_of_Indicators = c(3, 3, 3, 3, 3, 2, 12),
-  Key_Focus = c(
-    "AMO, SST, Sea Level",
-    "Nutrients, Hypoxia, Acidification",
-    "Seagrass, Artificial structures, Wetlands",
-    "NPP, Zooplankton, Menhaden",
-    "Biodiversity, Trophic level, Overfishing",
-    "Commercial species, Birds",
-    "Population, Economy, Fisheries, Social"
-  ),
-  stringsAsFactors = FALSE
-)
-
-cat("\n=== Section Summary ===\n")
-print(section_summary)
-
-# Additional analysis - indicators by EBM-DPSER framework category
-cat("\n=== Indicators by EBM-DPSER Framework ===\n")
-cat("Drivers: 3 (Climate)\n")
-cat("Pressures: 3 (Physical/Chemical)\n")
-cat("States: 9 (Habitat + Lower/Upper Trophic)\n")
-cat("Ecosystem Services/Responses: 14 (Ecosystem Services + Human Dimensions)\n")
+# # Display the dataframe
+# print(gom_esr)
+# 
+# # Summary statistics
+# cat("\n=== Summary ===\n")
+# cat("Total number of indicators:", nrow(gom_esr), "\n")
+# cat("Number of major sections:", length(unique(gom_esr$Section)), "\n")
+# 
+# cat("\nIndicators by section:\n")
+# print(table(gom_esr$Section))
+# 
+# cat("\nIndicators by type:\n")
+# print(table(gom_esr$Indicator_Type))
+# 
+# # Create a summary table of sections
+# section_summary <- data.frame(
+#   Section_Number = c("4", "5", "6", "7", "8", "9", "10"),
+#   Section_Name = c(
+#     "Climate Drivers",
+#     "Physical and Chemical Pressures",
+#     "Habitat State",
+#     "Lower Trophic States",
+#     "Upper Trophic States",
+#     "Ecosystem Services",
+#     "Human Dimensions"
+#   ),
+#   Number_of_Indicators = c(3, 3, 3, 3, 3, 2, 12),
+#   Key_Focus = c(
+#     "AMO, SST, Sea Level",
+#     "Nutrients, Hypoxia, Acidification",
+#     "Seagrass, Artificial structures, Wetlands",
+#     "NPP, Zooplankton, Menhaden",
+#     "Biodiversity, Trophic level, Overfishing",
+#     "Commercial species, Birds",
+#     "Population, Economy, Fisheries, Social"
+#   ),
+#   stringsAsFactors = FALSE
+# )
+# 
+# cat("\n=== Section Summary ===\n")
+# print(section_summary)
+# 
+# # Additional analysis - indicators by EBM-DPSER framework category
+# cat("\n=== Indicators by EBM-DPSER Framework ===\n")
+# cat("Drivers: 3 (Climate)\n")
+# cat("Pressures: 3 (Physical/Chemical)\n")
+# cat("States: 9 (Habitat + Lower/Upper Trophic)\n")
+# cat("Ecosystem Services/Responses: 14 (Ecosystem Services + Human Dimensions)\n")
 
 ```
 
@@ -1315,39 +1316,39 @@ ma_soe_indicators <- data.frame(
   stringsAsFactors = FALSE
 )
 
-# Display the dataframe structure
-str(ma_soe_indicators)
-
-# Display first few rows
-head(ma_soe_indicators, 10)
-
-# Summary by section
-cat("\nIndicators by Section:\n")
-print(table(ma_soe_indicators$Section))
-
-# Summary by region
-cat("\nIndicators by Region:\n")
-print(table(ma_soe_indicators$Region))
-
-# Optional: Filter for specific sections
-cat("\nSeafood Production Indicators:\n")
-print(ma_soe_indicators[ma_soe_indicators$Section == "Seafood Production", 
-                        c("Indicator", "Status_2024")])
-
+# # Display the dataframe structure
+# str(ma_soe_indicators)
+# 
+# # Display first few rows
+# head(ma_soe_indicators, 10)
+# 
+# # Summary by section
+# cat("\nIndicators by Section:\n")
+# print(table(ma_soe_indicators$Section))
+# 
+# # Summary by region
+# cat("\nIndicators by Region:\n")
+# print(table(ma_soe_indicators$Region))
+# 
+# # Optional: Filter for specific sections
+# cat("\nSeafood Production Indicators:\n")
+# print(ma_soe_indicators[ma_soe_indicators$Section == "Seafood Production", 
+#                         c("Indicator", "Status_2024")])
+# 
 # Optional: Save to CSV
 # write.csv(ma_soe_indicators, "ma_soe_indicators.csv", row.names = FALSE)
 
-# Print summary statistics
-cat("\nTotal number of indicators:", nrow(ma_soe_indicators), "\n")
-cat("Number of unique sections:", length(unique(ma_soe_indicators$Section)), "\n")
-cat("Number of unique regions:", length(unique(ma_soe_indicators$Region)), "\n")
-
-# Create a summary table by section and status
-cat("\nStatus Summary by Section:\n")
-status_summary <- table(ma_soe_indicators$Section, 
-                        grepl("Below|Declining|All-time low", ma_soe_indicators$Status_2024))
-colnames(status_summary) <- c("Not Declining", "Declining/Below")
-print(status_summary)
+# # Print summary statistics
+# cat("\nTotal number of indicators:", nrow(ma_soe_indicators), "\n")
+# cat("Number of unique sections:", length(unique(ma_soe_indicators$Section)), "\n")
+# cat("Number of unique regions:", length(unique(ma_soe_indicators$Region)), "\n")
+# 
+# # Create a summary table by section and status
+# cat("\nStatus Summary by Section:\n")
+# status_summary <- table(ma_soe_indicators$Section, 
+#                         grepl("Below|Declining|All-time low", ma_soe_indicators$Status_2024))
+# colnames(status_summary) <- c("Not Declining", "Declining/Below")
+# print(status_summary)
 ```
 
 # Caribbean ESR
@@ -1532,34 +1533,34 @@ caribbean_esr <- data.frame(
   stringsAsFactors = FALSE
 )
 
-# Display the dataframe
-print(caribbean_esr)
-
-# Summary statistics
-cat("\n=== Summary ===\n")
-cat("Total number of indicators:", nrow(caribbean_esr), "\n")
-cat("Number of sections:", length(unique(caribbean_esr$Section)), "\n")
-cat("\nIndicators by section:\n")
-print(table(caribbean_esr$Section))
+# # Display the dataframe
+# print(caribbean_esr)
+# 
+# # Summary statistics
+# cat("\n=== Summary ===\n")
+# cat("Total number of indicators:", nrow(caribbean_esr), "\n")
+# cat("Number of sections:", length(unique(caribbean_esr$Section)), "\n")
+# cat("\nIndicators by section:\n")
+# print(table(caribbean_esr$Section))
 
 # Optional: Create a more detailed version with coral reef sub-themes
-coral_reef_themes <- data.frame(
-  Region = c(
-    rep("Puerto Rico", 5),
-    rep("US Virgin Islands", 5)
-  ),
-  Theme = rep(c("Overall Ecosystem", "Benthic (Corals & algae)", "Fish", "Climate", "Human Connections"), 2),
-  Score = c(70, 73, 63, 75, 71,  # Puerto Rico
-            71, 75, 64, 79, 68), # US Virgin Islands
-  Rating = c(
-    "Fair", "Fair", "Impaired", "Fair", "Fair",
-    "Fair", "Fair", "Impaired", "Fair", "Impaired"
-  ),
-  stringsAsFactors = FALSE
-)
+# coral_reef_themes <- data.frame(
+#   Region = c(
+#     rep("Puerto Rico", 5),
+#     rep("US Virgin Islands", 5)
+#   ),
+#   Theme = rep(c("Overall Ecosystem", "Benthic (Corals & algae)", "Fish", "Climate", "Human Connections"), 2),
+#   Score = c(70, 73, 63, 75, 71,  # Puerto Rico
+#             71, 75, 64, 79, 68), # US Virgin Islands
+#   Rating = c(
+#     "Fair", "Fair", "Impaired", "Fair", "Fair",
+#     "Fair", "Fair", "Impaired", "Fair", "Impaired"
+#   ),
+#   stringsAsFactors = FALSE
+# )
 
-cat("\n=== Coral Reef Theme Scores ===\n")
-print(coral_reef_themes)
+# cat("\n=== Coral Reef Theme Scores ===\n")
+# print(coral_reef_themes)
 ```
 
 
@@ -1923,42 +1924,42 @@ calcurrent_esr <- data.frame(
   stringsAsFactors = FALSE
 )
 
-# Display the dataframe
-print(calcurrent_esr)
-
-# Summary statistics
-cat("\n=== Summary ===\n")
-cat("Total number of indicators:", nrow(calcurrent_esr), "\n")
-cat("Number of major sections:", length(unique(calcurrent_esr$Section)), "\n")
-
-cat("\nIndicators by section:\n")
-print(table(calcurrent_esr$Section))
-
-cat("\nIndicators by type:\n")
-print(table(calcurrent_esr$Indicator_Type))
-
-# Create a summary table of sections
-section_summary <- data.frame(
-  Section_Number = c("2", "3.1", "3.2", "3.3", "3.4", "3.5", "3.6", "3.7", "3.8", "4", "5"),
-  Section_Name = c(
-    "Climate and Ocean Drivers",
-    "Copepods and Krill", 
-    "CPS and Regional Forage",
-    "Salmon Indicators",
-    "Groundfish",
-    "Highly Migratory Species",
-    "Seabird Indicators",
-    "Marine Mammals",
-    "Harmful Algal Blooms",
-    "Human Wellbeing",
-    "Fishing Activities"
-  ),
-  Number_of_Indicators = c(11, 2, 3, 3, 2, 2, 3, 2, 1, 3, 2),
-  stringsAsFactors = FALSE
-)
-
-cat("\n=== Section Summary ===\n")
-print(section_summary)
+# # Display the dataframe
+# print(calcurrent_esr)
+# 
+# # Summary statistics
+# cat("\n=== Summary ===\n")
+# cat("Total number of indicators:", nrow(calcurrent_esr), "\n")
+# cat("Number of major sections:", length(unique(calcurrent_esr$Section)), "\n")
+# 
+# cat("\nIndicators by section:\n")
+# print(table(calcurrent_esr$Section))
+# 
+# cat("\nIndicators by type:\n")
+# print(table(calcurrent_esr$Indicator_Type))
+# 
+# # Create a summary table of sections
+# section_summary <- data.frame(
+#   Section_Number = c("2", "3.1", "3.2", "3.3", "3.4", "3.5", "3.6", "3.7", "3.8", "4", "5"),
+#   Section_Name = c(
+#     "Climate and Ocean Drivers",
+#     "Copepods and Krill", 
+#     "CPS and Regional Forage",
+#     "Salmon Indicators",
+#     "Groundfish",
+#     "Highly Migratory Species",
+#     "Seabird Indicators",
+#     "Marine Mammals",
+#     "Harmful Algal Blooms",
+#     "Human Wellbeing",
+#     "Fishing Activities"
+#   ),
+#   Number_of_Indicators = c(11, 2, 3, 3, 2, 2, 3, 2, 1, 3, 2),
+#   stringsAsFactors = FALSE
+# )
+# 
+# cat("\n=== Section Summary ===\n")
+# print(section_summary)
 ```
 
 
@@ -2370,20 +2371,20 @@ ne_soe_indicators <- data.frame(
   stringsAsFactors = FALSE
 )
 
-# Display the dataframe structure
-str(ne_soe_indicators)
-
-# Display first few rows
-head(ne_soe_indicators, 10)
-
-# Summary by section
-table(ne_soe_indicators$Section)
-
-# Optional: Save to CSV
-# write.csv(ne_soe_indicators, "ne_soe_indicators.csv", row.names = FALSE)
-
-# Print total number of indicators
-cat("\nTotal number of indicators:", nrow(ne_soe_indicators), "\n")
+# # Display the dataframe structure
+# str(ne_soe_indicators)
+# 
+# # Display first few rows
+# head(ne_soe_indicators, 10)
+# 
+# # Summary by section
+# table(ne_soe_indicators$Section)
+# 
+# # Optional: Save to CSV
+# # write.csv(ne_soe_indicators, "ne_soe_indicators.csv", row.names = FALSE)
+# 
+# # Print total number of indicators
+# cat("\nTotal number of indicators:", nrow(ne_soe_indicators), "\n")
 ```
 
 # Aleutian Islands ESR
@@ -2533,7 +2534,8 @@ Fish condition deteriorated across most species despite cooler temperatures, par
 aleutian_esr <- data.frame(
   section_number = c(1:24),
   
-  section_heading = c(
+  #section_heading = c(
+  Section = c(
     "Climate Overview",
     "State of the North Pacific Ocean",
     "Seasonal Projections of SST",
@@ -2560,7 +2562,8 @@ aleutian_esr <- data.frame(
     "Fish Stock Sustainability Index (FSSI)"
   ),
   
-  primary_indicators = c(
+  #primary_indicators = c(
+  Indicator = c(
     "North Pacific Index; Aleutian Low Index; SST; SLP; wind patterns",
     "NINO3.4; PDO; NPGO; Arctic Oscillation",
     "NMME forecast models (1-5 month projections)",
@@ -2699,22 +2702,22 @@ aleutian_esr <- data.frame(
 )
 
 # Display the dataframe
-print(aleutian_esr)
-
-# Create a summary by trophic level
-trophic_summary <- aggregate(
-  section_heading ~ trophic_level, 
-  data = aleutian_esr, 
-  FUN = length
-)
-colnames(trophic_summary) <- c("Trophic_Level", "Number_of_Indicators")
-
-print("\nSummary by Trophic Level:")
-print(trophic_summary)
-
-# Count report card indicators
-report_card_count <- sum(grepl("Yes", aleutian_esr$report_card_indicator))
-print(paste("\nNumber of Report Card Indicators:", report_card_count))
+# print(aleutian_esr)
+# 
+# # Create a summary by trophic level
+# trophic_summary <- aggregate(
+#   section_heading ~ trophic_level, 
+#   data = aleutian_esr, 
+#   FUN = length
+# )
+# colnames(trophic_summary) <- c("Trophic_Level", "Number_of_Indicators")
+# 
+# print("\nSummary by Trophic Level:")
+# print(trophic_summary)
+# 
+# # Count report card indicators
+# report_card_count <- sum(grepl("Yes", aleutian_esr$report_card_indicator))
+# print(paste("\nNumber of Report Card Indicators:", report_card_count))
 
 # Export to CSV (optional)
 # write.csv(aleutian_esr, "aleutian_islands_esr_indicators.csv", row.names = FALSE)
@@ -2915,5 +2918,43 @@ Each indicator provides specific information about ecosystem components, process
 
 
 # Hawaii ESR
+
+
+# Indicator Comparison
+
+Sarah wrote this after modifying code above to have all objects with the same column names
+
+```{r compareall}
+
+# function to get the Section and Indicator info from each dataset
+
+esrdat <- objects()
+
+getinds <- function(esrobject){
+  
+  objname <- gsub('[(\")(\\)]', '', deparse(esrobject))
+  region <- sub("_.*", "", objname)  # assumes region is before first _
+  
+  dat <- eval(parse(text = esrobject))
+   
+  sectind <- dat |>
+    dplyr::mutate(Region = region) |>
+    dplyr::select(Region, Section, Indicator)
+  
+  return(sectind)
+    
+}
+
+# apply function to all objects in memory
+
+
+
+compesrdat <- purrr::map_dfr(esrdat, getinds)
+
+readr::write_csv(compesrdat, here::here("compesrdat.csv"))
+
+```
+
+
 
 
