@@ -129,74 +129,236 @@ Management Implications: Rapid population growth and coastal development increas
 
 ```{r SAESRdat}
 
-ClimateDrivers <- c(
-"Atlantic Multidecadal Oscillation (AMO)",
-"North Atlantic Oscillation (NAO)",
-"El Niño Southern Oscillation (ENSO)",
-"North Atlantic Sea Surface Temperature Tripole",
-"Atlantic Warm Pool (AWP)"
+# Create a comprehensive dataframe of sections and indicators from the South Atlantic ESR
+
+library(tidyverse)
+
+# Create the dataframe
+sa_esr_indicators <- tibble(
+  Section = c(
+    # Climate Drivers
+    rep("Climate Drivers", 5),
+    
+    # Physical and Chemical Pressures
+    rep("Physical and Chemical Pressures", 13),
+    
+    # Habitat States
+    rep("Habitat States", 5),
+    
+    # Lower Trophic Level States
+    rep("Lower Trophic Level States", 4),
+    
+    # Upper Trophic Level States
+    rep("Upper Trophic Level States", 6),
+    
+    # Ecosystem Services
+    rep("Ecosystem Services", 9),
+    
+    # Human Dimensions
+    rep("Human Dimensions", 4)
+  ),
+  
+  Subsection = c(
+    # Climate Drivers
+    "Atlantic Multidecadal Oscillation (AMO)",
+    "North Atlantic Oscillation (NAO)",
+    "El Niño Southern Oscillation (ENSO)",
+    "North Atlantic Sea Surface Temperature Tripole",
+    "Atlantic Warm Pool (AWP)",
+    
+    # Physical and Chemical Pressures
+    "Sea surface temperature",
+    "Bottom temperature",
+    "Decadal temperature",
+    "Florida Current transport",
+    "Gulf Stream position",
+    "Upwelling",
+    "Coastal salinity",
+    "Stream flow",
+    "Nutrient loading",
+    "Precipitation and drought",
+    "Sea level rise",
+    "Storms and hurricanes",
+    "Ocean acidification",
+    
+    # Habitat States
+    "Wetlands and forests",
+    "Submerged aquatic vegetation (SAV)",
+    "Oyster reefs",
+    "Coral demographics",
+    "Coral bleaching",
+    
+    # Lower Trophic Level States
+    "Primary productivity",
+    "Zooplankton",
+    "Ichthyoplankton diversity and abundance",
+    "Forage fish abundance",
+    
+    # Upper Trophic Level States
+    "Nearshore demersal fish diversity and abundance",
+    "Offshore hard bottom fish diversity and abundance",
+    "Coastal shark diversity and abundance",
+    "Coral reef fish diversity and abundance",
+    "Mean trophic level",
+    "Life history parameters",
+    
+    # Ecosystem Services
+    "Biomass of economically important species",
+    "Recruitment of economically important species",
+    "Commercial landings and revenue",
+    "Recreational landings and effort",
+    "Estuarine shrimp, crab, and oyster landings",
+    "Status of federally managed stocks",
+    "Marine bird abundance",
+    "Marine mammal strandings",
+    "Sea turtle nest counts",
+    
+    # Human Dimensions
+    "Human population",
+    "Coastal and urban land use",
+    "Total ocean economy",
+    "Social connectedness"
+  ),
+  
+  Figure_Number = c(
+    # Climate Drivers
+    "Fig. 3.1b", "Fig. 3.2b", "Fig. 3.3b", "Fig. 3.4b", "Fig. 3.5b",
+    
+    # Physical and Chemical Pressures
+    "Fig. 4.1", "Fig. 4.2", "Fig. 4.3", "Fig. 4.4", "Fig. 4.5b",
+    "Fig. 4.6", "Fig. 4.7b", "Fig. 4.8", "Fig. 4.9", "Fig. 4.10a-b",
+    "Fig. 4.11", "Fig. 4.12a-b", "Fig. 4.13",
+    
+    # Habitat States
+    "Fig. 5.1", "Table 5.2", "Table 5.3", "Fig. 5.4", "Fig. 5.5a-b",
+    
+    # Lower Trophic Level States
+    "Fig. 6.1a-b", "Fig. 6.2b", "Fig. 6.3", "Fig. 6.4",
+    
+    # Upper Trophic Level States
+    "Fig. 7.1", "Fig. 7.2", "Fig. 7.3", "Fig. 7.4", "Fig. 7.5a-b", "Fig. 7.6",
+    
+    # Ecosystem Services
+    "Fig. 8.1", "Fig. 8.2", "Fig. 8.3a-c", "Fig. 8.4a-d", "Fig. 8.5",
+    "Fig. 8.6", "Fig. 8.7", "Fig. 8.8", "Fig. 8.9",
+    
+    # Human Dimensions
+    "Fig. 9.1a-c", "Fig. 9.2a-b", "Fig. 9.3", "Fig. 9.4"
+  ),
+  
+  Total_Indicators = c(
+    # Climate Drivers (5 total)
+    1, 1, 1, 1, 1,
+    
+    # Physical and Chemical Pressures (13 total)
+    1, 1, 2, 1, 1, 1, 4, 4, 2, 2, 1, 2, 2,
+    
+    # Habitat States (5 total)
+    2, 8, 1, 3, 4,
+    
+    # Lower Trophic Level States (4 total)
+    2, 1, 4, 2,
+    
+    # Upper Trophic Level States (6 total)
+    2, 6, 2, 6, 6, 4,
+    
+    # Ecosystem Services (9 total)
+    12, 11, 3, 4, 3, 4, 8, 2, 4,
+    
+    # Human Dimensions (4 total)
+    3, 2, 2, 1
+  )
 )
 
-PhysChemPressures <- c(
-"Sea surface temperature",
-"Bottom temperature",
-"Decadal temperature",
-"Florida Current transport",
-"Gulf Stream position",
-"Upwelling",
-"Coastal salinity",
-"Stream flow",
-"Nutrient loading",
-"Precipitation and drought",
-"Sea level rise",
-"Storms and hurricanes",
-"Ocean acidification"
-)
+# Display the dataframe
+print(sa_esr_indicators)
 
-Habitat <- c(
-"Wetlands and forests",
-"Submerged aquatic vegetation (SAV)",
-"Oyster reefs",
-"Coral demographics",
-"Coral bleaching"
-)
+# Summary statistics
+cat("\n=== Summary Statistics ===\n")
+sa_esr_indicators %>%
+  group_by(Section) %>%
+  summarise(
+    Number_of_Subsections = n(),
+    Total_Indicators = sum(Total_Indicators)
+  ) %>%
+  print()
 
-LowerTrophic <- c(
-"Primary productivity (chlorophyll-a)",
-"Zooplankton biovolume",
-"Ichthyoplankton diversity and abundance",
-"Forage fish abundance (Atlantic Menhaden)"
-)
+# Overall totals
+cat("\n=== Overall Totals ===\n")
+cat("Total Sections:", length(unique(sa_esr_indicators$Section)), "\n")
+cat("Total Subsections:", nrow(sa_esr_indicators), "\n")
+cat("Total Indicators:", sum(sa_esr_indicators$Total_Indicators), "\n")
 
-UpperTrophic <- c(
-"Nearshore demersal fish diversity and abundance",
-"Offshore hard bottom fish diversity and abundance",
-"Coastal shark diversity and abundance",
-"Coral reef fish diversity and abundance",
-"Mean trophic level",
-"Life history parameters (age/length at maturity, maximum size/age)"
-)
-
-EcoServices <- c(
-"Biomass of economically important species (12 assessed stocks)",
-"Recruitment of economically important species",
-"Commercial landings and revenue",
-"Recreational landings and effort",
-"Estuarine shrimp, crab, and oyster landings",
-"Status of federally managed stocks (overfishing/overfished)",
-"Marine bird abundance (8 species)",
-"Marine mammal strandings",
-"Sea turtle nest counts"
-)
-
-HumanD <- c("Human population",
-"Coastal and urban land use",
-"Total ocean economy (employment, GDP)",
-"Social connectedness",
-"Commercial and recreational fishing engagement and reliance"
-)
-
-#SA_ESRdat <- data.frame()
+# 
+# 
+# ClimateDrivers <- c(
+# "Atlantic Multidecadal Oscillation (AMO)",
+# "North Atlantic Oscillation (NAO)",
+# "El Niño Southern Oscillation (ENSO)",
+# "North Atlantic Sea Surface Temperature Tripole",
+# "Atlantic Warm Pool (AWP)"
+# )
+# 
+# PhysChemPressures <- c(
+# "Sea surface temperature",
+# "Bottom temperature",
+# "Decadal temperature",
+# "Florida Current transport",
+# "Gulf Stream position",
+# "Upwelling",
+# "Coastal salinity",
+# "Stream flow",
+# "Nutrient loading",
+# "Precipitation and drought",
+# "Sea level rise",
+# "Storms and hurricanes",
+# "Ocean acidification"
+# )
+# 
+# Habitat <- c(
+# "Wetlands and forests",
+# "Submerged aquatic vegetation (SAV)",
+# "Oyster reefs",
+# "Coral demographics",
+# "Coral bleaching"
+# )
+# 
+# LowerTrophic <- c(
+# "Primary productivity (chlorophyll-a)",
+# "Zooplankton biovolume",
+# "Ichthyoplankton diversity and abundance",
+# "Forage fish abundance (Atlantic Menhaden)"
+# )
+# 
+# UpperTrophic <- c(
+# "Nearshore demersal fish diversity and abundance",
+# "Offshore hard bottom fish diversity and abundance",
+# "Coastal shark diversity and abundance",
+# "Coral reef fish diversity and abundance",
+# "Mean trophic level",
+# "Life history parameters (age/length at maturity, maximum size/age)"
+# )
+# 
+# EcoServices <- c(
+# "Biomass of economically important species (12 assessed stocks)",
+# "Recruitment of economically important species",
+# "Commercial landings and revenue",
+# "Recreational landings and effort",
+# "Estuarine shrimp, crab, and oyster landings",
+# "Status of federally managed stocks (overfishing/overfished)",
+# "Marine bird abundance (8 species)",
+# "Marine mammal strandings",
+# "Sea turtle nest counts"
+# )
+# 
+# HumanD <- c("Human population",
+# "Coastal and urban land use",
+# "Total ocean economy (employment, GDP)",
+# "Social connectedness",
+# "Commercial and recreational fishing engagement and reliance"
+# )
+# 
+# #SA_ESRdat <- data.frame()
 
 ```
 
@@ -296,6 +458,226 @@ Indicator categorization (drivers, states, responses)
 Management Implications: The mid-1990s ecosystem reorganization driven by AMO phase shift affected nearly all ecosystem components simultaneously, demonstrating that climate drivers can cause regime shifts requiring adaptive management approaches. Recent period (2011-2016) shows accelerating rates of change for key physical drivers (SST, sea level rise) while biological states remain relatively stable, suggesting potential lags in biological responses that could manifest as future productivity changes. Different trends between western/eastern Gulf (accelerating warming) and central Gulf (slower warming) may require region-specific management approaches. Recent increases in both commercial and recreational fishery indicators suggest recovery, but must be interpreted cautiously given uncertainties in most recent stock assessment years. Stabilization of many indicators in recent period (diversity indices, MTL, bird abundances) may reflect either true ecosystem stabilization following the mid-1990s reorganization or methodological standardization. The composite analysis reveals that single-indicator approaches miss critical ecosystem context—multiple indicators changing in concert suggest fundamental ecosystem shifts requiring management responses beyond single-species quota adjustments. Gulf-wide indicators may mask important regional variation, requiring finer-scale analyses for management decisions. The framework demonstrates value of integrated ecosystem assessments for identifying climate-driven regime shifts, evaluating cumulative impacts of multiple stressors, and detecting early warning signals of ecosystem change that should trigger adaptive management responses.
 
 ```{r GulfESRdat}
+# Gulf of Mexico Ecosystem Status Report 2017
+# Section Headings and Indicators Dataframe
+
+# Create comprehensive dataframe with sections and indicators
+gom_esr <- data.frame(
+  Section = c(
+    # Climate Drivers
+    rep("Climate Drivers", 3),
+    
+    # Physical and Chemical Pressures
+    rep("Physical and Chemical Pressures", 3),
+    
+    # Habitat State
+    rep("Habitat State", 3),
+    
+    # Lower Trophic States
+    rep("Lower Trophic States", 3),
+    
+    # Upper Trophic States
+    rep("Upper Trophic States", 3),
+    
+    # Ecosystem Services
+    rep("Ecosystem Services", 2),
+    
+    # Human Dimensions
+    rep("Human Dimensions", 12)
+  ),
+  
+  Indicator = c(
+    # Climate Drivers
+    "Atlantic Multidecadal Oscillation (AMO)",
+    "Sea Surface Temperature (SST)",
+    "Sea Level Rise",
+    
+    # Physical and Chemical Pressures
+    "Eutrophication (Nutrient Loading)",
+    "Hypoxia (Bottom Dissolved Oxygen)",
+    "Ocean Acidification (pH)",
+    
+    # Habitat State
+    "Areal Extent of Estuarine Habitats (Seagrass)",
+    "Artificial Structures (Reefs and Platforms)",
+    "Wetland Land Use and Land Cover",
+    
+    # Lower Trophic States
+    "Net Primary Productivity (NPP)",
+    "Zooplankton Biomass",
+    "Forage Fish Abundance (Menhaden)",
+    
+    # Upper Trophic States
+    "Upper Trophic Level Biodiversity (Species Richness)",
+    "Mean Trophic Level",
+    "Overfishing Status",
+    
+    # Ecosystem Services
+    "Abundance of Economically Important Species",
+    "Bird Abundance (5 waterbird species)",
+    
+    # Human Dimensions
+    "Human Population",
+    "Population Density",
+    "Coastal Urban Land Use",
+    "Total Ocean Economy (Employment)",
+    "Total Ocean Economy (GDP)",
+    "Commercial Landings",
+    "Commercial Revenues",
+    "Social Connectedness",
+    "Commercial Fishing Engagement",
+    "Commercial Fishing Reliance",
+    "Recreational Fishing Engagement",
+    "Recreational Fishing Effort"
+  ),
+  
+  Indicator_Type = c(
+    # Climate Drivers
+    "Climate Index", "Temperature", "Sea Level",
+    
+    # Physical and Chemical Pressures
+    "Nutrient", "Biogeochemistry", "Biogeochemistry",
+    
+    # Habitat State
+    "Habitat Extent", "Artificial Habitat", "Habitat/Land Cover",
+    
+    # Lower Trophic States
+    "Primary Production", "Zooplankton", "Forage Fish",
+    
+    # Upper Trophic States
+    "Biodiversity", "Community Structure", "Fishery Management",
+    
+    # Ecosystem Services
+    "Stock Assessment", "Wildlife",
+    
+    # Human Dimensions
+    "Demographics", "Demographics", "Land Use",
+    "Economic", "Economic", "Fisheries", "Fisheries",
+    "Social Capital", "Fisheries", "Fisheries", "Fisheries", "Fisheries"
+  ),
+  
+  Spatial_Scale = c(
+    # Climate Drivers
+    "Basin-wide", "Regional (3 subregions)", "State-level (4 states)",
+    
+    # Physical and Chemical Pressures
+    "5 major rivers", "Louisiana/Texas shelf", "Northern GoM",
+    
+    # Habitat State
+    "6 estuarine bays", "Gulf-wide", "Coastal watershed counties",
+    
+    # Lower Trophic States
+    "Northern GoM (>25°N)", "Spring/Fall surveys", "Gulf-wide",
+    
+    # Upper Trophic States
+    "Louisiana/Texas waters", "Gulf-wide", "Federal waters",
+    
+    # Ecosystem Services
+    "11 assessed species", "Coastal GoM",
+    
+    # Human Dimensions
+    "148 coastal counties", "148 coastal counties", "Coastal counties",
+    "72 shoreline counties", "72 shoreline counties",
+    "Gulf-wide", "Gulf-wide", "County-level",
+    "County-level", "County-level", "County-level", "Gulf-wide"
+  ),
+  
+  Recent_Status = c(
+    # Climate Drivers
+    "Positive phase, slight decline 2011-2016",
+    "Increasing faster (west/east), slower (central)",
+    "Increasing faster in recent period",
+    
+    # Physical and Chemical Pressures
+    "Generally decreasing except Mobile River",
+    "Decreasing TX, increasing LA (summer/fall)",
+    "Decreasing (increasing acidification)",
+    
+    # Habitat State
+    "Declining (except Florida Bay, Tampa Bay)",
+    "Artificial reefs increasing, oil platforms declining",
+    "~1000 sq mi lost (1996-2010)",
+    
+    # Lower Trophic States
+    "Increased slightly in recent years",
+    "Fall: below average; Spring: no trend",
+    "Increasing (2+ million metric tons)",
+    
+    # Upper Trophic States
+    "Slight declining trends",
+    "Stable in recent years",
+    "Overfishing at all-time low (<5%)",
+    
+    # Ecosystem Services
+    "Nearly all at or above mean biomass",
+    "Generally increasing, above average",
+    
+    # Human Dimensions
+    "24.4 million (2010), 80% counties gained",
+    "200 people/sq mi, increasing",
+    "Increased >15% (1996-2010)",
+    "~600,000 jobs, relatively stable",
+    "~$100B, increased 60% since 2000",
+    "Rebounded since 2010",
+    "Rebounded since 2010",
+    "Slight decline over time (38.2% in 2012)",
+    "Most counties decreased or slight increase",
+    "Most counties decreased or slight increase",
+    "Most counties decreased or slight increase",
+    "Angler trips: above average; Angler days: increasing"
+  ),
+  
+  stringsAsFactors = FALSE
+)
+
+# Display the dataframe
+print(gom_esr)
+
+# Summary statistics
+cat("\n=== Summary ===\n")
+cat("Total number of indicators:", nrow(gom_esr), "\n")
+cat("Number of major sections:", length(unique(gom_esr$Section)), "\n")
+
+cat("\nIndicators by section:\n")
+print(table(gom_esr$Section))
+
+cat("\nIndicators by type:\n")
+print(table(gom_esr$Indicator_Type))
+
+# Create a summary table of sections
+section_summary <- data.frame(
+  Section_Number = c("4", "5", "6", "7", "8", "9", "10"),
+  Section_Name = c(
+    "Climate Drivers",
+    "Physical and Chemical Pressures",
+    "Habitat State",
+    "Lower Trophic States",
+    "Upper Trophic States",
+    "Ecosystem Services",
+    "Human Dimensions"
+  ),
+  Number_of_Indicators = c(3, 3, 3, 3, 3, 2, 12),
+  Key_Focus = c(
+    "AMO, SST, Sea Level",
+    "Nutrients, Hypoxia, Acidification",
+    "Seagrass, Artificial structures, Wetlands",
+    "NPP, Zooplankton, Menhaden",
+    "Biodiversity, Trophic level, Overfishing",
+    "Commercial species, Birds",
+    "Population, Economy, Fisheries, Social"
+  ),
+  stringsAsFactors = FALSE
+)
+
+cat("\n=== Section Summary ===\n")
+print(section_summary)
+
+# Additional analysis - indicators by EBM-DPSER framework category
+cat("\n=== Indicators by EBM-DPSER Framework ===\n")
+cat("Drivers: 3 (Climate)\n")
+cat("Pressures: 3 (Physical/Chemical)\n")
+cat("States: 9 (Habitat + Lower/Upper Trophic)\n")
+cat("Ecosystem Services/Responses: 14 (Ecosystem Services + Human Dimensions)\n")
 
 ```
 
