@@ -73,6 +73,107 @@ caribbean,Coral Reef Ecosystems,Coral Reefs - US Virgin Islands
 caribbean,Fisheries,US Caribbean Overfished Stocks
 caribbean,Socioeconomic,US Caribbean Total Coastal Employment
 caribbean,Socioeconomic,US Caribbean Billion Dollar Disasters
+Eastern Bering Sea,Physical Environment,North Pacific Index (NPI)
+Eastern Bering Sea,Physical Environment,Aleutian Low Pressure System Strength
+Eastern Bering Sea,Physical Environment,Aleutian Low Pressure System Location
+Eastern Bering Sea,Physical Environment,Sea Ice Extent
+Eastern Bering Sea,Physical Environment,Sea Ice Thickness
+Eastern Bering Sea,Physical Environment,Sea Surface Temperature (SST)
+Eastern Bering Sea,Physical Environment,Bottom Temperature
+Eastern Bering Sea,Physical Environment,Cold Pool Extent (<2°C)
+Eastern Bering Sea,Physical Environment,Cold Pool Extent (<0°C)
+Eastern Bering Sea,Physical Environment,Surface Wind Speed and Direction
+Eastern Bering Sea,Physical Environment,Along-shelf Wind Component
+Eastern Bering Sea,Physical Environment,Cross-shelf Wind Component
+Eastern Bering Sea,Habitat,Sponge Biomass
+Eastern Bering Sea,Habitat,Sea Anemone Biomass
+Eastern Bering Sea,Habitat,Sea Pen Biomass
+Eastern Bering Sea,Primary Production,St. Paul Island Chlorophyll-a
+Eastern Bering Sea,Primary Production,Mooring M2 Chlorophyll-a
+Eastern Bering Sea,Primary Production,Proportion of Open Water Blooms
+Eastern Bering Sea,Primary Production,Spring Bloom Timing
+Eastern Bering Sea,Zooplankton,Large Copepod Abundance (Calanus spp.)
+Eastern Bering Sea,Zooplankton,Small Copepod Abundance
+Eastern Bering Sea,Zooplankton,Large Copepod Lipid Content
+Eastern Bering Sea,Zooplankton,Euphausiid Biomass
+Eastern Bering Sea,Zooplankton,Euphausiid Lipid Content
+Eastern Bering Sea,Zooplankton,Continuous Plankton Recorder Indices
+Eastern Bering Sea,Jellyfish,Jellyfish Surface Trawl CPUE
+Eastern Bering Sea,Jellyfish,Jellyfish Bottom Trawl Biomass
+Eastern Bering Sea,Ichthyoplankton,Walleye Pollock Larval Abundance
+Eastern Bering Sea,Ichthyoplankton,Pacific Cod Larval Abundance
+Eastern Bering Sea,Ichthyoplankton,Northern Rock Sole Larval Abundance
+Eastern Bering Sea,Ichthyoplankton,Southern Rock Sole Larval Abundance
+Eastern Bering Sea,Ichthyoplankton,Rockfish Larval Abundance
+Eastern Bering Sea,Ichthyoplankton,Walleye Pollock Larval Condition
+Eastern Bering Sea,Forage Fish,Age-0 Pollock Surface Trawl CPUE
+Eastern Bering Sea,Forage Fish,Age-0 Pollock Vertical Distribution
+Eastern Bering Sea,Forage Fish,Age-0 Pollock Weight
+Eastern Bering Sea,Forage Fish,Age-0 Pollock Energy Density
+Eastern Bering Sea,Forage Fish,Age-0 Pollock Lipid Content
+Eastern Bering Sea,Forage Fish,Pacific Herring Surface Trawl CPUE
+Eastern Bering Sea,Forage Fish,Togiak Herring Biomass
+Eastern Bering Sea,Forage Fish,Capelin Surface Trawl CPUE
+Eastern Bering Sea,Forage Fish,Pelagic Forage Fish Biomass
+Eastern Bering Sea,Forage Fish,Forage Fish DSEM Linkages
+Eastern Bering Sea,Salmon,Juvenile Sockeye Salmon Abundance
+Eastern Bering Sea,Salmon,Juvenile Chinook Salmon Abundance (NBS)
+Eastern Bering Sea,Salmon,Juvenile Chum Salmon Abundance (NBS)
+Eastern Bering Sea,Salmon,Juvenile Salmon Energy Density (SEBS)
+Eastern Bering Sea,Salmon,Juvenile Salmon Energy Density (NBS)
+Eastern Bering Sea,Salmon,Bristol Bay Sockeye Salmon Run Size
+Eastern Bering Sea,Salmon,Commercial Salmon Catch (Bering Sea)
+Eastern Bering Sea,Groundfish,Walleye Pollock Condition (length-weight)
+Eastern Bering Sea,Groundfish,Pacific Cod Condition (length-weight)
+Eastern Bering Sea,Groundfish,Arrowtooth Flounder Condition
+Eastern Bering Sea,Groundfish,Yellowfin Sole Condition
+Eastern Bering Sea,Groundfish,Flathead Sole Condition
+Eastern Bering Sea,Groundfish,Northern Rock Sole Condition
+Eastern Bering Sea,Groundfish,Alaska Plaice Condition
+Eastern Bering Sea,Groundfish,Walleye Pollock Diet Composition
+Eastern Bering Sea,Groundfish,Pacific Cod Diet Composition
+Eastern Bering Sea,Groundfish,Pacific Cod Snow Crab Consumption
+Eastern Bering Sea,Groundfish,Groundfish Thermal Experience
+Eastern Bering Sea,Groundfish,Groundfish Diet Energy Density
+Eastern Bering Sea,Groundfish,Groundfish Consumption Rate
+Eastern Bering Sea,Groundfish,Groundfish Scope for Growth
+Eastern Bering Sea,Groundfish,Age-1 Natural Mortality (CEATTLE)
+Eastern Bering Sea,Groundfish,Predation Mortality
+Eastern Bering Sea,Recruitment Predictions,Temperature Change Index
+Eastern Bering Sea,Recruitment Predictions,Surface Silicic Acid
+Eastern Bering Sea,Benthic Communities,Eelpout Biomass
+Eastern Bering Sea,Benthic Communities,Poacher Biomass
+Eastern Bering Sea,Benthic Communities,Sea Star Biomass
+Eastern Bering Sea,Benthic Communities,Bristol Bay Red King Crab Biomass
+Eastern Bering Sea,Benthic Communities,Pribilof Island Blue King Crab Biomass
+Eastern Bering Sea,Benthic Communities,St. Matthew Blue King Crab Biomass
+Eastern Bering Sea,Benthic Communities,Snow Crab Biomass
+Eastern Bering Sea,Benthic Communities,Tanner Crab Biomass
+Eastern Bering Sea,Seabirds,Common Murre Reproductive Success
+Eastern Bering Sea,Seabirds,Thick-billed Murre Reproductive Success
+Eastern Bering Sea,Seabirds,Black-legged Kittiwake Reproductive Success
+Eastern Bering Sea,Seabirds,Red-legged Kittiwake Reproductive Success
+Eastern Bering Sea,Seabirds,Least Auklet Reproductive Success
+Eastern Bering Sea,Seabirds,Red-faced Cormorant Reproductive Success
+Eastern Bering Sea,Seabirds,Multivariate Seabird Breeding Index
+Eastern Bering Sea,Seabirds,Beached Bird Abundance
+Eastern Bering Sea,Marine Mammals,Marine Mammal Stranding Events
+Eastern Bering Sea,Ecosystem Indicators,Mean Lifespan of Fish Community
+Eastern Bering Sea,Ecosystem Indicators,Mean Length of Fish Community
+Eastern Bering Sea,Ecosystem Indicators,Stability of Fish Biomass
+Eastern Bering Sea,Ecosystem Indicators,Borealization Index
+Eastern Bering Sea,Foraging Guilds,Motile Epifauna Biomass
+Eastern Bering Sea,Foraging Guilds,Benthic Forager Biomass
+Eastern Bering Sea,Foraging Guilds,Pelagic Forager Biomass
+Eastern Bering Sea,Foraging Guilds,Apex Predator Biomass
+Eastern Bering Sea,Emerging Stressors,Bottom Water pH
+Eastern Bering Sea,Emerging Stressors,Aragonite Saturation State
+Eastern Bering Sea,Emerging Stressors,Alexandrium Cell Concentration
+Eastern Bering Sea,Emerging Stressors,Paralytic Shellfish Toxin (Saxitoxin)
+Eastern Bering Sea,Emerging Stressors,Domoic Acid Concentration
+Eastern Bering Sea,Discards & Bycatch,Non-target Invertebrate Catch
+Eastern Bering Sea,Discards & Bycatch,Seabird Bycatch Estimates
+Eastern Bering Sea,Sustainability,Fish Stock Sustainability Index (FSSI)
 goa,Physical Environment - Climate,State of the North Pacific Ocean
 goa,Physical Environment - Climate,Wintertime Aleutian Low Index
 goa,Physical Environment - Climate,Seasonal Projections (NMME)

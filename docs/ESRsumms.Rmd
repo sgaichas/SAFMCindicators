@@ -3433,8 +3433,372 @@ Monitoring non-target catch ensures compliance with ecosystem protection goals, 
 **Implications for Fishery Management:**
 The FSSI tracks performance toward sustainable fisheries goals, documenting whether stocks are overfished, subject to overfishing, or at target biomass levels. This national metric demonstrates Alaska fisheries management success and identifies stocks requiring conservation attention or rebuilding plans.
 
+
+# Eastern Bering Sea Ecosystem Status Report 2024 - Summary (2)
+
+This comprehensive report assesses the Eastern Bering Sea (EBS) ecosystem status and trends to inform fisheries management decisions by the North Pacific Fishery Management Council. The EBS has transitioned from the unprecedented warm period (2014-2021) to more neutral thermal conditions since 2021.
+
+**Key Physical Findings:** In 2024, oceanographic conditions remained near historical averages. Sea surface temperatures, sea ice extent, and cold pool extent were all near long-term means, though the coldest waters (<0°C) had diminished extent. The Aleutian Low Pressure System was near climatological average during winter 2023-2024. Persistent storms in spring-summer 2024 deepened the mixed layer, bringing cooler water to the surface.
+
+**Biological Response:** The ecosystem shows mixed signals in returning to cooler-condition dynamics. Large lipid-rich copepods (Calanus spp.) remained below average on the southeastern shelf despite favorable conditions, though they increased in the Northern Bering Sea (NBS). Euphausiid density declined to the second-lowest value in the time series. Age-0 pollock abundance was low in 2024, with juveniles showing below-average energy density despite being distributed shallower in the water column.
+
+**Fisheries Implications:** Groundfish condition varied by species and age class. Adult pollock biomass increased 78% from 2023, though juvenile condition remained below average. Pacific cod decreased slightly. Small-mouthed flatfish showed mixed condition. Seabird reproductive success was mixed between islands, with St. George generally performing better than St. Paul, possibly indicating differential local food availability.
+
+**Salmon Stocks:** Western Alaska chum salmon showed signs of potential recovery with record-high juvenile abundance in the NBS, though adult returns remain below historical levels. Bristol Bay sockeye runs in 2023-2024 were closer to long-term averages after record highs during warm years. Chinook salmon abundance remained critically low with unclear recovery prospects.
+
+**Emerging Concerns:** Ocean acidification metrics continued multi-decadal declines, with aragonite saturation approaching critical thresholds. Harmful algal blooms (HABs) were monitored, with elevated Alexandrium detected in July 2024 prompting risk advisories. No major seabird die-off events occurred in 2024.
+
+**Management Context:** The report introduces a borealization index showing the EBS has returned to values similar to the time-series mean during 2022-2024, after reaching the most boreal conditions in 2018-2019. Looking ahead, La Niña conditions are expected to bring continued cooler temperatures through spring 2025.
+
+**Northern Bering Sea:** The NBS showed some signs of recovery from the warm period, with increased sea ice thickness since 2021 and higher proportions of ice-associated blooms. However, biological responses remained mixed, suggesting lagged ecosystem adjustments to the return of average thermal conditions.
+
+The report emphasizes that while physical conditions have normalized, biological indicators show the ecosystem remains in transition, with food web dynamics not yet fully reflecting cooler oceanographic states.
+
+---
+
+# Section Headings and Ecosystem Indicators
+
+## **1. Physical Environment Synthesis**
+
+**Indicators:**
+- **North Pacific Index (NPI):** Measures Aleutian Low strength; influences storm patterns, temperatures, and sea ice extent affecting ecosystem productivity
+- **Sea Ice Extent & Thickness:** Determines cold pool formation, bloom timing/strength, and bottom-up productivity; affects fish and crab spatial distributions
+- **Cold Pool Extent:** Creates thermal barriers affecting groundfish and crab distribution; influences predator-prey overlap and habitat availability
+- **Water Temperature (surface & bottom):** Directly impacts metabolic rates, growth, distribution, and survival of fish and invertebrates
+- **Wind Patterns:** Affects larval transport, nutrient mixing, and prey availability; influences recruitment success for flatfish and other species
+
+**Implications:** Physical indicators provide early warning of ecosystem changes affecting stock distribution, recruitment timing, and productivity potential.
+
+## **2. Habitat**
+
+**Indicators:**
+- **Structural Epifauna Biomass (sponges, anemones, sea pens):** Provides essential fish habitat; indicates benthic ecosystem health and potential fishing impacts
+
+**Implications:** Tracks habitat quality and availability for commercially important groundfish species; informs spatial management decisions.
+
+## **3. Primary Production**
+
+**Indicators:**
+- **Chlorophyll-a Concentrations:** Measures phytoplankton biomass; foundation of food web supporting all higher trophic levels
+- **Bloom Timing & Type (ice-associated vs. open-water):** Affects zooplankton composition and abundance; linked to pollock recruitment success
+
+**Implications:** Primary production patterns influence prey quality/quantity throughout the food web, affecting fish growth and recruitment.
+
+## **4. Zooplankton**
+
+**Indicators:**
+- **Large Copepod Abundance (Calanus spp.):** High-quality, lipid-rich prey for juvenile fish; indicator of "cold pool ecosystem" productivity
+- **Euphausiid Biomass:** Critical prey for pollock, Pacific cod, and other groundfish; links primary production to fish biomass
+- **Small Copepod Abundance:** Important for larval fish survival; associated with warm-water conditions
+- **Zooplankton Lipid Content:** Determines prey quality; affects fish energetic condition and overwinter survival
+
+**Implications:** Zooplankton abundance and quality directly affect recruitment strength, growth rates, and condition of managed fish stocks; key to understanding bottom-up forcing.
+
+## **5. Jellyfish**
+
+**Indicators:**
+- **Jellyfish Biomass:** Competes with planktivorous fish for prey; predator on fish eggs/larvae
+
+**Implications:** High jellyfish abundance may indicate reduced food availability for juvenile fish or increased predation pressure on early life stages.
+
+## **6. Ichthyoplankton**
+
+**Indicators:**
+- **Larval Fish Abundance & Distribution:** Early indicator of recruitment strength for commercially important species
+- **Larval Pollock Condition:** Predicts survival to juvenile stages; reflects spring feeding conditions
+
+**Implications:** Provides early signals of year-class strength 2-4 years before fish recruit to fisheries; helps anticipate future stock productivity.
+
+## **7. Forage Fish**
+
+**Indicators:**
+- **Age-0 Pollock Abundance & Condition:** Dominant forage species; prey for adult pollock, cod, seabirds, and mammals
+- **Pacific Herring & Capelin Abundance:** Important forage for groundfish and seabirds; subsistence resources
+- **Forage Fish Energy Density:** Determines nutritional value to predators; linked to predator reproductive success
+
+**Implications:** Forage fish abundance affects growth, survival, and reproduction of commercially important predators; critical trophic link requiring balanced management.
+
+## **8. Salmon**
+
+**Indicators:**
+- **Juvenile Salmon Abundance & Condition (by species):** Early indicator of future adult returns; reflects marine survival conditions
+- **Adult Salmon Returns (Bristol Bay sockeye, Western Alaska chum/Chinook):** Economically/culturally critical fisheries; ecosystem indicators
+
+**Implications:** Salmon dynamics reflect ecosystem productivity and climate impacts; inform subsistence, commercial, and bycatch management decisions.
+
+## **9. Groundfish**
+
+**Indicators:**
+- **Groundfish Morphometric Condition (length-weight residuals):** Indicates prey availability, growth, and stock health
+- **Diet Composition:** Reveals predator-prey interactions and food web dynamics
+- **Bioenergetic Indices (consumption rates, growth potential):** Integrates temperature and prey effects on fish productivity
+- **Predation Mortality Estimates:** Quantifies top-down control and food web interactions
+
+**Implications:** Condition and bioenergetic indicators help assess carrying capacity, predict recruitment, and evaluate ecosystem-level impacts on stock productivity beyond single-species assessments.
+
+## **10. Groundfish Recruitment Predictions**
+
+**Indicators:**
+- **Temperature Change Index:** Pre/post-winter temperature differences; predicts pollock age-1 survival
+- **Surface Silicic Acid:** Nutrient indicator linked to age-0 pollock weight and subsequent recruitment
+
+**Implications:** Environmental predictors improve recruitment forecasts, allowing proactive management adjustments 1-2 years ahead of traditional assessment signals.
+
+## **11. Benthic Communities & Non-target Species**
+
+**Indicators:**
+- **Benthic Fauna Biomass (eelpouts, poachers, sea stars):** Indicates benthic productivity and ecosystem energy flow
+- **Commercial Crab Stock Biomass:** Economically important; reflects environmental conditions and predation pressure
+
+**Implications:** Benthic community trends indicate habitat quality and potential effects on demersal fish stocks; crab stocks inform multi-species management considerations.
+
+## **12. Seabirds**
+
+**Indicators:**
+- **Seabird Reproductive Success & Timing:** Integrates prey availability signals; reflects conditions affecting juvenile fish
+- **Colony Attendance:** Population trends indicating ecosystem changes
+- **Seabird Mortality Events:** Warning signal of ecosystem stress or harmful algal blooms
+
+**Implications:** Seabirds sample similar prey as juvenile groundfish; reproductive metrics provide independent assessment of forage conditions and potential recruitment signals.
+
+## **13. Marine Mammals**
+
+**Indicators:**
+- **Stranding Events:** Indicates ecosystem stress, harmful algal blooms, or unusual mortality events
+
+**Implications:** Marine mammals share prey with commercial fisheries; strandings can signal ecosystem problems affecting multiple trophic levels.
+
+## **14. Ecosystem/Community Indicators**
+
+**Indicators:**
+- **Mean Lifespan of Fish Community:** Indicates community resistance to perturbations and fishing impacts
+- **Mean Length of Fish Community:** Sensitive to fishing pressure on large predatory species
+- **Biomass Stability:** Measures ecosystem resilience and variability
+- **Borealization Index:** Tracks transition from Arctic to subarctic ecosystem state
+
+**Implications:** Community-level indicators assess overall ecosystem health, fishing impacts, and climate-driven reorganization beyond single-species metrics.
+
+## **15. Emerging Stressors**
+
+**Indicators:**
+- **Ocean Acidification (pH, aragonite saturation):** Threatens calcifying organisms (crabs, pteropods); potential food web impacts
+- **Harmful Algal Blooms (toxin concentrations):** Human health risk; affects subsistence resources and marine food webs
+
+**Implications:** Emerging stressors require monitoring to anticipate future impacts on managed species and inform risk-based management approaches.
+
+## **16. Discards & Non-Target Catch**
+
+**Indicators:**
+- **Non-target Species Catch (jellyfish, structural epifauna, invertebrates):** Indicates fishing impacts on ecosystem components
+- **Seabird Bycatch:** Tracks fishery impacts on protected species; informs mitigation measures
+
+**Implications:** Monitoring non-target catch ensures fisheries minimize ecosystem impacts and comply with protected species regulations.
+
+## **17. Sustainability**
+
+**Indicators:**
+- **Fish Stock Sustainability Index (FSSI):** Performance measure tracking overfishing prevention and stock rebuilding
+
+**Implications:** High-level indicator demonstrating effectiveness of ecosystem-based fishery management; communicates sustainability status to stakeholders and policymakers.
+
 ```{r EBSESRdat}
 
+# Eastern Bering Sea Ecosystem Status Report 2024
+# Section Headings and Indicators Database
+
+library(tidyverse)
+
+# Create dataframe of sections and indicators
+ebs_esr_indicators <- tribble(
+  ~section, ~subsection, ~indicator_name, ~indicator_type, ~trophic_level, ~report_card,
+  
+  # Physical Environment
+  "Physical Environment", "Climate", "North Pacific Index (NPI)", "Physical", "Abiotic", TRUE,
+  "Physical Environment", "Climate", "Aleutian Low Pressure System Strength", "Physical", "Abiotic", FALSE,
+  "Physical Environment", "Climate", "Aleutian Low Pressure System Location", "Physical", "Abiotic", FALSE,
+  "Physical Environment", "Sea Ice", "Sea Ice Extent", "Physical", "Abiotic", TRUE,
+  "Physical Environment", "Sea Ice", "Sea Ice Thickness", "Physical", "Abiotic", FALSE,
+  "Physical Environment", "Temperature", "Sea Surface Temperature (SST)", "Physical", "Abiotic", FALSE,
+  "Physical Environment", "Temperature", "Bottom Temperature", "Physical", "Abiotic", FALSE,
+  "Physical Environment", "Temperature", "Cold Pool Extent (<2°C)", "Physical", "Abiotic", TRUE,
+  "Physical Environment", "Temperature", "Cold Pool Extent (<0°C)", "Physical", "Abiotic", FALSE,
+  "Physical Environment", "Wind", "Surface Wind Speed and Direction", "Physical", "Abiotic", FALSE,
+  "Physical Environment", "Wind", "Along-shelf Wind Component", "Physical", "Abiotic", FALSE,
+  "Physical Environment", "Wind", "Cross-shelf Wind Component", "Physical", "Abiotic", FALSE,
+  
+  # Habitat
+  "Habitat", "Structural Epifauna", "Sponge Biomass", "Biological", "Benthic", FALSE,
+  "Habitat", "Structural Epifauna", "Sea Anemone Biomass", "Biological", "Benthic", FALSE,
+  "Habitat", "Structural Epifauna", "Sea Pen Biomass", "Biological", "Benthic", FALSE,
+  
+  # Primary Production
+  "Primary Production", "Chlorophyll", "St. Paul Island Chlorophyll-a", "Biological", "Primary Producer", FALSE,
+  "Primary Production", "Chlorophyll", "Mooring M2 Chlorophyll-a", "Biological", "Primary Producer", FALSE,
+  "Primary Production", "Bloom Dynamics", "Proportion of Open Water Blooms", "Biological", "Primary Producer", TRUE,
+  "Primary Production", "Bloom Dynamics", "Spring Bloom Timing", "Biological", "Primary Producer", FALSE,
+  
+  # Zooplankton
+  "Zooplankton", "Copepods", "Large Copepod Abundance (Calanus spp.)", "Biological", "Secondary Producer", TRUE,
+  "Zooplankton", "Copepods", "Small Copepod Abundance", "Biological", "Secondary Producer", FALSE,
+  "Zooplankton", "Copepods", "Large Copepod Lipid Content", "Biological", "Secondary Producer", FALSE,
+  "Zooplankton", "Euphausiids", "Euphausiid Biomass", "Biological", "Secondary Producer", TRUE,
+  "Zooplankton", "Euphausiids", "Euphausiid Lipid Content", "Biological", "Secondary Producer", FALSE,
+  "Zooplankton", "Community", "Continuous Plankton Recorder Indices", "Biological", "Secondary Producer", FALSE,
+  
+  # Jellyfish
+  "Jellyfish", "Scyphozoans", "Jellyfish Surface Trawl CPUE", "Biological", "Secondary Producer", FALSE,
+  "Jellyfish", "Scyphozoans", "Jellyfish Bottom Trawl Biomass", "Biological", "Secondary Producer", FALSE,
+  
+  # Ichthyoplankton
+  "Ichthyoplankton", "Larval Fish", "Walleye Pollock Larval Abundance", "Biological", "Fish", FALSE,
+  "Ichthyoplankton", "Larval Fish", "Pacific Cod Larval Abundance", "Biological", "Fish", FALSE,
+  "Ichthyoplankton", "Larval Fish", "Northern Rock Sole Larval Abundance", "Biological", "Fish", FALSE,
+  "Ichthyoplankton", "Larval Fish", "Southern Rock Sole Larval Abundance", "Biological", "Fish", FALSE,
+  "Ichthyoplankton", "Larval Fish", "Rockfish Larval Abundance", "Biological", "Fish", FALSE,
+  "Ichthyoplankton", "Larval Condition", "Walleye Pollock Larval Condition", "Biological", "Fish", FALSE,
+  
+  # Forage Fish
+  "Forage Fish", "Age-0 Pollock", "Age-0 Pollock Surface Trawl CPUE", "Biological", "Fish", FALSE,
+  "Forage Fish", "Age-0 Pollock", "Age-0 Pollock Vertical Distribution", "Biological", "Fish", FALSE,
+  "Forage Fish", "Age-0 Pollock", "Age-0 Pollock Weight", "Biological", "Fish", FALSE,
+  "Forage Fish", "Age-0 Pollock", "Age-0 Pollock Energy Density", "Biological", "Fish", FALSE,
+  "Forage Fish", "Age-0 Pollock", "Age-0 Pollock Lipid Content", "Biological", "Fish", FALSE,
+  "Forage Fish", "Herring", "Pacific Herring Surface Trawl CPUE", "Biological", "Fish", FALSE,
+  "Forage Fish", "Herring", "Togiak Herring Biomass", "Biological", "Fish", FALSE,
+  "Forage Fish", "Capelin", "Capelin Surface Trawl CPUE", "Biological", "Fish", FALSE,
+  "Forage Fish", "Community", "Pelagic Forage Fish Biomass", "Biological", "Fish", TRUE,
+  "Forage Fish", "Dynamics", "Forage Fish DSEM Linkages", "Biological", "Fish", FALSE,
+  
+  # Salmon
+  "Salmon", "Juveniles", "Juvenile Sockeye Salmon Abundance", "Biological", "Fish", FALSE,
+  "Salmon", "Juveniles", "Juvenile Chinook Salmon Abundance (NBS)", "Biological", "Fish", FALSE,
+  "Salmon", "Juveniles", "Juvenile Chum Salmon Abundance (NBS)", "Biological", "Fish", FALSE,
+  "Salmon", "Juveniles", "Juvenile Salmon Energy Density (SEBS)", "Biological", "Fish", FALSE,
+  "Salmon", "Juveniles", "Juvenile Salmon Energy Density (NBS)", "Biological", "Fish", FALSE,
+  "Salmon", "Adults", "Bristol Bay Sockeye Salmon Run Size", "Biological", "Fish", FALSE,
+  "Salmon", "Adults", "Commercial Salmon Catch (Bering Sea)", "Biological", "Fish", FALSE,
+  
+  # Groundfish
+  "Groundfish", "Condition", "Walleye Pollock Condition (length-weight)", "Biological", "Fish", FALSE,
+  "Groundfish", "Condition", "Pacific Cod Condition (length-weight)", "Biological", "Fish", FALSE,
+  "Groundfish", "Condition", "Arrowtooth Flounder Condition", "Biological", "Fish", FALSE,
+  "Groundfish", "Condition", "Yellowfin Sole Condition", "Biological", "Fish", FALSE,
+  "Groundfish", "Condition", "Flathead Sole Condition", "Biological", "Fish", FALSE,
+  "Groundfish", "Condition", "Northern Rock Sole Condition", "Biological", "Fish", FALSE,
+  "Groundfish", "Condition", "Alaska Plaice Condition", "Biological", "Fish", FALSE,
+  "Groundfish", "Diet", "Walleye Pollock Diet Composition", "Biological", "Fish", FALSE,
+  "Groundfish", "Diet", "Pacific Cod Diet Composition", "Biological", "Fish", FALSE,
+  "Groundfish", "Diet", "Pacific Cod Snow Crab Consumption", "Biological", "Fish", FALSE,
+  "Groundfish", "Bioenergetics", "Groundfish Thermal Experience", "Biological", "Fish", FALSE,
+  "Groundfish", "Bioenergetics", "Groundfish Diet Energy Density", "Biological", "Fish", FALSE,
+  "Groundfish", "Bioenergetics", "Groundfish Consumption Rate", "Biological", "Fish", FALSE,
+  "Groundfish", "Bioenergetics", "Groundfish Scope for Growth", "Biological", "Fish", FALSE,
+  "Groundfish", "Mortality", "Age-1 Natural Mortality (CEATTLE)", "Biological", "Fish", FALSE,
+  "Groundfish", "Mortality", "Predation Mortality", "Biological", "Fish", FALSE,
+  
+  # Recruitment Predictions
+  "Recruitment Predictions", "Environmental", "Temperature Change Index", "Physical-Biological", "Fish", FALSE,
+  "Recruitment Predictions", "Environmental", "Surface Silicic Acid", "Physical-Biological", "Fish", FALSE,
+  
+  # Benthic Communities
+  "Benthic Communities", "Non-target Fish", "Eelpout Biomass", "Biological", "Fish", FALSE,
+  "Benthic Communities", "Non-target Fish", "Poacher Biomass", "Biological", "Fish", FALSE,
+  "Benthic Communities", "Invertebrates", "Sea Star Biomass", "Biological", "Benthic", FALSE,
+  "Benthic Communities", "Crabs", "Bristol Bay Red King Crab Biomass", "Biological", "Benthic", FALSE,
+  "Benthic Communities", "Crabs", "Pribilof Island Blue King Crab Biomass", "Biological", "Benthic", FALSE,
+  "Benthic Communities", "Crabs", "St. Matthew Blue King Crab Biomass", "Biological", "Benthic", FALSE,
+  "Benthic Communities", "Crabs", "Snow Crab Biomass", "Biological", "Benthic", FALSE,
+  "Benthic Communities", "Crabs", "Tanner Crab Biomass", "Biological", "Benthic", FALSE,
+  
+  # Seabirds
+  "Seabirds", "Reproduction", "Common Murre Reproductive Success", "Biological", "Top Predator", FALSE,
+  "Seabirds", "Reproduction", "Thick-billed Murre Reproductive Success", "Biological", "Top Predator", FALSE,
+  "Seabirds", "Reproduction", "Black-legged Kittiwake Reproductive Success", "Biological", "Top Predator", FALSE,
+  "Seabirds", "Reproduction", "Red-legged Kittiwake Reproductive Success", "Biological", "Top Predator", FALSE,
+  "Seabirds", "Reproduction", "Least Auklet Reproductive Success", "Biological", "Top Predator", FALSE,
+  "Seabirds", "Reproduction", "Red-faced Cormorant Reproductive Success", "Biological", "Top Predator", FALSE,
+  "Seabirds", "Reproduction", "Multivariate Seabird Breeding Index", "Biological", "Top Predator", TRUE,
+  "Seabirds", "Mortality", "Beached Bird Abundance", "Biological", "Top Predator", FALSE,
+  
+  # Marine Mammals
+  "Marine Mammals", "Mortality", "Marine Mammal Stranding Events", "Biological", "Top Predator", FALSE,
+  
+  # Ecosystem Indicators
+  "Ecosystem Indicators", "Community", "Mean Lifespan of Fish Community", "Biological", "Fish", FALSE,
+  "Ecosystem Indicators", "Community", "Mean Length of Fish Community", "Biological", "Fish", FALSE,
+  "Ecosystem Indicators", "Community", "Stability of Fish Biomass", "Biological", "Fish", FALSE,
+  "Ecosystem Indicators", "Community", "Borealization Index", "Physical-Biological", "Ecosystem", TRUE,
+  
+  # Foraging Guilds (Report Card)
+  "Foraging Guilds", "Benthic", "Motile Epifauna Biomass", "Biological", "Benthic", TRUE,
+  "Foraging Guilds", "Fish", "Benthic Forager Biomass", "Biological", "Fish", TRUE,
+  "Foraging Guilds", "Fish", "Pelagic Forager Biomass", "Biological", "Fish", TRUE,
+  "Foraging Guilds", "Fish", "Apex Predator Biomass", "Biological", "Fish", TRUE,
+  
+  # Emerging Stressors
+  "Emerging Stressors", "Ocean Acidification", "Bottom Water pH", "Physical-Chemical", "Abiotic", FALSE,
+  "Emerging Stressors", "Ocean Acidification", "Aragonite Saturation State", "Physical-Chemical", "Abiotic", FALSE,
+  "Emerging Stressors", "HABs", "Alexandrium Cell Concentration", "Biological", "Primary Producer", FALSE,
+  "Emerging Stressors", "HABs", "Paralytic Shellfish Toxin (Saxitoxin)", "Biological", "Primary Producer", FALSE,
+  "Emerging Stressors", "HABs", "Domoic Acid Concentration", "Biological", "Primary Producer", FALSE,
+  
+  # Discards/Non-target
+  "Discards & Bycatch", "Invertebrates", "Non-target Invertebrate Catch", "Biological", "Benthic", FALSE,
+  "Discards & Bycatch", "Seabirds", "Seabird Bycatch Estimates", "Biological", "Top Predator", FALSE,
+  
+  # Sustainability
+  "Sustainability", "Management", "Fish Stock Sustainability Index (FSSI)", "Management", "Fish", FALSE
+)
+
+# Add additional metadata columns
+ebs_esr_indicators <- ebs_esr_indicators %>%
+  mutate(
+    year = 2024,
+    region = "Eastern Bering Sea",
+    data_source = case_when(
+      subsection == "Climate" ~ "NOAA-PMEL",
+      subsection == "Sea Ice" ~ "NSIDC",
+      subsection %in% c("Copepods", "Euphausiids") ~ "NOAA-AFSC EcoFOCI",
+      subsection %in% c("Age-0 Pollock", "Herring", "Capelin") ~ "NOAA-AFSC BASIS Survey",
+      subsection == "Condition" ~ "NOAA-AFSC Bottom Trawl Survey",
+      subsection == "Crabs" ~ "NOAA-AFSC Shellfish Assessment",
+      subsection == "Reproduction" ~ "USFWS Alaska Maritime NWR",
+      TRUE ~ "Various"
+    ),
+    survey_frequency = case_when(
+      grepl("Annual", indicator_name) | subsection %in% c("Climate", "Temperature") ~ "Annual",
+      grepl("Biennial", indicator_name) ~ "Biennial",
+      subsection == "Larval Fish" ~ "Biennial",
+      TRUE ~ "Annual or Opportunistic"
+    )
+  )
+
+names(ebs_esr_indicators)[1] <- "Section"
+names(ebs_esr_indicators)[3] <- "Indicator"
+
+# # View the dataframe
+# print(ebs_esr_indicators, n = 20)
+# 
+# # Summary statistics
+# cat("\n=== Summary Statistics ===\n")
+# cat("Total number of indicators:", nrow(ebs_esr_indicators), "\n")
+# cat("Number of Report Card indicators:", sum(ebs_esr_indicators$report_card), "\n")
+# cat("\nIndicators by Section:\n")
+# print(table(ebs_esr_indicators$section))
+# cat("\nIndicators by Trophic Level:\n")
+# print(table(ebs_esr_indicators$trophic_level))
+# 
+# # Create a summary table of Report Card indicators only
+# report_card_indicators <- ebs_esr_indicators %>%
+#   filter(report_card == TRUE) %>%
+#   select(section, subsection, indicator_name, trophic_level)
+# 
+# cat("\n=== Report Card Indicators (n=", nrow(report_card_indicators), ") ===\n")
+# print(report_card_indicators)
+
+# Export to CSV (optional)
+# write_csv(ebs_esr_indicators, "ebs_esr_indicators_2024.csv")
+# write_csv(report_card_indicators, "ebs_report_card_indicators_2024.csv")
 
 
 ```
@@ -3728,6 +4092,9 @@ readr::write_csv(compesrdat, here::here("compesrdat.csv"))
 ```
 
 How to format a comparison table
+
+Maybe summarize more: region, number of pages, number of sections, number of indicators, then a separate table for each region
+Characterize section order physical-->humans or something else?
 
 Which ESRs are in which order?
 
