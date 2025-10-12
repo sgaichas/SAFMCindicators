@@ -73,6 +73,69 @@ caribbean,Coral Reef Ecosystems,Coral Reefs - US Virgin Islands
 caribbean,Fisheries,US Caribbean Overfished Stocks
 caribbean,Socioeconomic,US Caribbean Total Coastal Employment
 caribbean,Socioeconomic,US Caribbean Billion Dollar Disasters
+goa,Physical Environment - Climate,State of the North Pacific Ocean
+goa,Physical Environment - Climate,Wintertime Aleutian Low Index
+goa,Physical Environment - Climate,Seasonal Projections (NMME)
+goa,Physical Environment - Climate,Predicted Ocean Temperatures (Sitka Air Temperature)
+goa,Physical Environment - Ocean Temperature,Long-term SST trends (1900-2024)
+goa,Physical Environment - Ocean Temperature,Satellite-derived SST
+goa,Physical Environment - Ocean Temperature,Survey-based temperatures (surface and depth)
+goa,Physical Environment - Ocean Temperature,Marine Heatwave Status
+goa,Physical Environment - Ocean Transport,Eddy Kinetic Energy
+goa,Physical Environment - Ocean Transport,Papa Trajectory Index
+goa,Physical Environment - Ocean Transport,Northern GOA Oscillation/Downwelling Index
+goa,Physical Environment - Ocean Transport,Coastal Wind Patterns (April-May)
+goa,Habitat,Ocean Acidification (pH levels)
+goa,Habitat,Dissolved Oxygen
+goa,Primary Production,Satellite Chlorophyll-a
+goa,Primary Production,Seward Line Phytoplankton Size Index
+goa,Primary Production,GAK1 Mooring Oceanography
+goa,Zooplankton,Continuous Plankton Recorder
+goa,Zooplankton,Copepod Biomass and Community Size
+goa,Zooplankton,Euphausiid Biomass (Seward Line)
+goa,Zooplankton,Zooplankton Density (Icy Strait)
+goa,Zooplankton,Zooplankton Lipid Content
+goa,Forage Fish,Larval Fish Abundance
+goa,Forage Fish,Age-0 Pollock Body Condition
+goa,Forage Fish,Seabird Diet Composition
+goa,Forage Fish,Capelin Abundance Indices
+goa,Forage Fish,Herring Biomass (SE Alaska)
+goa,Forage Fish,Eulachon Returns
+goa,Salmon,Commercial Salmon Catch
+goa,Salmon,Juvenile Salmon Abundance/Condition (Icy Strait)
+goa,Salmon,Auke Creek Salmon Survival
+goa,Groundfish,Groundfish Body Condition
+goa,Groundfish,ADF&G Trawl Survey
+goa,Groundfish,Predation Mortality (CEATTLE model)
+goa,Groundfish,Survey Biomass Trends
+goa,Groundfish,Environmental Conditions Experienced by Groundfish
+goa,Groundfish,Groundfish Diets
+goa,Benthic Communities,Motile Epifauna Biomass
+goa,Benthic Communities,Structural Epifauna
+goa,Seabirds,Seabird Breeding Timing
+goa,Seabirds,Seabird Reproductive Success
+goa,Seabirds,Seabird Mortality Events
+goa,Seabirds,Seabird At-sea Distribution (Seward Line)
+goa,Marine Mammals,Humpback Whale Calving (Glacier Bay/Icy Strait)
+goa,Marine Mammals,Marine Mammal Strandings
+goa,Marine Mammals,Steller Sea Lion Population Trends
+goa,Prince William Sound,Intertidal Temperature
+goa,Prince William Sound,"Intertidal Communities (mussels, rockweed, sea stars)"
+goa,Prince William Sound,Prince William Sound Herring Biomass
+goa,Prince William Sound,Humpback Whale Fall Surveys (PWS)
+goa,Fishing Indicators,Groundfish Discards
+goa,Fishing Indicators,Non-target Species Catch
+goa,Fishing Indicators,Seabird Bycatch
+goa,Habitat Quality,Fishing Effects on Essential Fish Habitat
+goa,Sustainability,Fish Stock Sustainability Index (FSSI)
+goa,Sustainability,Surplus Production/Exploitation Rate
+goa,Disease & Toxins,Harmful Algal Blooms (PSP toxins)
+goa,Disease & Toxins,Mushy Halibut Syndrome Occurrence
+goa,Ecosystem Community Indicators,Foraging Guild Biomass
+goa,Ecosystem Community Indicators,Community Stability
+goa,Ecosystem Community Indicators,Mean Length/Lifespan of Fish Community
+goa,Ecosystem Community Indicators,Species Richness/Diversity
+goa,Citizen Science,Skipper Science Observations
 gom,Climate Drivers,Atlantic Multidecadal Oscillation (AMO)
 gom,Climate Drivers,Sea Surface Temperature (SST)
 gom,Climate Drivers,Sea Level Rise
@@ -102,6 +165,32 @@ gom,Human Dimensions,Commercial Fishing Engagement
 gom,Human Dimensions,Commercial Fishing Reliance
 gom,Human Dimensions,Recreational Fishing Engagement
 gom,Human Dimensions,Recreational Fishing Effort
+hawaii,Human Connections,Population density and growth
+hawaii,Human Connections,Resource use participation rates
+hawaii,Human Connections,Awareness of threats
+hawaii,Human Connections,Perceptions of ecosystem status and trends
+hawaii,Small Boat Commercial Fishers,Fishing Engagement Index (FEI)
+hawaii,Small Boat Commercial Fishers,Regional Quotient for revenue
+hawaii,Small Boat Commercial Fishers,Total catch by fishery
+hawaii,Small Boat Commercial Fishers,Catch per trip
+hawaii,Small Boat Commercial Fishers,Spatial distribution of catch
+hawaii,Coral Reefs and Reef Fish,Hard coral cover (%)
+hawaii,Coral Reefs and Reef Fish,Calcifiers cover (%)
+hawaii,Coral Reefs and Reef Fish,Reef-builder ratio
+hawaii,Coral Reefs and Reef Fish,Total fish biomass (kg/ha)
+hawaii,Coral Reefs and Reef Fish,Herbivore biomass (kg/ha)
+hawaii,Coral Reefs and Reef Fish,Resource fish biomass (kg/ha)
+hawaii,Climate and Ocean,El Niño-Southern Oscillation (ENSO) index
+hawaii,Climate and Ocean,Pacific Decadal Oscillation (PDO) index
+hawaii,Climate and Ocean,Annual rainfall and peak events (mm)
+hawaii,Climate and Ocean,Brown water advisories (count/year)
+hawaii,Climate and Ocean,Sea level rise (m)
+hawaii,Climate and Ocean,Sea surface temperature (°C)
+hawaii,Human Impacts,Cumulative impact scores
+hawaii,Human Impacts,Individual stressor intensities
+hawaii,Vulnerability of Coral Reefs to Climate Change,Projected timing of annual severe bleaching (year)
+hawaii,Vulnerability of Coral Reefs to Climate Change,Climate vulnerability scores
+hawaii,Vulnerability of Coral Reefs to Climate Change,Reef resilience assessments
 ma,Seafood Production,Total commercial landings
 ma,Seafood Production,Total U.S. seafood landings
 ma,Seafood Production,MAFMC managed U.S. seafood landings
