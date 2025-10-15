@@ -1,28 +1,52 @@
 Region,Section,Indicator
-aleutian,Climate Overview,North Pacific Index; Aleutian Low Index; SST; SLP; wind patterns
-aleutian,State of the North Pacific Ocean,NINO3.4; PDO; NPGO; Arctic Oscillation
-aleutian,Seasonal Projections of SST,NMME forecast models (1-5 month projections)
-aleutian,Regional Long-term Sea Surface Temperature,Extended Reconstructed SST 1900-2024
-aleutian,Regional Sea Surface Temperature and Marine Heatwaves,"Daily SST; MHW frequency, intensity, spatial extent"
-aleutian,Bottom and Surface Temperatures from Survey,Survey surface and bottom water temperatures
-aleutian,Ocean Transport: Eddies in the Aleutian Islands,Eddy kinetic energy from satellite altimetry
-aleutian,Zooplankton: Continuous Plankton Recorder Data,Mesozooplankton biomass; diatom abundance; copepod community size
-aleutian,Structural Epifauna in the Aleutian Islands,"Biomass of sponges, corals, anemones, sea pens"
-aleutian,Jellyfish in the Aleutian Islands,Jellyfish biomass from bottom trawl surveys
-aleutian,Eastern Kamchatka Pink Salmon,Pink salmon abundance and biomass (biennial)
-aleutian,Aleutian Islands Groundfish Condition,Length-weight residuals (body condition index)
-aleutian,Distribution of Rockfish Species,"Mean weighted depth, temperature, geographic position"
-aleutian,Miscellaneous Benthic Fauna,"Biomass of eelpouts, poachers, shrimps, sea stars"
-aleutian,Integrated Seabird Information,Hatch dates; reproductive success; diet composition; beached birds; bycatch
-aleutian,Steller Sea Lions,Non-pup and pup counts at rookeries
-aleutian,Marine Mammal Strandings,Number and species of stranded marine mammals
-aleutian,Stability of Groundfish Biomass,Inverse CV of total groundfish biomass
-aleutian,Mean Length of Fish Community,Biomass-weighted mean length
-aleutian,Mean Lifespan of Fish Community,Biomass-weighted mean lifespan
-aleutian,Harmful Algal Blooms,PST levels in mussels; toxic algal species presence
-aleutian,Time Trends in Non-Target Species Catch,"Bycatch of jellyfish, epifauna, invertebrates"
-aleutian,Seabird Bycatch Estimates,Seabird mortality by species and gear type
-aleutian,Fish Stock Sustainability Index (FSSI),Overfishing/overfished status; biomass relative to BMSY
+aleutian,Biophysical,Sea Surface Temperature SST
+aleutian,Biophysical,Sea Level Pressure SLP
+aleutian,Biophysical,wind patterns
+aleutian,Biophysical,NINO3.4
+aleutian,Biophysical,PDO
+aleutian,Biophysical,North Pacific Index
+aleutian,Biophysical,NPGO
+aleutian,Biophysical,Arctic Oscillation
+aleutian,Biophysical,Aleutian Low Index
+aleutian,Biophysical,NMME forecast models (1-5 month projections)
+aleutian,Biophysical,Extended Reconstructed SST 1900-2024
+aleutian,Biophysical,Daily SST
+aleutian,Biophysical,MHW frequency
+aleutian,Biophysical,MHW intensity
+aleutian,Biophysical,MHW spatial extent
+aleutian,Biophysical,Survey surface water temperatures
+aleutian,Biophysical,Survey bottom water temperatures
+aleutian,Biophysical,Eddy kinetic energy from satellite altimetry
+aleutian,Biophysical,Mesozooplankton biomass
+aleutian,Biophysical,diatom abundance
+aleutian,Biophysical,copepod community size
+aleutian,Habitat,Biomass of sponges
+aleutian,Habitat,Biomass of corals
+aleutian,Habitat,Biomass of anemones
+aleutian,Habitat,Biomass of sea pens
+aleutian,Jellyfish,Jellyfish biomass from bottom trawl surveys
+aleutian,Salmon,Pink salmon abundance and biomass (biennial)
+aleutian,Groundfish,Length-weight residuals (body condition index)
+aleutian,Groundfish,"Mean weighted distribution by depth, temperature, geographic position"
+aleutian,Benthic Nontarget,Biomass of eelpouts
+aleutian,Benthic Nontarget,Biomass of poachers
+aleutian,Benthic Nontarget,Biomass of shrimps
+aleutian,Benthic Nontarget,Biomass of sea stars
+aleutian,Seabirds,Hatch dates
+aleutian,Seabirds,Reproductive success
+aleutian,Seabirds,Diet composition
+aleutian,Seabirds,Beached birds
+aleutian,Seabirds,Seabird bycatch mortality by species and gear type
+aleutian,Marine Mammals,Non-pup and pup counts at rookeries
+aleutian,Marine Mammals,Number and species of stranded marine mammals
+aleutian,Ecosystem or Community,Inverse CV of total groundfish biomass
+aleutian,Ecosystem or Community,Biomass-weighted mean length
+aleutian,Ecosystem or Community,Biomass-weighted mean lifespan
+aleutian,Disease Ecology,PST levels in mussels; toxic algal species presence
+aleutian,Fishing Human Dimensions,Bycatch of jellyfish
+aleutian,Fishing Human Dimensions,Bycatch of epifauna
+aleutian,Fishing Human Dimensions,Bycatch of invertebrates
+aleutian,Sustainability,Overfishing/overfished status full BSAI; biomass relative to BMSY
 calcurrent,Climate and Ocean Drivers,Oceanic Niño Index (ONI)
 calcurrent,Climate and Ocean Drivers,Pacific Decadal Oscillation (PDO)
 calcurrent,Climate and Ocean Drivers,North Pacific Gyre Oscillation (NPGO)

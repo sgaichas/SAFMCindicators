@@ -2407,15 +2407,17 @@ Fish condition deteriorated across most species despite cooler temperatures, par
 
 ## Section Headings and Ecosystem Indicators
 
+*Sarah had to fix this by hand; it isn't counting indicators correctly due to the document structure*
+
 ### Biophysical
 
-#### 1. **Climate Overview**
-**Indicators:** North Pacific Index, Aleutian Low Index, sea surface temperature (SST), sea level pressure (SLP), seasonal wind patterns
+#### 1. **Regional Highlights**
+**Indicators:** current year sea surface temperature (SST), sea level pressure (SLP), seasonal wind patterns
 
 **Implications:** Atmospheric forcing affects ocean circulation, mixed layer depth, nutrient transport through passes, and ultimately prey availability for commercial groundfish. Strong/weak Aleutian Low influences storm frequency, temperature patterns, and sea ice extent, which cascade through the food web.
 
 #### 2. **State of the North Pacific Ocean**
-**Indicators:** ENSO indices (NINO3.4), Pacific Decadal Oscillation (PDO), North Pacific Gyre Oscillation (NPGO), Arctic Oscillation (AO)
+**Indicators:** ENSO indices (NINO3.4), Pacific Decadal Oscillation (PDO), North Pacific Index, North Pacific Gyre Oscillation (NPGO), Arctic Oscillation (AO), Aleutian Low Index
 
 **Implications:** Basin-scale climate patterns drive regional oceanographic conditions affecting fish distribution, recruitment timing, and productivity. These indices help predict ecosystem responses and inform adaptive management strategies.
 
@@ -2496,6 +2498,12 @@ Fish condition deteriorated across most species despite cooler temperatures, par
 
 **Implications:** Seabirds are ecosystem sentinels; their reproductive success and diet composition reflect forage fish availability and ecosystem productivity. Poor seabird performance may indicate low prey availability affecting commercial fish stocks. Diet composition provides indices of forage fish recruitment absent direct surveys.
 
+#### 23. **Seabird Bycatch Estimates**
+**Indicators:** Estimated seabird mortality in groundfish and halibut fisheries by species and gear type
+
+**Implications:** Seabird bycatch monitoring is legally required for ESA-listed species (short-tailed albatross) and informs management measures to reduce mortality (seabird avoidance devices, area/seasonal closures). Bycatch patterns may reflect changes in seabird or fish distributions.
+
+
 ### Marine Mammals
 
 #### 16. **Steller Sea Lions**
@@ -2540,11 +2548,7 @@ Fish condition deteriorated across most species despite cooler temperatures, par
 **Implications:** Non-target catch trends may indicate ecosystem changes (e.g., jellyfish blooms) or impacts of fishing on benthic habitat. High structural epifauna bycatch raises concerns about habitat damage in areas important for commercial species.
 
 ### Maintaining and Restoring Groundfish Habitats
-
-#### 23. **Seabird Bycatch Estimates**
-**Indicators:** Estimated seabird mortality in groundfish and halibut fisheries by species and gear type
-
-**Implications:** Seabird bycatch monitoring is legally required for ESA-listed species (short-tailed albatross) and informs management measures to reduce mortality (seabird avoidance devices, area/seasonal closures). Bycatch patterns may reflect changes in seabird or fish distributions.
+Sarah's note, this section wasn't updated and the seabird bycatch was within it but that seems like a mistake. I moved it up to be with the other seabirds. I left the numbers the way they were.
 
 ### Sustainability
 
@@ -2558,172 +2562,221 @@ Fish condition deteriorated across most species despite cooler temperatures, par
 # Create dataframe of Aleutian Islands ESR sections and indicators
 
 aleutian_esr <- data.frame(
-  section_number = c(1:24),
+  #section_number = c(1:24),
   
   # section headings need to be redone to match my corrections above
   #section_heading = c(
   Section = c(
-    "Climate Overview",
-    "State of the North Pacific Ocean",
+    rep("Biophysical",21),
+    rep("Habitat",4),
+    "Jellyfish",
+    "Salmon",
+    rep("Groundfish",2),
+    rep("Benthic Nontarget",4),
+    rep("Seabirds",5),
+    rep("Marine Mammals",2),
+    rep("Ecosystem or Community",3),
+    "Disease Ecology",
+    rep("Fishing Human Dimensions",3),
+    #"Maintain Restore Habitat",
+    "Sustainability"
+  ),
+  
+  subection = c(
+    # biophysical
+    rep("Regional Highlights", 3),
+    rep("State of the North Pacific Ocean",6),
     "Seasonal Projections of SST",
     "Regional Long-term Sea Surface Temperature",
-    "Regional Sea Surface Temperature and Marine Heatwaves",
-    "Bottom and Surface Temperatures from Survey",
+    rep("Regional Sea Surface Temperature and Marine Heatwaves",4),
+    rep("Bottom and Surface Temperatures from Survey",2),
     "Ocean Transport: Eddies in the Aleutian Islands",
-    "Zooplankton: Continuous Plankton Recorder Data",
-    "Structural Epifauna in the Aleutian Islands",
+    rep("Zooplankton: Continuous Plankton Recorder Data",3),
+    # habitat
+    rep("Structural Epifauna in the Aleutian Islands",4),
+    # jellyfish
     "Jellyfish in the Aleutian Islands",
+    # salmon
     "Eastern Kamchatka Pink Salmon",
+    # groundfish
     "Aleutian Islands Groundfish Condition",
     "Distribution of Rockfish Species",
-    "Miscellaneous Benthic Fauna",
-    "Integrated Seabird Information",
+    # benthos
+    rep("Miscellaneous Benthic Fauna",4),
+    # seabirds
+    rep("Integrated Seabird Information",4),
+    "Seabird Bycatch Estimates",
+    # marine mammals
     "Steller Sea Lions",
     "Marine Mammal Strandings",
+    # eco community
     "Stability of Groundfish Biomass",
-    "Mean Length of Fish Community",
-    "Mean Lifespan of Fish Community",
+    "Mean Length of Groundish Community",
+    "Mean Lifespan of Groundish Community",
+    # disease
     "Harmful Algal Blooms",
-    "Time Trends in Non-Target Species Catch",
-    "Seabird Bycatch Estimates",
+    # fishing
+    rep("Time Trends in Non-Target Species Catch",3),
+    # maintain restore habitat? not updated
+    # sustainability
     "Fish Stock Sustainability Index (FSSI)"
   ),
   
   #primary_indicators = c(
   Indicator = c(
-    "North Pacific Index; Aleutian Low Index; SST; SLP; wind patterns",
-    "NINO3.4; PDO; NPGO; Arctic Oscillation",
+    # regional overview, past year
+    "Sea Surface Temperature SST", "Sea Level Pressure SLP", "wind patterns",
+    # state of N Pac Ocean
+    "NINO3.4", "PDO", "North Pacific Index", "NPGO", "Arctic Oscillation", "Aleutian Low Index",
+    # seasonal projections SST
     "NMME forecast models (1-5 month projections)",
+    # regional long term SST
     "Extended Reconstructed SST 1900-2024",
-    "Daily SST; MHW frequency, intensity, spatial extent",
-    "Survey surface and bottom water temperatures",
+    # regional SST and MHW
+    "Daily SST", "MHW frequency", "MHW intensity", "MHW spatial extent",
+    # survey temps
+    "Survey surface water temperatures", "Survey bottom water temperatures",
+    # ocean transport
     "Eddy kinetic energy from satellite altimetry",
-    "Mesozooplankton biomass; diatom abundance; copepod community size",
-    "Biomass of sponges, corals, anemones, sea pens",
+    # zooplankton
+    "Mesozooplankton biomass", "diatom abundance", "copepod community size",
+    # habitat
+    "Biomass of sponges", "Biomass of corals", "Biomass of anemones", "Biomass of sea pens",
+    # jellyfish
     "Jellyfish biomass from bottom trawl surveys",
+    # salmon
     "Pink salmon abundance and biomass (biennial)",
+    # ecosystem community
     "Length-weight residuals (body condition index)",
-    "Mean weighted depth, temperature, geographic position",
-    "Biomass of eelpouts, poachers, shrimps, sea stars",
-    "Hatch dates; reproductive success; diet composition; beached birds; bycatch",
+    "Mean weighted distribution by depth, temperature, geographic position",
+    # benthos
+    "Biomass of eelpouts", "Biomass of poachers", "Biomass of shrimps", "Biomass of sea stars",
+    # seabirds
+    "Hatch dates", "Reproductive success", "Diet composition", "Beached birds",
+    "Seabird bycatch mortality by species and gear type",
+    # marine mammals
     "Non-pup and pup counts at rookeries",
     "Number and species of stranded marine mammals",
+    # more groundfish ecosystem community
     "Inverse CV of total groundfish biomass",
     "Biomass-weighted mean length",
     "Biomass-weighted mean lifespan",
+    # disease
     "PST levels in mussels; toxic algal species presence",
-    "Bycatch of jellyfish, epifauna, invertebrates",
-    "Seabird mortality by species and gear type",
-    "Overfishing/overfished status; biomass relative to BMSY"
+    # fisheries humans bycatch
+    "Bycatch of jellyfish", "Bycatch of epifauna", "Bycatch of invertebrates",
+    # still dont get why this is maintain habitat--it isnt this is a mistake in the report
+    # sustainability
+    "Overfishing/overfished status full BSAI; biomass relative to BMSY"
   ),
   
-  report_card_indicator = c(
-    "Yes - NPI Nov-Mar average",
-    "No",
-    "No",
-    "No",
-    "No",
-    "No",
-    "No",
-    "No",
-    "No",
-    "No",
-    "No - but recommended for inclusion",
-    "No",
-    "No",
-    "No",
-    "Yes - Auklet reproductive success, Puffin diet composition",
-    "Yes - SSL non-pup counts",
-    "No",
-    "No",
-    "No",
-    "No",
-    "No",
-    "No",
-    "No",
-    "No"
-  ),
-  
-  trophic_level = c(
-    "Physical environment",
-    "Physical environment",
-    "Physical environment",
-    "Physical environment",
-    "Physical environment",
-    "Physical environment",
-    "Physical environment",
-    "Lower trophic (zooplankton)",
-    "Benthic habitat/invertebrates",
-    "Gelatinous zooplankton",
-    "Upper trophic (forage species)",
-    "Mid-upper trophic (groundfish)",
-    "Mid-upper trophic (groundfish)",
-    "Benthic invertebrates",
-    "Upper trophic (apex predators)",
-    "Upper trophic (apex predators)",
-    "Upper trophic (marine mammals)",
-    "Community-level",
-    "Community-level",
-    "Community-level",
-    "Lower trophic (phytoplankton/toxins)",
-    "Multiple trophic levels",
-    "Upper trophic (seabirds)",
-    "Community-level (sustainability)"
-  ),
-  
-  management_implication = c(
-    "Influences prey availability and fish distribution",
-    "Predicts ecosystem responses and recruitment patterns",
-    "Allows proactive management adjustments",
-    "Context for climate change impacts on stocks",
-    "Explains recruitment failures and mortality events",
-    "Correlates with habitat use and distribution",
-    "Affects nutrient transport and productivity",
-    "Indicates prey quality for planktivorous fish",
-    "Essential habitat for rockfish and Atka mackerel",
-    "Competition with fish; predation on eggs/larvae",
-    "Competition affects salmon, groundfish, seabirds",
-    "Indicates stock health and recruitment potential",
-    "Refines surveys and habitat protection",
-    "Prey availability for commercial groundfish",
-    "Ecosystem productivity and forage fish availability",
-    "Ecosystem health; constrains fishery decisions",
-    "Early warning of ecosystem stress or HABs",
-    "Ecosystem resilience to fishing and environment",
-    "Indicates fishing pressure and community shifts",
-    "Ecosystem stability and environmental buffering",
-    "Human health risk; food web contamination",
-    "Fishing impacts on benthic habitat",
-    "Legally required; informs mitigation measures",
-    "Tracks management effectiveness and sustainability"
-  ),
-  
-  update_frequency = c(
-    "Monthly/Annual",
-    "Monthly/Annual",
-    "Monthly",
-    "Annual",
-    "Daily/Annual",
-    "Biennial (survey years)",
-    "Monthly/Annual",
-    "Seasonal/Annual",
-    "Biennial (survey years)",
-    "Biennial (survey years)",
-    "Annual",
-    "Biennial (survey years)",
-    "Biennial (survey years)",
-    "Biennial (survey years)",
-    "Annual",
-    "Annual",
-    "Continuous/Annual",
-    "Biennial (survey years)",
-    "Biennial (survey years)",
-    "Biennial (survey years)",
-    "Seasonal/Annual",
-    "Annual",
-    "Annual",
-    "Quarterly"
-  ),
+  # report_card_indicator = c(
+  #   "Yes - NPI Nov-Mar average",
+  #   "No",
+  #   "No",
+  #   "No",
+  #   "No",
+  #   "No",
+  #   "No",
+  #   "No",
+  #   "No",
+  #   "No",
+  #   "No - but recommended for inclusion",
+  #   "No",
+  #   "No",
+  #   "No",
+  #   "Yes - Auklet reproductive success, Puffin diet composition",
+  #   "Yes - SSL non-pup counts",
+  #   "No",
+  #   "No",
+  #   "No",
+  #   "No",
+  #   "No",
+  #   "No",
+  #   "No",
+  #   "No"
+  # ),
+  # 
+  # trophic_level = c(
+  #   "Physical environment",
+  #   "Physical environment",
+  #   "Physical environment",
+  #   "Physical environment",
+  #   "Physical environment",
+  #   "Physical environment",
+  #   "Physical environment",
+  #   "Lower trophic (zooplankton)",
+  #   "Benthic habitat/invertebrates",
+  #   "Gelatinous zooplankton",
+  #   "Upper trophic (forage species)",
+  #   "Mid-upper trophic (groundfish)",
+  #   "Mid-upper trophic (groundfish)",
+  #   "Benthic invertebrates",
+  #   "Upper trophic (apex predators)",
+  #   "Upper trophic (apex predators)",
+  #   "Upper trophic (marine mammals)",
+  #   "Community-level",
+  #   "Community-level",
+  #   "Community-level",
+  #   "Lower trophic (phytoplankton/toxins)",
+  #   "Multiple trophic levels",
+  #   "Upper trophic (seabirds)",
+  #   "Community-level (sustainability)"
+  # ),
+  # 
+  # management_implication = c(
+  #   "Influences prey availability and fish distribution",
+  #   "Predicts ecosystem responses and recruitment patterns",
+  #   "Allows proactive management adjustments",
+  #   "Context for climate change impacts on stocks",
+  #   "Explains recruitment failures and mortality events",
+  #   "Correlates with habitat use and distribution",
+  #   "Affects nutrient transport and productivity",
+  #   "Indicates prey quality for planktivorous fish",
+  #   "Essential habitat for rockfish and Atka mackerel",
+  #   "Competition with fish; predation on eggs/larvae",
+  #   "Competition affects salmon, groundfish, seabirds",
+  #   "Indicates stock health and recruitment potential",
+  #   "Refines surveys and habitat protection",
+  #   "Prey availability for commercial groundfish",
+  #   "Ecosystem productivity and forage fish availability",
+  #   "Ecosystem health; constrains fishery decisions",
+  #   "Early warning of ecosystem stress or HABs",
+  #   "Ecosystem resilience to fishing and environment",
+  #   "Indicates fishing pressure and community shifts",
+  #   "Ecosystem stability and environmental buffering",
+  #   "Human health risk; food web contamination",
+  #   "Fishing impacts on benthic habitat",
+  #   "Legally required; informs mitigation measures",
+  #   "Tracks management effectiveness and sustainability"
+  # ),
+  # 
+  # update_frequency = c(
+  #   "Monthly/Annual",
+  #   "Monthly/Annual",
+  #   "Monthly",
+  #   "Annual",
+  #   "Daily/Annual",
+  #   "Biennial (survey years)",
+  #   "Monthly/Annual",
+  #   "Seasonal/Annual",
+  #   "Biennial (survey years)",
+  #   "Biennial (survey years)",
+  #   "Annual",
+  #   "Biennial (survey years)",
+  #   "Biennial (survey years)",
+  #   "Biennial (survey years)",
+  #   "Annual",
+  #   "Annual",
+  #   "Continuous/Annual",
+  #   "Biennial (survey years)",
+  #   "Biennial (survey years)",
+  #   "Biennial (survey years)",
+  #   "Seasonal/Annual",
+  #   "Annual",
+  #   "Annual",
+  #   "Quarterly"
+  # ),
   
   stringsAsFactors = FALSE
 )
@@ -4095,6 +4148,77 @@ How to format a comparison table
 
 Maybe summarize more: region, number of pages, number of sections, number of indicators, then a separate table for each region
 Characterize section order physical-->humans or something else?
+
+```{r}
+# function to count pages and pull other pdf info
+
+get_pdf_info <- function(pdf_path) {
+  tryCatch({
+    info <- pdftools::pdf_info(pdf_path)
+    return(list(
+      filename = basename(pdf_path),
+      pages = info$pages,
+      creation_date = info$created %||% NA,
+      modification_date = info$modified %||% NA,
+      author = info$keys$Author %||% NA,
+      title = info$keys$Title %||% NA,
+      subject = info$keys$Subject %||% NA
+    ))
+  }, error = function(e) {
+    return(list(
+      pages = NA,
+      creation_date = NA,
+      modification_date = NA,
+      author = NA,
+      title = NA,
+      subject = NA
+    ))
+  })
+}
+
+ESRlist <- list.files("~/Documents/Work/SAFMCindicators/ESRs",
+                      pattern = "\\.pdf$",
+                      recursive = TRUE,
+                      ignore.case = TRUE,
+                      full.names = TRUE)
+
+ESRlookup <- data.frame(datkey = c("aleutian",
+                                   "calcurrent",
+                                   "caribbean",
+                                   "ebs",
+                                   "goa",
+                                   "gom",
+                                   "hawaii",
+                                   "ma",
+                                   "ne",
+                                   "sa"
+                                   ),
+                        filekey = c("AI_ESR_2024",
+                                    "CalCurrent_ESR_2025",
+                                    "Caribbean_ESR_2025",
+                                    "EBS_ESR_2024",
+                                    "GOA_ESR_2024",
+                                    "GoMEcosystemStatusReport2017",
+                                    "Hawaii_ESR_2022",
+                                    "MidAtlantic_SOE_2025",
+                                    "NewEngland_SOE_2025",
+                                    "SAtlantic_ESR_2021"
+                        )
+                      )
+
+ESRinfo <- purrr::map_dfr(ESRlist, get_pdf_info)
+
+ESRinfo <- ESRinfo |>
+  dplyr::filter(!grepl("compressed", filename)) |>
+  dplyr::mutate(filekey = gsub(".pdf", "", filename)) |>
+  dplyr::mutate(filekey = gsub("_noaa.*", "", filekey)) |>
+  dplyr::mutate(filekey = gsub("_NMFS.*", "", filekey)) |>
+  dplyr::left_join(ESRlookup)
+
+
+
+```
+
 
 Which ESRs are in which order?
 

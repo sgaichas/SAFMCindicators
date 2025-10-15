@@ -22,6 +22,30 @@ extract_pdf_text() <- function(path, numbering = TRUE, references = TRUE){
   return(text)
 }
 
+# Function to get basic PDF metadata
+get_pdf_info <- function(pdf_path) {
+  tryCatch({
+    info <- pdftools::pdf_info(pdf_path)
+    return(list(
+      pages = info$pages,
+      creation_date = info$created %||% NA,
+      modification_date = info$modified %||% NA,
+      author = info$keys$Author %||% NA,
+      title = info$keys$Title %||% NA,
+      subject = info$keys$Subject %||% NA
+    ))
+  }, error = function(e) {
+    return(list(
+      pages = NA,
+      creation_date = NA,
+      modification_date = NA,
+      author = NA,
+      title = NA,
+      subject = NA
+    ))
+  })
+}
+
 # Function to call Claude API
 call_claude <- function(prompt, api_key, model = "claude-3-5-sonnet-20241022") {
   
