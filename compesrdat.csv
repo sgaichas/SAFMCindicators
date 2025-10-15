@@ -1,528 +1,528 @@
-Region,Section,Indicator
-aleutian,Biophysical,Sea Surface Temperature SST
-aleutian,Biophysical,Sea Level Pressure SLP
-aleutian,Biophysical,wind patterns
-aleutian,Biophysical,NINO3.4
-aleutian,Biophysical,PDO
-aleutian,Biophysical,North Pacific Index
-aleutian,Biophysical,NPGO
-aleutian,Biophysical,Arctic Oscillation
-aleutian,Biophysical,Aleutian Low Index
-aleutian,Biophysical,NMME forecast models (1-5 month projections)
-aleutian,Biophysical,Extended Reconstructed SST 1900-2024
-aleutian,Biophysical,Daily SST
-aleutian,Biophysical,MHW frequency
-aleutian,Biophysical,MHW intensity
-aleutian,Biophysical,MHW spatial extent
-aleutian,Biophysical,Survey surface water temperatures
-aleutian,Biophysical,Survey bottom water temperatures
-aleutian,Biophysical,Eddy kinetic energy from satellite altimetry
-aleutian,Biophysical,Mesozooplankton biomass
-aleutian,Biophysical,diatom abundance
-aleutian,Biophysical,copepod community size
-aleutian,Habitat,Biomass of sponges
-aleutian,Habitat,Biomass of corals
-aleutian,Habitat,Biomass of anemones
-aleutian,Habitat,Biomass of sea pens
-aleutian,Jellyfish,Jellyfish biomass from bottom trawl surveys
-aleutian,Salmon,Pink salmon abundance and biomass (biennial)
-aleutian,Groundfish,Length-weight residuals (body condition index)
-aleutian,Groundfish,"Mean weighted distribution by depth, temperature, geographic position"
-aleutian,Benthic Nontarget,Biomass of eelpouts
-aleutian,Benthic Nontarget,Biomass of poachers
-aleutian,Benthic Nontarget,Biomass of shrimps
-aleutian,Benthic Nontarget,Biomass of sea stars
-aleutian,Seabirds,Hatch dates
-aleutian,Seabirds,Reproductive success
-aleutian,Seabirds,Diet composition
-aleutian,Seabirds,Beached birds
-aleutian,Seabirds,Seabird bycatch mortality by species and gear type
-aleutian,Marine Mammals,Non-pup and pup counts at rookeries
-aleutian,Marine Mammals,Number and species of stranded marine mammals
-aleutian,Ecosystem or Community,Inverse CV of total groundfish biomass
-aleutian,Ecosystem or Community,Biomass-weighted mean length
-aleutian,Ecosystem or Community,Biomass-weighted mean lifespan
-aleutian,Disease Ecology,PST levels in mussels; toxic algal species presence
-aleutian,Fishing Human Dimensions,Bycatch of jellyfish
-aleutian,Fishing Human Dimensions,Bycatch of epifauna
-aleutian,Fishing Human Dimensions,Bycatch of invertebrates
-aleutian,Sustainability,Overfishing/overfished status full BSAI; biomass relative to BMSY
-calcurrent,Climate and Ocean Drivers,Oceanic Niño Index (ONI)
-calcurrent,Climate and Ocean Drivers,Pacific Decadal Oscillation (PDO)
-calcurrent,Climate and Ocean Drivers,North Pacific Gyre Oscillation (NPGO)
-calcurrent,Climate and Ocean Drivers,Sea Surface Temperature
-calcurrent,Climate and Ocean Drivers,Coastal Upwelling Transport Index (CUTI)
-calcurrent,Climate and Ocean Drivers,Biologically Effective Upwelling Transport Index (BEUTI)
-calcurrent,Climate and Ocean Drivers,Habitat Compression Index (HCI)
-calcurrent,Climate and Ocean Drivers,Dissolved Oxygen (Hypoxia)
-calcurrent,Climate and Ocean Drivers,Ocean Acidification (Aragonite Saturation)
-calcurrent,Climate and Ocean Drivers,Snow-Water Equivalent (SWE)
-calcurrent,Climate and Ocean Drivers,Streamflow and Stream Temperature
-calcurrent,Copepods and Krill,Northern Copepod Biomass Anomaly
-calcurrent,Copepods and Krill,Krill (Euphausia pacifica) Length and Biomass
-calcurrent,CPS and Regional Forage,Coastwide CPS Abundance
-calcurrent,CPS and Regional Forage,Northern CCE Forage (JSOES)
-calcurrent,CPS and Regional Forage,Central CCE Forage (RREAS)
-calcurrent,Salmon Indicators,Juvenile Salmon Abundance (CPUE)
-calcurrent,Salmon Indicators,Columbia Basin Chinook Stoplight Table
-calcurrent,Salmon Indicators,California Chinook Stoplight Table
-calcurrent,Groundfish,Juvenile Groundfish Abundance
-calcurrent,Groundfish,Groundfish Distribution (Center of Gravity)
-calcurrent,Highly Migratory Species,HMS Spawning Stock Biomass
-calcurrent,Highly Migratory Species,HMS Diet Composition
-calcurrent,Seabird Indicators,Seabird Fledgling Production
-calcurrent,Seabird Indicators,Seabird Diet Composition
-calcurrent,Seabird Indicators,Seabird Mortality Events
-calcurrent,Marine Mammals,California Sea Lion Pup Counts
-calcurrent,Marine Mammals,Whale Entanglements
-calcurrent,Harmful Algal Blooms,Domoic Acid Concentrations
-calcurrent,Human Wellbeing,Community Social Vulnerability Index (CSVI)
-calcurrent,Human Wellbeing,Fishery Revenue Diversification (ESI)
-calcurrent,Human Wellbeing,Fisheries Participation Networks
-calcurrent,Fishing Activities,Commercial Landings by Fishery
-calcurrent,Fishing Activities,Recreational Landings
-caribbean,Climate Indicators,North Atlantic Oscillation (NAO)
-caribbean,Climate Indicators,Atlantic Multidecadal Oscillation (AMO)
-caribbean,Climate Indicators,US Caribbean SST
-caribbean,Ocean Temperature and Sea Level,US Caribbean Sea Level
-caribbean,Ocean Temperature and Sea Level,US Caribbean SST
-caribbean,Marine Heatwaves,Caribbean Heatwave Intensity
-caribbean,Marine Heatwaves,Caribbean Heatwave Area
-caribbean,Ocean Chemistry,Caribbean pCO2
-caribbean,Ocean Chemistry,Caribbean pH
-caribbean,Ocean Chemistry,Caribbean Aragonite Saturation State
-caribbean,Primary Production,US Caribbean Chlorophyll-a
-caribbean,Coral Reef Ecosystems,Coral Reefs - Puerto Rico
-caribbean,Coral Reef Ecosystems,Coral Reefs - US Virgin Islands
-caribbean,Fisheries,US Caribbean Overfished Stocks
-caribbean,Socioeconomic,US Caribbean Total Coastal Employment
-caribbean,Socioeconomic,US Caribbean Billion Dollar Disasters
-Eastern Bering Sea,Physical Environment,North Pacific Index (NPI)
-Eastern Bering Sea,Physical Environment,Aleutian Low Pressure System Strength
-Eastern Bering Sea,Physical Environment,Aleutian Low Pressure System Location
-Eastern Bering Sea,Physical Environment,Sea Ice Extent
-Eastern Bering Sea,Physical Environment,Sea Ice Thickness
-Eastern Bering Sea,Physical Environment,Sea Surface Temperature (SST)
-Eastern Bering Sea,Physical Environment,Bottom Temperature
-Eastern Bering Sea,Physical Environment,Cold Pool Extent (<2°C)
-Eastern Bering Sea,Physical Environment,Cold Pool Extent (<0°C)
-Eastern Bering Sea,Physical Environment,Surface Wind Speed and Direction
-Eastern Bering Sea,Physical Environment,Along-shelf Wind Component
-Eastern Bering Sea,Physical Environment,Cross-shelf Wind Component
-Eastern Bering Sea,Habitat,Sponge Biomass
-Eastern Bering Sea,Habitat,Sea Anemone Biomass
-Eastern Bering Sea,Habitat,Sea Pen Biomass
-Eastern Bering Sea,Primary Production,St. Paul Island Chlorophyll-a
-Eastern Bering Sea,Primary Production,Mooring M2 Chlorophyll-a
-Eastern Bering Sea,Primary Production,Proportion of Open Water Blooms
-Eastern Bering Sea,Primary Production,Spring Bloom Timing
-Eastern Bering Sea,Zooplankton,Large Copepod Abundance (Calanus spp.)
-Eastern Bering Sea,Zooplankton,Small Copepod Abundance
-Eastern Bering Sea,Zooplankton,Large Copepod Lipid Content
-Eastern Bering Sea,Zooplankton,Euphausiid Biomass
-Eastern Bering Sea,Zooplankton,Euphausiid Lipid Content
-Eastern Bering Sea,Zooplankton,Continuous Plankton Recorder Indices
-Eastern Bering Sea,Jellyfish,Jellyfish Surface Trawl CPUE
-Eastern Bering Sea,Jellyfish,Jellyfish Bottom Trawl Biomass
-Eastern Bering Sea,Ichthyoplankton,Walleye Pollock Larval Abundance
-Eastern Bering Sea,Ichthyoplankton,Pacific Cod Larval Abundance
-Eastern Bering Sea,Ichthyoplankton,Northern Rock Sole Larval Abundance
-Eastern Bering Sea,Ichthyoplankton,Southern Rock Sole Larval Abundance
-Eastern Bering Sea,Ichthyoplankton,Rockfish Larval Abundance
-Eastern Bering Sea,Ichthyoplankton,Walleye Pollock Larval Condition
-Eastern Bering Sea,Forage Fish,Age-0 Pollock Surface Trawl CPUE
-Eastern Bering Sea,Forage Fish,Age-0 Pollock Vertical Distribution
-Eastern Bering Sea,Forage Fish,Age-0 Pollock Weight
-Eastern Bering Sea,Forage Fish,Age-0 Pollock Energy Density
-Eastern Bering Sea,Forage Fish,Age-0 Pollock Lipid Content
-Eastern Bering Sea,Forage Fish,Pacific Herring Surface Trawl CPUE
-Eastern Bering Sea,Forage Fish,Togiak Herring Biomass
-Eastern Bering Sea,Forage Fish,Capelin Surface Trawl CPUE
-Eastern Bering Sea,Forage Fish,Pelagic Forage Fish Biomass
-Eastern Bering Sea,Forage Fish,Forage Fish DSEM Linkages
-Eastern Bering Sea,Salmon,Juvenile Sockeye Salmon Abundance
-Eastern Bering Sea,Salmon,Juvenile Chinook Salmon Abundance (NBS)
-Eastern Bering Sea,Salmon,Juvenile Chum Salmon Abundance (NBS)
-Eastern Bering Sea,Salmon,Juvenile Salmon Energy Density (SEBS)
-Eastern Bering Sea,Salmon,Juvenile Salmon Energy Density (NBS)
-Eastern Bering Sea,Salmon,Bristol Bay Sockeye Salmon Run Size
-Eastern Bering Sea,Salmon,Commercial Salmon Catch (Bering Sea)
-Eastern Bering Sea,Groundfish,Walleye Pollock Condition (length-weight)
-Eastern Bering Sea,Groundfish,Pacific Cod Condition (length-weight)
-Eastern Bering Sea,Groundfish,Arrowtooth Flounder Condition
-Eastern Bering Sea,Groundfish,Yellowfin Sole Condition
-Eastern Bering Sea,Groundfish,Flathead Sole Condition
-Eastern Bering Sea,Groundfish,Northern Rock Sole Condition
-Eastern Bering Sea,Groundfish,Alaska Plaice Condition
-Eastern Bering Sea,Groundfish,Walleye Pollock Diet Composition
-Eastern Bering Sea,Groundfish,Pacific Cod Diet Composition
-Eastern Bering Sea,Groundfish,Pacific Cod Snow Crab Consumption
-Eastern Bering Sea,Groundfish,Groundfish Thermal Experience
-Eastern Bering Sea,Groundfish,Groundfish Diet Energy Density
-Eastern Bering Sea,Groundfish,Groundfish Consumption Rate
-Eastern Bering Sea,Groundfish,Groundfish Scope for Growth
-Eastern Bering Sea,Groundfish,Age-1 Natural Mortality (CEATTLE)
-Eastern Bering Sea,Groundfish,Predation Mortality
-Eastern Bering Sea,Recruitment Predictions,Temperature Change Index
-Eastern Bering Sea,Recruitment Predictions,Surface Silicic Acid
-Eastern Bering Sea,Benthic Communities,Eelpout Biomass
-Eastern Bering Sea,Benthic Communities,Poacher Biomass
-Eastern Bering Sea,Benthic Communities,Sea Star Biomass
-Eastern Bering Sea,Benthic Communities,Bristol Bay Red King Crab Biomass
-Eastern Bering Sea,Benthic Communities,Pribilof Island Blue King Crab Biomass
-Eastern Bering Sea,Benthic Communities,St. Matthew Blue King Crab Biomass
-Eastern Bering Sea,Benthic Communities,Snow Crab Biomass
-Eastern Bering Sea,Benthic Communities,Tanner Crab Biomass
-Eastern Bering Sea,Seabirds,Common Murre Reproductive Success
-Eastern Bering Sea,Seabirds,Thick-billed Murre Reproductive Success
-Eastern Bering Sea,Seabirds,Black-legged Kittiwake Reproductive Success
-Eastern Bering Sea,Seabirds,Red-legged Kittiwake Reproductive Success
-Eastern Bering Sea,Seabirds,Least Auklet Reproductive Success
-Eastern Bering Sea,Seabirds,Red-faced Cormorant Reproductive Success
-Eastern Bering Sea,Seabirds,Multivariate Seabird Breeding Index
-Eastern Bering Sea,Seabirds,Beached Bird Abundance
-Eastern Bering Sea,Marine Mammals,Marine Mammal Stranding Events
-Eastern Bering Sea,Ecosystem Indicators,Mean Lifespan of Fish Community
-Eastern Bering Sea,Ecosystem Indicators,Mean Length of Fish Community
-Eastern Bering Sea,Ecosystem Indicators,Stability of Fish Biomass
-Eastern Bering Sea,Ecosystem Indicators,Borealization Index
-Eastern Bering Sea,Foraging Guilds,Motile Epifauna Biomass
-Eastern Bering Sea,Foraging Guilds,Benthic Forager Biomass
-Eastern Bering Sea,Foraging Guilds,Pelagic Forager Biomass
-Eastern Bering Sea,Foraging Guilds,Apex Predator Biomass
-Eastern Bering Sea,Emerging Stressors,Bottom Water pH
-Eastern Bering Sea,Emerging Stressors,Aragonite Saturation State
-Eastern Bering Sea,Emerging Stressors,Alexandrium Cell Concentration
-Eastern Bering Sea,Emerging Stressors,Paralytic Shellfish Toxin (Saxitoxin)
-Eastern Bering Sea,Emerging Stressors,Domoic Acid Concentration
-Eastern Bering Sea,Discards & Bycatch,Non-target Invertebrate Catch
-Eastern Bering Sea,Discards & Bycatch,Seabird Bycatch Estimates
-Eastern Bering Sea,Sustainability,Fish Stock Sustainability Index (FSSI)
-goa,Physical Environment - Climate,State of the North Pacific Ocean
-goa,Physical Environment - Climate,Wintertime Aleutian Low Index
-goa,Physical Environment - Climate,Seasonal Projections (NMME)
-goa,Physical Environment - Climate,Predicted Ocean Temperatures (Sitka Air Temperature)
-goa,Physical Environment - Ocean Temperature,Long-term SST trends (1900-2024)
-goa,Physical Environment - Ocean Temperature,Satellite-derived SST
-goa,Physical Environment - Ocean Temperature,Survey-based temperatures (surface and depth)
-goa,Physical Environment - Ocean Temperature,Marine Heatwave Status
-goa,Physical Environment - Ocean Transport,Eddy Kinetic Energy
-goa,Physical Environment - Ocean Transport,Papa Trajectory Index
-goa,Physical Environment - Ocean Transport,Northern GOA Oscillation/Downwelling Index
-goa,Physical Environment - Ocean Transport,Coastal Wind Patterns (April-May)
-goa,Habitat,Ocean Acidification (pH levels)
-goa,Habitat,Dissolved Oxygen
-goa,Primary Production,Satellite Chlorophyll-a
-goa,Primary Production,Seward Line Phytoplankton Size Index
-goa,Primary Production,GAK1 Mooring Oceanography
-goa,Zooplankton,Continuous Plankton Recorder
-goa,Zooplankton,Copepod Biomass and Community Size
-goa,Zooplankton,Euphausiid Biomass (Seward Line)
-goa,Zooplankton,Zooplankton Density (Icy Strait)
-goa,Zooplankton,Zooplankton Lipid Content
-goa,Forage Fish,Larval Fish Abundance
-goa,Forage Fish,Age-0 Pollock Body Condition
-goa,Forage Fish,Seabird Diet Composition
-goa,Forage Fish,Capelin Abundance Indices
-goa,Forage Fish,Herring Biomass (SE Alaska)
-goa,Forage Fish,Eulachon Returns
-goa,Salmon,Commercial Salmon Catch
-goa,Salmon,Juvenile Salmon Abundance/Condition (Icy Strait)
-goa,Salmon,Auke Creek Salmon Survival
-goa,Groundfish,Groundfish Body Condition
-goa,Groundfish,ADF&G Trawl Survey
-goa,Groundfish,Predation Mortality (CEATTLE model)
-goa,Groundfish,Survey Biomass Trends
-goa,Groundfish,Environmental Conditions Experienced by Groundfish
-goa,Groundfish,Groundfish Diets
-goa,Benthic Communities,Motile Epifauna Biomass
-goa,Benthic Communities,Structural Epifauna
-goa,Seabirds,Seabird Breeding Timing
-goa,Seabirds,Seabird Reproductive Success
-goa,Seabirds,Seabird Mortality Events
-goa,Seabirds,Seabird At-sea Distribution (Seward Line)
-goa,Marine Mammals,Humpback Whale Calving (Glacier Bay/Icy Strait)
-goa,Marine Mammals,Marine Mammal Strandings
-goa,Marine Mammals,Steller Sea Lion Population Trends
-goa,Prince William Sound,Intertidal Temperature
-goa,Prince William Sound,"Intertidal Communities (mussels, rockweed, sea stars)"
-goa,Prince William Sound,Prince William Sound Herring Biomass
-goa,Prince William Sound,Humpback Whale Fall Surveys (PWS)
-goa,Fishing Indicators,Groundfish Discards
-goa,Fishing Indicators,Non-target Species Catch
-goa,Fishing Indicators,Seabird Bycatch
-goa,Habitat Quality,Fishing Effects on Essential Fish Habitat
-goa,Sustainability,Fish Stock Sustainability Index (FSSI)
-goa,Sustainability,Surplus Production/Exploitation Rate
-goa,Disease & Toxins,Harmful Algal Blooms (PSP toxins)
-goa,Disease & Toxins,Mushy Halibut Syndrome Occurrence
-goa,Ecosystem Community Indicators,Foraging Guild Biomass
-goa,Ecosystem Community Indicators,Community Stability
-goa,Ecosystem Community Indicators,Mean Length/Lifespan of Fish Community
-goa,Ecosystem Community Indicators,Species Richness/Diversity
-goa,Citizen Science,Skipper Science Observations
-gom,Climate Drivers,Atlantic Multidecadal Oscillation (AMO)
-gom,Climate Drivers,Sea Surface Temperature (SST)
-gom,Climate Drivers,Sea Level Rise
-gom,Physical and Chemical Pressures,Eutrophication (Nutrient Loading)
-gom,Physical and Chemical Pressures,Hypoxia (Bottom Dissolved Oxygen)
-gom,Physical and Chemical Pressures,Ocean Acidification (pH)
-gom,Habitat State,Areal Extent of Estuarine Habitats (Seagrass)
-gom,Habitat State,Artificial Structures (Reefs and Platforms)
-gom,Habitat State,Wetland Land Use and Land Cover
-gom,Lower Trophic States,Net Primary Productivity (NPP)
-gom,Lower Trophic States,Zooplankton Biomass
-gom,Lower Trophic States,Forage Fish Abundance (Menhaden)
-gom,Upper Trophic States,Upper Trophic Level Biodiversity (Species Richness)
-gom,Upper Trophic States,Mean Trophic Level
-gom,Upper Trophic States,Overfishing Status
-gom,Ecosystem Services,Abundance of Economically Important Species
-gom,Ecosystem Services,Bird Abundance (5 waterbird species)
-gom,Human Dimensions,Human Population
-gom,Human Dimensions,Population Density
-gom,Human Dimensions,Coastal Urban Land Use
-gom,Human Dimensions,Total Ocean Economy (Employment)
-gom,Human Dimensions,Total Ocean Economy (GDP)
-gom,Human Dimensions,Commercial Landings
-gom,Human Dimensions,Commercial Revenues
-gom,Human Dimensions,Social Connectedness
-gom,Human Dimensions,Commercial Fishing Engagement
-gom,Human Dimensions,Commercial Fishing Reliance
-gom,Human Dimensions,Recreational Fishing Engagement
-gom,Human Dimensions,Recreational Fishing Effort
-hawaii,Human Connections,Population density and growth
-hawaii,Human Connections,Resource use participation rates
-hawaii,Human Connections,Awareness of threats
-hawaii,Human Connections,Perceptions of ecosystem status and trends
-hawaii,Small Boat Commercial Fishers,Fishing Engagement Index (FEI)
-hawaii,Small Boat Commercial Fishers,Regional Quotient for revenue
-hawaii,Small Boat Commercial Fishers,Total catch by fishery
-hawaii,Small Boat Commercial Fishers,Catch per trip
-hawaii,Small Boat Commercial Fishers,Spatial distribution of catch
-hawaii,Coral Reefs and Reef Fish,Hard coral cover (%)
-hawaii,Coral Reefs and Reef Fish,Calcifiers cover (%)
-hawaii,Coral Reefs and Reef Fish,Reef-builder ratio
-hawaii,Coral Reefs and Reef Fish,Total fish biomass (kg/ha)
-hawaii,Coral Reefs and Reef Fish,Herbivore biomass (kg/ha)
-hawaii,Coral Reefs and Reef Fish,Resource fish biomass (kg/ha)
-hawaii,Climate and Ocean,El Niño-Southern Oscillation (ENSO) index
-hawaii,Climate and Ocean,Pacific Decadal Oscillation (PDO) index
-hawaii,Climate and Ocean,Annual rainfall and peak events (mm)
-hawaii,Climate and Ocean,Brown water advisories (count/year)
-hawaii,Climate and Ocean,Sea level rise (m)
-hawaii,Climate and Ocean,Sea surface temperature (°C)
-hawaii,Human Impacts,Cumulative impact scores
-hawaii,Human Impacts,Individual stressor intensities
-hawaii,Vulnerability of Coral Reefs to Climate Change,Projected timing of annual severe bleaching (year)
-hawaii,Vulnerability of Coral Reefs to Climate Change,Climate vulnerability scores
-hawaii,Vulnerability of Coral Reefs to Climate Change,Reef resilience assessments
-ma,Seafood Production,Total commercial landings
-ma,Seafood Production,Total U.S. seafood landings
-ma,Seafood Production,MAFMC managed U.S. seafood landings
-ma,Seafood Production,Landings by feeding guild
-ma,Seafood Production,Total Community Climate Vulnerability of landings
-ma,Seafood Production,Recreational harvest
-ma,Seafood Production,Recreational shark landings
-ma,Seafood Production,"Stock status (F/Fmsy, B/Bmsy)"
-ma,Seafood Production,Survey biomass by feeding guild
-ma,Commercial Profits,Total revenue
-ma,Commercial Profits,MAFMC managed species revenue
-ma,Commercial Profits,Bennet Indicator (price vs volume)
-ma,Commercial Profits,Revenue by feeding guild
-ma,Commercial Profits,Total Community Climate Vulnerability of revenue
-ma,Recreational Opportunities,Angler trips (recreational effort)
-ma,Recreational Opportunities,Recreational fleet diversity
-ma,Stability,Commercial fleet count
-ma,Stability,Commercial fleet revenue diversity
-ma,Stability,Commercial species revenue diversity
-ma,Stability,Recreational species catch diversity
-ma,Stability,Total annual primary production
-ma,Stability,Zooplankton diversity (Shannon Index)
-ma,Stability,Adult fish diversity (expected number of species)
-ma,Stability,Fish community functional traits
-ma,Community Social and Climate Vulnerability,Commercial fishing engagement
-ma,Community Social and Climate Vulnerability,Commercial fishing per capita engagement
-ma,Community Social and Climate Vulnerability,Social vulnerability indices
-ma,Community Social and Climate Vulnerability,Recreational fishing engagement
-ma,Community Social and Climate Vulnerability,Recreational per capita engagement
-ma,Community Social and Climate Vulnerability,Community total climate vulnerability of revenue
-ma,Protected Species,Harbor porpoise bycatch
-ma,Protected Species,Gray seal bycatch
-ma,Protected Species,North Atlantic Right Whale abundance
-ma,Protected Species,North Atlantic Right Whale calf counts
-ma,Protected Species,Gray seal pup births
-ma,Protected Species,Unusual Mortality Events
-ma,Climate Risks - Managing Spatially,Fish distribution shifts (center of gravity)
-ma,Climate Risks - Managing Spatially,Marine mammal distribution shifts
-ma,Climate Risks - Managing Spatially,Forage fish distribution shifts
-ma,Climate Risks - Managing Spatially,Small copepod distribution
-ma,Climate Risks - Managing Spatially,Large copepod distribution
-ma,Climate Risks - Managing Spatially,Macrobenthos distribution
-ma,Climate Risks - Managing Spatially,Sea surface temperature
-ma,Climate Risks - Managing Spatially,Gulf Stream position
-ma,Climate Risks - Managing Seasonally,"Spawning timing shifts (haddock, yellowtail flounder)"
-ma,Climate Risks - Managing Seasonally,HMS and whale migration timing changes
-ma,Climate Risks - Managing Seasonally,Ocean summer length
-ma,Climate Risks - Managing Seasonally,Cold Pool temperature and extent
-ma,Climate Risks - Managing Seasonally,Cold Pool persistence
-ma,Climate Risks - Managing Seasonally,Phytoplankton bloom timing
-ma,Climate Risks - Setting Catch Limits,Fish productivity (small per large fish)
-ma,Climate Risks - Setting Catch Limits,Fish productivity (recruitment per SSB)
-ma,Climate Risks - Setting Catch Limits,Fish condition
-ma,Climate Risks - Setting Catch Limits,Forage fish energy density
-ma,Climate Risks - Setting Catch Limits,Forage fish biomass index
-ma,Climate Risks - Setting Catch Limits,Macrobenthos biomass
-ma,Climate Risks - Setting Catch Limits,Megabenthos biomass
-ma,Climate Risks - Setting Catch Limits,Primary production
-ma,Climate Risks - Setting Catch Limits,Zooplankton biomass (large copepods)
-ma,Climate Risks - Setting Catch Limits,Zooplankton biomass (small copepods)
-ma,Climate Risks - Setting Catch Limits,Zooplankton biomass (Euphausiids)
-ma,Climate Risks - Setting Catch Limits,Temperature extremes
-ma,Climate Risks - Setting Catch Limits,Marine heatwaves
-ma,Climate Risks - Setting Catch Limits,Ocean acidification (aragonite saturation)
-ma,Climate Risks - Setting Catch Limits,"Predator populations (sharks, seals)"
-ma,Offshore Wind Risks,Development timeline and lease areas
-ma,Offshore Wind Risks,MAFMC fishery revenue from lease areas
-ma,Offshore Wind Risks,MAFMC fishery landings from lease areas
-ma,Offshore Wind Risks,Port-level revenue from lease areas
-ma,Offshore Wind Risks,Community social vulnerability in wind areas
-ma,Offshore Wind Risks,Right whale habitat overlap
-ma,Offshore Wind Risks,Survey area overlap
-ma,2024 Highlights,Labrador Slope Water influx
-ma,2024 Highlights,Gulf Stream position anomaly
-ma,2024 Highlights,Species migration delays
-ma,2024 Highlights,Species redistribution
-ma,2024 Highlights,Chesapeake Bay conditions
-ma,2024 Highlights,Upwelling events New Jersey coast
-ma,2024 Highlights,Coccolithophore bloom south of Long Island
-ma,2024 Highlights,Whale aggregations Hudson Canyon
-ma,2024 Highlights,Ocean acidification extremes Mid-Atlantic
-ma,2024 Highlights,Scallop recruitment variability
-ne,Seafood Production,Total commercial landings
-ne,Seafood Production,Total U.S. seafood landings
-ne,Seafood Production,NEFMC managed seafood landings
-ne,Seafood Production,Landings by feeding guild
-ne,Seafood Production,Total Community Climate Vulnerability of landings
-ne,Seafood Production,Recreational harvest
-ne,Seafood Production,Recreational shark landings
-ne,Seafood Production,"Stock status (F/Fmsy, B/Bmsy)"
-ne,Seafood Production,Survey biomass by feeding guild
-ne,Commercial Profits,Total revenue
-ne,Commercial Profits,NEFMC managed species revenue
-ne,Commercial Profits,Bennet Indicator (price vs volume)
-ne,Commercial Profits,Revenue by feeding guild
-ne,Commercial Profits,Total Community Climate Vulnerability of revenue
-ne,Recreational Opportunities,Angler trips (recreational effort)
-ne,Recreational Opportunities,Recreational fleet diversity
-ne,Stability,Commercial fleet count
-ne,Stability,Commercial species revenue diversity
-ne,Stability,Recreational species catch diversity
-ne,Stability,Total annual primary production
-ne,Stability,Zooplankton diversity (Shannon Index)
-ne,Stability,Adult fish diversity (expected number of species)
-ne,Stability,Fish community functional traits - fecundity
-ne,Stability,Fish community functional traits - pace of life
-ne,Community Social and Climate Vulnerability,Commercial fishing engagement
-ne,Community Social and Climate Vulnerability,Commercial fishing per capita engagement
-ne,Community Social and Climate Vulnerability,Social vulnerability indices
-ne,Community Social and Climate Vulnerability,Recreational fishing engagement
-ne,Community Social and Climate Vulnerability,Recreational per capita engagement
-ne,Community Social and Climate Vulnerability,Community total climate vulnerability of revenue
-ne,Protected Species,Harbor porpoise bycatch
-ne,Protected Species,Gray seal bycatch
-ne,Protected Species,North Atlantic Right Whale abundance
-ne,Protected Species,North Atlantic Right Whale calf counts
-ne,Protected Species,Gray seal pup births
-ne,Protected Species,Unusual Mortality Events
-ne,Climate Risks - Managing Spatially,Fish distribution shifts (center of gravity)
-ne,Climate Risks - Managing Spatially,Marine mammal distribution shifts
-ne,Climate Risks - Managing Spatially,Forage fish distribution shifts
-ne,Climate Risks - Managing Spatially,Small copepod distribution
-ne,Climate Risks - Managing Spatially,Calanus finmarchicus distribution
-ne,Climate Risks - Managing Spatially,Macrobenthos distribution
-ne,Climate Risks - Managing Spatially,Sea surface temperature
-ne,Climate Risks - Managing Spatially,Gulf Stream position
-ne,Climate Risks - Managing Seasonally,Spawning timing shifts
-ne,Climate Risks - Managing Seasonally,HMS and whale migration timing changes
-ne,Climate Risks - Managing Seasonally,Ocean summer length
-ne,Climate Risks - Managing Seasonally,Cold Pool persistence
-ne,Climate Risks - Managing Seasonally,Phytoplankton bloom timing
-ne,Climate Risks - Managing Seasonally,Spawning-environment relationships
-ne,Climate Risks - Setting Catch Limits,Fish productivity (small per large fish)
-ne,Climate Risks - Setting Catch Limits,Fish productivity (recruitment per SSB)
-ne,Climate Risks - Setting Catch Limits,Common tern productivity
-ne,Climate Risks - Setting Catch Limits,Atlantic salmon return rates
-ne,Climate Risks - Setting Catch Limits,Fish condition
-ne,Climate Risks - Setting Catch Limits,Forage fish energy density
-ne,Climate Risks - Setting Catch Limits,Forage fish biomass
-ne,Climate Risks - Setting Catch Limits,Macrobenthos biomass
-ne,Climate Risks - Setting Catch Limits,Megabenthos biomass
-ne,Climate Risks - Setting Catch Limits,Zooplankton biomass and composition
-ne,Climate Risks - Setting Catch Limits,Calanus finmarchicus abundance
-ne,Climate Risks - Setting Catch Limits,Temperature extremes and marine heatwaves
-ne,Climate Risks - Setting Catch Limits,Ocean acidification
-ne,Climate Risks - Setting Catch Limits,Hypoxia
-ne,Climate Risks - Setting Catch Limits,"Predator populations (gray seals, HMS)"
-ne,Offshore Wind Risks,Development timeline and lease areas
-ne,Offshore Wind Risks,NEFMC fishery revenue from lease areas
-ne,Offshore Wind Risks,NEFMC fishery landings from lease areas
-ne,Offshore Wind Risks,Port-level revenue from lease areas
-ne,Offshore Wind Risks,Community social vulnerability in wind areas
-ne,Offshore Wind Risks,Right whale habitat overlap
-ne,Offshore Wind Risks,Survey area overlap
-ne,2024 Highlights,Labrador Slope Water influx
-ne,2024 Highlights,Gulf Stream position anomaly
-ne,2024 Highlights,Arctic Calanus presence
-ne,2024 Highlights,Species migration delays
-ne,2024 Highlights,Species redistribution
-ne,2024 Highlights,Chesapeake Bay conditions
-ne,2024 Highlights,Upwelling events and unusual blooms
-ne,2024 Highlights,Whale aggregations
-ne,2024 Highlights,Ocean acidification extremes
-ne,2024 Highlights,Scallop recruitment variability
-sa,Climate Drivers,Atlantic Multidecadal Oscillation (AMO)
-sa,Climate Drivers,North Atlantic Oscillation (NAO)
-sa,Climate Drivers,El Niño Southern Oscillation (ENSO)
-sa,Climate Drivers,North Atlantic Sea Surface Temperature Tripole
-sa,Climate Drivers,Atlantic Warm Pool (AWP)
-sa,Physical and Chemical Pressures,Sea surface temperature
-sa,Physical and Chemical Pressures,Bottom temperature
-sa,Physical and Chemical Pressures,Decadal temperature
-sa,Physical and Chemical Pressures,Florida Current transport
-sa,Physical and Chemical Pressures,Gulf Stream position
-sa,Physical and Chemical Pressures,Upwelling
-sa,Physical and Chemical Pressures,Coastal salinity
-sa,Physical and Chemical Pressures,Stream flow
-sa,Physical and Chemical Pressures,Nutrient loading
-sa,Physical and Chemical Pressures,Precipitation and drought
-sa,Physical and Chemical Pressures,Sea level rise
-sa,Physical and Chemical Pressures,Storms and hurricanes
-sa,Physical and Chemical Pressures,Ocean acidification
-sa,Habitat States,Wetlands and forests
-sa,Habitat States,Submerged aquatic vegetation (SAV)
-sa,Habitat States,Oyster reefs
-sa,Habitat States,Coral demographics
-sa,Habitat States,Coral bleaching
-sa,Lower Trophic Level States,Primary productivity
-sa,Lower Trophic Level States,Zooplankton
-sa,Lower Trophic Level States,Ichthyoplankton diversity and abundance
-sa,Lower Trophic Level States,Forage fish abundance
-sa,Upper Trophic Level States,Nearshore demersal fish diversity and abundance
-sa,Upper Trophic Level States,Offshore hard bottom fish diversity and abundance
-sa,Upper Trophic Level States,Coastal shark diversity and abundance
-sa,Upper Trophic Level States,Coral reef fish diversity and abundance
-sa,Upper Trophic Level States,Mean trophic level
-sa,Upper Trophic Level States,Life history parameters
-sa,Ecosystem Services,Biomass of economically important species
-sa,Ecosystem Services,Recruitment of economically important species
-sa,Ecosystem Services,Commercial landings and revenue
-sa,Ecosystem Services,Recreational landings and effort
-sa,Ecosystem Services,"Estuarine shrimp, crab, and oyster landings"
-sa,Ecosystem Services,Status of federally managed stocks
-sa,Ecosystem Services,Marine bird abundance
-sa,Ecosystem Services,Marine mammal strandings
-sa,Ecosystem Services,Sea turtle nest counts
-sa,Human Dimensions,Human population
-sa,Human Dimensions,Coastal and urban land use
-sa,Human Dimensions,Total ocean economy
-sa,Human Dimensions,Social connectedness
+Region,Year,Section,Indicator
+Aleutian Islands,2024,Biophysical,Sea Surface Temperature SST
+Aleutian Islands,2024,Biophysical,Sea Level Pressure SLP
+Aleutian Islands,2024,Biophysical,wind patterns
+Aleutian Islands,2024,Biophysical,NINO3.4
+Aleutian Islands,2024,Biophysical,PDO
+Aleutian Islands,2024,Biophysical,North Pacific Index
+Aleutian Islands,2024,Biophysical,NPGO
+Aleutian Islands,2024,Biophysical,Arctic Oscillation
+Aleutian Islands,2024,Biophysical,Aleutian Low Index
+Aleutian Islands,2024,Biophysical,NMME forecast models (1-5 month projections)
+Aleutian Islands,2024,Biophysical,Extended Reconstructed SST 1900-2024
+Aleutian Islands,2024,Biophysical,Daily SST
+Aleutian Islands,2024,Biophysical,MHW frequency
+Aleutian Islands,2024,Biophysical,MHW intensity
+Aleutian Islands,2024,Biophysical,MHW spatial extent
+Aleutian Islands,2024,Biophysical,Survey surface water temperatures
+Aleutian Islands,2024,Biophysical,Survey bottom water temperatures
+Aleutian Islands,2024,Biophysical,Eddy kinetic energy from satellite altimetry
+Aleutian Islands,2024,Biophysical,Mesozooplankton biomass
+Aleutian Islands,2024,Biophysical,diatom abundance
+Aleutian Islands,2024,Biophysical,copepod community size
+Aleutian Islands,2024,Habitat,Biomass of sponges
+Aleutian Islands,2024,Habitat,Biomass of corals
+Aleutian Islands,2024,Habitat,Biomass of anemones
+Aleutian Islands,2024,Habitat,Biomass of sea pens
+Aleutian Islands,2024,Jellyfish,Jellyfish biomass from bottom trawl surveys
+Aleutian Islands,2024,Salmon,Pink salmon abundance and biomass (biennial)
+Aleutian Islands,2024,Groundfish,Length-weight residuals (body condition index)
+Aleutian Islands,2024,Groundfish,"Mean weighted distribution by depth, temperature, geographic position"
+Aleutian Islands,2024,Benthic Nontarget,Biomass of eelpouts
+Aleutian Islands,2024,Benthic Nontarget,Biomass of poachers
+Aleutian Islands,2024,Benthic Nontarget,Biomass of shrimps
+Aleutian Islands,2024,Benthic Nontarget,Biomass of sea stars
+Aleutian Islands,2024,Seabirds,Hatch dates
+Aleutian Islands,2024,Seabirds,Reproductive success
+Aleutian Islands,2024,Seabirds,Diet composition
+Aleutian Islands,2024,Seabirds,Beached birds
+Aleutian Islands,2024,Seabirds,Seabird bycatch mortality by species and gear type
+Aleutian Islands,2024,Marine Mammals,Non-pup and pup counts at rookeries
+Aleutian Islands,2024,Marine Mammals,Number and species of stranded marine mammals
+Aleutian Islands,2024,Ecosystem or Community,Inverse CV of total groundfish biomass
+Aleutian Islands,2024,Ecosystem or Community,Biomass-weighted mean length
+Aleutian Islands,2024,Ecosystem or Community,Biomass-weighted mean lifespan
+Aleutian Islands,2024,Disease Ecology,PST levels in mussels; toxic algal species presence
+Aleutian Islands,2024,Fishing Human Dimensions,Bycatch of jellyfish
+Aleutian Islands,2024,Fishing Human Dimensions,Bycatch of epifauna
+Aleutian Islands,2024,Fishing Human Dimensions,Bycatch of invertebrates
+Aleutian Islands,2024,Sustainability,Overfishing/overfished status full BSAI; biomass relative to BMSY
+California Current,2025,Climate and Ocean Drivers,Oceanic Niño Index (ONI)
+California Current,2025,Climate and Ocean Drivers,Pacific Decadal Oscillation (PDO)
+California Current,2025,Climate and Ocean Drivers,North Pacific Gyre Oscillation (NPGO)
+California Current,2025,Climate and Ocean Drivers,Sea Surface Temperature
+California Current,2025,Climate and Ocean Drivers,Coastal Upwelling Transport Index (CUTI)
+California Current,2025,Climate and Ocean Drivers,Biologically Effective Upwelling Transport Index (BEUTI)
+California Current,2025,Climate and Ocean Drivers,Habitat Compression Index (HCI)
+California Current,2025,Climate and Ocean Drivers,Dissolved Oxygen (Hypoxia)
+California Current,2025,Climate and Ocean Drivers,Ocean Acidification (Aragonite Saturation)
+California Current,2025,Climate and Ocean Drivers,Snow-Water Equivalent (SWE)
+California Current,2025,Climate and Ocean Drivers,Streamflow and Stream Temperature
+California Current,2025,Copepods and Krill,Northern Copepod Biomass Anomaly
+California Current,2025,Copepods and Krill,Krill (Euphausia pacifica) Length and Biomass
+California Current,2025,CPS and Regional Forage,Coastwide CPS Abundance
+California Current,2025,CPS and Regional Forage,Northern CCE Forage (JSOES)
+California Current,2025,CPS and Regional Forage,Central CCE Forage (RREAS)
+California Current,2025,Salmon Indicators,Juvenile Salmon Abundance (CPUE)
+California Current,2025,Salmon Indicators,Columbia Basin Chinook Stoplight Table
+California Current,2025,Salmon Indicators,California Chinook Stoplight Table
+California Current,2025,Groundfish,Juvenile Groundfish Abundance
+California Current,2025,Groundfish,Groundfish Distribution (Center of Gravity)
+California Current,2025,Highly Migratory Species,HMS Spawning Stock Biomass
+California Current,2025,Highly Migratory Species,HMS Diet Composition
+California Current,2025,Seabird Indicators,Seabird Fledgling Production
+California Current,2025,Seabird Indicators,Seabird Diet Composition
+California Current,2025,Seabird Indicators,Seabird Mortality Events
+California Current,2025,Marine Mammals,California Sea Lion Pup Counts
+California Current,2025,Marine Mammals,Whale Entanglements
+California Current,2025,Harmful Algal Blooms,Domoic Acid Concentrations
+California Current,2025,Human Wellbeing,Community Social Vulnerability Index (CSVI)
+California Current,2025,Human Wellbeing,Fishery Revenue Diversification (ESI)
+California Current,2025,Human Wellbeing,Fisheries Participation Networks
+California Current,2025,Fishing Activities,Commercial Landings by Fishery
+California Current,2025,Fishing Activities,Recreational Landings
+Caribbean,2025,Climate Indicators,North Atlantic Oscillation (NAO)
+Caribbean,2025,Climate Indicators,Atlantic Multidecadal Oscillation (AMO)
+Caribbean,2025,Climate Indicators,US Caribbean SST
+Caribbean,2025,Ocean Temperature and Sea Level,US Caribbean Sea Level
+Caribbean,2025,Ocean Temperature and Sea Level,US Caribbean SST
+Caribbean,2025,Marine Heatwaves,Caribbean Heatwave Intensity
+Caribbean,2025,Marine Heatwaves,Caribbean Heatwave Area
+Caribbean,2025,Ocean Chemistry,Caribbean pCO2
+Caribbean,2025,Ocean Chemistry,Caribbean pH
+Caribbean,2025,Ocean Chemistry,Caribbean Aragonite Saturation State
+Caribbean,2025,Primary Production,US Caribbean Chlorophyll-a
+Caribbean,2025,Coral Reef Ecosystems,Coral Reefs - Puerto Rico
+Caribbean,2025,Coral Reef Ecosystems,Coral Reefs - US Virgin Islands
+Caribbean,2025,Fisheries,US Caribbean Overfished Stocks
+Caribbean,2025,Socioeconomic,US Caribbean Total Coastal Employment
+Caribbean,2025,Socioeconomic,US Caribbean Billion Dollar Disasters
+Eastern Bering Sea,2024,Physical Environment,North Pacific Index (NPI)
+Eastern Bering Sea,2024,Physical Environment,Aleutian Low Pressure System Strength
+Eastern Bering Sea,2024,Physical Environment,Aleutian Low Pressure System Location
+Eastern Bering Sea,2024,Physical Environment,Sea Ice Extent
+Eastern Bering Sea,2024,Physical Environment,Sea Ice Thickness
+Eastern Bering Sea,2024,Physical Environment,Sea Surface Temperature (SST)
+Eastern Bering Sea,2024,Physical Environment,Bottom Temperature
+Eastern Bering Sea,2024,Physical Environment,Cold Pool Extent (<2°C)
+Eastern Bering Sea,2024,Physical Environment,Cold Pool Extent (<0°C)
+Eastern Bering Sea,2024,Physical Environment,Surface Wind Speed and Direction
+Eastern Bering Sea,2024,Physical Environment,Along-shelf Wind Component
+Eastern Bering Sea,2024,Physical Environment,Cross-shelf Wind Component
+Eastern Bering Sea,2024,Habitat,Sponge Biomass
+Eastern Bering Sea,2024,Habitat,Sea Anemone Biomass
+Eastern Bering Sea,2024,Habitat,Sea Pen Biomass
+Eastern Bering Sea,2024,Primary Production,St. Paul Island Chlorophyll-a
+Eastern Bering Sea,2024,Primary Production,Mooring M2 Chlorophyll-a
+Eastern Bering Sea,2024,Primary Production,Proportion of Open Water Blooms
+Eastern Bering Sea,2024,Primary Production,Spring Bloom Timing
+Eastern Bering Sea,2024,Zooplankton,Large Copepod Abundance (Calanus spp.)
+Eastern Bering Sea,2024,Zooplankton,Small Copepod Abundance
+Eastern Bering Sea,2024,Zooplankton,Large Copepod Lipid Content
+Eastern Bering Sea,2024,Zooplankton,Euphausiid Biomass
+Eastern Bering Sea,2024,Zooplankton,Euphausiid Lipid Content
+Eastern Bering Sea,2024,Zooplankton,Continuous Plankton Recorder Indices
+Eastern Bering Sea,2024,Jellyfish,Jellyfish Surface Trawl CPUE
+Eastern Bering Sea,2024,Jellyfish,Jellyfish Bottom Trawl Biomass
+Eastern Bering Sea,2024,Ichthyoplankton,Walleye Pollock Larval Abundance
+Eastern Bering Sea,2024,Ichthyoplankton,Pacific Cod Larval Abundance
+Eastern Bering Sea,2024,Ichthyoplankton,Northern Rock Sole Larval Abundance
+Eastern Bering Sea,2024,Ichthyoplankton,Southern Rock Sole Larval Abundance
+Eastern Bering Sea,2024,Ichthyoplankton,Rockfish Larval Abundance
+Eastern Bering Sea,2024,Ichthyoplankton,Walleye Pollock Larval Condition
+Eastern Bering Sea,2024,Forage Fish,Age-0 Pollock Surface Trawl CPUE
+Eastern Bering Sea,2024,Forage Fish,Age-0 Pollock Vertical Distribution
+Eastern Bering Sea,2024,Forage Fish,Age-0 Pollock Weight
+Eastern Bering Sea,2024,Forage Fish,Age-0 Pollock Energy Density
+Eastern Bering Sea,2024,Forage Fish,Age-0 Pollock Lipid Content
+Eastern Bering Sea,2024,Forage Fish,Pacific Herring Surface Trawl CPUE
+Eastern Bering Sea,2024,Forage Fish,Togiak Herring Biomass
+Eastern Bering Sea,2024,Forage Fish,Capelin Surface Trawl CPUE
+Eastern Bering Sea,2024,Forage Fish,Pelagic Forage Fish Biomass
+Eastern Bering Sea,2024,Forage Fish,Forage Fish DSEM Linkages
+Eastern Bering Sea,2024,Salmon,Juvenile Sockeye Salmon Abundance
+Eastern Bering Sea,2024,Salmon,Juvenile Chinook Salmon Abundance (NBS)
+Eastern Bering Sea,2024,Salmon,Juvenile Chum Salmon Abundance (NBS)
+Eastern Bering Sea,2024,Salmon,Juvenile Salmon Energy Density (SEBS)
+Eastern Bering Sea,2024,Salmon,Juvenile Salmon Energy Density (NBS)
+Eastern Bering Sea,2024,Salmon,Bristol Bay Sockeye Salmon Run Size
+Eastern Bering Sea,2024,Salmon,Commercial Salmon Catch (Bering Sea)
+Eastern Bering Sea,2024,Groundfish,Walleye Pollock Condition (length-weight)
+Eastern Bering Sea,2024,Groundfish,Pacific Cod Condition (length-weight)
+Eastern Bering Sea,2024,Groundfish,Arrowtooth Flounder Condition
+Eastern Bering Sea,2024,Groundfish,Yellowfin Sole Condition
+Eastern Bering Sea,2024,Groundfish,Flathead Sole Condition
+Eastern Bering Sea,2024,Groundfish,Northern Rock Sole Condition
+Eastern Bering Sea,2024,Groundfish,Alaska Plaice Condition
+Eastern Bering Sea,2024,Groundfish,Walleye Pollock Diet Composition
+Eastern Bering Sea,2024,Groundfish,Pacific Cod Diet Composition
+Eastern Bering Sea,2024,Groundfish,Pacific Cod Snow Crab Consumption
+Eastern Bering Sea,2024,Groundfish,Groundfish Thermal Experience
+Eastern Bering Sea,2024,Groundfish,Groundfish Diet Energy Density
+Eastern Bering Sea,2024,Groundfish,Groundfish Consumption Rate
+Eastern Bering Sea,2024,Groundfish,Groundfish Scope for Growth
+Eastern Bering Sea,2024,Groundfish,Age-1 Natural Mortality (CEATTLE)
+Eastern Bering Sea,2024,Groundfish,Predation Mortality
+Eastern Bering Sea,2024,Recruitment Predictions,Temperature Change Index
+Eastern Bering Sea,2024,Recruitment Predictions,Surface Silicic Acid
+Eastern Bering Sea,2024,Benthic Communities,Eelpout Biomass
+Eastern Bering Sea,2024,Benthic Communities,Poacher Biomass
+Eastern Bering Sea,2024,Benthic Communities,Sea Star Biomass
+Eastern Bering Sea,2024,Benthic Communities,Bristol Bay Red King Crab Biomass
+Eastern Bering Sea,2024,Benthic Communities,Pribilof Island Blue King Crab Biomass
+Eastern Bering Sea,2024,Benthic Communities,St. Matthew Blue King Crab Biomass
+Eastern Bering Sea,2024,Benthic Communities,Snow Crab Biomass
+Eastern Bering Sea,2024,Benthic Communities,Tanner Crab Biomass
+Eastern Bering Sea,2024,Seabirds,Common Murre Reproductive Success
+Eastern Bering Sea,2024,Seabirds,Thick-billed Murre Reproductive Success
+Eastern Bering Sea,2024,Seabirds,Black-legged Kittiwake Reproductive Success
+Eastern Bering Sea,2024,Seabirds,Red-legged Kittiwake Reproductive Success
+Eastern Bering Sea,2024,Seabirds,Least Auklet Reproductive Success
+Eastern Bering Sea,2024,Seabirds,Red-faced Cormorant Reproductive Success
+Eastern Bering Sea,2024,Seabirds,Multivariate Seabird Breeding Index
+Eastern Bering Sea,2024,Seabirds,Beached Bird Abundance
+Eastern Bering Sea,2024,Marine Mammals,Marine Mammal Stranding Events
+Eastern Bering Sea,2024,Ecosystem Indicators,Mean Lifespan of Fish Community
+Eastern Bering Sea,2024,Ecosystem Indicators,Mean Length of Fish Community
+Eastern Bering Sea,2024,Ecosystem Indicators,Stability of Fish Biomass
+Eastern Bering Sea,2024,Ecosystem Indicators,Borealization Index
+Eastern Bering Sea,2024,Foraging Guilds,Motile Epifauna Biomass
+Eastern Bering Sea,2024,Foraging Guilds,Benthic Forager Biomass
+Eastern Bering Sea,2024,Foraging Guilds,Pelagic Forager Biomass
+Eastern Bering Sea,2024,Foraging Guilds,Apex Predator Biomass
+Eastern Bering Sea,2024,Emerging Stressors,Bottom Water pH
+Eastern Bering Sea,2024,Emerging Stressors,Aragonite Saturation State
+Eastern Bering Sea,2024,Emerging Stressors,Alexandrium Cell Concentration
+Eastern Bering Sea,2024,Emerging Stressors,Paralytic Shellfish Toxin (Saxitoxin)
+Eastern Bering Sea,2024,Emerging Stressors,Domoic Acid Concentration
+Eastern Bering Sea,2024,Discards & Bycatch,Non-target Invertebrate Catch
+Eastern Bering Sea,2024,Discards & Bycatch,Seabird Bycatch Estimates
+Eastern Bering Sea,2024,Sustainability,Fish Stock Sustainability Index (FSSI)
+Gulf of Alaska,2024,Physical Environment - Climate,State of the North Pacific Ocean
+Gulf of Alaska,2024,Physical Environment - Climate,Wintertime Aleutian Low Index
+Gulf of Alaska,2024,Physical Environment - Climate,Seasonal Projections (NMME)
+Gulf of Alaska,2024,Physical Environment - Climate,Predicted Ocean Temperatures (Sitka Air Temperature)
+Gulf of Alaska,2024,Physical Environment - Ocean Temperature,Long-term SST trends (1900-2024)
+Gulf of Alaska,2024,Physical Environment - Ocean Temperature,Satellite-derived SST
+Gulf of Alaska,2024,Physical Environment - Ocean Temperature,Survey-based temperatures (surface and depth)
+Gulf of Alaska,2024,Physical Environment - Ocean Temperature,Marine Heatwave Status
+Gulf of Alaska,2024,Physical Environment - Ocean Transport,Eddy Kinetic Energy
+Gulf of Alaska,2024,Physical Environment - Ocean Transport,Papa Trajectory Index
+Gulf of Alaska,2024,Physical Environment - Ocean Transport,Northern GOA Oscillation/Downwelling Index
+Gulf of Alaska,2024,Physical Environment - Ocean Transport,Coastal Wind Patterns (April-May)
+Gulf of Alaska,2024,Habitat,Ocean Acidification (pH levels)
+Gulf of Alaska,2024,Habitat,Dissolved Oxygen
+Gulf of Alaska,2024,Primary Production,Satellite Chlorophyll-a
+Gulf of Alaska,2024,Primary Production,Seward Line Phytoplankton Size Index
+Gulf of Alaska,2024,Primary Production,GAK1 Mooring Oceanography
+Gulf of Alaska,2024,Zooplankton,Continuous Plankton Recorder
+Gulf of Alaska,2024,Zooplankton,Copepod Biomass and Community Size
+Gulf of Alaska,2024,Zooplankton,Euphausiid Biomass (Seward Line)
+Gulf of Alaska,2024,Zooplankton,Zooplankton Density (Icy Strait)
+Gulf of Alaska,2024,Zooplankton,Zooplankton Lipid Content
+Gulf of Alaska,2024,Forage Fish,Larval Fish Abundance
+Gulf of Alaska,2024,Forage Fish,Age-0 Pollock Body Condition
+Gulf of Alaska,2024,Forage Fish,Seabird Diet Composition
+Gulf of Alaska,2024,Forage Fish,Capelin Abundance Indices
+Gulf of Alaska,2024,Forage Fish,Herring Biomass (SE Alaska)
+Gulf of Alaska,2024,Forage Fish,Eulachon Returns
+Gulf of Alaska,2024,Salmon,Commercial Salmon Catch
+Gulf of Alaska,2024,Salmon,Juvenile Salmon Abundance/Condition (Icy Strait)
+Gulf of Alaska,2024,Salmon,Auke Creek Salmon Survival
+Gulf of Alaska,2024,Groundfish,Groundfish Body Condition
+Gulf of Alaska,2024,Groundfish,ADF&G Trawl Survey
+Gulf of Alaska,2024,Groundfish,Predation Mortality (CEATTLE model)
+Gulf of Alaska,2024,Groundfish,Survey Biomass Trends
+Gulf of Alaska,2024,Groundfish,Environmental Conditions Experienced by Groundfish
+Gulf of Alaska,2024,Groundfish,Groundfish Diets
+Gulf of Alaska,2024,Benthic Communities,Motile Epifauna Biomass
+Gulf of Alaska,2024,Benthic Communities,Structural Epifauna
+Gulf of Alaska,2024,Seabirds,Seabird Breeding Timing
+Gulf of Alaska,2024,Seabirds,Seabird Reproductive Success
+Gulf of Alaska,2024,Seabirds,Seabird Mortality Events
+Gulf of Alaska,2024,Seabirds,Seabird At-sea Distribution (Seward Line)
+Gulf of Alaska,2024,Marine Mammals,Humpback Whale Calving (Glacier Bay/Icy Strait)
+Gulf of Alaska,2024,Marine Mammals,Marine Mammal Strandings
+Gulf of Alaska,2024,Marine Mammals,Steller Sea Lion Population Trends
+Gulf of Alaska,2024,Prince William Sound,Intertidal Temperature
+Gulf of Alaska,2024,Prince William Sound,"Intertidal Communities (mussels, rockweed, sea stars)"
+Gulf of Alaska,2024,Prince William Sound,Prince William Sound Herring Biomass
+Gulf of Alaska,2024,Prince William Sound,Humpback Whale Fall Surveys (PWS)
+Gulf of Alaska,2024,Fishing Indicators,Groundfish Discards
+Gulf of Alaska,2024,Fishing Indicators,Non-target Species Catch
+Gulf of Alaska,2024,Fishing Indicators,Seabird Bycatch
+Gulf of Alaska,2024,Habitat Quality,Fishing Effects on Essential Fish Habitat
+Gulf of Alaska,2024,Sustainability,Fish Stock Sustainability Index (FSSI)
+Gulf of Alaska,2024,Sustainability,Surplus Production/Exploitation Rate
+Gulf of Alaska,2024,Disease & Toxins,Harmful Algal Blooms (PSP toxins)
+Gulf of Alaska,2024,Disease & Toxins,Mushy Halibut Syndrome Occurrence
+Gulf of Alaska,2024,Ecosystem Community Indicators,Foraging Guild Biomass
+Gulf of Alaska,2024,Ecosystem Community Indicators,Community Stability
+Gulf of Alaska,2024,Ecosystem Community Indicators,Mean Length/Lifespan of Fish Community
+Gulf of Alaska,2024,Ecosystem Community Indicators,Species Richness/Diversity
+Gulf of Alaska,2024,Citizen Science,Skipper Science Observations
+Gulf,2017,Climate Drivers,Atlantic Multidecadal Oscillation (AMO)
+Gulf,2017,Climate Drivers,Sea Surface Temperature (SST)
+Gulf,2017,Climate Drivers,Sea Level Rise
+Gulf,2017,Physical and Chemical Pressures,Eutrophication (Nutrient Loading)
+Gulf,2017,Physical and Chemical Pressures,Hypoxia (Bottom Dissolved Oxygen)
+Gulf,2017,Physical and Chemical Pressures,Ocean Acidification (pH)
+Gulf,2017,Habitat State,Areal Extent of Estuarine Habitats (Seagrass)
+Gulf,2017,Habitat State,Artificial Structures (Reefs and Platforms)
+Gulf,2017,Habitat State,Wetland Land Use and Land Cover
+Gulf,2017,Lower Trophic States,Net Primary Productivity (NPP)
+Gulf,2017,Lower Trophic States,Zooplankton Biomass
+Gulf,2017,Lower Trophic States,Forage Fish Abundance (Menhaden)
+Gulf,2017,Upper Trophic States,Upper Trophic Level Biodiversity (Species Richness)
+Gulf,2017,Upper Trophic States,Mean Trophic Level
+Gulf,2017,Upper Trophic States,Overfishing Status
+Gulf,2017,Ecosystem Services,Abundance of Economically Important Species
+Gulf,2017,Ecosystem Services,Bird Abundance (5 waterbird species)
+Gulf,2017,Human Dimensions,Human Population
+Gulf,2017,Human Dimensions,Population Density
+Gulf,2017,Human Dimensions,Coastal Urban Land Use
+Gulf,2017,Human Dimensions,Total Ocean Economy (Employment)
+Gulf,2017,Human Dimensions,Total Ocean Economy (GDP)
+Gulf,2017,Human Dimensions,Commercial Landings
+Gulf,2017,Human Dimensions,Commercial Revenues
+Gulf,2017,Human Dimensions,Social Connectedness
+Gulf,2017,Human Dimensions,Commercial Fishing Engagement
+Gulf,2017,Human Dimensions,Commercial Fishing Reliance
+Gulf,2017,Human Dimensions,Recreational Fishing Engagement
+Gulf,2017,Human Dimensions,Recreational Fishing Effort
+Hawaii,2022,Human Connections,Population density and growth
+Hawaii,2022,Human Connections,Resource use participation rates
+Hawaii,2022,Human Connections,Awareness of threats
+Hawaii,2022,Human Connections,Perceptions of ecosystem status and trends
+Hawaii,2022,Small Boat Commercial Fishers,Fishing Engagement Index (FEI)
+Hawaii,2022,Small Boat Commercial Fishers,Regional Quotient for revenue
+Hawaii,2022,Small Boat Commercial Fishers,Total catch by fishery
+Hawaii,2022,Small Boat Commercial Fishers,Catch per trip
+Hawaii,2022,Small Boat Commercial Fishers,Spatial distribution of catch
+Hawaii,2022,Coral Reefs and Reef Fish,Hard coral cover (%)
+Hawaii,2022,Coral Reefs and Reef Fish,Calcifiers cover (%)
+Hawaii,2022,Coral Reefs and Reef Fish,Reef-builder ratio
+Hawaii,2022,Coral Reefs and Reef Fish,Total fish biomass (kg/ha)
+Hawaii,2022,Coral Reefs and Reef Fish,Herbivore biomass (kg/ha)
+Hawaii,2022,Coral Reefs and Reef Fish,Resource fish biomass (kg/ha)
+Hawaii,2022,Climate and Ocean,El Niño-Southern Oscillation (ENSO) index
+Hawaii,2022,Climate and Ocean,Pacific Decadal Oscillation (PDO) index
+Hawaii,2022,Climate and Ocean,Annual rainfall and peak events (mm)
+Hawaii,2022,Climate and Ocean,Brown water advisories (count/year)
+Hawaii,2022,Climate and Ocean,Sea level rise (m)
+Hawaii,2022,Climate and Ocean,Sea surface temperature (°C)
+Hawaii,2022,Human Impacts,Cumulative impact scores
+Hawaii,2022,Human Impacts,Individual stressor intensities
+Hawaii,2022,Vulnerability of Coral Reefs to Climate Change,Projected timing of annual severe bleaching (year)
+Hawaii,2022,Vulnerability of Coral Reefs to Climate Change,Climate vulnerability scores
+Hawaii,2022,Vulnerability of Coral Reefs to Climate Change,Reef resilience assessments
+Mid-Atlantic,2025,Seafood Production,Total commercial landings
+Mid-Atlantic,2025,Seafood Production,Total U.S. seafood landings
+Mid-Atlantic,2025,Seafood Production,MAFMC managed U.S. seafood landings
+Mid-Atlantic,2025,Seafood Production,Landings by feeding guild
+Mid-Atlantic,2025,Seafood Production,Total Community Climate Vulnerability of landings
+Mid-Atlantic,2025,Seafood Production,Recreational harvest
+Mid-Atlantic,2025,Seafood Production,Recreational shark landings
+Mid-Atlantic,2025,Seafood Production,"Stock status (F/Fmsy, B/Bmsy)"
+Mid-Atlantic,2025,Seafood Production,Survey biomass by feeding guild
+Mid-Atlantic,2025,Commercial Profits,Total revenue
+Mid-Atlantic,2025,Commercial Profits,MAFMC managed species revenue
+Mid-Atlantic,2025,Commercial Profits,Bennet Indicator (price vs volume)
+Mid-Atlantic,2025,Commercial Profits,Revenue by feeding guild
+Mid-Atlantic,2025,Commercial Profits,Total Community Climate Vulnerability of revenue
+Mid-Atlantic,2025,Recreational Opportunities,Angler trips (recreational effort)
+Mid-Atlantic,2025,Recreational Opportunities,Recreational fleet diversity
+Mid-Atlantic,2025,Stability,Commercial fleet count
+Mid-Atlantic,2025,Stability,Commercial fleet revenue diversity
+Mid-Atlantic,2025,Stability,Commercial species revenue diversity
+Mid-Atlantic,2025,Stability,Recreational species catch diversity
+Mid-Atlantic,2025,Stability,Total annual primary production
+Mid-Atlantic,2025,Stability,Zooplankton diversity (Shannon Index)
+Mid-Atlantic,2025,Stability,Adult fish diversity (expected number of species)
+Mid-Atlantic,2025,Stability,Fish community functional traits
+Mid-Atlantic,2025,Community Social and Climate Vulnerability,Commercial fishing engagement
+Mid-Atlantic,2025,Community Social and Climate Vulnerability,Commercial fishing per capita engagement
+Mid-Atlantic,2025,Community Social and Climate Vulnerability,Social vulnerability indices
+Mid-Atlantic,2025,Community Social and Climate Vulnerability,Recreational fishing engagement
+Mid-Atlantic,2025,Community Social and Climate Vulnerability,Recreational per capita engagement
+Mid-Atlantic,2025,Community Social and Climate Vulnerability,Community total climate vulnerability of revenue
+Mid-Atlantic,2025,Protected Species,Harbor porpoise bycatch
+Mid-Atlantic,2025,Protected Species,Gray seal bycatch
+Mid-Atlantic,2025,Protected Species,North Atlantic Right Whale abundance
+Mid-Atlantic,2025,Protected Species,North Atlantic Right Whale calf counts
+Mid-Atlantic,2025,Protected Species,Gray seal pup births
+Mid-Atlantic,2025,Protected Species,Unusual Mortality Events
+Mid-Atlantic,2025,Climate Risks - Managing Spatially,Fish distribution shifts (center of gravity)
+Mid-Atlantic,2025,Climate Risks - Managing Spatially,Marine mammal distribution shifts
+Mid-Atlantic,2025,Climate Risks - Managing Spatially,Forage fish distribution shifts
+Mid-Atlantic,2025,Climate Risks - Managing Spatially,Small copepod distribution
+Mid-Atlantic,2025,Climate Risks - Managing Spatially,Large copepod distribution
+Mid-Atlantic,2025,Climate Risks - Managing Spatially,Macrobenthos distribution
+Mid-Atlantic,2025,Climate Risks - Managing Spatially,Sea surface temperature
+Mid-Atlantic,2025,Climate Risks - Managing Spatially,Gulf Stream position
+Mid-Atlantic,2025,Climate Risks - Managing Seasonally,"Spawning timing shifts (haddock, yellowtail flounder)"
+Mid-Atlantic,2025,Climate Risks - Managing Seasonally,HMS and whale migration timing changes
+Mid-Atlantic,2025,Climate Risks - Managing Seasonally,Ocean summer length
+Mid-Atlantic,2025,Climate Risks - Managing Seasonally,Cold Pool temperature and extent
+Mid-Atlantic,2025,Climate Risks - Managing Seasonally,Cold Pool persistence
+Mid-Atlantic,2025,Climate Risks - Managing Seasonally,Phytoplankton bloom timing
+Mid-Atlantic,2025,Climate Risks - Setting Catch Limits,Fish productivity (small per large fish)
+Mid-Atlantic,2025,Climate Risks - Setting Catch Limits,Fish productivity (recruitment per SSB)
+Mid-Atlantic,2025,Climate Risks - Setting Catch Limits,Fish condition
+Mid-Atlantic,2025,Climate Risks - Setting Catch Limits,Forage fish energy density
+Mid-Atlantic,2025,Climate Risks - Setting Catch Limits,Forage fish biomass index
+Mid-Atlantic,2025,Climate Risks - Setting Catch Limits,Macrobenthos biomass
+Mid-Atlantic,2025,Climate Risks - Setting Catch Limits,Megabenthos biomass
+Mid-Atlantic,2025,Climate Risks - Setting Catch Limits,Primary production
+Mid-Atlantic,2025,Climate Risks - Setting Catch Limits,Zooplankton biomass (large copepods)
+Mid-Atlantic,2025,Climate Risks - Setting Catch Limits,Zooplankton biomass (small copepods)
+Mid-Atlantic,2025,Climate Risks - Setting Catch Limits,Zooplankton biomass (Euphausiids)
+Mid-Atlantic,2025,Climate Risks - Setting Catch Limits,Temperature extremes
+Mid-Atlantic,2025,Climate Risks - Setting Catch Limits,Marine heatwaves
+Mid-Atlantic,2025,Climate Risks - Setting Catch Limits,Ocean acidification (aragonite saturation)
+Mid-Atlantic,2025,Climate Risks - Setting Catch Limits,"Predator populations (sharks, seals)"
+Mid-Atlantic,2025,Offshore Wind Risks,Development timeline and lease areas
+Mid-Atlantic,2025,Offshore Wind Risks,MAFMC fishery revenue from lease areas
+Mid-Atlantic,2025,Offshore Wind Risks,MAFMC fishery landings from lease areas
+Mid-Atlantic,2025,Offshore Wind Risks,Port-level revenue from lease areas
+Mid-Atlantic,2025,Offshore Wind Risks,Community social vulnerability in wind areas
+Mid-Atlantic,2025,Offshore Wind Risks,Right whale habitat overlap
+Mid-Atlantic,2025,Offshore Wind Risks,Survey area overlap
+Mid-Atlantic,2025,2024 Highlights,Labrador Slope Water influx
+Mid-Atlantic,2025,2024 Highlights,Gulf Stream position anomaly
+Mid-Atlantic,2025,2024 Highlights,Species migration delays
+Mid-Atlantic,2025,2024 Highlights,Species redistribution
+Mid-Atlantic,2025,2024 Highlights,Chesapeake Bay conditions
+Mid-Atlantic,2025,2024 Highlights,Upwelling events New Jersey coast
+Mid-Atlantic,2025,2024 Highlights,Coccolithophore bloom south of Long Island
+Mid-Atlantic,2025,2024 Highlights,Whale aggregations Hudson Canyon
+Mid-Atlantic,2025,2024 Highlights,Ocean acidification extremes Mid-Atlantic
+Mid-Atlantic,2025,2024 Highlights,Scallop recruitment variability
+New England,2025,Seafood Production,Total commercial landings
+New England,2025,Seafood Production,Total U.S. seafood landings
+New England,2025,Seafood Production,NEFMC managed seafood landings
+New England,2025,Seafood Production,Landings by feeding guild
+New England,2025,Seafood Production,Total Community Climate Vulnerability of landings
+New England,2025,Seafood Production,Recreational harvest
+New England,2025,Seafood Production,Recreational shark landings
+New England,2025,Seafood Production,"Stock status (F/Fmsy, B/Bmsy)"
+New England,2025,Seafood Production,Survey biomass by feeding guild
+New England,2025,Commercial Profits,Total revenue
+New England,2025,Commercial Profits,NEFMC managed species revenue
+New England,2025,Commercial Profits,Bennet Indicator (price vs volume)
+New England,2025,Commercial Profits,Revenue by feeding guild
+New England,2025,Commercial Profits,Total Community Climate Vulnerability of revenue
+New England,2025,Recreational Opportunities,Angler trips (recreational effort)
+New England,2025,Recreational Opportunities,Recreational fleet diversity
+New England,2025,Stability,Commercial fleet count
+New England,2025,Stability,Commercial species revenue diversity
+New England,2025,Stability,Recreational species catch diversity
+New England,2025,Stability,Total annual primary production
+New England,2025,Stability,Zooplankton diversity (Shannon Index)
+New England,2025,Stability,Adult fish diversity (expected number of species)
+New England,2025,Stability,Fish community functional traits - fecundity
+New England,2025,Stability,Fish community functional traits - pace of life
+New England,2025,Community Social and Climate Vulnerability,Commercial fishing engagement
+New England,2025,Community Social and Climate Vulnerability,Commercial fishing per capita engagement
+New England,2025,Community Social and Climate Vulnerability,Social vulnerability indices
+New England,2025,Community Social and Climate Vulnerability,Recreational fishing engagement
+New England,2025,Community Social and Climate Vulnerability,Recreational per capita engagement
+New England,2025,Community Social and Climate Vulnerability,Community total climate vulnerability of revenue
+New England,2025,Protected Species,Harbor porpoise bycatch
+New England,2025,Protected Species,Gray seal bycatch
+New England,2025,Protected Species,North Atlantic Right Whale abundance
+New England,2025,Protected Species,North Atlantic Right Whale calf counts
+New England,2025,Protected Species,Gray seal pup births
+New England,2025,Protected Species,Unusual Mortality Events
+New England,2025,Climate Risks - Managing Spatially,Fish distribution shifts (center of gravity)
+New England,2025,Climate Risks - Managing Spatially,Marine mammal distribution shifts
+New England,2025,Climate Risks - Managing Spatially,Forage fish distribution shifts
+New England,2025,Climate Risks - Managing Spatially,Small copepod distribution
+New England,2025,Climate Risks - Managing Spatially,Calanus finmarchicus distribution
+New England,2025,Climate Risks - Managing Spatially,Macrobenthos distribution
+New England,2025,Climate Risks - Managing Spatially,Sea surface temperature
+New England,2025,Climate Risks - Managing Spatially,Gulf Stream position
+New England,2025,Climate Risks - Managing Seasonally,Spawning timing shifts
+New England,2025,Climate Risks - Managing Seasonally,HMS and whale migration timing changes
+New England,2025,Climate Risks - Managing Seasonally,Ocean summer length
+New England,2025,Climate Risks - Managing Seasonally,Cold Pool persistence
+New England,2025,Climate Risks - Managing Seasonally,Phytoplankton bloom timing
+New England,2025,Climate Risks - Managing Seasonally,Spawning-environment relationships
+New England,2025,Climate Risks - Setting Catch Limits,Fish productivity (small per large fish)
+New England,2025,Climate Risks - Setting Catch Limits,Fish productivity (recruitment per SSB)
+New England,2025,Climate Risks - Setting Catch Limits,Common tern productivity
+New England,2025,Climate Risks - Setting Catch Limits,Atlantic salmon return rates
+New England,2025,Climate Risks - Setting Catch Limits,Fish condition
+New England,2025,Climate Risks - Setting Catch Limits,Forage fish energy density
+New England,2025,Climate Risks - Setting Catch Limits,Forage fish biomass
+New England,2025,Climate Risks - Setting Catch Limits,Macrobenthos biomass
+New England,2025,Climate Risks - Setting Catch Limits,Megabenthos biomass
+New England,2025,Climate Risks - Setting Catch Limits,Zooplankton biomass and composition
+New England,2025,Climate Risks - Setting Catch Limits,Calanus finmarchicus abundance
+New England,2025,Climate Risks - Setting Catch Limits,Temperature extremes and marine heatwaves
+New England,2025,Climate Risks - Setting Catch Limits,Ocean acidification
+New England,2025,Climate Risks - Setting Catch Limits,Hypoxia
+New England,2025,Climate Risks - Setting Catch Limits,"Predator populations (gray seals, HMS)"
+New England,2025,Offshore Wind Risks,Development timeline and lease areas
+New England,2025,Offshore Wind Risks,NEFMC fishery revenue from lease areas
+New England,2025,Offshore Wind Risks,NEFMC fishery landings from lease areas
+New England,2025,Offshore Wind Risks,Port-level revenue from lease areas
+New England,2025,Offshore Wind Risks,Community social vulnerability in wind areas
+New England,2025,Offshore Wind Risks,Right whale habitat overlap
+New England,2025,Offshore Wind Risks,Survey area overlap
+New England,2025,2024 Highlights,Labrador Slope Water influx
+New England,2025,2024 Highlights,Gulf Stream position anomaly
+New England,2025,2024 Highlights,Arctic Calanus presence
+New England,2025,2024 Highlights,Species migration delays
+New England,2025,2024 Highlights,Species redistribution
+New England,2025,2024 Highlights,Chesapeake Bay conditions
+New England,2025,2024 Highlights,Upwelling events and unusual blooms
+New England,2025,2024 Highlights,Whale aggregations
+New England,2025,2024 Highlights,Ocean acidification extremes
+New England,2025,2024 Highlights,Scallop recruitment variability
+South Atlantic,2021,Climate Drivers,Atlantic Multidecadal Oscillation (AMO)
+South Atlantic,2021,Climate Drivers,North Atlantic Oscillation (NAO)
+South Atlantic,2021,Climate Drivers,El Niño Southern Oscillation (ENSO)
+South Atlantic,2021,Climate Drivers,North Atlantic Sea Surface Temperature Tripole
+South Atlantic,2021,Climate Drivers,Atlantic Warm Pool (AWP)
+South Atlantic,2021,Physical and Chemical Pressures,Sea surface temperature
+South Atlantic,2021,Physical and Chemical Pressures,Bottom temperature
+South Atlantic,2021,Physical and Chemical Pressures,Decadal temperature
+South Atlantic,2021,Physical and Chemical Pressures,Florida Current transport
+South Atlantic,2021,Physical and Chemical Pressures,Gulf Stream position
+South Atlantic,2021,Physical and Chemical Pressures,Upwelling
+South Atlantic,2021,Physical and Chemical Pressures,Coastal salinity
+South Atlantic,2021,Physical and Chemical Pressures,Stream flow
+South Atlantic,2021,Physical and Chemical Pressures,Nutrient loading
+South Atlantic,2021,Physical and Chemical Pressures,Precipitation and drought
+South Atlantic,2021,Physical and Chemical Pressures,Sea level rise
+South Atlantic,2021,Physical and Chemical Pressures,Storms and hurricanes
+South Atlantic,2021,Physical and Chemical Pressures,Ocean acidification
+South Atlantic,2021,Habitat States,Wetlands and forests
+South Atlantic,2021,Habitat States,Submerged aquatic vegetation (SAV)
+South Atlantic,2021,Habitat States,Oyster reefs
+South Atlantic,2021,Habitat States,Coral demographics
+South Atlantic,2021,Habitat States,Coral bleaching
+South Atlantic,2021,Lower Trophic Level States,Primary productivity
+South Atlantic,2021,Lower Trophic Level States,Zooplankton
+South Atlantic,2021,Lower Trophic Level States,Ichthyoplankton diversity and abundance
+South Atlantic,2021,Lower Trophic Level States,Forage fish abundance
+South Atlantic,2021,Upper Trophic Level States,Nearshore demersal fish diversity and abundance
+South Atlantic,2021,Upper Trophic Level States,Offshore hard bottom fish diversity and abundance
+South Atlantic,2021,Upper Trophic Level States,Coastal shark diversity and abundance
+South Atlantic,2021,Upper Trophic Level States,Coral reef fish diversity and abundance
+South Atlantic,2021,Upper Trophic Level States,Mean trophic level
+South Atlantic,2021,Upper Trophic Level States,Life history parameters
+South Atlantic,2021,Ecosystem Services,Biomass of economically important species
+South Atlantic,2021,Ecosystem Services,Recruitment of economically important species
+South Atlantic,2021,Ecosystem Services,Commercial landings and revenue
+South Atlantic,2021,Ecosystem Services,Recreational landings and effort
+South Atlantic,2021,Ecosystem Services,"Estuarine shrimp, crab, and oyster landings"
+South Atlantic,2021,Ecosystem Services,Status of federally managed stocks
+South Atlantic,2021,Ecosystem Services,Marine bird abundance
+South Atlantic,2021,Ecosystem Services,Marine mammal strandings
+South Atlantic,2021,Ecosystem Services,Sea turtle nest counts
+South Atlantic,2021,Human Dimensions,Human population
+South Atlantic,2021,Human Dimensions,Coastal and urban land use
+South Atlantic,2021,Human Dimensions,Total ocean economy
+South Atlantic,2021,Human Dimensions,Social connectedness

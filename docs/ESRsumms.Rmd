@@ -276,6 +276,13 @@ sa_esr_indicators <- tibble(
   )
 )
 
+# add year and region name
+sa_esr_indicators <- sa_esr_indicators |>
+  dplyr::mutate(
+    year = 2021,
+    region = "South Atlantic")
+
+
 # # Display the dataframe
 # print(sa_esr_indicators)
 # 
@@ -646,6 +653,13 @@ gom_esr <- data.frame(
   
   stringsAsFactors = FALSE
 )
+
+# add year and region name
+gom_esr <- gom_esr |>
+  dplyr::mutate(
+    year = 2017,
+    region = "Gulf")
+
 
 # # Display the dataframe
 # print(gom_esr)
@@ -1316,6 +1330,13 @@ ma_soe_indicators <- data.frame(
   stringsAsFactors = FALSE
 )
 
+# add year and region name
+ma_soe_indicators <- ma_soe_indicators |>
+  dplyr::mutate(
+    year = 2025,
+    region = "Mid-Atlantic")
+
+
 # # Display the dataframe structure
 # str(ma_soe_indicators)
 # 
@@ -1532,6 +1553,13 @@ caribbean_esr <- data.frame(
   ),
   stringsAsFactors = FALSE
 )
+
+# add year and region name
+caribbean_esr <-caribbean_esr |>
+  dplyr::mutate(
+    year = 2025,
+    region = "Caribbean")
+
 
 # # Display the dataframe
 # print(caribbean_esr)
@@ -1923,6 +1951,13 @@ calcurrent_esr <- data.frame(
   
   stringsAsFactors = FALSE
 )
+
+# add year and region name
+calcurrent_esr <-calcurrent_esr |>
+  dplyr::mutate(
+    year = 2025,
+    region = "California Current")
+
 
 # # Display the dataframe
 # print(calcurrent_esr)
@@ -2371,6 +2406,13 @@ ne_soe_indicators <- data.frame(
   stringsAsFactors = FALSE
 )
 
+# add year and region name
+ne_soe_indicators <- ne_soe_indicators |>
+  dplyr::mutate(
+    year = 2025,
+    region = "New England")
+
+
 # # Display the dataframe structure
 # str(ne_soe_indicators)
 # 
@@ -2780,6 +2822,13 @@ aleutian_esr <- data.frame(
   
   stringsAsFactors = FALSE
 )
+
+# add year and region name
+aleutian_esr <- aleutian_esr |>
+  dplyr::mutate(
+    year = 2024,
+    region = "Aleutian Islands")
+
 
 # Display the dataframe
 # print(aleutian_esr)
@@ -3264,6 +3313,13 @@ goa_esr_indicators <- data.frame(
   
   stringsAsFactors = FALSE
 )
+
+# add year and region name
+goa_esr_indicators <- goa_esr_indicators |>
+  dplyr::mutate(
+    year = 2024,
+    region = "Gulf of Alaska")
+
 
 # # Display the dataframe
 # print(goa_esr_indicators)
@@ -4079,6 +4135,10 @@ hawaii_esr_indicators <- data.frame(
   stringsAsFactors = FALSE
 )
 
+hawaii_esr_indicators <- hawaii_esr_indicators |>
+  dplyr::mutate(year = 2022,
+                region = "Hawaii")
+
 # # Display the dataframe
 # print(hawaii_esr_indicators)
 # 
@@ -4128,7 +4188,7 @@ getinds <- function(esrobject){
    
   sectind <- dat |>
     dplyr::mutate(Region = region) |>
-    dplyr::select(Region, Section, Indicator)
+    dplyr::select(Region, Year = year, Section, Indicator)
   
   return(sectind)
     
@@ -4225,12 +4285,16 @@ Which ESRs are in which order?
 
 ```{r bigtable}
 
+sectioncounts <- compesrdat |>
+  dplyr::group_by(Region, Section) |>
+  dplyr::summarise(Nind = n())
+
 order <- compesrdat |>
   dplyr::group_by(Region) |>
   dplyr::select(Section) |>
   dplyr::distinct()
 
-flextable::flextable(order)
+flextable::flextable(sectioncounts)
 ```
 
 
