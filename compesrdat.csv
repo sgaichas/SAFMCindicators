@@ -81,22 +81,36 @@ California Current,2025,Human Wellbeing,Fishery Revenue Diversification (ESI)
 California Current,2025,Human Wellbeing,Fisheries Participation Networks
 California Current,2025,Fishing Activities,Commercial Landings by Fishery
 California Current,2025,Fishing Activities,Recreational Landings
-Caribbean,2025,Climate Indicators,North Atlantic Oscillation (NAO)
-Caribbean,2025,Climate Indicators,Atlantic Multidecadal Oscillation (AMO)
-Caribbean,2025,Climate Indicators,US Caribbean SST
-Caribbean,2025,Ocean Temperature and Sea Level,US Caribbean Sea Level
-Caribbean,2025,Ocean Temperature and Sea Level,US Caribbean SST
-Caribbean,2025,Marine Heatwaves,Caribbean Heatwave Intensity
-Caribbean,2025,Marine Heatwaves,Caribbean Heatwave Area
-Caribbean,2025,Ocean Chemistry,Caribbean pCO2
-Caribbean,2025,Ocean Chemistry,Caribbean pH
-Caribbean,2025,Ocean Chemistry,Caribbean Aragonite Saturation State
-Caribbean,2025,Primary Production,US Caribbean Chlorophyll-a
-Caribbean,2025,Coral Reef Ecosystems,Coral Reefs - Puerto Rico
-Caribbean,2025,Coral Reef Ecosystems,Coral Reefs - US Virgin Islands
-Caribbean,2025,Fisheries,US Caribbean Overfished Stocks
-Caribbean,2025,Socioeconomic,US Caribbean Total Coastal Employment
-Caribbean,2025,Socioeconomic,US Caribbean Billion Dollar Disasters
+Caribbean,2025,Food production,Abundance of economically important species
+Caribbean,2025,Food production,Pelagic:demersal ratio of landings
+Caribbean,2025,Food production,Maximum length in the landings
+Caribbean,2025,Food production,Commercial landings
+Caribbean,2025,Socioeconomic health,Commercial revenues
+Caribbean,2025,Socioeconomic health,Commercial fishing trips
+Caribbean,2025,Socioeconomic health,Economic activity
+Caribbean,2025,Socioeconomic health,Ocean economy
+Caribbean,2025,Equality,Commercial revenue distribution
+Caribbean,2025,Engagement and participation,Recreational landings
+Caribbean,2025,Engagement and participation,Commercial fishing engagement and reliance
+Caribbean,2025,Bycatch reduction,Changes in gear type
+Caribbean,2025,Governance,Regulatory trends
+Caribbean,2025,Governance,Species with informative catch limits
+Caribbean,2025,Governance,Education and outreach events
+Caribbean,2025,Governance,Enforcement actions
+Caribbean,2025,Protection of ecosystems,Coral cover and coral species diversity
+Caribbean,2025,Risks to meeting fishery management objectives,Sea surface temperature
+Caribbean,2025,Risks to meeting fishery management objectives,Coral bleaching stress
+Caribbean,2025,Risks to meeting fishery management objectives,Ocean acidification
+Caribbean,2025,Risks to meeting fishery management objectives,Hurricane activity
+Caribbean,2025,Risks to meeting fishery management objectives,Earthquake activity
+Caribbean,2025,Risks to meeting fishery management objectives,Point source pollution
+Caribbean,2025,Risks to meeting fishery management objectives,Turbidity
+Caribbean,2025,Risks to meeting fishery management objectives,Water quality
+Caribbean,2025,Risks to meeting fishery management objectives,Coastal development
+Caribbean,2025,Risks to meeting fishery management objectives,Primary productivity
+Caribbean,2025,Risks to meeting fishery management objectives,Sargassum inundation
+Caribbean,2025,Risks to meeting fishery management objectives,Market disturbances
+Caribbean,2025,Risks to meeting fishery management objectives,Human activity
 Eastern Bering Sea,2024,Physical Environment,North Pacific Index (NPI)
 Eastern Bering Sea,2024,Physical Environment,Aleutian Low Pressure System Strength
 Eastern Bering Sea,2024,Physical Environment,Aleutian Low Pressure System Location
