@@ -198,7 +198,7 @@ The Mid-Atlantic region gets a State of the Ecosystem (SOE) report each year tha
 
 To date, ecosystem indicators have been integrated into the operational black sea bass assessment and into research track models for black sea bass and bluefish. 
 
-The Council uses indicators from both the SOE and ESPs in an annual ecosystem-level risk assessment. This risk assessment has been used to identify priority fisheries for further analysis with conceptual modeling and managment strategy evaluation. The risk assessment was expaneded in 2024 to include additional risk elements, indicators, and risk criteria.
+The Council uses indicators from both the SOE and ESPs in an annual ecosystem-level risk assessment. This risk assessment has been used to identify priority fisheries for further analysis with conceptual modeling and managment strategy evaluation. The risk assessment was expanded in 2024 to include additional risk elements, indicators, and risk criteria.
 
 A climate vulnerability analysis for Northeast U.S. species has been published [@hare_vulnerability_2016], and is considered within the SSC's ABC deliberation process as part of ecosystem factors contributing to uncertainty in the OFL. Both community climate vulnerability [@colburn_indicators_2016] and habitat climate vulnerability [@farr_assessment_2021] have also been assessed in the Northeast U.S., and marine mammal climate vulnerability has been assessed for the entire Atlantic Coast [@lettrich_vulnerability_2023]. A habitat-species climate vulnerability crosswalk is also being considered during deliberations, but is not yet formally part of the OFL CV protocol. 
 
@@ -220,7 +220,7 @@ Current projects include "Developing a US Caribbean Hub to Operationalize EBFM i
 
 ESR and CVA [@quinlan_results_2023] exists, and marine mammal climate vulnerability has been assessed for the entire Atlantic Coast, including the Gulf [@lettrich_vulnerability_2023]. 
 
-Gulf FEP initially drafted by contractor in 2022, FEP also evaluated cooperative research and citizen science programs. Further development is in progress with the Council's ecosystem technical team
+Gulf FEP initially drafted by contractor in 2022, FEP also evaluated cooperative research and citizen science programs. Further development is in progress with the Council's ecosystem technical team. 
 Fishery Ecosystem Issue: red tide, going through FEI loop as an example identifying objectives, potential indicators, and uses
 
 
