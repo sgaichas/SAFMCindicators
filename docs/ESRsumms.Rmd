@@ -25,7 +25,7 @@ Prompts:
 
 # South Atlantic ESR
 
-## Summary
+## Summary {#sa-summary}
 
 This NOAA Ecosystem Status Report for the U.S. South Atlantic Region (2021) provides a comprehensive assessment of ecosystem health from North Carolina through the Florida Keys. The report synthesizes 154 indicators across seven categories to support ecosystem-based fisheries management.
 
@@ -386,7 +386,7 @@ sa_esr_indicators <- sa_esr_indicators |>
 
 # Gulf ESR
 
-## Summary
+## Summary {#gom-summary}
 
 This 2017 Gulf of Mexico Ecosystem Status Report provides a comprehensive assessment of the ecosystem to support ecosystem-based management. The report examines trends across physical, biological, and socioeconomic components using refined indicators from the original 2013 report.
 
@@ -723,7 +723,7 @@ gom_esr <- gom_esr |>
 
 # Mid-Atlantic State of the Ecosystem
 
-## Summary
+## Summary {#ma-summary}
 
 This 2025 State of the Ecosystem Report for the Mid-Atlantic provides a comprehensive assessment of ecosystem conditions to support the Mid-Atlantic Fishery Management Council (MAFMC). The report evaluates performance against fishery management objectives and identifies risks from climate change and offshore wind development.
 
@@ -813,7 +813,7 @@ The report emphasizes that climate-driven ecosystem changes create significant u
 
 # Mid Atlantic State of the Ecosystem (2)
 
-## Summary
+## Summary {#ma-summary-2}
 
 The 2025 State of the Ecosystem Report for the Mid-Atlantic evaluates performance against fishery management objectives and identifies risks to meeting those objectives. The report reveals mixed trends across multiple management goals.
 
@@ -1382,7 +1382,7 @@ ma_soe_indicators <- ma_soe_indicators |>
 
 # Caribbean ESR
 
-## Summary
+## Summary {#carib-summary}
 
 The Caribbean Ecosystem Status Report (April 2025) synthesizes diverse information sources to support ecosystem-based fisheries management in Puerto Rico and the U.S. Virgin Islands. The report tracks progress toward fishery management objectives while identifying risks that could impact these goals.
 
@@ -1554,7 +1554,7 @@ caribbean_esr <- caribbean_esr |>
 
 # California Current ESR
 
-## Summary
+## Summary {#calcur-summary}
 
 The 2024-2025 California Current Ecosystem Status Report synthesizes environmental, biological, economic, and social indicators to assess ecosystem health and inform fishery management. The California Current experienced a strong El Niño during winter/spring 2023-2024 that caused widespread warmer ocean temperatures and delayed spring upwelling by approximately two weeks in the central region. However, the system rapidly transitioned to favorable upwelling conditions, though large marine heatwaves again impacted the system during summer and fall.
 
@@ -1960,7 +1960,7 @@ calcurrent_esr <-calcurrent_esr |>
 
 # New England State of the Ecosystem
 
-## Summary
+## Summary {#ne-summary}
 
 The 2025 State of the Ecosystem Report for New England evaluates performance against fishery management objectives for Georges Bank and the Gulf of Maine. Both regions face significant challenges despite some positive indicators.
 
@@ -2391,7 +2391,7 @@ ne_soe_indicators <- ne_soe_indicators |>
 
 # Aleutian Islands ESR
 
-## Summary
+## Summary {#ai-summary}
 
 The 2024 Aleutian Islands Ecosystem Status Report reveals a gradient of ecosystem conditions from poor productivity in the west to high productivity in the east. Despite overall relaxation of multi-year warm conditions and a low abundance year in the biennial Kamchatka pink salmon cycle, groundfish condition remained poor across the ecosystem—unusual for a cooler year with fewer pink salmon. Winter sea surface temperatures were among the ten warmest on record, though strong winds and storminess during 2023-2024 contributed to cooler conditions during late spring and summer, with a deeper mixed layer that may have impacted prey availability.
 
@@ -2817,7 +2817,7 @@ aleutian_esr <- aleutian_esr |>
 
 # Gulf of Alaska ESR
 
-## Summary
+## Summary {#goa-summary}
 
 The 2024 Gulf of Alaska (GOA) Ecosystem Status Report provides a comprehensive assessment of marine ecosystem conditions to inform fishery management decisions. The GOA experienced moderate El Niño conditions during winter/spring 2023-2024, which brought warmer surface waters but had more moderate impacts than initially predicted due to its short duration, a weaker Aleutian Low, and eastward winds that tempered increased circulation.
 
@@ -3307,7 +3307,7 @@ goa_esr_indicators <- goa_esr_indicators |>
 
 # Eastern Bering Sea ESR
 
-## Summary
+## Summary {#ebs-summary}
 
 The 2024 Eastern Bering Sea (EBS) Ecosystem Status Report documents the transition from a prolonged warm period (2014-2021) to more average thermal conditions since 2021. The report synthesizes physical, biological, and socioeconomic indicators to inform fisheries management decisions by the North Pacific Fishery Management Council.
 
@@ -3509,7 +3509,7 @@ The FSSI tracks performance toward sustainable fisheries goals, documenting whet
 
 # Eastern Bering Sea Ecosystem Status Report 2024 (2)
 
-## Summary
+## Summary {#ebs-summary-2}
 
 This comprehensive report assesses the Eastern Bering Sea (EBS) ecosystem status and trends to inform fisheries management decisions by the North Pacific Fishery Management Council. The EBS has transitioned from the unprecedented warm period (2014-2021) to more neutral thermal conditions since 2021.
 
@@ -3881,7 +3881,7 @@ names(ebs_esr_indicators)[3] <- "Indicator"
 
 # Hawaii ESR
 
-## Summary
+## Summary {#hi-summary}
 
 The 2022 Hawai'i Ecosystem Status Report report assesses the health and trends of marine ecosystems across the main Hawaiian Islands (MHI) from 2010-2019, emphasizing the circular relationship between human communities and ocean environments. The population of approximately 1.5 million (20% increase since 2000) lives predominantly near the coast, with 83% within 5 km of the ocean. Tourism adds significant pressure, with 10.3 million visitors in 2019—6.7 times the resident population.
 
