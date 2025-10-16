@@ -3326,9 +3326,9 @@ The Northern Bering Sea showed signs of recovery from the warm period, with abov
 
 Looking forward, the National Multi-Model Ensemble projects near-normal sea surface temperature anomalies (within 0.25°C of normal) through spring 2025 as the system transitions to La Niña conditions. The report emphasizes that while thermal conditions have cooled to average, they have not returned to the cold conditions that historically favored large, lipid-rich copepods and euphausiids, partially explaining the lag in biological responses.
 
-### Section Headings and Ecosystem Indicators
+## Section Headings and Ecosystem Indicators
 
-#### **Physical Environment**
+### **Physical Environment**
 
 **Indicators:**
 - North Pacific Index (NPI)
@@ -3343,7 +3343,7 @@ These indicators affect fish distribution, recruitment success, and habitat suit
 
 ---
 
-#### **Habitat**
+### **Habitat**
 
 **Indicators:**
 - Structural epifauna biomass (sponges, sea anemones, sea pens)
@@ -3353,7 +3353,7 @@ Structural epifauna provide essential fish habitat and indicate ecosystem health
 
 ---
 
-#### **Primary Production**
+### **Primary Production**
 
 **Indicators:**
 - Chlorophyll-a concentrations (St. Paul Island, Mooring M2)
@@ -3364,7 +3364,7 @@ Primary production drives bottom-up ecosystem productivity. Bloom timing affects
 
 ---
 
-#### **Zooplankton**
+### **Zooplankton**
 
 **Indicators:**
 - Small and large copepod abundance
@@ -3376,7 +3376,7 @@ Zooplankton are critical prey for juvenile fish and forage species. Low abundanc
 
 ---
 
-#### **Jellyfish**
+### **Jellyfish**
 
 **Indicators:**
 - Jellyfish biomass from surface and bottom trawl surveys
@@ -3386,7 +3386,7 @@ High jellyfish abundance indicates competition with planktivorous fish for prey 
 
 ---
 
-#### **Ichthyoplankton**
+### **Ichthyoplankton**
 
 **Indicators:**
 - Larval fish abundance and distribution (pollock, Pacific cod, flatfish, rockfish)
@@ -3397,7 +3397,7 @@ Larval surveys provide early indicators of recruitment strength for commercial s
 
 ---
 
-#### **Forage Fish**
+### **Forage Fish**
 
 **Indicators:**
 - Age-0 pollock abundance, distribution, and condition
@@ -3410,7 +3410,7 @@ Forage fish are critical trophic links supporting commercial fisheries and prote
 
 ---
 
-#### **Groundfish**
+### **Groundfish**
 
 **Indicators:**
 - Length-weight residuals (condition) by species
@@ -3423,7 +3423,7 @@ Fish condition reflects food availability and environmental suitability, with im
 
 ---
 
-#### **Groundfish Recruitment Predictions**
+### **Groundfish Recruitment Predictions**
 
 **Indicators:**
 - Temperature Change Index (pollock)
@@ -3434,7 +3434,7 @@ These indicators help forecast recruitment 2-4 years in advance, improving stock
 
 ---
 
-#### **Benthic Communities**
+### **Benthic Communities**
 
 **Indicators:**
 - Miscellaneous benthic fauna (eelpouts, poachers, sea stars)
@@ -3445,7 +3445,7 @@ Benthic community trends indicate ecosystem productivity and habitat quality. Cr
 
 ---
 
-#### **Seabirds**
+### **Seabirds**
 
 **Indicators:**
 - Reproductive success and timing at colonies
@@ -3457,7 +3457,7 @@ Seabirds are indicators of forage fish availability and ecosystem productivity. 
 
 ---
 
-#### **Marine Mammals**
+### **Marine Mammals**
 
 **Indicators:**
 - Stranding reports by species
@@ -3467,7 +3467,7 @@ Unusual mortality events may indicate ecosystem problems (harmful algal blooms, 
 
 ---
 
-#### **Ecosystem/Community Indicators**
+### **Ecosystem/Community Indicators**
 
 **Indicators:**
 - Mean lifespan of fish community
@@ -3479,7 +3479,7 @@ Community-level metrics indicate whether fishing or environmental change is shif
 
 ---
 
-#### **Emerging Stressors**
+### **Emerging Stressors**
 
 **Indicators:**
 - Ocean acidification (pH, aragonite saturation)
@@ -3490,7 +3490,7 @@ Ocean acidification threatens calcifying organisms (crabs, pteropods) critical t
 
 ---
 
-#### **Discards and Non-Target Catch**
+### **Discards and Non-Target Catch**
 
 **Indicators:**
 - Non-target species catch (jellyfish, invertebrates, structural epifauna)
@@ -3501,7 +3501,7 @@ Monitoring non-target catch ensures compliance with ecosystem protection goals, 
 
 ---
 
-#### **Sustainability**
+### **Sustainability**
 
 **Indicators:**
 - Fish Stock Sustainability Index (FSSI)
