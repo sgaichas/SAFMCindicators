@@ -967,10 +967,10 @@ ma_soe_indicators <- data.frame(
     rep("Protected Species", 6),
     
     # Risks to Managing Spatially
-    rep("Climate Risks - Managing Spatially", 8),
+    rep("Climate Risks - Managing Spatially", 9),
     
     # Risks to Managing Seasonally
-    rep("Climate Risks - Managing Seasonally", 6),
+    rep("Climate Risks - Managing Seasonally", 5),
     
     # Risks to Setting Catch Limits
     rep("Climate Risks - Setting Catch Limits", 15),
@@ -1040,12 +1040,13 @@ ma_soe_indicators <- data.frame(
     "Macrobenthos distribution",
     "Sea surface temperature",
     "Gulf Stream position",
+    "Cold Pool temperature and extent",
     
     # Risks to Managing Seasonally
     "Spawning timing shifts (haddock, yellowtail flounder)",
     "HMS and whale migration timing changes",
     "Ocean summer length",
-    "Cold Pool temperature and extent",
+    #"Cold Pool temperature and extent",
     "Cold Pool persistence",
     "Phytoplankton bloom timing",
     
@@ -1146,12 +1147,13 @@ ma_soe_indicators <- data.frame(
     "Westward shift opposite finfish creates spatial mismatch for benthivores; reduces productivity",
     "Long-term warming drives distribution shifts; 2024 cooler from Labrador water but trend continues",
     "Northward shift with 2024 southward anomaly affects water properties and habitat",
+    "Warming and shrinking reduces essential habitat; 2024 recovery temporary; long-term habitat loss",
     
     # Risks to Managing Seasonally
     "Earlier spawning makes seasonal closures less effective; closures need timing adjustment",
     "Tuna arrivals 27-80 days earlier, whales 18-19 days later; seasonal regulations misaligned",
     "Longer warm seasons alter biological timing; phenology-based measures may become misaligned",
-    "Warming and shrinking reduces essential habitat; 2024 recovery temporary; long-term habitat loss",
+    #"Warming and shrinking reduces essential habitat; 2024 recovery temporary; long-term habitat loss",
     "Declining duration reduces habitat availability; affects yellowtail flounder recruitment",
     "Fall bloom extending into winter, September decline; shifting productivity affects food web timing",
     
@@ -1214,10 +1216,10 @@ ma_soe_indicators <- data.frame(
     rep("Coastwide", 6),
     
     # Risks to Managing Spatially
-    rep("Coastwide", 8),
+    rep("Coastwide", 9),
     
     # Risks to Managing Seasonally
-    rep("Mid-Atlantic Bight", 6),
+    rep("Mid-Atlantic Bight", 5),
     
     # Risks to Setting Catch Limits
     rep("Mid-Atlantic Bight", 15),
@@ -1287,12 +1289,13 @@ ma_soe_indicators <- data.frame(
     "Westward shift",
     "Long-term warming, 2024 cooler",
     "Northward long-term, 2024 southward",
+    "Warming and shrinking",
     
     # Risks to Managing Seasonally
     "Earlier spawning continuing",
     "Tuna earlier, whales later",
     "Increasing",
-    "Warming and shrinking",
+    #"Warming and shrinking",
     "Declining, 2024 near average",
     "Fall bloom extending",
     
