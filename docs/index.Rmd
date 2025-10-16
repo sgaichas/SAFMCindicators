@@ -1,0 +1,18 @@
+---
+title: "SAFMC Ecosystem Data Pages"
+author: "Sarah Gaichas, Hydra Scientific LLC"
+output: html_document
+---
+
+<button>
+    <a href="https://github.com/sgaichas/SAFMCindicators"> SAFMC Ecosystem Data Review Project github repo </a>
+</button>
+
+
+<!-- ADD LINKS BELOW, note, using the RMD link syntax will open the presentation in the same tab, which is annoying. Use the html with the "_blank" to fix that behavior -->
+
+## Analysis and visualizations
+ 
+<a href="https://sgaichas.github.io/SAFMCindicators/ESRcomparisons.html" target="_blank"> Regional Ecosystem Status Report comparison tables - October 2025 </a> 
+
+
