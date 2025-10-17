@@ -1,0 +1,93 @@
+This document is the North Pacific Fishery Management Council's Bering Sea Fishery Ecosystem Plan (BS FEP) from January 2019. This comprehensive plan establishes a framework for implementing ecosystem-based fisheries management (EBFM) in the Bering Sea region.
+
+## Summary
+
+The BS FEP represents a formalization of the Council's long-standing ecosystem approach to fisheries management in the Bering Sea. The plan acknowledges that while Alaska's fisheries management has been globally recognized as exemplary in incorporating ecosystem considerations, these practices had remained largely informal. The BS FEP creates a structured framework to continue advancing ecosystem-based management while responding to significant environmental changes, particularly climate change and sea ice loss.
+
+The plan is structured around a Core BS FEP that establishes strategic components including goals, objectives, and processes, supported by Action Modules - specific projects that address Council priorities. Rather than being a static document, the BS FEP functions as a living framework that can adapt to new information and changing circumstances. It emphasizes transparent, inclusive processes that incorporate local knowledge (LK) and traditional knowledge (TK) alongside scientific information.
+
+The document synthesizes the Bering Sea ecosystem as comprising ecological/oceanographic characteristics and human networks, recognizing the complex interactions between environmental, economic, and social factors. It assesses current EBFM practices already embedded in Council management and identifies areas for continued improvement through the Action Module process.
+
+## Ecosystem Policies, Goals, and Objectives
+
+### Ecosystem Goals (Universal to Council Management)
+1. Maintain, rebuild, and restore fish stocks at levels sufficient to protect, maintain, and restore food web structure and function
+2. Protect, restore, and maintain the ecological processes, trophic levels, diversity, and overall productive capacity of the system
+3. Conserve habitats for fish and other wildlife
+4. Provide for subsistence, commercial, recreational, and non-consumptive uses of the marine environment
+5. Avoid irreversible or long-term adverse effects on fishery resources and the marine environment
+6. Provide a legacy of healthy ecosystems for future generations
+
+### Process Objectives (How the Council manages BS fisheries)
+
+**Management Approach:**
+- Create cohesive EBFM process using Council's ecosystem vision
+- Establish transparent tracking of progress toward ecosystem goals
+- Maintain open public process for identifying objectives and responses
+- Develop research objectives and Action Modules for information needs
+
+**Performance Metrics:**
+- Annual synthesis of performance measures with reference to BS FEP objectives
+- Ecosystem Status Report tracking
+- Council uptake tracking through SSC and Council minutes analysis
+- Research priorities alignment monitoring
+
+**Ecosystem Indicators:**
+Monitored through annual Ecosystem Status Report, including:
+- Fish Stock Sustainability Index
+- Groundfish distribution, abundance, and recruitment
+- Commercial crab biomass indices
+- Zooplankton indicators
+- Habitat impact measures (area disturbed by trawl gear)
+- Seabird and marine mammal monitoring
+- Human community indicators (unemployment, population trends)
+- Climate indices and spatial distribution changes
+
+### Ecosystem Objectives (Specific to Each Goal)
+
+**Goal 1 - Fish Stocks:**
+- Maintain target biomass levels consistent with optimum yield
+- Maintain healthy non-target and forage species populations
+- Adjust fishing mortality to sustainable levels (≤2 million MT for BSAI groundfish)
+
+**Goal 2 - Ecological Processes:**
+- Maintain key predator/prey relationships
+- Conserve structure and function of ecosystem components
+
+**Goal 3 - Habitat Conservation:**
+- Minimize adverse impacts to essential fish habitat
+- Avoid impacts to ecologically-sensitive habitat and HAPCs
+- Avoid impacts to seabirds, marine mammals, and protected species
+
+**Goal 4 - Multiple Uses:**
+- Support benefits in fishery and related industries
+- Provide new entrant opportunities
+- Promote economic and community stability
+- Support sustainable subsistence opportunities and community resilience
+- Minimize bycatch to provide for directed fisheries
+- Preserve non-consumptive and cultural ecosystem values
+
+**Goals 5 & 6 - Long-term Sustainability:**
+- Establish thresholds to minimize ecosystem tipping point risks
+- Minimize impacts from shipping, tourism, energy, and development
+- Ensure adaptive management for climate change effects
+
+### Research Objectives (Action Module Priorities)
+
+1. **Climate Resilience:** Evaluate management strategy resilience and options for responding to changing environmental conditions
+2. **Knowledge Integration:** Develop processes for using LK, TK, and subsistence data in Council processes  
+3. **EBFM Assessment:** Regular assessment against best practices to identify successes and improvement gaps
+4. **Conceptual Modeling:** Develop interdisciplinary models of connected ecosystem components
+5. **Research Coordination:** Track Council priorities alignment with research funding and utilization
+
+### Five Approved Action Modules
+
+1. **Climate Change Effects (INITIATED):** Evaluate short/long-term climate impacts on fish and fisheries, develop management considerations
+2. **LK/TK Protocols (INITIATED):** Develop protocols for using local/traditional knowledge and understanding subsistence impacts
+3. **EBFM Gap Analysis:** Assess current management against best practices
+4. **Ecosystem Conceptual Models:** Develop interdisciplinary system diagrams of BS ecosystem
+5. **Research Priority Tracking:** Align and track Council priorities with funding opportunities
+
+The BS FEP represents a comprehensive approach to formalizing ecosystem-based management while maintaining flexibility to adapt to new information and changing environmental conditions. It emphasizes the integration of multiple knowledge systems and stakeholder engagement in sustainable fisheries management for current and future generations.
+
+PROMPT: Please summarize this pdf fishery ecosystem plan in 500 words. After the summary, list stated ecosystem policies, goals, and objectives in the document along with management approaches, performance metrics and specific ecosystem indicators identified for each of the objectives:
