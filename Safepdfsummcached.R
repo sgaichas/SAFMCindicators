@@ -2,7 +2,7 @@
 # please write a code snippet for summarizing a pdf that uses prompt caching and also avoids the error HTTP 429 Too Many Requests.
 # Can we add one line to the summary that captures the prompt?
 # add library::function notation to the script to clarify which libraries are being called
-
+# THIS KEPT BREAKING SO I GAVE UP AND USED THE pdfsumm.R call
 
 # Install required packages
 # install.packages(c("httr2", "jsonlite", "pdftools", "base64enc"))
@@ -19,6 +19,14 @@ extract_pdf_text <- function(pdf_path) {
   text <- pdftools::pdf_text(pdf_path)
   combined_text <- paste(text, collapse = "\n")
   return(combined_text)
+}
+
+`%||%` <- function(lhs, rhs) {
+  if (!is.null(lhs)) {
+    lhs
+  } else {
+    rhs
+  }
 }
 
 # Enhanced Claude API call with rate limiting and retry logic
@@ -75,13 +83,13 @@ call_claude_with_retry <- function(prompt, api_key,
   # Retry logic with exponential backoff
   for (attempt in 1:max_retries) {
     tryCatch({
-      response <- httr2::request(url) %>%
+      response <- httr2::request(url) |>
         httr2::req_headers(
           "Content-Type" = "application/json",
           "x-api-key" = api_key,
           "anthropic-version" = "2023-06-01"
-        ) %>%
-        httr2::req_body_json(body) %>%
+        ) |>
+        httr2::req_body_json(body) |>
         httr2::req_retry(
           max_tries = 3,
           is_transient = function(resp) {
@@ -90,7 +98,7 @@ call_claude_with_retry <- function(prompt, api_key,
             status == 429 || (status >= 500 && status < 600)
           },
           backoff = ~ 2^.x  # Exponential backoff: 2, 4, 8 seconds
-        ) %>%
+        ) |>
         httr2::req_perform()
       
       # Parse successful response
@@ -167,7 +175,7 @@ summarize_pdf_safe <- function(pdf_path,
   # System prompts for different summary types
   system_prompts <- list(
     ESR = "Please summarize this pdf ecosystem status report in 500 words. After the summary, make a list of the section headings in the report and the ecosystem indicators used in each section. Briefly describe the implications of each ecosystem indicator for fishery management:",
-    FEP = "Please summarize this pdf fishery ecosystem plan. Highlight any stated policies, goals, and objectives in the document along with any management approaches and performance metrics. List specific ecosystem indicators identified and how they are aligned with objectives:",
+    FEP = "You are an expert management analyst. Please summarize this fishery ecosystem plan. Highlight any stated policies, goals, and objectives in the document along with any management approaches and performance metrics. List specific ecosystem indicators identified and how they are aligned with objectives:",
     general = "You are an expert document analyst. Provide comprehensive summaries that capture the main points, key findings, and conclusions. Structure your summaries clearly and highlight the most important information.",
     executive = "You are a business analyst. Create executive summaries focusing on key takeaways, strategic recommendations, and actionable insights. Be concise but comprehensive.",
     academic = "You are an academic researcher. Provide scholarly summaries including methodology, findings, limitations, and theoretical contributions. Maintain academic rigor.",
@@ -363,3 +371,23 @@ batch_summarize_pdfs_safe <- function(pdf_paths,
 # 
 # # Get the summary type
 # print(results[["report1.pdf"]]$summary_type)
+
+# testing
+pdf_files <- c("~/Documents/Work/SAFMCindicators/FEPs/NPFMCBeringSeaFEP.pdf",
+              "~/Documents/Work/SAFMCindicators/FEPs/NPFMCAleutianIslandsFEP.pdf",
+              "~/Documents/Work/SAFMCindicators/FEPs/PFMCpacific-coast-fishery-ecosystem-plan-march-2022.pdf",
+              "~/Documents/Work/SAFMCindicators/FEPs/WPRFMC Hawaii FEP (2009-09-21).pdf"
+)
+
+summary_type <- "FEP"
+
+results <- batch_summarize_pdfs_safe(
+  pdf_paths = pdf_files,
+  api_key = api_key,
+  summary_type = "FEP",
+  requests_per_minute = 45,  # Conservative under 50/min
+  use_cache = TRUE,
+  folder = "FEPsumms"
+)
+
+

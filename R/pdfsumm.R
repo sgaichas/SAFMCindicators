@@ -137,7 +137,7 @@ summarize_pdf <- function(pdf_path, api_key, summary_type = "general", folder = 
   # Create prompt based on summary type
   prompts <- list(
     ESR = "Please summarize this pdf ecosystem status report in 500 words. After the summary, make a list of the section headings in the report and the ecosystem indicators used in each section. Briefly describe the implications of each ecosystem indicator for fishery management:",
-    FEP = "Please summarize this pdf fishery ecosystem plan. Highlight any stated policies, goals, and objectives in the document along with any management approaches and performance metrics. List specific ecosystem indicators identified and how they are aligned with objectives:",
+    FEP = "Please summarize this pdf fishery ecosystem plan in 500 words. After the summary, list stated ecosystem policies, goals, and objectives in the document along with management approaches, performance metrics and specific ecosystem indicators identified for each of the objectives:",
     executive = "Please provide an executive summary of the following document, focusing on key takeaways, recommendations, and actionable insights:",
     academic = "Please provide an academic summary of the following document, including methodology, findings, limitations, and theoretical contributions:",
     bullet_points = "Please summarize the following document as a bulleted list of key points:"
@@ -153,6 +153,8 @@ summarize_pdf <- function(pdf_path, api_key, summary_type = "general", folder = 
   
   cat("Sending request to Claude...\n")
   summary <- call_claude(prompt, api_key)
+  
+  summary <- paste(summary, prompts[[summary_type]], sep="\n\nPROMPT: ")
   
   namesum <- basename(pdf_path)
   
@@ -216,7 +218,16 @@ summarize_large_pdf <- function(pdf_path, api_key, chunk_size = 100000) {
 # 
 # summary <- summarize_pdf("~/Documents/Work/SAFMCindicators/ESRs/MidAtlantic_SOE_2025_noaa_70290_DS1.pdf", api_key, "ESR")
 
-pdf_path <- "~/Documents/Work/SAFMCindicators/FEPs/NPFMCAleutianIslandsFEP.pdf"
+#pdf_path <- "~/Documents/Work/SAFMCindicators/FEPs/NPFMCAleutianIslandsFEP.pdf"
+
+pdf_files <- c("~/Documents/Work/SAFMCindicators/FEPs/NPFMCBeringSeaFEP.pdf",
+               "~/Documents/Work/SAFMCindicators/FEPs/NPFMCAleutianIslandsFEP.pdf",
+               "~/Documents/Work/SAFMCindicators/FEPs/PFMCpacific-coast-fishery-ecosystem-plan-march-2022.pdf",
+               "~/Documents/Work/SAFMCindicators/FEPs/WPRFMC Hawaii FEP (2009-09-21).pdf"
+)
+
+pdf_path <- pdf_files[3]
+
 summary_type <- "FEP"
 
 summary <- summarize_pdf(pdf_path, api_key, "FEP", "FEPsumms")
