@@ -226,7 +226,7 @@ pdf_files <- c("~/Documents/Work/SAFMCindicators/FEPs/NPFMCBeringSeaFEP.pdf",
                "~/Documents/Work/SAFMCindicators/FEPs/WPRFMC Hawaii FEP (2009-09-21).pdf"
 )
 
-pdf_path <- pdf_files[3]
+pdf_path <- pdf_files[4]
 
 summary_type <- "FEP"
 
