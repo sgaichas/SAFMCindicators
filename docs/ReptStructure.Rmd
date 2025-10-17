@@ -231,14 +231,19 @@ ESR [@craig_ecosystem_2021], FEP, and CVAs for fishery resources [@burton_climat
 
 The South Atlantic FEP contains both extensive description of the ecosystem (>50% of 400 pages) as well as essential fish habitat (EFH) policy statements that specifically outline indicators and research to support policies. Policies include:  
 
-* South Atlantic Food Webs and Connectivity Policy – December 2016    
-* Energy Exploration and Development Policy - June 2014         
+* South Atlantic Food Webs and Connectivity Policy – January 2025
+* Climate Variability and Fisheries – December 2016
+* Beach Dredging and Filling, Beach Renourishment and Large-Scale Coastal Engineering – September 2023 
+* Energy Exploration, Development, Transportation and Hydropower Re-Licensing - November 2024         
 * Interactions Between Essential Fish Habitats And Marine Aquaculture Policy – June 2014     
 * Marine Submerged Aquatic Vegetation (SAV) Habitat Policy – June 2014    
 * Alteration of Riverine, Estuarine and Nearshore Flows Policy – June 2014    
 * Marine and Estuarine Non-Native and Invasive Species Policy – June 2014    
 * Artificial Reef Habitat Policy Threats to EFH – September 2017    
 * Threats Addressed by Policies Matrix – March 2021    
+
+SAFMC has two habitat FMPs: Coral and Sargassum
+
 
 
 

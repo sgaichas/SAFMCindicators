@@ -2,25 +2,65 @@
 # may include AI
 # based on Scratch_pdfsumm.R and https://damianoswald.com/blog/pdf-chat-gpt/
 
+# How to store API key in environment variable
+# usethis::edit_r_environ()
+# open the .Renviron file, it is in the Home directory on macos
+# add this line
+# YOUR_API_KEY_NAME=your_actual_api_key_string
+# it is namd ANTHROPIC_API_KEY
 
-extract_pdf_text() <- function(path, numbering = TRUE, references = TRUE){
-  text <- pdftools::pdf_text(path) %>%
-    paste0(collapse = " ") %>%
-    paste0(collapse = " ") %>%
-    stringr::str_squish()
-  if(numbering) {
-    target <- "\\[.*?\\]"
-    text <- gsub(target, "", text)
-  }
-  if(references) {
-    target <- "\\bReferences|references|REFERENCES\\b"
-    text <- strsplit(text, target) %>%
-      unlist %>%
-      head(., -1) %>%
-      paste(., collapse = " ")
-  }
-  return(text)
+# Set your API key (get from https://console.anthropic.com/)
+api_key <- Sys.getenv("ANTHROPIC_API_KEY")  # Store in environment variable
+
+# # apikey test run in terminal
+# curl https://api.anthropic.com/v1/messages \
+# --header "x-api-key: XXXXX" \
+# --header "anthropic-version: 2023-06-01" \
+# --header "content-type: application/json" \
+# --data \
+# '{
+#         "model": "claude-sonnet-4-20250514",
+#         "max_tokens": 1024,
+#         "messages": [
+#             {"role": "user", "content": "Hello, world"}
+#         ]
+#     }'
+
+# returned
+#{"model":"claude-sonnet-4-20250514","id":"msg_01Jobakzxrv8xQe3c84nT9bD","type":"message","role":"assistant","content":[{"type":"text","text":"Hello! Nice to meet you. How are you doing today? Is there anything I can help you with?"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":10,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":25,"service_tier":"standard"}}Sarahs-MacBook-Air:SAFMCindicators sarahgaichas$ 
+
+
+library(httr2)
+library(jsonlite)
+library(pdftools)
+library(base64enc)
+
+# Function to extract text from PDF
+extract_pdf_text <- function(pdf_path) {
+  text <- pdftools::pdf_text(pdf_path)
+  # Combine all pages into single string
+  combined_text <- paste(text, collapse = "\n")
+  return(combined_text)
 }
+
+# extract_pdf_text() <- function(path, numbering = TRUE, references = TRUE){
+#   text <- pdftools::pdf_text(path) |>
+#     paste0(collapse = " ") |>
+#     paste0(collapse = " ") |>
+#     stringr::str_squish()
+#   if(numbering) {
+#     target <- "\\[.*?\\]"
+#     text <- gsub(target, "", text)
+#   }
+#   if(references) {
+#     target <- "\\bReferences|references|REFERENCES\\b"
+#     text <- stringr::strsplit(text, target) |>
+#       unlist(.) |>
+#       head(., -1) |>
+#       paste(., collapse = " ")
+#   }
+#   return(text)
+# }
 
 # Function to get basic PDF metadata
 get_pdf_info <- function(pdf_path) {
@@ -47,7 +87,7 @@ get_pdf_info <- function(pdf_path) {
 }
 
 # Function to call Claude API
-call_claude <- function(prompt, api_key, model = "claude-3-5-sonnet-20241022") {
+call_claude <- function(prompt, api_key, model = "claude-sonnet-4-20250514") {
   
   url <- "https://api.anthropic.com/v1/messages"
   
@@ -64,17 +104,17 @@ call_claude <- function(prompt, api_key, model = "claude-3-5-sonnet-20241022") {
   )
   
   # Make the API request
-  response <- request(url) %>%
-    req_headers(
+  response <- httr2::request(url) |>
+    httr2::req_headers(
       "Content-Type" = "application/json",
       "x-api-key" = api_key,
       "anthropic-version" = "2023-06-01"
-    ) %>%
-    req_body_json(body) %>%
-    req_perform()
+    ) |>
+    httr2::req_body_json(body) |>
+    httr2::req_perform()
   
   # Parse response
-  response_data <- resp_body_json(response)
+  response_data <- httr2::resp_body_json(response)
   
   # Extract the text content
   summary <- response_data$content[[1]]$text
@@ -83,7 +123,7 @@ call_claude <- function(prompt, api_key, model = "claude-3-5-sonnet-20241022") {
 }
 
 # Function to summarize PDF
-summarize_pdf <- function(pdf_path, api_key, summary_type = "general") {
+summarize_pdf <- function(pdf_path, api_key, summary_type = "general", folder = getwd()) {
   
   # Extract text from PDF
   cat("Extracting text from PDF...\n")
@@ -96,7 +136,8 @@ summarize_pdf <- function(pdf_path, api_key, summary_type = "general") {
   
   # Create prompt based on summary type
   prompts <- list(
-    general = "Please provide a comprehensive summary of the following document. Include the main points, key findings, and conclusions:",
+    ESR = "Please summarize this pdf ecosystem status report in 500 words. After the summary, make a list of the section headings in the report and the ecosystem indicators used in each section. Briefly describe the implications of each ecosystem indicator for fishery management:",
+    FEP = "Please summarize this pdf fishery ecosystem plan. Highlight any stated policies, goals, and objectives in the document along with any management approaches and performance metrics. List specific ecosystem indicators identified and how they are aligned with objectives:",
     executive = "Please provide an executive summary of the following document, focusing on key takeaways, recommendations, and actionable insights:",
     academic = "Please provide an academic summary of the following document, including methodology, findings, limitations, and theoretical contributions:",
     bullet_points = "Please summarize the following document as a bulleted list of key points:"
@@ -112,6 +153,10 @@ summarize_pdf <- function(pdf_path, api_key, summary_type = "general") {
   
   cat("Sending request to Claude...\n")
   summary <- call_claude(prompt, api_key)
+  
+  namesum <- basename(pdf_path)
+  
+  readr::write_file(summary, here::here(paste0(folder, "/", namesum, ".Rmd")))
   
   return(summary)
 }
@@ -164,3 +209,15 @@ summarize_large_pdf <- function(pdf_path, api_key, chunk_size = 100000) {
     return(summarize_pdf(pdf_path, api_key))
   }
 }
+
+# testing
+# pdf_path <- "~/Documents/Work/SAFMCindicators/ESRs/MidAtlantic_SOE_2025_noaa_70290_DS1.pdf"
+# summary_type <- "ESR"
+# 
+# summary <- summarize_pdf("~/Documents/Work/SAFMCindicators/ESRs/MidAtlantic_SOE_2025_noaa_70290_DS1.pdf", api_key, "ESR")
+
+pdf_path <- "~/Documents/Work/SAFMCindicators/FEPs/NPFMCAleutianIslandsFEP.pdf"
+summary_type <- "FEP"
+
+summary <- summarize_pdf(pdf_path, api_key, "FEP", "FEPsumms")
+
