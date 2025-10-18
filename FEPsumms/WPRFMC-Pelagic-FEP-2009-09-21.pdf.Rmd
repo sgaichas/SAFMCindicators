@@ -1,0 +1,98 @@
+# SUMMARY OF PACIFIC PELAGIC FISHERY ECOSYSTEM PLAN
+
+This Fishery Ecosystem Plan (FEP) for Pacific Pelagic Fisheries represents the Western Pacific Regional Fishery Management Council's transition from species-based fishery management plans to place-based ecosystem management. The plan encompasses waters where domestic vessels fish for pelagic species within the Exclusive Economic Zones (EEZ) of American Samoa, CNMI, Guam, Hawaii, and Pacific Remote Island Areas.
+
+The FEP manages highly migratory pelagic species including tunas (bigeye, yellowfin, albacore, skipjack), billfish (swordfish, marlin, spearfish, sailfish), sharks, and other species like mahimahi and wahoo. These species are caught primarily by longline, troll, handline, pole-and-line, and purse seine gear.
+
+Key fisheries include the Hawaii-based longline fleet (164 permitted vessels), American Samoa longline fleet targeting albacore for canneries, and various small-boat troll and handline operations throughout the region. The Hawaii longline fishery is the largest component, landing approximately 19.3 million pounds annually with an ex-vessel value of nearly $58 million.
+
+The plan adopts an ecosystem-based approach while maintaining existing management measures from the previous Pelagic FMP. It establishes Essential Fish Habitat (EFH) from surface waters to 1,000 meters depth, with Habitat Areas of Particular Concern (HAPC) designated over seamounts and banks.
+
+International coordination is critical given the highly migratory nature of these species. The U.S. participates in Regional Fishery Management Organizations (RFMOs) including the Inter-American Tropical Tuna Commission (IATTC) and Western and Central Pacific Fisheries Commission (WCPFC), which set catch limits for bigeye and yellowfin tuna.
+
+Current management challenges include addressing overfishing of Pacific-wide bigeye tuna and interactions with protected species like sea turtles and seabirds. Various mitigation measures have been implemented including circle hooks, turtle release equipment, and seabird avoidance techniques.
+
+The FEP establishes an advisory structure with Plan Teams, Advisory Panels, and Scientific and Statistical Committee to provide ongoing ecosystem-based management guidance. It emphasizes adaptive management, community participation, and integration of traditional indigenous knowledge.
+
+## ECOSYSTEM POLICIES, GOALS AND OBJECTIVES
+
+**Overall Goal:** Establish a framework to improve abilities to realize MSA goals through incorporation of ecosystem science and principles.
+
+### Ten Overarching Objectives:
+
+**Objective 1:** Maintain biologically diverse and productive marine ecosystems and foster long-term sustainable use through science-based ecosystem approach
+- **Management Approach:** Ecosystem-based fishery management incorporating best available science
+- **Performance Metrics:** Stock assessments, ecosystem indicators, biodiversity measures
+- **Ecosystem Indicators:** Stock biomass levels, fishing mortality rates, ecosystem structure metrics
+
+**Objective 2:** Provide flexible and adaptive management systems to rapidly address new information and changing conditions
+- **Management Approach:** Adaptive management with framework provisions for rapid response
+- **Performance Metrics:** Time to implement new measures, responsiveness to scientific advice
+- **Ecosystem Indicators:** Environmental regime shifts, stock status changes, ecosystem productivity measures
+
+**Objective 3:** Improve public and government awareness of marine environment to reduce unsustainable impacts
+- **Management Approach:** Education programs, outreach, stakeholder engagement
+- **Performance Metrics:** Participation in workshops, compliance rates, public awareness levels
+- **Ecosystem Indicators:** Habitat quality measures, pollution indicators, human impact assessments
+
+**Objective 4:** Encourage sustained participation of local communities in marine resource management
+- **Management Approach:** Community-based management, indigenous participation programs
+- **Performance Metrics:** Community participation rates, traditional knowledge integration
+- **Ecosystem Indicators:** Community-based monitoring data, local ecological knowledge incorporation
+
+**Objective 5:** Minimize fishery bycatch and waste to extent practicable
+- **Management Approach:** Gear modifications, operational requirements, observer coverage
+- **Performance Metrics:** Bycatch rates by species and gear type, discard mortality rates
+- **Ecosystem Indicators:** Non-target species population trends, ecosystem food web integrity
+
+**Objective 6:** Manage and co-manage protected species, habitats, and areas
+- **Management Approach:** Species-specific protection measures, habitat conservation
+- **Performance Metrics:** Protected species interaction rates, population recovery trends
+- **Ecosystem Indicators:** Protected species abundance, critical habitat condition, population recovery rates
+
+**Objective 7:** Promote safety of human life at sea
+- **Management Approach:** Safety requirements, training programs, vessel standards
+- **Performance Metrics:** Accident rates, safety training participation, vessel inspection compliance
+- **Ecosystem Indicators:** Not directly applicable - focuses on human safety
+
+**Objective 8:** Encourage appropriate compliance and enforcement with regulations
+- **Management Approach:** Monitoring systems, enforcement presence, penalty structures
+- **Performance Metrics:** Compliance rates, violation frequencies, enforcement actions
+- **Ecosystem Indicators:** Illegal fishing impacts, unreported catch estimates
+
+**Objective 9:** Increase collaboration with regional and international organizations
+- **Management Approach:** RFMO participation, bilateral agreements, regional coordination
+- **Performance Metrics:** International agreement implementation, cooperative research projects
+- **Ecosystem Indicators:** Stock status improvements through international management, ecosystem-wide assessments
+
+**Objective 10:** Improve quantity and quality of information for marine ecosystem management
+- **Management Approach:** Enhanced data collection, research programs, information systems
+- **Performance Metrics:** Data quality assessments, research output, information system effectiveness
+- **Ecosystem Indicators:** Ecosystem monitoring coverage, scientific understanding advancement, data-rich species assessments
+
+### Key Management Approaches:
+- Limited entry programs for longline fisheries
+- Gear restrictions and operational requirements
+- Area closures and seasonal restrictions
+- International quota compliance
+- Observer coverage and monitoring systems
+- Protected species mitigation measures
+
+### Performance Metrics:
+- Stock status relative to MSY and reference points
+- Catch levels and fishing mortality rates
+- Bycatch and protected species interaction rates
+- Economic performance indicators
+- Community participation levels
+- Compliance and enforcement effectiveness
+
+### Ecosystem Indicators:
+- Biomass-based reference points (BMSY, MSST, BFLAG)
+- Fishing mortality reference points (FMSY, MFMT)
+- Ecosystem productivity measures
+- Food web structure indicators
+- Habitat quality assessments
+- Environmental variability indices
+- Protected species population trends
+
+PROMPT: Please summarize this pdf fishery ecosystem plan in 500 words. After the summary, list stated ecosystem policies, goals, and objectives in the document along with management approaches, performance metrics and specific ecosystem indicators identified for each of the objectives:
