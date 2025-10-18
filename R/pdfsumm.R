@@ -223,10 +223,21 @@ summarize_large_pdf <- function(pdf_path, api_key, chunk_size = 100000) {
 pdf_files <- c("~/Documents/Work/SAFMCindicators/FEPs/NPFMCBeringSeaFEP.pdf",
                "~/Documents/Work/SAFMCindicators/FEPs/NPFMCAleutianIslandsFEP.pdf",
                "~/Documents/Work/SAFMCindicators/FEPs/PFMCpacific-coast-fishery-ecosystem-plan-march-2022.pdf",
-               "~/Documents/Work/SAFMCindicators/FEPs/WPRFMC Hawaii FEP (2009-09-21).pdf"
+               "~/Documents/Work/SAFMCindicators/FEPs/WPRFMC Hawaii FEP (2009-09-21).pdf",
+               "~/Documents/Work/SAFMCindicators/FEPs/WPRFMC-Pelagic-FEP-2009-09-21.pdf",
+               "~/Documents/Work/SAFMCindicators/FEPs/WPRFMC PRIA FEP (2009-09-21).pdf",
+               "~/Documents/Work/SAFMCindicators/FEPs/WPRFMC Mariana FEP (2009-09-22).pdf",
+               "~/Documents/Work/SAFMCindicators/FEPs/WPRFMC American Samoa FEP (2009-09-22).pdf",
+               "~/Documents/Work/SAFMCindicators/FEPs/MAFMCEAFM+Doc+Revised+2019-02-08.pdf",
+               "~/Documents/Work/SAFMCindicators/FEPs/GFMC_FEP_Draft.pdf",
+               "~/Documents/Work/SAFMCindicators/FEPs/carib_fmp_st_thomasst_john.pdf",
+               "~/Documents/Work/SAFMCindicators/FEPs/carib_fmp_st_croix.pdf",
+               "~/Documents/Work/SAFMCindicators/FEPs/carib_fmp_puerto_rico.pdf",
+               "~/Documents/Work/SAFMCindicators/FEPs/NEFMCGeorgesBankDraft-Example-of-Fishery-Ecosystem-Plan-eFEP--NOTAPPROVED.pdf",
+               "~/Documents/Work/SAFMCindicators/FEPs/SAFMCfishery-ecosystem-plan-2-fep-ii.pdf"
 )
 
-pdf_path <- pdf_files[4]
+pdf_path <- pdf_files[13] #11,12,13, 15 break
 
 summary_type <- "FEP"
 

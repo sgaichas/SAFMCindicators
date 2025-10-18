@@ -1,0 +1,118 @@
+# Summary of the Draft Example Fishery Ecosystem Plan for Georges Bank
+
+This 147-page document presents an example Fishery Ecosystem Plan (eFEP) developed by the New England Fishery Management Council (NEFMC) for Georges Bank. The document is intended as a proof-of-concept to demonstrate how ecosystem-based fishery management (EBFM) could work in practice.
+
+## Core Concept
+
+The eFEP proposes managing fisheries based on **ecosystem production units (EPUs)** rather than individual species. This approach groups species into **stock complexes** based on similar trophic roles, life history characteristics, and fishing patterns. The plan aims to address the inherent problems of managing mixed-species fisheries where species cannot be caught independently and interact biologically through predation and competition.
+
+## Key Management Framework
+
+The hierarchical approach establishes:
+
+1. **Ecosystem Catch Cap**: Total removals limited to sustainable levels based on primary productivity (approximately 18-20% of microplankton production)
+2. **Stock Complex Catch Limits**: Catch limits for groups of ecologically similar species
+3. **Species-Level Floors**: Minimum biomass thresholds to prevent individual species depletion
+4. **Spatial Management**: Place-based management within the Georges Bank EPU
+
+## Management Innovation
+
+The plan proposes several innovative approaches:
+- **Management Strategy Evaluation (MSE)** to test management procedures before implementation
+- **Incentive-based measures** including quota trading and credit systems to align fishermen's incentives with conservation goals
+- **Place-based permitting** allowing vessels to fish for multiple species within the EPU
+- **Adaptive management** responding to ecosystem changes and climate variability
+
+## Jurisdictional Challenges
+
+The plan acknowledges that only 63-66% of commercial finfish landings in the Georges Bank EPU are managed by NEFMC, with other species managed by MAFMC, ASMFC, or NMFS. The preferred approach involves cooperative management similar to the US-Canada transboundary resource sharing agreement.
+
+---
+
+# Ecosystem Policies, Goals, and Objectives
+
+## Overarching Goal
+**Goal A**: To protect the ecological integrity of US marine resources as a sustainable source of wealth and well-being for current and future generations
+
+## Strategic Goals
+1. Optimize Food Provision through targeted fishing and fishing for bait species
+2. Optimize Employment
+3. Optimize Recreational Opportunity
+4. Optimize Intrinsic (Existence) values
+5. Optimize Profitability
+6. Promote stability in both biological and social systems
+
+## Strategic Objectives
+1. **Maintain/restore functional production levels** (ecosystem, community scale emphasis)
+2. **Maintain/restore functional biomass levels** (community/species scale emphasis)
+3. **Maintain/restore functional trophic structure**
+4. **Maintain/restore functional habitat**
+
+## Operational Objectives (SMART)
+
+### 1. Ecosystem Catch Management
+**Objective**: Ecosystem and community/aggregate fishing mortality and/or total catch is below established dynamic threshold
+- **Management Approach**: Ecosystem catch cap based on primary productivity
+- **Performance Metrics**: Probability of exceeding total catch limit
+- **Ecosystem Indicators**: Primary production levels, microplankton vs. nano-picoplankton production ratios
+- **Example**: "GB EPU total catch has less than 40% probability of exceeding the total catch limit between 2016-2018"
+
+### 2. Protected Species Conservation
+**Objective**: Fishing-related mortality for threatened/endangered/protected species is minimized
+- **Management Approach**: Spatial closures, gear restrictions, bycatch reduction requirements
+- **Performance Metrics**: Incidental take levels, protected species interactions
+- **Ecosystem Indicators**: Marine mammal, sea turtle, and seabird abundance and distribution
+
+### 3. Stock Biomass Maintenance
+**Objective**: Managed and protected species biomass is above established minimum threshold
+- **Management Approach**: Biomass floors based on survey time series (e.g., 20th percentile for teleosts, 30th percentile for elasmobranchs)
+- **Performance Metrics**: Probability of dropping below minimum biomass threshold
+- **Ecosystem Indicators**: Survey-based biomass indices, stock assessment outputs
+- **Example**: "GB haddock biomass has less than 40% probability of dropping below minimum B threshold between 2016-2018"
+
+### 4. Ecosystem Structure Maintenance
+**Objective**: Maintain ecosystem structure within historical variation, recognizing inherent dynamic properties
+
+#### 4a. Size Structure
+- **Management Approach**: Size-selective fishing regulations, gear requirements
+- **Performance Metrics**: Large fish indicator within defined limits
+- **Ecosystem Indicators**: Fish size distributions from surveys
+
+#### 4b. Trophic Structure
+- **Management Approach**: Balanced fishing across trophic levels
+- **Performance Metrics**: 
+  - Marine trophic index (MTI) within defined limits
+  - Mean trophic level of community within defined limits
+  - Mean trophic level of modeled community within defined limits
+- **Ecosystem Indicators**: Trophic level composition of catches and surveys
+
+#### 4c. Species Complex Structure
+- **Management Approach**: Stock complex catch limits maintaining balance
+- **Performance Metrics**: Species complex biomass across ecosystem components within defined limits
+- **Ecosystem Indicators**: Relative abundance of species within complexes
+
+### 5. Habitat Productivity and Diversity
+**Objective**: Maintain habitat productivity and diversity
+- **Management Approach**: Essential fish habitat protection, fishing impact assessments
+- **Performance Metrics**: Habitat quality indices, vulnerable habitat area
+- **Ecosystem Indicators**: Benthic community structure, habitat mapping data
+
+### 6. Habitat Function for Exploited Species
+**Objective**: Habitat structure and function are maintained for exploited species
+- **Management Approach**: Habitat area of particular concern designations, gear impact limitations
+- **Performance Metrics**: Fish condition factors, recruitment success by habitat type
+- **Ecosystem Indicators**: Habitat-specific fish density and condition
+
+### 7. Risk Minimization for Sensitive Habitats
+**Objective**: Minimize risk of permanent (>20 years) impacts
+- **Management Approach**: Area closures, gear restrictions for sensitive areas
+- **Performance Metrics**: Recovery time estimates, disturbance frequency
+- **Ecosystem Indicators**: 
+  - Coral and sponge coverage and recovery
+  - Biogenic habitat extent and condition
+  - Invasive species presence in coastal habitats
+  - Vulnerable physical habitat integrity (e.g., relict glacial gravel banks)
+
+The document emphasizes that these objectives would be evaluated and refined through Management Strategy Evaluation (MSE) to test their performance under various scenarios and ensure they can be achieved given ecosystem constraints and management capabilities.
+
+PROMPT: Please summarize this pdf fishery ecosystem plan in 500 words. After the summary, list stated ecosystem policies, goals, and objectives in the document along with management approaches, performance metrics and specific ecosystem indicators identified for each of the objectives:
