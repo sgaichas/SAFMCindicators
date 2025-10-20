@@ -176,10 +176,17 @@ summarize_pdf <- function(pdf_path, api_key, summary_type = "general", folder = 
 # summary <- summarize_pdf("document.pdf", api_key, "academic")
 # summary <- summarize_pdf("document.pdf", api_key, "bullet_points")
 
-# Function to handle large documents by chunking
-summarize_large_pdf <- function(pdf_path, api_key, chunk_size = 100000) {
+# Function to handle large documents by chunking, fixed to integrate custom prompt
+summarize_large_pdf <- function(pdf_path, api_key, chunk_size = 100000, summary_type = "executive", folder = getwd()) {
   
+  # Extract text from PDF
+  cat("Extracting text from PDF...\n")
   pdf_text <- extract_pdf_text(pdf_path)
+  
+  # Check if text extraction was successful
+  if (nchar(pdf_text) < 10) {
+    stop("Could not extract meaningful text from PDF")
+  }
   
   # Split into chunks if too large
   if (nchar(pdf_text) > chunk_size) {
@@ -189,12 +196,21 @@ summarize_large_pdf <- function(pdf_path, api_key, chunk_size = 100000) {
     chunks <- seq(1, nchar(pdf_text), by = chunk_size)
     summaries <- c()
     
+    # Create prompt based on summary type
+    prompts <- list(
+      ESR = "Please summarize this pdf ecosystem status report in 500 words. After the summary, make a list of the section headings in the report and the ecosystem indicators used in each section. Briefly describe the implications of each ecosystem indicator for fishery management.",
+      FEP = "Please summarize this pdf fishery ecosystem plan in 500 words. After the summary, list stated ecosystem policies, goals, and objectives in the document along with management approaches, performance metrics and specific ecosystem indicators identified for each of the objectives.",
+      executive = "Please provide an executive summary of the following document, focusing on key takeaways, recommendations, and actionable insights.",
+      academic = "Please provide an academic summary of the following document, including methodology, findings, limitations, and theoretical contributions.",
+      bullet_points = "Please summarize the following document as a bulleted list of key points."
+    )
+    
     for (i in 1:length(chunks)) {
       start_pos <- chunks[i]
       end_pos <- min(chunks[i] + chunk_size - 1, nchar(pdf_text))
       chunk_text <- substr(pdf_text, start_pos, end_pos)
       
-      prompt <- paste("Please summarize this section of a document:", chunk_text)
+      prompt <- paste(prompts[[summary_type]], "Please summarize this section of the document:", chunk_text)
       chunk_summary <- call_claude(prompt, api_key)
       summaries <- c(summaries, chunk_summary)
       
@@ -203,8 +219,14 @@ summarize_large_pdf <- function(pdf_path, api_key, chunk_size = 100000) {
     
     # Combine chunk summaries
     combined_summaries <- paste(summaries, collapse = "\n\n")
-    final_prompt <- paste("Please create a final comprehensive summary from these section summaries:", combined_summaries)
+    final_prompt <- paste(prompts[[summary_type]], "Please create a final comprehensive summary from these section summaries:", combined_summaries)
     final_summary <- call_claude(final_prompt, api_key)
+    
+    namesum <- basename(pdf_path)
+    
+    readr::write_file(final_summary, here::here(paste0(folder, "/", namesum, ".Rmd")))
+    # curious
+    #readr::write_file(combined_summaries, here::here(paste0(folder, "/InterimSummaries_", namesum, ".Rmd")))
     
     return(final_summary)
   } else {
@@ -219,6 +241,8 @@ summarize_large_pdf <- function(pdf_path, api_key, chunk_size = 100000) {
 # summary <- summarize_pdf("~/Documents/Work/SAFMCindicators/ESRs/MidAtlantic_SOE_2025_noaa_70290_DS1.pdf", api_key, "ESR")
 
 #pdf_path <- "~/Documents/Work/SAFMCindicators/FEPs/NPFMCAleutianIslandsFEP.pdf"
+
+# summarize FEPs
 
 pdf_files <- c("~/Documents/Work/SAFMCindicators/FEPs/NPFMCBeringSeaFEP.pdf",
                "~/Documents/Work/SAFMCindicators/FEPs/NPFMCAleutianIslandsFEP.pdf",
@@ -237,9 +261,14 @@ pdf_files <- c("~/Documents/Work/SAFMCindicators/FEPs/NPFMCBeringSeaFEP.pdf",
                "~/Documents/Work/SAFMCindicators/FEPs/SAFMCfishery-ecosystem-plan-2-fep-ii.pdf"
 )
 
-pdf_path <- pdf_files[13] #11,12,13, 15 break
+pdf_path <- pdf_files[13] #11,12,13, 15 break, need to be chunked
 
 summary_type <- "FEP"
 
 summary <- summarize_pdf(pdf_path, api_key, "FEP", "FEPsumms")
 
+# try large files
+
+pdf_path <- pdf_files[11]
+
+# summary <- summarize_large_pdf(pdf_path, api_key, summary_type = "FEP", "FEPsumms") broke but ran line by line
