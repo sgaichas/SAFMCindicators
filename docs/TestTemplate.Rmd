@@ -1,0 +1,88 @@
+---
+title: "Council Ecosystem Info Template"
+author: "Sarah Gaichas"
+date: "`r Sys.Date()`"
+output:
+  pdf_document:
+    keep_tex: true
+    includes:
+      in_header: boxescolumns.tex
+    extra_dependencies: awesomebox
+  html_document:
+    css: columns.css
+    df_print: paged
+csl: plos.csl
+bibliography: operationalSOE.bib
+link-citations: true
+urlcolor: blue
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+# can I set up 2 columns with highlight boxes in each?
+
+# central image summing it up
+
+```
+
+# Council Name Ecosystem Processes
+
+FEP or other policy overview
+
+Current or recent projects
+
+:::::: {.cols data-latex=""}
+
+::: {.col data-latex="{0.55\textwidth}"}
+::: {.noteblock data-latex=""}
+## Ecosystem Data Products
+
+ESRs or SOEs, basic structure, how often
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+enim ad minim veniam, quis nostrud exercitation ullamco laboris
+nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+nulla pariatur.
+:::
+:::
+
+::: {.col data-latex="{0.05\textwidth}"}
+\ 
+<!-- an empty Div (with a white space), serving as
+a column separator -->
+:::
+
+::: {.col data-latex="{0.4\textwidth}"}
+:::: {.blackbox data-latex=""}
+## How are they used
+Assessments with ecosystem data
+Risk assessments
+etc. 
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+enim ad minim veniam, quis nostrud exercitation ullamco laboris
+nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+nulla pariatur.
+::::
+:::
+::::::
+
+
+A note box:
+
+::: {.noteblock data-latex=""}
+Thank you for noticing this **new notice**! Your noticing it has been noted, and *will be reported to the authorities*!
+:::
+
+:::: {.blackbox data-latex=""}
+::: {.center data-latex=""}
+**NOTICE!**
+:::
+
+Thank you for noticing this **new notice**! Your noticing it has been noted, and *will be reported to the authorities*!
+::::

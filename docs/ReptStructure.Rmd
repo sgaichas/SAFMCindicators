@@ -136,6 +136,8 @@ The Pacific Council recieves a single ESR produced annually for the California C
 
 ESP like products [@tolimieri_oceanographic_2018; @haltuch_oceanographic_2020] exist for at least 2 species.
 
+Which assessments include ecosystem indicators directly?
+
 The SSC is evaluating risk tables in progress for stock assessments and ABC decisions (see below), but they are reframed as uncertainty tables using IPCC "confidence" language on degree of agreement of indicators and robustness of evidence). 
 
 CVA exists [@mcclure_vulnerability_2023] and is proposed for use as a component in the process determining ABC uncertainty buffers (see below).
@@ -182,7 +184,7 @@ The Hawaii EEZ is slightly bigger than the West Coast EEZ. Resources for ecosyst
 
 The New England region gets a State of the Ecosystem (SOE) report each year that covers two ecoregions: the Gulf of Maine and Georges Bank [@caracappa_state_2025]. Coastwide Northeast U.S. indicators are also included. Ecosystem profiles and ESPs have been produced for 3 species during research track assessments: American plaice [@behan_ecosystem_2022-1; @behan_environmental_2022], Atlantic cod [@behan_profile_2023; @behan_environmental_2023; @tyrell_development_2023], and Atlantic herring [@molina_atlantic_2025]. All Northeast US ESPs to date are listed here: https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/ecosystem-and-socioeconomic-profile-development-and-reports
 
-To date ecosystem indicators have been integrated into X stock assessments
+To date ecosystem indicators have been integrated into 2 research track stock assessments for Southern New England Mid Atlantic (Gulf Stream Index controls expected recruitment) and Georges Bank (deviation from BH recruitment controlled by bottom temperature) yellowtail flounder. Decisions were based on literature review and statistical indicator testing similar to an ESP process. 
 
 The Council is developing a [risk policy](https://d23h0vhsm26o6d.cloudfront.net/Risk-Policy-Statement-and-Concept-Overview-for-posting-v1-final.pdf) that will use some indicators from the SOE and possibly ESPs. The policy evaluates risk due to stock status and assessment uncertainty, climate and ecosystem drivers, and economic and community considerations. Indicators are being selected for each category will be scored according to criteria established for the category, then scores across categories are to be weighted by the Council to achieve an overall risk score for each stock given the set of indicators. The risk score would then be used to adjust the buffer between OFL and ABC using the established control rule for the stock in question (NEFMC harvest control rules vary by FMP). The Council plans to start with its groundfish FMP to refine this indicator based risk approach.
 
@@ -199,7 +201,7 @@ A climate vulnerability analysis for Northeast U.S. species has been published [
 
 The Mid-Atlantic region gets a State of the Ecosystem (SOE) report each year that covers one ecoregion: the Mid-Atlantic Bight [@gaichas_state_2025]. Coastwide Northeast U.S. indicators are also included. Ecosystem socio-economic profiles have been produced for X stocks during research track assessments:  black sea bass [@tabandera_black_2024], bluefish [@tyrell_bluefish_2022], golden tilefish [@salois_golden_2024], longfin inshore squid (in progress as of October 2025), and shortfin squid [@salois_oceanographic_2022]. All Northeast US ESPs to date are listed here: https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/ecosystem-and-socioeconomic-profile-development-and-reports
 
-To date, ecosystem indicators have been integrated into the operational black sea bass assessment and into research track models for black sea bass and bluefish. 
+To date, ecosystem indicators have been integrated into the operational black sea bass assessment (winter bottom temperature, northern area influences expected recruitment) and into research track models for black sea bass and bluefish (forage fish index influences recreational index catchability). Decisions were based on ESPs.
 
 The Council uses indicators from both the SOE and ESPs in an annual ecosystem-level risk assessment [@gaichas_implementing_2018]. This risk assessment is part of the Council's Ecosystem Approach to Fisheries Management (EAFM) as laid out in their 2019 policy document. The document functions similarly to an FEP in outlining Council policy in a non-regulatory document. It highlights EAFM policy guidance in several strategic areas including forage fish, habitat, social and economic, climate change, and ecosystem interactions. The policy guidance for addressing ecosystem interactions outines a decision process beginning with risk assessment for prioritizing key interactions, conceptual modeling for identifying links between risks, information gaps, and questions the Council can address, and management strategy evaluation to quantitatively analyze tradeoffs and management options regarding the high priority ecosystem interactions [@gaichas_framework_2016]. The EAFM risk assessment has been used to identify priority fisheries for further analysis with conceptual modeling and management strategy evaluation. The risk assessment was expanded in 2024 to include additional risk elements, indicators, and risk criteria.
 
@@ -222,6 +224,8 @@ Current projects include "Developing a US Caribbean Hub to Operationalize EBFM i
 #### GFMC
 
 ESR and CVA [@quinlan_results_2023] exists, and marine mammal climate vulnerability has been assessed for the entire Atlantic Coast, including the Gulf [@lettrich_vulnerability_2023]. 
+
+Which stock assessments include ecoystem indictors--red tide in snapper assessment?
 
 A Gulf FEP has been drafted by contractor in 2022. This FEP also evaluated cooperative research and citizen science programs. Further development is in progress with the Council's ecosystem technical team. The FEP extension follows the process outlined in the Pacific and North Pacific of identifying a Fishery Ecosystem Issue (FEI). An example FEI addressing red tide illustrates going through FEI loop identifying objectives, potential indicators, and uses of the indicators to support management. 
 
