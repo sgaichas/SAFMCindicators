@@ -27,7 +27,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # North Pacific Fishery Management Council Ecosystem Processes
 
-The North Pacific Council manages fisheries using Fishery Management Plans (FMPs): four FMPs are species-based (Groundfish, Crab, Salmon, and Scallop) and one is area-based (Arctic). FMP based single species groundfish and crab management has evolved to include ecosystem indicators in the catch specification process. 
+The North Pacific Council manages fisheries using Fishery Management Plans (FMPs): five FMPs are species-based (Groundfish-2 areas, Crab, Salmon, and Scallop) and one is area-based (Arctic). FMP based single species groundfish and crab management has evolved to include ecosystem indicators in the catch specification process. 
 
 The Council has two area-based Fishery Ecosystem Plans (FEPs): Aleutians and Bering Sea. The Bering Sea FEP has "action modules" focusing on climate readiness, incorporation of local and traditional knowledge, evaluating current management alongside EBFM best practice, developing conceptual models, and alignment of Council priorities with research funding. The first two FEP action modules have been initiated. Climate readiness was ranked 2-3 out of a possible scale of 5.  
 
