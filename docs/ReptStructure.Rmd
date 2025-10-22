@@ -39,13 +39,80 @@ study fleets, cooperative research, citizen science).
 
 ## Conduct an ecosystem information review across Councils, including SAFMC
 
-Comprehensive literature review: peer reviewed literature and Council webpage search for current and past ecosystem approaches
+### Comprehensive literature review: peer reviewed literature and Council webpage search for current and past ecosystem approaches
 
-Lit search terms 
+Lit search terms:
 
-Google search and google scholar: "ecosystem indicators US fishery management councils"
+*  Google search and google scholar: "ecosystem indicators US fishery management councils"  
+*  NOAA IR: "ecosystem status report" "climate vulnerability analysis" "fisheries ecosystem plan"  
 
-NOAA IR: "ecosystem status report" "climate vulnerability analysis" "fisheries ecosystem plan"
+Web scraping Council sites for documents including the terms "ecosystem approach|ecosystem indicator|ecosystem report|ecosystem status|ecosystem based" using [this code](https://github.com/sgaichas/SAFMCindicators/blob/main/R/FindCouncilEcoDocs.R)
+
+Documents and information from the Council Coordinating Committee's recent meetings: 
+
+*  2022 Council Member Ongoing Development Workshop on New Approaches to EBFM/EAFM https://www.fisherycouncils.org/cmod-workshops/2022. 
+*  2022 Seventh National Scientific Coordination Subcommittee Workshop on Adapting Fisheries Managment to a Changing Ecosystem https://www.fisherycouncils.org/ssc-workshops/scs-7  
+*  2024 Eighth National Scientific Coordination Subcommittee Workshop on Applying ABC Control Rules in a Changing Environment https://www.fisherycouncils.org/ssc-workshops/scs-8 
+
+
+### Gather contextual data about the Councils: 
+
+How much area do they manage? Summarized in Table 2 from @bachman_use_2025
+
+How many U.S. states and territories are represented in each? Drawn from https://www.fisherycouncils.org/
+
+How many FMPs and FEPs? Drawn from https://www.fisherycouncils.org/ and individual Council reviews below.
+
+```{r}
+EEZareas <- readr::read_table(here::here("docs/Bachman2025Tab2.txt"))
+
+EEZclean <- EEZareas |>
+  dplyr::filter(!Region %in% c("PercentofU.S.EEZ")) |>
+  dplyr::mutate(dplyr::across(EEZArea:SeasonalFisheryManagement, ~as.numeric(stringr::str_remove(.x, ","))))
+
+regionnames <- data.frame(Region = EEZclean$Region,
+                          CouncilName = c("New England",
+                                         "Mid-Atlantic",
+                                         "South Atlantic",
+                                         "Gulf",
+                                         "Caribbean",
+                                         "Pacific",
+                                         "North Pacific",
+                                         "Western Pacific",
+                                         NA),
+                          Nstates = c(4, 7, 4, 5, 3, 3, 1, 11, NA),
+                          NFMPs = c(9, 7, 8, 7, 3, 4, 6, 0, NA),
+                          NFEPs = c(0, 1, 1, 1, 0, 1, 2, 5, NA))
+
+proparea <- EEZclean |>
+  dplyr::select(Region, EEZArea) |>
+  dplyr::filter(!Region %in% c("Totalarea")) |>
+  dplyr::mutate(Proparea = EEZArea/sum(EEZArea),
+                Percarea = Proparea*100) |>
+  dplyr::left_join(regionnames)
+
+proparea |>
+  dplyr::select(CouncilName, EEZArea, Percarea, Nstates, NFMPs, NFEPs) |>
+  flextable::flextable() |>
+  flextable::colformat_double(
+      j = c("Percarea"), # Specify the columns to format
+      big.mark = "",             # Set big.mark to an empty string to remove commas
+      digits = 2                  # Specify the number of decimal places
+    ) |>
+  flextable::set_header_labels(
+      CouncilName = "Council",
+      EEZArea = "EEZ Area (sq km)",
+      Percarea = "Percent of U.S. EEZ", 
+      Nstates = "Number of States/Territories",
+      NFMPs = "Number of FMPs",
+      NFEPs = "Number of FEPs"
+    ) |>
+  flextable::set_table_properties(layout = "autofit", width = 1)
+
+
+```
+
+
 
 Structured interviews of key regional personnel to document ecosystem information sources, data products, and processes where ecosystem information is used for each U.S. Fishery Management Council, including SAFMC. 
 
@@ -142,9 +209,9 @@ The SSC is evaluating risk tables in progress for stock assessments and ABC deci
 
 CVA exists [@mcclure_vulnerability_2023] and is proposed for use as a component in the process determining ABC uncertainty buffers (see below).
 
-FEP developed (2013 and 2022) and requests annual ESRs. The 2022 FEP is informational an d not prescriptive, retaining Council discretion to act on ecosystem information. It specifies goals and objectievs as well as "ecosystem initiatives" that focus on priority actions (described below). The FEP and includes an outline of ecosystem science uses in the Council process. 
+FEP developed (2013 and 2022) and requests annual ESRs. The 2022 FEP is informational and not prescriptive, retaining Council discretion to act on ecosystem information. It specifies goals and objectives as well as "ecosystem initiatives" that focus on priority actions (described below). The FEP includes an outline of ecosystem science uses in the Council process. 
 
-FEP Initiative 1 prohibited directed fishing on currently unexploited, unmanaged forage fish in the region and was completed in 2015. FEP Initiative 2 reviewed the ESR 2015-2016 to better inform the Council of both ecosystem indicators and processes and the potential use of this information in management. FEP Initiative 3, completed in 2019, was the Climate and Communities initiative to evalaute potential impacts of climate change and identify ways to improve flexibility and responsiveness of management. As part of this initiative, climate scenario planning was completed. How is this being used?
+FEP Initiative 1 prohibited directed fishing on currently unexploited, unmanaged forage fish in the region and was completed in 2015. FEP Initiative 2 reviewed the ESR 2015-2016 to better inform the Council of both ecosystem indicators and processes and the potential use of this information in management [@tommasi_case_2021]. FEP Initiative 3, completed in 2019, was the Climate and Communities initiative to evaluate potential impacts of climate change and identify ways to improve flexibility and responsiveness of management. As part of this initiative, climate scenario planning was completed. How is this being used?
 
 FEP Initiative 4, [Ecosystem and Climate Information for Species, Fisheries, and FMPs](https://www.pcouncil.org/actions/ecosystem-and-climate-information-for-species-fisheries-and-fmps/), is currently active and is developing an ecosystem and climate risk assessment framework for use in the catch specification process. This is patterned on the use of risk tables in NPFMC harvest specification, but is tailored to the p* process used in PFMC. The ecosystem team tested options and recommended one where ecosystem and climate risks would alter the sigma applied to characterize scientific uncertainty in the OFL  (sigma is equivalent to the MAFMC SSC OFL CV). PFMC sigmas are 0.5 for high certainty assessments, 1 for data moderate assessments, and 2 for data limited assessments, with additional increases in sigma as time passes since the most recent assessment. Ecosystem and climate risks could further inform sigma, increasing or decreasing it as these factors increase or decrease uncertainty. 
 
@@ -203,7 +270,11 @@ The Mid-Atlantic region gets a State of the Ecosystem (SOE) report each year tha
 
 To date, ecosystem indicators have been integrated into the operational black sea bass assessment (winter bottom temperature, northern area influences expected recruitment) and into research track models for black sea bass and bluefish (forage fish index influences recreational index catchability). Decisions were based on ESPs.
 
-The Council uses indicators from both the SOE and ESPs in an annual ecosystem-level risk assessment [@gaichas_implementing_2018]. This risk assessment is part of the Council's Ecosystem Approach to Fisheries Management (EAFM) as laid out in their 2019 policy document. The document functions similarly to an FEP in outlining Council policy in a non-regulatory document. It highlights EAFM policy guidance in several strategic areas including forage fish, habitat, social and economic, climate change, and ecosystem interactions. The policy guidance for addressing ecosystem interactions outines a decision process beginning with risk assessment for prioritizing key interactions, conceptual modeling for identifying links between risks, information gaps, and questions the Council can address, and management strategy evaluation to quantitatively analyze tradeoffs and management options regarding the high priority ecosystem interactions [@gaichas_framework_2016]. The EAFM risk assessment has been used to identify priority fisheries for further analysis with conceptual modeling and management strategy evaluation. The risk assessment was expanded in 2024 to include additional risk elements, indicators, and risk criteria.
+The Council uses indicators from both the SOE and ESPs in an annual ecosystem-level risk assessment [@gaichas_implementing_2018]. This risk assessment is part of the Council's Ecosystem Approach to Fisheries Management (EAFM) as laid out in their 2019 policy document. The document functions similarly to an FEP in outlining Council policy in a non-regulatory document. It highlights EAFM policy guidance in several strategic areas including forage fish, habitat, climate change, and ecosystem interactions, with social and economic issues considered through all strategic areas. Based on the EAFM policy strategic areas, the Council has implemented operational management including an unmanaged forage amendment, updated EFH designations based on a regional habitat assessment, and climate change research, scenario planning, and multi-Council coordination. 
+
+The policy guidance for addressing ecosystem interactions outlines a decision process beginning with risk assessment for prioritizing key interactions, conceptual modeling for identifying links between risks, information gaps, and questions the Council can address, and management strategy evaluation to quantitatively analyze tradeoffs and management options regarding the high priority ecosystem interactions [@gaichas_framework_2016]. The EAFM risk assessment has been used to identify priority fisheries for further analysis with conceptual modeling [@depiper_learning_2021] and management strategy evaluation [@muffley_there_2021]. The risk assessment was expanded in 2024 to include additional risk elements, indicators, and risk criteria.
+
+![Fig 4, MAFMC Indicator-based EAFM Risk Assessment](images/MAFMCrisk2025.png)
 
 A climate vulnerability analysis for Northeast U.S. species has been published [@hare_vulnerability_2016], and is considered within the SSC's ABC deliberation process as part of ecosystem factors contributing to uncertainty in the OFL. Both community climate vulnerability [@colburn_indicators_2016] and habitat climate vulnerability [@farr_assessment_2021] have also been assessed in the Northeast U.S., and marine mammal climate vulnerability has been assessed for the entire Atlantic Coast [@lettrich_vulnerability_2023]. A habitat-species climate vulnerability crosswalk is also being considered during deliberations, but is not yet formally part of the OFL CV protocol. 
 
@@ -225,7 +296,7 @@ Current projects include "Developing a US Caribbean Hub to Operationalize EBFM i
 
 ESR and CVA [@quinlan_results_2023] exists, and marine mammal climate vulnerability has been assessed for the entire Atlantic Coast, including the Gulf [@lettrich_vulnerability_2023]. 
 
-Which stock assessments include ecoystem indictors--red tide in snapper assessment?
+The red grouper assessment includes red tide mortality, also gag grouper? 
 
 A Gulf FEP has been drafted by contractor in 2022. This FEP also evaluated cooperative research and citizen science programs. Further development is in progress with the Council's ecosystem technical team. The FEP extension follows the process outlined in the Pacific and North Pacific of identifying a Fishery Ecosystem Issue (FEI). An example FEI addressing red tide illustrates going through FEI loop identifying objectives, potential indicators, and uses of the indicators to support management. 
 
@@ -280,7 +351,9 @@ Fishery Management Plan Coordinator & Fishery Economist, Chip Collier Deputy Dir
 
 ## Synthesis across Councils
 
+Councils have a long history of learning from each other in designing and implementing ecosystem level planning. For example, the Pacific Council reviewed the Aleutian Islands, South Atlantic, and Western Pacific FEPs prior to developing its FEP. The Mid-Atlantic in turn reviewed the Pacific and other FEPs in developing its EAFM Policy Guidance Document (functionally an FEP). The North Pacific's Bering Sea FEP includes the "ecosystem initiative" approach to operationalizing aspects of EBFM, patterned on the Pacific FEP, and the developing Gulf Council FEP similarly includes Fishery Ecosystem Issues or FEIs as the basis for addressing specific ecosystem issues or goals. The island-archipelago based FEPs in the Western Pacific that are currently used for operational fishery management preceeded the Caribbean's development of island-based FMPs, replacing their the species based FMPs and setting the groundwork for geographically based EBFM. 
 
+Iterative co-production of ecosystem data products with managers and scientists has is demonstrated to improve understanding and use of ecosystem data in fishery management [@muffley_there_2021; @tommasi_case_2021]. 
 
 ## Recommendations for SAFMC
 

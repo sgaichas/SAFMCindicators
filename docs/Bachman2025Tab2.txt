@@ -1,0 +1,11 @@
+Region	EEZArea	EcosystemConservation	Year-roundFisheryManagement	SeasonalFisheryManagement	Total PercentofRegionalEEZ
+NewEngland	55,947	21,945	3202	44,185	48,830	86.5 %
+Mid-Atlantic	53,307	31,100	0	5270	36,276	68.1 %
+SouthAtlantic	143,768	20,217	56,416	41,918	78,946	54.9 %
+GulfofMexico	182,752	1022	222	390	1634	0.9 %
+Caribbean	57,651	5	13	25	43	0.1 %
+Pacific	231,748	208,718	15,927	0	219,321	94.6 %
+NorthPacific	1026,771	654,633	946,589	28,777	996,454	97.0 %
+WesternPacific	1686,328	973,787	225,621	0	1097,494	65.1 %
+Totalarea	3438,272	1911,428	1277,991	121,015	2478,466	
+PercentofU.S.EEZ		55.6 %	36.3 %	3.5 %	72.1 %	
