@@ -5,7 +5,6 @@ output:
     keep_tex: true
     includes:
       in_header: boxescolumns.tex
-    extra_dependencies: awesomebox
   html_document:
     css: columns.css
     df_print: paged
@@ -28,10 +27,11 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # North Pacific Fishery Management Council Ecosystem Processes
 
-The North Pacific Council manages fisheries using Fishery Management Plans (FMPs): four FMPs are species-based (Groundfish, Crab, Salmon, and Scallop) and one is area-based (Arctic). FMP based management has evolved to include ecosystem indicators in the catch specification process. 
+The North Pacific Council manages fisheries using Fishery Management Plans (FMPs): four FMPs are species-based (Groundfish, Crab, Salmon, and Scallop) and one is area-based (Arctic). FMP based single species management has evolved to include ecosystem indicators in the catch specification process. 
 
-The Council has two area-based Fishery Ecosystem Plans (FEPs): Aleutians and Bering Sea. The Bering Sea FEP has "action modules" focusing on climate readiness, incorporation of local and traditional knowledge, evaluating current management alongside EBFM best practice, developing conceptual models, and alignment of Council priorities with research funding. The first two FEP action modules have been initiated. Climate readiness was ranked 2-3 out of a possible scale of 5.
+The Council has two area-based Fishery Ecosystem Plans (FEPs): Aleutians and Bering Sea. The Bering Sea FEP has "action modules" focusing on climate readiness, incorporation of local and traditional knowledge, evaluating current management alongside EBFM best practice, developing conceptual models, and alignment of Council priorities with research funding. The first two FEP action modules have been initiated. Climate readiness was ranked 2-3 out of a possible scale of 5.  
 
+The SSC is considering to what extent, and whether, to revise groundfish and crab harvest control rules to be more climate-resilient. A future programmatic EIS to encompass climate-ready/resilient management goals and objectives may expand beyond ABC/TAC specification to other management measures such as spatial management.
 
 :::::: {.cols data-latex=""}
 
@@ -65,7 +65,8 @@ Reports include a life history conceptual model with ecosystem drivers for each 
 *  Multispecies assessment  
 *  Economic status  
 
-**Climate vulnerability analysis**
+**Climate vulnerability analysis**  
+*  Bering Sea Groundfish
 :::
 :::
 
@@ -88,7 +89,7 @@ Risk tables are developed from ESR and ESP indicators to summarize ecosystem con
 
 The Bering Sea FEP formalises the use of Ecosystem Status Reports (ESR) for monitoring progress against ecosystem objectives. 
 :::
-![](images/Honeycomb Graphic.png){ width=110% }
+![](images/Honeycomb Graphic.png){ width=100% }
 :::
 
 ::::::
