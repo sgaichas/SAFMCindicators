@@ -4,6 +4,14 @@
 
 \usepackage{tcolorbox}
 
+\tcbset{
+  mystyle/.style={
+    before skip=-10pt, % Adjust this value
+    after skip=-10pt   % Adjust this value
+  }
+}
+\newtcolorbox{mynoteblock}[1][]{mystyle, #1}
+
 \newtcolorbox{blackbox}{
   colback=black,
   colframe=orange,
@@ -26,7 +34,7 @@
 
 \newenvironment{cols}[1][]{}{}
 
-\newenvironment{col}[1]{\begin{minipage}{#1}\ignorespaces}{%
+\newenvironment{col}[1]{\begin{minipage}[t]{#1}\ignorespaces\vspace{0pt}}{%
 \end{minipage}
 \ifhmode\unskip\fi
 \aftergroup\useignorespacesandallpars}
@@ -42,3 +50,8 @@
 }
 \makeatother
 
+\usepackage{awesomebox}
+\setlength{\aweboxvskip}{1mm}
+
+
+\pagenumbering{gobble}
