@@ -1,0 +1,573 @@
+## Summary
+
+The St. Croix Comprehensive Fishery Management Plan (FMP) is a document that transitions federal fishery management in the U.S. Virgin Islands from a Caribbean-wide approach to an island-specific approach. The plan covers the Exclusive Economic Zone (EEZ) surrounding St. Croix, which extends from 3 to 200 nautical miles from the coastline.
+
+The Caribbean Fishery Management Council proposes replacing four existing Caribbean-wide FMPs (Reef Fish, Spiny Lobster, Queen Conch, and Coral FMPs) with three island-based plans, including this St. Croix FMP. This shift was requested by local fishermen and communities who recognized that each island has unique biological, ecological, economic, and cultural characteristics that require tailored management approaches.
+
+The plan addresses seven main actions: (1) establishing the island-based FMP structure, (2) identifying species needing federal management, (3) organizing stocks into complexes with indicator species, (4) establishing status determination criteria and management reference points, (5) creating accountability measures for catch limits, (6) identifying essential fish habitat for newly managed species, and (7) establishing framework procedures for efficient management updates.
+
+The managed species are organized into three main groups: Reef Fish (including snappers, groupers, grunts, parrotfish, surgeonfish, and others), Pelagics (including dolphinfish and wahoo), and invertebrates (spiny lobster and queen conch). The plan establishes specific regulations for gear restrictions, size limits, bag limits, seasonal closures, and area closures to ensure sustainable harvest.
+
+Key management features include commercial trip limits for queen conch, recreational bag limits for various species, prohibited fishing methods (such as explosives, chemicals, and nets in certain areas), and specific seasonal closures during spawning periods. The plan also designates essential fish habitat areas and establishes framework procedures to allow for adaptive management as conditions change.
+
+The document emphasizes ecosystem-based fisheries management, recognizing the interconnected nature of marine resources and human communities. It aims to prevent overfishing while maintaining optimum yield, ensuring long-term sustainability, and supporting fishing communities' livelihoods and cultural traditions.
+
+## Ecosystem Policies, Goals, and Objectives
+
+### Goals:
+- **G1**: Prevent overfishing and achieve optimum yield while ensuring continued health of fishery resources and sustained participation of fishing communities
+- **G2**: Manage fisheries within ecosystem production limits to preserve ecosystem goods and services
+- **G3**: Ensure continued provision of ecosystem services, including adequate forage resources for healthy trophic webs
+- **G4**: Promote awareness of marine resource management laws and ensure informed public input
+- **G5**: Foster collaboration between territorial and federal authorities for compatible management
+
+### Objectives:
+- **O1**: Provide long-term sustainable use using precautionary, ecosystem-based approach
+- **O2**: Reduce bycatch and waste through gear restrictions, seasonal closures, and marine protected areas
+- **O3**: Establish data collection and reporting programs for biological, ecological, economic, and social data
+- **O4**: Collaborate with regional fishery management bodies for pan-Caribbean stocks
+- **O5**: Promote fair and equitable use of fishery resources
+- **O6**: Provide management flexibility for rapid adaptation to changing conditions
+- **O7**: Devise efficient regulatory framework maximizing enforcement effectiveness
+- **O8**: [Text appears cut off in the document]
+
+### Management Approaches:
+- **Island-based management**: Tailored to St. Croix's unique characteristics
+- **Stock complex organization**: Grouping related species with indicator stocks
+- **Gear restrictions**: Prohibited methods include explosives, chemicals, spears for certain species
+- **Seasonal and area closures**: Protecting spawning aggregations and sensitive habitats
+- **Size and bag limits**: Minimum sizes and recreational harvest limits
+- **Framework procedures**: Allowing adaptive management responses
+
+### Performance Metrics:
+- **Annual Catch Limits (ACLs)**: Established for commercial sectors
+- **Annual Catch Targets (ACTs)**: Set below ACLs for pelagic stocks
+- **Status Determination Criteria**: Including Maximum Sustainable Yield (MSY), Overfishing Limits (OFL), and Acceptable Biological Catch (ABC)
+- **Accountability Measures**: Triggered when catch limits are exceeded
+
+### Ecosystem Indicators:
+*The document section provided does not contain specific ecosystem indicators. The text appears to be cut off before a complete list of ecosystem indicators could be identified. The document mentions that indicator stocks are selected for stock complexes, but the specific ecological indicators used to assess ecosystem health are not detailed in the provided sections.*
+
+Based on the document provided, I'll summarize this St. Croix Fishery Ecosystem Plan and then provide the requested sections:
+
+## Summary (500 words)
+
+The St. Croix Fishery Management Plan (FMP) represents a transition from Caribbean-wide fisheries management to an island-based approach specifically for St. Croix waters in the U.S. Virgin Islands. The Caribbean Fishery Management Council developed this plan to create more tailored management measures that address the unique cultural, social, and economic factors affecting St. Croix's fisheries.
+
+**Background and Structure**
+The plan establishes a new St. Croix FMP to replace the existing four U.S. Caribbean-wide plans (Reef Fish, Spiny Lobster, Queen Conch, and Coral FMPs) in St. Croix's Exclusive Economic Zone (EEZ). The document presents seven tiered management actions, with subsequent actions building upon decisions from previous ones.
+
+**Key Management Actions**
+Action 1 establishes the transition mechanism from Caribbean-wide to island-based management. The preferred alternative creates the new St. Croix FMP and repeals the four existing Caribbean-wide FMPs as they apply to St. Croix waters.
+
+Action 2 identifies species needing federal conservation and management through a stepwise criteria-based approach. This process resulted in reducing managed reef fish species from 81 to 43, while adding new species like dolphin and wahoo. The plan includes queen conch, spiny lobster, and all corals, sea cucumbers, and sea urchins occurring in St. Croix EEZ waters.
+
+Action 3 organizes these species into stock complexes based on scientific analysis, including cluster analysis of landing patterns, biological similarities, vulnerability assessments, and expert opinion. The preferred alternative creates 13 individual stocks and 13 stock complexes.
+
+**Species Selection Criteria**
+The plan employs five criteria for species selection:
+- Criterion A: Species currently overfished, habitat-critical, or with existing management measures
+- Criterion B: Excludes species rarely occurring in federal waters
+- Criterion C: Includes biologically vulnerable or ecologically essential species
+- Criterion D: Includes economically important species based on landing thresholds
+- Criterion E: Allows Council discretion for additional conservation-needed species
+
+**Ecosystem Considerations**
+The plan recognizes the interconnected nature of coral reef ecosystems and includes species that provide essential ecological services. For example, sea urchins provide grazing services critical for coral settlement, while sea cucumbers regenerate nutrients in reef sediments.
+
+**Expected Benefits**
+The island-based approach is expected to improve management effectiveness by allowing measures specifically tailored to St. Croix's conditions. This should enhance the likelihood of sustainable harvest while maintaining food security for the island and supporting the natural ecological balance of coral reef ecosystems.
+
+**Administrative Structure**
+The plan creates a framework for future management actions while maintaining existing conservation measures for vulnerable species. It establishes the foundation for setting annual catch limits, accountability measures, and other regulatory tools specific to St. Croix's fisheries.
+
+The transition requires implementation across all three island management areas (St. Croix, St. Thomas/St. John, and Puerto Rico) to avoid contradictory management measures and ensure regulatory consistency throughout the U.S. Caribbean region.
+
+## Laws and Regulations Governing Marine Resource Management Section
+
+The document does not contain a complete section titled "awareness of laws and regulations governing marine resource management." However, based on the provided excerpt that appears to be part of an objective (O8), this section would likely cover:
+
+**Objective O8** - Ensure awareness of laws and regulations governing marine resource management and the science and social obligations that support that management, and to ensure informed public input into the management process.
+
+This objective emphasizes the importance of public education and engagement in the fisheries management process, ensuring stakeholders understand both the regulatory framework and the scientific basis for management decisions.
+
+## Ecosystem Policies, Goals, and Objectives
+
+While the complete ecosystem policies and goals are not fully provided in the document excerpt, the following objectives are identified:
+
+### Stated Objectives:
+
+**O8: Public Engagement and Awareness**
+- Ensure awareness of laws and regulations governing marine resource management
+- Ensure understanding of science and social obligations supporting management
+- Ensure informed public input into the management process
+
+**O9: Spawning Aggregation Protection**
+- Protect spawning aggregations and supporting habitats
+- Ensure future health of the resource
+
+**O10: Habitat Management**
+- Map, define, and manage habitats upon which resources depend
+- Particular emphasis on coral reef resources throughout the region
+
+**O11: Ecological Relationships**
+- Account for ecological relationships and functional roles of species
+- Focus on grazers, forage fish, habitat-builders, and top predators
+- Contribute to healthy ecosystem maintenance
+
+**O12: New Fishery Development**
+- Require essential scientific data gathering and analysis in advance
+- Guide development of new fisheries
+- Ensure sustainability from the start
+
+### Management Approaches:
+1. **Island-based management** - Tailored to specific local conditions
+2. **Ecosystem-based approach** - Considers species interactions and ecological roles
+3. **Stepwise species selection** - Using multiple criteria for inclusion decisions
+4. **Stock complex organization** - Grouping species with similar characteristics
+5. **Data-driven decision making** - Based on best available scientific information
+
+### Performance Metrics:
+The document doesn't specify detailed performance metrics, but implies monitoring of:
+- Stock status relative to overfishing thresholds
+- Annual catch limits compliance
+- Habitat condition and protection effectiveness
+- Stakeholder engagement levels
+
+### Ecosystem Indicators:
+Specific ecosystem indicators mentioned include:
+- **Habitat indicators**: Coral reef condition and coverage
+- **Functional group indicators**: Status of grazers, habitat-builders, top predators
+- **Species-specific indicators**: Population status of key species like parrotfish, groupers
+- **Fishing pressure indicators**: Catch rates, effort levels
+- **Ecological service indicators**: Nutrient cycling capacity (sea cucumbers), grazing pressure (sea urchins)
+
+*Note: The document appears to be incomplete, with full ecosystem policies, goals, and detailed performance metrics likely contained in other sections not provided.*
+
+I apologize, but I don't see any PDF document attached to your message. Based on your request, it appears you want me to analyze a fishery ecosystem plan document that should contain information about:
+
+- Ecosystem policies, goals, and objectives
+- Management approaches
+- Performance metrics 
+- Ecosystem indicators
+- Stock complex arrangements using productivity and susceptibility scores
+
+However, I can only see the text content you've provided, which appears to be excerpts from Chapter 2 of a St. Croix Fishery Management Plan/Environmental Assessment dealing with stock complex organization and status determination criteria.
+
+To provide you with the requested 500-word summary and detailed analysis of ecosystem policies, goals, objectives, management approaches, performance metrics, and indicators, I would need:
+
+1. The complete PDF document, or
+2. The specific sections of the document that contain the ecosystem management framework information you're asking about
+
+The text you've provided focuses primarily on:
+- Stock complex organization alternatives (Action 3)
+- Productivity-Susceptibility Analysis (PSA) results
+- Indicator stock selection criteria
+- Status determination criteria and management reference points (Action 4)
+
+Could you please either:
+- Attach the PDF document, or
+- Provide the sections that specifically address the ecosystem policies, goals, objectives, management approaches, performance metrics, and ecosystem indicators?
+
+This will allow me to provide you with the comprehensive analysis you've requested.
+
+I'm unable to access or read PDF files. However, I can help you analyze and summarize fishery ecosystem plan documents if you could provide the text content directly in your message.
+
+Based on the extensive text you've included about the St. Croix Fishery Management Plan/Environmental Assessment, I can see this is a detailed document covering various management actions and alternatives for fisheries in the St. Croix EEZ. However, I notice this appears to be only a portion of the document (Chapter 2 on Actions and Alternatives), and I don't see the ecosystem-specific policies, goals, objectives, or indicators that you're asking me to identify.
+
+To provide you with the comprehensive 500-word summary and the specific ecosystem policies, goals, objectives, management approaches, performance metrics, and ecosystem indicators you've requested, I would need:
+
+1. The complete document text, including sections that specifically address ecosystem policies and objectives
+2. Any sections that outline management approaches and performance metrics
+3. The ecosystem indicators section
+
+Regarding the specific section you asked me to summarize about Alternative 2 and Alternative 3 effects, I can see this discusses:
+
+**Summary of Specified Section:**
+Alternative 2 would result in minor negative short-term effects due to administrative efforts required to modernize landings tracking protocols for new reference points and species inclusion. Alternative 3 differs from Alternative 1 in being process-based rather than number-based, allowing broader application across all stocks and stock complexes selected by the Council, whereas Alternative 1 is limited to stocks already managed in the St. Croix EEZ. Alternative 3 would provide more beneficial effects than Alternative 1 but less than Preferred Alternative 2 across physical, biological/ecological, social, and economic environments. However, Alternative 3's benefits are time-limited because it lacks mechanisms to incorporate best available scientific information and update management as data improves, requiring FMP amendments for alternative control rules rather than adaptive management.
+
+If you could provide the complete document text or the specific sections containing ecosystem policies and objectives, I'd be happy to provide the comprehensive analysis you're looking for.
+
+## Summary
+
+This St. Croix Fishery Management Plan (FMP) Environmental Assessment transitions fisheries management from four species-based Caribbean FMPs to a single island-based approach for the St. Croix Exclusive Economic Zone (EEZ). The 500-word limit prevents a complete summary, but key elements include:
+
+The document establishes management for 26 stocks/stock complexes in the St. Croix management area, organized into functional groups: Spiny Lobster (1), Queen Conch (1), Reef Fish (18), Pelagics (4), and Corals (2). Actions include establishing management units, reference points, annual catch limits (ACLs), and accountability measures while maintaining existing regulations for gear restrictions, closures, and size/bag limits.
+
+Seven main actions are evaluated: management unit composition, stock/stock complex organization, management reference points, ACLs and accountability measures, sector allocations, essential fish habitat (EFH) designation, and framework procedures. The plan maintains fishing at sustainable levels through science-based catch limits while enabling adaptive management.
+
+St. Croix's marine environment features diverse habitats including coral reefs, seagrass beds, mangroves, and deep-water areas. The narrow shelf extends up to several nautical miles, with most fishing occurring within 100 fathoms. Essential fish habitat ranges from mean high water to the EEZ boundary for pelagic species and eggs/larvae, and from mean high water to 100 fathoms for other life stages.
+
+The plan addresses interactions with 19 ESA-listed species including marine mammals (sperm, sei, fin whales), sea turtles, corals, and fish species. Critical habitats for leatherback turtles and Acropora corals occur within the management area.
+
+## Ecosystem Policies, Goals, and Objectives
+
+The document does not contain explicit ecosystem policies, goals, and objectives as typically found in a dedicated ecosystem section. This appears to be primarily a species-based FMP transitioning to island-based management rather than a comprehensive Fishery Ecosystem Plan (FEP).
+
+## Framework Procedures Section Summary
+
+The framework procedures section (Action 7) establishes mechanisms for modifying management measures without full FMP amendments. The Preferred Alternative 2 allows both abbreviated and standard open frameworks:
+
+**When frameworks can be used:**
+- New stock assessments indicating changes needed to MSY, OFL, ABC, or management reference points
+- New information or changed circumstances
+- Compliance with applicable laws or court orders
+
+**Actions allowed:**
+- Abbreviated framework for minor/insignificant changes
+- Standard framework for substantial modifications
+- Closed framework for emergency actions
+
+**Process requirements:**
+- Public discussion in at least one Council meeting
+- Optional Scientific and Statistical Committee (SSC) or Advisory Panel (AP) consultation
+- Council discretion on convening advisory bodies
+
+The framework balances efficiency in implementing necessary changes with appropriate public involvement and scientific review, enabling adaptive management while maintaining transparency and stakeholder engagement.
+
+Based on the provided text from the St. Croix Fishery Ecosystem Plan, I cannot provide the 500-word summary or complete listing of ecosystem policies, goals, objectives, and management approaches that you've requested. This is because the document section you've shared focuses exclusively on Chapter 3 (Affected Environment) and contains only socioeconomic and fishery description content, not the ecosystem management framework components.
+
+## Summary of Provided Section (Economic and Social Context)
+
+The document section describes St. Croix's economic challenges following major disruptions. The closure of the HOVENSA oil refinery in 2012 devastated the local economy, eliminating thousands of jobs across multiple sectors. Manufacturing employment fell 78.3%, agriculture 82.9%, and construction 27.6% between 2010-2013. Unemployment peaked at 14.9% after Hurricane Maria in 2017. 
+
+Despite these setbacks, some sectors showed growth, including utilities (80% increase) and wholesale trade (40.1% increase). The rum industry expanded significantly with Diageo's Captain Morgan distillery relocating to St. Croix in 2012, providing crucial economic stability alongside the existing Cruzan Rum operation.
+
+Tourism shows cyclical patterns, with cruise passenger arrivals peaking at 158,200 in 2011 before declining. Hurricane Maria severely impacted tourism infrastructure, closing major hotels until 2020 and damaging the airport and cruise port facilities.
+
+The fishing sector employs approximately 141 licensed commercial fishermen operating small-scale vessels averaging 22 feet in length. Commercial landings peaked in 2006 at 1.34 million pounds but declined to 433,840 pounds by 2016. The fishery is characterized as artisanal, with fishermen using multiple gear types (lines, traps, SCUBA gear, nets) to target diverse species including parrotfish, spiny lobster, snappers, and pelagic species.
+
+Economic analysis shows average revenue per active commercial fisherman approximates $24,200 annually, with fishing contributing about 58% of household income on average. The fishing fleet consists of aging vessels (55% built before 1991) valued at approximately $34,000 including equipment.
+
+**Missing Information for Complete Response:**
+
+To provide the requested ecosystem policies, goals, objectives, management approaches, performance metrics, and specific indicators, I would need access to other sections of the FMP, particularly:
+- Chapter 1 (Introduction/Purpose and Need)
+- Chapter 2 (Management Alternatives) 
+- Any sections specifically addressing ecosystem-based management framework
+- Sections containing formal policy statements and management objectives
+- Performance monitoring and indicator sections
+
+The provided text contains only descriptive baseline information about the affected environment rather than the management framework components you've requested.
+
+I apologize, but I cannot provide a complete 500-word summary of this PDF as the provided content appears to be only a partial section of the fishery ecosystem plan focused on targeting behavior and fishing activity data from the U.S. Virgin Islands (USVI), specifically St. Croix. I can summarize the specific section you've provided:
+
+## Summary of Provided Section
+
+The text discusses targeting behavior of commercial fishermen in St. Croix, USVI, based on two census studies (2003 and 2015-2016). In 2003, only 19% of fishermen targeted one species category, while 53% targeted three or more categories, showing the multi-species nature of the fishery. Reef fish were the most targeted (85%), followed by deepwater snappers (42%), lobster (41%), and conch (39%).
+
+By 2016, targeting behavior became even more diversified - only 10% targeted one category while 72% targeted three or more categories. Reef fish remained most popular (38%), but overall percentages decreased, suggesting further diversification.
+
+Most fishing activity (59%) occurs in territorial waters rather than federal waters (15%), with 26% fishing both areas equally. Fishermen use multiple sales outlets including roadside sales (39%), landing sites (39%), restaurants (38%), and home sales (42%), averaging 2.3 sales outlets per fisherman.
+
+Hurricanes Irma and Maria in 2017 caused significant damage to St. Croix's commercial fishing sector, with estimated losses of $2.1 million. This included gear damage ($856,000), vessel damage ($472,000), lost income ($675,000), and facility damage ($146,000). Charter fleet losses totaled $327,250.
+
+The document notes that recreational fishing data collection is limited, as the Marine Recreational Information Program (MRIP) hasn't been implemented in USVI, making long-term recreational landings data unavailable.
+
+**Note**: Without access to the complete fishery ecosystem plan, I cannot provide the requested comprehensive analysis of ecosystem policies, goals, objectives, management approaches, performance metrics, and specific ecosystem indicators. The provided text appears to focus primarily on commercial fishing activity patterns, economic impacts, and data collection challenges rather than ecosystem management frameworks. If you could provide the sections containing the ecosystem management plan's policies and objectives, I would be happy to provide that analysis.
+
+I cannot provide a summary since no PDF document was attached to your message. I only see text content that appears to be from a fishery ecosystem plan document discussing environmental consequences, alternatives, and management approaches.
+
+To provide the requested analysis, I would need you to attach the actual PDF file. Once you provide the PDF, I can:
+
+1. Summarize the document in 500 words
+2. List the stated ecosystem policies, goals, and objectives  
+3. Identify management approaches, performance metrics, and ecosystem indicators for each objective
+
+Regarding the text section you included at the end about "season reductions," this appears to discuss Alternative 4's approach to stock complex management, including:
+
+- **Sub-alternative 4a**: Selecting indicator stocks to manage stock complexes, which provides better biological protection by using the most vulnerable species as a proxy for managing the entire complex
+- **Sub-alternative 4b**: Not selecting indicator stocks when appropriate ones cannot be identified, allowing management based on the stock complex as a whole
+- **Benefits**: Both approaches reduce regulatory discards, improve ACL setting, and provide better stock protection compared to individual stock management
+- **ESA considerations**: No direct effects expected on listed species, though indirect effects could occur depending on how management changes affect fishing practices
+
+The section emphasizes that these alternatives help address data limitations while providing flexibility in management approaches based on the best available scientific information.
+
+I apologize, but I cannot provide the summary and analysis you've requested because the text you've provided appears to be only an excerpt from Chapter 4 (Environmental Consequences) of a larger fishery ecosystem plan document. The excerpt focuses primarily on environmental impact analysis of Alternative 1, 2, and 3 for Essential Fish Habitat (EFH) designation and framework procedures, but does not contain the complete ecosystem policies, goals, objectives, management approaches, performance metrics, and ecosystem indicators that you're asking me to identify.
+
+To provide you with an accurate 500-word summary and the comprehensive analysis of ecosystem policies, goals, objectives, management approaches, performance metrics, and ecosystem indicators, I would need:
+
+1. The complete document, particularly the sections that contain:
+   - The executive summary or introduction outlining the plan's purpose
+   - The goals and objectives section
+   - The management framework section
+   - Any ecosystem indicators or monitoring sections
+   - The full policy framework
+
+2. The specific sections that detail:
+   - Stated ecosystem policies
+   - Management goals and objectives
+   - Performance metrics and indicators
+   - Management approaches for each objective
+
+The text you've provided is valuable for understanding the environmental consequences analysis, but represents only a portion of what appears to be a much larger St. Croix Fishery Management Plan. If you can provide the complete document or the specific sections containing the ecosystem management framework, policies, goals, and objectives, I would be happy to provide the comprehensive summary and analysis you've requested.
+
+Would you be able to share the complete document or the specific sections that contain the ecosystem management framework and policy structure?
+
+I apologize, but I cannot access or analyze PDF documents. However, based on the text content you've provided, I can help summarize the information and answer your request about the St. Croix Fishery Ecosystem Plan.
+
+## Summary of the St. Croix FMP/EA (500 words)
+
+The St. Croix Fishery Management Plan/Environmental Assessment establishes a transition from U.S. Caribbean-wide fisheries management to island-based management specifically for St. Croix EEZ waters. This comprehensive plan manages various species including reef fish, pelagics (dolphin, wahoo), spiny lobster, queen conch, and coral reef resources (sea cucumbers, sea urchins, corals).
+
+The plan contains seven key actions addressing different aspects of fisheries management. Action 1 establishes the transition framework from Caribbean-wide to island-specific management. Action 2 identifies 27 stocks/stock complexes for management using five criteria including economic importance, ecological vulnerability, and conservation needs. Several species receive complete harvest prohibitions, including Nassau grouper, goliath grouper, midnight/blue/rainbow parrotfish, and all sea cucumbers, sea urchins, and corals.
+
+Action 3 organizes species into stock complexes based on scientific analysis, with some complexes having indicator stocks for management purposes. Action 4 establishes status determination criteria using a four-tier Acceptable Biological Catch Control Rule, with all St. Croix stocks falling under Tier 4 due to data limitations. This results in using Sustainable Yield Levels (SYL) as proxies for management reference points.
+
+Action 5 implements accountability measures triggered when landings exceed Annual Catch Limits (ACL). Different approaches apply to different species groups - reef fish and spiny lobster use post-season closures, pelagics use Annual Catch Targets with Council assessment, and queen conch uses in-season monitoring and closure.
+
+The plan establishes specific regulations including size limits (spiny lobster minimum 5-ounce tail weight), seasonal closures for various species (silk snapper, mutton snapper, groupers), area closures for spawning aggregations (Red Hind and Mutton Snapper areas), and gear restrictions (anchor retrieval systems for reef fishing).
+
+Action 6 describes Essential Fish Habitat for newly managed species, encompassing waters from mean high water to EEZ boundaries and various substrate types to 100+ fathoms depth. Action 7 establishes framework procedures allowing expedited management adjustments through abbreviated and standard frameworks.
+
+The plan includes comprehensive rebuilding plans for overfished stocks: Nassau grouper (25-year plan), goliath grouper (30-year plan), and queen conch (15-year plan). Management reference points include Maximum Sustainable Yield proxies, Maximum Fishing Mortality Thresholds, Minimum Stock Size Thresholds, and species-specific ACLs ranging from zero (prohibited species) to over 197,000 pounds (spiny lobster).
+
+Environmental impacts are expected to be positive through enhanced stock protection and sustainable harvest management. Economic effects vary by action but generally provide long-term benefits through improved stock sustainability, though some short-term costs may occur from harvest restrictions. Social effects are anticipated to be positive due to more responsive, island-specific management addressing local stakeholder concerns.
+
+The plan represents a comprehensive ecosystem-based approach to fisheries management, balancing conservation needs with fishing community interests while ensuring long-term sustainability of St. Croix's marine resources.
+
+## Ecosystem Policies, Goals, Objectives, and Management Approaches
+
+Based on the provided text, the document does not contain a clearly delineated section with explicitly stated ecosystem policies, goals, and objectives with corresponding performance metrics and ecosystem indicators in a structured format. The management approach appears to be embedded throughout various actions rather than presented as a distinct ecosystem management framework.
+
+However, I can identify the following management elements from the text:
+
+**Implicit Management Goals:**
+- Transition to island-based management for improved local responsiveness
+- Prevent overfishing while achieving optimum yield
+- Rebuild overfished stocks within specified timeframes
+- Protect essential fish habitat and ecosystem services
+
+**Management Approaches:**
+- Annual Catch Limits (ACLs) and Accountability Measures
+- Seasonal and area closures for spawning protection  
+- Size and gear restrictions
+- Stock complex management with indicator species
+- Framework procedures for adaptive management
+- Rebuilding plans for overfished species
+
+**Key Indicators Mentioned:**
+- Sustainable Yield Levels (SYL) 
+- Landings data compared to ACLs
+- Stock assessment reference points (when available)
+
+The document appears to focus more on specific management measures and regulatory frameworks rather than presenting a comprehensive ecosystem management strategy with clearly defined policies, goals, objectives, and ecosystem indicators.
+
+# Summary of St. Croix Fishery Management Plan (500 words)
+
+This document outlines the St. Croix Fishery Management Plan (FMP), which represents a significant shift from Caribbean-wide species-based fishery management to island-specific ecosystem-based management. The plan covers the exclusive economic zone waters around St. Croix, U.S. Virgin Islands, extending from 3 to 200 nautical miles offshore.
+
+## Background and Purpose
+
+The plan transitions from the existing Caribbean-wide approach that managed fisheries through separate species-based FMPs (Reef Fish, Spiny Lobster, Queen Conch, and Coral FMPs) to a comprehensive, island-specific plan that better reflects local conditions and needs. This shift enables more tailored management strategies that account for St. Croix's unique ecological, social, and economic characteristics.
+
+## Management Structure
+
+The St. Croix FMP establishes management for multiple species groups including reef fish, spiny lobster, queen conch, and coral reef resources. The plan maintains existing regulations while providing a framework for future modifications specific to St. Croix conditions. Key management tools include fishing gear restrictions, minimum size limits, seasonal closures, and habitat protections.
+
+## Stakeholder Input
+
+Extensive public consultation occurred through multiple scoping sessions from 2012-2019, including hearings on St. Croix in 2012, 2013, 2014, and 2019. Public feedback consistently supported the island-based approach, with participants advocating for enhanced recreational fisheries management and inclusion of additional species like octopus and sea urchins.
+
+## Regulatory Framework
+
+The plan operates under the Magnuson-Stevens Fishery Conservation and Management Act and incorporates requirements from numerous other federal laws including the National Environmental Policy Act, Endangered Species Act, and Marine Mammal Protection Act. The plan underwent comprehensive environmental assessment rather than requiring a full Environmental Impact Statement.
+
+## Economic Considerations
+
+Implementation costs are estimated at $1.09 million, including $333,650 for Council preparation and meetings and $756,650 for NMFS administrative costs. The plan is not considered a "significant regulatory action" under Executive Order 12866 as it does not meet the $100 million annual impact threshold.
+
+## Benefits and Implementation
+
+The preferred alternative allows for more timely implementation of management measures beneficial to fish stocks, resulting in positive biological and indirect economic effects. The magnitude of benefits depends on the speed of regulatory change implementation compared to the more cumbersome FMP amendment process previously required.
+
+## Next Steps
+
+Following Council approval in April 2019, the plan awaits Secretary of Commerce approval for implementation. The plan establishes a foundation for adaptive management that can respond to local conditions while maintaining consistency with federal fisheries management standards.
+
+This island-based approach represents a paradigm shift toward ecosystem-based fishery management that better serves the unique needs of St. Croix's marine resources and fishing communities while maintaining scientific rigor and regulatory compliance.
+
+---
+
+# Ecosystem Policies, Goals, and Objectives
+
+I was unable to locate a specific section in the provided document that explicitly lists stated ecosystem policies, goals, and objectives with their corresponding management approaches, performance metrics, and ecosystem indicators. The document appears to be primarily focused on regulatory structure, background, and procedural elements rather than detailed ecosystem management frameworks. The sections provided (Chapters 7-10 and various appendices) contain information about regulatory impact review, preparers, agencies consulted, references, and legal background, but do not include the specific ecosystem management details requested.
+
+To provide the information you're seeking about ecosystem policies, goals, objectives, management approaches, performance metrics, and ecosystem indicators, I would need access to other chapters of the document, particularly those that might contain the main management framework and ecosystem approach sections.
+
+---
+
+# Summary of Preferred Alternative 2 Section
+
+The provided text explains that Preferred Alternative 2 offers significant advantages over requiring full FMP amendments for implementing management changes. Key points include:
+
+**Regulatory Flexibility**: Unlike the traditional FMP amendment process, Preferred Alternative 2 would enable more timely implementation of a broader range of management measures that benefit fish stocks.
+
+**Biological Benefits**: The faster implementation timeline would result in quicker realization of biological benefits to fish stocks, as management responses could be implemented more rapidly than through the lengthy FMP amendment process.
+
+**Economic Advantages**: The biological improvements would generate associated indirect positive economic effects for the fishing industry and related sectors. These economic benefits stem from healthier fish stocks and more sustainable fisheries.
+
+**Implementation Speed**: The magnitude of indirect economic benefits directly correlates with how quickly regulatory changes can be implemented. The faster the implementation, the greater the potential economic returns from improved stock conditions.
+
+**Efficiency Gains**: This alternative removes regulatory bottlenecks that previously delayed beneficial management measures, allowing for more responsive and adaptive fishery management.
+
+The section emphasizes that the primary advantage lies in the regulatory agility this alternative provides, enabling fishery managers to respond more quickly to changing conditions and implement beneficial measures without the extensive delays inherent in the FMP amendment process.
+
+I apologize, but I cannot provide a complete summary of this fishery ecosystem plan as the document you've shared appears to be only a portion of the full plan - specifically appendix sections showing the regulatory history of various fishery management plans rather than the main body containing ecosystem policies, goals, objectives, and management approaches.
+
+## Summary of the Provided Section (500 words)
+
+The document sections provided detail the regulatory history of three U.S. Caribbean Fishery Management Plans (FMPs): Reef Fish, Spiny Lobster, and Queen Conch. These regulatory chronicles span from the 1980s to 2017 and demonstrate the evolution of fisheries management in Puerto Rico and the U.S. Virgin Islands.
+
+**Reef Fish FMP History:**
+The Reef Fish FMP began in 1985, initially covering shallow-water reef species with basic regulations including minimum size limits for yellowtail snapper (8-12 inches) and Nassau grouper (12-24 inches), fish trap mesh requirements, and Nassau grouper spawning season closures. The plan evolved through multiple amendments, expanding coverage to deep-water species, aquarium trade species, and implementing increasingly sophisticated management measures. Key developments included mesh size increases to reduce juvenile bycatch, establishment of Marine Protected Areas (Hind Bank, Bajo de Sico, Grammanik Bank), prohibition of destructive fishing practices, and creation of seasonal spawning closures. Later amendments established scientific reference points (MSY, OFL, ABC), annual catch limits (ACLs), and accountability measures following the Magnuson-Stevens Act reauthorization.
+
+**Spiny Lobster FMP History:**
+Initiated in 1985, the Spiny Lobster FMP established fundamental conservation measures including minimum carapace length (3.5 inches), prohibition on harvesting egg-bearing females, gear requirements for traps including self-destruct panels, and marking requirements. Amendments addressed overfishing definitions, essential fish habitat designations, import restrictions (minimum 6-ounce tail weight), and eventually implemented ACLs allocated among island management areas with recreational bag limits of 3 lobsters per fisher per day.
+
+**Queen Conch FMP History:**
+The Queen Conch FMP, established in 1997, implemented comprehensive management including minimum shell length (9 inches) and lip thickness (3/8 inch) requirements, recreational bag limits (3 per day), commercial daily limits (initially 150, reduced to 75), annual spawning closures (July-September), and prohibition of hookah gear use. A significant change occurred in 2005 when most federal waters were closed to conch harvesting except Lang Bank east of St. Croix, with subsequent amendments establishing compatibility with territorial regulations and implementing ACLs.
+
+**Common Management Evolution:**
+All three FMPs demonstrate similar evolutionary patterns: initial basic conservation measures, followed by ecosystem-based considerations including Essential Fish Habitat designations, implementation of Marine Protected Areas, scientific reference point establishment, and eventual adoption of catch limits and accountability measures. The regulatory progression shows increasing sophistication in addressing overfishing, habitat protection, and stock rebuilding requirements.
+
+The management approach emphasizes cooperation between federal and territorial authorities, with regulations often designed to maintain compatibility with local territorial management measures while addressing the mobile nature of fish populations across jurisdictional boundaries.
+
+## Missing Information
+
+To provide the requested analysis of ecosystem policies, goals, objectives, management approaches, performance metrics, and ecosystem indicators, I would need access to the main body of the Fishery Ecosystem Plan document, as the provided sections contain only regulatory histories rather than the strategic framework and ecosystem-based management components typically found in such plans.
+
+Looking at this document, I can see it's not a fishery ecosystem plan but rather an appendix section of what appears to be a St. Croix Fishery Management Plan/Environmental Assessment. This specific section covers the Coral FMP management history and species lists. Since this isn't an ecosystem plan with the typical ecosystem policies, goals, objectives, performance metrics, and indicators you've requested, I'll provide a summary and note what ecosystem-related elements are present.
+
+## Summary (500 words)
+
+This document section covers Appendices C.4 through G of a St. Croix Fishery Management Plan/Environmental Assessment. The primary focus is on coral reef fishery management in the U.S. Caribbean, specifically around St. Croix.
+
+**Coral FMP Management History**: The Coral FMP was established in 1995 with comprehensive regulations prohibiting the take of gorgonians, stony corals, and species attached to live rock. Key provisions included bans on chemical and explosive harvesting methods, requirements for non-destructive gear, and mandatory permits for allowable coral harvesting. Subsequent amendments expanded protections through Marine Conservation Districts (1999), moved aquarium trade species to data collection status (2005), established Essential Fish Habitat designations (2011), implemented Annual Catch Limits and accountability measures (2011), removed seagrass species due to no harvest activity (2013), and clarified accountability measure applications (2015).
+
+**Species Management Structure**: The document details the transition from Caribbean-wide management to St. Croix-specific management. Under the new structure, only queen conch (Strombus gigas) remains in the Queen Conch FMU as a single-species management unit. The St. Croix FMP reorganizes species into more targeted stock complexes compared to the broader Caribbean-wide approach. For example, snappers are divided into six separate complexes rather than four units, and groupers are organized into six complexes instead of five units under the previous system.
+
+**Species Coverage**: Comprehensive species lists detail hundreds of species across multiple taxonomic groups managed under various FMPs. The reef fish component includes snappers, groupers, parrotfishes, angelfishes, surgeonfishes, and numerous other families. The coral component encompasses hard corals (Scleractinia), soft corals and gorgonians (Octocorallia), hydrocorals, and black corals. Invertebrates include sea urchins, sea cucumbers, sponges, anemones, crustaceans, and other reef-associated species.
+
+**Management Approach**: The document outlines a data-limited management framework using Tier 4 of an ABC (Acceptable Biological Catch) control rule. This approach establishes Sustainable Yield Levels (SYL) based on historical catch data and expert judgment rather than quantitative stock assessments. The three-step process involves: (1) applying the ABC control rule to establish reference points, (2) setting fishing mortality proxies when FMSY cannot be determined, and (3) applying management uncertainty reductions to establish Annual Catch Limits (ACL).
+
+**Scientific Framework**: Species selection criteria prioritize stocks based on conservation status, federal management effectiveness, ecological importance, harvest levels, and special conservation needs. The vulnerability assessment considers productivity and susceptibility attributes to classify species into appropriate management tiers.
+
+**Data Limitations**: The document acknowledges significant data deficiencies throughout the U.S. Caribbean region, citing failed quantitative assessments for even the most valuable species due to inadequate catch data, missing life history information, and poor understanding of fishing mortality and discards.
+
+## Ecosystem Elements
+
+Since this is not a formal ecosystem plan, it lacks the structured ecosystem policies, goals, objectives, performance metrics, and specific ecosystem indicators you requested. However, the document does contain some ecosystem-related considerations:
+
+**Ecosystem Management Approaches**:
+- Coral reef ecosystem protection through habitat-based regulations
+- Essential Fish Habitat (EFH) designations covering waters from mean low water to the EEZ boundary
+- Marine Conservation Districts with comprehensive no-take provisions
+- Multi-species management recognizing ecological relationships
+
+**Limited Ecosystem Indicators**:
+- Habitat-based management (coral and hard bottom substrates)
+- Species vulnerability assessments considering ecological roles
+- Ecosystem component species classifications for non-targeted species
+
+The document does not contain formal ecosystem policies, quantitative ecosystem goals, specific ecosystem objectives, ecosystem performance metrics, or dedicated ecosystem indicators as would be found in a comprehensive fishery ecosystem plan.
+
+Looking at this document, I notice that it appears to be incomplete - it ends mid-sentence in the middle of describing queen conch diet. The document contains highly technical appendices from a fishery ecosystem plan, but does not contain the main plan text with clearly stated ecosystem policies, goals, and objectives.
+
+## Summary (500 words)
+
+This document consists of appendices from the St. Croix Fishery Management Plan (FMP) and Environmental Assessment, focusing on technical aspects of fishery management in the St. Croix Exclusive Economic Zone (EEZ). The appendices cover several key areas:
+
+**Data Collection and Stock Assessment**: The plan establishes a comprehensive framework for managing fish stocks using data-limited assessment methods due to insufficient information for traditional stock assessments. It implements a tiered approach (Tier 4a and 4b) based on productivity and susceptibility scores, using historical landings data as the primary metric for setting sustainable yield levels (SYL) and acceptable biological catches (ABC).
+
+**Species Management**: The plan manages multiple stock complexes including spiny lobster, queen conch, snappers (6 complexes), groupers (6 complexes), parrotfish (2 complexes), grunts, squirrelfish, surgeonfish, angelfish, triggerfish, dolphin, wahoo, sea cucumbers, sea urchins, and corals. Some species like Nassau grouper, goliath grouper, and certain parrotfish complexes have ABCs set to zero due to conservation concerns.
+
+**Methodology**: The plan uses a scalar-based approach multiplying reference period landings (either 75th percentile for Tier 4a or mean for Tier 4b stocks) by factors accounting for variability and susceptibility to fishing pressure. Scientific uncertainty buffers (typically 0.5) and management uncertainty buffers (0.85-1.0) are applied to establish Annual Catch Limits (ACLs) from ABCs.
+
+**Data Challenges**: The document extensively discusses data limitations including delayed reporting (up to 2 years), non-reporting, misreporting, and lack of species-specific information for historical periods. Commercial landings data are available from 2000 onwards, with some species only having reliable data from 2012-2016 due to reporting form changes.
+
+**Habitat Information**: Essential Fish Habitat (EFH) descriptions are provided for species new to federal management, particularly dolphin and wahoo (pelagic species) and various coral reef invertebrates. Pelagic species associate with floating objects, current breaks, and temperature gradients, while benthic invertebrates occupy various coral reef and soft-bottom habitats.
+
+**Assessment Framework**: The plan implements a Productivity-Susceptibility Analysis (PSA) to categorize stocks into management tiers based on biological productivity attributes (growth rate, natural mortality, fecundity, recruitment patterns, age at maturity, trophic level) and susceptibility factors (management strategy, overlap with fishing areas, fishing mortality rates, spawning biomass levels, behavioral responses).
+
+**Fishery-Independent Data**: The document emphasizes the need for fishery-independent surveys to complement commercial landings data, noting various ongoing programs but highlighting coordination challenges and the need for surveys designed specifically for stock assessment purposes.
+
+Unfortunately, the document appears incomplete and lacks the main FMP text that would contain explicit ecosystem policies, goals, and objectives. The appendices focus primarily on technical methodologies and species descriptions rather than overarching management philosophy or ecosystem-based approaches.
+
+## Ecosystem Policies, Goals, and Objectives
+
+**Unable to provide comprehensive list**: The document consists only of technical appendices and does not contain the main FMP text where ecosystem policies, goals, and objectives would typically be stated. The appendices focus on:
+
+- Technical stock assessment methodologies
+- Species biological descriptions  
+- Data collection protocols
+- Essential Fish Habitat designations
+
+**Management Approaches Mentioned**:
+- Tiered stock assessment framework (Tier 4a and 4b)
+- Productivity-Susceptibility Analysis (PSA)
+- Annual Catch Limits (ACLs) and Acceptable Biological Catch (ABC) controls
+- Accountability Measures (AMs)
+- Essential Fish Habitat (EFH) conservation
+- Fishery-dependent and fishery-independent data collection
+
+**Performance Metrics Referenced**:
+- Annual landings vs. ACLs
+- Scientific uncertainty buffers
+- Management uncertainty buffers  
+- Coefficient of variation in landings data
+- Productivity and susceptibility scores
+
+**Ecosystem Indicators Identified**:
+- Commercial landings trends
+- Length-frequency distributions
+- Species composition changes
+- Habitat condition (seagrass beds, coral reefs)
+- Age/size structure of populations
+
+**Note**: To provide a complete analysis of ecosystem policies, goals, objectives, management approaches, performance metrics, and ecosystem indicators, access to the main FMP document would be required, as this information would be contained in the primary management sections rather than the technical appendices provided.
+
+I cannot provide a summary of this PDF as it appears to contain only appendix sections with detailed species descriptions rather than the main fishery ecosystem plan document. The text provided includes extensive biological information about various marine species (conch, lobster, snappers, groupers, parrotfish, angelfish, etc.) but lacks the core elements needed for a comprehensive plan summary.
+
+**What's Missing for a Complete Summary:**
+- Executive summary or introduction
+- Ecosystem policies, goals, and objectives
+- Management approaches and strategies
+- Performance metrics and indicators
+- Implementation framework
+- Regulatory measures
+
+**Content Provided:**
+The text contains detailed species accounts covering distribution, habitat, life history, diet, and reproduction for numerous Caribbean marine species including:
+- Queen conch (*Strombus gigas*)
+- Caribbean spiny lobster (*Panulirus argus*)
+- Various snapper species (*Lutjanus* spp.)
+- Multiple grouper species (*Epinephelus* spp.)
+- Parrotfish species (*Scarus* and *Sparisoma* spp.)
+- Angelfish species (*Holacanthus* and *Pomacanthus* spp.)
+- Other reef fish species
+
+**Section Summary Requested:**
+The specific section about conch feeding describes that adult queen conch are herbivorous, feeding primarily on algae, detritus, and seagrass. They occasionally ingest small invertebrates like forams, bryozoans, and small bivalves/gastropods accidentally while grazing. Conch typically feed in sand flats, shallow sandy lagoons (particularly turtle grass beds), hard bottom habitats, and rubble areas. Juveniles face predation from various gastropods, cephalopods, crustaceans, and fish, while adults are preyed upon by crabs, turtles, sharks, and rays.
+
+To provide the requested comprehensive summary with ecosystem policies, goals, objectives, management approaches, and performance metrics, I would need access to the main body of the fishery ecosystem plan document.
+
+I apologize, but I'm unable to provide a summary of the St. Croix fishery ecosystem plan because the text you've shared only contains portions of appendices from the document rather than the main text or executive summary. The sections provided include:
+
+- Species descriptions of corals (Millepora, Stylasteridae, Anthozoans including soft corals, hard/stony corals, and black corals)
+- Endangered Species Act consultation summaries
+- A bycatch practicability analysis
+
+Without access to the core plan sections that would contain the ecosystem policies, goals, objectives, management approaches, performance metrics, and ecosystem indicators, I cannot provide the comprehensive summary and structured list you've requested.
+
+To properly summarize this fishery ecosystem plan, I would need access to sections containing:
+- Executive summary or overview
+- Management goals and objectives
+- Ecosystem-based management framework
+- Performance measures and indicators
+- Management strategies and approaches
+- Implementation plans
+
+If you could provide the main body of the FMP document, particularly the sections outlining the ecosystem management framework, I would be happy to provide the 500-word summary and structured breakdown of policies, goals, objectives, management approaches, metrics, and indicators that you've requested.
+
+The coral species descriptions you've included are detailed and scientifically thorough, covering important reef-building and non-reef-building corals in the St. Croix area, but they represent background biological information rather than the management framework itself.

@@ -1,6 +1,10 @@
 # pdf summary
 # may include AI
 # based on Scratch_pdfsumm.R and https://damianoswald.com/blog/pdf-chat-gpt/
+# 
+# ran the code using lines at the end of the file; most docs worked with summarize_pdf function
+# some needed breaking into chunks then summarized in pieces using code from summarize_large_pdf function
+# the large pdf function did not work as a function
 
 # How to store API key in environment variable
 # usethis::edit_r_environ()
@@ -226,7 +230,7 @@ summarize_large_pdf <- function(pdf_path, api_key, chunk_size = 100000, summary_
     
     readr::write_file(final_summary, here::here(paste0(folder, "/", namesum, ".Rmd")))
     # curious
-    #readr::write_file(combined_summaries, here::here(paste0(folder, "/InterimSummaries_", namesum, ".Rmd")))
+    readr::write_file(combined_summaries, here::here(paste0(folder, "/InterimSummaries_", namesum, ".Rmd")))
     
     return(final_summary)
   } else {
@@ -242,7 +246,7 @@ summarize_large_pdf <- function(pdf_path, api_key, chunk_size = 100000, summary_
 
 #pdf_path <- "~/Documents/Work/SAFMCindicators/FEPs/NPFMCAleutianIslandsFEP.pdf"
 
-# summarize FEPs
+# summarize FEPs gathered in this folder
 
 pdf_files <- c("~/Documents/Work/SAFMCindicators/FEPs/NPFMCBeringSeaFEP.pdf",
                "~/Documents/Work/SAFMCindicators/FEPs/NPFMCAleutianIslandsFEP.pdf",
@@ -261,14 +265,18 @@ pdf_files <- c("~/Documents/Work/SAFMCindicators/FEPs/NPFMCBeringSeaFEP.pdf",
                "~/Documents/Work/SAFMCindicators/FEPs/SAFMCfishery-ecosystem-plan-2-fep-ii.pdf"
 )
 
-pdf_path <- pdf_files[13] #11,12,13, 15 break, need to be chunked
+# 17 October 2025 ran this code for each file separately to generate summaries
+
+pdf_path <- pdf_files[14] #11,12,13, 15 break, need to be chunked
 
 summary_type <- "FEP"
 
 summary <- summarize_pdf(pdf_path, api_key, "FEP", "FEPsumms")
 
-# try large files
+# large files #11,12,13, 15 were run line by line through summarize_large_pdf because the full function crashes, likely too many api calls?
+# 20 and 23 October 2025
 
-pdf_path <- pdf_files[11]
+pdf_path <- pdf_files[15]
 
+# this failed for all files
 # summary <- summarize_large_pdf(pdf_path, api_key, summary_type = "FEP", "FEPsumms") broke but ran line by line
