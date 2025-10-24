@@ -303,6 +303,8 @@ The Caribbean Council manages under three Island-Based FMPs for for Puerto Rico,
 
 An FEP is under development by the Council's EBFM Technical Advisory Panel (TAP) using ecosystem conceptual models developed for each island by District Advisory Panels and diverse stakeholder groups [@seara_development_2024] as a starting point to identify "where we are now" in the FEP loop [@levin_building_2018]. The conceptual models identify the most important ecological and social components, relationships, and drivers of each island fishery ecosystem, as informed by expert knowledge from fishers, managers, and scientists serving on the SSC. 
 
+![Figure X. Ecosystem relationships common across stakeolder conceptual models, from Seara et al 2024](images/CaribConsensusModel.png)
+
 The Caribbean region has the newest ESR [@southeast_integrated_ecosystem_assessment_program_caribbean_2025], the first produced for this region. The Caribbean ESR is organized according to the goals and objectives identified in each Island Based FMP, and uses indicators inspired by the conceptual models developed for each island. The first section of the report evaluates progress towards FMP objectives in the categories of food production, socioeconomic health, equity, engagement/participation, bycatch reduction, governance, and ecosystem protection. The second section evaluates risks to meeting those objectives. 
 
 A project is in progress to develop fishery species CVA for this region (see below). Marine mammal climate vulnerability has been assessed for the entire Atlantic Coast including the Caribbean [@lettrich_vulnerability_2023]. 
@@ -332,7 +334,7 @@ The Gulf Council is one of three regional Councils served by SEFSC, the other tw
 
 #### SAFMC
 
-The South Atlantic Council manages under 8 FMPs: 4 multispecies (Coastal migratory pelagics,  Dolphin Wahoo, Shrimp, Snapper Grouper), 2 single species (Golden crab, Spiny lobster) and 2 habitat oriented FMPs (Coral and live bottom habitat, Sargassum). Habitat forms the basis of ecosystem based management in the South Atlantic. 
+The South Atlantic Council manages under 8 FMPs: 4 multispecies (Coastal migratory pelagics,  Dolphin Wahoo, Shrimp, Snapper Grouper), 2 single species (Golden crab, Spiny lobster) and 2 habitat oriented FMPs (Coral and live bottom habitat, Sargassum). The original Coral FMP was joint with the Gulf. Habitat forms the basis of ecosystem based management in the South Atlantic. The two habitat FMPs for Coral and Sargassum outline 
 
 The South Atlantic FEP contains both extensive description of the ecosystem (>50% of 400 pages) as well as essential fish habitat (EFH) policy statements that specifically outline indicators and research to support policies. Policies include:  
 
@@ -350,7 +352,7 @@ The South Atlantic FEP contains both extensive description of the ecosystem (>50
 ESR [@craig_ecosystem_2021], FEP, and CVAs for fishery resources [@burton_climate_2023; @craig_climate_2025] and fishing communities [@seara_community_2022] Marine mammal climate vulnerability has been assessed for the entire Atlantic Coast [@lettrich_vulnerability_2023]. 
 
 
-SAFMC has two habitat FMPs: Coral and Sargassum
+
 
 
 
