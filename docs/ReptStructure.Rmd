@@ -249,7 +249,9 @@ The Hawaii EEZ is slightly bigger than the West Coast EEZ. Resources for ecosyst
 
 #### NEFMC
 
-The New England region gets a State of the Ecosystem (SOE) report each year that covers two ecoregions: the Gulf of Maine and Georges Bank [@caracappa_state_2025]. Coastwide Northeast U.S. indicators are also included. Ecosystem profiles and ESPs have been produced for 3 species during research track assessments: American plaice [@behan_ecosystem_2022-1; @behan_environmental_2022], Atlantic cod [@behan_profile_2023; @behan_environmental_2023; @tyrell_development_2023], and Atlantic herring [@molina_atlantic_2025]. All Northeast US ESPs to date are listed here: https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/ecosystem-and-socioeconomic-profile-development-and-reports
+The New England region gets a State of the Ecosystem (SOE) report each year that covers two ecoregions: the Gulf of Maine and Georges Bank [@caracappa_state_2025]. Coastwide Northeast U.S. indicators are also included. The New England SOE report includes a graphical summary section and three report sections: performance against fishery management objectives, risks to meeting fishery management objectives, and ecosystem highlights from the most recent year. Fishery management objectives are drawn from U.S. legislation [@depiper_operationalizing_2017], and risks include climate-driven changes and other ocean uses (offshore wind development). 
+
+Ecosystem profiles and ESPs have been produced for 3 species during research track assessments: American plaice [@behan_ecosystem_2022-1; @behan_environmental_2022], Atlantic cod [@behan_profile_2023; @behan_environmental_2023; @tyrell_development_2023], and Atlantic herring [@molina_atlantic_2025]. All Northeast US ESPs to date are listed here: https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/ecosystem-and-socioeconomic-profile-development-and-reports
 
 To date ecosystem indicators have been integrated into 2 research track stock assessments for Southern New England Mid Atlantic (Gulf Stream Index controls expected recruitment) and Georges Bank (deviation from BH recruitment controlled by bottom temperature) yellowtail flounder. Decisions were based on literature review and statistical indicator testing similar to an ESP process. 
 
@@ -261,12 +263,18 @@ An [example FEP](https://d23h0vhsm26o6d.cloudfront.net/3_Draft-example-Fishery-E
 
 A climate vulnerability analysis for Northeast U.S. species has been published [@hare_vulnerability_2016], and provides input to the new risk policy currently in development by the Council. Both community climate vulnerability [@colburn_indicators_2016] and habitat climate vulnerability [@farr_assessment_2021] have also been assessed in the Northeast U.S., and marine mammal climate vulnerability has been assessed for the entire Atlantic Coast [@lettrich_vulnerability_2023]. 
 
+Northeast SOE reports have been produced annually since 2017. Prior to that, longer ESRs were produced in 2002, 2009, 2012, and 2015. The NEFSC dedicates staff time to developing annual ecosystem reports and intermittent ESPs. 
+
+The New England Council region includes  
+
 
 **Contacts**: Jonathan Peros Fisheries management and Risk policy lead, Jamie Cournane Science and assessment lead, Rachel Feeney SSC lead, Michelle Bachman Habitat lead, Andy Applegate EAFM, Cate O'Keefe Exec dir
 
 #### MAFMC
 
-The Mid-Atlantic region gets a State of the Ecosystem (SOE) report each year that covers one ecoregion: the Mid-Atlantic Bight [@gaichas_state_2025]. Coastwide Northeast U.S. indicators are also included. Ecosystem socio-economic profiles have been produced for X stocks during research track assessments:  black sea bass [@tabandera_black_2024], bluefish [@tyrell_bluefish_2022], golden tilefish [@salois_golden_2024], longfin inshore squid (in progress as of October 2025), and shortfin squid [@salois_oceanographic_2022]. All Northeast US ESPs to date are listed here: https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/ecosystem-and-socioeconomic-profile-development-and-reports
+The Mid-Atlantic region gets a State of the Ecosystem (SOE) report each year that covers one ecoregion: the Mid-Atlantic Bight [@gaichas_state_2025]. Coastwide Northeast U.S. indicators are also included. The Mid-Atlantic SOE report includes a graphical summary section and three report sections: performance against fishery management objectives, risks to meeting fishery management objectives, and ecosystem highlights from the most recent year. Fishery management objectives are drawn from U.S. legislation [@depiper_operationalizing_2017], and risks include climate-driven changes and other ocean uses (offshore wind development). 
+
+Ecosystem socio-economic profiles have been produced for X stocks during research track assessments:  black sea bass [@tabandera_black_2024], bluefish [@tyrell_bluefish_2022], golden tilefish [@salois_golden_2024], longfin inshore squid (in progress as of October 2025), and shortfin squid [@salois_oceanographic_2022]. All Northeast US ESPs to date are listed here: https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/ecosystem-and-socioeconomic-profile-development-and-reports
 
 To date, ecosystem indicators have been integrated into the operational black sea bass assessment (winter bottom temperature, northern area influences expected recruitment) and into research track models for black sea bass and bluefish (forage fish index influences recreational index catchability). Decisions were based on ESPs.
 
@@ -278,17 +286,25 @@ The policy guidance for addressing ecosystem interactions outlines a decision pr
 
 A climate vulnerability analysis for Northeast U.S. species has been published [@hare_vulnerability_2016], and is considered within the SSC's ABC deliberation process as part of ecosystem factors contributing to uncertainty in the OFL. Both community climate vulnerability [@colburn_indicators_2016] and habitat climate vulnerability [@farr_assessment_2021] have also been assessed in the Northeast U.S., and marine mammal climate vulnerability has been assessed for the entire Atlantic Coast [@lettrich_vulnerability_2023]. A habitat-species climate vulnerability crosswalk is also being considered during deliberations, but is not yet formally part of the OFL CV protocol. 
 
+Northeast SOE reports have been produced annually since 2017. Prior to that, longer ESRs were produced in 2002, 2009, 2012, and 2015. The NEFSC dedicates staff time to developing annual ecosystem reports and intermittent ESPs. 
+
 **Contacts**: Brandon Muffley, Ecosystems SSC and EOP, Jessica Coakley Habitat and EOP, Chris Moore Exec director
 
 #### CFMC
 
-Newest ESR [@southeast_integrated_ecosystem_assessment_program_caribbean_2025], never had one before. No fish or invertebrate CVA yet but a project is in progress: "Evaluating Priority Species Vulnerability to Changing Environmental Conditions" and marine mammal climate vulnerability has been assessed for the entire Atlantic Coast including the Caribbean [@lettrich_vulnerability_2023]. 
+Up until 2022, the Caribbean Council managed under region-wide FMPs for spiny lobster, queen conch, reef fish, and corals (with a prohibition on coral take). Three Island-Based FMPs for Puerto Rico, St. Croix, and St. Thomas/St. John were initiated to address management issues unique to each island and to lay the groundwork for place-based EBFM; these Island-Based FMPs have been used for management since October 2022. The FMPs all refer to EBFM as the overarching management principle, and include goals and objectives related both to fishery stock management and sustainable ecosystem services.
 
-Island based FMPs were instituted in 2019. 
+An FEP is under development by the Council's EBFM Technical Advisory Panel (TAP) using ecosystem conceptual models developed for each island by District Advisory Panels and diverse stakeholder groups [@seara_development_2024] as a starting point to identify "where we are now" in the FEP loop [@levin_building_2018]. The conceptual models identify the most important ecological and social components, relationships, and drivers of each island fishery ecosystem, as informed by expert knowledge from fishers, managers, and scientists serving on the SSC. 
 
-EBFM approach is based on stakeholder derived conceptual models for each Island [@seara_development_2024]
+The Caribbean region has the newest ESR [@southeast_integrated_ecosystem_assessment_program_caribbean_2025], and prior to this year has never had one before. The Caribbean ESR is organized according to the goals and objectives identified in each Island Based FMP, and uses indicators inspired by the conceptual models developed for each island. The first section of the report evaluates progress towards FMP objectives in the categories of food production, socioeconomic health, equity, engagement/participation, bycatch reduction, governance, and ecosystem protection. The second section evaluates risks to meeting those objectives. 
 
-Current projects include "Developing a US Caribbean Hub to Operationalize EBFM in the US Caribbean" and "Understanding Impacts of Extreme Events on the Fishery Ecosystem and the Fishers’ Communities in the U.S. Caribbean"
+A project is in progress to develop fishery species CVA for this region (see below). Marine mammal climate vulnerability has been assessed for the entire Atlantic Coast including the Caribbean [@lettrich_vulnerability_2023]. 
+
+Current Council projects include "Developing a US Caribbean Hub to Operationalize EBFM in the US Caribbean" to advance indicator-based risk assessment, "Evaluating Priority Species Vulnerability to Changing Environmental Conditions" to initiate a CVA for the region, and "Understanding Impacts of Extreme Events on the Fishery Ecosystem and the Fishers’ Communities in the U.S. Caribbean" to strengthen outreach and education. 
+
+The Caribbean Council is one of three regional Councils served by SEFSC, the other two are the Gulf and South Atlantic. While SEFSC dedicates staff resources to ecosystem reporting, resources to date have been inadequate to produce annual ecosystem reports (or stock assessments) across all three regions. 
+
+
 
 **Contacts**: Liajay Rivera García FMP and EBFM, Graciela García-Moliner FMP and Habitat, Miguel A. Rolón Exec dir
 
