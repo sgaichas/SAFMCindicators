@@ -403,6 +403,8 @@ Councils have a long history of learning from each other in designing and implem
 
 Iterative co-production of ecosystem data products with managers and scientists has is demonstrated to improve understanding and use of ecosystem data in fishery management [@muffley_there_2021; @tommasi_case_2021]. 
 
+Forage fish considerations include 1. don't start fishing them if you aren't already (unmanaged forage fishing prohibitions combined with requiring data prior to the start of a new fishery), and 2. developing harvest control rules or ecological reference points accounting for supporting ecological services provided by forage fish is possible and has been done. Spatial management (buffer zones around endangered species colonies/rookeries) has also been implemented. 
+
 ## Recommendations for SAFMC
 
 SAFMC shares a mix of reef-type or rockfish complex like data limited species with some high value data rich stocks, so a mix of approaches from the above may be warranted.
