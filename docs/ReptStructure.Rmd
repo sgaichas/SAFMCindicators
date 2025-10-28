@@ -248,7 +248,7 @@ The Hawaii EEZ is slightly bigger than the West Coast EEZ. Resources for ecosyst
 
 #### NEFMC
 
-The New England Council manages under 9 FMPs. Three are mutispecies FMPs: Northeast multispecies ("groundfish"), Small mesh multispecies, and Skates; and six are single species FMPs: Atlantic Scallop, Atlantic Herring, Monkfish, Dogfish, Salmon, Deep Sea Red Crab. Dogfish and Monkfish FMPs are joint with the Mid-Atlantic Council.
+The New England Council manages under 9 FMPs. Three are mutispecies FMPs: Northeast multispecies ("groundfish"), Small mesh multispecies, and Skates; and six are single species FMPs: Atlantic Scallop, Atlantic Herring, Monkfish, Dogfish, Salmon, Deep Sea Red Crab. Dogfish and Monkfish FMPs are joint with the Mid-Atlantic Council. The Atlantic Herring FMP features a harvest control rule that was designed to account for herring's role as forage in the ecosystem using a multi-species stakeholder-driven management strategy evaluation [@deroba_dream_2018; @feeney_integrating_2019]. 
 
 An [example FEP](https://d23h0vhsm26o6d.cloudfront.net/3_Draft-example-Fishery-Ecosystem-Plan-eFEP_190830_113712.pdf) was developed between 2012 and 2024 illustrating ecosystem based management on Georges Bank, including management with aggregate ecosystem and fish guild level total allowable catches (ceilings) and single species minimum biomass thresholds (floors) for 10 species on Georges Bank. The proposed EBFM was designed to address both ecological and fleet technical interactions and the need for increased fishery operational flexibility. However, this FEP was not formally adopted, and the Council has suspended development of this FEP approach in favor of the new indicator-based risk policy operating within established FMPs.
 
@@ -359,6 +359,22 @@ ESR [@craig_ecosystem_2021], FEP, and CVAs for fishery resources [@burton_climat
 
 **Contacts**: Kathleen Howington Habitat & Ecosystem Scientist, Meg Withers Citizen Science Project Coordinator, John Hadley
 Fishery Management Plan Coordinator & Fishery Economist, Chip Collier Deputy Director for Science, Myra Brouwer Deputy Director for Management, John Carmichael Executive Director
+
+### Examples from other organizations
+
+#### Atlantic States Marine Fisheries Commission
+
+The Atlantic States Marine Fisheries Commission (ASMFC) coordinates management of fisheries shared by 15 states bordering the Atlantic Ocean. ASMFC manages a total of 27 stocks, some in partnership with the three Atlantic Councils or NOAA, and 15 species/groups under its own Interstate FMPs (ISFMPs): American Eel, American Lobster, Atlantic Croaker, Atlantic Menhaden, Atlantic Striped Bass, Atlantic Sturgeon, Black Drum, Northern Shrimp, Red Drum, Shad and River Herring, Spanish Mackerel, Spot, Spotted Sea Trout, Tautog, and Weakfish. 
+
+ASMFC manages Atlantic menhaden using Ecological Reference Points (ERPs) that account for menhaden's role in the ecosystem [@anstead_path_2021; @howell_combining_2021]. The reference points are estimated from a multispecies food web model that includes menhaden and its key managed fish predator species [@chagaris_ecological_2020]. The food web model is calibrated based on current stock assessments for each managed fish species and fit to biomass and catch data used in each stock assessment. Therefore, the model assumptions about the productivity of each species match the information currently used to manage each species. Diet information from many sources is included in the model to estimate predator prey relationships. The ERP is estimated by evaluating a range of joint fishing mortalities of menhaden and its most responsive predator, striped bass, and finding the menhaden fishing mortality that maintains striped bass at its target biomass when striped bass are fished at their target fishing rate. (The model runs exploring these fishing scenarios include all the other predators and prey and their interactions, where other species are assumed to be fished at their current rates.) Once this fishing rate is found using the ecosystem model, it is translated into the menhaden single species assessment to complete short term projections of the menhaden stock including uncertainty in stock parameters.  
+
+The process leading up to this approach included a history of multispecies modeling for menhaden and a stakeholder workshop to identify ecosystem management objectives [@anstead_path_2021], the development of multiple models over a range of complexity to evaluate predator prey relationships [@drew_balancing_2021], and close collaboration between the menhaden single species assessment team and the ERP modeling team [@chagaris_ecological_2020]. 
+
+ASMFC has dedicated stock assessment resources, and has established a dedicated workgroup to continue the ERP process [@anstead_path_2021]. The ERP modeling takes advantage of existing single species stock assessment review to streamline evaluation of model inputs, which requires coordination among assessments.  
+
+#### National Marine Sanctuaries
+
+ESR like products used for ??? strategic planning?
 
 
 ### Interviews
