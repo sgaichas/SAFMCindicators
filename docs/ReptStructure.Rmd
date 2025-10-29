@@ -44,6 +44,10 @@ study fleets, cooperative research, citizen science).
 
 ## Conduct an ecosystem information review across Councils, including SAFMC
 
+Ecosystem information for the purposes of this report includes information spanning the physical, biological, and human environment. This follows the definition of Ecosystem Based Fishery Management (EBFM) in NOAA Ecosystem policy [@harvey_us_2025]: 
+
+> a systematic approach to fisheries management in a geographically specified area that contributes to the resilience and sustainability of the ecosystem; recognizes the physical, biological, economic, and social interactions among the affected fishery-related components of the ecosystem, including humans; and seeks to optimize benefits among a diverse set of societal goals.
+
 ### Comprehensive literature review: peer reviewed literature and Council webpage search for current and past ecosystem approaches
 
 Lit search terms:
@@ -321,7 +325,9 @@ The policy guidance for addressing ecosystem interactions outlines a decision pr
 
 The Mid-Atlantic region gets a State of the Ecosystem (SOE) report each year that covers one ecoregion: the Mid-Atlantic Bight [@gaichas_state_2025]. Coastwide Northeast U.S. indicators are also included. The Mid-Atlantic SOE report includes a graphical summary section and three report sections: performance against fishery management objectives, risks to meeting fishery management objectives, and ecosystem highlights from the most recent year. Fishery management objectives are drawn from U.S. legislation [@depiper_operationalizing_2017], and risks include climate-driven changes and other ocean uses (offshore wind development). 
 
-Ecosystem socio-economic profiles have been produced for X stocks during research track assessments:  black sea bass [@tabandera_black_2024], bluefish [@tyrell_bluefish_2022], golden tilefish [@salois_golden_2024], longfin inshore squid (in progress as of October 2025), and shortfin squid [@salois_oceanographic_2022]. All Northeast US ESPs to date are listed here: https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/ecosystem-and-socioeconomic-profile-development-and-reports
+Ecosystem socio-economic profiles have been produced for 5 stocks during research track assessments:  black sea bass [@tabandera_black_2024], bluefish [@tyrell_bluefish_2022], golden tilefish [@salois_golden_2024], longfin inshore squid (in progress as of October 2025), and shortfin squid [@salois_oceanographic_2022]. All Northeast US ESPs to date are listed here: https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/ecosystem-and-socioeconomic-profile-development-and-reports
+
+The Council develops annual Fishery Performance Reports using its FMP Advisory Panels that include market, social, economic, and ecosystem influences on fishery productivity from the perspectives of fishery participants. These reports accompany operational stock assessments and fishery data updates through the Council process from the SSC decisions on ABC through committees and Council decisions on ACLs. 
 
 To date, ecosystem indicators have been integrated into the operational black sea bass assessment (winter bottom temperature, northern area influences expected recruitment) and into research track models for black sea bass and bluefish (forage fish index influences recreational index catchability). Decisions were based on ESPs.
 
@@ -343,7 +349,7 @@ The Caribbean Council manages under three Island-Based FMPs for for Puerto Rico,
 
 An FEP is under development by the Council's EBFM Technical Advisory Panel (TAP) using ecosystem conceptual models developed for each island by District Advisory Panels and diverse stakeholder groups [@seara_development_2024] as a starting point to identify "where we are now" in the FEP loop [@levin_building_2018]. The conceptual models identify the most important ecological and social components, relationships, and drivers of each island fishery ecosystem, as informed by expert knowledge from fishers, managers, and scientists serving on the SSC. 
 
-![Figure X. Ecosystem relationships common across stakeolder conceptual models, from Seara et al 2024](images/CaribConsensusModel.png)
+![Figure 5. Ecosystem relationships common across stakeolder conceptual models, from Seara et al 2024](images/CaribConsensusModel.png)
 
 The Caribbean region has the newest ESR [@southeast_integrated_ecosystem_assessment_program_caribbean_2025], the first produced for this region. The Caribbean ESR is organized according to the goals and objectives identified in each Island Based FMP, and uses indicators inspired by the conceptual models developed for each island. The first section of the report evaluates progress towards FMP objectives in the categories of food production, socioeconomic health, equity, engagement/participation, bycatch reduction, governance, and ecosystem protection. The second section evaluates risks to meeting those objectives. 
 
@@ -363,7 +369,9 @@ The Gulf Council manages under 7 FMPs; 4 multispecies (Coastal migratory pelagic
 
 A Gulf FEP has been drafted by contractor in 2022. This FEP also evaluated cooperative research and citizen science programs. Further FEP development is in progress with the Council's ecosystem technical team. The FEP extension follows the process outlined in the Pacific and North Pacific of identifying a Fishery Ecosystem Issue (FEI). An example FEI addressing red tide illustrates going through FEI loop [@levin_building_2018] identifying objectives, potential indicators, and uses of the indicators to support management. The FEI steps include scoping (the where are we now step) with stakeholders to outline the issue, data available, and potential for Council management, development and execution of a workplan (where are we going), implementation with recommended research, communication, and tradeoff analysis among management options, folowed by management recommendation and evaluation of the recommended actions. 
 
-For the red tide issue, extensive scoping work is already complete, and considerable data is available for red tides. The red grouper and gag grouper stock assessments include red tide mortality, and red tide uncertainty has been considered by the SSC for these stocks. An new red tide index is currently in development by Council staff. Three index options were presented in May 2025. 
+For the red tide issue, extensive scoping work is already complete, and considerable data is available for red tides. The red grouper and gag grouper stock assessments include red tide mortality, and red tide uncertainty has been considered by the SSC for these stocks. An new red tide index is currently in development by Council staff. Three index options were presented in May 2025. The red tide index was strongly associated with river discharge, highlighting environmental drivers linked to episodic fish mortality. 
+
+![Figure 6. Work in progress developing a red tide index under the Gulf Red Tide FEI](images/redtideindexGulf.png)
 
 Two ESRs have been produced for the Gulf, in 2013 and most recently in 2017 [@karnauskas_ecosystem_2017]. The Gulf ESR reports on climate, physical, habitat, lower and upper trophic level, ecosystem services, and human dimensions indicators, then analyzes combined trends across all of the section indicators to provide an overview of ecosystem conditions. A fish CVA was recently completed [@quinlan_results_2023], and marine mammal climate vulnerability has been assessed for the entire Atlantic Coast, including the Gulf [@lettrich_vulnerability_2023]. 
 
@@ -374,9 +382,9 @@ The Gulf Council is one of three regional Councils served by SEFSC, the other tw
 
 #### SAFMC
 
-The South Atlantic Council manages under 8 FMPs: 4 multispecies (Coastal migratory pelagics,  Dolphin Wahoo, Shrimp, Snapper Grouper), 2 single species (Golden crab, Spiny lobster) and 2 habitat oriented FMPs (Coral and live bottom habitat, Sargassum). The original Coral FMP was joint with the Gulf. Habitat forms the basis of ecosystem based management in the South Atlantic. The two habitat FMPs for Coral and Sargassum outline 
+The South Atlantic Council manages under 8 FMPs: 4 multispecies (Coastal migratory pelagics,  Dolphin Wahoo, Shrimp, Snapper Grouper), 2 single species (Golden crab, Spiny lobster) and 2 habitat-oriented FMPs (Coral and live bottom habitat, Sargassum). The original Coral FMP was joint with the Gulf. The FMPs for Coral and Sargassum limit or prohibit commercial exploitation and promote conservation of these living habitats. 
 
-The South Atlantic FEP contains both extensive description of the ecosystem (>50% of 400 pages) as well as essential fish habitat (EFH) policy statements that specifically outline indicators and research to support policies. Policies include:  
+Habitat forms the basis of ecosystem based management in the South Atlantic. The South Atlantic FEP II  contains both extensive description of the ecosystem (>50% of 400 pages) as well as essential fish habitat (EFH) policy statements that specifically outline indicators and research to support policies. Policies with most recent updates include:  
 
 * South Atlantic Food Webs and Connectivity Policy – January 2025
 * Climate Variability and Fisheries – December 2016
@@ -389,12 +397,11 @@ The South Atlantic FEP contains both extensive description of the ecosystem (>50
 * Artificial Reef Habitat Policy Threats to EFH – September 2017    
 * Threats Addressed by Policies Matrix – March 2021   
 
+The Council develops [Fishery Performance Reports](https://safmc-shinyapps.shinyapps.io/FPRAll/) from its FMP Advisory Panels in association with updated stock assessments. These reports include information on landings/discard trends, management measure performance, environmental and socioeconomic influences on the fishery, and any other concerns. In 2022, The Council adjusted Fishery Performance Report discussion questions to gather information for use in allocation decisions using [Allocation Decision Trees](https://safmc.net/documents/safmc_allocationdecisiontoolblueprint_202312_final/). The adjustments specifically address species distribution shifts, fishing practices related to catch and release, and social or cultural importance. 
+
 ESR [@craig_ecosystem_2021], FEP, and CVAs for fishery resources [@burton_climate_2023; @craig_climate_2025] and fishing communities [@seara_community_2022] Marine mammal climate vulnerability has been assessed for the entire Atlantic Coast [@lettrich_vulnerability_2023]. 
 
-
-
-
-
+The South Atlantic Council is one of three regional Councils served by SEFSC, the other two are the Caribbean and Gulf. While SEFSC dedicates some staff resources to ecosystem reporting, resources to date have been inadequate to produce annual ecosystem reports across all three regions. However, streamlined processes and automation were developed for the Caribbean ESR that may permit more frequent updates across all regions. 
 
 
 **Contacts**: Kathleen Howington Habitat & Ecosystem Scientist, Meg Withers Citizen Science Project Coordinator, John Hadley
@@ -404,7 +411,7 @@ Fishery Management Plan Coordinator & Fishery Economist, Chip Collier Deputy Dir
 
 #### Atlantic States Marine Fisheries Commission
 
-The Atlantic States Marine Fisheries Commission (ASMFC) coordinates management of fisheries shared by 15 states bordering the Atlantic Ocean. ASMFC manages a total of 27 stocks, some in partnership with the three Atlantic Councils or NOAA, and 15 species/groups under its own Interstate FMPs (ISFMPs): American Eel, American Lobster, Atlantic Croaker, Atlantic Menhaden, Atlantic Striped Bass, Atlantic Sturgeon, Black Drum, Northern Shrimp, Red Drum, Shad and River Herring, Spanish Mackerel, Spot, Spotted Sea Trout, Tautog, and Weakfish. 
+The Atlantic States Marine Fisheries Commission (ASMFC) coordinates management of fisheries shared by 15 states bordering the Atlantic Ocean. ASMFC manages a total of 27 stocks, some in partnership with the three Atlantic Councils or NOAA, and 14 species/groups under its own Interstate FMPs (ISFMPs): American Eel, American Lobster, Atlantic Croaker, Atlantic Menhaden, Atlantic Striped Bass, Atlantic Sturgeon, Black Drum, Northern Shrimp, Red Drum, Shad and River Herring, Spot, Spotted Sea Trout, Tautog, and Weakfish. 
 
 ASMFC manages Atlantic menhaden using Ecological Reference Points (ERPs) that account for menhaden's role in the ecosystem [@anstead_path_2021; @howell_combining_2021]. The reference points are estimated from a multispecies food web model that includes menhaden and its key managed fish predator species [@chagaris_ecological_2020]. The food web model is calibrated based on current stock assessments for each managed fish species and fit to biomass and catch data used in each stock assessment. Therefore, the model assumptions about the productivity of each species match the information currently used to manage each species. Diet information from many sources is included in the model to estimate predator prey relationships. The ERP is estimated by evaluating a range of joint fishing mortalities of menhaden and its most responsive predator, striped bass, and finding the menhaden fishing mortality that maintains striped bass at its target biomass when striped bass are fished at their target fishing rate. (The model runs exploring these fishing scenarios include all the other predators and prey and their interactions, where other species are assumed to be fished at their current rates.) Once this fishing rate is found using the ecosystem model, it is translated into the menhaden single species assessment to complete short term projections of the menhaden stock including uncertainty in stock parameters.  
 
