@@ -335,7 +335,7 @@ The Council uses indicators from both the SOE and ESPs in an annual ecosystem-le
 
 ![Fig 4, MAFMC Indicator-based EAFM Risk Assessment](images/MAFMCrisk2025.png)
 
-A climate vulnerability analysis for Northeast U.S. species has been published [@hare_vulnerability_2016], and is considered within the SSC's ABC deliberation process as part of ecosystem factors contributing to uncertainty in the OFL. Both community climate vulnerability [@colburn_indicators_2016] and habitat climate vulnerability [@farr_assessment_2021] have also been assessed in the Northeast U.S., and marine mammal climate vulnerability has been assessed for the entire Atlantic Coast [@lettrich_vulnerability_2023]. A habitat-species climate vulnerability crosswalk is also being considered during deliberations, but is not yet formally part of the OFL CV protocol. 
+A climate vulnerability analysis for Northeast U.S. species has been published [@hare_vulnerability_2016], and is considered within the SSC's ABC deliberation process as part of ecosystem factors contributing to uncertainty in the OFL. Both community climate vulnerability [@colburn_indicators_2016] and habitat climate vulnerability [@farr_assessment_2021] have also been assessed in the Northeast U.S., and marine mammal climate vulnerability has been assessed for the entire Atlantic Coast [@lettrich_vulnerability_2023]. A habitat-species climate vulnerability [crosswalk](https://nrha.shinyapps.io/dataexplorer/#!/crosswalk) summarizing species vulnerability and life history stages dependent on climate vulnerable habitat is also being considered during SSC deliberations, but is not yet formally part of the OFL CV protocol. 
 
 Northeast SOE reports have been produced annually since 2017. Prior to that, longer ESRs were produced in 2002, 2009, 2012, and 2015. The NEFSC dedicates staff time to developing annual ecosystem reports and intermittent ESPs. 
 
@@ -384,10 +384,17 @@ The Gulf Council is one of three regional Councils served by SEFSC, the other tw
 
 The South Atlantic Council manages under 8 FMPs: 4 multispecies (Coastal migratory pelagics,  Dolphin Wahoo, Shrimp, Snapper Grouper), 2 single species (Golden crab, Spiny lobster) and 2 habitat-oriented FMPs (Coral and live bottom habitat, Sargassum). The original Coral FMP was joint with the Gulf. The FMPs for Coral and Sargassum limit or prohibit commercial exploitation and promote conservation of these living habitats. 
 
-Habitat forms the basis of ecosystem based management in the South Atlantic. The South Atlantic FEP II  contains both extensive description of the ecosystem (>50% of 400 pages) as well as essential fish habitat (EFH) policy statements that specifically outline indicators and research to support policies. Policies with most recent updates include:  
+Habitat forms the basis of ecosystem based management in the South Atlantic. The South Atlantic FEP II contains both extensive description of the ecosystem (>50% of 400 pages) as well as essential fish habitat (EFH) policy statements that specifically outline indicators and research to support policies. Many of these policies address cross-sectoral considerations, potentially ezrtending into Ecosystem Based Management (EBM). Policies and key ecosystem information include:  
 
 * South Atlantic Food Webs and Connectivity Policy – January 2025
+    +  Connects EFH and food web considerations, identifies research needs 
+    +  Includes fish food habits data identifying top 10 prey by FMP
+    +  Includes food web model for the South Atlantic region  
 * Climate Variability and Fisheries – December 2016
+    +  Connects changing ocean conditions with fish distribution shifts and changing timing, identifies research needs 
+    +  Notes these shifts present challenges for management and new fishery opportunities  
+    +  Requests annual summaries of climate indicators tracking ecological, social and economic trends 
+    +  Requests climate vulnerability analysis and management strategy evaluation focused on climate robustness  
 * Beach Dredging and Filling, Beach Renourishment and Large-Scale Coastal Engineering – September 2023 
 * Energy Exploration, Development, Transportation and Hydropower Re-Licensing - November 2024         
 * Interactions Between Essential Fish Habitats And Marine Aquaculture Policy – June 2014     
@@ -399,7 +406,7 @@ Habitat forms the basis of ecosystem based management in the South Atlantic. The
 
 The Council develops [Fishery Performance Reports](https://safmc-shinyapps.shinyapps.io/FPRAll/) from its FMP Advisory Panels in association with updated stock assessments. These reports include information on landings/discard trends, management measure performance, environmental and socioeconomic influences on the fishery, and any other concerns. In 2022, The Council adjusted Fishery Performance Report discussion questions to gather information for use in allocation decisions using [Allocation Decision Trees](https://safmc.net/documents/safmc_allocationdecisiontoolblueprint_202312_final/). The adjustments specifically address species distribution shifts, fishing practices related to catch and release, and social or cultural importance. 
 
-ESR [@craig_ecosystem_2021], FEP, and CVAs for fishery resources [@burton_climate_2023; @craig_climate_2025] and fishing communities [@seara_community_2022] Marine mammal climate vulnerability has been assessed for the entire Atlantic Coast [@lettrich_vulnerability_2023]. 
+The South Atlantic region has a recent ESR [@craig_ecosystem_2021] and CVAs for fishery resources [@burton_climate_2023; @craig_climate_2025] and fishing communities [@seara_community_2022]. Marine mammal climate vulnerability has been assessed for the entire Atlantic Coast [@lettrich_vulnerability_2023]. These documents contain indicators that represent a starting point towards meeting the needs identified in the EFH policy documents above. 
 
 The South Atlantic Council is one of three regional Councils served by SEFSC, the other two are the Caribbean and Gulf. While SEFSC dedicates some staff resources to ecosystem reporting, resources to date have been inadequate to produce annual ecosystem reports across all three regions. However, streamlined processes and automation were developed for the Caribbean ESR that may permit more frequent updates across all regions. 
 
