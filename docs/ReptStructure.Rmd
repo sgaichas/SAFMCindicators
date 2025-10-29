@@ -384,7 +384,7 @@ The Gulf Council is one of three regional Councils served by SEFSC, the other tw
 
 The South Atlantic Council manages under 8 FMPs: 4 multispecies (Coastal migratory pelagics,  Dolphin Wahoo, Shrimp, Snapper Grouper), 2 single species (Golden crab, Spiny lobster) and 2 habitat-oriented FMPs (Coral and live bottom habitat, Sargassum). The original Coral FMP was joint with the Gulf. The FMPs for Coral and Sargassum limit or prohibit commercial exploitation and promote conservation of these living habitats. 
 
-Habitat forms the basis of ecosystem based management in the South Atlantic. The South Atlantic FEP II contains both extensive description of the ecosystem (>50% of 400 pages) as well as essential fish habitat (EFH) policy statements that specifically outline indicators and research to support policies. Many of these policies address cross-sectoral considerations, potentially ezrtending into Ecosystem Based Management (EBM). Policies and key ecosystem information include:  
+Habitat forms the basis of ecosystem based management in the South Atlantic. The South Atlantic FEP II contains both extensive description of the ecosystem (>50% of 400 pages) as well as essential fish habitat (EFH) policy statements that specifically outline indicators and research to support policies. Many of these policies address cross-sectoral considerations, extending into Ecosystem Based Management (EBM). Policies and key ecosystem information include those listed in the FEP and several newer statements from https://safmc.net/fishery-management-plans/habitat/:  
 
 * South Atlantic Food Webs and Connectivity Policy – January 2025
     +  Connects EFH and food web considerations, identifies research needs 
@@ -394,14 +394,19 @@ Habitat forms the basis of ecosystem based management in the South Atlantic. The
     +  Connects changing ocean conditions with fish distribution shifts and changing timing, identifies research needs 
     +  Notes these shifts present challenges for management and new fishery opportunities  
     +  Requests annual summaries of climate indicators tracking ecological, social and economic trends 
-    +  Requests climate vulnerability analysis and management strategy evaluation focused on climate robustness  
-* Beach Dredging and Filling, Beach Renourishment and Large-Scale Coastal Engineering – September 2023 
-* Energy Exploration, Development, Transportation and Hydropower Re-Licensing - November 2024         
-* Interactions Between Essential Fish Habitats And Marine Aquaculture Policy – June 2014     
+    +  Requests climate vulnerability analysis and management strategy evaluation focused on climate robustness
 * Marine Submerged Aquatic Vegetation (SAV) Habitat Policy – June 2014    
+    +  Describes ecosystem services provided by SAV and recent declines in this EFH
+    +  Outlines monitoring and research, planning, management, and education and enforcement to protect and restore SAV
+    
+The following policies identify species with EFH and HAPC potentially impacted by each activity, and identify specific threats, best management practices and research needs:
+* Beach Dredging and Filling, Beach Renourishment and Large-Scale Coastal Engineering – September 2023 
+* Energy Exploration, Development, Transportation and Hydropower Re-Licensing - November 2024   
 * Alteration of Riverine, Estuarine and Nearshore Flows Policy – June 2014    
-* Marine and Estuarine Non-Native and Invasive Species Policy – June 2014    
 * Artificial Reef Habitat Policy Threats to EFH – September 2017    
+* Marine and Estuarine Non-Native and Invasive Species Policy – June 2014    
+* Interactions Between Essential Fish Habitats And Marine Aquaculture Policy – June 2014     
+
 * Threats Addressed by Policies Matrix – March 2021   
 
 The Council develops [Fishery Performance Reports](https://safmc-shinyapps.shinyapps.io/FPRAll/) from its FMP Advisory Panels in association with updated stock assessments. These reports include information on landings/discard trends, management measure performance, environmental and socioeconomic influences on the fishery, and any other concerns. In 2022, The Council adjusted Fishery Performance Report discussion questions to gather information for use in allocation decisions using [Allocation Decision Trees](https://safmc.net/documents/safmc_allocationdecisiontoolblueprint_202312_final/). The adjustments specifically address species distribution shifts, fishing practices related to catch and release, and social or cultural importance. 
