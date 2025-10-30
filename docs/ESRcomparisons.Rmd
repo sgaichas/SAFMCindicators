@@ -3,10 +3,14 @@ title: "ESR Comparison Tables"
 author: "Sarah Gaichas"
 date: "`r Sys.Date()`"
 output:
+  pdf_document:
+    toc: true
   html_document:
     code_fold: hide
     toc: true
     toc_float: true
+  word_document:
+    toc: true
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE,

@@ -1,13 +1,14 @@
 ---
-title: "Report Structure"
+title: "All Council Ecosystem Data Review"
+subtitle: "DRAFT for South Atlantic Fishery Management Council"
 author: "Sarah Gaichas"
 date: "`r Sys.Date()`"
 output:
   html_document:
     code_fold: hide
     df_print: paged
-  word_document: default
   pdf_document: default
+  word_document: default
 csl: plos.csl
 bibliography: operationalSOE.bib
 link-citations: true
@@ -20,35 +21,54 @@ knitr::opts_chunk$set(echo = FALSE,
                       warning = FALSE)
 
 library(tidyverse)
+library(flextable) #hopefully makes actual tables in word
+set_flextable_defaults(font.size = 11, padding = 3,
+                       fonts_ignore=TRUE) #for latex
+
 ```
 
-# Objectives
+# Executive Summary
+
+
+
+# Introduction
+
+## Project Overiew
+
+
+
+## Objectives
+
+This report addresses the first Project objective:
 
 1) Review the different types of ecosystem data and information including data products and
 decision-support tools (e.g. Ecosystem Status Reports, Climate Vulnerability Assessments, risk
 assessments) currently available to the regional management councils and evaluate how they are
-used in council management processes;
+used in council management processes.
 
-2) Identify opportunities and methods for incorporating identified ecosystem information into
-SAFMC management processes, including inter-jurisdictional management decision-making
-processes, and identify practical requirements for successful implementation (e.g. data quality,
-frequency of information updates, regional council process consistency, implementation
-timelines); and
+Results reported here will be integrated with forthcoming findings for the next two project objectives addressing opportunities specific to the South Atlantic Fishery Management Council for integrating ecosystem information into its management processes and expanding Citizen Science programs to improve availability of high priority ecosystem information in the region.  
 
-3) Identify opportunities to continue to expand cooperative, constituent-engaged data collection
-and research to improve the available ecosystem information in the South Atlantic region (e.g.,
-study fleets, cooperative research, citizen science).
-
-
-# Methods
-
-## Conduct an ecosystem information review across Councils, including SAFMC
+## Review Scope
 
 Ecosystem information for the purposes of this report includes information spanning the physical, biological, and human environment. This follows the definition of Ecosystem Based Fishery Management (EBFM) in NOAA Ecosystem policy [@harvey_us_2025]: 
 
 > a systematic approach to fisheries management in a geographically specified area that contributes to the resilience and sustainability of the ecosystem; recognizes the physical, biological, economic, and social interactions among the affected fishery-related components of the ecosystem, including humans; and seeks to optimize benefits among a diverse set of societal goals.
 
-### Comprehensive literature review: peer reviewed literature and Council webpage search for current and past ecosystem approaches
+This report considers ecosystem information available and processes used in all 8 regional U.S. Fishery Management Councils: North Pacific (NPFMC), Pacific (PFMC), Western Pacific (WPFMC), New England (NEFMC), Mid-Atlantic (MAFMC), Caribbean (CFMC), Gulf (GFMC), and South Atlantic (SAFMC). In addition, relevant examples from other U.S. organizations, such as the Atlantic States Marine Fisheries Commission (ASMFC) and NOAA National Marine Sanctuaries are included. Recognizing that these organizations do not operate under the same legislative mandates as Councils, these examples are intended to illustrate uses of ecosystem information that may still be applicable in a Council context. 
+
+## Definitions and abbreviations
+
+Ecosystem Status Report (ESR)
+Climate Vulnerability Analysis (CVA)
+Fishery Management Plan (FMP)
+Fishery Ecosystem Plan (FEP)
+
+
+# Methods
+
+## Comprehensive literature review
+
+Literature included both peer reviewed scientific literature and Council and other organizational documents that may not appear in peer reviewed literature. Literature search was conducted using Google search and Google scholar, direct search of the NOAA Institutional Repository (IR), and a semi-automated Council webpage search for current and past ecosystem approaches. 
 
 Lit search terms:
 
@@ -63,18 +83,66 @@ Documents and information from the Council Coordinating Committee's recent meeti
 *  2022 Seventh National Scientific Coordination Subcommittee Workshop on Adapting Fisheries Managment to a Changing Ecosystem https://www.fisherycouncils.org/ssc-workshops/scs-7  
 *  2024 Eighth National Scientific Coordination Subcommittee Workshop on Applying ABC Control Rules in a Changing Environment https://www.fisherycouncils.org/ssc-workshops/scs-8 
 
+Relevant Council documents were downloaded as pdfs and have been uploaded to SAFMC shared folders for ESRs, ESPs, FEPs, CVAs, and other Council Documents. All cited papers and Council documents were read and reviewed to generate the information in this report. Artifical Intelligence capabilities were used to automate standardized ESR and FEP report summaries across documents as noted below. 
 
-### Gather contextual data about the Councils: 
+## Gather contextual data about the Councils
 
 How much area do they manage? Summarized in Table 2 from @bachman_use_2025
 
-How many U.S. states and territories are represented in each? Drawn from https://www.fisherycouncils.org/
+How many U.S. states and territories are represented in each? Drawn from https://www.fisherycouncils.org/ and each Council's website and documents.
 
 How many FMPs and FEPs? Drawn from https://www.fisherycouncils.org/ and individual Council reviews below.
 
-Current commercial and recreational landings for 2022-2024 were drawn from Fisheries Economics of the US 2022 [@national_marine_fisheries_service_fisheries_2024]. 
+Current commercial and recreational landings for 2022-2024 were drawn from Fisheries Economics of the US 2022 [@national_marine_fisheries_service_fisheries_2024] and its associated [web data tool](https://www.fisheries.noaa.gov/foss/f?p=215:200::::::). The most recent year of commercial and recreational landings data available across all regions was 2023, but the most recent recreational value information was from 2022. We report these as proportions of the total for the U.S. because the absolute numbers vary from year to year but rough proportions have been stable recently. 
 
-```{r}
+## Summarize and compare data products
+
+Draft ESR document summaries and R code to organize document section and indicator names into datasets were initially generated by Claude Sonnet 4.5 from each pdf file, then thoroughly reviewed and hand corrected where they inaccurately represented ESR content. Summaries were repeated using identical prompts on the same document for two ESRs from different regions to determine whether summaries were consistent. Differences between the replicate summaries were limited to formatting; section headings and indicators identified were consistent across replicates. Code to produce the summary datasets [`summtab.csv`](https://github.com/sgaichas/SAFMCindicators/blob/main/summtab.csv) and [`compesrdat.csv`](https://github.com/sgaichas/SAFMCindicators/blob/main/compesrdat.csv) that are used to produce these tables is contained in the document [`ESRsumms.Rmd`](https://github.com/sgaichas/SAFMCindicators/blob/main/docs/ESRsumms.Rmd). 
+
+Note that while indicator counts given here should provide insight for comparisons across regional documents, they are approximate counts. There is interpretation required to count indicators: for example, are abundance and biomass from the same data source two indicators or one? Are time series for different species from the same source presented in one figure one single or multiple indicators? Are monthly vs. annual, local vs. regional sea surface temperature (SST) from the same source different indicators? When reviewing indicator summaries for each report, clearly different indicators were separated to the similar levels reported across all reports.
+
+Council FEP pdf documents were summarized using the Claude API and [this code](https://github.com/sgaichas/SAFMCindicators/blob/main/R/pdfsumm.R). Summaries included an overview combined with a list of stated ecosystem policies, goals, and objectives in the document along. Summaries were compared with the full documents to ensure consistency, and any newer policy documents not included in the FEPs were reviewed individually.
+
+## Structured interviews with Council staff and other knowledgable parties
+
+The primary objective of structured interviews was to determine what the Council's think about their ecosystem information products and processes.
+
+Council staff from each region were selected for interviews based on their role. Ecosystem, habitat, and/or climate leads were included if Councils identified staff in such roles, along with . Executive directors and or Deputies were also invited for interviews. 
+
+Interviews were coordinated with the team leading the Fishery Management Process Review using logistics software developed by that team. Potential interviewees were contacted with an email briefly describing the project goals and an invitation to be interviewed. Those accepting the invitation filled out a google form confirming agreement to be interviewed and gathering basic contact information, years of experience, and initial thoughts on the interview questions listed below, then scheduled an interview at the time of their choice using the software that included the interviewer's schedule. 
+
+Interviews could be 30-90 minutes depending on the interviewee's selected time slot. All interviews were conducted by Sarah Gaichas.
+
+Interview Template:
+
+*  Review Data products from lit review  
+*  Review Uses of record from lit review  
+*  Validate the above, then:  
+*  What other uses not recorded?  
+*  What are successes with current information and processes  
+*  What are and challenges with current information and processes  
+*  What might be done differently to better meet each Council’s objectives  
+
+Interviews were scheduled during November and December of 2025.
+
+*List of contacts by Council (draft):*
+**NPFMC Contacts:** Diana Evans deputy and ecosystems, Diana Stram co led CCTF, Katie Latanich climate program mgr, David Witherell Exec Dir. 
+**PFMC Contacts:**  Gilly Lyons Ecosystems and climate initiatives, Marlena Bellman SSC lead,  Kerry Griffin habitat, Kelly Ames deputy, Merrick Burden Exec Dir. 
+**WPFMC Contacts**: Mark Fitchett Pelagic fisheries, Ecosystem scientist, Joshua DeMellow, Island fisheries coordinator, Kitty Simonds Exec Dir. 
+**NEFMC Contacts**: Jonathan Peros Fisheries management and Risk policy lead, Jamie Cournane Science and assessment lead, Rachel Feeney SSC lead, Michelle Bachman Habitat lead, Andy Applegate EAFM, Cate O'Keefe Exec Dir. 
+**MAFMC Contacts**: Brandon Muffley, Ecosystems SSC and EOP, Jessica Coakley Habitat and EOP, Chris Moore Exec Dir. 
+**CFMC Contacts**: Liajay Rivera García FMP and EBFM, Graciela García-Moliner FMP and Habitat, Miguel A. Rolón Exec dir. 
+**GFMC Contacts**: Verena Wang Ecosystems, Ryan Rindone Fishery bio and SEDAR, John Froeschke Deputy, Zeenatul Basher Coral and Habitat, Carrie Simmons Exec director. 
+**SAFMC Contacts**: Kathleen Howington Habitat & Ecosystem Scientist, Meg Withers Citizen Science Project Coordinator, John Hadley
+Fishery Management Plan Coordinator & Fishery Economist, Chip Collier Deputy Director for Science, Myra Brouwer Deputy Director for Management, John Carmichael Executive Director. 
+
+# Results
+
+## Council Context and Overview
+
+The Regional U.S. Fishery Management Councils are highly diverse in the amount of area managed, the number of states and territories involved, the number of FMPs and FEPs in place, and commercial and recreational landings and value. 
+
+```{r councilcomp, ft.arraystretch = 1}
 # from Bachman et al 2025 table 2
 EEZareas <- readr::read_table(here::here("docs/data/Bachman2025Tab2.txt"))
 
@@ -242,55 +310,72 @@ proparea |>
 
 ```
 
+All of the Councils have at least one ESR or similar ecosystem data product. However, not all reports are updated annually.
+
+This table gives an overview of which Councils receive which reports, the reporting region, the most recent year of the report, report length, number of sections, approximate number of indicators (see note above), and the first and last section headers in each report. This give some insight into structural differences between the reports. Additional tables listing sections and numbers of indicators for each report, and listing indicator names for each report, are available [online here](https://sgaichas.github.io/SAFMCindicators/ESRcomparisons.html). 
+
+```{r ESRdat, ft.arraystretch = 1}
+
+compesrdat <- readr::read_csv(here::here("compesrdat.csv"))
+
+summtab <- readr::read_csv(here::here("summtab.csv"))
+
+sectionindcounts <- compesrdat |>
+  dplyr::group_by(Region, Year, Section) |>
+  dplyr::summarise(Nind = n())
+
+indcounts <- compesrdat |>
+  dplyr::group_by(Region) |>
+  dplyr::summarise(Nind = n())
+
+sectioncounts <- compesrdat |>
+  dplyr::select(Region, Year, Section) |>
+  dplyr::distinct() |>
+  dplyr::group_by(Region, Year) |>
+  dplyr::summarise(Nsect = n())
+
+order <- compesrdat |>
+  dplyr::group_by(Region) |>
+  dplyr::select(Section) |>
+  dplyr::distinct() |>
+  dplyr::mutate(order = 1:length(Section))
 
 
-Structured interviews of key regional personnel to document ecosystem information sources, data products, and processes where ecosystem information is used for each U.S. Fishery Management Council, including SAFMC. 
+flextable::flextable(summtab) |>
+  flextable::colformat_num(
+    j = c("Year"), # Specify the columns to format
+    big.mark = "",             # Set big.mark to an empty string to remove commas
+    digits = 0                  # Specify the number of decimal places
+  ) |>
+  flextable::set_header_labels(
+      Npages = "Total pages",
+      Nsect = "Number of Sections",
+      Nind = "Number of Indicators",
+      First = "First Section",
+      Last = "Last Section"
+  ) |>
+  flextable::set_table_properties(layout = "autofit", width = 1)
 
-This comprehensive review will place current SAFMC practice and products in the context of the experience of all other U.S. Councils, and set the stage to identify opportunities to use its existing ecosystem information resources, including an ecosystem status report, climate vulnerability analyses for fish and fishing communities, and citizen science program.
 
-## Develop recommendations for ways to incorporate ecosystem information into SAFMC fisheries management processes
+```
 
-Annual catch specification--ESRs/ESPs into assessments, SSC processes for ABC buffers. Can ESPs work in SEDAR and SAFMC SSC processes?
+Most Council regions, aside from the Caribbean, have a completed Climate Vulnerability Analysis (CVA) for fish in the region. Some Council regions have fishing community CVAs, habitat CVAs, and marine mammal CVAs. 
 
-To identify opportunities specific to SAFMC processes beyond catch decisions, I will review both SEDAR processes and Council actions for the past 3-5 years to evaluate current and potential pathways for the use of ecosystem information. This review will include inter-jurisdictional processes such as the East Coast Climate Scenario Planning and subsequent East Coast Climate Coordination Group. Noting that the Council is also currently requesting proposals to review its fisheries management process, I would coordinate with that project if practical given project timelines. Based on this review, I will classify management decisions by data needs and process timelines to develop a prioritized list of processes linked to ecosystem information and recommend practical pathways for implementation. Below are several examples that could be further refined for the South Atlantic context during the project.
+```{r CVAs}
 
-# Results
+```
 
-## Ecosystem information review across Councils
+Council FEPs (and some FMPs) contain some similar content in terms of ecosystem policies and goals, with regionally specific goals for habitats unique to a given region such as coral reefs. However, Councils have different mechanisms across FEPs or FMPs to operationalize the use of ecosystem information. In each section below, the Council context, management structure, and use of ecosystem data products is detailed for each region based on the literature review. [*Information from interviews will be added to each section once interviews are complete.*]
 
-ADD TABLES: ESR sections and indicator contents by Council, CVA species by Council, ESP species by Council, FEP structure by Council
+```{r FEPs}
 
-PRELIMINARY THOUGHTS/HYPOTHESES TO TEST
+```
 
-Three general categories for current use of ecosystem products: FMP/indicator based, FEP/geographically based, and developing
+## Review of Products and Processes by Council *(pre-interview)*
 
-WPFMC and CFMC: island based FEP/FMPs structure decisions for species within a defined ecoregion, done because each island has distinct social, economic, and ecological conditions and conducting species assessments across all islands was probably never practical. Ecosystem reporting has been intermittent (WPFMC) or only recently developed (CFMC). Characterized by a lot of species, many data limited
+*This section will be expanded once interview are complete. Questions to be clarified during interviews are included in italics.* 
 
-NPFMC, PFMC, MAFMC, NEFMC: species based FMPs structure decisions although many species can be within an FMP. Annual ecosystem indicator reports are produced and presented to each Council. Ecosystem indicators have been examined and sometimes used at the full ecosystem, ecoregion (subset of area within Council jurisdiction), species, and stock levels for decision making. Characterized by high value data rich stocks with complex quantitative assessments although data limited stocks and species complexes are also in the region
-
-SAFMC, GFMC: developing. species based FMPs structure decisions although many species can be within an FMP. SAFMC has a voluminous FEP and a recent ecosystem indicator report, though not annual.  I need to look at GFMC that is the only one where I have no idea right now.
-
-WHAT DO THE COUNCILS THINK ABOUT THEIR APPROACHES?
-
-Interview Template:
-
-Review Data products from lit review
-
-Review Uses of record from lit review
-
-Validate the above, then:
-
-What other uses not recorded?
-
-What are successes with current information and processes
-
-What are and challenges with current information and processes
-
-What might be done differently to better meet each Council’s objectives
-
-### In depth each Council, pre interview
-
-#### NPFMC
+### NPFMC
 
 The North Pacific Council manages fisheries using Fishery Management Plans (FMPs): five FMPs are species-based (Groundfish-2 areas, Crab, Salmon, and Scallop) and one is area-based (Arctic). FMP based single species groundfish and crab management has evolved to include ecosystem indicators in the catch specification process, as described below. 
 
@@ -305,82 +390,76 @@ To date, risk tables incorporating ecosystem indicators have been presented in u
  
 FEPs have been developed for the Aleutian Islands (shelved) and the Bering Sea (active). The Bering Sea FEP intends to use ESRs for monitoring progress against ecosystem objectives, and has "action modules" focusing on climate readiness, incorporation of local and traditional knowledge, evaluating current management alongside EBFM best practice, developing conceptual models, and alignment of Council priorities with research funding. 
 
-The BS FEP team appears to meet annually, the most recent meeting was January 2024. Are other action modules to be activated, or are they at capacity? 
+The BS FEP team appears to meet annually, the most recent meeting was January 2024. *Are other FEP action modules to be activated, or are they at capacity?* 
 
 The first two FEP action modules have been initiated, and a final report is available from the Climate Change Task Force, as well as a ranking of climate readiness completed by the Climate Change Task force. Climate readiness was ranked 2-3 out of a possible scale of 5 This report noted the importance of ESRs in providing links between observed trends and long term climate change.
 
 ![Fig 2, NPFMC Climate readiness evaluation](images/NPFMC_ClimateReadiness2022.png)
 
-A Climate Vulnerability Analysis for Bering Sea species has been published [@spencer_trait-based_2019], however its direct use in management processes is unclear... The Climate Ready Synthesis recommended inclusion of climate vulnerability information in status reports/risk assessments; perhaps this is being done?
+A Climate Vulnerability Analysis for Bering Sea species has been published [@spencer_trait-based_2019], however its direct use in management processes is unclear. The Climate Ready Synthesis recommended inclusion of climate vulnerability information in status reports/risk assessments. *Is this being done?*
 
-A climate scenario planning workshop took place in June 2024. How has this been integrated?
+A climate scenario planning workshop took place in June 2024. *How has this been integrated?*
 
 The Climate Change Task Force recommended several next steps and the Council took action in Dec 2024 to address the steps. The SSC held a [workshop in June 2025](https://meetings.npfmc.org/Meeting/Details/3093) to address a Council October 2024 motion "Consider to what extent, and whether, to revise groundfish and crab harvest control rules (HCRs) to be more climate-resilient." This is a step towards bringing alternative harvest management measures with more climate awareness and flexibility to the Council. 
 
-It appears the NPFMC IRA projects were to address some of these steps and the Council may also be initiating a programmatic EIS to encompass climate-ready/resilient management goals and objectives. This would likely expand beyond ABC/TAC specification to other management measures such as spatial management (noted in the Climate Ready Synthesis). 
+The NPFMC IRA projects were to address some of these steps and the Council may also be initiating a programmatic EIS to encompass climate-ready/resilient management goals and objectives. This would likely expand beyond ABC/TAC specification to other management measures such as spatial management (noted in the Climate Ready Synthesis). 
 
 ESRs have been produced since 1995, are also presented as contextual information, and have been used to adjust TAC advice in the past [@zador_ecosystem_2016]. AFSC staff produce the reports as part of their regular duties (dedicated resources), while contributors range from NOAA staff to academic researchers in the region who have varying availability or resources to update indicators. The Council's FEP driven Climate Change Task Force identified a need for additional resources to implement recommendations for improving climate readiness.
 
 The North Pacific Council region includes multiple large marine ecosystems, a single U.S. state (Alaska) and federal waters. Stock and ecosystem areas are spatially aligned, and stock and ecosystem assessments are temporally aligned for the groundfish and crab FMPs. Commercial fisheries dominate landings.
 
-**Contacts:** Diana Evans deputy and ecosystems, Diana Stram co led CCTF, Katie Latanich climate program mgr, David Witherell Exec dir
 
-
-#### PFMC
+### PFMC
 
 The Pacific Council manages under 4 multispecies FMPs: Salmon, Groundfish, Coastal pelagic species, Highly migratory species. 
 
 The Pacific Council FEP was developed in 2013 and revised in 2022. The 2022 FEP is informational and not prescriptive, retaining Council discretion to act on ecosystem information. It specifies goals and objectives as well as "ecosystem initiatives" that focus on priority actions (described below). The FEP includes an outline of ecosystem science uses in the Council process. 
 
-FEP Initiative 1 prohibited directed fishing on currently unexploited, unmanaged forage fish in the region and was completed in 2015. FEP Initiative 2 reviewed the ESR 2015-2016 to better inform the Council of both ecosystem indicators and processes and the potential use of this information in management [@tommasi_case_2021]. FEP Initiative 3, completed in 2019, was the Climate and Communities initiative to evaluate potential impacts of climate change and identify ways to improve flexibility and responsiveness of management. As part of this initiative, climate scenario planning was completed. How is this being used?
+FEP Initiative 1 prohibited directed fishing on currently unexploited, unmanaged forage fish in the region and was completed in 2015. FEP Initiative 2 reviewed the ESR 2015-2016 to better inform the Council of both ecosystem indicators and processes and the potential use of this information in management [@tommasi_case_2021]. FEP Initiative 3, completed in 2019, was the Climate and Communities initiative to evaluate potential impacts of climate change and identify ways to improve flexibility and responsiveness of management. As part of this initiative, climate scenario planning was completed. *How is this being used?*
 
 As prescribed in its FMP, The Pacific Council receives a single ESR produced annually for the California Current ecoregion [@leising_2024-2025_2025-1], consisting of a graphical summary and ~40 page main report with many detailed appendices for indicators and methods. Additional appendices are included for both short term and long term ecological and climate forecasts. Forecast uncertainty and evaluation of previous forecasts are included. 
 
-ESP like products [@tolimieri_oceanographic_2018; @haltuch_oceanographic_2020] exist for at least 2 species.
+ESP like products [@tolimieri_oceanographic_2018; @haltuch_oceanographic_2020] exist for at least 2 species.  *Which assessments include ecosystem indicators directly?*
 
-Which assessments include ecosystem indicators directly?
-
-CVA exists [@mcclure_vulnerability_2023] and is proposed for use as a component in the process determining ABC uncertainty buffers (see below).
+A fish CVA exists [@mcclure_vulnerability_2023] and is proposed for use as a component in the process determining ABC uncertainty buffers (see below).
 
 The SSC is evaluating risk tables in progress for stock assessments and ABC decisions (see below), but they are reframed as uncertainty tables using IPCC "confidence" language on degree of agreement of indicators and robustness of evidence). FEP Initiative 4, [Ecosystem and Climate Information for Species, Fisheries, and FMPs](https://www.pcouncil.org/actions/ecosystem-and-climate-information-for-species-fisheries-and-fmps/), is currently active and is developing an ecosystem and climate risk assessment framework for use in the catch specification process. This is patterned on the use of risk tables in NPFMC harvest specification, but is tailored to the p* process used in PFMC. The ecosystem team tested options and recommended one where ecosystem and climate risks would alter the sigma applied to characterize scientific uncertainty in the OFL  (sigma is equivalent to the MAFMC SSC OFL CV). PFMC sigmas are 0.5 for high certainty assessments, 1 for data moderate assessments, and 2 for data limited assessments, with additional increases in sigma as time passes since the most recent assessment. Ecosystem and climate risks could further inform sigma, increasing or decreasing it as these factors increase or decrease uncertainty. 
 
 In lieu of an ESP type product, the proposal would be for ecosystem and stock scientists to have a structured conversation to identify key uncertainties in the assessment and evaluate ecosystem drivers of the stock not included in the assessment to fill out a table indicating whether ecosystem conditions are favorable, neutral, or unfavorable for the stock. This draws on previous literature and the indicators reported in the ESR. Information from the CVA for each stock is included in this discussion. The structured discussion template is included in the [2024 report](https://www.pcouncil.org/documents/2024/08/h-1-a-cciea-team-report-1-cciea-risk-table-report-on-fep-initiative-4.pdf/).
 
-Use in other management processes?
+*Use in other management processes?*
 
 Both the Northwest and Southwest fisheries science centers have dedicated staff supporting ESR production. The CCIEA team developed the recommendation for use of assessment and ecosystem information in the SSC's ABC decision process. 
 
 The Pacific Council region includes one large marine ecosystem spanning three states and federal waters. Mostly commercial fisheries?
 
-**Contacts**:  Gilly Lyons Ecosystems and climate initiatives, Marlena Bellman SSC lead,  Kerry Griffin habitat, Kelly Ames deputy, Merrick Burden Exec dir
 
-#### WPFMC
+### WPFMC
 
 The Western Pacific Council manages with 5 place-based Fishery Ecosystem Plans established in 2010: Hawaii, American Samoa, Mariana, Pacific remote islands, Pelagic. The Council established the first US ecosystem based FMP for coral reefs in 2004, and initiated development of its FEPs in 2005 with a series of workshops introducing and developing EAFM, focusing on biophysical, social science, and policy aspects of EAFM [@martell_fishery_2020]. Fishery and protected species management issues as well as ecosystem information are considered in each FEP. The Council guiding principles include promoting an ecosystem approach. The Council has Regional Ecosystem Advisory Committees (REACs) made up of Council members and government officials, business, academic, and NGO representatives who are responsible for or interested in activities on land and outside fisheries that may affect fishery management; REACs represent Hawaii, American Samoa, and the Mariana Archipelago.  
 
-Western Pacific SAFE reports for each FEP include three sections: fishery performance, ecosystem considerations, and data integration, and are available at https://www.wpcouncil.org/annual-reports/. Fishery performance includes catch and effort information. The ecosystem considerations include fisher observations, coral reef fish biomass and habitat condition indicators, life history parameters, socioeconomics, protected species, climate and ocean indicators, EFH, and marine planning sections (updated through 2024). The data integration section is intended to link environmental indicators with managed stocks. These sections are less developed in each SAFE. The Hawaii example is uku, but it appears it has not been updated since 2018 and includes data through 2012 [@wprfmc_annual_2025]. There is an ESP for Hawaii uku [@ayers_ecosystem_2022]. The American Samoa [@wprfmc_annual_2025-1] and Marianas Archipelago data integration sections includes multivariate analysis updated through 2016 [@wprfmc_annual_2025-2]. Pelagic [@wprfmc_annual_2025-3] and Pacific Remote Island Area [@wprfmc_annual_2025-4] all include updated climate and ocean indicators. June 2025 Council discussions suggested that summaries of what has changed in SAFEs would be useful for the Council; "dashboard" presentations are being considered by the FEP teams. 
+Western Pacific SAFE reports for each FEP include three sections: fishery performance, ecosystem considerations, and data integration, and are available at https://www.wpcouncil.org/annual-reports/. Fishery performance includes catch and effort information. The ecosystem considerations include fisher observations, coral reef fish biomass and habitat condition indicators, life history parameters, socioeconomics, protected species, climate and ocean indicators, EFH, and marine planning sections (updated through 2024). The data integration section is intended to link environmental indicators with managed stocks. These sections are less developed in each SAFE. The Hawaii example is uku, but it appears it has not been updated since 2018 and includes data through 2012 [@wprfmc_annual_2025]. There is an ESP for Hawaii uku [@ayers_ecosystem_2022]; *is this being used in the assessment or management or integrated into the SAFE?* The American Samoa [@wprfmc_annual_2025-1] and Marianas Archipelago data integration sections includes multivariate analysis updated through 2016 [@wprfmc_annual_2025-2]. Pelagic [@wprfmc_annual_2025-3] and Pacific Remote Island Area [@wprfmc_annual_2025-4] all include updated climate and ocean indicators. June 2025 Council discussions suggested that summaries of what has changed in SAFEs would be useful for the Council; "dashboard" presentations are being considered by the FEP teams. 
 
 There is a p* process and a Social, Ecological, Economic, and Management (SEEM) process for specifying scientific and management uncertainty, respectively. The p* is done by the SSC while the SEEM process is a collaboration between fishers, scientists, and managers. Research priorities for the coming years seek to bound harvest levels based on stock and ecosystem productivity while considering climate change effects on productivity. 
 
-An ESR for Hawaii with the same geographic scope as Hawaii FEP was produced in 2022 [@gove_2022_2022]; prior reports were for West Hawaii only. The 2022 report includes socioeconomic, fisheries, coral reef, climate, human impact, and coral reef climate vulnerability sections. Identifies cumulative impacts. Aspects on nearshore fisheries were included at the request of the Council. Habitat recovery depends on both land based and fishery management. PIFSC is on the Hawaii REAC for the Council. Has the ecosystem considerations portion of each SAFE replaced this? How related are they? 
+An ESR for Hawaii with the same geographic scope as Hawaii FEP was produced in 2022 [@gove_2022_2022]; prior reports were for West Hawaii only. The 2022 report includes socioeconomic, fisheries, coral reef, climate, human impact, and coral reef climate vulnerability sections, and identifies cumulative impacts. Aspects on nearshore fisheries were included at the request of the Council. Habitat recovery depends on both land based and fishery management. PIFSC is on the Hawaii REAC for the Council. *Has the ecosystem considerations portion of each SAFE replaced this? How related are they?* 
 
-CVA was conducted for the full Pacific Islands region [@giddens_assessing_2022]. Included/referenced in FEP SAFE reports? Not that I can see
+CVA was conducted for the full Pacific Islands region [@giddens_assessing_2022]. *Are there plans to included/reference CVA in FEP SAFE reports?*
 
-Active spatial ecosystem indicators include [turtle watch](https://oceanwatch.pifsc.noaa.gov/turtlewatch.html) that is updated daily to indicate regions of potential turtle bycatch for pelagic fisheries based on temperature, and [ocean watch](https://oceanwatch.pifsc.noaa.gov/indicators.html) that summarizes ocean conditions in key fishing and coral areas. Ocean watch data includes coral reef bleaching hotspot and alert area data but I can't find how this translates into an indicator being used.  
+Active spatial ecosystem indicators include [turtle watch](https://oceanwatch.pifsc.noaa.gov/turtlewatch.html) that is updated daily to indicate regions of potential turtle bycatch for pelagic fisheries based on temperature, and [ocean watch](https://oceanwatch.pifsc.noaa.gov/indicators.html) that summarizes ocean conditions in key fishing and coral areas. Ocean watch data includes coral reef bleaching hotspot and alert area data. *Does this translate into an indicator being used?*  
 
 There is a Fisheries Ecosystem Analysis Tool ([FEAT](https://apps-pifsc.fisheries.noaa.gov/FEAT/#/)) online that summarizes fishery performance indicators 2002-2018 (landings, revenue, and participation by fleet and region), cost data through 2016, nearshore state and island fishery trends, spatial catch and effort in the Western Pacific, and reports on social science work. 
 
 The State of Hawaii is using layers on [cumulative impacts](https://www.arcgis.com/home/item.html?id=ca750b9476fb429b809d1300628f3bb7), habitat efforts are also using the information. 
 
-The Hawaii EEZ is slightly bigger than the West Coast EEZ. Resources for ecosystem reporting are limited in PIFSC, but many scientists are listed as contributors to SAFEs. 
+The Hawaii EEZ is slightly bigger than the West Coast EEZ, and the full Western Pacific region represents nearly half of the total U.S. EEZ. Resources for ecosystem reporting are limited in PIFSC, but many scientists are listed as contributors to SAFEs. *How are resources allocated to ecosystem work?*
 
-**Contacts**: Mark Fitchett Pelagic fisheries, Ecosystem scientist, Joshua DeMellow, Island fisheries coordinator, Kitty Simonds Exec dir
 
-#### NEFMC
+### NEFMC
 
 The New England Council manages under 9 FMPs. Three are mutispecies FMPs: Northeast multispecies ("groundfish"), Small mesh multispecies, and Skates; and six are single species FMPs: Atlantic Scallop, Atlantic Herring, Monkfish, Dogfish, Salmon, Deep Sea Red Crab. Dogfish and Monkfish FMPs are joint with the Mid-Atlantic Council. The Atlantic Herring FMP features a harvest control rule that was designed to account for herring's role as forage in the ecosystem using a multi-species stakeholder-driven management strategy evaluation [@deroba_dream_2018; @feeney_integrating_2019]. 
 
-An [example FEP](https://d23h0vhsm26o6d.cloudfront.net/3_Draft-example-Fishery-Ecosystem-Plan-eFEP_190830_113712.pdf) was developed between 2012 and 2024 illustrating ecosystem based management on Georges Bank, including management with aggregate ecosystem and fish guild level total allowable catches (ceilings) and single species minimum biomass thresholds (floors) for 10 species on Georges Bank. The proposed EBFM was designed to address both ecological and fleet technical interactions and the need for increased fishery operational flexibility. However, this FEP was not formally adopted, and the Council has suspended development of this FEP approach in favor of the new indicator-based risk policy operating within established FMPs.
+An [example FEP](https://d23h0vhsm26o6d.cloudfront.net/3_Draft-example-Fishery-Ecosystem-Plan-eFEP_190830_113712.pdf) was developed between 2012 and 2024 illustrating ecosystem based management on Georges Bank, including management with aggregate ecosystem and fish guild level total allowable catches (ceilings) and single species minimum biomass thresholds (floors) for 10 species on Georges Bank. The proposed EBFM was designed to address both ecological and fleet technical interactions and the need for increased fishery operational flexibility. However, this FEP was not formally adopted, and the Council has suspended development of this FEP approach in favor of the new indicator-based risk policy operating within established FMPs (described below).
 
 The New England region gets a State of the Ecosystem (SOE) report each year that covers two ecoregions: the Gulf of Maine and Georges Bank [@caracappa_state_2025]. Coastwide Northeast U.S. indicators are also included. The New England SOE report includes a graphical summary section and three report sections: performance against fishery management objectives, risks to meeting fishery management objectives, and ecosystem highlights from the most recent year. Fishery management objectives are drawn from U.S. legislation [@depiper_operationalizing_2017], and risks include climate-driven changes and other ocean uses (offshore wind development). 
 
@@ -390,18 +469,16 @@ To date ecosystem indicators have been integrated into 2 research track stock as
 
 The Council is developing a [risk policy](https://d23h0vhsm26o6d.cloudfront.net/Risk-Policy-Statement-and-Concept-Overview-for-posting-v1-final.pdf) that will use some indicators from the SOE and possibly ESPs. The policy evaluates risk due to stock status and assessment uncertainty, climate and ecosystem drivers, and economic and community considerations. Indicators are being selected for each category will be scored according to criteria established for the category, then scores across categories are to be weighted by the Council to achieve an overall risk score for each stock given the set of indicators. The risk score would then be used to adjust the buffer between OFL and ABC using the established control rule for the stock in question (NEFMC harvest control rules vary by FMP). The Council plans to start with its groundfish FMP to refine this indicator based risk approach.
 
-![Fig 3, NEFMC Risk Policy indicator scoring](images/NEFMC_RiskPolicy2025.png) 
+![Figure 3, NEFMC Risk Policy indicator scoring](images/NEFMC_RiskPolicy2025.png) 
 
 A climate vulnerability analysis for Northeast U.S. species has been published [@hare_vulnerability_2016], and provides input to the new risk policy currently in development by the Council. Both community climate vulnerability [@colburn_indicators_2016] and habitat climate vulnerability [@farr_assessment_2021] have also been assessed in the Northeast U.S., and marine mammal climate vulnerability has been assessed for the entire Atlantic Coast [@lettrich_vulnerability_2023]. 
 
 Northeast SOE reports have been produced annually since 2017. Prior to that, longer ESRs were produced in 2002, 2009, 2012, and 2015. The NEFSC dedicates staff time to developing annual ecosystem reports and intermittent ESPs. 
 
-The New England Council region includes  New England fisheries are dominated by commercial fisheries. 
+The New England Council region includes five states with a long history of commercial fishing, including heavy historical exploitation by foreign fleets. New England fisheries are dominated by commercial fisheries, including highly economically valuable Atlantic scallop fishery, and the Atlantic States Marine Fisheries Commission-managed lobster fishery. 
 
 
-**Contacts**: Jonathan Peros Fisheries management and Risk policy lead, Jamie Cournane Science and assessment lead, Rachel Feeney SSC lead, Michelle Bachman Habitat lead, Andy Applegate EAFM, Cate O'Keefe Exec dir
-
-#### MAFMC
+### MAFMC
 
 The Mid-Atlantic Council manages under 7 FMPs; 4 multispecies (Summer flounder scup and black sea bass; Mackerel squid and butterfish, Surfclam and ocean quahog, and Tilefish) and 3 single species (Bluefish, Spiny Dogfish, Monkfish). Dogfish and Monkfish FMPs are joint with the New England Council.
 
@@ -419,7 +496,7 @@ To date, ecosystem indicators have been integrated into the operational black se
 
 The Council uses indicators from both the SOE and ESPs in an annual ecosystem-level risk assessment [@gaichas_implementing_2018]. This risk assessment is part of the Council's Ecosystem Approach to Fisheries Management (EAFM) as laid out in their 2019 policy document. 
 
-![Fig 4, MAFMC Indicator-based EAFM Risk Assessment](images/MAFMCrisk2025.png)
+![Figure 4, MAFMC Indicator-based EAFM Risk Assessment](images/MAFMCrisk2025.png)
 
 A climate vulnerability analysis for Northeast U.S. species has been published [@hare_vulnerability_2016], and is considered within the SSC's ABC deliberation process as part of ecosystem factors contributing to uncertainty in the OFL. Both community climate vulnerability [@colburn_indicators_2016] and habitat climate vulnerability [@farr_assessment_2021] have also been assessed in the Northeast U.S., and marine mammal climate vulnerability has been assessed for the entire Atlantic Coast [@lettrich_vulnerability_2023]. A habitat-species climate vulnerability [crosswalk](https://nrha.shinyapps.io/dataexplorer/#!/crosswalk) summarizing species vulnerability and life history stages dependent on climate vulnerable habitat is also being considered during SSC deliberations, but is not yet formally part of the OFL CV protocol. 
 
@@ -427,9 +504,8 @@ Northeast SOE reports have been produced annually since 2017. Prior to that, lon
 
 Mid-Atlantic managed fisheries are approximately evenly split between commercial and recreational. A large proportion of commercial landings in the Mid-Atlantic region are Atlantic menhaden, which is managed by the Atlantic States Marine Fisheries Commission.
 
-**Contacts**: Brandon Muffley, Ecosystems SSC and EOP, Jessica Coakley Habitat and EOP, Chris Moore Exec director
 
-#### CFMC
+### CFMC
 
 The Caribbean Council manages under three Island-Based FMPs for for Puerto Rico, St. Croix, and St. Thomas/St. John. The FMPs identify objectives and measures for all of the major fisheries, habitat, and ecosystem issues in each region. Up until 2022, the Caribbean Council managed under region-wide FMPs for spiny lobster, queen conch, reef fish, and corals (with a prohibition on coral take). The Island-Based FMPs were initiated in 2012 to address management issues unique to each island and to lay the groundwork for place-based EBFM; these Island-Based FMPs have been used for management since October 2022. The Island Based FMPs all refer to EBFM as the overarching management principle, and include goals and objectives related both to fishery stock management and sustainable ecosystem services.
 
@@ -447,13 +523,12 @@ The Caribbean Council is one of three regional Councils served by SEFSC, the oth
 
 Caribbean fisheries are characterized by high species diversity, critical dependence on vulnerable nearshore and coral reef habitats, many artisanal commercial fishers with a variety of gears landing in many ports, and a recreational fishery with similar characteristics and yield; these conditions make typical single species data collection, assessment, and management approaches difficult [@appeldoorn_transforming_2008]. 
 
-**Contacts**: Liajay Rivera García FMP and EBFM, Graciela García-Moliner FMP and Habitat, Miguel A. Rolón Exec dir
 
-#### GFMC
+### GFMC
 
 The Gulf Council manages under 7 FMPs; 4 multispecies (Coastal migratory pelagics, Reef fish, Shrimp, Coral) and 3 single species (Red drum, Spiny lobster, Stone crab), with and additional FMP for Aquaculture.  The original Coral FMP was joint with South Atlantic Council. 
 
-A Gulf FEP has been drafted by contractor in 2022. This FEP also evaluated cooperative research and citizen science programs. Further FEP development is in progress with the Council's ecosystem technical team. The FEP extension follows the process outlined in the Pacific and North Pacific of identifying a Fishery Ecosystem Issue (FEI). An example FEI addressing red tide illustrates going through FEI loop [@levin_building_2018] identifying objectives, potential indicators, and uses of the indicators to support management. The FEI steps include scoping (the where are we now step) with stakeholders to outline the issue, data available, and potential for Council management, development and execution of a workplan (where are we going), implementation with recommended research, communication, and tradeoff analysis among management options, folowed by management recommendation and evaluation of the recommended actions. 
+A draft Gulf FEP was completed in 2022. This FEP also evaluated cooperative research and citizen science programs. Further FEP development is in progress with the Council's ecosystem technical team. The FEP extension follows the process outlined in the Pacific and North Pacific of identifying a Fishery Ecosystem Issue (FEI). An example FEI addressing red tide illustrates going through FEI loop [@levin_building_2018] identifying objectives, potential indicators, and uses of the indicators to support management. The FEI steps include scoping (the where are we now step) with stakeholders to outline the issue, data available, and potential for Council management, development and execution of a workplan (where are we going), implementation with recommended research, communication, and tradeoff analysis among management options, followed by management recommendation and evaluation of the recommended actions. 
 
 For the red tide issue, extensive scoping work is already complete, and considerable data is available for red tides. The red grouper and gag grouper stock assessments include red tide mortality, and red tide uncertainty has been considered by the SSC for these stocks. An new red tide index is currently in development by Council staff. Three index options were presented in May 2025. The red tide index was strongly associated with river discharge, highlighting environmental drivers linked to episodic fish mortality. 
 
@@ -466,13 +541,11 @@ The Gulf Council is one of three regional Councils served by SEFSC, the other tw
 Gulf Council managed fisheries are a mix of recreational and commercial. The Gulf has the highest recreational landings and expenditures of any US region. Gulf menhaden, which is managed by the Gulf States Marine Fisheries Commission, contributes the majority of commercial landings in the region. 
 
 
-**Contacts**: Verena Wang Ecosystems, Ryan Rindone Fishery bio and SEDAR, John Froeschke Deputy, Zeenatul Basher Coral and Habitat, Carrie Simmons Exec director
-
-#### SAFMC
+### SAFMC
 
 The South Atlantic Council manages under 8 FMPs: 4 multispecies (Coastal migratory pelagics,  Dolphin Wahoo, Shrimp, Snapper Grouper), 2 single species (Golden crab, Spiny lobster) and 2 habitat-oriented FMPs (Coral and live bottom habitat, Sargassum). The original Coral FMP was joint with the Gulf. The FMPs for Coral and Sargassum limit or prohibit commercial exploitation and promote conservation of these living habitats. 
 
-Habitat forms the basis of ecosystem based management in the South Atlantic. The South Atlantic [FEP II](https://safmc.net/documents/fishery-ecosystem-plan-2-fep-ii/) contains both extensive description of the ecosystem (>50% of 400 pages) as well as essential fish habitat (EFH) policy statements that specifically outline indicators and research to support policies. Many of these policies address cross-sectoral considerations, extending into Ecosystem Based Management (EBM). Policies and key ecosystem information include those listed in the FEP and several newer statements from https://safmc.net/fishery-management-plans/habitat/:  
+Habitat forms the basis of ecosystem based management approaches in the South Atlantic. The South Atlantic [FEP II](https://safmc.net/documents/fishery-ecosystem-plan-2-fep-ii/) contains both extensive description of the ecosystem (>50% of 400 pages) as well as essential fish habitat (EFH) policy statements that specifically outline indicators and research to support policies. Many of these policies address cross-sectoral considerations, extending into Ecosystem Based Management (EBM). Policies and key ecosystem information include those listed in the FEP and several newer statements from https://safmc.net/fishery-management-plans/habitat/:  
 
 * South Atlantic Food Webs and Connectivity Policy – January 2025
     +  Connects EFH and food web considerations, identifies research needs 
@@ -486,6 +559,8 @@ Habitat forms the basis of ecosystem based management in the South Atlantic. The
 * Marine Submerged Aquatic Vegetation (SAV) Habitat Policy – June 2014    
     +  Describes ecosystem services provided by SAV and recent declines in this EFH
     +  Outlines monitoring and research, planning, management, and education and enforcement to protect and restore SAV
+    
+![Figure 7. SAFMC food web](images/SAFMC_FWmodel.png)
     
 The following policies identify species with EFH and HAPC potentially impacted by each activity, and identify specific threats, best management practices and research needs:
 * Beach Dredging and Filling, Beach Renourishment and Large-Scale Coastal Engineering – September 2023 
@@ -506,9 +581,6 @@ The South Atlantic Council is one of three regional Councils served by SEFSC, th
 South Atlantic fisheries are roughly evenly split between commercial and recreational. 
 
 
-**Contacts**: Kathleen Howington Habitat & Ecosystem Scientist, Meg Withers Citizen Science Project Coordinator, John Hadley
-Fishery Management Plan Coordinator & Fishery Economist, Chip Collier Deputy Director for Science, Myra Brouwer Deputy Director for Management, John Carmichael Executive Director
-
 ### Examples from other organizations
 
 #### Atlantic States Marine Fisheries Commission
@@ -516,6 +588,8 @@ Fishery Management Plan Coordinator & Fishery Economist, Chip Collier Deputy Dir
 The Atlantic States Marine Fisheries Commission (ASMFC) coordinates management of fisheries shared by 15 states bordering the Atlantic Ocean. ASMFC manages a total of 27 stocks, some in partnership with the three Atlantic Councils or NOAA, and 14 species/groups under its own Interstate FMPs (ISFMPs): American Eel, American Lobster, Atlantic Croaker, Atlantic Menhaden, Atlantic Striped Bass, Atlantic Sturgeon, Black Drum, Northern Shrimp, Red Drum, Shad and River Herring, Spot, Spotted Sea Trout, Tautog, and Weakfish. 
 
 ASMFC manages Atlantic menhaden using Ecological Reference Points (ERPs) that account for menhaden's role in the ecosystem [@anstead_path_2021; @howell_combining_2021]. The reference points are estimated from a multispecies food web model that includes menhaden and its key managed fish predator species [@chagaris_ecological_2020]. The food web model is calibrated based on current stock assessments for each managed fish species and fit to biomass and catch data used in each stock assessment. Therefore, the model assumptions about the productivity of each species match the information currently used to manage each species. Diet information from many sources is included in the model to estimate predator prey relationships. The ERP is estimated by evaluating a range of joint fishing mortalities of menhaden and its most responsive predator, striped bass, and finding the menhaden fishing mortality that maintains striped bass at its target biomass when striped bass are fished at their target fishing rate. (The model runs exploring these fishing scenarios include all the other predators and prey and their interactions, where other species are assumed to be fished at their current rates.) Once this fishing rate is found using the ecosystem model, it is translated into the menhaden single species assessment to complete short term projections of the menhaden stock including uncertainty in stock parameters.  
+
+![Figure 8. Projected striped bass stock biomass under combined menhaden and striped bass fishing mortality scenarios.](images/ASMFC_Run150c.png)
 
 The process leading up to this approach included a history of multispecies modeling for menhaden and a stakeholder workshop to identify ecosystem management objectives [@anstead_path_2021], the development of multiple models over a range of complexity to evaluate predator prey relationships [@drew_balancing_2021], and close collaboration between the menhaden single species assessment team and the ERP modeling team [@chagaris_ecological_2020]. 
 
@@ -525,37 +599,33 @@ ASMFC has in-house stock assessment resources, and has established a dedicated w
 
 ESR like products used for ??? strategic planning?
 
-
-### Interviews
-
-#### NPFMC
-
-#### PFMC
-
-#### WPFMC
-
-#### NEFMC
-
-#### MAFMC
-
-#### CFMC
-
-#### GFMC
-
-#### SAFMC
-
 # Discussion
 
 ## Synthesis across Councils
 
+Based on this review, there are three general categories for current use of ecosystem products: FMP/indicator based, FEP/geographically based, and developing. 
+
+The NPFMC, PFMC, MAFMC and NEFMC use species based FMPs to structure management decisions, although many species can be within a particular FMP. Annual ecosystem indicator reports are produced and presented to each Council. Ecosystem indicators have been examined and sometimes used at the full ecosystem, ecoregion (subset of area within Council jurisdiction), species, and stock levels for decision making regarding annual catch limits. These regions are characterized by high value, data rich stocks with complex quantitative assessments, although data limited stocks and species complexes are also in each region. Three of the four Councils have non-regulatory FEPs that outline ecosystem level goals and objectives and specify processes (action modules, initiatives, etc.) for each Council to turn the ecosystem plan into tangible action on a topic. 
+
+The WPFMC and CFMC each use island based FEP/FMPs to structure decisions for species within a defined ecoregion. This management structure was designed because each island region has distinct social, economic, and ecological conditions, and conducting species assessments across all islands was never practical. Ecosystem reporting has been intermittent (WPFMC) or only recently developed (CFMC) in these regions, yet EBFM is prioritized in the management of in both regions. Human community economic, social, and cultural interactions with the ecosystem are central tenets of management. Both regions are characterized by fisheries capturing a lot of species, with many data limited fisheries and species. 
+
+The SAFMC and GFMC are developing ecosystem processes. In each Council, species based FMPs structure decisions, although many species can be within an FMP. SAFMC is leading the other Councils in directly linking EFH and ecosystem efforts. SAFMC has a voluminous FEP and a recent ecosystem indicator report, though not annual. GFMC has a newer FEP and is currently developing Fishery Ecosystem Issues similar to the approach taken in NPFMC and PFMC, but using the conceptual framework that CFMC is applying to develop an FMP.  
+
 Councils have a long history of learning from each other in designing and implementing ecosystem level planning. For example, the Pacific Council reviewed the Aleutian Islands, South Atlantic, and Western Pacific FEPs prior to developing its FEP. The Mid-Atlantic in turn reviewed the Pacific and other FEPs in developing its EAFM Policy Guidance Document (functionally an FEP). The North Pacific's Bering Sea FEP includes the "ecosystem initiative" approach to operationalizing aspects of EBFM, patterned on the Pacific FEP, and the developing Gulf Council FEP similarly includes Fishery Ecosystem Issues or FEIs as the basis for addressing specific ecosystem issues or goals. The island-archipelago based FEPs in the Western Pacific that are currently used for operational fishery management preceeded the Caribbean's development of island-based FMPs, replacing their the species based FMPs and setting the groundwork for geographically based EBFM. 
 
-Iterative co-production of ecosystem data products with managers and scientists has is demonstrated to improve understanding and use of ecosystem data in fishery management [@muffley_there_2021; @tommasi_case_2021]. 
+Iterative co-production of ecosystem data products with managers and scientists has been demonstrated to improve understanding and use of ecosystem data in fishery management [@muffley_there_2021; @tommasi_case_2021]. 
 
-Forage fish considerations include 1. don't start fishing them if you aren't already (unmanaged forage fishing prohibitions combined with requiring data prior to the start of a new fishery), and 2. developing harvest control rules or ecological reference points accounting for supporting ecological services provided by forage fish is possible and has been done. Spatial management (buffer zones around endangered species colonies/rookeries) has also been implemented. 
+Forage fish considerations have been addressed by many Councils. Generally, Councils have taken steps to prevent new fisheries from developing on currently unmanaged resources or developed harvest control rules accounting for supporting ecological services provided by forage fishing. The ASMFC has developed ecological reference points tying forage fish harvest to predator needs. Spatial management (buffer zones around endangered species colonies/rookeries) has also been implemented. 
 
-## Recommendations for SAFMC
+## Recommendations for SAFMC (Preliminary)
 
-SAFMC shares a mix of reef-type or rockfish complex like data limited species with some high value data rich stocks, so a mix of approaches from the above may be warranted.
+SAFMC is unique among Councils in explicitly linking EFH and ecosystem efforts, and in proactively bringing citizen science into its process. These advantages can be incorporated into approaches going forward. 
+
+SAFMC shares a mix of reef-type or west coast rockfish complex-like data limited species with some high value data rich stocks, so a mix of approaches from other regional Councils may be warranted, rather than adopting a single Council's approach.
+
+SAFMC has identified many ecosystem indicators and objectives in its EFH policy documents; evaluation of indicators currently in the South Atlantic ESR and results of the fish and community CVAs are likely to reveal matched information as a basis for moving forward.
+
+An explicit process for developing specific ecosystem initiatives, as applied through FEPs or similar policy documents in other regions (Gulf, Mid-Atlantic, Pacific, North Pacific) may allow SAFMC to explore practical ecosystem-based management for a particular fishery or issue. 
 
 # References
+
