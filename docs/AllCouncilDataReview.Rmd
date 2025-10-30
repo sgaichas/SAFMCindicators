@@ -1,13 +1,13 @@
 ---
 title: "All Council Ecosystem Data Review"
 subtitle: "DRAFT for South Atlantic Fishery Management Council"
-author: "Sarah Gaichas"
+author: "Sarah Gaichas, Hydra Scientific LLC"
 date: "`r Sys.Date()`"
 output:
+  pdf_document: default
   html_document:
     code_fold: hide
     df_print: paged
-  pdf_document: default
   word_document: default
 csl: plos.csl
 bibliography: operationalSOE.bib
@@ -22,7 +22,7 @@ knitr::opts_chunk$set(echo = FALSE,
 
 library(tidyverse)
 library(flextable) #hopefully makes actual tables in word
-set_flextable_defaults(font.size = 11, padding = 3,
+set_flextable_defaults(font.size = 10, padding = 5,
                        fonts_ignore=TRUE) #for latex
 
 ```
@@ -58,10 +58,13 @@ This report considers ecosystem information available and processes used in all 
 
 ## Definitions and abbreviations
 
-Ecosystem Status Report (ESR)
-Climate Vulnerability Analysis (CVA)
-Fishery Management Plan (FMP)
-Fishery Ecosystem Plan (FEP)
+Ecosystem Status Report (ESR): a document summarizing ecosystem information for a particular region, spanning physical, biological, economic, and social information. Indicators are presented and interpreted in the context of historical trends and current status relative to any known reference points. Also known as State of the Ecosystem (SOE) or Ecosystem Considerations reports [@morrison_investigating_2022; @harvey_us_2025]. 
+
+Climate Vulnerability Analysis (CVA): an evaluation of vulnerability to projected climate conditions based on standard metrics of sensitivity and exposure appropriate to the species, habitat, or community being assessed [@bruno_soares_conceptual_2012; @morrison_methodology_2015]. CVA has been applied to marine fish and invertebrates, marine fish and invertebrate habitats, marine mammals, and fishing communities. 
+
+Fishery Management Plan (FMP): a legally required document outlining methods (management measures, regulations, monitoring, research) to achieve fishery management objectives as specified in the U.S. Magnuson-Stevens Fishery Conservation and Management Act. Councils determine which fisheries are included in an FMP, describe targeted species and fishing methods, identify essential habitat, and design methods to ensure sustainable optimum yield (maximum benefit to the Nation in terms of seafood production and recreational opportunities while accounting for the protection of marine ecosystems) while meeting other objectives such as bycatch reduction and other legal mandates for protected species. 
+
+Fishery Ecosystem Plan (FEP): a document outlining methods for ecosystem-based fishery management by providing an ecosystem description, overarching ecosystem policies and goals, and methods for coordinating across managed fisheries and addressing ecosystem interactions. When FEPs contain all components of an FMP, they can be used as FMPs. FEPs were originally outlined and recommended in a 1999 report to Congress, and operational methods for refining and using FEPs have been advanced more recently [@marshall_ecosystem-based_2018; @levin_building_2018].  
 
 
 # Methods
@@ -126,15 +129,24 @@ Interview Template:
 Interviews were scheduled during November and December of 2025.
 
 *List of contacts by Council (draft):*
-**NPFMC Contacts:** Diana Evans deputy and ecosystems, Diana Stram co led CCTF, Katie Latanich climate program mgr, David Witherell Exec Dir. 
+
+**NPFMC Contacts:** Diana Evans deputy and ecosystems, Diana Stram co led CCTF, Katie Latanich climate program mgr, David Witherell Exec Dir.
+
 **PFMC Contacts:**  Gilly Lyons Ecosystems and climate initiatives, Marlena Bellman SSC lead,  Kerry Griffin habitat, Kelly Ames deputy, Merrick Burden Exec Dir. 
-**WPFMC Contacts**: Mark Fitchett Pelagic fisheries, Ecosystem scientist, Joshua DeMellow, Island fisheries coordinator, Kitty Simonds Exec Dir. 
+
+**WPFMC Contacts**: Mark Fitchett Pelagic fisheries, Ecosystem scientist, Joshua DeMellow, Island fisheries coordinator, Kitty Simonds Exec Dir.
+
 **NEFMC Contacts**: Jonathan Peros Fisheries management and Risk policy lead, Jamie Cournane Science and assessment lead, Rachel Feeney SSC lead, Michelle Bachman Habitat lead, Andy Applegate EAFM, Cate O'Keefe Exec Dir. 
+
 **MAFMC Contacts**: Brandon Muffley, Ecosystems SSC and EOP, Jessica Coakley Habitat and EOP, Chris Moore Exec Dir. 
-**CFMC Contacts**: Liajay Rivera García FMP and EBFM, Graciela García-Moliner FMP and Habitat, Miguel A. Rolón Exec dir. 
+
+**CFMC Contacts**: Liajay Rivera García FMP and EBFM, Graciela García-Moliner FMP and Habitat, Miguel A. Rolón Exec dir.
+
 **GFMC Contacts**: Verena Wang Ecosystems, Ryan Rindone Fishery bio and SEDAR, John Froeschke Deputy, Zeenatul Basher Coral and Habitat, Carrie Simmons Exec director. 
+
 **SAFMC Contacts**: Kathleen Howington Habitat & Ecosystem Scientist, Meg Withers Citizen Science Project Coordinator, John Hadley
 Fishery Management Plan Coordinator & Fishery Economist, Chip Collier Deputy Director for Science, Myra Brouwer Deputy Director for Management, John Carmichael Executive Director. 
+
 
 # Results
 
@@ -305,7 +317,8 @@ proparea |>
       PercComRev = "Percent of 2023 U.S. Commercial Revenue",
       PercRecExpend = "Percent of 2022 U.S. Recreational Expenditures"
     ) |>
-  flextable::set_table_properties(layout = "autofit", width = 1)
+  #flextable::set_table_properties(layout = "autofit", width = 1)
+  flextable::width(width = c(1, rep(0.6, 2), rep(0.5, 3), rep(0.6, 4)))
 
 
 ```
@@ -354,8 +367,8 @@ flextable::flextable(summtab) |>
       First = "First Section",
       Last = "Last Section"
   ) |>
-  flextable::set_table_properties(layout = "autofit", width = 1)
-
+  #flextable::set_table_properties(layout = "autofit", width = 1)
+  flextable::width(width = c(0.6, 1, rep(0.5, 4), 1.2, 1.2))
 
 ```
 
