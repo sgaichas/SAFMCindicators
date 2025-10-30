@@ -4,12 +4,13 @@ subtitle: "DRAFT for South Atlantic Fishery Management Council"
 author: "Sarah Gaichas, Hydra Scientific LLC"
 date: "`r Sys.Date()`"
 output:
+  pdf_document: default
   word_document: default
   html_document:
     code_fold: hide
     df_print: paged
-  pdf_document: default
 csl: plos.csl
+geometry: margin = 0.5in
 bibliography: operationalSOE.bib
 link-citations: true
 urlcolor: blue
@@ -33,11 +34,11 @@ set_flextable_defaults(font.size = 10, padding = 5,
 
 # Introduction
 
+Federal Fishery Management Councils along the U.S. East Coast have been working towards improved management coordination and collaboration for the past several years under the [East Coast Scenario Planning Initiative](https://www.mafmc.org/climate-change-scenario-planning) and subsequent [East Coast Coordination Group](https://www.mafmc.org/east-coast-coordination-group). The purpose of the group is to improve management success in the face of changing ocean conditions and stock distributions that are outside historical bounds; in particular, across traditional management boundaries. A Potential Action Menu was developed for the Coordination Group to improve responsiveness and resilience in fishery management under changing conditions. A key Potential Action Menu item is identifying ecosystem information that can be used by Councils to evaluate changes in ecosystems and fishery resources, and ultimately to develop management that is robust to these changes. The South Atlantic Fishery Management Council (SAFMC) seeks to identify ecosystem data relevant to its region and managed resources, and to develop strategies to make the best use of ecosystem information in management. 
 
+## Project Overview
 
-## Project Overiew
-
-Ecosystem information and data products are used in different ways across the U.S. Fishery Management Councils, depending on regional needs and information availability. To enhance opportunities for the South Atlantic Fishery Management Council (SAFMC) to use ecosystem information to support fishery management, an ecosystem information review is being conducted to develop recommendations for ways to incorporate ecosystem information into SAFMC fisheries management processes. First, a comprehensive literature review will be conducted and combined with structured interviews of key regional personnel to document ecosystem information sources, data products, and processes where ecosystem information is used for each U.S. Fishery Management Council, including SAFMC. This comprehensive review will place current SAFMC practice and products in the context of the experience of all other U.S. Councils, and set the stage to identify opportunities to use its existing ecosystem information resources, including an ecosystem status report, climate vulnerability analyses for fish and fishing communities, and citizen science program. 
+Ecosystem information and data products are used in different ways across the U.S. Fishery Management Councils, depending on regional needs and information availability. To enhance opportunities for the SAFMC to use ecosystem information to support fishery management, an ecosystem information review is being conducted to develop recommendations for ways to incorporate ecosystem information into SAFMC fisheries management processes. First, a comprehensive literature review will be conducted and combined with structured interviews of key regional personnel to document ecosystem information sources, data products, and processes where ecosystem information is used for each U.S. Fishery Management Council, including SAFMC. This comprehensive review will place current SAFMC practice and products in the context of the experience of all other U.S. Councils, and set the stage to identify opportunities to use its existing ecosystem information resources, including an ecosystem status report, climate vulnerability analyses for fish and fishing communities, and citizen science program. 
 
 Based on this review (provided in the current document), opportunities to use ecosystem information in SEFMC processes will be identified, and practical steps for implementation will be outlined.  All Councils set annual catch advice, and there are multiple other management decisions where ecosystem information may help reduce uncertainty and support improved management outcomes. The next steps in this project will address both annual catch advice and other SAFMC management actions. The project will evaluate whether products such as Ecosystem Socioeconomic Profiles would be useful and practical for SAFMC catch specification processes given data and staff resources, whether Climate Vulnerability Analysis might be useful for assessing uncertainty and risk in adjusting catch levels, and what other approaches to integrating ecosystem information into catch specification would be feasible. The project will also systematically review SAFMC actions for the past 3-5 years to identify current and potential pathways for the use of ecosystem information. This review will include inter-jurisdictional processes such as the East Coast Climate Scenario Planning and subsequent East Coast Climate Coordination Group. Based on this review, management decisions will be classified by data needs and process timelines to develop a prioritized list of processes linked to ecosystem information and recommend practical pathways for implementation. Example management decisions may include spatial allocation of catch, seasonal openings and closures, or bycatch management, each requiring indicators at different scales. The project will evaluate whether risk based frameworks are appropriate for these decisions, and specify indicators necessary to support decisions. The project will also explore whether global and regional ocean physics datasets could provide useful indicators for SAFMC decisions, using methods developed for the Northeast U.S. shelf. Finally, the project will review current SAFMC cooperative research and citizen science programs and suggest where expansion of these programs would fill the highest priority ecosystem data gaps associated with key management decisions or validate information coming from other sources.
 
@@ -94,13 +95,11 @@ Relevant Council documents were downloaded as pdfs and have been uploaded to SAF
 
 ## Gather Council and Regional Contextual Data
 
-How much area do they manage? Summarized in Table 2 from @bachman_use_2025
+Contextual information may help explain how Council ecosystem data products and processes evolved, and also highlight approaches that may be useful for SAFMC. Council processes are shaped by the regional context in terms of area managed, number of states involved, range of species managed, level of FEP development, and range of fisheries species and sector diversity, fisheries landing volume, and fishery value. 
 
-How many U.S. states and territories are represented in each? Drawn from https://www.fisherycouncils.org/ and each Council's website and documents.
+The area managed by each Council in terms of square km and proportion of the U.S. EEZ was summarized in Table 2 of @bachman_use_2025. The number of U.S. states and territories are represented in each Council region was drawn from https://www.fisherycouncils.org/ and each Council's website and documents. The number of FMPs and FEPs for each Council was drawn from https://www.fisherycouncils.org/ and validated using individual Council websites and documents.
 
-How many FMPs and FEPs? Drawn from https://www.fisherycouncils.org/ and individual Council reviews below.
-
-Current commercial and recreational landings for 2022-2024 were drawn from Fisheries Economics of the US 2022 [@national_marine_fisheries_service_fisheries_2024] and its associated [web data tool](https://www.fisheries.noaa.gov/foss/f?p=215:200::::::). The most recent year of commercial and recreational landings data available across all regions was 2023, but the most recent recreational value information was from 2022. We report these as proportions of the total for the U.S. because the absolute numbers vary from year to year but rough proportions have been stable recently. 
+Current commercial and recreational landings for 2022-2024 were drawn from Fisheries Economics of the US 2022 [@national_marine_fisheries_service_fisheries_2024] and its associated [web data tool](https://www.fisheries.noaa.gov/foss/f?p=215:200::::::). The most recent year of commercial and recreational landings data available across all regions was 2023, but the most recent recreational value information was from 2022. Landings and value for each sector are reported as proportions of the total for the U.S. because the absolute numbers vary from year to year but rough proportions have been stable recently. 
 
 ## Summarize and Compare Data Products
 
@@ -337,6 +336,12 @@ compesrdat <- readr::read_csv(here::here("compesrdat.csv"))
 
 summtab <- readr::read_csv(here::here("summtab.csv"))
 
+summtab$Frequency <- dplyr::case_when(summtab$Council == "CFMC" ~ "First",
+                                      summtab$Council %in% c("GFMC", "SAFMC", "WPFMC") ~ "Intermittent",
+                                      TRUE ~ "Annual")
+
+summtab <- summtab |> dplyr::relocate(Frequency, .after = Year)
+
 sectionindcounts <- compesrdat |>
   dplyr::group_by(Region, Year, Section) |>
   dplyr::summarise(Nind = n())
@@ -372,7 +377,7 @@ flextable::flextable(summtab) |>
       Last = "Last Section"
   ) |>
   #flextable::set_table_properties(layout = "autofit", width = 1)
-  flextable::width(width = c(0.6, 1, rep(0.5, 4), 1.2, 1.2))
+  flextable::width(width = c(0.6, 1, rep(0.5, 5), 1.2, 1.2))
 
 ```
 
