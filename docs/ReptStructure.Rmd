@@ -92,7 +92,8 @@ comlandterrtot <- Comlandareasterr |>
                                           Territory %in% c("PUERTO RICO", "U.S. VIRGIN IS.") ~ "Caribbean")
                 ) |>
   dplyr::group_by(Year, Region) |>
-  dplyr::summarise(dplyr::across(Pounds:Dollars, ~sum(.x, na.rm = TRUE)))
+  dplyr::summarise(dplyr::across(Pounds:Dollars, ~sum(.x, na.rm = TRUE))) |>
+  dplyr::select(Year, Region, ComPounds = Pounds, ComDollars = Dollars, ComTons = `Metric Tons`)
 
 # downloaded from Caribbean IEA github: https://github.com/Gulf-IEA/Caribbean-ESR-2/blob/main/indicator_objects/total_landings.RData
 # dataset created here https://github.com/Gulf-IEA/Caribbean-ESR-2/blob/main/indicator_processing/fishery_dependent/INDICATOR_total_landings.R
@@ -107,13 +108,90 @@ caribdat$totlbs  <-  rowSums(caribdat, na.rm = TRUE)
 
 caribland <- caribdat |>
   tibble::rownames_to_column(var = "Year") |>
-  dplyr::select(Year, totlbs) |>
-  dplyr::mutate(tottons = totlbs/2205)
+  dplyr::mutate(Year = as.numeric(Year),
+                ComPounds = totlbs*1000) |>
+  dplyr::select(Year, ComPounds) |>
+  dplyr::mutate(tottons = ComPounds/2205)
 
-comlandclean <- Comlandareas |>
-  dplyr::
+caribland23 <- caribland |> 
+  dplyr::filter(Year == 2023) |> 
+  dplyr::mutate(Region = "Caribbean") |>
+  dplyr::select(Year, Region, ComPounds, ComTons = tottons)
+
+comlandterrtot23 <- comlandterrtot |> dplyr::filter(Year == 2023)
+
+comlandclean23 <- Comlandareas |>
+  dplyr::filter(Year == 2023) |>
+  dplyr::select(Year, Region = `Region Name`, ComPounds = Pounds, ComDollars = Dollars, ComTons = `Metric Tons`) |>
+  dplyr::bind_rows(comlandterrtot23) |>
+  dplyr::bind_rows(caribland23) |>
+  dplyr::mutate(Region = dplyr::case_when(Region == "Hawaii" ~ "Western Pacific",
+                                          TRUE ~ Region)) |>
+  dplyr::group_by(Year, Region) |>
+  dplyr::summarise(dplyr::across(ComPounds:ComTons, ~sum(.x, na.rm = TRUE)))
   
 
+# caribbean total rec catch from 2019 as a proxy from ESR: 
+# from https://github.com/Gulf-IEA/Caribbean-ESR-2/blob/main/indicator_objects/objects_as_csvs/total_rec_catch.csv
+
+caribreclbs19 <- 	(1.11045313148897 +	0.209245775288) * 10^6
+caribrecland <- data.frame(Year = 2019,
+                           Region = "Caribbean",
+                           RecPounds = caribreclbs19,
+                           RecTons = caribreclbs19/2205)
+
+#value not downloadable as numbers from https://www.fisheries.noaa.gov/foss/f?p=215:44:4285637220149:::::
+# these values are from FEUS 2024 Fig 8 for 2022, the last year in the report and on the web
+recvalue22 <- data.frame(Region = c("Alaska",
+                                    "Gulf",
+                                    "Hawaii",
+                                    "Middle Atlantic",
+                                    "New England",
+                                    "Pacific Coast",
+                                    "South Atlantic",
+                                    "Caribbean"),
+                         RecDollars22 = c(686000000,
+                                     5100000000,
+                                     435000000,
+                                     2300000000,
+                                     584000000,
+                                     807000000,
+                                     3500000000,
+                                     NA))  
+
+reclandclean23 <- Reclandareas |>
+  dplyr::filter(Year == 2023) |>
+  dplyr::select(Year, Region = `Region Name`, RecPounds = Pounds, Dollars, RecTons = `Metric Tons`) |>
+  dplyr::bind_rows(caribrecland) |>
+  dplyr::left_join(recvalue22) |>
+  dplyr::select(Year, Region, RecPounds, RecDollars22, RecTons)
+
+landlook <- data.frame(Region = c(reclandclean23$Region, 
+                                  "Western Pacific"),
+                       CouncilName = c("North Pacific",
+                                       "Gulf",
+                                       "Western Pacific",
+                                       "Mid-Atlantic",
+                                       "New England",
+                                       "Pacific",
+                                       "South Atlantic",
+                                       "Caribbean",
+                                       "Western Pacific"))   
+
+landvalstats <-  landlook |>
+  dplyr::left_join(comlandclean23 |> dplyr::select(-Year)) |>
+  dplyr::left_join(reclandclean23 |> dplyr::select(-Year)) |>
+  dplyr::group_by(CouncilName) |>
+  dplyr::summarise(dplyr::across(ComPounds:RecTons, ~sum(.x, na.rm = TRUE))) |>
+  dplyr::mutate(PercComRev = (ComDollars/sum(ComDollars))*100,
+                PercComTons = (ComTons/sum(ComTons))*100,
+                PercRecExpend = (RecDollars22/sum(RecDollars22))*100,
+                PercRecTons = (RecTons/sum(RecTons))*100)
+
+# the 0 values in here are missing
+landvalstats[landvalstats == 0] <- NA
+  
+                       
 regionnames <- data.frame(Region = EEZclean$Region,
                           CouncilName = c("New England",
                                          "Mid-Atlantic",
@@ -124,7 +202,7 @@ regionnames <- data.frame(Region = EEZclean$Region,
                                          "North Pacific",
                                          "Western Pacific",
                                          NA),
-                          Nstates = c(4, 7, 4, 5, 3, 3, 1, 11, NA),
+                          Nstates = c(5, 7, 4, 5, 3, 3, 1, 11, NA),
                           NFMPs = c(9, 7, 8, 7, 3, 4, 6, 0, NA),
                           NFEPs = c(0, 1, 1, 1, 0, 1, 2, 5, NA))
 
@@ -133,23 +211,31 @@ proparea <- EEZclean |>
   dplyr::filter(!Region %in% c("Totalarea")) |>
   dplyr::mutate(Proparea = EEZArea/sum(EEZArea),
                 Percarea = Proparea*100) |>
-  dplyr::left_join(regionnames)
+  dplyr::left_join(regionnames) |>
+  dplyr::left_join(landvalstats)
 
 proparea |>
-  dplyr::select(CouncilName, EEZArea, Percarea, Nstates, NFMPs, NFEPs) |>
+  dplyr::select(CouncilName, EEZArea, Percarea, Nstates, NFMPs, NFEPs, 
+                PercComTons, PercRecTons, PercComRev, PercRecExpend) |>
   flextable::flextable() |>
   flextable::colformat_double(
-      j = c("Percarea"), # Specify the columns to format
+      j = c("Percarea", "PercComTons", "PercRecTons",
+            "PercComRev", "PercRecExpend"), # Specify the columns to format
       big.mark = "",             # Set big.mark to an empty string to remove commas
-      digits = 2                  # Specify the number of decimal places
+      digits = 2,                  # Specify the number of decimal places
+      na_str = "-"      # missing value
     ) |>
   flextable::set_header_labels(
       CouncilName = "Council",
       EEZArea = "EEZ Area (sq km)",
       Percarea = "Percent of U.S. EEZ", 
-      Nstates = "Number of States/Territories",
+      Nstates = "Number of States or Territories",
       NFMPs = "Number of FMPs",
-      NFEPs = "Number of FEPs"
+      NFEPs = "Number of FEPs",
+      PercComTons = "Percent of 2023 U.S. Commercial Landings",
+      PercRecTons = "Percent of 2023 U.S. Recreational Landings",
+      PercComRev = "Percent of 2023 U.S. Commercial Revenue",
+      PercRecExpend = "Percent of 2022 U.S. Recreational Expenditures"
     ) |>
   flextable::set_table_properties(layout = "autofit", width = 1)
 
@@ -339,7 +425,7 @@ A climate vulnerability analysis for Northeast U.S. species has been published [
 
 Northeast SOE reports have been produced annually since 2017. Prior to that, longer ESRs were produced in 2002, 2009, 2012, and 2015. The NEFSC dedicates staff time to developing annual ecosystem reports and intermittent ESPs. 
 
-Mid-Atlantic fisheries are approximately evenly split between commercial and recreational. 
+Mid-Atlantic managed fisheries are approximately evenly split between commercial and recreational. A large proportion of commercial landings in the Mid-Atlantic region are Atlantic menhaden, which is managed by the Atlantic States Marine Fisheries Commission.
 
 **Contacts**: Brandon Muffley, Ecosystems SSC and EOP, Jessica Coakley Habitat and EOP, Chris Moore Exec director
 
@@ -375,7 +461,9 @@ For the red tide issue, extensive scoping work is already complete, and consider
 
 Two ESRs have been produced for the Gulf, in 2013 and most recently in 2017 [@karnauskas_ecosystem_2017]. The Gulf ESR reports on climate, physical, habitat, lower and upper trophic level, ecosystem services, and human dimensions indicators, then analyzes combined trends across all of the section indicators to provide an overview of ecosystem conditions. A fish CVA was recently completed [@quinlan_results_2023], and marine mammal climate vulnerability has been assessed for the entire Atlantic Coast, including the Gulf [@lettrich_vulnerability_2023]. 
 
-The Gulf Council is one of three regional Councils served by SEFSC, the other two are the Caribbean and South Atlantic. While SEFSC dedicates some staff resources to ecosystem reporting, resources to date have been inadequate to produce annual ecosystem reports across all three regions. However, streamlined processes and automation were developed for the Caribbean ESR that may permit more frequent updates across all regions. 
+The Gulf Council is one of three regional Councils served by SEFSC, the other two are the Caribbean and South Atlantic. While SEFSC dedicates some staff resources to ecosystem reporting, resources to date have been inadequate to produce annual ecosystem reports across all three regions. However, streamlined processes and automation were developed for the Caribbean ESR that may permit more frequent updates across all regions.
+
+Gulf Council managed fisheries are a mix of recreational and commercial. The Gulf has the highest recreational landings and expenditures of any US region. Gulf menhaden, which is managed by the Gulf States Marine Fisheries Commission, contributes the majority of commercial landings in the region. 
 
 
 **Contacts**: Verena Wang Ecosystems, Ryan Rindone Fishery bio and SEDAR, John Froeschke Deputy, Zeenatul Basher Coral and Habitat, Carrie Simmons Exec director
@@ -384,7 +472,7 @@ The Gulf Council is one of three regional Councils served by SEFSC, the other tw
 
 The South Atlantic Council manages under 8 FMPs: 4 multispecies (Coastal migratory pelagics,  Dolphin Wahoo, Shrimp, Snapper Grouper), 2 single species (Golden crab, Spiny lobster) and 2 habitat-oriented FMPs (Coral and live bottom habitat, Sargassum). The original Coral FMP was joint with the Gulf. The FMPs for Coral and Sargassum limit or prohibit commercial exploitation and promote conservation of these living habitats. 
 
-Habitat forms the basis of ecosystem based management in the South Atlantic. The South Atlantic FEP II contains both extensive description of the ecosystem (>50% of 400 pages) as well as essential fish habitat (EFH) policy statements that specifically outline indicators and research to support policies. Many of these policies address cross-sectoral considerations, extending into Ecosystem Based Management (EBM). Policies and key ecosystem information include those listed in the FEP and several newer statements from https://safmc.net/fishery-management-plans/habitat/:  
+Habitat forms the basis of ecosystem based management in the South Atlantic. The South Atlantic [FEP II](https://safmc.net/documents/fishery-ecosystem-plan-2-fep-ii/) contains both extensive description of the ecosystem (>50% of 400 pages) as well as essential fish habitat (EFH) policy statements that specifically outline indicators and research to support policies. Many of these policies address cross-sectoral considerations, extending into Ecosystem Based Management (EBM). Policies and key ecosystem information include those listed in the FEP and several newer statements from https://safmc.net/fishery-management-plans/habitat/:  
 
 * South Atlantic Food Webs and Connectivity Policy – January 2025
     +  Connects EFH and food web considerations, identifies research needs 
@@ -407,13 +495,15 @@ The following policies identify species with EFH and HAPC potentially impacted b
 * Marine and Estuarine Non-Native and Invasive Species Policy – June 2014    
 * Interactions Between Essential Fish Habitats And Marine Aquaculture Policy – June 2014     
 
-* Threats Addressed by Policies Matrix – March 2021   
+A Threats Addressed by Policies Matrix summarizing a range of ocean activities with the potential to affect EFH is included in the FEP and was updated in the [2023 Habitat Blueprint](https://safmc.net/documents/habitat-blueprint-2023/). The Blueprint updated the membership and clarified the functions of the Council's Habitat and Ecosystem Based Fishery Management Advisory Panel (HEAP), as well as identifying current information products and criteria for developing additional information products supporting habitat and ecosystem efforts.    
 
 The Council develops [Fishery Performance Reports](https://safmc-shinyapps.shinyapps.io/FPRAll/) from its FMP Advisory Panels in association with updated stock assessments. These reports include information on landings/discard trends, management measure performance, environmental and socioeconomic influences on the fishery, and any other concerns. In 2022, The Council adjusted Fishery Performance Report discussion questions to gather information for use in allocation decisions using [Allocation Decision Trees](https://safmc.net/documents/safmc_allocationdecisiontoolblueprint_202312_final/). The adjustments specifically address species distribution shifts, fishing practices related to catch and release, and social or cultural importance. 
 
 The South Atlantic region has a recent ESR [@craig_ecosystem_2021] and CVAs for fishery resources [@burton_climate_2023; @craig_climate_2025] and fishing communities [@seara_community_2022]. Marine mammal climate vulnerability has been assessed for the entire Atlantic Coast [@lettrich_vulnerability_2023]. These documents contain indicators that represent a starting point towards meeting the needs identified in the EFH policy documents above. 
 
 The South Atlantic Council is one of three regional Councils served by SEFSC, the other two are the Caribbean and Gulf. While SEFSC dedicates some staff resources to ecosystem reporting, resources to date have been inadequate to produce annual ecosystem reports across all three regions. However, streamlined processes and automation were developed for the Caribbean ESR that may permit more frequent updates across all regions. 
+
+South Atlantic fisheries are roughly evenly split between commercial and recreational. 
 
 
 **Contacts**: Kathleen Howington Habitat & Ecosystem Scientist, Meg Withers Citizen Science Project Coordinator, John Hadley
