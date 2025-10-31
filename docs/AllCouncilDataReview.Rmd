@@ -544,7 +544,7 @@ knitr::include_graphics(here::here("docs/images/NPFMC_ClimateReadiness2022.png")
 ```
 
 
-A Climate Vulnerability Analysis for Bering Sea species has been published [@spencer_trait-based_2019], however its direct use in management processes is unclear. The Climate Ready Synthesis recommended inclusion of climate vulnerability information in status reports/risk assessments. *Is this being done?* Climate vulnerability analysis has yet not been completed for Gulf of Alaska, Aleutian Islands, or Arctic species. *Planned?*
+A Climate Vulnerability Analysis for 36 Bering Sea fish and invertebrate species has been published [@spencer_trait-based_2019], however its direct use in management processes is unclear. Climate vulnerability analysis has yet not been completed for Gulf of Alaska, Aleutian Islands, or Arctic species. *Planned?* The Climate Ready Synthesis recommended inclusion of climate vulnerability information in status reports/risk assessments. *Is this being done?* 
 
 A climate scenario planning workshop took place in June 2024. *How has this been integrated?*
 
@@ -584,7 +584,7 @@ flextable::flextable((esrsdetls[[ESRname]]))|>
 
 ESP like products [@tolimieri_oceanographic_2018; @haltuch_oceanographic_2020] exist for at least 2 species.  *Which assessments include ecosystem indicators directly?*
 
-A fish CVA exists [@mcclure_vulnerability_2023] and is proposed for use as a component in the process determining ABC uncertainty buffers (see below). In addition, a salmon CVA [@crozier_climate_2019] and a west coast fishing community CVA [@koehn_social-ecological_2022] are available. 
+A CVA has been completed for 64 managed fish stocks, spanning the PFMC FMPs [@mcclure_vulnerability_2023]. The CVA information is proposed for use as a component in the process determining ABC uncertainty buffers (see below). In addition, a salmon CVA [@crozier_climate_2019] and a west coast fishing community CVA [@koehn_social-ecological_2022] are available. 
 
 The SSC is evaluating risk tables in progress for stock assessments and ABC decisions (see below), but they are reframed as uncertainty tables using IPCC "confidence" language on degree of agreement of indicators and robustness of evidence). FEP Initiative 4, [Ecosystem and Climate Information for Species, Fisheries, and FMPs](https://www.pcouncil.org/actions/ecosystem-and-climate-information-for-species-fisheries-and-fmps/), is currently active and is developing an ecosystem and climate risk assessment framework for use in the catch specification process. This is patterned on the use of risk tables in NPFMC harvest specification, but is tailored to the p* process used in PFMC. The ecosystem team tested options and recommended one where ecosystem and climate risks would alter the sigma applied to characterize scientific uncertainty in the OFL  (sigma is equivalent to the MAFMC SSC OFL CV). PFMC sigmas are 0.5 for high certainty assessments, 1 for data moderate assessments, and 2 for data limited assessments, with additional increases in sigma as time passes since the most recent assessment. Ecosystem and climate risks could further inform sigma, increasing or decreasing it as these factors increase or decrease uncertainty. 
 
@@ -622,7 +622,7 @@ flextable::flextable((esrsdetls[[ESRname]]))|>
 
 ```
 
-CVA was conducted for the full Pacific Islands region [@giddens_assessing_2022]. *Are there plans to included/reference CVA in FEP SAFE reports?*
+CVA was conducted for 83 fish and invertebrate species across pelagic, deep slope, coastal, and coral reef habitats across full Pacific Islands region [@giddens_assessing_2022]. *Are there plans to included/reference CVA in FEP SAFE reports?*
 
 Active spatial ecosystem indicators include [turtle watch](https://oceanwatch.pifsc.noaa.gov/turtlewatch.html) that is updated daily to indicate regions of potential turtle bycatch for pelagic fisheries based on temperature, and [ocean watch](https://oceanwatch.pifsc.noaa.gov/indicators.html) that summarizes ocean conditions in key fishing and coral areas. Ocean watch data includes coral reef bleaching hotspot and alert area data. *Does this translate into an indicator being used?*  
 
@@ -669,7 +669,7 @@ knitr::include_graphics(here::here("docs/images/NEFMC_RiskPolicy2025.png"))
 ```
 
 
-A climate vulnerability analysis for Northeast U.S. species has been published [@hare_vulnerability_2016], and provides input to the new risk policy currently in development by the Council. Both community climate vulnerability [@colburn_indicators_2016] and habitat climate vulnerability [@farr_assessment_2021] have also been assessed in the Northeast U.S., and marine mammal climate vulnerability [@lettrich_vulnerability_2023] and highly migratory species climate vulnerability have been assessed for the entire Atlantic Coast [@loughran_climate_2025]. 
+A climate vulnerability analysis for 82 Northeast U.S. fish and invertebrate species has been published [@hare_vulnerability_2016], and provides input to the new risk policy currently in development by the Council. Both community climate vulnerability [@colburn_indicators_2016] and habitat climate vulnerability [@farr_assessment_2021] have also been assessed in the Northeast U.S. Climate vulnerability for 108 marine mammal stocks [@lettrich_vulnerability_2023] and 58 highly migratory fish stocks [@loughran_climate_2025] have been assessed for the entire Atlantic Coast. 
 
 Northeast SOE reports have been produced annually since 2017. Prior to that, longer ESRs were produced in 2002, 2009, 2012, and 2015. The NEFSC dedicates staff time to developing annual ecosystem reports and intermittent ESPs. 
 
@@ -707,9 +707,11 @@ The Council develops annual Fishery Performance Reports using its FMP Advisory P
 
 To date, ecosystem indicators have been integrated into the operational black sea bass assessment (winter bottom temperature, northern area influences expected recruitment) and into research track models for black sea bass and bluefish (forage fish index influences recreational index catchability). Decisions were based on ESPs.
 
-A climate vulnerability analysis for Northeast U.S. species has been published [@hare_vulnerability_2016], and is considered within the SSC's ABC deliberation process as part of ecosystem factors contributing to uncertainty in the OFL. Both community climate vulnerability [@colburn_indicators_2016] and habitat climate vulnerability [@farr_assessment_2021] have also been assessed in the Northeast U.S., and marine mammal climate vulnerability [@lettrich_vulnerability_2023] and highly migratory species climate vulnerability have been assessed for the entire Atlantic Coast [@loughran_climate_2025]. A habitat-species climate vulnerability [crosswalk](https://nrha.shinyapps.io/dataexplorer/#!/crosswalk) summarizing species vulnerability and life history stages dependent on climate vulnerable habitat is also being considered during SSC deliberations, but is not yet formally part of the OFL CV protocol. 
+A climate vulnerability analysis for 82 Northeast U.S. fish and invertebrate species has been published [@hare_vulnerability_2016], and is considered within the SSC's ABC deliberation process as part of ecosystem factors contributing to uncertainty in the OFL. Both community climate vulnerability [@colburn_indicators_2016] and habitat climate vulnerability [@farr_assessment_2021] have also been assessed in the Northeast U.S. Climate vulnerability for 108 marine mammal stocks [@lettrich_vulnerability_2023] and 58 highly migratory fish stocks [@loughran_climate_2025] have been assessed for the entire Atlantic Coast.
 
-The Council uses indicators from the SOE, CVA, and ESPs in an annual ecosystem-level risk assessment (Fig. \@ref(fig:MAEAFMrisk))  [@gaichas_implementing_2018]. This risk assessment is part of the Council's Ecosystem Approach to Fisheries Management (EAFM) as laid out in their 2019 policy document. 
+A habitat-species climate vulnerability [crosswalk](https://nrha.shinyapps.io/dataexplorer/#!/crosswalk) summarizing species vulnerability and life history stages dependent on climate vulnerable habitat is also being considered during SSC deliberations, but is not yet formally part of the OFL CV protocol. 
+
+The Council uses indicators from the SOE, the fish and community CVAs, and multiple ESPs in an annual ecosystem-level risk assessment (Fig. \@ref(fig:MAEAFMrisk))  [@gaichas_implementing_2018]. This risk assessment is part of the Council's Ecosystem Approach to Fisheries Management (EAFM) as laid out in their 2019 policy document. 
 
 <!--![Figure 4, MAFMC Indicator-based EAFM Risk Assessment](images/MAFMCrisk2025.png)-->
 
@@ -752,7 +754,7 @@ flextable::flextable((esrsdetls[[ESRname]]))|>
 
 ```
 
-A project is in progress to develop fishery species CVA for this region (see below). Marine mammal and highly migratory species climate vulnerability has been assessed for the entire Atlantic Coast including the Caribbean [@lettrich_vulnerability_2023; @loughran_climate_2025]. 
+A project is in progress to develop fishery species CVA for this region (see below). Marine mammal (108 stocks) and highly migratory species (58 stocks) climate vulnerability has been assessed for the entire Atlantic Coast including the Caribbean [@lettrich_vulnerability_2023; @loughran_climate_2025]. 
 
 Current Council projects include "Developing a US Caribbean Hub to Operationalize EBFM in the US Caribbean" to advance indicator-based risk assessment, "Evaluating Priority Species Vulnerability to Changing Environmental Conditions" to initiate a CVA for the region, and "Understanding Impacts of Extreme Events on the Fishery Ecosystem and the Fishers’ Communities in the U.S. Caribbean" to strengthen outreach and education. 
 
@@ -793,7 +795,7 @@ flextable::flextable((esrsdetls[[ESRname]]))|>
 
 ```
 
-A fish CVA was recently completed [@quinlan_results_2023], Gulf fishing community climate vulnerability has been assessed [@seara_community_2022],  and marine mammal and highly migratory species climate vulnerability has been assessed for the entire Atlantic Coast, including the Gulf [@lettrich_vulnerability_2023; @loughran_climate_2025]. 
+A CVA for 75 Gulf fish and invertebrate species was recently completed [@quinlan_results_2023], Gulf fishing community climate vulnerability has been assessed [@seara_community_2022], and 108 marine mammal and 58 highly migratory fish stocks' climate vulnerability has been assessed for the entire Atlantic Coast, including the Gulf [@lettrich_vulnerability_2023; @loughran_climate_2025]. 
 
 The Gulf Council is one of three regional Councils served by SEFSC, the other two are the Caribbean and South Atlantic. While SEFSC dedicates some staff resources to ecosystem reporting, resources to date have been inadequate to produce annual ecosystem reports across all three regions. However, streamlined processes and automation were developed for the Caribbean ESR that may permit more frequent updates across all regions.
 
@@ -855,7 +857,9 @@ flextable::flextable((esrsdetls[[ESRname]]))|>
 
 ```
 
-CVAs for fish [@burton_climate_2023; @craig_climate_2025] and fishing communities [@seara_community_2022], well-developed processes to integrate stakeholder ecosystem knowledge [@mcpherson_participatory_2022], and the results of a joint workshop that identified data sources for ecosystem indicators throughout the U.S. East Coast [@saba_summary_2023]. Marine mammal and highly migratory species climate vulnerability has also been assessed for the entire Atlantic Coast [@lettrich_vulnerability_2023; @loughran_climate_2025]. These documents contain indicators that represent a starting point towards meeting the needs identified in the EFH policy documents above. 
+A CVAs for 71 fish and invertebrate species [@burton_climate_2023; @craig_climate_2025] is complete, as well as analysis for South Atlantic and Gulf fishing communities [@seara_community_2022]. Marine mammal (108 stocks) and highly migratory fish (58 stocks) climate vulnerability has also been assessed for the entire Atlantic Coast [@lettrich_vulnerability_2023; @loughran_climate_2025]. These documents contain indicators that represent a starting point towards meeting the needs identified in the EFH policy documents above. 
+
+In addition to these data sources, the South Atlantic, well-developed processes to integrate stakeholder ecosystem knowledge [@mcpherson_participatory_2022], and the results of a joint workshop that identified data sources for ecosystem indicators throughout the U.S. East Coast [@saba_summary_2023]. 
 
 The South Atlantic Council is one of three regional Councils served by SEFSC, the other two are the Caribbean and Gulf. While SEFSC dedicates some staff resources to ecosystem reporting, resources to date have been inadequate to produce annual ecosystem reports across all three regions. However, streamlined processes and automation were developed for the Caribbean ESR that may permit more frequent updates across all regions. 
 
@@ -881,9 +885,9 @@ The process leading up to this approach included a history of multispecies model
 
 ASMFC has in-house stock assessment resources, and has established a dedicated workgroup to continue the ERP process [@anstead_path_2021]. The ERP modeling takes advantage of existing single species stock assessment review to streamline evaluation of model inputs, which requires coordination among assessments.  
 
-#### National Marine Sanctuaries
+#### National Marine Sanctuaries (*include?*)
 
-ESR like products used for ??? strategic planning?
+Literature review found that there are ESR like products used for assessment and strategic planning in the National Marine Sanctuaries, as well as CVAs for several Sanctuaries. These could be summarized if of interest, although the management objectives are much more different from Councils.
 
 # Discussion
 
