@@ -48,7 +48,7 @@ Monitored through annual Ecosystem Status Report, including:
 **Goal 1 - Fish Stocks:**
 - Maintain target biomass levels consistent with optimum yield
 - Maintain healthy non-target and forage species populations
-- Adjust fishing mortality to sustainable levels (≤2 million MT for BSAI groundfish)
+- Adjust fishing mortality to sustainable levels (<=2 million MT for BSAI groundfish)
 
 **Goal 2 - Ecological Processes:**
 - Maintain key predator/prey relationships
