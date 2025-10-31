@@ -4,11 +4,11 @@ subtitle: "DRAFT for South Atlantic Fishery Management Council"
 author: "Sarah Gaichas, Hydra Scientific LLC"
 date: "`r Sys.Date()`"
 output:
-  pdf_document: default
   word_document: default
   html_document:
     code_fold: hide
     df_print: paged
+  pdf_document: default
 csl: plos.csl
 geometry: margin = 0.5in
 bibliography: operationalSOE.bib
@@ -381,19 +381,64 @@ flextable::flextable(summtab) |>
 
 ```
 
-Most Council regions, aside from the Caribbean, have a completed Climate Vulnerability Analysis (CVA) for fish in the region. Some Council regions have fishing community CVAs, habitat CVAs, and marine mammal CVAs. 
+Most Council regions, aside from the Caribbean, have a completed Climate Vulnerability Analysis (CVA) for fish and invertebrates in the region. Some Council regions have fishing community CVAs, habitat CVAs, and marine mammal CVAs. In addition, an Atlantic Highly Migratory Species (HMS) CVA was completed in August 2025. Numbers in the table are the year each CVA was published.
 
 ```{r CVAs}
 
+CVAs <- proparea |>
+  dplyr::select(CouncilName) |>
+  dplyr::mutate(FishInvertCVA = dplyr::case_when(CouncilName %in% c("Mid-Atlantic", 
+                                                                 "New England") ~ 2016,
+                                                 CouncilName %in% c("North Pacific") ~ 2019,
+                                                 CouncilName %in% c("Western Pacific") ~ 2022,
+                                                 CouncilName %in% c("Pacific", 
+                                                                 "South Atlantic",
+                                                                 "Gulf") ~ 2023,
+                                              TRUE ~ NA),
+                HabitatCVA = dplyr::case_when(CouncilName %in% c("Mid-Atlantic", 
+                                                                 "New England") ~ 2022,
+                                              TRUE ~ NA),
+                CommunityCVA = dplyr::case_when(CouncilName %in% c("Mid-Atlantic", 
+                                                                 "New England") ~ 2016,
+                                                CouncilName %in% c("South Atlantic", 
+                                                                 "Gulf",
+                                                                 "Pacific") ~ 2022,
+                                              TRUE ~ NA),
+                HMSCVA = dplyr::case_when(CouncilName %in% c("Mid-Atlantic", 
+                                                                 "New England",
+                                                                "South Atlantic",
+                                                             "Gulf",
+                                                             "Caribbean") ~ 2025,
+                                              TRUE ~ NA),
+                MammalCVA = dplyr::case_when(CouncilName %in% c("Mid-Atlantic", 
+                                                                 "New England",
+                                                                "South Atlantic",
+                                                                "Gulf",
+                                                                "Caribbean") ~ 2023,
+                                              TRUE ~ NA) 
+                )
+
+flextable::flextable(CVAs) |>
+  flextable::colformat_num(
+    #j = c("Year"), # Specify the columns to format
+    big.mark = "",             # Set big.mark to an empty string to remove commas
+    na_str = "-",      # missing value
+    digits = 0                  # Specify the number of decimal places
+  ) |>
+  flextable::width(width = c(rep(1,6)))
+
 ```
 
-Council FEPs (and some FMPs) contain some similar content in terms of ecosystem policies and goals, with regionally specific goals for habitats unique to a given region such as coral reefs. However, Councils have different mechanisms across FEPs or FMPs to operationalize the use of ecosystem information. In each section below, the Council context, management structure, and use of ecosystem data products is detailed for each region based on the literature review. [*Information from interviews will be added to each section once interviews are complete.*]
+Council FEPs (and some FMPs) contain some similar content in terms of ecosystem policies and goals, with regionally specific goals for habitats unique to a given region such as coral reefs. However, Councils have different mechanisms across FEPs or FMPs to operationalize the use of ecosystem information. 
 
 ```{r FEPs}
 
 ```
 
+
 ## Review of Products and Processes by Council *(pre-interview)*
+
+In each section below, the Council context, management structure, and use of ecosystem data products is detailed for each region based on the literature review. 
 
 *This section will be expanded once interview are complete. Questions to be clarified during interviews are included in italics.* 
 
@@ -418,7 +463,7 @@ The first two FEP action modules have been initiated, and a final report is avai
 
 ![Fig 2, NPFMC Climate readiness evaluation](images/NPFMC_ClimateReadiness2022.png)
 
-A Climate Vulnerability Analysis for Bering Sea species has been published [@spencer_trait-based_2019], however its direct use in management processes is unclear. The Climate Ready Synthesis recommended inclusion of climate vulnerability information in status reports/risk assessments. *Is this being done?*
+A Climate Vulnerability Analysis for Bering Sea species has been published [@spencer_trait-based_2019], however its direct use in management processes is unclear. The Climate Ready Synthesis recommended inclusion of climate vulnerability information in status reports/risk assessments. *Is this being done?* Climate vulnerability analysis has yet not been completed for Gulf of Alaska, Aleutian Islands, or Arctic species. *Planned?*
 
 A climate scenario planning workshop took place in June 2024. *How has this been integrated?*
 
@@ -443,7 +488,7 @@ As prescribed in its FMP, The Pacific Council receives a single ESR produced ann
 
 ESP like products [@tolimieri_oceanographic_2018; @haltuch_oceanographic_2020] exist for at least 2 species.  *Which assessments include ecosystem indicators directly?*
 
-A fish CVA exists [@mcclure_vulnerability_2023] and is proposed for use as a component in the process determining ABC uncertainty buffers (see below).
+A fish CVA exists [@mcclure_vulnerability_2023] and is proposed for use as a component in the process determining ABC uncertainty buffers (see below). In addition, a salmon CVA [@crozier_climate_2019] and a west coast fishing community CVA [@koehn_social-ecological_2022] are available. 
 
 The SSC is evaluating risk tables in progress for stock assessments and ABC decisions (see below), but they are reframed as uncertainty tables using IPCC "confidence" language on degree of agreement of indicators and robustness of evidence). FEP Initiative 4, [Ecosystem and Climate Information for Species, Fisheries, and FMPs](https://www.pcouncil.org/actions/ecosystem-and-climate-information-for-species-fisheries-and-fmps/), is currently active and is developing an ecosystem and climate risk assessment framework for use in the catch specification process. This is patterned on the use of risk tables in NPFMC harvest specification, but is tailored to the p* process used in PFMC. The ecosystem team tested options and recommended one where ecosystem and climate risks would alter the sigma applied to characterize scientific uncertainty in the OFL  (sigma is equivalent to the MAFMC SSC OFL CV). PFMC sigmas are 0.5 for high certainty assessments, 1 for data moderate assessments, and 2 for data limited assessments, with additional increases in sigma as time passes since the most recent assessment. Ecosystem and climate risks could further inform sigma, increasing or decreasing it as these factors increase or decrease uncertainty. 
 
@@ -453,7 +498,7 @@ In lieu of an ESP type product, the proposal would be for ecosystem and stock sc
 
 Both the Northwest and Southwest fisheries science centers have dedicated staff supporting ESR production. The CCIEA team developed the recommendation for use of assessment and ecosystem information in the SSC's ABC decision process. 
 
-The Pacific Council region includes one large marine ecosystem spanning three states and federal waters. Mostly commercial fisheries?
+The Pacific Council region includes one large marine ecosystem spanning three states and federal waters, with mainly commercial fisheries prosecuting diverse Pacific rockfish stocks, groundfish, and pelagics. 
 
 
 ### WPFMC
@@ -493,7 +538,7 @@ The Council is developing a [risk policy](https://d23h0vhsm26o6d.cloudfront.net/
 
 ![Figure 3, NEFMC Risk Policy indicator scoring](images/NEFMC_RiskPolicy2025.png) 
 
-A climate vulnerability analysis for Northeast U.S. species has been published [@hare_vulnerability_2016], and provides input to the new risk policy currently in development by the Council. Both community climate vulnerability [@colburn_indicators_2016] and habitat climate vulnerability [@farr_assessment_2021] have also been assessed in the Northeast U.S., and marine mammal climate vulnerability has been assessed for the entire Atlantic Coast [@lettrich_vulnerability_2023]. 
+A climate vulnerability analysis for Northeast U.S. species has been published [@hare_vulnerability_2016], and provides input to the new risk policy currently in development by the Council. Both community climate vulnerability [@colburn_indicators_2016] and habitat climate vulnerability [@farr_assessment_2021] have also been assessed in the Northeast U.S., and marine mammal climate vulnerability [@lettrich_vulnerability_2023] and highly migratory species climate vulnerability have been assessed for the entire Atlantic Coast [@loughran_climate_2025]. 
 
 Northeast SOE reports have been produced annually since 2017. Prior to that, longer ESRs were produced in 2002, 2009, 2012, and 2015. The NEFSC dedicates staff time to developing annual ecosystem reports and intermittent ESPs. 
 
@@ -520,7 +565,7 @@ The Council uses indicators from both the SOE and ESPs in an annual ecosystem-le
 
 ![Figure 4, MAFMC Indicator-based EAFM Risk Assessment](images/MAFMCrisk2025.png)
 
-A climate vulnerability analysis for Northeast U.S. species has been published [@hare_vulnerability_2016], and is considered within the SSC's ABC deliberation process as part of ecosystem factors contributing to uncertainty in the OFL. Both community climate vulnerability [@colburn_indicators_2016] and habitat climate vulnerability [@farr_assessment_2021] have also been assessed in the Northeast U.S., and marine mammal climate vulnerability has been assessed for the entire Atlantic Coast [@lettrich_vulnerability_2023]. A habitat-species climate vulnerability [crosswalk](https://nrha.shinyapps.io/dataexplorer/#!/crosswalk) summarizing species vulnerability and life history stages dependent on climate vulnerable habitat is also being considered during SSC deliberations, but is not yet formally part of the OFL CV protocol. 
+A climate vulnerability analysis for Northeast U.S. species has been published [@hare_vulnerability_2016], and is considered within the SSC's ABC deliberation process as part of ecosystem factors contributing to uncertainty in the OFL. Both community climate vulnerability [@colburn_indicators_2016] and habitat climate vulnerability [@farr_assessment_2021] have also been assessed in the Northeast U.S., and marine mammal climate vulnerability [@lettrich_vulnerability_2023] and highly migratory species climate vulnerability have been assessed for the entire Atlantic Coast [@loughran_climate_2025]. A habitat-species climate vulnerability [crosswalk](https://nrha.shinyapps.io/dataexplorer/#!/crosswalk) summarizing species vulnerability and life history stages dependent on climate vulnerable habitat is also being considered during SSC deliberations, but is not yet formally part of the OFL CV protocol. 
 
 Northeast SOE reports have been produced annually since 2017. Prior to that, longer ESRs were produced in 2002, 2009, 2012, and 2015. The NEFSC dedicates staff time to developing annual ecosystem reports and intermittent ESPs. 
 
@@ -537,7 +582,7 @@ An FEP is under development by the Council's EBFM Technical Advisory Panel (TAP)
 
 The Caribbean region has the newest ESR [@southeast_integrated_ecosystem_assessment_program_caribbean_2025], the first produced for this region. The Caribbean ESR is organized according to the goals and objectives identified in each Island Based FMP, and uses indicators inspired by the conceptual models developed for each island. The first section of the report evaluates progress towards FMP objectives in the categories of food production, socioeconomic health, equity, engagement/participation, bycatch reduction, governance, and ecosystem protection. The second section evaluates risks to meeting those objectives. 
 
-A project is in progress to develop fishery species CVA for this region (see below). Marine mammal climate vulnerability has been assessed for the entire Atlantic Coast including the Caribbean [@lettrich_vulnerability_2023]. 
+A project is in progress to develop fishery species CVA for this region (see below). Marine mammal and highly migratory species climate vulnerability has been assessed for the entire Atlantic Coast including the Caribbean [@lettrich_vulnerability_2023; @loughran_climate_2025]. 
 
 Current Council projects include "Developing a US Caribbean Hub to Operationalize EBFM in the US Caribbean" to advance indicator-based risk assessment, "Evaluating Priority Species Vulnerability to Changing Environmental Conditions" to initiate a CVA for the region, and "Understanding Impacts of Extreme Events on the Fishery Ecosystem and the Fishers’ Communities in the U.S. Caribbean" to strengthen outreach and education. 
 
@@ -556,7 +601,7 @@ For the red tide issue, extensive scoping work is already complete, and consider
 
 ![Figure 6. Work in progress developing a red tide index under the Gulf Red Tide FEI](images/redtideindexGulf.png)
 
-Two ESRs have been produced for the Gulf, in 2013 and most recently in 2017 [@karnauskas_ecosystem_2017]. The Gulf ESR reports on climate, physical, habitat, lower and upper trophic level, ecosystem services, and human dimensions indicators, then analyzes combined trends across all of the section indicators to provide an overview of ecosystem conditions. A fish CVA was recently completed [@quinlan_results_2023], and marine mammal climate vulnerability has been assessed for the entire Atlantic Coast, including the Gulf [@lettrich_vulnerability_2023]. 
+Two ESRs have been produced for the Gulf, in 2013 and most recently in 2017 [@karnauskas_ecosystem_2017]. The Gulf ESR reports on climate, physical, habitat, lower and upper trophic level, ecosystem services, and human dimensions indicators, then analyzes combined trends across all of the section indicators to provide an overview of ecosystem conditions. A fish CVA was recently completed [@quinlan_results_2023], Gulf fishing community climate vulnerability has been assessed [@seara_community_2022],  and marine mammal and highly migratory species climate vulnerability has been assessed for the entire Atlantic Coast, including the Gulf [@lettrich_vulnerability_2023; @loughran_climate_2025]. 
 
 The Gulf Council is one of three regional Councils served by SEFSC, the other two are the Caribbean and South Atlantic. While SEFSC dedicates some staff resources to ecosystem reporting, resources to date have been inadequate to produce annual ecosystem reports across all three regions. However, streamlined processes and automation were developed for the Caribbean ESR that may permit more frequent updates across all regions.
 
@@ -596,7 +641,7 @@ A Threats Addressed by Policies Matrix summarizing a range of ocean activities w
 
 The Council develops [Fishery Performance Reports](https://safmc-shinyapps.shinyapps.io/FPRAll/) from its FMP Advisory Panels in association with updated stock assessments. These reports include information on landings/discard trends, management measure performance, environmental and socioeconomic influences on the fishery, and any other concerns. In 2022, The Council adjusted Fishery Performance Report discussion questions to gather information for use in allocation decisions using [Allocation Decision Trees](https://safmc.net/documents/safmc_allocationdecisiontoolblueprint_202312_final/). The adjustments specifically address species distribution shifts, fishing practices related to catch and release, and social or cultural importance. 
 
-Considerable work has been completed in the Southeast US region that forms an excellent starting point to evaluate South Atlantic resources relative to those available nationwide. The South Atlantic has an ESR [@craig_ecosystem_2021], CVAs for fish [@burton_climate_2023; @craig_climate_2025] and fishing communities [@seara_community_2022], well-developed processes to integrate stakeholder ecosystem knowledge [@mcpherson_participatory_2022], and the results of a joint workshop that identified data sources for ecosystem indicators throughout the U.S. East Coast [@saba_summary_2023]. Marine mammal climate vulnerability has also been assessed for the entire Atlantic Coast [@lettrich_vulnerability_2023]. These documents contain indicators that represent a starting point towards meeting the needs identified in the EFH policy documents above. 
+Considerable work has been completed in the Southeast US region that forms an excellent starting point to evaluate South Atlantic resources relative to those available nationwide. The South Atlantic has an ESR [@craig_ecosystem_2021], CVAs for fish [@burton_climate_2023; @craig_climate_2025] and fishing communities [@seara_community_2022], well-developed processes to integrate stakeholder ecosystem knowledge [@mcpherson_participatory_2022], and the results of a joint workshop that identified data sources for ecosystem indicators throughout the U.S. East Coast [@saba_summary_2023]. Marine mammal and highly migratory species climate vulnerability has also been assessed for the entire Atlantic Coast [@lettrich_vulnerability_2023; @loughran_climate_2025]. These documents contain indicators that represent a starting point towards meeting the needs identified in the EFH policy documents above. 
 
 The South Atlantic Council is one of three regional Councils served by SEFSC, the other two are the Caribbean and Gulf. While SEFSC dedicates some staff resources to ecosystem reporting, resources to date have been inadequate to produce annual ecosystem reports across all three regions. However, streamlined processes and automation were developed for the Caribbean ESR that may permit more frequent updates across all regions. 
 
@@ -627,9 +672,11 @@ ESR like products used for ??? strategic planning?
 
 Based on this review, there are three general categories for current use of ecosystem products: FMP/indicator based, FEP/geographically based, and developing. 
 
-The NPFMC, PFMC, MAFMC and NEFMC use species based FMPs to structure management decisions, although many species can be within a particular FMP. Annual ecosystem indicator reports are produced and presented to each Council. Ecosystem indicators have been examined and sometimes used at the full ecosystem, ecoregion (subset of area within Council jurisdiction), species, and stock levels for decision making regarding annual catch limits. These regions are characterized by high value, data rich stocks with complex quantitative assessments, although data limited stocks and species complexes are also in each region. Three of the four Councils have non-regulatory FEPs that outline ecosystem level goals and objectives and specify processes (action modules, initiatives, etc.) for each Council to turn the ecosystem plan into tangible action on a topic. 
+The NPFMC, PFMC, MAFMC and NEFMC use species based FMPs to structure management decisions, although many species can be within a particular FMP. Annual ecosystem indicator reports are produced and presented to each Council.Three of the four Councils have non-regulatory FEPs that outline ecosystem level goals and objectives and specify processes (action modules, initiatives, etc.) for each Council to turn the ecosystem plan into tangible action on a topic. Ecosystem indicators have been examined and sometimes used at the full ecosystem, ecoregion (subset of area within Council jurisdiction), species, and stock levels for decision making regarding annual catch limits. These regions are characterized by high value, data rich stocks with complex quantitative assessments, although data limited stocks and species complexes are also in each region. 
 
-The WPFMC and CFMC each use island based FEP/FMPs to structure decisions for species within a defined ecoregion. This management structure was designed because each island region has distinct social, economic, and ecological conditions, and conducting species assessments across all islands was never practical. Ecosystem reporting has been intermittent (WPFMC) or only recently developed (CFMC) in these regions, yet EBFM is prioritized in the management of in both regions. Human community economic, social, and cultural interactions with the ecosystem are central tenets of management. Both regions are characterized by fisheries capturing a lot of species, with many data limited fisheries and species. 
+Having a long history of ecosystem reporting and a data-rich stock assessment environment does not necessarily ensure that a management system is robust to change. For example, NPFMC experienced rapid changes in key stocks (Gulf of Alaska cod [@barbeaux_marine_2020], Bering Sea snow crab [@szuwalski_collapse_2023]) that caused major impacts to fisheries. Climate readiness was ranked relatively low by the Climate Change Task Force established under the FEP. 
+
+The WPFMC and CFMC each use island based FEP/FMPs to structure decisions for species within a defined ecoregion. This management structure was designed because each island region has distinct social, economic, and ecological conditions, and conducting species assessments across all islands was never practical. Ecosystem reporting has been intermittent (WPFMC) or only recently developed (CFMC) in these regions, yet EBFM is prioritized in the management of in both regions and is being co-developed with regional stakeholders. Human community economic, social, and cultural interactions with the ecosystem are central tenets of management. Both regions are characterized by fisheries capturing a lot of species, with many data limited fisheries and species. 
 
 The SAFMC and GFMC are developing ecosystem processes. In each Council, species based FMPs structure decisions, although many species can be within an FMP. SAFMC is leading the other Councils in directly linking EFH and ecosystem efforts. SAFMC has a voluminous FEP and a recent ecosystem indicator report, though not annual. GFMC has a newer FEP and is currently developing Fishery Ecosystem Issues similar to the approach taken in NPFMC and PFMC, but using the conceptual framework that CFMC is applying to develop an FMP.  
 
