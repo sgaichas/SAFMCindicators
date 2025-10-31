@@ -1,28 +1,3 @@
----
-title: "FEP Comparison Tables"
-author: "Sarah Gaichas"
-date: "`r Sys.Date()`"
-output:
-  html_document:
-    code_fold: hide
-    toc: true
-    toc_float: true
----
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE,
-                      message = FALSE,
-                      warning = FALSE)
-
-library(tidyverse)
-```
-
-# Summarize pdfs with Claude API
-
-put the code here
-
-# Knit all of the Claude summaries
-
-```{r}
 # knit all rmd in a directory
 
 fepsumms <- list.files(here::here("FEPsumms"), pattern = "\\.Rmd$", full.names = TRUE)
@@ -48,8 +23,5 @@ knitone <- function(fpath) {
 
 purrr::map(fepsumms, knitone)
 
+# now tell Claude to compare objectives across docs in a table
 
-
-```
-
-# Now tell Claude to compare objectives across docs in a table
