@@ -454,7 +454,7 @@ flextable::flextable(CVAs) |>
 
 Council FEPs (and some FMPs) contain some similar content in terms of ecosystem policies and goals, with regionally specific goals for habitats unique to a given region such as coral reefs. However, Councils have different mechanisms across FEPs or FMPs to operationalize the use of ecosystem information. 
 
-```{r FEPs}
+```{r FEPs, eval=FALSE}
 
 FEPactions <- data.frame(Council = c("New England*",
                                      "Mid-Atlantic",
@@ -485,6 +485,18 @@ flextable::flextable(FEPactions) |>
 
 ```
 
+```{r FEPobjectives, ft.arraystretch = 1}
+
+FEPobj <- data.frame(Council = c("New England*",
+                                     "Mid-Atlantic",
+                                     "South Atlantic",
+                                     "Gulf",
+                                     "Caribbean",
+                                     "Pacific",
+                                     "North Pacific",
+                                     "Western Pacific"))
+                     
+```
 
 ## Review of Products and Processes by Council *(pre-interview)*
 

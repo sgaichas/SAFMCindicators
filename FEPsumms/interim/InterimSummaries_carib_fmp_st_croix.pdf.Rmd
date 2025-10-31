@@ -1,3 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 ## Summary
 
 The St. Croix Comprehensive Fishery Management Plan (FMP) is a document that transitions federal fishery management in the U.S. Virgin Islands from a Caribbean-wide approach to an island-specific approach. The plan covers the Exclusive Economic Zone (EEZ) surrounding St. Croix, which extends from 3 to 200 nautical miles from the coastline.

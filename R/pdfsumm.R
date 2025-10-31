@@ -280,3 +280,10 @@ pdf_path <- pdf_files[15]
 
 # this failed for all files
 # summary <- summarize_large_pdf(pdf_path, api_key, summary_type = "FEP", "FEPsumms") broke but ran line by line
+
+#try a summary on st croix interim pdf which didn't work the first time unlike all the others
+
+pdf_path <- "~/Documents/Work/SAFMCindicators/SAFMCindicators/FEPsumms/interim/InterimSummaries_carib_fmp_st_croix.pdf.pdf"
+
+summary <- summarize_pdf(pdf_path, api_key, "FEP", "FEPsumms")
+
