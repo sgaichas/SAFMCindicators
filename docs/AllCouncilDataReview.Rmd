@@ -456,6 +456,33 @@ Council FEPs (and some FMPs) contain some similar content in terms of ecosystem 
 
 ```{r FEPs}
 
+FEPactions <- data.frame(Council = c("New England*",
+                                     "Mid-Atlantic",
+                                     "South Atlantic",
+                                     "Gulf",
+                                     "Caribbean",
+                                     "Pacific",
+                                     "North Pacific",
+                                     "Western Pacific"),
+                         EcoDescription = c(1,1,1,NA,1,1,1,1),
+                         FoodWebConsMod = c(1,1,1,NA,1,1,1,NA),
+                         FoodWebEFH = c(NA,1,1,NA,1,1,1,1),
+                         TotRemovals = c(1,NA,NA,NA,NA,NA,1,NA),
+                         Uncertainty = c(NA,NA,NA,NA,NA,NA,NA,NA),
+                         EcoHealth = c(NA,NA,NA,NA,NA,NA,NA,1),
+                         Monitoring = c(1,1,1,NA,1,1,1,1),
+                         OutsideImpacts = c(NA,1,1,NA,1,1,1,1))
+
+flextable::flextable(FEPactions) |>
+  flextable::colformat_num(
+    #j = c("Year"), # Specify the columns to format
+    big.mark = "",             # Set big.mark to an empty string to remove commas
+    na_str = "-",      # missing value
+    digits = 0                  # Specify the number of decimal places
+  ) |>
+  flextable::set_caption("Comparison of Council FEPs with FEP components suggested by EPAP 1999. 1 = Included.") |>
+  flextable::width(width = c(1, rep(0.5,8)))
+
 ```
 
 
