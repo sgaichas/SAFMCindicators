@@ -54,3 +54,11 @@ rsconnect/
 # local folders
 test_*/
 testdocs/
+
+# pdfs and docs and interim files
+*.pdf
+*.docx
+*.log
+*.tex
+*.upa
+*.upb
