@@ -3,18 +3,24 @@ title: "All Council Ecosystem Data Review"
 author: "Sarah Gaichas, Hydra Scientific LLC"
 date: "`r Sys.Date()`"
 output:
-  pdf_document:
-    toc: false
+  bookdown::html_document2:
+    code_fold: hide
+    df_print: paged
+    toc: true
+    toc_float: true
   bookdown::pdf_document2:
     includes:
       in_header: latex/header1.tex
     keep_tex: true
     toc: false
     number_sections: false
-  html_document:
-    code_fold: hide
-    df_print: paged
+  pdf_document:
+    toc: false
   word_document: default
+  html_document:
+    df_print: paged
+    toc: true
+    toc_float: true
 subtitle: DRAFT for South Atlantic Fishery Management Council
 csl: plos.csl
 geometry: margin = 0.5in
