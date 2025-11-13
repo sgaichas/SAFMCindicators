@@ -975,6 +975,8 @@ A Threats Addressed by Policies Matrix summarizing a range of ocean activities w
 
 The Council develops [Fishery Performance Reports](https://safmc-shinyapps.shinyapps.io/FPRAll/) from its FMP Advisory Panels in association with updated stock assessments. These reports include information on landings/discard trends, management measure performance, environmental and socioeconomic influences on the fishery, and any other concerns. In 2022, The Council adjusted Fishery Performance Report discussion questions to gather information for use in allocation decisions using [Allocation Decision Trees](https://safmc.net/documents/safmc_allocationdecisiontoolblueprint_202312_final/). The adjustments specifically address species distribution shifts, fishing practices related to catch and release, and social or cultural importance. 
 
+The Council has recently revised its [ABC control rule](https://safmc.net/documents/abccram_06052023_submittal-pdf/) for several FMPs to incorporate risks arising from biological, human, and environmental aspects of risk. These are used together to form a Stock Risk Rating that is combined with information on stock status to determine an appropriate probability of overfishing or P*. Fishery Performance Report information is considered alongside species natural mortality rate and age at maturity as well as information on ecosystem importance, climate change, and other environmental variables within the stock risk rating in the Council's updated 2023 ABC Control Rule for the Dolphin-Wahoo, Golden Crab, and Snapper-Grouper FMPs. 
+
     
 <!--![Figure 7. SAFMC food web](images/SAFMC_FWmodel.png)-->
 
@@ -1000,7 +1002,7 @@ flextable::flextable((esrsdetls[[ESRname]]))|>
 
 ```
 
-A CVA for 71 fish and invertebrate species [@burton_climate_2023; @craig_climate_2025] is complete, as well as analysis for South Atlantic and Gulf fishing communities [@seara_community_2022]. Marine mammal (108 stocks) and highly migratory fish (58 stocks) climate vulnerability has also been assessed for the entire Atlantic Coast [@lettrich_vulnerability_2023; @loughran_climate_2025]. These documents contain indicators that represent a starting point towards meeting the needs identified in the EFH policy documents above. 
+A CVA for 71 fish and invertebrate species [@burton_climate_2023; @craig_climate_2025] is complete, as well as analysis for South Atlantic and Gulf fishing communities [@seara_community_2022]. Marine mammal (108 stocks) and highly migratory fish (58 stocks) climate vulnerability has also been assessed for the entire Atlantic Coast [@lettrich_vulnerability_2023; @loughran_climate_2025]. These documents contain indicators that represent a starting point towards meeting the needs identified in the EFH policy documents above. In addition, the fish CVA might inform the climate portion of the P* process used to set ABC for stocks in the Dolphin-Wahoo, Golden Crab, and Snapper-Grouper FMPs. 
 
 In addition to these data sources, the South Atlantic, well-developed processes to integrate stakeholder ecosystem knowledge [@mcpherson_participatory_2022], and the results of a joint workshop that identified data sources for ecosystem indicators throughout the U.S. East Coast [@saba_summary_2023]. 
 
@@ -1065,7 +1067,7 @@ SAFMC is unique among Councils in explicitly linking EFH and ecosystem efforts, 
 
 SAFMC shares a mix of reef-type or west coast rockfish complex-like data limited species with some high value data rich stocks, so a mix of approaches from other regional Councils may be warranted, rather than adopting a single Council's approach.
 
-SAFMC has identified many ecosystem indicators and objectives in its EFH policy documents; evaluation of indicators currently in the South Atlantic ESR and results of the fish and community CVAs are likely to reveal matched information as a basis for moving forward.
+SAFMC has identified many ecosystem indicators and objectives in its EFH policy documents and also has a process to consider environmental information in ABC setting for multiple species; evaluation of indicators currently in the South Atlantic ESR and results of the fish and community CVAs are likely to reveal matched information as a basis for moving forward.
 
 An explicit process for developing specific ecosystem initiatives, as applied through FEPs or similar policy documents in other regions (Gulf, Mid-Atlantic, Pacific, North Pacific) may allow SAFMC to explore practical ecosystem-based management for a particular fishery or issue. 
 
