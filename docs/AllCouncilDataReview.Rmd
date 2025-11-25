@@ -398,6 +398,8 @@ proparea <- EEZclean |>
   dplyr::left_join(regionnames) |>
   dplyr::left_join(landvalstats)
 
+write.csv(proparea, here::here("proparea.csv"))
+
 proparea |>
   dplyr::select(CouncilName, EEZArea, Percarea, Nstates, NFMPs, NFEPs, 
                 PercComTons, PercRecTons, PercComRev, PercRecExpend) |>
