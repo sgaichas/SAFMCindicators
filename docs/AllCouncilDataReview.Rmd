@@ -217,42 +217,41 @@ Council FEP pdf documents were summarized using the Claude API and [this code](h
 
 The primary objective of structured interviews was to determine what the Council's think about their ecosystem information products and processes.
 
-Council staff from each region were selected for interviews based on their role. Ecosystem, habitat, and/or climate leads were included if Councils identified staff in such roles, along with . Executive directors and or Deputies were also invited for interviews. 
+Council staff from each region were selected for interviews based on their role. Ecosystem, habitat, and/or climate leads were included if Councils identified staff in such roles, along with SSC liasons or other experts recommended by staff. Executive directors and or Deputies were also invited for interviews. 
 
 Interviews were coordinated with the team leading the Fishery Management Process Review using logistics software developed by that team. Potential interviewees were contacted with an email briefly describing the project goals and an invitation to be interviewed. Those accepting the invitation filled out a google form confirming agreement to be interviewed and gathering basic contact information, years of experience, and initial thoughts on the interview questions listed below, then scheduled an interview at the time of their choice using the software that included the interviewer's schedule. 
 
-Interviews could be 30-90 minutes depending on the interviewee's selected time slot. All interviews were conducted by Sarah Gaichas.
+Interviews could be 30-60 minutes depending on the interviewee's selected time slot. All interviews were conducted by Sarah Gaichas.
 
 Interview Template:  
-*  Review Data products from lit review  
-*  Review Uses of record from lit review  
-*  Validate the above, then:  
-*  What other uses not recorded?  
-*  What are successes with current information and processes  
-*  What are and challenges with current information and processes  
-*  What might be done differently to better meet each Council’s objectives  
+*  Review Data products and uses of record from lit review 
+*  Are there corrections, clarifications, or updates to the information? What uses of ecosystem informaion are missing?  
+*  What are successes with current information and processes? 
+*  What are and challenges with current information and processes? 
+*  What might be done differently to better meet each Council’s objectives?  
 
-Interviews were scheduled during November and December of 2025.
+Interviews were scheduled during November-December of 2025 and January of 2026. Additional information was was submitted by correspondence. Fifteen people were interviewed and five more provided information by correspondence. 
 
-*List of contacts by Council (draft):*
+*Council Staff participating in interviews or by correspondence:*
 
-**NPFMC Contacts:** Diana Evans deputy and ecosystems, Diana Stram co led CCTF, Katie Latanich climate program mgr, David Witherell Exec Dir.
+**NPFMC Contacts:** Katie Latanich, Climate Program Manager; Diana Stram, SSC and Specifications lead; Diana Evans, Executive Director. 
 
-**PFMC Contacts:**  Gilly Lyons Ecosystems and climate initiatives, Marlena Bellman SSC lead,  Kerry Griffin habitat, Kelly Ames deputy, Merrick Burden Exec Dir. 
+**PFMC Contacts:**  Gilly Lyons, Ecosystems and climate initiatives lead; Kelly Ames, Deputy Director. 
 
-**WPFMC Contacts**: Mark Fitchett Pelagic fisheries, Ecosystem scientist, Joshua DeMellow, Island fisheries coordinator, Kitty Simonds Exec Dir.
+**WPFMC Contacts**: unable to respond during the time frame of this work. 
+<!--Contacts included Mark Fitchett Pelagic fisheries, Ecosystem scientist, Joshua DeMellow, Island fisheries coordinator, Kitty Simonds Exec Dir.-->
 
-**NEFMC Contacts**: Jonathan Peros Fisheries management and Risk policy lead, Jamie Cournane Science and assessment lead, Rachel Feeney SSC lead, Michelle Bachman Habitat lead, Andy Applegate EAFM, Cate O'Keefe Exec Dir. 
+**NEFMC Contacts**: Rachel Feeney, SSC lead; Michelle Bachman, Habitat lead; Andy Applegate, EAFM lead; Cate O'Keefe, Executive Director. 
 
-**MAFMC Contacts**: Brandon Muffley, Ecosystems SSC and EOP, Jessica Coakley Habitat and EOP, Chris Moore Exec Dir. 
+**MAFMC Contacts**: Brandon Muffley, Ecosystems and SSC lead withEcosystem and Ocean Planning Committee support; Jessica Coakley Habitat and Ocean Planning Committee lead.  
 
-**CFMC Contacts**: Liajay Rivera García FMP and EBFM, Graciela García-Moliner FMP and Habitat, Miguel A. Rolón Exec dir.
+**CFMC Contacts**: Liajay Rivera García, FMP and EBFM lead; Graciela García-Moliner, FMP and Habitat lead; Martha Prada, IRA coordinator; Chelsea Harms-Tuhoy, IRA CVA contractor. 
 
-**GFMC Contacts**: Verena Wang Ecosystems, Ryan Rindone Fishery bio and SEDAR, John Froeschke Deputy, Zeenatul Basher Coral and Habitat, Carrie Simmons Exec director. 
+**GFMC Contacts**: Verena Wang, Ecosystems lead.
 
-**SAFMC Contacts**: Kathleen Howington Habitat & Ecosystem Scientist, Meg Withers Citizen Science Project Coordinator, John Hadley
-Fishery Management Plan Coordinator & Fishery Economist, Chip Collier Deputy Director for Science, Myra Brouwer Deputy Director for Management, John Carmichael Executive Director. 
+**SAFMC Contacts**: Kathleen Howington, Habitat & Ecosystem Scientist; John Hadley, Fishery Management Plan Coordinator & Fishery Economist; Myra Brouwer, Deputy Director for Management; John Carmichael, Executive Director. 
 
+Interviews were recorded using zoom for note-taking purposes. Notes from separate interviews and correspondence for each Council were synthesized into the reflections at the conclusion of each Council section. Then, results across Councils were compared and contrasted. 
 
 # Results
 
@@ -646,11 +645,11 @@ FEPobj <- data.frame(Council = c("New England*",
                      
 ```
 
-## Review of Products and Processes by Council *(pre-interview)*
+## Review of Products and Processes by Council
 
-In each section below, the Council context, management structure, and use of ecosystem data products is detailed for each region based on the literature review. 
+In each section below, the Council context, management structure, and use of ecosystem data products is detailed for each region based on the literature review and interviews with Council staff and other regional experts. 
 
-*This section will be expanded once interview are complete. Questions to be clarified during interviews are included in italics.* 
+*Questions to be clarified during interviews are included in italics.* 
 
 ### NPFMC
 
@@ -846,7 +845,7 @@ The State of Hawaii is using layers on [cumulative impacts](https://www.arcgis.c
 
 The New England Council region includes a portion of one large marine ecosystem with two ecoregions, spanning five states (Maine, New Hampshire, Massachusetts, Rhode Island, and Connecticut) and federal waters representing less than 2% of the US EEZ [@link_ecosystem-based_2021; @bachman_use_2025]. The region has high value commercial fisheries accounting for less than 5% of 2023 US landings by weight but over 26% of US commercial revenue. These fisheries include the highly economically valuable Atlantic scallop fishery, and the Atlantic States Marine Fisheries Commission-managed American lobster fishery. The region has a long history of commercial fishing, including heavy historical exploitation by foreign fleets. The region also accounts for 10% of US recreational landings [@national_marine_fisheries_service_fisheries_2024]. The New England region has the fifth highest human population of all the Council regions, and ranks third in population density  [@link_ecosystem-based_2021] with a magnitude similar to the South Atlantic.
 
-The New England Council manages under 9 FMPs. Three are mutispecies FMPs: Northeast multispecies ("groundfish", 13 species/22 stocks), Small mesh multispecies (3 species/5 stocks), and Skates (7 species); and six are single species FMPs: Atlantic Scallop, Atlantic Herring, Monkfish, Dogfish, Salmon, and Deep Sea Red Crab. The Dogfish and Monkfish FMPs are joint with the Mid-Atlantic Council. The Atlantic Herring FMP features a harvest control rule that was designed to account for herring's role as forage in the ecosystem using a multi-species stakeholder-driven management strategy evaluation [@deroba_dream_2018; @feeney_integrating_2019]. The Atlantic Scallop FMP specifies regional rotational management areas based on a spatial model that considers productivity differences by area.
+The New England Council manages under 9 FMPs. Three are mutispecies FMPs: Northeast multispecies ("groundfish", 13 species/22 stocks), Small mesh multispecies (3 species/5 stocks), and Skates (7 species); and six are single species FMPs: Atlantic Scallop, Atlantic Herring, Monkfish, Dogfish, Salmon, and Deep Sea Red Crab. The Dogfish and Monkfish FMPs are joint with the Mid-Atlantic Council. As early as 1985, the Northeast multispecies plan included some aspects of ecosystem-based fishery management, such as a description of the ecosystem and trophic interactions between managed species. The Atlantic Herring FMP features a harvest control rule that was designed to account for herring's role as forage in the ecosystem using a multi-species stakeholder-driven management strategy evaluation [@deroba_dream_2018; @feeney_integrating_2019]. The Atlantic Scallop FMP specifies regional rotational management areas based on a spatial model that considers productivity differences by area.
 
 The Council has a Habitat Committee that interacts across all other FMP Committees. [Habitat policies](https://www.nefmc.org/library/nefmc-habitat-policies-for-offshore-energy-aquaculture-submarine-cables) in New England address the interactions of fisheries with broader ocean uses such as offshore wind development, oil and gas development, aquaculture, and submarine cables, extending into Ecosystem Based Management (EBM). A recent [Essential Fish Habitat (EFH) review](https://www.nefmc.org/library/essential-fish-habitat-efh-information) was conducted jointly with the Mid-Atlantic Council for all Northeast U.S. managed stocks. This comprehensive review included new information on [predator-prey relationships](https://www.mafmc.org/s/Component-7-Food-Habits-of-Council-Managed-Species.pdf) for managed species and resulted in an [online dashboard](https://fishmaps.shinyapps.io/prey/) summarizing the diet data for each managed species based on the Northeast Fisheries Science Center's long term food habits monitoring program. The recent extensive work on habitat assessment incorporated many datasets for species distribution modeling and represents a significant new ecosystem information resource for the region.
 
@@ -873,9 +872,9 @@ Ecosystem profiles and ESPs have been produced for 3 species during research tra
 
 To date ecosystem indicators have been integrated into 2 research track stock assessments for Southern New England Mid Atlantic (Gulf Stream Index controls expected recruitment) and Georges Bank (deviation from BH recruitment controlled by bottom temperature) yellowtail flounder. Decisions to include indicators were based on literature review and statistical indicator testing similar to an ESP process. 
 
-A climate vulnerability analysis for 82 Northeast U.S. fish and invertebrate species has been published [@hare_vulnerability_2016], and provides input to the new risk policy currently in development by the Council. Both community climate vulnerability [@colburn_indicators_2016] and habitat climate vulnerability [@farr_assessment_2021] have also been assessed in the Northeast U.S. Climate vulnerability for 108 marine mammal stocks [@lettrich_vulnerability_2023] and 58 highly migratory fish stocks [@loughran_climate_2025] have been assessed for the entire Atlantic Coast. 
+A climate vulnerability analysis for 82 Northeast U.S. fish and invertebrate species has been published [@hare_vulnerability_2016], and provides input to the new risk policy currently in development by the Council (see below). Both community climate vulnerability [@colburn_indicators_2016] and habitat climate vulnerability [@farr_assessment_2021] have also been assessed in the Northeast U.S. Climate vulnerability for 108 marine mammal stocks [@lettrich_vulnerability_2023] and 58 highly migratory fish stocks [@loughran_climate_2025] have been assessed for the entire Atlantic Coast. There is currently a plan to update the fish CVA, but this project is resource-dependent. 
 
-The Council is developing a [risk policy](https://d23h0vhsm26o6d.cloudfront.net/Risk-Policy-Statement-and-Concept-Overview-for-posting-v1-final.pdf) that will use some indicators from the SOE, the fish CVA, and possibly ESPs. The policy evaluates risk due to stock status and assessment uncertainty, climate and ecosystem drivers, and economic and community considerations (Fig. \ref(fig:NEriskpolicy)). Indicators are being selected for each category will be scored according to criteria established for the category, then scores across categories are to be weighted by the Council to achieve an overall risk score for each stock given the set of indicators. The risk score would then be used to adjust the buffer between OFL and ABC using the established control rule for the stock in question (NEFMC harvest control rules vary by FMP). The Council plans to start with its groundfish FMP to refine this indicator based risk approach. As of January 2026, risk policy matrices have been developed for [monkfish](https://d23h0vhsm26o6d.cloudfront.net/biii_2025-Monkfish-Risk-Policy-Matrix.pdf), [skates](https://d23h0vhsm26o6d.cloudfront.net/biii_2025-Skate-Risk-Matrix.pdf), [scallops](https://d23h0vhsm26o6d.cloudfront.net/1d.-Scallop-Risk-Policy-Matrix.pdf), and [groundfish](https://d23h0vhsm26o6d.cloudfront.net/5_251014_Risk-Policy-Matrix_Groundfish-Stocks-Combined.pdf), including Acadian redfish, white hake, Georges Bank winter flounder, Gulf of Maine winter flounder, Southern New England winter flounder, Cape Cod/Gulf of Maine yellowtail flounder, and Southern New England Mid Atlantic yellowtail flounder. In addition, an updated Fishery Performance Report has been proposed for the [small-mesh multispecies fishery](https://d23h0vhsm26o6d.cloudfront.net/2_Final-annual-monitoring-and-fishery-performance-report.pdf) to integrate information needed for implementing the risk policy. The Council plans to review an updated risk policy concept document in summer 2026 that incorporates feedback from various Council groups as well as simulation testing of the decision framework.
+The Council is developing a [risk policy](https://d23h0vhsm26o6d.cloudfront.net/Risk-Policy-Statement-and-Concept-Overview-for-posting-v1-final.pdf) that will use some indicators from the SOE, the fish CVA, and possibly ESPs. The policy evaluates risk due to stock status and assessment uncertainty, climate and ecosystem drivers, and economic and community considerations (Fig. \ref(fig:NEriskpolicy)). Indicators are being selected for each category will be scored according to criteria established for the category, then scores across categories are to be weighted by the Council to achieve an overall risk score for each stock given the set of indicators. The risk score would then be used to adjust the buffer between OFL and ABC using the established control rule for the stock in question (NEFMC harvest control rules vary by FMP). The Council plans to start with its groundfish FMP to refine this indicator based risk approach. As of January 2026, risk policy matrices have been developed for [monkfish](https://d23h0vhsm26o6d.cloudfront.net/biii_2025-Monkfish-Risk-Policy-Matrix.pdf), [skates](https://d23h0vhsm26o6d.cloudfront.net/biii_2025-Skate-Risk-Matrix.pdf), [scallops](https://d23h0vhsm26o6d.cloudfront.net/1d.-Scallop-Risk-Policy-Matrix.pdf), and [groundfish](https://d23h0vhsm26o6d.cloudfront.net/5_251014_Risk-Policy-Matrix_Groundfish-Stocks-Combined.pdf), including Acadian redfish, white hake, Georges Bank winter flounder, Gulf of Maine winter flounder, Southern New England winter flounder, Cape Cod/Gulf of Maine yellowtail flounder, and Southern New England Mid Atlantic yellowtail flounder. In addition, an automated Fishery Performance Report has been proposed for the [small-mesh multispecies fishery](https://d23h0vhsm26o6d.cloudfront.net/2_Final-annual-monitoring-and-fishery-performance-report.pdf) to integrate information needed for implementing the risk policy. The Council plans to review an updated risk policy concept document in summer 2026 that incorporates feedback from various Council groups as well as simulation testing of the decision framework.
 
 <!--![Figure 3, NEFMC Risk Policy indicator scoring](images/NEFMC_RiskPolicy2025.png)-->
 
@@ -885,7 +884,9 @@ knitr::include_graphics(here::here("docs/images/NEFMC_RiskPolicy2025.png"))
 
 The Council has several [current projects](https://d23h0vhsm26o6d.cloudfront.net/New-England-Council-IRA-Approved-Project-Descriptions.pdf) coordinated by its Climate and Ecosystem Steering Committee addressing operational use of ecosystem information in management, designation of ecosystem component species, coordination with other management entities, and evaluation of climate-robust groundfish harvest control rules. In addition, a strategic planning process is underway which is mapping where different types of information can feed into the Council process. 
 
-Northeast SOE reports have been produced annually since 2017. Prior to that, longer ESRs were produced in 2002, 2009, 2012, and 2015. The NEFSC dedicates staff time to developing annual ecosystem reports and intermittent ESPs for the full Northeast Region, including both the New England and Mid-Atlantic Council regions. There is currently a plan to update the fish CVA. 
+NEFMC staff identified multiple successes with the use of ecosystem information in current management. All pointed to the rich data resources and the evolution of ecosystem reporting in the region, especially the iterative development of the annual SOE reports to better meet Council needs, as contributing to the success that the Council is now considering including this information more operationally into management through its risk policy. Northeast SOE reports have been produced annually since 2017. Prior to that, longer ESRs were produced in 2002, 2009, 2012, and 2015. The NEFSC dedicates staff time to developing annual ecosystem reports and intermittent ESPs for the full Northeast Region, including both the New England and Mid-Atlantic Council regions. Council staff also pointed to the recent updates in standardized research track stock assessments terms of reference to formally address ecosystem factors affecting each stock (ToR 1), and the associated ecosystem profiles and ESPs as successful steps in considering ecosystem impacts within the standard single stock management process.
+
+Current challenges identified with the use of ecosystem information in NEFMC processes include the overall difficulty balancing single stock mandates and traditional approaches with more holistic ecosystem approaches, especially in the current context of decreasing resources for scientific support. While there is consideration of place-based productivty for several stocks within FMPs, cross-FMP consideration of place-based productivity remains difficult. Both habitat efforts and delivery of ecosystem and assessment information to the SSC and Council staff were described as "siloed" in the current processes. Despite a recent extensive habitat assessment incorporating new data sources and integrated habitat modeling, there is limited use of this information formally in decision processes outside EFH updates, and it is mainly disjoint from the SOE. Habitat quality and quantity are implied in several aspects of the developing risk policy (stock status and recruitment), but are not included explicitly. Other sources of ecosystem information are also difficult to use by the SSC or Council due to lack of integration between scientific teams working on the SOE, stock assessments, and (to a lesser extent) social and economic analyses. 
 
 
 
