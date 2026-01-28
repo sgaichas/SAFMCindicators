@@ -988,6 +988,7 @@ Always resource and staff time constraints to get everything done
 
 
 Potential innovations/what to do differently
+
 Combine habitat and assessment modeling approaches for decisions?
 Chris Haak’s habitat framework with environment, multispecies 
 Age structured stock assessment framework familiar with ref pts
@@ -1072,6 +1073,35 @@ Current Council projects include "Developing a US Caribbean Hub to Operationaliz
 
 The Caribbean Council is one of three regional Councils served by SEFSC, the other two are the Gulf and South Atlantic. While SEFSC dedicates some staff resources to ecosystem reporting, resources to date have been inadequate to produce annual ecosystem reports across all three regions. However, streamlined processes and automation were developed for the current ESR that may permit more frequent updates. 
 
+Successes and Challenges
+Ongoing FEP process is a success, many innovations, moving through the Council
+Conceptual models
+Risk assessment (Liajay will send)
+New ESR a success! First in the region, but see below on e.g. temp indicators
+SEDAR 103 will examine alternative methods for reference points at the ecosystem and species group level
+Ongoing IRA projects are making good progress, will have results by 2027
+National level indicators are often not compatible with needs in the Caribbean region, or leave out the region as noted above for economic information
+Recreational fisheries data collection an ongoing challenge, don't even have MRIP anymore
+Habitat diversity combined with different jurisdiction boundaries make management measures difficult to reconcile and limit which can be used
+EEZ begins 9 nmi off PR, 3 nmi off USVI
+This is the deep area below diving range which limits both data and options for returning fish that managers dont want caught
+Left with time closures and cant use things like size limits
+State waters and federal different rules for some key things
+Need to see if there is an updated food web; these started in tropical areas but resources to update have been low
+Ciguatera poisoning is a big challenge currently managed by not allowing sale of certain high trophic level large species and setting federal ABC to 0 for them due to food web magnification of toxins from the benthic dinoflagellate Gambierdiscus found in shallow reef habitats. However it has shown up in other species recently. 
+Has economic impacts, difficult to measure it easily in captured fish. 
+Unlike red tide or other HABs, cant see it
+Likely an issue off the coast of FL in the SA as well, and predicted to increase with climate warming
+Management across state and fed and between federal agencies remains challenging
+Marine protected areas still had to prohibit trawling
+HAPC areas
+SST is important but not telling the whole story; bottom temperature is what affects the deepwater species reproduction and recruitment and that info is missing
+Ongoing issues getting the data needed for analyses; even federal agencies withhold some data and research results that the Council could use in management sooner
+Infrastructure to obtain and manage data locally needed
+
+
+Potential innovations/what to do differently
+Potential for SEDAR 103 to innovate on system and multispecies reference points sorely needed in this context
 
 
 ### GFMC
@@ -1080,14 +1110,14 @@ The Gulf Council region includes a portion of one large marine ecosystem, spanni
 
 The Gulf Council manages under 7 FMPs; 4 multispecies (Coastal migratory pelagics, Reef fish, Shrimp, Coral) and 3 single species (Red drum, Spiny lobster, Stone crab), with and additional FMP for Aquaculture.  The original Coral FMP was joint with South Atlantic Council. 
 
-A draft Gulf FEP was completed in 2022. This FEP also evaluated cooperative research and citizen science programs. Further FEP development is in progress with the Council's ecosystem technical team. The FEP extension follows the process outlined in the Pacific and North Pacific of identifying a Fishery Ecosystem Issue (FEI). An example FEI addressing red tide illustrates going through FEI loop [@levin_building_2018] identifying objectives, potential indicators, and uses of the indicators to support management. The FEI steps include scoping (the where are we now step) with stakeholders to outline the issue, data available, and potential for Council management, development and execution of a workplan (where are we going), implementation with recommended research, communication, and tradeoff analysis among management options, followed by management recommendation and evaluation of the recommended actions. 
+A draft Gulf FEP was completed in 2022. This FEP also evaluated cooperative research and citizen science programs. Further FEP development is in progress with the Council's ecosystem technical team, and a [updated FEP](https://gulf-council-media.s3.amazonaws.com/uploads/2025/10/Q-4a-Gulf_FEP_2025.pdf) was presented in November 2025. The FEP follows the process outlined in the Pacific and North Pacific of identifying a Fishery Ecosystem Issue (FEI). An example FEI addressing red tide illustrates going through FEI loop [@levin_building_2018] identifying objectives, potential indicators, and uses of the indicators to support management. The FEI steps include scoping (the where are we now step) with stakeholders to outline the issue, data available, and potential for Council management, development and execution of a workplan (where are we going), implementation with recommended research, communication, and tradeoff analysis among management options, followed by management recommendation and evaluation of the recommended actions. 
 
-For the red tide issue, extensive scoping work is already complete, and considerable data is available for red tides. The red grouper and gag grouper stock assessments include red tide mortality, and red tide uncertainty has been considered by the SSC for these stocks. An new red tide index is currently in development by Council staff. Three index options were presented in May 2025. The red tide index was strongly associated with river discharge, highlighting environmental drivers linked to episodic fish mortality. 
+For the red tide issue, extensive scoping work is already complete, and considerable data is available for red tides. An experimental red tide index was developed by Council staff as a proof of concept in May 2025. The experimental red tide index was strongly associated with river discharge, highlighting environmental drivers linked to episodic fish mortality. However, it was considered too broad in scale to be useful for more localized red tide impacts. Further Council projects will work in collaboration with the NOAA Southeast Fisheries Science Center to incorporate existing ecological, social, and economic research regarding red tides. 
 
-<!--![Figure 6. Work in progress developing a red tide index under the Gulf Red Tide FEI](images/redtideindexGulf.png)-->
+At the stock level, investigating potential red tide impacts is included within data workshop terms of reference for West Florida Shelf stock assessments (see, e.g. [SEDAR 94](https://sedarweb.org/documents/sedar-94-florida-hogfish-terms-of-reference/) Item 7). The red grouper and gag grouper stock assessments have included red tide mortality based on ecosystem model outputs [@vilas_evaluating_2023] for the past 2 assessment cycles (Fig. \@ref(fig:redtidemort)), and red tide uncertainty has been considered by the SSC for these stocks. Use of an ecosystem indicator within these stock assessments does not require any modification to the Council's catch specification process.
 
-```{r gulfredtide, fig.cap="Work in progress developing a red tide index under the Gulf Red Tide FEI", out.width="80%"}
-knitr::include_graphics(here::here("docs/images/redtideindexGulf.png"))
+```{r redtidemort, fig.cap="Predicted landings + dead discards by fleet for Gulf of Mexico red grouper, reprinted from SEDAR 88 Gulf of Mexico Red Grouper Operational Assessment, February 2025, Figure 22"}
+knitr::include_graphics(here::here("docs/images/RedGrouperRemovals2025.png"))
 ```
 
 
@@ -1108,11 +1138,37 @@ flextable::flextable((esrsdetls[[ESRname]]))|>
 
 ```
 
-A CVA for 75 Gulf fish and invertebrate species was recently completed [@quinlan_results_2023], Gulf fishing community climate vulnerability has been assessed [@seara_community_2022], and 108 marine mammal and 58 highly migratory fish stocks' climate vulnerability has been assessed for the entire Atlantic Coast, including the Gulf [@lettrich_vulnerability_2023; @loughran_climate_2025]. 
+A CVA for 75 Gulf fish and invertebrate species was recently completed [@quinlan_results_2023], with a higher proportion of assessed species in the low sensitivity range than was found for Northeast US and South Atlantic stocks. However, a majority of stocks had a high propensity for distributional change across all three regional vulnerability assessments. Gulf fishing community climate vulnerability has been assessed [@seara_community_2022], and 108 marine mammal and 58 highly migratory fish stocks' climate vulnerability has been assessed for the entire Atlantic Coast, including the Gulf [@lettrich_vulnerability_2023; @loughran_climate_2025]. 
 
 The Gulf Council is one of three regional Councils served by SEFSC, the other two are the Caribbean and South Atlantic. While SEFSC dedicates some staff resources to ecosystem reporting, resources to date have been inadequate to produce annual ecosystem reports across all three regions. However, streamlined processes and automation were developed for the Caribbean ESR that may permit more frequent updates across all regions.
 
-Gulf Council managed fisheries are a mix of recreational and commercial. 
+Successes and Challenges
+Having the FEI process in place is a success: although not yet fully finalized due to the shutdown, the Council has approved the process
+Appealing FEP aspect is then FEI's tangible way to address specific ecosystem issues
+IRA project in progress will elicit stakeholder views on ecosystem issues to get a fuller picture of public concerns that could feed into the FEI process
+Workshops with participatory modeling
+AI scraping blogs, forums, social media for issues
+FEI process identifies gaps and could also integrate with Council research priorities
+Likely different working groups needed for individual FEIs, process TBD but may distribute across subset of Ecosystem Technical Committee, NMFS, and Council staff
+Challenging stakeholder perception that including ecosystem factors always results in more restrictions 
+Could do more messaging around how the red tide inclusion affects quotas
+Will also need to manage expectations around other ecosystem info use
+ESRs only 2 and out of date, Council would like regular reporting
+Finding specific on ramps for using information: can it impact season length, bag limit, size limit, quota?
+
+Potential innovations/what to do differently
+Annual ecosystem reporting at least for a while until they get a sense of what is changing in the system and how quickly
+Looking forward to a stripped down set of indicators that are automated to regularly update as just done for Caribbean report
+May be able to see patterns that indicate where to bring ecosystem information into the management process
+
+Interesting to note
+Gulf not experiencing the same cross boundary distribution shifts as the Atlantic Councils: tropicalization is more of an issue
+Other ecosystem issues besides red tide: 
+Depredations
+King mackerel changing seasonality due to temperature? Or fishery change?
+Regulatory discard
+Hypoxia in TX
+
 
 
 ### SAFMC
