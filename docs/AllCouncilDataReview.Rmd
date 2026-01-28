@@ -926,7 +926,7 @@ The Council develops annual Fishery Performance Reports using its FMP Advisory P
 
 To date, ecosystem indicators have been integrated into the operational black sea bass assessment (winter bottom temperature, northern area influences expected recruitment) and into research track models for black sea bass and bluefish (forage fish index influences recreational index catchability). Decisions were based on ESPs.
 
-A climate vulnerability analysis for 82 Northeast U.S. fish and invertebrate species has been published [@hare_vulnerability_2016], and is considered within the SSC's ABC deliberation process as part of ecosystem factors contributing to uncertainty in the OFL. Both community climate vulnerability [@colburn_indicators_2016] and habitat climate vulnerability [@farr_assessment_2021] have also been assessed in the Northeast U.S. Climate vulnerability for 108 marine mammal stocks [@lettrich_vulnerability_2023] and 58 highly migratory fish stocks [@loughran_climate_2025] have been assessed for the entire Atlantic Coast.
+A climate vulnerability analysis for 82 Northeast U.S. fish and invertebrate species has been published [@hare_vulnerability_2016], and is considered within the SSC's ABC deliberation process as part of ecosystem factors contributing to uncertainty in the overfishing limit (OFL). Both community climate vulnerability [@colburn_indicators_2016] and habitat climate vulnerability [@farr_assessment_2021] have also been assessed in the Northeast U.S. Climate vulnerability for 108 marine mammal stocks [@lettrich_vulnerability_2023] and 58 highly migratory fish stocks [@loughran_climate_2025] have been assessed for the entire Atlantic Coast.
 
 A habitat-species climate vulnerability [crosswalk](https://nrha.shinyapps.io/dataexplorer/#!/crosswalk) summarizing species vulnerability and life history stages dependent on climate vulnerable habitat is also being considered during SSC deliberations, but is not yet formally part of the OFL CV protocol. 
 
@@ -938,22 +938,23 @@ The Council uses indicators from the SOE, the fish and community CVAs, multiple 
 knitr::include_graphics(here::here("docs/images/MAFMCrisk2025.png"))
 ```
 
-IRA projects may also expand operational use of indicators
+MAFMC has several ongoing projects designed to bring ecosystem information into the management process. These include spatial forecasts of river herring distribution to help pelagic fisheries avoid bycatch, adaptation of gear restricted areas to ocean conditions, climate-ready updates to EFH documents, evaluation of available ecosystem indicators and potential operational uses,  evaluation of climate-ready management strategies, and development of stock distribution change indicators. 
 
-As noted in the NEFMC section above, Northeast SOE reports have been produced annually since 2017. Prior to that, longer ESRs were produced in 2002, 2009, 2012, and 2015. The NEFSC dedicates staff time to developing annual ecosystem reports and intermittent ESPs for the full Northeast Region, including both the New England and Mid-Atlantic Council regions. There is currently a plan to update the fish CVA. 
+MAFMC staff highlighted the stepwise approach outlined in the EAFM Guidance Document as a success, resulting in tangible outcomes for forage fish management, habitat, and EFH work. The habitat work in turn brought in many new data sources and integrated both environmental data and information on species interactions. The structured decision framework outlined in the EAFM Guidance Document has also been successful in demonstrating how the Council can consider and integrate climate and ecosystem information at multiple points in the management process. 
+
+Supporting the success of the EAFM approach is the presentation of the annual SOE report, which has increased the Council's familiarity and comfort level with ecosystem information over time. Many indicators used in the EAFM risk assessment originate in the SOE, and co-development of the report between NEFSC and the Council has improved its utility for the Council over time. Working through the development of the EAFM process and supporting SOE report together has built trust and buy-in for the use of ecosystem information. Seeing Council and stakeholder feedback incorporated into the science products has also contributed to trust and buy-in.
+
+As noted in the NEFMC section above, this is a resource-rich region. Northeast SOE reports have been produced annually since 2017. Prior to that, longer ESRs were produced in 2002, 2009, 2012, and 2015. The NEFSC dedicates staff time to developing annual ecosystem reports and intermittent ESPs for the full Northeast Region, including both the New England and Mid-Atlantic Council regions. 
 
 Successes
 
-Multispecies SDM based on lots of data integration work, brings many surveys together, incorporates environmental data and species interactions
 Clams SDM uses clam survey and trawl survey data which catches surfclams but not used in assessment
-Potential for using info in assessments or at least connecting assessment and habitat data, will contact Kristan Blackhart
-
-EAFM approach was good, slower stepwise approach working better than NE FEP with more radical changes that has now been put aside
+Potential for using info in assessments or at least connecting assessment and habitat data
 
 I think the level of comfort with the information being provided to the Council has increased over the last 10-15 years, but it still lacks more direct integration into actual decision-making or longer-term strategic planning. 
 
-The EAFM guidance document has worked well as a non-regulatory document for which the Council can work to address priorities. The Council has addressed/taken management action in the areas of forage fish management, habitat and EFH work. The EAFM structured decision framework has also worked really well for the Council to develop and integrate climate and ecosystem information in different aspects of the management process. A particular area that has worked well and allowed the areas I just mentioned to be successful was the development of the Mid-Atlantic/New England SOE reports. This product not only produced a lot of the information and indicators we use, but presenting this information annually to the Council was critical for managers to see, begin to understand, and feel comfortable using this information in different areas of the management process.
 
+There is currently a plan to update the fish CVA. 
 
 Council has made a lot of advances in using ecosystem information
 Current annual ecosystem reporting and risk assessment keeps the information in front of them, they have become comfortable with ecosystem information over time. A longer frequency such as 5 years would be problematic with Council members turning over on 3 year cycles
