@@ -940,6 +940,8 @@ knitr::include_graphics(here::here("docs/images/MAFMCrisk2025.png"))
 
 IRA projects may also expand operational use of indicators
 
+As noted in the NEFMC section above, Northeast SOE reports have been produced annually since 2017. Prior to that, longer ESRs were produced in 2002, 2009, 2012, and 2015. The NEFSC dedicates staff time to developing annual ecosystem reports and intermittent ESPs for the full Northeast Region, including both the New England and Mid-Atlantic Council regions. There is currently a plan to update the fish CVA. 
+
 Successes
 
 Multispecies SDM based on lots of data integration work, brings many surveys together, incorporates environmental data and species interactions
@@ -947,6 +949,11 @@ Clams SDM uses clam survey and trawl survey data which catches surfclams but not
 Potential for using info in assessments or at least connecting assessment and habitat data, will contact Kristan Blackhart
 
 EAFM approach was good, slower stepwise approach working better than NE FEP with more radical changes that has now been put aside
+
+I think the level of comfort with the information being provided to the Council has increased over the last 10-15 years, but it still lacks more direct integration into actual decision-making or longer-term strategic planning. 
+
+The EAFM guidance document has worked well as a non-regulatory document for which the Council can work to address priorities. The Council has addressed/taken management action in the areas of forage fish management, habitat and EFH work. The EAFM structured decision framework has also worked really well for the Council to develop and integrate climate and ecosystem information in different aspects of the management process. A particular area that has worked well and allowed the areas I just mentioned to be successful was the development of the Mid-Atlantic/New England SOE reports. This product not only produced a lot of the information and indicators we use, but presenting this information annually to the Council was critical for managers to see, begin to understand, and feel comfortable using this information in different areas of the management process.
+
 
 Council has made a lot of advances in using ecosystem information
 Current annual ecosystem reporting and risk assessment keeps the information in front of them, they have become comfortable with ecosystem information over time. A longer frequency such as 5 years would be problematic with Council members turning over on 3 year cycles
@@ -1019,8 +1026,6 @@ Current RT assessments are where this can happen but they are going away
 MT assessments need more flexibility to bring in new information or methods
 
 
-
-Northeast SOE reports have been produced annually since 2017. Prior to that, longer ESRs were produced in 2002, 2009, 2012, and 2015. The NEFSC dedicates staff time to developing annual ecosystem reports and intermittent ESPs for the full Northeast Region, including both the New England and Mid-Atlantic Council regions. There is currently a plan to update the fish CVA. 
 
 SAFMC advice
 Don't let the perfect be the enemy of the good, don't try to do everything the first round
