@@ -201,7 +201,7 @@ Contextual information may help explain how Council ecosystem data products and 
 
 The area managed by each Council in terms of square km and proportion of the U.S. EEZ was summarized in Table 2 of @bachman_use_2025. The number of U.S. states and territories are represented in each Council region was drawn from https://www.fisherycouncils.org/ and each Council's website and documents. The number of FMPs and FEPs for each Council was drawn from https://www.fisherycouncils.org/ and validated using individual Council websites and documents.
 
-Current commercial and recreational landings for 2022-2024 were drawn from Fisheries Economics of the US 2022 [@national_marine_fisheries_service_fisheries_2024] and its associated [web data tool](https://www.fisheries.noaa.gov/foss/f?p=215:200::::::). The most recent year of commercial and recreational landings data available across all regions was 2023, but the most recent recreational value information was from 2022. Landings and value for each sector are reported as proportions of the total for the U.S. because the absolute numbers vary from year to year but rough proportions have been stable recently. 
+Current commercial and recreational landings for 2022-2024 were drawn from Fisheries Economics of the US 2022 [@national_marine_fisheries_service_fisheries_2024] and its associated [web data tool](https://www.fisheries.noaa.gov/foss/f?p=215:200::::::). The most recent year of commercial and recreational landings data available across all regions was 2023, but the most recent recreational value information was from 2022 for all regions except the Caribbean. The most recent recreational expenditure information for the Caribbean was for Puerto Rico in 2011 [@lovell_economic_2013], which is likely an underestimate for the region, but is included in the table. Landings and value for each sector are reported as proportions of the total for the U.S. because the absolute numbers vary from year to year but rough proportions have been stable recently. 
 
 Human populations in each Council region were drawn from @link_ecosystem-based_2021 and updated with US Census and UN data compiled on [Wikipedia](https://en.wikipedia.org/wiki/List_of_U.S._states_and_territories_by_population_density).
 
@@ -260,7 +260,7 @@ Interviews were recorded using zoom for note-taking purposes. Notes from separat
 
 ## Council Context and Overview
 
-The Regional U.S. Fishery Management Councils are highly diverse in the amount of area managed, the number of states and territories involved, the number of FMPs and FEPs in place, and commercial and recreational landings and value (Table \@ref(tab:councilcomp)). 
+The Regional U.S. Fishery Management Councils are highly diverse in the amount of area managed, the number of states and territories involved, the number of FMPs and FEPs in place, and commercial and recreational landings and value (Table \@ref(tab:councilcomp)). Note that New England developed but did not adopt an FEP, and the Gulf and Caribbean are currently developing FEPs. The details of each are described in the sections below.
 
 ```{r councilcomp, ft.arraystretch = 1}
 # from Bachman et al 2025 table 2
@@ -308,6 +308,12 @@ caribland23 <- caribland |>
 
 comlandterrtot23 <- comlandterrtot |> dplyr::filter(Year == 2023)
 
+# approximate caribbean commercial landings from federal register https://www.federalregister.gov/d/2024-01716/p-34 PR avg 2017-2021 $9.58 million
+# and https://www.federalregister.gov/d/2024-01716/p-35 USVI avg 2015-2018 $4.39 million
+
+caribland23$ComDollars <- sum(9580000, 4390000)
+caribland23 <- caribland23[,c(1,2,3,5,4)]
+
 comlandclean23 <- Comlandareas |>
   dplyr::filter(Year == 2023) |>
   dplyr::select(Year, Region = `Region Name`, ComPounds = Pounds, ComDollars = Dollars, ComTons = `Metric Tons`) |>
@@ -345,7 +351,7 @@ recvalue22 <- data.frame(Region = c("Alaska",
                                      584000000,
                                      807000000,
                                      3500000000,
-                                     NA))  
+                                     72000000))  #72 million PR 2011 Lovell et al TM 2013
 
 reclandclean23 <- Reclandareas |>
   dplyr::filter(Year == 2023) |>
@@ -392,7 +398,7 @@ regionnames <- data.frame(Region = EEZclean$Region,
                                          NA),
                           Nstates = c(5, 7, 4, 5, 2, 3, 1, 4, NA),
                           NFMPs = c(9, 7, 8, 7, 3, 4, 6, 0, NA),
-                          NFEPs = c(0, 1, 1, 1, 0, 1, 2, 5, NA))
+                          NFEPs = c(1, 1, 1, 1, 1, 1, 2, 5, NA))
 
 proparea <- EEZclean |>
   dplyr::select(Region, EEZArea) |>
@@ -565,6 +571,7 @@ CVAs <- proparea |>
                                                 CouncilName %in% c("South Atlantic", 
                                                                  "Gulf",
                                                                  "Pacific") ~ 2022,
+                                                CouncilName %in% c("Caribbean") ~ 2023,
                                               TRUE ~ NA),
                 HMSCVA = dplyr::case_when(CouncilName %in% c("Mid-Atlantic", 
                                                                  "New England",
@@ -592,7 +599,7 @@ flextable::flextable(CVAs) |>
 
 ```
 
-Council FEPs (and some FMPs) contain some similar content in terms of ecosystem policies and goals, with regionally specific goals for habitats unique to a given region such as coral reefs. However, Councils have different mechanisms across FEPs or FMPs to operationalize the use of ecosystem information. First FEPs are compared to the contents outlined in the original 1999 report to Congress [@ecosystem_principles_advisory_panel_ecosystem-based_1999], (Table \@ref(tab:FEPs)). More longstanding FEPs contain many components, while the newer in-progress Gulf FEP has very few as it is being designed according to newer principles [@levin_building_2018] to be as actionable as possible. The Pacific, North Pacific Bering Sea, and Mid-Atlantic FEP documents also contain "Initiatives", "Action Modules" and an EAFM loop process, respectively, to each give each Council a process turn the ecosystem plan into tangible action on a topic. 
+Council FEPs (and some FMPs) contain some similar content in terms of ecosystem policies and goals, with regionally specific goals for habitats unique to a given region such as coral reefs. However, Councils have different mechanisms across FEPs or FMPs to operationalize the use of ecosystem information. First FEPs are compared to the contents outlined in the original 1999 report to Congress [@ecosystem_principles_advisory_panel_ecosystem-based_1999], (Table \@ref(tab:FEPs)). More longstanding FEPs contain many components, while the newer in-progress Gulf FEP has very few as it is being designed according to newer principles [@levin_building_2018] to be as actionable as possible. The Pacific, North Pacific Bering Sea, and Mid-Atlantic FEP documents also contain "Initiatives", "Action Modules" and an EAFM loop process, respectively, to each give each Council a process turn the ecosystem plan into tangible action on a topic. This feature is also being included in the developing Gulf and Caribbean FEPs. Note that none of the FEPs specifically address uncertainty, and New England's FEP was not adopted. 
 
 ```{r FEPs, ft.arraystretch = 1}
 
@@ -603,15 +610,16 @@ FEPactions <- data.frame(Council = c("New England*",
                                      "Caribbean",
                                      "Pacific",
                                      "North Pacific",
-                                     "Western Pacific"),
-                         EcoDescription = c(1,1,1,NA,1,1,1,1),
-                         FoodWebConsMod = c(1,1,1,NA,1,1,1,NA),
-                         FoodWebEFH = c(NA,1,1,NA,1,1,1,1),
-                         TotRemovals = c(1,NA,NA,NA,NA,NA,1,NA),
-                         Uncertainty = c(NA,NA,NA,NA,NA,NA,NA,NA),
-                         EcoHealth = c(NA,NA,NA,NA,NA,NA,NA,1),
-                         Monitoring = c(1,1,1,NA,1,1,1,1),
-                         OutsideImpacts = c(NA,1,1,NA,1,1,1,1))
+                                     "Western Pacific",
+                                     NA),
+                         EcoDescription = c(1,1,1,NA,1,1,1,1,NA),
+                         FoodWebConsMod = c(1,1,1,NA,1,1,1,NA,NA),
+                         FoodWebEFH = c(NA,1,1,NA,1,1,1,1,NA),
+                         TotRemovals = c(1,NA,NA,NA,NA,NA,1,NA,NA),
+                         Uncertainty = c(NA,NA,NA,NA,NA,NA,NA,NA,1),
+                         EcoHealth = c(NA,NA,NA,NA,1,NA,NA,1,NA),
+                         Monitoring = c(1,1,1,NA,1,1,1,1,NA),
+                         OutsideImpacts = c(NA,1,1,NA,1,1,1,1,NA))
 
 flextable::flextable(FEPactions) |>
   flextable::set_header_labels(
@@ -629,7 +637,8 @@ flextable::flextable(FEPactions) |>
     digits = 0                  # Specify the number of decimal places
   ) |>
   flextable::set_caption("Comparison of Council FEPs with FEP components suggested by EPAP 1999. 1 = Included.") |>
-  flextable::width(width = c(1, rep(0.75,8)))
+  flextable::width(width = c(1, rep(0.75,8))) |>
+  flextable::delete_rows(i = 9, part = "body")
 
 ```
 
@@ -954,18 +963,22 @@ MAFMC staff suggestions for improved use of ecosystem information include focusi
 
 The Caribbean Council region includes a portion of one large marine ecosystem, spanning two US territories (Puerto Rico and the U.S. Virgin Islands) and federal waters representing less than 2% of the US EEZ [@link_ecosystem-based_2021; @bachman_use_2025]. Caribbean fisheries are characterized by high species diversity, critical dependence on vulnerable nearshore and coral reef habitats, many artisanal commercial fishers with a variety of gears landing in many ports, and a recreational fishery with similar characteristics and yield; these conditions make typical single species data collection, assessment, and management approaches difficult [@appeldoorn_transforming_2008]. The Caribbean region has the highest population density of all the Council regions, but the third lowest human population [@link_ecosystem-based_2021].
 
-The Caribbean Council manages under three Island-Based FMPs for for Puerto Rico, St. Croix, and St. Thomas/St. John. The FMPs identify objectives and measures for all of the major fisheries, habitat, and ecosystem issues in each region. Up until 2022, the Caribbean Council managed under region-wide FMPs for spiny lobster, queen conch, reef fish, and corals (with a prohibition on coral take). The Island-Based FMPs were initiated in 2012 to address management issues unique to each island and to lay the groundwork for place-based EBFM; these Island-Based FMPs have been used for management since October 2022. The Island Based FMPs all refer to EBFM as the overarching management principle, and include goals and objectives related both to fishery stock management and sustainable ecosystem services.
+The Caribbean Council manages under three Island-Based FMPs for for Puerto Rico, St. Croix, and St. Thomas/St. John. The FMPs identify objectives and measures for all of the major fisheries, habitat, and ecosystem issues in each region. Up until 2022, the Caribbean Council managed under region-wide FMPs for spiny lobster, queen conch, reef fish, and corals (with a prohibition on coral take). However, ecosystem and habitat efforts were initiated as far back as 1999.  The Island-Based FMPs were initiated in 2012 to address management issues unique to each island and to lay the groundwork for place-based EBFM; these Island-Based FMPs have been used for management since October 2022. The Island Based FMPs all refer to EBFM as the overarching management principle, and include goals and objectives related both to fishery stock management and sustainable ecosystem services.
 
-An FEP is under development by the Council's EBFM Technical Advisory Panel (TAP) using ecosystem conceptual models developed for each island by District Advisory Panels and diverse stakeholder groups [@seara_development_2024] as a starting point to identify "where we are now" in the FEP loop [@levin_building_2018]. The conceptual models identify the most important ecological and social components, relationships, and drivers of each island fishery ecosystem, as informed by expert knowledge from fishers, managers, and scientists serving on the SSC (Fig. \@ref(fig:caribConsMod)). 
+A non-regulatory FEP is under development by the Council's EBFM Technical Advisory Panel (TAP) using ecosystem conceptual models developed for each island by District Advisory Panels and diverse stakeholder groups [@seara_development_2024] as a starting point to identify "where we are now" in the FEP loop [@levin_building_2018]. The conceptual models identify the most important ecological and social components, relationships, and drivers of each island fishery ecosystem, as informed by expert knowledge from fishers, managers, scientists serving on the SSC, and other stakeholders (Fig. \@ref(fig:caribConsMod)). These models form the basis for several aspects of EBFM development in the region, including indicators listed in the draft FEP to support EBFM objectives, and for a new risk assessment framework (RAF) published in May 2025 (see below).
 
 <!--![Figure 5. Ecosystem relationships common across stakeolder conceptual models, from Seara et al 2024](images/CaribConsensusModel.png)-->
 
-```{r caribConsMod, fig.cap="Ecosystem relationships common across stakeolder conceptual models; reprinted from Seara et al 2024", out.width="80%"} 
-knitr::include_graphics(here::here("docs/images/CaribConsensusModel.png"))
+```{r caribConsMod, fig.cap="Reprinted from Figure 5 in Seara et al. 2024,  https://doi.org/10.1371/journal.pone.0304101.g005: Two-mode network diagram showing all components identified as important Drivers (top) or Receivers (bottom) of relationships (circles) by each stakeholder group (grey squares) in the U.S. Caribbean. The size of the circles is indicative of frequency with which component was mentioned by stakeholders. Circles color scheme indicates the number of stakeholder groups mentioning the component: red = 7; orange = 6; yellow = 5; light green = 4; dark green = 3; blue = 2; pink = 1.", out.width="100%"} 
+
+knitr::include_graphics(here::here("docs/images/CaribDriversReceivers.PNG"))
+
+#Ecosystem relationships common across stakeolder conceptual models; reprinted from Seara et al 2024
+#knitr::include_graphics(here::here("docs/images/CaribConsensusModel.png"))
 ```
 
 
-The Caribbean region has the newest ESR [@southeast_integrated_ecosystem_assessment_program_caribbean_2025], the first produced for this region. The Caribbean ESR is organized according to the goals and objectives identified in each Island Based FMP, and uses indicators inspired by the conceptual models developed for each island. The first section of the report evaluates progress towards FMP objectives in the categories of food production, socioeconomic health, equity, engagement/participation, bycatch reduction, governance, and ecosystem protection. The second section evaluates risks to meeting those objectives (Table \@ref(tab:CaribInds)). 
+The Caribbean region has the newest ESR [@southeast_integrated_ecosystem_assessment_program_caribbean_2025], the first produced for this region. The Caribbean ESR is organized according to the goals and objectives identified in each Island Based FMP, and uses indicators inspired by the conceptual models developed for each island. The first section of the report evaluates progress towards FMP objectives in the categories of food production, socioeconomic health, equity, engagement/participation, bycatch reduction, governance, and ecosystem protection. The second section evaluates risks to meeting those objectives (Table \@ref(tab:CaribInds)). The ESR was developed using open science principles and is published [online](https://gulf-iea.github.io/Caribbean-ESR-2/) as well as in pdf format to enhance transparency and reproducibility, and to facilitate frequent updates of indicator information. 
 
 ```{r CaribInds, ft.arraystretch = 1}
 
@@ -982,11 +995,20 @@ flextable::flextable((esrsdetls[[ESRname]]))|>
 
 ```
 
-A project is in progress to develop fishery species CVA for this region (see below). Marine mammal (108 stocks) and highly migratory species (58 stocks) climate vulnerability has been assessed for the entire Atlantic Coast including the Caribbean [@lettrich_vulnerability_2023; @loughran_climate_2025]. 
+A project is in progress to develop fishery species CVA for this region (see below). Marine mammal (108 stocks) and highly migratory species (58 stocks) climate vulnerability has been assessed for the entire Atlantic Coast including the Caribbean [@lettrich_vulnerability_2023; @loughran_climate_2025]. While Caribbean stocks of dolphins and whales are included in the marine mammal CVA, nearshore marine mammals such as manatees are not. While fishing communities in the region have not been specifically assessed, climate vulnerability of US Caribbean communities was considered in the [Fifth National Climate Assessment](https://secasc.ncsu.edu/wp-content/uploads/sites/178/2025/07/NCA5_Ch23_US-Caribbean.pdf), finding high vulnerability from increasing exposure to extreme weather such as hurricanes combined with the concentration of communities and infrastructure in vulnerable areas [@mendez-lazaro_chapter_2023]. 
 
 Current Council projects include "Developing a US Caribbean Hub to Operationalize EBFM in the US Caribbean" to advance indicator-based risk assessment, "Evaluating Priority Species Vulnerability to Changing Environmental Conditions" to initiate a CVA for the region, and "Understanding Impacts of Extreme Events on the Fishery Ecosystem and the Fishers’ Communities in the U.S. Caribbean" to strengthen outreach and education. 
 
+The recently developed RAF incorporates ESR indicators and other sources of information into a decision support tool that scores risks from ecological change, socioeconomic pressure, and degraded habitats to management outcomes. The RAF report includes a risk score sheet with instructions, as well as documentation of all indicators and methods, with detailed descriptions of how to use the RAF in management decisions along with four case studies. The document also outlines potential development of ecosystem-level indicators. 
+
+
+
+
+
 The Caribbean Council is one of three regional Councils served by SEFSC, the other two are the Gulf and South Atlantic. While SEFSC dedicates some staff resources to ecosystem reporting, resources to date have been inadequate to produce annual ecosystem reports across all three regions. However, streamlined processes and automation were developed for the current ESR that may permit more frequent updates. 
+
+CFMC staff identified the ongoing FEP process as a key success, with many innovative approaches tailored to regional management needs and information, that has been progressively moving through the Council process. The stakeholder-driven conceptual models
+risk assessment framework (RAF) represents a considerable success in outlining an operational framework to use ecosystem indicators from the ESR and other sources. 
 
 Successes and Challenges
 Ongoing FEP process is a success, many innovations, moving through the Council
@@ -1055,11 +1077,11 @@ flextable::flextable((esrsdetls[[ESRname]]))|>
 
 A CVA for 75 Gulf fish and invertebrate species was recently completed [@quinlan_results_2023], with a higher proportion of assessed species in the low sensitivity range than was found for Northeast US and South Atlantic stocks. However, a majority of stocks had a high propensity for distributional change across all three regional vulnerability assessments. Gulf fishing community climate vulnerability has been assessed [@seara_community_2022], and 108 marine mammal and 58 highly migratory fish stocks' climate vulnerability has been assessed for the entire Atlantic Coast, including the Gulf [@lettrich_vulnerability_2023; @loughran_climate_2025]. 
 
-GFMC staff highlighted the current inclusion of red tide impacts in two important stock assessments, and the updated FEP with its clearly specified FEI process in place as highly successful examples of integrating ecosystem information into management. Including red tide in the assessments involves integration of environmental data into a spatial ecosystem model that then produces age-specific mortality estimates for the assessed species. The continued collaboration between ecosystem and assessment scientists, all of whom are familiar with the management process, has driven this success. The FEP is centered around the concept of FEIs, which provide a tangible process to select and address specific ecosystem issues of interest to the Council. The red tide FEI currently in progress has the potential to organize and synthesize existing research and align information with current Council processes and needs, making the information easier to use in decisions. More generally, the FEI process is designed to identify gaps in knowledge, and could therefore inform the ore strategic process of establishing and updating Council research priorities. A current Council project is in progress elicit stakeholder views on ecosystem issues to get a fuller picture of public concerns that could feed into the FEI process. The project will use workshops with participatory modeling and also review public blogs, forums, and social media to gather broad information on ecosystem issues within the region.  Other potential ecosystem issues that may come up include tropicalization, depredation, king mackerel changing seasonality, regulatory discards, and hypoxia on the Texas coast. The Council may need to consider a process to implement future FEIs to ensure that working groups include the appropriate expertise for each issue, spread among the Ecosystem Technical Committee, NMFS, and Council staff.
+GFMC staff highlighted the current inclusion of red tide impacts in two important stock assessments, and the updated FEP with its clearly specified FEI process as highly successful examples of integrating ecosystem information into management. Including red tide in the assessments involves integration of environmental data into a spatial ecosystem model that then produces age-specific mortality estimates for the assessed species. The continued collaboration between ecosystem and assessment scientists, all of whom are familiar with the management process, has driven this success. The FEP is centered around the concept of FEIs, which provide a tangible process to select and address specific ecosystem issues of interest to the Council. The red tide FEI currently in progress has the potential to organize and synthesize existing research and align information with current Council processes and needs, making the information easier to use in decisions. More generally, the FEI process is designed to identify gaps in knowledge, and could therefore inform the ore strategic process of establishing and updating Council research priorities. A current Council project is in progress elicit stakeholder views on ecosystem issues to get a fuller picture of public concerns that could feed into the FEI process. The project will use workshops with participatory modeling and also review public blogs, forums, and social media to gather broad information on ecosystem issues within the region.  Other potential ecosystem issues that may come up include tropicalization, depredation, king mackerel changing seasonality, regulatory discards, and hypoxia on the Texas coast. The Council may need to consider a process to implement future FEIs to ensure that working groups include the appropriate expertise for each issue, spread among the Ecosystem Technical Committee, NMFS, and Council staff.
 
 Challenges identified by GFMC staff included stakeholder perceptions, resource limitations, and finding specific on-ramps to use ecosystem information. As noted in other regions, there is a stakeholder perception that including ecosystem factors always results in more restrictions. There may be some disconnects between perception and actual practice that suggest improved messaging may be needed. For example, red tide impact is included in stock assessments as an additional source of mortality in specific years, which does not necessarily result in more restrictive quotas in the way that a precautionary buffer applied to ABC would. Inclusion of historical red tide mortality appropriately separated fishing from environmental effects to demonstrate that overfishing did not occur in years with very high red tide mortality; however, challenges can be substantial when recent red tide impacts are uncertain and can have a large impact on catch projections [@sagarese_evaluating_2022].   
 
-Intermittent production of ecosystem reports was identified as another challenge in the Gulf region. The two ESRs available in the region contain important information, but are now nearly a decade out of date. Staff noted that it is difficult for the Council to plan around ecosystem indicators if they are not available regularly. SEFSC staff is currently working on a new ESR for the Gulf. The Gulf Council is one of three regional Councils served by SEFSC, the other two are the Caribbean and South Atlantic. While SEFSC dedicates some staff resources to ecosystem reporting, resources to date have been inadequate to produce annual ecosystem reports across all three regions. However, streamlined processes and automation were developed for the Caribbean ESR that may permit more frequent updates across all regions. 
+Intermittent production of ecosystem reports was identified as another challenge in the Gulf region. The two ESRs available in the region contain important information, but are now nearly a decade out of date. Staff noted that it is difficult for the Council to plan around ecosystem indicators if they are not available regularly. SEFSC staff are currently working on a new ESR for the Gulf. The Gulf Council is one of three regional Councils served by SEFSC, the other two are the Caribbean and South Atlantic. While SEFSC dedicates some staff resources to ecosystem reporting, resources to date have been inadequate to produce annual ecosystem reports across all three regions. However, streamlined processes and automation were developed for the Caribbean ESR that may permit more frequent updates across all regions. 
 
 To make further progress, GFMC staff noted that a more focused, smaller suite of ESR indicators that could be updated annually would be highly valuable for the Council to get an understanding both of the ecosystem context and how rapidly things may be changing. With annual review of an ESR, the Council could start to identify patterns and priorities for bringing ecosystem information into the management process. The Council could also explore more specific on ramps for using information: can it impact season length, bag limit, size limit, quota? Becoming familiar with regularly available ecosystem information, combined with the developing FEI framework, should position GFMC well for further progress.
 
