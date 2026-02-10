@@ -9,7 +9,7 @@ output:
     toc_float: true
 ---
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE,
+knitr::opts_chunk$set(echo = TRUE,
                       message = FALSE,
                       warning = FALSE)
 
@@ -18,11 +18,16 @@ library(tidyverse)
 
 # Summarize pdfs with Claude API
 
-put the code here
+I used code in this project [R/pdfsumm.R](https://github.com/sgaichas/SAFMCindicators/blob/main/R/pdfsumm.R). Code is reproduced in this code block but is not run here.
+
+```{r pdfsumm, file='https://github.com/sgaichas/SAFMCindicators/raw/main/R/pdfsumm.R', eval=FALSE}
+
+```
+
 
 # Knit all of the Claude summaries
 
-```{r}
+```{r, eval=FALSE}
 # knit all rmd in a directory
 
 fepsumms <- list.files(here::here("FEPsumms"), pattern = "\\.Rmd$", full.names = TRUE)
