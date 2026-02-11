@@ -41,11 +41,11 @@ set_flextable_defaults(font.size = 10, padding = 5,
                        fonts_ignore=TRUE) #for latex
 
 ```
-<!--
+
 # Executive Summary
 
 ## Purpose and Context
-This comprehensive review examines how ecosystem information is currently used across all eight U.S. Fishery Management Councils to support the South Atlantic Fishery Management Council (SAFMC) in enhancing its ecosystem-based fisheries management approaches. The work addresses a key priority of the East Coast Coordination Group: identifying ecosystem information that can improve management responsiveness and resilience under changing ocean conditions.
+This report provides a comprehensive review of ecosystem data products and their use across all eight U.S. Regional Fishery Management Councils to support the South Atlantic Fishery Management Council (SAFMC) in enhancing its ecosystem-based fisheries management approaches. The review synthesized literature, examined data products, and conducted semi-structured interviews with Council staff. The work addresses a key priority of the East Coast Coordination Group: identifying ecosystem information that can improve management responsiveness and resilience under changing ocean conditions.
 
 ## Key Findings
 
@@ -56,34 +56,37 @@ All eight Councils have ecosystem data products, though with varying levels of d
 - **Intermittent Reporting**: Gulf, South Atlantic, Western Pacific, and Caribbean have less frequent updates
 - **Indicator Diversity**: Reports range from 26-101 indicators spanning physical environment, biological productivity, species status, and human dimensions
 
-### Three Distinct Management Approaches
+### Three General Ecosystem Approaches
 
-**1. FMP/Indicator-Based (NPFMC, PFMC, MAFMC, NEFMC)**
-- Species-based Fishery Management Plans with ecosystem overlays
-- Annual ecosystem indicators inform catch specification decisions
-- Risk tables and uncertainty frameworks integrate ecosystem considerations
-- Non-regulatory Fishery Ecosystem Plans (FEPs) provide actionable pathways
+**1. FMP/Indicator-Based (NPFMC, PFMC, MAFMC, NEFMC)** 
+- Species-based Fishery Management Plans with ecosystem overlays 
+- Annual ecosystem indicators inform catch specification decisions 
+- Risk tables and uncertainty frameworks integrate ecosystem considerations 
+- Non-regulatory Fishery Ecosystem Plans (FEPs) provide actionable pathways 
+- High-value, data-rich stocks with complex assessments 
 
-**2. FEP/Geography-Based (WPFMC, CFMC)**
-- Island or place-based ecosystem plans serve as operational management documents
-- Co-developed with stakeholders reflecting distinct regional conditions
-- Emphasis on human community connections and data-limited fisheries
-- Ecosystem considerations embedded in management structure
+**2. FEP/Geography-Based (WPFMC, CFMC)** 
+- Place-based ecosystem or fishery management plans serve as operational management documents 
+- Co-developed with stakeholders reflecting distinct regional conditions 
+- Emphasis on human community connections and data-limited fisheries 
+- Ecosystem considerations embedded in management structure 
+- Caribbean non-regulatory FEP in development to provide actionable pathways 
 
-**3. Developing Approaches (SAFMC, GFMC)**
-- Species-based FMPs with expanding ecosystem integration
-- SAFMC uniquely links Essential Fish Habitat (EFH) with ecosystem efforts
-- Gulf developing Fishery Ecosystem Issues (FEIs) as action-oriented framework
-- Both regions have recent ecosystem reports and climate vulnerability assessments
+**3. Developing Approaches (SAFMC, GFMC)** 
+- Species-based FMPs with expanding ecosystem integration 
+- Recreational fishery dominance with fewer assessments relative to managed species 
+- SAFMC uniquely links Essential Fish Habitat (EFH) with ecosystem efforts 
+- Gulf developing Fishery Ecosystem Issues (FEIs) as action-oriented framework 
+- Both regions have recent ecosystem reports and climate vulnerability assessments 
 
-### Climate Vulnerability Analysis Coverage
-Most regions have completed Climate Vulnerability Analyses (CVAs) for fish and invertebrates, with some also addressing:
-- Fishing communities (Northeast, Southeast, Pacific regions)
-- Critical habitats (Northeast U.S.)
-- Marine mammals (Atlantic Coast)
-- Highly Migratory Species (Atlantic Coast)
+### Climate Vulnerability Analysis Coverage 
+Most regions have completed Climate Vulnerability Analyses (CVAs) for fish and invertebrates, with some also addressing: 
+- Fishing communities (Northeast, Southeast, Pacific regions) 
+- Critical habitats (Northeast U.S.) 
+- Marine mammals (Atlantic Coast) 
+- Highly Migratory Species (Atlantic Coast) 
 
-However, CVA information is underutilized—only the Mid-Atlantic currently incorporates CVA results systematically into risk assessment and catch advice processes.
+However, CVA information is underutilized. Only the Mid-Atlantic currently incorporates CVA results systematically into risk assessment and catch advice processes, but New England and the Pacific are developing processes to use this information.
 
 ## Common Management Concerns
 
@@ -91,42 +94,49 @@ However, CVA information is underutilized—only the Mid-Atlantic currently inco
 
 **Climate Change Impacts**: All regions are addressing rapid ecosystem changes, though even data-rich systems with long-term ecosystem reporting have experienced unexpected stock collapses, highlighting the need for climate-ready management approaches.
 
-## Promising Practices
+**Complexity of Ecosystem Information**: Council staff emphasize the need to provide information in "digestible packets," with clear linkages to management processes and decisions.
 
-1. **Risk-Based Frameworks**: North Pacific, Pacific, New England, and Mid-Atlantic are developing or implementing indicator-based risk assessments to adjust catch advice
+**Resource constraints**: Even data-rich regions identify capacity limitations for integrating ecosystem information into management.
 
-2. **Ecosystem and Socioeconomic Profiles (ESPs)**: Stock-specific ecosystem reports (pioneered by North Pacific, adopted by Northeast) link environmental drivers to individual stock productivity
+**Stakeholder perceptions**: In some regions, considering ecosystem information is viewed as only increasing restrictions, rather than expanding opportunities. 
 
-3. **Stakeholder Co-Production**: Most FEPs emphasize collaborative development of ecosystem models and indicators with fishers, managers, and scientists
+## Successful Practices
 
-4. **Actionable Processes**: "Action modules" (North Pacific), "Initiatives" (Pacific), and "Fishery Ecosystem Issues" (Gulf) provide structured pathways from ecosystem plans to management action
+1. **Iterative Co-Development**: Ecosystem reports have been restructured with Council feedback in several regions, enhancing report utility. Most FEPs emphasize collaborative development of problem statements, analyses, conceptual models, model scenarios, and indicators with fishers, managers, and scientists.
+
+2. **Risk-Based Frameworks**: North Pacific, Pacific, New England, Mid-Atlantic, and Caribbean are developing or have implemented indicator-based risk assessments to adjust catch advice and/or to support strategic decisions.
+
+3. **Actionable FEPs**: "Action modules" (North Pacific), "Initiatives" (Pacific), and "Fishery Ecosystem Issues" (Gulf) provide structured pathways from fishery ecosystem plans to management action for specific, Council-selected issues.
+
+4. **Multi-scale Ecosystem Information**: Regular reporting at the ecosystem scale provides context for decisions and familiarity with ecosystem data. Stock-specific ecosystem reports link environmental drivers to individual stock productivity for use in stock assessment and catch specification. A structured dialogue process between ecosystem and stock assessment scientists is producing similar stock-level information in the Pacific.
+
 
 ## SAFMC Unique Strengths
 
-- **Habitat-Ecosystem Integration**: Only Council explicitly linking EFH policies with ecosystem approaches through comprehensive policy statements
-- **Citizen Science**: Proactive incorporation of participatory data collection
-- **Recent Assessments**: Current fish CVA (2023) and fishing community CVA (2022) provide ready-to-use information
-
+- **Habitat-Ecosystem Integration**: Ecosystem approaches and some indicators are identified in comprehensive policy statements 
+- **Citizen Science**: Proactive incorporation of participatory data collection 
+- **Existing Ecosystem Products**: Recent ESR, fish CVA, and fishing community CVA provide ready-to-use information
+- **Modeling Investments**: The regional food web model is poised to address Council questions 
+ 
 ## Preliminary Recommendations for SAFMC
 
-1. **Leverage Existing Products**: Align indicators from the 2021 South Atlantic ESR with objectives in EFH policy documents and CVA results to evaluate whether an integrated risk assessment framework could be developed
+The South Atlantic's combination of habitat focus, existing ecosystem tools, and commitment to stakeholder engagement provides a strong foundation for advancing ecosystem-based fishery management in ways responsive to the region's unique challenges and opportunities.
 
-2. **Hybrid Approach**: Given mix of data-rich and data-limited stocks, consider combining approaches from multiple Councils rather than adopting a single model
+1. **Leverage Existing Products**: Align indicators from the South Atlantic ESR with objectives in EFH policy documents and CVA results to evaluate whether an integrated risk assessment framework could be developed
+
+2. **Hybrid Approach**: Given mix of data-rich and data-limited stocks across diverse habitats, combining aspects of successful practices from different Councils has more potential than adopting a particular Council's ecosystem approach
 
 3. **Formalize Action Process**: Consider a process to develop explicit ecosystem initiatives or issues (similar to Pacific, North Pacific, Gulf) to move from planning to tangible management actions on priority topics
 
-4. **Update Reporting Frequency**: Work toward more regular ecosystem reporting using streamlined automation processes developed for the Caribbean ESR
+4. **Update Reporting Frequency**: Work toward more regular ecosystem reporting focused on Council-derived objectives and associated indicators produced with streamlined automation processes developed for the Caribbean ESR
 
 5. **Expand CVA Use**: Consider climate vulnerability information in management processes where characterizing uncertainty is important
 
-## Resource Considerations
-
-Councils with annual ecosystem reporting dedicate staff resources to production, supplemented by contributions from diverse regional scientists. Southeast Fisheries Science Center serves three Councils (Caribbean, Gulf, South Atlantic) with limited dedicated ecosystem staff, though recent process improvements may enable more frequent updates across all three regions.
-
+6. **Explore Novel Approaches**: Evaluate multispecies management strategies using the existing food web model, considering both commercial yield and recreational fishing opportunity objectives
+<!--
 ---
 
-**Full report contains**: Detailed product comparisons across all Councils, comprehensive indicator tables, structured interview results (in progress), and specific pathways for SAFMC implementation addressing both annual catch advice and other management decisions.
-
+**Full report contains**: Detailed product comparisons across all Councils, comprehensive indicator tables, and semi-structured interview results.
 -->
 
 # Introduction
@@ -1129,7 +1139,7 @@ flextable::flextable((esrsdetls[[ESRname]]))|>
 
 A CVA for 71 fish and invertebrate species [@burton_climate_2023; @craig_climate_2025] is complete, as well as analysis for South Atlantic and Gulf fishing communities [@seara_community_2022]. Marine mammal (108 stocks) and highly migratory fish (58 stocks) climate vulnerability has also been assessed for the entire Atlantic Coast [@lettrich_vulnerability_2023; @loughran_climate_2025]. These documents contain indicators that represent a starting point towards meeting the needs identified in the EFH policy documents above. In addition, the fish CVA might inform the climate portion of the P* process used to set ABC for stocks in the Dolphin-Wahoo, Golden Crab, and Snapper-Grouper FMPs. 
 
-In addition to these data sources, the South Atlantic, well-developed processes to integrate stakeholder ecosystem knowledge [@mcpherson_participatory_2022], and the results of a joint workshop that identified data sources for ecosystem indicators throughout the U.S. East Coast [@saba_summary_2023]. 
+In addition to these data sources, the South Atlantic has examples of well-developed processes to integrate stakeholder ecosystem knowledge [@mcpherson_participatory_2022], and the results of a joint workshop that identified data sources for ecosystem indicators throughout the U.S. East Coast [@saba_summary_2023]. 
 
 SAFMC staff identified many successes as well as significant challenges to using ecosystem information within fishery management processes in the region. Chief among the successes is having an ESR and a CVA for the region, as well as the current Council process that prioritizes habitat considerations for most stocks, along with the long term vision to integrate habitat ad ecosystem approaches. The established Habitat and Ecosystem Advisory Panel is actively developing policy and willing to do technical work, including developing goals and objectives necessary to develop Integrated Ecosystem Assessment in the region. Climate coordination with the other East Coast Councils and ASMFC is considered a successful process. Collaboration with SEFMC's ecosystem team and the food web modeling contractors was considered excellent and productive. SAFMC's citizen science program designs specific projects to address management needs and collect usable data; this program also generates positive interactions with regional fishermen. In addition, the Fishery Performance Reports are successful in bringing fisher observations and perspectives into the management process. Having this input prior to conducting stock assessments is valuable, and as these reports are repeated over time they may develop into a useful time series. Investment in ecosystem modeling efforts over the long term has resulted in the model now successfully providing information for specific Council questions. 
 
