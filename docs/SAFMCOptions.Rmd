@@ -1,0 +1,173 @@
+---
+title: "SAFMC Ecosystem Options"
+author: "Sarah Gaichas, Hydra Scientific LLC"
+date: "`r Sys.Date()`"
+output:
+  bookdown::html_document2:
+    code_fold: hide
+    df_print: paged
+    toc: true
+    toc_float: true
+  bookdown::pdf_document2:
+    includes:
+      in_header: latex/header1.tex
+    keep_tex: true
+    toc: false
+    number_sections: false
+  pdf_document:
+    toc: false
+  word_document: default
+  html_document:
+    df_print: paged
+    toc: true
+    toc_float: true
+subtitle: DRAFT for South Atlantic Fishery Management Council
+csl: plos.csl
+geometry: margin = 0.5in
+bibliography: operationalSOE.bib
+link-citations: true
+urlcolor: blue
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      message = FALSE,
+                      warning = FALSE,
+                      fig.align = 'center')
+
+library(tidyverse)
+library(flextable) #hopefully makes actual tables in word
+set_flextable_defaults(font.size = 10, padding = 5,
+                       fonts_ignore=TRUE) #for latex
+
+```
+
+# Executive Summary
+
+# Introduction
+
+Federal Fishery Management Councils along the U.S. East Coast have been working towards improved management coordination and collaboration for the past several years under the [East Coast Scenario Planning Initiative](https://www.mafmc.org/climate-change-scenario-planning) and subsequent [East Coast Coordination Group](https://www.mafmc.org/east-coast-coordination-group). The purpose of the group is to improve management success in the face of changing ocean conditions and stock distributions that are outside historical bounds; in particular, across traditional management boundaries. A Potential Action Menu was developed for the Coordination Group to improve responsiveness and resilience in fishery management under changing conditions. A key Potential Action Menu item is identifying ecosystem information that can be used by Councils to evaluate changes in ecosystems and fishery resources, and ultimately to develop management that is robust to these changes. The South Atlantic Fishery Management Council (SAFMC) seeks to identify ecosystem data relevant to its region and managed resources, and to develop strategies to make the best use of ecosystem information in management. 
+
+## Project Overview
+
+Ecosystem information and data products are used in different ways across the U.S. Fishery Management Councils, depending on regional needs and information availability. To enhance opportunities for the SAFMC to use ecosystem information to support fishery management, an ecosystem information review was conducted to develop recommendations for ways to incorporate ecosystem information into SAFMC fisheries management processes. First, a comprehensive literature review was conducted and combined with structured interviews of key regional personnel to document ecosystem information sources, data products, and processes where ecosystem information is used for each U.S. Fishery Management Council, including SAFMC. This comprehensive review placed current SAFMC practice and products in the context of the experience of all other U.S. Councils, and set the stage to identify opportunities to use its existing ecosystem information resources, including an ecosystem status report, climate vulnerability analyses for fish and fishing communities, and citizen science program. 
+
+Based on the completed review, opportunities to use ecosystem information in SAFMC processes will now be identified, and practical steps for implementation will be outlined in the current report. 
+<!--
+All Councils set annual catch advice, and there are multiple other management decisions where ecosystem information may help reduce uncertainty and support improved management outcomes. The next steps in this project will address both annual catch advice and other SAFMC management actions. The project will evaluate whether products such as Ecosystem Socioeconomic Profiles would be useful and practical for SAFMC catch specification processes given data and staff resources, whether Climate Vulnerability Analysis might be useful for assessing uncertainty and risk in adjusting catch levels, and what other approaches to integrating ecosystem information into catch specification would be feasible. The project will also systematically review SAFMC actions for the past 3-5 years to identify current and potential pathways for the use of ecosystem information. This review will include inter-jurisdictional processes such as the East Coast Climate Scenario Planning and subsequent East Coast Coordination Group. Based on this review, management decisions will be classified by data needs and process timelines to develop a prioritized list of processes linked to ecosystem information and recommend practical pathways for implementation. Example management decisions may include spatial allocation of catch, seasonal openings and closures, or bycatch management, each requiring indicators at different scales. The project will evaluate whether risk based frameworks are appropriate for these decisions, and specify indicators necessary to support decisions. The project will also explore whether global and regional ocean physics datasets could provide useful indicators for SAFMC decisions, using methods developed for the Northeast U.S. shelf. Finally, the project will review current SAFMC cooperative research and citizen science programs and suggest where expansion of these programs would fill the highest priority ecosystem data gaps associated with key management decisions or validate information coming from other sources.
+-->
+
+## Objectives
+
+This report addresses the second and third Project objectives:
+
+2) Identify opportunities and methods for incorporating identified ecosystem information into
+SAFMC management processes, including inter-jurisdictional management decision-making
+processes, and identify practical requirements for successful implementation (e.g. data quality,
+frequency of information updates, regional council process consistency, implementation
+timelines); and
+
+3) Identify opportunities to continue to expand cooperative, constituent-engaged data collection
+and research to improve the available ecosystem information in the South Atlantic region (e.g.,
+study fleets, cooperative research, citizen science).
+
+## Review Results
+
+Briefly, the [All Council Ecosystem Data Review](https://sgaichas.github.io/SAFMCindicators/AllCouncilDataReview.html) found a diversity of successful Council ecosystem approaches based on regional contexts and information availability, identified common management concerns, and highlighted potential ways forward for SAFMC that are further explored and detailed in this document. Common management concerns include food webs and climate change, with multiple Councils addressing forage fish management and all Councils experiencing rapid ecosystem changes. Even data-rich regions with long-term ecosystem reporting have experienced unexpected stock collapses, highlighting the need for climate-ready management approaches. Common challenges include the inherent complexity of ecosystem information, resource constraints, and stakeholder perceptions. In interviews, Council staff emphasized the need to provide information in "digestible packets," with clear linkages to management processes and decisions. Developing streamlined processes for both producing ecosystem information and for Council review and action were emphasized across regions; even data-rich regions identified capacity limitations for integrating ecosystem information into management. Finally, in some regions, stakeholders view ecosystem considerations as only increasing restrictions, rather than expanding opportunities. 
+
+Successful practices for the use of ecosystem information were identified across Council regions, all of which can be tailored to the South Atlantic context. 
+
+1. **Iterative Co-Development**: Ecosystem reports have been restructured with Council feedback in several regions, enhancing report utility. Most FEPs emphasize collaborative development of problem statements, analyses, conceptual models, model scenarios, and indicators with fishers, managers, and scientists.
+
+2. **Risk-Based Frameworks**: North Pacific, Pacific, New England, Mid-Atlantic, and Caribbean are developing or have implemented indicator-based risk assessments to adjust catch advice and/or to support strategic decisions. Risk policies and ABC frameworks currently in development in the Pacific and New England emphasize a "two way street" of both increased precaution with increased ecosystem risk and higher risk tolerance/catch potential with decreased ecosystem risk.  
+
+3. **Actionable FEPs**: "Action modules" (North Pacific), "Initiatives" (Pacific), and "Fishery Ecosystem Issues" (Gulf) provide structured pathways from fishery ecosystem plans to management action for specific, Council-selected issues.
+
+4. **Multi-scale Ecosystem Information**: Regular reporting at the ecosystem scale provides context for decisions and familiarity with ecosystem data. Stock-specific ecosystem reports link environmental drivers to individual stock productivity for use in stock assessment and catch specification. Streamlined processes can produce this information: a structured dialogue process between ecosystem and stock assessment scientists is producing similar stock-level information in the Pacific.
+
+The South Atlantic Fishery Management Council stood out among Councils with unique strengths for further developing its ecosystem approaches, including habitat and ecosystem integration, an advanced citizen science program, existing ecosystem data products, and long term ecosystem modeling investments. First, SAFMC has always integrated habitat and ecosystem approaches, in contrast to many Councils where habitat and ecosystem efforts were described as "siloed." SAFMC explicitly links EFH policies with ecosystem approaches through comprehensive policy statements. 
+*  Citizen Science: Proactive incorporation of participatory data collection 
+*  Existing Products: Recent ESR, fish CVA, and fishing community CVA provide ready-to-use information
+*  Modeling Investments: The regional food web model is poised to address Council questions
+
+
+## Initial Recommendations for SAFMC
+
+The South Atlantic's combination of habitat focus, existing ecosystem tools, and commitment to stakeholder engagement provides a strong foundation for advancing ecosystem-based fishery management in ways responsive to the region's unique challenges and opportunities.
+
+*  Hybrid Approach: Given mix of data-rich and data-limited stocks across diverse habitats, combining aspects of successful practices from different Councils has more potential than adopting a particular Council’s ecosystem approach
+
+*  Leverage Existing Products: Align indicators from the South Atlantic ESR with objectives in EFH policy documents and CVA results to evaluate whether an integrated risk assessment framework could be developed
+
+*  Formalize Action Process: Consider a process to develop explicit ecosystem initiatives or issues (similar to Pacific, North Pacific, Gulf) to move from planning to tangible management actions on priority topics
+
+*  Update Reporting Frequency: Work toward more regular ecosystem reporting focused on Council-derived objectives and associated indicators produced with streamlined automation processes developed for the Caribbean ESR
+
+*  Expand CVA Use: Consider climate vulnerability information in management processes where characterizing uncertainty is important (SSC ABC decisions)
+
+*  Explore Novel Approaches: Evaluate multispecies management strategies using the existing food web model, considering both commercial yield and recreational fishing opportunity objectives
+
+In this report, multiple approaches are used to outline practical next steps for SAFMC's use of ecosystem information. First, over three years of Council actions were systematically to identify current and potential pathways for the use of ecosystem information. Based on this review, management decisions were classified by data needs and process timelines to develop a prioritized list of processes linked to ecosystem information and recommend practical pathways for implementation, some of which could be supported by current or new citizen science programs. Given the Council emphasis on habitat issues, a second approach reviewed habitat FMPs and other policy documents along with current ecosystem data products to evaluate "quick wins" aligning objectives and current indicators, and identifying where data from citizen science programs might augment existing indicator data products. In the third approach, the current Council catch specification process, including SSC ABC decisions, was evaluated to determine whether products such as Ecosystem Socioeconomic Profiles would be useful and practical for SAFMC catch specification processes given data and staff resources, whether Climate Vulnerability Analysis might be useful for assessing uncertainty and risk SSC ABC determination, and what other approaches to integrating ecosystem information into catch specification would be feasible. A fourth approach evaluated the feasibility of developing ocean indicators from global and regional ocean physics datasets for SAFMC habitat or other decisions, using methods developed for the Northeast U.S. shelf. Potential citizen science programs for validating ocean model based indicators were identified based on existing programs in other regions.  A fifth approach outlined potential use of the Council's food web model for evaluating multispecies management strategies or harvest control rules, with decision points for Council consideration. 
+
+# Methods
+
+## 3+ Year Action Review
+
+Reviewed Council Actions from March 2023-March 2026 meetings basedon posted Committee Reports and Motion summaries, also reviewed posted workplans and current workplan from John Hadley
+
+## FMP Objectives/Indicators Alignment
+
+Reviewed EFH policy documents and current ESR indicators, aligned where possible and highlighted gaps
+
+## Indictor Opportunities for SSC ABC Setting 
+
+Current risk policy and ABC approach, compare with similar Council approaches and evaluate use of existing ESR and CVA data
+
+Discuss with SSC in April 2026
+
+## Prototype Indicator Development
+
+Bottom temperature in space over time, characterize habitat conditions using GLORYS data, develop workflow
+
+## Multispecies MSE Potential
+
+Outline analysis using FW model, Rpath MSE capabilities, identify needs and next steps
+
+
+# Results
+
+## 3+ Year Action Review
+
+
+## FMP Objectives/Indicators Alignment
+
+
+## Indictor Opportunities for SSC ABC Setting 
+
+
+## Prototype Indicator Development
+
+
+## Multispecies MSE Potential
+
+
+
+# Discussion
+
+## Synthesis of results
+
+
+## Balancing resources
+
+
+## Potential next steps (short term)
+
+
+## Potential next steps (long term)
+
+
+
+# References
+
+
+
