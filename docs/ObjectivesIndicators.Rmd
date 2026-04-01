@@ -3,12 +3,12 @@ title: "SAFMC Policy Objectives and Existing Indicators"
 author: "Sarah Gaichas"
 date: "`r Sys.Date()`"
 output:
-  pdf_document:
-    toc: true
   html_document:
     code_fold: hide
     toc: true
     toc_float: true
+  pdf_document:
+    toc: true
   word_document:
     toc: true
 ---
@@ -54,7 +54,9 @@ All policy documents were reviewed by the author. Initial matches with ESR indic
 
 ## South Atlantic Food Webs and Connectivity Policy
 
-This document outlines 9 policies and 9 research and information needs. Research needs are re-aligned with policies here and then aligned with existing indicators in the following table.
+This document outlines 9 policies and 9 research and information needs. 
+
+Research needs are broader and so considered separate from policies here. Both are aligned with existing indicators in the following tables.
 
 ```{r FWpolicy}
 
@@ -77,7 +79,7 @@ FWcrosswalk <- data.frame(Policy = c("Forage Fisheries",
                                     "Account for invasive species impacts in management actions",
                                     "Consider human health and food web impacts"
                                     ),
-                          Indicator = c("Forage stock abundance and dynamics for important forage by FMP (Appendix A)",
+                          ProposedInd = c("Forage stock abundance and dynamics for important forage by FMP (Appendix A)",
                                     "Mass, occurrence, and degree of overlap among multiple predators",
                                     "Not listed",
                                     "Not listed",
@@ -87,16 +89,36 @@ FWcrosswalk <- data.frame(Policy = c("Forage Fisheries",
                                     "Lionfish predation on and competition with other reef species",
                                     "Not listed"
                                     ),
-                          CurrentInd = c("",
-                                    "",
-                                    "",
-                                    "",
-                                    "",
-                                    "",
-                                    "",
-                                    "",
-                                    ""
-                                    )
+                          CurrentInd = c("Forage fish (menhaden) abundance and estuarine crab and shrimp landings",
+                                    "Average percent prey in diet by FMP (Appendix A)",
+                                    "None",
+                                    "None",
+                                    "None",
+                                    "None",
+                                    "None",
+                                    "None",
+                                    "None"
+                                    ),
+                          PotentialInd = c("Add food web estimated trends for aggregate forage",
+                                    "Diet analysis to estimate prey mass, occurrence, and degree of overlap among multiple predators",
+                                    "Estimate from food web model",
+                                    "Potentially from spatial food web model",
+                                    "Estimate from food web model",
+                                    "Identify desirable food web states and estimate from food web model",
+                                    "Use indicators for Prey Importance",
+                                    "Analysis of lionfish diet, distribution and abundance, potentially add to food web model",
+                                    "Potentially from seafood safety monitoring"
+                                    ),
+                          Feasibility = c("High: use current food web model",
+                                          "Unknown, dependent on quality of existing food habits data",
+                                          "High: use current food web model",
+                                          "Moderate: requires spatial update to food web model",
+                                          "High: use current food web model",
+                                          "High: use current food web model, pending Council ecosystem objectives",
+                                          "High: aggregate indicators available",
+                                          "Moderate: published lionfish diet studies exist, requires abundance and model update",
+                                          "Unknown, dependent on quality of existing mercury and other contaminant data")
+
                           )
 
 FWResearchCrosswalk <- data.frame(Research = c(),
@@ -104,6 +126,15 @@ FWResearchCrosswalk <- data.frame(Research = c(),
   
 )
 
+flextable::flextable(FWcrosswalk) |>
+  flextable::width(width = c(1,2,2,1,2,2)) 
+
 ```
+
+Overall, while only one indicator is reported in the 2021 ESR, at least 4 additional priorities can be assessed with indicators derived from the existing food web model. Two others could potentially be addressed with more labor intensive updates to the existing food web model by integrating spatial capabilities and existing literature. 
+
+Reference material:
+
+*  [Published lionfish studies](https://coastalscience.noaa.gov/news/lionfish-prefer-to-eat-local/)
 
 
