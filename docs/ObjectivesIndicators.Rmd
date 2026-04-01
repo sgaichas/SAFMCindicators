@@ -1,0 +1,109 @@
+---
+title: "SAFMC Policy Objectives and Existing Indicators"
+author: "Sarah Gaichas"
+date: "`r Sys.Date()`"
+output:
+  pdf_document:
+    toc: true
+  html_document:
+    code_fold: hide
+    toc: true
+    toc_float: true
+  word_document:
+    toc: true
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      message = FALSE,
+                      warning = FALSE)
+
+library(tidyverse)
+```
+
+# Introduction, Methods, and Caveats
+
+EFH policy documents and current ESR indicators [@craig_ecosystem_2021] were reviewed and aligned where possible, with gaps highlighted. Three key policy documents were reviewed in detail and aligned with existing indicators:
+
+* South Atlantic [Food Webs and Connectivity Policy](https://safmc.net/documents/policy-considerations-for-south-atlantic-food-webs-and-connectivity-and-essential-fish-habitats/) – January 2025
+    +  Connects EFH and food web considerations, identifies research needs 
+    +  Includes fish food habits data identifying top 10 prey by FMP
+    +  Includes food web model for the South Atlantic region (Fig. \@ref(fig:SAfoodweb))  
+* Climate Variability and Fisheries – December 2016
+    +  Connects changing ocean conditions with fish distribution shifts and changing timing, identifies research needs 
+    +  Notes these shifts present challenges for management and new fishery opportunities  
+    +  Requests annual summaries of climate indicators tracking ecological, social and economic trends 
+    +  Requests climate vulnerability analysis and management strategy evaluation focused on climate robustness
+* Marine Submerged Aquatic Vegetation (SAV) Habitat Policy – June 2014    
+    +  Describes ecosystem services provided by SAV and recent declines in this EFH
+    +  Outlines monitoring and research, planning, management, and education and enforcement to protect and restore SAV
+    
+Additional policies identify species with EFH and HAPC potentially impacted by each activity, and identify specific threats, best management practices and research needs. These were reviewed for alignment with existing indicators as time permitted:  
+
+*  Beach Dredging and Filling, Beach Renourishment and Large-Scale Coastal Engineering – September 2023 
+*  Energy Exploration, Development, Transportation and Hydropower Re-Licensing - November 2024   
+*  Alteration of Riverine, Estuarine and Nearshore Flows Policy – June 2014    
+*  Artificial Reef Habitat Policy Threats to EFH – September 2017    
+*  Marine and Estuarine Non-Native and Invasive Species Policy – June 2014    
+*  Interactions Between Essential Fish Habitats And Marine Aquaculture Policy – June 2014     
+
+Policy objectives without current indicators were identified. Information gaps that might be filled with Citizen Science programs were then identified, along with what those programs would need to deliver. 
+
+All policy documents were reviewed by the author. Initial matches with ESR indicators were taken from the ESR summary which used Claude Sonnet 4.5 to produce a draft summary and R code to compile indicator descriptions as described here. After initial matches were made, pertinent ESR sections were reviewed by the author to validate matches and provide indicator details. 
+
+# Policy Document Summary
+
+## South Atlantic Food Webs and Connectivity Policy
+
+This document outlines 9 policies and 9 research and information needs. Research needs are re-aligned with policies here and then aligned with existing indicators in the following table.
+
+```{r FWpolicy}
+
+FWcrosswalk <- data.frame(Policy = c("Forage Fisheries",
+                                     "Prey Importance",
+                                     "Food Web Indicators",
+                                     "Food Web Connectivity",
+                                     "Trophic Pathways",
+                                     "Food Web Models",
+                                     "Ecosystem Component Species",
+                                     "Invasive Species",
+                                     "Contaminants"),
+                          Brief = c("Consider forage impacts on predator productivity when setting catch limits",
+                                    "Classify important prey as ecosystem component species",
+                                    "Consider food web targets and thresholds for management action",
+                                    "Account for migratory species interactions across otherwise separate food webs",
+                                    "Maintain diverse (bottom up and top down) energy pathways",
+                                    "Use food web models in multiple decision contexts where appropriate",
+                                    "Definition: otherwise unmanaged species important to achieving ecosystem management objectives",
+                                    "Account for invasive species impacts in management actions",
+                                    "Consider human health and food web impacts"
+                                    ),
+                          Indicator = c("Forage stock abundance and dynamics for important forage by FMP (Appendix A)",
+                                    "Mass, occurrence, and degree of overlap among multiple predators",
+                                    "Not listed",
+                                    "Not listed",
+                                    "Diversity of energy pathways",
+                                    "Not listed",
+                                    "Not listed",
+                                    "Lionfish predation on and competition with other reef species",
+                                    "Not listed"
+                                    ),
+                          CurrentInd = c("",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    ""
+                                    )
+                          )
+
+FWResearchCrosswalk <- data.frame(Research = c(),
+                                  CurrentInd = c()
+  
+)
+
+```
+
+

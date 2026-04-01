@@ -85,10 +85,7 @@ Successful practices for the use of ecosystem information were identified across
 
 4. **Multi-scale Ecosystem Information**: Regular reporting at the ecosystem scale provides context for decisions and familiarity with ecosystem data. Stock-specific ecosystem reports link environmental drivers to individual stock productivity for use in stock assessment and catch specification. Streamlined processes can produce this information: a structured dialogue process between ecosystem and stock assessment scientists is producing similar stock-level information in the Pacific.
 
-The South Atlantic Fishery Management Council stood out among Councils with unique strengths for further developing its ecosystem approaches, including habitat and ecosystem integration, an advanced citizen science program, existing ecosystem data products, and long term ecosystem modeling investments. First, SAFMC has always integrated habitat and ecosystem approaches, in contrast to many Councils where habitat and ecosystem efforts were described as "siloed." SAFMC explicitly links EFH policies with ecosystem approaches through comprehensive policy statements. 
-*  Citizen Science: Proactive incorporation of participatory data collection 
-*  Existing Products: Recent ESR, fish CVA, and fishing community CVA provide ready-to-use information
-*  Modeling Investments: The regional food web model is poised to address Council questions
+The South Atlantic Fishery Management Council stood out among Councils with unique strengths for further developing its ecosystem approaches, including habitat and ecosystem integration, an advanced citizen science program, existing ecosystem data products, and long term ecosystem modeling investments. First, SAFMC has always integrated habitat and ecosystem approaches, in contrast to many Councils where habitat and ecosystem efforts were described as "siloed." SAFMC explicitly links EFH policies with ecosystem approaches through comprehensive policy statements. Second, SAFMC has a formal Citizen Science program in place to facilitate both participatory modeling [@mcpherson_participatory_2022] and data collection. Third, existing ecosystem data products are available in the region: a recent ESR [@craig_ecosystem_2021] and both fish [@burton_climate_2023; @craig_climate_2025] and fishing community [@seara_community_2022] CVAs provide ready-to-use information. Fourth, SAFMC has invested in ecosystem modeling over the long term, and its regional food web model has been reviewed and endorsed by the SSC, and is poised to address Council questions. 
 
 
 ## Initial Recommendations for SAFMC
@@ -113,25 +110,55 @@ In this report, multiple approaches are used to outline practical next steps for
 
 ## 3+ Year Action Review
 
-Reviewed Council Actions from March 2023-March 2026 meetings basedon posted Committee Reports and Motion summaries, also reviewed posted workplans and current workplan from John Hadley
+Council Actions from March 2023-March 2026 meetings were reviewed based on posted Committee Reports and Motion Summaries for each meeting. In addition, posted annual Council workplans and a current workplan provided by John Hadley were reviewed. Counts of actions by FMP were tallied and action types were classified into routine, tactical, occasional, and /or strategic decision types. 
+
+
 
 ## FMP Objectives/Indicators Alignment
 
-Reviewed EFH policy documents and current ESR indicators, aligned where possible and highlighted gaps
+EFH policy documents and current ESR indicators [@craig_ecosystem_2021] were reviewed and aligned where possible, with gaps highlighted. Three key policy documents were reviewed in detail and aligned with existing indicators:
+
+* South Atlantic [Food Webs and Connectivity Policy](https://safmc.net/documents/policy-considerations-for-south-atlantic-food-webs-and-connectivity-and-essential-fish-habitats/) – January 2025
+    +  Connects EFH and food web considerations, identifies research needs 
+    +  Includes fish food habits data identifying top 10 prey by FMP
+    +  Includes food web model for the South Atlantic region  
+* Climate Variability and Fisheries – December 2016
+    +  Connects changing ocean conditions with fish distribution shifts and changing timing, identifies research needs 
+    +  Notes these shifts present challenges for management and new fishery opportunities  
+    +  Requests annual summaries of climate indicators tracking ecological, social and economic trends 
+    +  Requests climate vulnerability analysis and management strategy evaluation focused on climate robustness
+* Marine Submerged Aquatic Vegetation (SAV) Habitat Policy – June 2014    
+    +  Describes ecosystem services provided by SAV and recent declines in this EFH
+    +  Outlines monitoring and research, planning, management, and education and enforcement to protect and restore SAV
+    
+Additional policies identify species with EFH and HAPC potentially impacted by each activity, and identify specific threats, best management practices and research needs. These were reviewed for alignment with existing indicators as time permitted:  
+
+*  Beach Dredging and Filling, Beach Renourishment and Large-Scale Coastal Engineering – September 2023 
+*  Energy Exploration, Development, Transportation and Hydropower Re-Licensing - November 2024   
+*  Alteration of Riverine, Estuarine and Nearshore Flows Policy – June 2014    
+*  Artificial Reef Habitat Policy Threats to EFH – September 2017    
+*  Marine and Estuarine Non-Native and Invasive Species Policy – June 2014    
+*  Interactions Between Essential Fish Habitats And Marine Aquaculture Policy – June 2014     
+
+Policy objectives without current indicators were identified. Information gaps that might be filled with Citizen Science programs were then identified, along with what those programs would need to deliver. 
 
 ## Indictor Opportunities for SSC ABC Setting 
 
-Current risk policy and ABC approach, compare with similar Council approaches and evaluate use of existing ESR and CVA data
+Reviewed current SAFMC risk policy and ABC approach, and evaluated the feasibility of adapting other Council approaches given existing ESR and CVA data. 
 
-Discuss with SSC in April 2026
+While some Councils use information from annual stock level Ecosystem and Socioeconomic Profiles [@behan_ecosystem_2022; @shotwell_synthesizing_2022; @shotwell_introducing_2023], others are developing a more streamlined process based on structured discussions between stock assessors and ecosystem scientists. This approach will be explored for the South Atlantic context. 
+
+Potential approaches were discussed with the SSC in April 2026. 
 
 ## Prototype Indicator Development
 
-Bottom temperature in space over time, characterize habitat conditions using GLORYS data, develop workflow
+A prototype habitat indicator characterizing bottom temperature in space over time was developed using GLORYS data with a reproducible workflow based on workflows used in the Northeast US by NEFSC. The objective is to produce maps and time series indicating where and when bottom temperature conditions approach or exceed stressful levels input particular species ranging from corals to targeted fish species. Stressful temperature levels would need to be determined from literature or other studies if unknown. 
+
+Validation of this model-based temperature indicator could be achieved with an expanded Citizen Science program; establishment of a formal Study Fleet such as that in the Northeast US [@jones_learning_2022] will be outlined if the indicator shows promise.  
 
 ## Multispecies MSE Potential
 
-Outline analysis using FW model, Rpath MSE capabilities, identify needs and next steps
+Outline analysis using FW model (identify level of disaggrgation needed), Rpath MSE capabilities, identify needs and next steps
 
 
 # Results
