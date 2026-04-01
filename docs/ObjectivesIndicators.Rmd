@@ -11,6 +11,10 @@ output:
     toc: true
   word_document:
     toc: true
+csl: plos.csl
+bibliography: operationalSOE.bib
+link-citations: true
+urlcolor: blue
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE,
@@ -91,7 +95,7 @@ FWcrosswalk <- data.frame(Policy = c("Forage Fisheries",
                                     ),
                           CurrentInd = c("Forage fish (menhaden) abundance and estuarine crab and shrimp landings",
                                     "Average percent prey in diet by FMP (Appendix A)",
-                                    "None",
+                                    "Mean Trophic Level",
                                     "None",
                                     "None",
                                     "None",
@@ -116,25 +120,75 @@ FWcrosswalk <- data.frame(Policy = c("Forage Fisheries",
                                           "High: use current food web model",
                                           "High: use current food web model, pending Council ecosystem objectives",
                                           "High: aggregate indicators available",
-                                          "Moderate: published lionfish diet studies exist, requires abundance and model update",
-                                          "Unknown, dependent on quality of existing mercury and other contaminant data")
+                                          "Moderate: published lionfish diet studies exist, requires abundance data and model update",
+                                          "Low: published contaminant studies have limited spatial scope")
 
                           )
 
-FWResearchCrosswalk <- data.frame(Research = c(),
-                                  CurrentInd = c()
-  
-)
 
 flextable::flextable(FWcrosswalk) |>
   flextable::width(width = c(1,2,2,1,2,2)) 
 
 ```
 
-Overall, while only one indicator is reported in the 2021 ESR, at least 4 additional priorities can be assessed with indicators derived from the existing food web model. Two others could potentially be addressed with more labor intensive updates to the existing food web model by integrating spatial capabilities and existing literature. 
+Overall, while two food web policy related indicators are reported in the 2021 ESR, at least 3 additional policies can be assessed with indicators derived from the existing food web model. Two others could potentially be addressed with more labor intensive updates to the existing food web model by integrating spatial capabilities and existing literature. Some literature information on invasive species diet is available [@peake_feeding_2018; @sancho_invasive_2018]. Contaminant studies are not included in the ESR, perhaps due to limited work in the South Atlantic region [@fair_persistent_2018; @barbieri_contaminants_2025; @thornton_multistressor_2026]. 
+
+```{r FWresearch}
+
+FWResearchCrosswalk <- data.frame(Research = c("Climate Impacts on Productivity",
+                                               "Offshore Habitats for Estuarine Species",
+                                               "Role of Forage Species",
+                                               "Fix Data Gaps",
+                                               "Overarching Risks",
+                                               "Species Risk Assessments",
+                                               "MSEs",
+                                               "Ecosystem Reference Points",
+                                               "Essential Fish Habitat"),
+                                  CurrentInd = c("CVA, Recruitment of Economically Important Species, Coral Bleaching",
+                                                 "Surface and Bottom Temperature, FL Current Transport, Gulf Stream Position, Upwelling, Primary Productivity, Ocean Acidification",
+                                                 "Forage fish (menhaden) abundance and estuarine crab and shrimp landings",
+                                                 "None",
+                                                 "CVA, Community CVA, Sea Level Rise, FL Current Transport, Gulf Stream Position, Upwelling",
+                                                 "CVA",
+                                                 "Peterson et al 2024",
+                                                 "None",
+                                                 "Wetlands and Forests, SAV, Oyster Reefs, Coral Demographics and Bleaching, Nearshore, Offshore Hard Bottom, and Coral Reef Fish Diversity and Abundance"),
+                                  PotentialAction = c("Prioritize and tailor to species based on CVA",
+                                                   "Prioritize and tailor existing indicators to species based on CVA",
+                                                   "Habitat specific managed species diet",
+                                                   "Ensure full use of ESR and CVA data, prioritize data for Citizen Science collection",
+                                                   "Consider FMP level risks to refine and align existing indicators with management",
+                                                   "Clarify additional factors to build on CVA",
+                                                   "List/provide model code, inputs, and outputs across analyses",
+                                                   "Develop objectives before reference points",
+                                                   "Prioritize and tailor existing indicators to EFH and HAPC"),
+                                  Feasibility = c("Moderate: resource intensive depending on priority species",
+                                                  "Moderate: resource intensive depending on priority species",
+                                                  "Unknown, dependent on quality of existing food habits data",
+                                                  "Mixed: will vary by application",
+                                                  "High: existing CVA and ESR applied by FMP",
+                                                  "Moderate: depends on additional factors needed",
+                                                  "High: central repository for existing models",
+                                                  "Moderate: requires Council objectives to test literature ELRPs",
+                                                  "High: many ESR indicators align with habitats")
+  
+)
+
+flextable::flextable(FWResearchCrosswalk) |>
+  flextable::width(width = c(2,2,2,2)) 
+
+
+```
+
+Research and information needs are already partially addressed by existing CVA and ESR indicators, and by current MSE efforts [@peterson_climate-readiness_2025]. Collaboration between the Council and NOAA/other partners to identify clear priorities and objectives for research is a practical next step. Many current ESR indicators have the potential to address specific Council needs; collaboration to tailor the indicators for specific uses is recommended. A structured decision process to identify and analyze ecosystem issues (similar to Pacific FEP Initiatives, North Pacific Action Modules, or Gulf Fishery Ecosystem Issues) could help achieve these goals. 
 
 Reference material:
 
 *  [Published lionfish studies](https://coastalscience.noaa.gov/news/lionfish-prefer-to-eat-local/)
 
+## Climate Variability and Fisheries
+
+
+
+# References
 
