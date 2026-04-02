@@ -300,19 +300,19 @@ SAVcrosswalk <- data.frame(Policy = c("Monitoring",
                                     "Not listed"
                                     ),
                           CurrentInd = c("SAV extent and % change",
-                                    "",
-                                    "",
-                                    ""
+                                    "SAV extent and % change, Coastal salinity",
+                                    "Coastal salinity, Stream flow, Nutrient loading, Coastan and Urban land use",
+                                    "Total ocean economy"
                                     ),
-                          PotentialInd = c("",
+                          PotentialInd = c("Same indicator with more comprehensive data in space and time",
                                     "Change in SAV distribution; habitat depth, sediment, light penetration, salinity, and wave energy",
                                     "Habitat disturbance indicators (dredging, construction, bottom contact from boating and fishing)",
-                                    ""
+                                    "Commercial and Recreational landings and value for SAV dependent species"
                                     ),
-                          Feasibility = c("",
-                                          "",
-                                          "",
-                                          ""
+                          Feasibility = c("Low-Moderate: depends on multiple states resources and coordination",
+                                          "Mixed: depends on water quality information availability",
+                                          "Low-Moderate: resource intensive to collate information from many local sources",
+                                          "High: subset of information from current indicators"
                                           )
 
                           )
@@ -362,6 +362,8 @@ flextable::flextable(SAVResearchCrosswalk) |>
 
 ```
 
+
+May contain some useful information but more marsh focused: https://www.conservationgateway.org/collections/land/resilient-coastal-sites-for-conservation-in-the-south-atlantic-us/
 
 # References
 
