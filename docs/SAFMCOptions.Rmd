@@ -122,16 +122,16 @@ EFH policy documents and current ESR indicators [@craig_ecosystem_2021] were rev
     +  Connects EFH and food web considerations, identifies research needs 
     +  Includes fish food habits data identifying top 10 prey by FMP
     +  Includes food web model for the South Atlantic region  
-* Climate Variability and Fisheries – December 2016
+* [Climate Variability and Fisheries](https://safmc.net/wp-content/uploads/document-blocks/2026/01/6bc7f4cd-7c4e-45d3-9c29-fddd42ea8f98-policy-considerations-for-south-atlantic-climate-variability-and-fisheries-and-essential-fish-habitats_march2018.pdf) – March 2018
     +  Connects changing ocean conditions with fish distribution shifts and changing timing, identifies research needs 
     +  Notes these shifts present challenges for management and new fishery opportunities  
     +  Requests annual summaries of climate indicators tracking ecological, social and economic trends 
     +  Requests climate vulnerability analysis and management strategy evaluation focused on climate robustness
-* Marine Submerged Aquatic Vegetation (SAV) Habitat Policy – June 2014    
+* [Marine Submerged Aquatic Vegetation](https://safmc.net/wp-content/uploads/document-blocks/2025/02/6bddb63d-9deb-4fd4-af8c-407d8cd56f17-policy-for-protection-and-enhancement-of-estuarine-and-marine-submerged-aquatic-vegetation-sav-habitat.pdf) (SAV) Habitat Policy – June 2014    
     +  Describes ecosystem services provided by SAV and recent declines in this EFH
     +  Outlines monitoring and research, planning, management, and education and enforcement to protect and restore SAV
     
-Additional policies identify species with EFH and HAPC potentially impacted by each activity, and identify specific threats, best management practices and research needs. These were reviewed for alignment with existing indicators as time permitted:  
+Additional policies identify species with EFH and HAPC potentially impacted by each activity, and identify specific threats, best management practices and research needs. These may be reviewed for alignment with existing indicators if time permits:   
 
 *  Beach Dredging and Filling, Beach Renourishment and Large-Scale Coastal Engineering – September 2023 
 *  Energy Exploration, Development, Transportation and Hydropower Re-Licensing - November 2024   

@@ -1,5 +1,5 @@
 ---
-title: "SAFMC Policy Objectives and Existing Indicators"
+title: "Aligning SAFMC Policy Objectives and Existing Indicators"
 author: "Sarah Gaichas"
 date: "`r Sys.Date()`"
 output:
@@ -26,22 +26,22 @@ library(tidyverse)
 
 # Introduction, Methods, and Caveats
 
-EFH policy documents and current ESR indicators [@craig_ecosystem_2021] were reviewed and aligned where possible, with gaps highlighted. Three key policy documents were reviewed in detail and aligned with existing indicators:
+Essential Fish Habitat (EFH) policy documents and current Ecosystem Status Report (ESR) indicators [@craig_ecosystem_2021] were reviewed and aligned where possible, with gaps highlighted. Three key policy documents were reviewed in detail and aligned with existing indicators:
 
 * South Atlantic [Food Webs and Connectivity Policy](https://safmc.net/documents/policy-considerations-for-south-atlantic-food-webs-and-connectivity-and-essential-fish-habitats/) – January 2025
     +  Connects EFH and food web considerations, identifies research needs 
     +  Includes fish food habits data identifying top 10 prey by FMP
-    +  Includes food web model for the South Atlantic region (Fig. \@ref(fig:SAfoodweb))  
-* Climate Variability and Fisheries – December 2016
+    +  Includes food web model for the South Atlantic region
+* [Climate Variability and Fisheries](https://safmc.net/wp-content/uploads/document-blocks/2026/01/6bc7f4cd-7c4e-45d3-9c29-fddd42ea8f98-policy-considerations-for-south-atlantic-climate-variability-and-fisheries-and-essential-fish-habitats_march2018.pdf) – March 2018
     +  Connects changing ocean conditions with fish distribution shifts and changing timing, identifies research needs 
     +  Notes these shifts present challenges for management and new fishery opportunities  
     +  Requests annual summaries of climate indicators tracking ecological, social and economic trends 
     +  Requests climate vulnerability analysis and management strategy evaluation focused on climate robustness
-* Marine Submerged Aquatic Vegetation (SAV) Habitat Policy – June 2014    
+* [Marine Submerged Aquatic Vegetation](https://safmc.net/wp-content/uploads/document-blocks/2025/02/6bddb63d-9deb-4fd4-af8c-407d8cd56f17-policy-for-protection-and-enhancement-of-estuarine-and-marine-submerged-aquatic-vegetation-sav-habitat.pdf) - June 2014    
     +  Describes ecosystem services provided by SAV and recent declines in this EFH
     +  Outlines monitoring and research, planning, management, and education and enforcement to protect and restore SAV
     
-Additional policies identify species with EFH and HAPC potentially impacted by each activity, and identify specific threats, best management practices and research needs. These were reviewed for alignment with existing indicators as time permitted:  
+Additional policies identify species with EFH and HAPC potentially impacted by each activity, and identify specific threats, best management practices and research needs. These may be reviewed for alignment with existing indicators if time permits:  
 
 *  Beach Dredging and Filling, Beach Renourishment and Large-Scale Coastal Engineering – September 2023 
 *  Energy Exploration, Development, Transportation and Hydropower Re-Licensing - November 2024   
@@ -150,7 +150,7 @@ FWResearchCrosswalk <- data.frame(Research = c("Climate Impacts on Productivity"
                                                  "None",
                                                  "CVA, Community CVA, Sea Level Rise, FL Current Transport, Gulf Stream Position, Upwelling",
                                                  "CVA",
-                                                 "Peterson et al 2024",
+                                                 "Peterson et al 2025",
                                                  "None",
                                                  "Wetlands and Forests, SAV, Oyster Reefs, Coral Demographics and Bleaching, Nearshore, Offshore Hard Bottom, and Coral Reef Fish Diversity and Abundance"),
                                   PotentialAction = c("Prioritize and tailor to species based on CVA",
@@ -180,7 +180,7 @@ flextable::flextable(FWResearchCrosswalk) |>
 
 ```
 
-Research and information needs are already partially addressed by existing CVA and ESR indicators, and by current MSE efforts [@peterson_climate-readiness_2025]. Collaboration between the Council and NOAA/other partners to identify clear priorities and objectives for research is a practical next step. Many current ESR indicators have the potential to address specific Council needs; collaboration to tailor the indicators for specific uses is recommended. A structured decision process to identify and analyze ecosystem issues (similar to Pacific FEP Initiatives, North Pacific Action Modules, or Gulf Fishery Ecosystem Issues) could help achieve these goals. 
+Research and information needs are already partially addressed by existing CVA [@burton_climate_2023; @craig_climate_2025] and ESR indicators, and by current MSE efforts [@peterson_climate-readiness_2025]. Collaboration between the Council and NOAA/other partners to identify clear priorities and objectives for research is a practical next step. Many current ESR indicators have the potential to address specific Council needs; collaboration to tailor the indicators for specific uses is recommended. A structured decision process to identify and analyze ecosystem issues (similar to Pacific FEP Initiatives, North Pacific Action Modules, or Gulf Fishery Ecosystem Issues) could help achieve these goals. 
 
 Reference material:
 
@@ -188,6 +188,179 @@ Reference material:
 
 ## Climate Variability and Fisheries
 
+This document describes historical and projected ocean conditions in the South Atlantic, climate effects on fish, habitats, and fisheries, information gaps and research priorities, and relationships with SAFMC management. Here, stated management policies and research priorities are aligned with existing indicators. This policy was last updated in 2018, before the 2021 ESR and 2023 CVA were released.
+
+```{r ClimPolicy}
+
+Climcrosswalk <- data.frame(Policy = c("Collaboration",
+                                     "Climate Indicators",
+                                     "Tradeoffs",
+                                     "Precautionary",
+                                     "New Fisheries"),
+                          Brief = c("Work across jurisdictions with multiple organizations and stakeholders",
+                                    "Develop and present climate indicators annually",
+                                    "Consider increased uncertainty and changing productivity in management",
+                                    "Apply precautionary principle under uncertain future climate conditions",
+                                    "Manage new fishery development to avoid negative EFH impacts"
+                                    ),
+                          ProposedInd = c("Species distribution shifts",
+                                    "Climate, ecological, social, and economic trends and status, environmentally driven fishery trends",
+                                    "Uncertainty and stock productivity",
+                                    "Not listed",
+                                    "Not listed"
+                                    ),
+                          CurrentInd = c("None",
+                                    "5 Climate, 13 Physical, 5 Habitat, 4 Low and 6 Upper Trophic Level, 8 Fishery, Social, and Economic indicator categories",
+                                    "Biomass and Recruitment of Commercially Important Species, Shrimp, Crab, and Oyster landings",
+                                    "None",
+                                    "None"
+                                    ),
+                          PotentialInd = c("Latitudinal and depth shifts for all or individual species",
+                                    "Review and refine existing before considering additional indicators",
+                                    "Short term ocean forecasts including uncertainty, MSE with changing productivity",
+                                    "Short term ocean forecasts including uncertainty",
+                                    "Landings of currently unmanaged species"
+                                    ),
+                          Feasibility = c("High: available on DisMAP website",
+                                          "High: prioritize available indicators for refinement",
+                                          "Moderate: resources required to integrate regional ocean forecasts and uncertainty in MSE",
+                                          "Moderate: resources required to process regional ocean forecasts",
+                                          "Moderate: resources required to compile information from multiple sources"
+                                          )
+
+                          )
+
+
+flextable::flextable(Climcrosswalk) |>
+  flextable::width(width = c(1,2,2,1,2,2)) 
+
+
+```
+
+Many current ESR indicators directly address Climate Variability and Fisheries policy statements. Current gaps related to species distribution shifts and forecast conditions could be filled with existing information. [DisMAP indicators](https://apps-st.fisheries.noaa.gov/dismap/DisMAP.html#) summarizing species distribution from the SEAMAP survey are available. [Regional ocean model forecasts](https://psl.noaa.gov/cefi_portal/) are available for the South Atlantic region, but resources are required to process, evaluate, and translate these outputs into indicators for management review. Some Councils already receive reports of unmanaged species landings compiled by NOAA Regional Offices. However, these reports focus on commercial landings because there are few information sources for recreational landings of unmanaged species.
+
+```{r ClimResearch}
+
+ClimateResearchCrosswalk <- data.frame(Research = c("Climate Impacts on Productivity",
+                                               "Climate Impacts in Assessments",
+                                               "3D Estuarine-Coastal-Ocean Observations",
+                                               "Climate Robust MSE",
+                                               "Socioeconomic Impacts and Fishery Responses",
+                                               "Offshore Habitats for Estuarine Species"),
+                                  CurrentInd = c("CVA combined with many ESR indicators",
+                                                 "ESR indicators need refinement for assessment application",
+                                                 "Surface and Bottom Temperature, FL Current Transport, Gulf Stream Position, Upwelling",
+                                                 "Peterson et al 2025",
+                                                 "CVA, Community CVA, Sea Level Rise, FL Current Transport, Gulf Stream Position, Upwelling",
+                                                 "Surface and Bottom Temperature, FL Current Transport, Gulf Stream Position, Upwelling, Primary Productivity, Ocean Acidification"),
+                                  PotentialAction = c("Prioritize and tailor existing indicators to species based on CVA",
+                                                   "Prioritize and tailor existing ESR indicators to assessments based on CVA",
+                                                   "Add ocean model reanalysis products (GLORYS) to existing indicators",
+                                                   "Consider standard climate scenarios in all MSEs",
+                                                   "Prioritize and tailor existing indicators",
+                                                   "Prioritize and tailor existing indicators to species based on CVA"),
+                                  Feasibility = c("Moderate: resource intensive depending on priority species",
+                                                  "Moderate: resource intensive depending on priority species",
+                                                  "High: apply methods and code developed in other regions",
+                                                  "High: develop simple climate scenarios as robustness tests",
+                                                  "High: existing CVA, Community CVA, and ESR indicators",
+                                                  "Moderate: resource intensive depending on priority species")
+  
+)
+
+flextable::flextable(ClimateResearchCrosswalk) |>
+  flextable::width(width = c(2,2,2,2)) 
+
+
+
+```
+
+There are multiple ways to move forward with Climate Variability and Fisheries policies and research priorities given existing indicators and analyses. An initial step is collaborative Council and NOAA review of current indicators to prioritize a subset for refinement and annual updates. The CVA results could help identify a subset of species or a representative species for each FMP for initial focus. Considerable effort towards understanding the social and economic context and community climate vulnerability already exists [@jepson_development_2013; @seara_community_2022] and can contribute to these efforts. Note that the last research priority here is identical to the second research priority identified in the Food Webs and Connectivity Policy.
+
+## Marine Submerged Aquatic Vegetation
+
+Submerged Aquatic Vegetation (SAV) or seagrass is an important habitat in the South Atlantic, found primarily in North Carolina and Florida coastal waters. SAFMC has designated SAV to be Essential Fish Habitat (EFH) for managed fish (snapper-grouper species and cobia) and invertebrates (Penaeid shrimp and spiny lobster), as well as a Habitat Area of Particular Concern (HAPC) for snapper-grouper species. 
+
+The Council does not directly manage many of the activities and conditions that affect SAV. The overall policy goal in this document is to support actions that protect and restore SAV throughout the South Atlantic. These actions require collaboration with the four South Atlantic states: North Carolina, South Carolina, Georgia, and Florida. 
+
+```{r SAVPolicy}
+
+SAVcrosswalk <- data.frame(Policy = c("Monitoring",
+                                     "Planning",
+                                     "Management",
+                                     "Educaiton and Enforcement"),
+                          Brief = c("Monitoring is needed for assessment and management",
+                                    "Establish goals, objectives, measures of success",
+                                    "Review existing human activity rules, water quality standards, and restoration guidelines",
+                                    "Analyze and communicate benefits of SAV protection, evaluate current enforcement"
+                                    ),
+                          ProposedInd = c("SAV distribution and shifts, water quality",
+                                    "Not listed",
+                                    "Not listed",
+                                    "Not listed"
+                                    ),
+                          CurrentInd = c("SAV extent and % change",
+                                    "",
+                                    "",
+                                    ""
+                                    ),
+                          PotentialInd = c("",
+                                    "Change in SAV distribution; habitat depth, sediment, light penetration, salinity, and wave energy",
+                                    "Habitat disturbance indicators (dredging, construction, bottom contact from boating and fishing)",
+                                    ""
+                                    ),
+                          Feasibility = c("",
+                                          "",
+                                          "",
+                                          ""
+                                          )
+
+                          )
+
+
+flextable::flextable(SAVcrosswalk) |>
+  flextable::width(width = c(1,2,2,1,2,2)) 
+
+
+```
+
+
+
+```{r SAVResearch}
+
+SAVResearchCrosswalk <- data.frame(Research = c("Standardize Mapping Protocols",
+                                               "EFH GIS Database",
+                                               "Evaluate Water Quality",
+                                               "Drivers of SAV Loss",
+                                               "Restoration Efficacy",
+                                               "Climate Impacts on SAV"),
+                                  CurrentInd = c("None",
+                                                 "SAV areal coverage and % change based on existing data",
+                                                 "Stream Flow, Nutrient Loading, Precipitation and Drought",
+                                                 "SAV, Stream Flow, Nutrient Loading, Precipitation and Drought, Sea Level Rise, Storms and Hurricanes, Primary Productivity, Human Population, Coastal Land Use",
+                                                 "None",
+                                                 "SAV, Surface and Bottom Temperature, Primary Productivity, Ocean Acidification"),
+                                  PotentialAction = c("",
+                                                   "",
+                                                   "",
+                                                   "",
+                                                   "",
+                                                   "Consider habitat climate vulnerability assessment"),
+                                  Feasibility = c("",
+                                                  "",
+                                                  "",
+                                                  "",
+                                                  "",
+                                                  "Moderate: resource intensive process")
+  
+)
+
+flextable::flextable(SAVResearchCrosswalk) |>
+  flextable::width(width = c(2,2,2,2)) 
+
+
+
+```
 
 
 # References
