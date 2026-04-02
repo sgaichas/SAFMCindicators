@@ -52,7 +52,7 @@ Additional policies identify species with EFH and HAPC potentially impacted by e
 
 Policy objectives without current indicators were identified. Information gaps that might be filled with Citizen Science programs were then identified, along with what those programs would need to deliver. 
 
-All policy documents were reviewed by the author. Initial matches with ESR indicators were taken from the ESR summary which used Claude Sonnet 4.5 to produce a draft summary and R code to compile indicator descriptions as described here. After initial matches were made, pertinent ESR sections were reviewed by the author to validate matches and provide indicator details. 
+All policy documents were reviewed by the author. Initial matches with ESR indicators were taken from the ESR summary which used Claude Sonnet 4.5 to produce a draft summary and R code to compile indicator descriptions as described [here](https://sgaichas.github.io/SAFMCindicators/ESRcomparisons.html). After initial matches were made, pertinent ESR sections were reviewed by the author to validate matches and provide indicator details. 
 
 # Policy Document Summary
 
@@ -127,7 +127,13 @@ FWcrosswalk <- data.frame(Policy = c("Forage Fisheries",
 
 
 flextable::flextable(FWcrosswalk) |>
-  flextable::width(width = c(1,2,2,1,2,2)) 
+  flextable::width(width = c(1,2,2,1,2,2)) |>
+  flextable::set_header_labels(Brief = "Brief Policy Description",
+                               ProposedInd = "Indicators Outlined in the Policy",
+                               CurrentInd = "Available Indicators",
+                               PotentialInd = "Potential Indicators",
+                               Feasibility = "Potential Indicator Feasibility") |>
+  flextable::set_caption("SAFMC Food Web and Connectivity Policy Objectives and Current Indicators")
 
 ```
 
@@ -175,7 +181,11 @@ FWResearchCrosswalk <- data.frame(Research = c("Climate Impacts on Productivity"
 )
 
 flextable::flextable(FWResearchCrosswalk) |>
-  flextable::width(width = c(2,2,2,2)) 
+  flextable::width(width = c(2,2,2,2)) |>
+  flextable::set_header_labels(CurrentInd = "Available Indicators",
+                               PotentialAction = "Potential Council Actions",
+                               Feasibility = "Potential Action Feasibility") |>
+  flextable::set_caption("SAFMC Food Web and Connectivity Research Needs and Current Indicators")
 
 
 ```
@@ -232,12 +242,19 @@ Climcrosswalk <- data.frame(Policy = c("Collaboration",
 
 
 flextable::flextable(Climcrosswalk) |>
-  flextable::width(width = c(1,2,2,1,2,2)) 
+  flextable::width(width = c(1,2,2,1,2,2)) |>
+  flextable::set_header_labels(Brief = "Brief Policy Description",
+                               ProposedInd = "Indicators Outlined in the Policy",
+                               CurrentInd = "Available Indicators",
+                               PotentialInd = "Potential Indicators",
+                               Feasibility = "Potential Indicator Feasibility") |>
+  flextable::set_caption("SAFMC Climate Variability and Fisheries Policy Objectives and Current Indicators")
+
 
 
 ```
 
-Many current ESR indicators directly address Climate Variability and Fisheries policy statements. Current gaps related to species distribution shifts and forecast conditions could be filled with existing information. [DisMAP indicators](https://apps-st.fisheries.noaa.gov/dismap/DisMAP.html#) summarizing species distribution from the SEAMAP survey are available. [Regional ocean model forecasts](https://psl.noaa.gov/cefi_portal/) are available for the South Atlantic region, but resources are required to process, evaluate, and translate these outputs into indicators for management review. Some Councils already receive reports of unmanaged species landings compiled by NOAA Regional Offices. However, these reports focus on commercial landings because there are few information sources for recreational landings of unmanaged species.
+Many current ESR indicators directly address Climate Variability and Fisheries policy statements. Current gaps related to species distribution shifts and forecast conditions could be filled with existing information. [DisMAP indicators](https://apps-st.fisheries.noaa.gov/dismap/DisMAP.html#) summarizing species distribution from the SEAMAP survey are available. [Regional ocean model forecasts](https://psl.noaa.gov/cefi_portal/) are available for the South Atlantic region, but resources are required to process, evaluate, and translate these outputs into indicators for management review. Some Councils already receive reports of [unmanaged species landings](https://safmc.net/documents/mafmcunmanagedcomlandings-pdf/) compiled by NOAA Regional Offices. However, these reports focus on commercial landings because there are few information sources for recreational landings of unmanaged species.
 
 ```{r ClimResearch}
 
@@ -269,7 +286,11 @@ ClimateResearchCrosswalk <- data.frame(Research = c("Climate Impacts on Producti
 )
 
 flextable::flextable(ClimateResearchCrosswalk) |>
-  flextable::width(width = c(2,2,2,2)) 
+  flextable::width(width = c(2,2,2,2)) |>
+  flextable::set_header_labels(CurrentInd = "Available Indicators",
+                               PotentialAction = "Potential Council Actions",
+                               Feasibility = "Potential Action Feasibility") |>
+  flextable::set_caption("SAFMC Climate Variability and Fisheries Research Needs and Current Indicators")
 
 
 
@@ -281,14 +302,14 @@ There are multiple ways to move forward with Climate Variability and Fisheries p
 
 Submerged Aquatic Vegetation (SAV) or seagrass is an important habitat in the South Atlantic, found primarily in North Carolina and Florida coastal waters. SAFMC has designated SAV to be Essential Fish Habitat (EFH) for managed fish (snapper-grouper species and cobia) and invertebrates (Penaeid shrimp and spiny lobster), as well as a Habitat Area of Particular Concern (HAPC) for snapper-grouper species. 
 
-The Council does not directly manage many of the activities and conditions that affect SAV. The overall policy goal in this document is to support actions that protect and restore SAV throughout the South Atlantic. These actions require collaboration with the four South Atlantic states: North Carolina, South Carolina, Georgia, and Florida. 
+The Council does not directly manage many of the activities and conditions that affect SAV. The overall policy goal in this document is to support actions that protect and restore SAV throughout the South Atlantic. These actions require collaboration with the four South Atlantic states: North Carolina, South Carolina, Georgia, and Florida, as well as local authorities. 
 
 ```{r SAVPolicy}
 
 SAVcrosswalk <- data.frame(Policy = c("Monitoring",
                                      "Planning",
                                      "Management",
-                                     "Educaiton and Enforcement"),
+                                     "Education and Enforcement"),
                           Brief = c("Monitoring is needed for assessment and management",
                                     "Establish goals, objectives, measures of success",
                                     "Review existing human activity rules, water quality standards, and restoration guidelines",
@@ -301,7 +322,7 @@ SAVcrosswalk <- data.frame(Policy = c("Monitoring",
                                     ),
                           CurrentInd = c("SAV extent and % change",
                                     "SAV extent and % change, Coastal salinity",
-                                    "Coastal salinity, Stream flow, Nutrient loading, Coastan and Urban land use",
+                                    "Coastal salinity, Stream flow, Nutrient loading, Coastal and Urban land use",
                                     "Total ocean economy"
                                     ),
                           PotentialInd = c("Same indicator with more comprehensive data in space and time",
@@ -319,12 +340,18 @@ SAVcrosswalk <- data.frame(Policy = c("Monitoring",
 
 
 flextable::flextable(SAVcrosswalk) |>
-  flextable::width(width = c(1,2,2,1,2,2)) 
+  flextable::width(width = c(1,2,2,1,2,2)) |>
+  flextable::set_header_labels(Brief = "Brief Policy Description",
+                               ProposedInd = "Indicators Outlined in the Policy",
+                               CurrentInd = "Available Indicators",
+                               PotentialInd = "Potential Indicators",
+                               Feasibility = "Potential Indicator Feasibility") |>
+  flextable::set_caption("SAFMC Submerged Aquatic Vegetation Policy Objectives and Current Indicators")
 
 
 ```
 
-
+Existing ESR indicators for SAV, coastal habitat attributes, land use and ocean economy align with SAV policy.  Additional indicators of SAV benefits to dependent managed species could be derived from current indicators for commercial and recreational landings and value. However, comprehensive SAV indicators and research would require dedicated effort from multiple partners. 
 
 ```{r SAVResearch}
 
@@ -340,28 +367,33 @@ SAVResearchCrosswalk <- data.frame(Research = c("Standardize Mapping Protocols",
                                                  "SAV, Stream Flow, Nutrient Loading, Precipitation and Drought, Sea Level Rise, Storms and Hurricanes, Primary Productivity, Human Population, Coastal Land Use",
                                                  "None",
                                                  "SAV, Surface and Bottom Temperature, Primary Productivity, Ocean Acidification"),
-                                  PotentialAction = c("",
-                                                   "",
-                                                   "",
-                                                   "",
-                                                   "",
+                                  PotentialAction = c("Collaborate with partners to design and implement regional surveys",
+                                                   "Expand Council EFH and HAPC maps",
+                                                   "Prioritize existing indicators for further refinement",
+                                                   "Prioritize existing indicators for further refinement",
+                                                   "Collaborate with partners",
                                                    "Consider habitat climate vulnerability assessment"),
-                                  Feasibility = c("",
-                                                  "",
-                                                  "",
-                                                  "",
-                                                  "",
+                                  Feasibility = c("Moderate: resource intensive proces",
+                                                  "Moderate: resource intensive process",
+                                                  "Moderate-High: may need additional indicators for water clarity",
+                                                  "High: many potential indicators for SAV drivers exist",
+                                                  "Moderate: resource intensive process",
                                                   "Moderate: resource intensive process")
   
 )
 
 flextable::flextable(SAVResearchCrosswalk) |>
-  flextable::width(width = c(2,2,2,2)) 
+  flextable::width(width = c(2,2,2,2)) |>
+  flextable::set_header_labels(CurrentInd = "Available Indicators",
+                               PotentialAction = "Potential Council Actions",
+                               Feasibility = "Potential Action Feasibility") |>
+  flextable::set_caption("SAFMC Submerged Aquatic Vegetation Research Needs and Current Indicators")
 
 
 
 ```
 
+In general, research priorities for SAV require more coordination and collaboration with state and local partners relative to the priorities above for food web connectivity and climate fisheries interactions. However, the research objectives are clearly stated and well focused. Initial steps could include evaluation and prioritization of ESR indicators for relevance to SAV extent and % change. A longer term project could consider habitat-climate vulnerability analysis as was done for Northeast US Atlantic habitats [@farr_assessment_2021], which would apply not just to SAV but to all Council designated EFH and HAPC.
 
 May contain some useful information but more marsh focused: https://www.conservationgateway.org/collections/land/resilient-coastal-sites-for-conservation-in-the-south-atlantic-us/
 
