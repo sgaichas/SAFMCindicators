@@ -110,9 +110,7 @@ In this report, multiple approaches are used to outline practical next steps for
 
 ## 3+ Year Action Review
 
-Council Actions from March 2023-March 2026 meetings were reviewed based on posted Committee Reports and Motion Summaries for each meeting. In addition, posted annual Council workplans and a current workplan provided by John Hadley were reviewed. Counts of actions by FMP were tallied and action types were classified into routine, tactical, occasional, and /or strategic decision types. 
-
-
+Council Actions from March 2023-March 2026 meetings were reviewed based on posted Committee Reports and Motion Summaries for each meeting. In addition, posted annual Council workplans and a current workplan provided by John Hadley were reviewed. Counts of actions by FMP were tallied and action types were classified into routine, tactical, occasional, and /or strategic decision types. The purpose of this was not to track changes in timelines for particular actions (which clearly happens) but to identify current and potential entry points for ecosystem information.
 
 ## Policy Objectives/Indicators Alignment
 
@@ -142,7 +140,7 @@ Additional policies identify species with EFH and HAPC potentially impacted by e
 
 Policy objectives without current indicators were identified. Information gaps that might be filled with Citizen Science programs were then identified, along with what those programs would need to deliver. 
 
-## Indictor Opportunities for SSC ABC Setting 
+## Indicator Opportunities for SSC ABC Setting 
 
 Reviewed current SAFMC risk policy and ABC approach, and evaluated the feasibility of adapting other Council approaches given existing ESR and CVA data. 
 
@@ -165,11 +163,13 @@ Outline analysis using FW model (identify level of disaggrgation needed), Rpath 
 
 ## 3+ Year Action Review
 
+[Preliminary results](https://sgaichas.github.io/SAFMCindicators/3YrsActions.html)
 
 ## Policy Objectives/Indicators Alignment
 
+[Preliminary results](https://sgaichas.github.io/SAFMCindicators/ObjectivesIndicators.html)
 
-## Indictor Opportunities for SSC ABC Setting 
+## Indicator Opportunities for SSC ABC Setting 
 
 
 ## Prototype Indicator Development
