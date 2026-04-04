@@ -1,0 +1,93 @@
+---
+title: "SAFMC Actions-3 year review"
+author: "Sarah Gaichas"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    code_fold: hide
+    toc: true
+    toc_float: true
+  pdf_document:
+    toc: true
+  word_document:
+    toc: true
+csl: plos.csl
+bibliography: operationalSOE.bib
+link-citations: true
+urlcolor: blue
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      message = FALSE,
+                      warning = FALSE)
+
+library(tidyverse)
+```
+
+# Introduction, Methods, and Caveats
+
+Council Actions from March 2023-March 2026 meetings were reviewed based on posted Committee Reports and Motion Summaries for each meeting. In addition, posted annual Council workplans and a current workplan provided by John Hadley were reviewed. Counts of actions by FMP were tallied and action types were classified into routine, tactical, occasional, and /or strategic decision types. The purpose of this was not to track changes in timelines for particular actions (which clearly happens) but to identify current and potential entry points for ecosystem information.
+
+Each summary motions document (or committee report, if not available) starting in March 2023 and ending in March 2026 was examined and the number of motions by committee tallied, along with comments on the action type. Full Council Closed Session motions related to committee or working group nominations were excluded. This information was entered into a table.
+
+# Results
+
+```{r motions}
+
+# do once with Oauth and save locally, rerun if google sheet changes
+# resultfile <- googledrive::drive_get("https://docs.google.com/spreadsheets/d/1b4n-8rTpLfs6W6exl1_3I2QHDEheHZz69HnpU_T96BA/edit?gid=0#gid=0")
+# 
+# motions <- googledrive::drive_download(resultfile, type = "csv", overwrite = TRUE) %>%
+#      {read.csv(.$local_path)}
+
+# once file has been downloaded use this
+motions <- read.csv("MotionsReview.csv",header=T)
+
+byFMP <- motions |>
+  dplyr::group_by(Committee) |>
+  dplyr::summarise(n = n(),
+                   perc = n/nrow(motions)*100) |>
+  dplyr::arrange(desc(perc))
+
+byTopic <- motions |>
+  dplyr::group_by(Topic) |>
+  dplyr::summarise(n = n(),
+                   perc = n/nrow(motions)*100) |>
+  dplyr::arrange(desc(perc))
+
+byDesc <- motions |>
+  dplyr::group_by(MotionDesc) |>
+  dplyr::summarise(n = n(),
+                   perc = n/nrow(motions)*100) |>
+  dplyr::arrange(desc(perc))
+
+```
+
+The Snapper Grouper Committee was responsible for more than half of Council Motions:
+
+```{r byFMP}
+flextable::flextable(byFMP)
+```
+
+Timing and Tasking comprised over 20% of motions, with SG Amendment 55 having over 10% of motions:
+
+```{r byTopic}
+byTopicAgg <- byTopic |>
+  dplyr::filter(n>1)
+
+flextable::flextable(byTopicAgg) |>
+  flextable::set_caption("Motions per Topic where Topics had > 1 Motion March 2023 - March 2026")
+```
+
+
+```{r byDesc}
+# byDescAgg <- byDesc |>
+#   dplyr::filter(n>1)
+# 
+# flextable::flextable(byDescAgg) |>
+#   flextable::set_caption("Motions per Description where Descriptions had > 1 Motion March 2023 - March 2026")
+```
+
+
+# References
+
