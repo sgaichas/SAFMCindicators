@@ -142,11 +142,9 @@ Policy objectives without current indicators were identified. Information gaps t
 
 ## Indicator Opportunities for SSC ABC Setting 
 
-Reviewed current SAFMC risk policy and ABC approach, and evaluated the feasibility of adapting other Council approaches given existing ESR and CVA data. 
+For catch advice, the project will evaluate whether products such as Ecosystem Socioeconomic Profiles (ESPs, [@behan_ecosystem_2022; @shotwell_synthesizing_2022; @shotwell_introducing_2023]) would be useful and practical for SAFMC catch specification processes given data and staff resources, whether Ecosystem Status Report (ESR, [@craig_ecosystem_2021]) indicators or Climate Vulnerability Analysis (CVA, [@burton_climate_2023; @craig_climate_2025]) might be useful for assessing uncertainty and risk in adjusting catch levels, and what other approaches to integrating ecosystem information into catch specification would be feasible. 
 
-While some Councils use information from annual stock level Ecosystem and Socioeconomic Profiles [@behan_ecosystem_2022; @shotwell_synthesizing_2022; @shotwell_introducing_2023], others are developing a more streamlined process based on structured discussions between stock assessors and ecosystem scientists. This approach will be explored for the South Atlantic context. 
-
-Potential approaches were discussed with the SSC in April 2026. 
+The current SAFMC risk policy and ABC approach were updated for three FMPs [in 2023](https://safmc.net/documents/abccram_06052023_submittal-pdf/). This approach classifies risk of overfishing based on multiple attributes, as outlined below. Risk evaluation could include an indicator-based approach. While some Councils use information from annual stock level ESPs or full system ESRs to evaluate risk when specifying catch levels, others are developing a more streamlined process based on structured discussions between stock assessors and ecosystem scientists. A mix of approaches will be explored for the South Atlantic context given existing resource levels. 
 
 ## Prototype Indicator Development
 
@@ -170,6 +168,8 @@ Outline analysis using FW model (identify level of disaggrgation needed), Rpath 
 [Preliminary results](https://sgaichas.github.io/SAFMCindicators/ObjectivesIndicators.html)
 
 ## Indicator Opportunities for SSC ABC Setting 
+
+[SSC review document](https://sgaichas.github.io/SAFMCindicators/SSCABCs.html)
 
 
 ## Prototype Indicator Development
