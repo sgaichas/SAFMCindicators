@@ -54,6 +54,7 @@ rsconnect/
 # local folders
 test_*/
 testdocs/
+GLORYS/
 
 # pdfs and docs and interim files
 *.pdf
