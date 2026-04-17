@@ -1,0 +1,121 @@
+---
+title: "Prototype Ocean Indicators"
+author: "Sarah Gaichas"
+date: "`r Sys.Date()`"
+output:
+  bookdown::html_document2:
+    code_fold: hide
+    df_print: paged
+    toc: true
+    toc_float: true
+  bookdown::pdf_document2:
+    includes:
+      in_header: latex/header1.tex
+    keep_tex: true
+    toc: false
+    number_sections: false
+  pdf_document:
+    toc: true
+  word_document:
+    toc: true
+csl: plos.csl
+bibliography: operationalSOE.bib
+link-citations: true
+urlcolor: blue
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      message = FALSE,
+                      warning = FALSE)
+
+library(tidyverse)
+reticulate::use_miniconda("/Users/sarahgaichas/Library/r-miniconda-arm64")
+```
+
+# Introduction
+
+Ocean data is available for the Southeast US coast, from multiple sources. Regional ocean models and global ocean models, including the NOAA MOM6 model [@ross_dynamically_2024] (https://psl.noaa.gov/cefi_portal/) and the Copernicus products (https://data.marine.copernicus.eu/products) including the  Global Oceanic Reanalysis (GLORYS, [@jean-michel_copernicus_2021], https://data.marine.copernicus.eu/product/GLOBAL_MULTIYEAR_PHY_001_030/description) already provide both hindcasts and forecasts of ocean temperature and salinity for the South Atlantic. This project will identify specific resources necessary to translate available data into ecosystem indicators tailored for the South Atlantic and its fishery management needs. For example, the NEFSC has publicly available code to derive indicators from these data sources for the region north of Cape Hatteras that could be modified to derive prototype indicators for the South Atlantic region. Here, I develop prototype ocean indicators to illustrate both opportunities and challenges for operational application in the region.
+
+A prototype habitat indicator characterizing bottom temperature in space over time was developed using GLORYS data with a reproducible workflow based on workflows used in the Northeast US by NEFSC. The objective is to produce maps and time series indicating where and when bottom temperature conditions approach or exceed stressful levels input particular species ranging from corals to targeted fish species. Stressful temperature levels would need to be determined from literature or other studies if unknown. 
+
+Validation of this model-based temperature indicator could be achieved with an expanded Citizen Science program; establishment of a formal Study Fleet such as that in the Northeast US [@jones_learning_2022] will be outlined if the indicator shows promise.  
+
+# Methods
+
+To use GLORYS information, users must register for a free account on the Copernicus website by clicking the [link at the top of the page](https://data.marine.copernicus.eu/register). Users supply an email and optional information on their organization (one can select Others) and then receive an email with a link to establish a password.
+
+I am working in R and Rstudio, but Python code is used to access GLORYS information (there is not a way to access in R). Python can be installed using the R package [`reticulate`](https://rstudio.github.io/reticulate/) and the command `reticulate::install_miniconda()` if you don't already have a Python installation. 
+
+For this script you need the python `pandas` package, which is installed using `reticulate::py_install("pandas")`
+
+You also need the motuclient package, from https://github.com/clstoulouse/motu-client-python 
+
+Try `reticulate::py_install("motuclient", pip = TRUE)` which worked.
+
+With the username and password, the following code can be used to download data locally for processing. It is important to specify the latitude and longitude bounds of the data as well as the year(s). Downloading one year at a time makes for manageable files to process for spatial or time series indicators. The output directory is hardcoded below, this needs to change for use elsewhere.
+
+This code for downloading is courtesy Joseph Caracappa, NOAA NMFS NEFSC:
+
+```{python testNE}
+
+import datetime
+import pandas
+import os
+from os import path
+
+#Set start and end year
+year_start=2025
+year_end=2025
+years=range(year_start,year_end+1) 
+
+#Input CMEMS User and Password (case sensitive)
+USER = "sgaichas"
+PASSWORD = "ZAQ!2wsxCDE#4rfv"
+
+#Set Lat/lon bounds
+min_lon = str(-78)
+max_lon = str(-62)
+min_lat = str(34)
+max_lat = str(47)
+for y in range(len(years)):
+
+    out_dir = "/Users/sarahgaichas/Documents/Work/SAFMCindicators/SAFMCindicators/GLORYS/testNE/"+str(years[y])+"/"
+    if(not os.path.exists(out_dir)):
+        os.makedirs(out_dir)
+        
+        
+    dt = datetime.datetime(years[y],1,1)
+    end = datetime.datetime(years[y],12,31)
+    step = datetime.timedelta(days = 1)
+    
+    all_days = []
+    
+    while dt <= end:
+        all_days.append(dt.strftime('%Y-%m-%d'))
+        dt += step
+        
+    for d in range(len(all_days)):
+        t1 = all_days[d]+" 00:00:00"
+        t2 = all_days[d]+" 23:59:59"
+        #Change to desired filename prefix
+        new_name = "GLORYS_REANALYSIS_"+all_days[d]+".nc"
+        #Change to appropriate output path
+        
+        
+        if(path.exists(out_dir+new_name)):
+           print(new_name+" EXISTS")
+           continue
+           
+        #print(new_name)
+        #If additional variables are desired: need to add "--variable var.name"
+        
+        command = "python -m motuclient --motu https://my.cmems-du.eu/motu-web/Motu --service-id GLOBAL_MULTIYEAR_PHY_001_030-TDS --product-id cmems_mod_glo_phy_my_0.083_P1D-m --longitude-min "+min_lon+" --longitude-max "+max_lon+" --latitude-min "+min_lat+" --latitude-max "+max_lat+" --date-min "+t1+" --date-max "+t2+" --depth-min 0.493 --depth-max 5727.918 --variable so --variable thetao --variable uo --variable vo --variable zos --out-dir "+out_dir+" --out-name "+new_name+" --user "+USER+" --pwd "+PASSWORD
+
+        os.system(command)
+
+```
+
+
+
+# References
+
