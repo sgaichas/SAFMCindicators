@@ -25,5 +25,7 @@ output: html_document
 
 <a href="https://sgaichas.github.io/SAFMCindicators/SSCABCs.html" target="_blank"> Questions and options for the SSC - April 2026 </a> 
 
+<a href="https://sgaichas.github.io/SAFMCindicators/PrototypeOceanIndicator.html" target="_blank"> Prototype bottom temperature indicator workflow - April 2026 </a> 
+
 
 <a href="https://sgaichas.github.io/SAFMCindicators/SAFMCOptions.html" target="_blank"> Phase 2 report in progress - April 2026 </a>

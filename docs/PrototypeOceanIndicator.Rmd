@@ -18,13 +18,15 @@ output:
     toc: true
   word_document:
     toc: true
+  html_document:
+    code_fold: hide
 csl: plos.csl
 bibliography: operationalSOE.bib
 link-citations: true
 urlcolor: blue
 ---
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE,
+knitr::opts_chunk$set(echo = TRUE,
                       message = FALSE,
                       warning = FALSE)
 
@@ -77,8 +79,8 @@ year_end=2024
 years=range(year_start,year_end+1) 
 
 #Input CMEMS User and Password (case sensitive)
-USER = "sgaichas"
-PASSWORD = "ZAQ!2wsxCDE#4rfv"
+USER = ""
+PASSWORD = ""
 
 #Set Lat/lon bounds
 min_lon = str(-82.5)
@@ -88,7 +90,7 @@ max_lat = str(48.5)
 
 for y in range(len(years)):
 
-    out_dir = "/Users/sarahgaichas/Documents/Work/SAFMCindicators/SAFMCindicators/GLORYS/testNE/"+str(years[y])+"/"
+    out_dir = "...ADD YOUR PATH HERE.../SAFMCindicators/GLORYS/testNE/"+str(years[y])+"/"
     if(not os.path.exists(out_dir)):
         os.makedirs(out_dir)
         
@@ -151,8 +153,8 @@ year_end=2025
 years=range(year_start,year_end+1) 
 
 #Input CMEMS User and Password (case sensitive)
-USER = "sgaichas"
-PASSWORD = "ZAQ!2wsxCDE#4rfv"
+USER = ""
+PASSWORD = ""
 
 #Set Lat/lon bounds
 min_lon = str(-81.9)
@@ -162,7 +164,7 @@ max_lat = str(36.6)
 
 for y in range(len(years)):
 
-    out_dir = "/Users/sarahgaichas/Documents/Work/SAFMCindicators/SAFMCindicators/GLORYS/SAtl/"+str(years[y])+"/"
+    out_dir = "...ADD YOUR PATH HERE.../GLORYS/SAtl/"+str(years[y])+"/"
     if(not os.path.exists(out_dir)):
         os.makedirs(out_dir)
         
@@ -200,12 +202,23 @@ for y in range(len(years)):
 
 ```
 
+Take a look at a South Atlantic file
 
-Code for reading the file into time series or maps is found at the NEFSC github
+```{r}
+tidync::tidync(here::here("GLORYS/SAtl/2025/GLORYS_REANALYSIS_2025-12-31.nc"))
+```
+
+Code for reading the file into time series or maps is found at the NEFSC GitHub
 
 https://github.com/NEFSC/READ-EDAB-GLORYS/tree/main
 
+This repo has a [fuller version of the pulling script](https://github.com/NEFSC/READ-EDAB-GLORYS/blob/main/data-raw/python/GLORYS_download_template_workflow.py) that adds variables like salinity or mixed layer depth and pulls them into variable specific folders. It could be modified simply by changing the min and max lat and lon as above.
+
+It also has functions to process the downloaded files into datasets for presentation as either time series or spatial datasets. It calls utility functions in this repository:
+
 https://github.com/NEFSC/READ_EDAB_Utilities/tree/main
+
+Finally, scripts to plot indicators are found in the NOAA-EDAB GitHub ecodata repository, such as `plot_thermal_habitat_gridded` : https://github.com/NOAA-EDAB/ecodata/blob/pre-production/R/plot_thermal_habitat_gridded.R 
 
 
 
