@@ -164,10 +164,10 @@ USER = ""
 PASSWORD = ""
 
 #Set Lat/lon bounds
-min_lon = str(-81.9)
-max_lon = str(-73.6)
-min_lat = str(23.9)
-max_lat = str(36.6)
+min_lon = str(-82.8)
+max_lon = str(-70.6)
+min_lat = str(23.4)
+max_lat = str(36.1)
 
 for y in range(len(years)):
 
@@ -214,14 +214,14 @@ Pulling 6 years of data took my laptop and home connection about 8 hours.
 Take a look at a South Atlantic file:
 
 ```{r}
-tidync::tidync(here::here("GLORYS/SAtl/2025/GLORYS_REANALYSIS_2025-12-31.nc"))
+tidync::tidync(here::here("GLORYS/SAtl-smaller/2025/GLORYS_REANALYSIS_2025-12-31.nc"))
 ```
 
 ## Process GLORYS bottom temperature
 
-Joe Caracappa, NEFSC, wrote nearly all of the code used to produce these indicators for the Northeast US [State of the Ecosystem](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf) reports. 
+Joe Caracappa, NEFSC, wrote nearly all of the code used to produce these indicators for the Northeast US [State of the Ecosystem (SOE)](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf) reports. 
 
-R packages used in this workflow include `tidyverse` [@wickham_welcome_2019] for general data organization and visualization, `terra` [@hijmans_terra_2025] for processing netCDF files downloaded from Copernicus, and `knitr` [@xie_knitr_2025; @xie_dynamic_2015 ; @stodden_knitr_2014], `rmarkdown` [@allaire_rmarkdown_2024; @xie_r_2018; @xie_r_2020], and `bookdown` [@xie_bookdown_2025; @xie_bookdown_2016] for producing reports in both .html and .pdf formats.
+R packages used in this workflow include `tidyverse` [@wickham_welcome_2019] for general data organization and visualization, `terra` [@hijmans_terra_2025] and `ncdf4` [@pierce_ncdf4_2025] for processing netCDF files downloaded from Copernicus, and `knitr` [@xie_knitr_2025; @xie_dynamic_2015 ; @stodden_knitr_2014], `rmarkdown` [@allaire_rmarkdown_2024; @xie_r_2018; @xie_r_2020], and `bookdown` [@xie_bookdown_2025; @xie_bookdown_2016] for producing reports in both .html and .pdf formats.
 
 Code for reading the file into time series or maps is found at the NEFSC GitHub
 
@@ -229,20 +229,438 @@ https://github.com/NEFSC/READ-EDAB-GLORYS/tree/main
 
 This repo has a [fuller version of the pulling script](https://github.com/NEFSC/READ-EDAB-GLORYS/blob/main/data-raw/python/GLORYS_download_template_workflow.py) that adds variables like salinity or mixed layer depth and pulls them into variable specific folders. It could be modified simply by changing the min and max lat and lon as above.
 
+We will focus on the spatial indicator of days with bottom temperature over a certain threshold in a given year. This indicator is called [`thermal_habitat_gridded`](https://noaa-edab.github.io/catalog/thermal_habitat_gridded.html) in the SOE. 
+
+https://github.com/NEFSC/READ-EDAB-GLORYS/blob/main/R/make_thermal_habitat_gridded.R
+
+The full set of SOE indicators using GLORYS bottom temperature are made by the script [make_GLORYS_bt_soe.R](https://github.com/NEFSC/READ-EDAB-GLORYS/blob/main/vignettes/make_GLORYS_bt_soe.R) but we don't want to make all of them right now for this demonstration.
+
 It also has functions to process the downloaded files into datasets for presentation as either time series or spatial datasets. It calls utility functions in this repository:
 
 https://github.com/NEFSC/READ_EDAB_Utilities/tree/main
 
+The Utilities should be installed so the functions can be used by other functions in READ-EDAB-GLORYS using code `devtools::install_github("https://github.com/NEFSC/READ_EDAB_Utilities")`
+
+This installed properly so we can use all the utilities functions. One function we will use is [`make_2d_deg_day_gridded`](https://github.com/NEFSC/READ_EDAB_Utilities/blob/main/R/make_2d_deg_day_gridded.R)
+
+Also lets try installing the EDAB-GLORYS functions:
+`devtools::install_github("https://github.com/NEFSC/READ-EDAB-GLORYS")`
+
+That doesn't work due to a missing local file `EDAB.GLORYS/data/cold_pool/ROMS/roms_debiased_cold_pool_1959_1992.nc` This ROMS information is from a debiased Regional Ocean Modeling System (ROMS) model run for the Northeast US that provides bottom temerpature data from the 1950s to 1993, because the GLORYS dataset starts in 1993. We would not have this historical information available in the South Atlantic so we need to proceed without this dependency no matter what.
+
+I cloned the GitHub repo and built locally by commenting out lines 74-76 in [`make_cold_pool_extent_shp.R`](https://github.com/NEFSC/READ-EDAB-GLORYS/blob/main/R/make_cold_pool_extent_shp.R), a function we will not need for the South Atlantic.
+
+Now the other EDAB-GLORYS functions should work for me locally. We'll take the initial processing from `make_GLORYS_bt_soe.R` and skip to making only the gridded plots.
+
 Finally, functions to plot indicators are found in the `ecodata` [@beltz_ecodata_2025] package and in the NOAA-EDAB GitHub ecodata repository, such as `plot_thermal_habitat_gridded` : https://github.com/NOAA-EDAB/ecodata/blob/pre-production/R/plot_thermal_habitat_gridded.R 
 
-First we try producing the NEUS indicators to validate the workflow:
+First we try producing the NEUS thermal_habitat_gridded indicator to validate the workflow. A;l of the hardcoded file paths in the original code need to be changed for this anyway. This code is modified from [make_GLORYS_bt_soe.R](https://github.com/NEFSC/READ-EDAB-GLORYS/blob/main/vignettes/make_GLORYS_bt_soe.R):
+
+
+```{r NEUStest, eval=FALSE}
+
+input.dir = '/Users/sarahgaichas/Documents/Work/SAFMCindicators/SAFMCindicators/GLORYS/testNE/'
+
+output.dir = '/Users/sarahgaichas/Documents/Work/SAFMCindicators/SAFMCindicators/GLORYS/testNE-out/'
+
+supp.dir = '/Users/sarahgaichas/Documents/Work/SAFMCindicators/READ-EDAB-GLORYS/data-raw/'
+  
+#print('Using default arguments')
+
+shp.file = paste0(supp.dir,'geometry/EPU_NOESTUARIES.shp')
+
+#Get year range
+year.start = 2020
+year.end = 2024 #format(Sys.time(), '%Y') this would go to now, our data end in 2024
+run.years = year.start:year.end
+y=1
+input.prefix = 'GLORYS_REANALYSIS_'
+
+check.dir = function(file){
+  if(!dir.exists(dirname(file))){dir.create(dirname(file),recursive =T)}
+}
+
+#Produce each year's indices
+for(y in 1:length(run.years)){
+  
+  input.year = run.years[y]
+  input.diryr = paste0(input.dir, input.year,"/")
+  input.files = list.files(input.diryr,input.prefix)
+  input.files.year = as.numeric(gsub(".*(\\d{4}).*", '\\1', input.files))
+  no.threshold =F
+  
+  which.files.year = which(input.files.year == run.years[y])
+  if(length(which.files.year) == 0){
+    next()
+  }
+  
+  this.year.files = paste0(input.diryr,input.files[which.files.year])
+  # if(any(file.size(this.year.files)==0)){
+  #   next()
+  # }
+  # 
+  # if(all(!file.exists(this.year.files))){
+  #   print(paste0('File does not exist: ',this.year.file))
+  #   next()
+  # }
+  
+  year.dates = seq.Date(as.Date(paste0(run.years[y],'-01-01')), as.Date(paste0(run.years[y],'-12-31')), by = '1 day')
+  file.dates <- sub(".*(\\d{4}-\\d{2}-\\d{2}).*", "\\1", this.year.files)
+  if(!all(year.dates %in% file.dates)){
+    print(paste0('Missing Dates in ',run.years[y],': ', paste0(year.dates[which(!(year.dates %in% file.dates))],collapse = ', ')))
+    next()
+  }
+  
+  #Make bottom_temp_model_gridded
+  print(paste0('Starting bottom_temp_model_gridded for year: ',run.years[y], ' at ', Sys.time()))
+  
+  output.file3 = paste0(output.dir,'data/bottom_temp_model_gridded/GLORYS_bottom_temp_model_gridded_',run.years[y],'.csv')
+  check.dir(output.file3)
+  if(file.exists(output.file3)){
+    print(paste0('File already exists: ',output.file3))
+  }else{
+    EDAB.GLORYS::make_bottom_temp_model_gridded(input.file = this.year.files,
+                                                output.file = output.file3,
+                                                shp.file = shp.file,
+                                                file.year = run.years[y],
+                                                write.out = T)
+  }
+  
+  
+  # Missing output.file1 seasonal anomaly
+  # #Make bottom_temp_model_anom
+  # print(paste0('Starting bottom_temp_model_anom for year: ',run.years[y], ' at ', Sys.time()))
+  # 
+  # output.file4 = paste0(output.dir,'data/bottom_temp_model_anom/GLORYS_bottom_temp_model_anom_',run.years[y],'.csv')
+  # check.dir(output.file4)
+  # if(file.exists(output.file4)){
+  #   print(paste0('File already exists: ',output.file4))
+  # }else{
+  #   EDAB.GLORYS::make_bottom_temp_model_anom(input.file = this.year.files,
+  #                                            output.file = output.file4,
+  #                                            shp.file =shp.file,
+  #                                            file.year =  run.years[y],
+  #                                            climatology.file = output.file1,
+  #                                            write.out =T)
+  # }
+  
+  #Make bottom_temp_model_annual
+  # add this one already in the repo
+  output.file2 = paste0(supp.dir, "GLORYS_bottom_temp_clim_1990_2020.csv")
+  print(paste0('Starting bottom_temp_model_annual for year: ',run.years[y], ' at ', Sys.time()))
+  
+  output.file5 = paste0(output.dir,'data/bottom_temp_model_annual/GLORYS_bottom_temp_model_annual_',run.years[y],'.csv')
+  check.dir(output.file5)
+  if(file.exists(output.file5)){
+    print(paste0('File already exists: ',output.file5))
+  }else{
+    EDAB.GLORYS::make_bottom_temp_model_annual(input.file = this.year.files,
+                                               output.file = output.file5,
+                                               shp.file = shp.file,
+                                               file.year = run.years[y],
+                                               climatology.file =  output.file2,
+                                               write.out =T
+    )
+                                               
+  }
+  
+  # print(paste0('Starting bottom_temp_daily_epu for year: ',run.years[y], ' at ', Sys.time()))
+  # 
+  # output.file5b = paste0(output.dir,'data/bottom_temp_daily_epu/GLORYS_bottom_temp_daily_epu_',run.years[y],'.csv')
+  # check.dir(output.file5b)
+  # if(file.exists(output.file5b)){
+  #   print(paste0('File already exists: ',output.file5b))
+  # }else{
+  #   EDAB.GLORYS::make_bottom_temp_daily_epu(input.file = this.year.files,
+  #                                              output.file = output.file5b,
+  #                                              shp.file = shp.file,
+  #                                              file.year = run.years[y],
+  #                                              write.out =T
+  #   )
+  #   
+  # }
+  
+
+  #Make thermal_habitat_gridded
+  print(paste0('Starting thermal_habitat_gridded for year: ',run.years[y], ' at ', Sys.time()))
+        
+  output.file6 = paste0(output.dir,'data/thermal_habitat_gridded/GLORYS_thermal_habitat_gridded_',run.years[y],'.nc')
+  check.dir(output.file6)
+  if(file.exists(output.file6) | no.threshold){
+    print(paste0('File already exists: ',output.file6))
+  }else{
+    EDAB.GLORYS::make_thermal_habitat_gridded(input.file = this.year.files,
+                                              output.file =  output.file6,
+                                              supp.dir = supp.dir,
+                                              shp.file = shp.file,
+                                              file.year = run.years[y],
+                                              write.out =T,
+                                              t.max.seq = seq(0,30,1)
+    )
+  }
+  
+  #Make thermal_habitat_area
+  print(paste0('Starting thermal_habitat_area for year: ',run.years[y], ' at ', Sys.time()))
+        
+  output.file7a = paste0(output.dir,'data/thermal_habitat_area/GLORYS_thermal_habitat_area_',run.years[y],'.csv')
+  output.file7b = paste0(output.dir,'data/thermal_habitat_gridded/GLORYS_thermal_habitat_gridded_',run.years[y],'.csv')
+  check.dir(output.file7a)
+  
+  if(file.exists(output.file7a) & file.exists(output.file7b) | no.threshold){
+    print(paste0('File already exists: ',output.file7a, ' and ', output.file7b))
+  }else{
+
+    if(any(file.size(this.year.files)==0))
+    EDAB.GLORYS::make_thermal_habitat_area(input.file = this.year.files,
+                                           output.file.area =  output.file7a,
+                                           output.file.gridded = output.file7b  ,
+                                           shp.file = shp.file,
+                                           file.year = run.years[y],
+                                           write.area =T,
+                                           write.gridded =T,
+                                           t.max.seq = seq(0,30,1)
+    )
+  }
+  
+
+}
+
+# glorys.heatwave.files = c(list.files(paste0(output.dir,'data/bottom_temp_daily_epu/'),full.names = T),'/home/jcaracappa/EDAB_Dev/jcaracappa/ROMS_NWA/ROMS_daily_epu_1959_1992.csv' )
+# glorys.heatwave.data = lapply(glorys.heatwave.files, read.csv) |>
+#   dplyr::bind_rows() |>
+#   dplyr::mutate(source_m = dplyr::coalesce(Source, source)) |>
+#   dplyr::select(-Source,-source) |>
+#   dplyr::rename(source = 'source_m')
+# #check all dates
+# all(1959:2025 %in% sort(unique(format(as.Date(glorys.heatwave.data$date),format = '%Y')) ))
+# glorys.heatwaves.out = write.csv(glorys.heatwave.data,paste0('/home/jcaracappa/EDAB_Dev/jcaracappa/ROMS_GLORYS_bottom_temp_model_daily_epu_',1959,'_',format(Sys.time(), '%Y'),'.csv'), row.names =F)
+# 
+# season.index = data.frame(month = 1:12, season = rep(c('Winter','Spring','Summer','Fall'),each = 3))
+# data = glorys.heatwave.data %>% 
+#   dplyr::mutate(month = as.numeric(format(as.Date(date),format = '%m')),
+#                 year = as.numeric(format(as.Date(date),format = '%Y'))) %>% 
+#   dplyr::left_join(season.index) %>% 
+#   dplyr::group_by(source,year,season,EPU) %>% 
+#   dplyr::summarise(Value = mean(BottomT.mean,na.rm=T))
+#   
+# library(ggplot2)
+# ggplot(data, aes(x = year, y = Value, color = source))+
+#   geom_line()+
+#   facet_grid(EPU~season)
+# ggsave(here::here('GLORYS_bottom_temp_2025.png'),width =12, height = 12)
+
+```
+
+This mostly worked for the thermal_habibat_area, check it.
+
+Need to know how it gets from nc to an R dataset
 
 ```{r}
 
 ```
 
+
 Next we try the same code on the South Atlantic GLORYS bottom temperature.
 
+Problem: I need a shape file to run this. Lets try SA_EEZ_off_states from https://www.fisheries.noaa.gov/resource/map/defined-fishery-management-areas-south-atlantic-states-map-gis-data 
+
+Which appears too wide for the extent I pulled so lets try pulling again with a bigger area (changed extent in code above). 
+
+
+```{r SAtlinds, eval=FALSE}
+
+input.dir = '/Users/sarahgaichas/Documents/Work/SAFMCindicators/SAFMCindicators/GLORYS/SAtl/'
+
+output.dir = '/Users/sarahgaichas/Documents/Work/SAFMCindicators/SAFMCindicators/GLORYS/SAtl-out/'
+
+supp.dir = '/Users/sarahgaichas/Documents/Work/SAFMCindicators/READ-EDAB-GLORYS/data-raw/'
+  
+#print('Using default arguments')
+
+shp.file = paste0(supp.dir,'geometry/SA_EEZ_off_states.shp')
+
+#Get year range
+year.start = 2020
+year.end = 2025 #format(Sys.time(), '%Y') this would go to now, our data end in 2024
+run.years = year.start:year.end
+y=1
+input.prefix = 'GLORYS_REANALYSIS_'
+
+check.dir = function(file){
+  if(!dir.exists(dirname(file))){dir.create(dirname(file),recursive =T)}
+}
+
+#Produce each year's indices
+for(y in 1:length(run.years)){
+  
+  input.year = run.years[y]
+  input.diryr = paste0(input.dir, input.year,"/")
+  input.files = list.files(input.diryr,input.prefix)
+  input.files.year = as.numeric(gsub(".*(\\d{4}).*", '\\1', input.files))
+  no.threshold =F
+  
+  which.files.year = which(input.files.year == run.years[y])
+  if(length(which.files.year) == 0){
+    next()
+  }
+  
+  this.year.files = paste0(input.diryr,input.files[which.files.year])
+  # if(any(file.size(this.year.files)==0)){
+  #   next()
+  # }
+  # 
+  # if(all(!file.exists(this.year.files))){
+  #   print(paste0('File does not exist: ',this.year.file))
+  #   next()
+  # }
+  
+  year.dates = seq.Date(as.Date(paste0(run.years[y],'-01-01')), as.Date(paste0(run.years[y],'-12-31')), by = '1 day')
+  file.dates <- sub(".*(\\d{4}-\\d{2}-\\d{2}).*", "\\1", this.year.files)
+  if(!all(year.dates %in% file.dates)){
+    print(paste0('Missing Dates in ',run.years[y],': ', paste0(year.dates[which(!(year.dates %in% file.dates))],collapse = ', ')))
+    next()
+  }
+  
+  #Make bottom_temp_model_gridded
+  print(paste0('Starting bottom_temp_model_gridded for year: ',run.years[y], ' at ', Sys.time()))
+  
+  output.file3 = paste0(output.dir,'data/bottom_temp_model_gridded/GLORYS_bottom_temp_model_gridded_',run.years[y],'.csv')
+  check.dir(output.file3)
+  if(file.exists(output.file3)){
+    print(paste0('File already exists: ',output.file3))
+  }else{
+    EDAB.GLORYS::make_bottom_temp_model_gridded(input.file = this.year.files,
+                                                output.file = output.file3,
+                                                shp.file = shp.file,
+                                                file.year = run.years[y],
+                                                write.out = T)
+  }
+  
+  
+  # Missing output.file1 seasonal anomaly
+  # #Make bottom_temp_model_anom
+  # print(paste0('Starting bottom_temp_model_anom for year: ',run.years[y], ' at ', Sys.time()))
+  # 
+  # output.file4 = paste0(output.dir,'data/bottom_temp_model_anom/GLORYS_bottom_temp_model_anom_',run.years[y],'.csv')
+  # check.dir(output.file4)
+  # if(file.exists(output.file4)){
+  #   print(paste0('File already exists: ',output.file4))
+  # }else{
+  #   EDAB.GLORYS::make_bottom_temp_model_anom(input.file = this.year.files,
+  #                                            output.file = output.file4,
+  #                                            shp.file =shp.file,
+  #                                            file.year =  run.years[y],
+  #                                            climatology.file = output.file1,
+  #                                            write.out =T)
+  # }
+  
+  # #Make bottom_temp_model_annual
+  # # add this one already in the repo
+  # output.file2 = paste0(supp.dir, "GLORYS_bottom_temp_clim_1990_2020.csv")
+  # print(paste0('Starting bottom_temp_model_annual for year: ',run.years[y], ' at ', Sys.time()))
+  # 
+  # output.file5 = paste0(output.dir,'data/bottom_temp_model_annual/GLORYS_bottom_temp_model_annual_',run.years[y],'.csv')
+  # check.dir(output.file5)
+  # if(file.exists(output.file5)){
+  #   print(paste0('File already exists: ',output.file5))
+  # }else{
+  #   EDAB.GLORYS::make_bottom_temp_model_annual(input.file = this.year.files,
+  #                                              output.file = output.file5,
+  #                                              shp.file = shp.file,
+  #                                              file.year = run.years[y],
+  #                                              climatology.file =  output.file2,
+  #                                              write.out =T
+  #   )
+  #                                              
+  # }
+  
+  # print(paste0('Starting bottom_temp_daily_epu for year: ',run.years[y], ' at ', Sys.time()))
+  # 
+  # output.file5b = paste0(output.dir,'data/bottom_temp_daily_epu/GLORYS_bottom_temp_daily_epu_',run.years[y],'.csv')
+  # check.dir(output.file5b)
+  # if(file.exists(output.file5b)){
+  #   print(paste0('File already exists: ',output.file5b))
+  # }else{
+  #   EDAB.GLORYS::make_bottom_temp_daily_epu(input.file = this.year.files,
+  #                                              output.file = output.file5b,
+  #                                              shp.file = shp.file,
+  #                                              file.year = run.years[y],
+  #                                              write.out =T
+  #   )
+  #   
+  # }
+  
+
+  #Make thermal_habitat_gridded
+  print(paste0('Starting thermal_habitat_gridded for year: ',run.years[y], ' at ', Sys.time()))
+        
+  output.file6 = paste0(output.dir,'data/thermal_habitat_gridded/GLORYS_thermal_habitat_gridded_',run.years[y],'.nc')
+  check.dir(output.file6)
+  if(file.exists(output.file6) | no.threshold){
+    print(paste0('File already exists: ',output.file6))
+  }else{
+    EDAB.GLORYS::make_thermal_habitat_gridded(input.file = this.year.files,
+                                              output.file =  output.file6,
+                                              supp.dir = supp.dir,
+                                              shp.file = shp.file,
+                                              file.year = run.years[y],
+                                              write.out =T,
+                                              t.max.seq = seq(0,30,1)
+    )
+  }
+  
+  #Make thermal_habitat_area
+  print(paste0('Starting thermal_habitat_area for year: ',run.years[y], ' at ', Sys.time()))
+        
+  output.file7a = paste0(output.dir,'data/thermal_habitat_area/GLORYS_thermal_habitat_area_',run.years[y],'.csv')
+  output.file7b = paste0(output.dir,'data/thermal_habitat_gridded/GLORYS_thermal_habitat_gridded_',run.years[y],'.csv')
+  check.dir(output.file7a)
+  
+  if(file.exists(output.file7a) & file.exists(output.file7b) | no.threshold){
+    print(paste0('File already exists: ',output.file7a, ' and ', output.file7b))
+  }else{
+
+    if(any(file.size(this.year.files)==0))
+    EDAB.GLORYS::make_thermal_habitat_area(input.file = this.year.files,
+                                           output.file.area =  output.file7a,
+                                           output.file.gridded = output.file7b  ,
+                                           shp.file = shp.file,
+                                           file.year = run.years[y],
+                                           write.area =T,
+                                           write.gridded =T,
+                                           t.max.seq = seq(0,30,1)
+    )
+  }
+  
+
+}
+
+# glorys.heatwave.files = c(list.files(paste0(output.dir,'data/bottom_temp_daily_epu/'),full.names = T),'/home/jcaracappa/EDAB_Dev/jcaracappa/ROMS_NWA/ROMS_daily_epu_1959_1992.csv' )
+# glorys.heatwave.data = lapply(glorys.heatwave.files, read.csv) |>
+#   dplyr::bind_rows() |>
+#   dplyr::mutate(source_m = dplyr::coalesce(Source, source)) |>
+#   dplyr::select(-Source,-source) |>
+#   dplyr::rename(source = 'source_m')
+# #check all dates
+# all(1959:2025 %in% sort(unique(format(as.Date(glorys.heatwave.data$date),format = '%Y')) ))
+# glorys.heatwaves.out = write.csv(glorys.heatwave.data,paste0('/home/jcaracappa/EDAB_Dev/jcaracappa/ROMS_GLORYS_bottom_temp_model_daily_epu_',1959,'_',format(Sys.time(), '%Y'),'.csv'), row.names =F)
+# 
+# season.index = data.frame(month = 1:12, season = rep(c('Winter','Spring','Summer','Fall'),each = 3))
+# data = glorys.heatwave.data %>% 
+#   dplyr::mutate(month = as.numeric(format(as.Date(date),format = '%m')),
+#                 year = as.numeric(format(as.Date(date),format = '%Y'))) %>% 
+#   dplyr::left_join(season.index) %>% 
+#   dplyr::group_by(source,year,season,EPU) %>% 
+#   dplyr::summarise(Value = mean(BottomT.mean,na.rm=T))
+#   
+# library(ggplot2)
+# ggplot(data, aes(x = year, y = Value, color = source))+
+#   geom_line()+
+#   facet_grid(EPU~season)
+# ggsave(here::here('GLORYS_bottom_temp_2025.png'),width =12, height = 12)
+
+
+```
 
 
 # References

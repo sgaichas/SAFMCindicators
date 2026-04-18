@@ -2974,10 +2974,10 @@ USER = &quot;&quot;
 PASSWORD = &quot;&quot;
 
 #Set Lat/lon bounds
-min_lon = str(-81.9)
-max_lon = str(-73.6)
-min_lat = str(23.9)
-max_lat = str(36.6)
+min_lon = str(-82.8)
+max_lon = str(-70.6)
+min_lat = str(23.4)
+max_lat = str(36.1)
 
 for y in range(len(years)):
 
@@ -3018,7 +3018,7 @@ for y in range(len(years)):
         os.system(command)</code></pre>
 <p>Pulling 6 years of data took my laptop and home connection about 8 hours.</p>
 <p>Take a look at a South Atlantic file:</p>
-<pre class="r"><code>tidync::tidync(here::here(&quot;GLORYS/SAtl/2025/GLORYS_REANALYSIS_2025-12-31.nc&quot;))</code></pre>
+<pre class="r"><code>tidync::tidync(here::here(&quot;GLORYS/SAtl-smaller/2025/GLORYS_REANALYSIS_2025-12-31.nc&quot;))</code></pre>
 <pre><code>## 
 ## Data Source (1): GLORYS_REANALYSIS_2025-12-31.nc ...
 ## 
@@ -3039,16 +3039,408 @@ for y in range(len(years)):
 </div>
 <div id="process-glorys-bottom-temperature" class="section level2" number="2.2">
 <h2><span class="header-section-number">2.2</span> Process GLORYS bottom temperature</h2>
-<p>Joe Caracappa, NEFSC, wrote nearly all of the code used to produce these indicators for the Northeast US <a href="https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf">State of the Ecosystem</a> reports.</p>
-<p>R packages used in this workflow include <code>tidyverse</code> <span class="citation">[<a href="#ref-wickham_welcome_2019">6</a>]</span> for general data organization and visualization, <code>terra</code> <span class="citation">[<a href="#ref-hijmans_terra_2025">7</a>]</span> for processing netCDF files downloaded from Copernicus, and <code>knitr</code> <span class="citation">[<a href="#ref-xie_knitr_2025">8</a>–<a href="#ref-stodden_knitr_2014">10</a>]</span>, <code>rmarkdown</code> <span class="citation">[<a href="#ref-allaire_rmarkdown_2024">11</a>–<a href="#ref-xie_r_2020">13</a>]</span>, and <code>bookdown</code> <span class="citation">[<a href="#ref-xie_bookdown_2025">14</a>,<a href="#ref-xie_bookdown_2016">15</a>]</span> for producing reports in both .html and .pdf formats.</p>
+<p>Joe Caracappa, NEFSC, wrote nearly all of the code used to produce these indicators for the Northeast US <a href="https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf">State of the Ecosystem (SOE)</a> reports.</p>
+<p>R packages used in this workflow include <code>tidyverse</code> <span class="citation">[<a href="#ref-wickham_welcome_2019">6</a>]</span> for general data organization and visualization, <code>terra</code> <span class="citation">[<a href="#ref-hijmans_terra_2025">7</a>]</span> and <code>ncdf4</code> <span class="citation">[<a href="#ref-pierce_ncdf4_2025">8</a>]</span> for processing netCDF files downloaded from Copernicus, and <code>knitr</code> <span class="citation">[<a href="#ref-xie_knitr_2025">9</a>–<a href="#ref-stodden_knitr_2014">11</a>]</span>, <code>rmarkdown</code> <span class="citation">[<a href="#ref-allaire_rmarkdown_2024">12</a>–<a href="#ref-xie_r_2020">14</a>]</span>, and <code>bookdown</code> <span class="citation">[<a href="#ref-xie_bookdown_2025">15</a>,<a href="#ref-xie_bookdown_2016">16</a>]</span> for producing reports in both .html and .pdf formats.</p>
 <p>Code for reading the file into time series or maps is found at the NEFSC GitHub</p>
 <p><a href="https://github.com/NEFSC/READ-EDAB-GLORYS/tree/main" class="uri">https://github.com/NEFSC/READ-EDAB-GLORYS/tree/main</a></p>
 <p>This repo has a <a href="https://github.com/NEFSC/READ-EDAB-GLORYS/blob/main/data-raw/python/GLORYS_download_template_workflow.py">fuller version of the pulling script</a> that adds variables like salinity or mixed layer depth and pulls them into variable specific folders. It could be modified simply by changing the min and max lat and lon as above.</p>
+<p>We will focus on the spatial indicator of days with bottom temperature over a certain threshold in a given year. This indicator is called <a href="https://noaa-edab.github.io/catalog/thermal_habitat_gridded.html"><code>thermal_habitat_gridded</code></a> in the SOE.</p>
+<p><a href="https://github.com/NEFSC/READ-EDAB-GLORYS/blob/main/R/make_thermal_habitat_gridded.R" class="uri">https://github.com/NEFSC/READ-EDAB-GLORYS/blob/main/R/make_thermal_habitat_gridded.R</a></p>
+<p>The full set of SOE indicators using GLORYS bottom temperature are made by the script <a href="https://github.com/NEFSC/READ-EDAB-GLORYS/blob/main/vignettes/make_GLORYS_bt_soe.R">make_GLORYS_bt_soe.R</a> but we don’t want to make all of them right now for this demonstration.</p>
 <p>It also has functions to process the downloaded files into datasets for presentation as either time series or spatial datasets. It calls utility functions in this repository:</p>
 <p><a href="https://github.com/NEFSC/READ_EDAB_Utilities/tree/main" class="uri">https://github.com/NEFSC/READ_EDAB_Utilities/tree/main</a></p>
-<p>Finally, functions to plot indicators are found in the <code>ecodata</code> <span class="citation">[<a href="#ref-beltz_ecodata_2025">16</a>]</span> package and in the NOAA-EDAB GitHub ecodata repository, such as <code>plot_thermal_habitat_gridded</code> : <a href="https://github.com/NOAA-EDAB/ecodata/blob/pre-production/R/plot_thermal_habitat_gridded.R" class="uri">https://github.com/NOAA-EDAB/ecodata/blob/pre-production/R/plot_thermal_habitat_gridded.R</a></p>
-<p>First we try producing the NEUS indicators to validate the workflow:</p>
+<p>The Utilities should be installed so the functions can be used by other functions in READ-EDAB-GLORYS using code <code>devtools::install_github(&quot;https://github.com/NEFSC/READ_EDAB_Utilities&quot;)</code></p>
+<p>This installed properly so we can use all the utilities functions. One function we will use is <a href="https://github.com/NEFSC/READ_EDAB_Utilities/blob/main/R/make_2d_deg_day_gridded.R"><code>make_2d_deg_day_gridded</code></a></p>
+<p>Also lets try installing the EDAB-GLORYS functions:
+<code>devtools::install_github(&quot;https://github.com/NEFSC/READ-EDAB-GLORYS&quot;)</code></p>
+<p>That doesn’t work due to a missing local file <code>EDAB.GLORYS/data/cold_pool/ROMS/roms_debiased_cold_pool_1959_1992.nc</code> This ROMS information is from a debiased Regional Ocean Modeling System (ROMS) model run for the Northeast US that provides bottom temerpature data from the 1950s to 1993, because the GLORYS dataset starts in 1993. We would not have this historical information available in the South Atlantic so we need to proceed without this dependency no matter what.</p>
+<p>I cloned the GitHub repo and built locally by commenting out lines 74-76 in <a href="https://github.com/NEFSC/READ-EDAB-GLORYS/blob/main/R/make_cold_pool_extent_shp.R"><code>make_cold_pool_extent_shp.R</code></a>, a function we will not need for the South Atlantic.</p>
+<p>Now the other EDAB-GLORYS functions should work for me locally. We’ll take the initial processing from <code>make_GLORYS_bt_soe.R</code> and skip to making only the gridded plots.</p>
+<p>Finally, functions to plot indicators are found in the <code>ecodata</code> <span class="citation">[<a href="#ref-beltz_ecodata_2025">17</a>]</span> package and in the NOAA-EDAB GitHub ecodata repository, such as <code>plot_thermal_habitat_gridded</code> : <a href="https://github.com/NOAA-EDAB/ecodata/blob/pre-production/R/plot_thermal_habitat_gridded.R" class="uri">https://github.com/NOAA-EDAB/ecodata/blob/pre-production/R/plot_thermal_habitat_gridded.R</a></p>
+<p>First we try producing the NEUS thermal_habitat_gridded indicator to validate the workflow. A;l of the hardcoded file paths in the original code need to be changed for this anyway. This code is modified from <a href="https://github.com/NEFSC/READ-EDAB-GLORYS/blob/main/vignettes/make_GLORYS_bt_soe.R">make_GLORYS_bt_soe.R</a>:</p>
+<pre class="r"><code>input.dir = &#39;/Users/sarahgaichas/Documents/Work/SAFMCindicators/SAFMCindicators/GLORYS/testNE/&#39;
+
+output.dir = &#39;/Users/sarahgaichas/Documents/Work/SAFMCindicators/SAFMCindicators/GLORYS/testNE-out/&#39;
+
+supp.dir = &#39;/Users/sarahgaichas/Documents/Work/SAFMCindicators/READ-EDAB-GLORYS/data-raw/&#39;
+  
+#print(&#39;Using default arguments&#39;)
+
+shp.file = paste0(supp.dir,&#39;geometry/EPU_NOESTUARIES.shp&#39;)
+
+#Get year range
+year.start = 2020
+year.end = 2024 #format(Sys.time(), &#39;%Y&#39;) this would go to now, our data end in 2024
+run.years = year.start:year.end
+y=1
+input.prefix = &#39;GLORYS_REANALYSIS_&#39;
+
+check.dir = function(file){
+  if(!dir.exists(dirname(file))){dir.create(dirname(file),recursive =T)}
+}
+
+#Produce each year&#39;s indices
+for(y in 1:length(run.years)){
+  
+  input.year = run.years[y]
+  input.diryr = paste0(input.dir, input.year,&quot;/&quot;)
+  input.files = list.files(input.diryr,input.prefix)
+  input.files.year = as.numeric(gsub(&quot;.*(\\d{4}).*&quot;, &#39;\\1&#39;, input.files))
+  no.threshold =F
+  
+  which.files.year = which(input.files.year == run.years[y])
+  if(length(which.files.year) == 0){
+    next()
+  }
+  
+  this.year.files = paste0(input.diryr,input.files[which.files.year])
+  # if(any(file.size(this.year.files)==0)){
+  #   next()
+  # }
+  # 
+  # if(all(!file.exists(this.year.files))){
+  #   print(paste0(&#39;File does not exist: &#39;,this.year.file))
+  #   next()
+  # }
+  
+  year.dates = seq.Date(as.Date(paste0(run.years[y],&#39;-01-01&#39;)), as.Date(paste0(run.years[y],&#39;-12-31&#39;)), by = &#39;1 day&#39;)
+  file.dates &lt;- sub(&quot;.*(\\d{4}-\\d{2}-\\d{2}).*&quot;, &quot;\\1&quot;, this.year.files)
+  if(!all(year.dates %in% file.dates)){
+    print(paste0(&#39;Missing Dates in &#39;,run.years[y],&#39;: &#39;, paste0(year.dates[which(!(year.dates %in% file.dates))],collapse = &#39;, &#39;)))
+    next()
+  }
+  
+  #Make bottom_temp_model_gridded
+  print(paste0(&#39;Starting bottom_temp_model_gridded for year: &#39;,run.years[y], &#39; at &#39;, Sys.time()))
+  
+  output.file3 = paste0(output.dir,&#39;data/bottom_temp_model_gridded/GLORYS_bottom_temp_model_gridded_&#39;,run.years[y],&#39;.csv&#39;)
+  check.dir(output.file3)
+  if(file.exists(output.file3)){
+    print(paste0(&#39;File already exists: &#39;,output.file3))
+  }else{
+    EDAB.GLORYS::make_bottom_temp_model_gridded(input.file = this.year.files,
+                                                output.file = output.file3,
+                                                shp.file = shp.file,
+                                                file.year = run.years[y],
+                                                write.out = T)
+  }
+  
+  
+  # Missing output.file1 seasonal anomaly
+  # #Make bottom_temp_model_anom
+  # print(paste0(&#39;Starting bottom_temp_model_anom for year: &#39;,run.years[y], &#39; at &#39;, Sys.time()))
+  # 
+  # output.file4 = paste0(output.dir,&#39;data/bottom_temp_model_anom/GLORYS_bottom_temp_model_anom_&#39;,run.years[y],&#39;.csv&#39;)
+  # check.dir(output.file4)
+  # if(file.exists(output.file4)){
+  #   print(paste0(&#39;File already exists: &#39;,output.file4))
+  # }else{
+  #   EDAB.GLORYS::make_bottom_temp_model_anom(input.file = this.year.files,
+  #                                            output.file = output.file4,
+  #                                            shp.file =shp.file,
+  #                                            file.year =  run.years[y],
+  #                                            climatology.file = output.file1,
+  #                                            write.out =T)
+  # }
+  
+  #Make bottom_temp_model_annual
+  # add this one already in the repo
+  output.file2 = paste0(supp.dir, &quot;GLORYS_bottom_temp_clim_1990_2020.csv&quot;)
+  print(paste0(&#39;Starting bottom_temp_model_annual for year: &#39;,run.years[y], &#39; at &#39;, Sys.time()))
+  
+  output.file5 = paste0(output.dir,&#39;data/bottom_temp_model_annual/GLORYS_bottom_temp_model_annual_&#39;,run.years[y],&#39;.csv&#39;)
+  check.dir(output.file5)
+  if(file.exists(output.file5)){
+    print(paste0(&#39;File already exists: &#39;,output.file5))
+  }else{
+    EDAB.GLORYS::make_bottom_temp_model_annual(input.file = this.year.files,
+                                               output.file = output.file5,
+                                               shp.file = shp.file,
+                                               file.year = run.years[y],
+                                               climatology.file =  output.file2,
+                                               write.out =T
+    )
+                                               
+  }
+  
+  # print(paste0(&#39;Starting bottom_temp_daily_epu for year: &#39;,run.years[y], &#39; at &#39;, Sys.time()))
+  # 
+  # output.file5b = paste0(output.dir,&#39;data/bottom_temp_daily_epu/GLORYS_bottom_temp_daily_epu_&#39;,run.years[y],&#39;.csv&#39;)
+  # check.dir(output.file5b)
+  # if(file.exists(output.file5b)){
+  #   print(paste0(&#39;File already exists: &#39;,output.file5b))
+  # }else{
+  #   EDAB.GLORYS::make_bottom_temp_daily_epu(input.file = this.year.files,
+  #                                              output.file = output.file5b,
+  #                                              shp.file = shp.file,
+  #                                              file.year = run.years[y],
+  #                                              write.out =T
+  #   )
+  #   
+  # }
+  
+
+  #Make thermal_habitat_gridded
+  print(paste0(&#39;Starting thermal_habitat_gridded for year: &#39;,run.years[y], &#39; at &#39;, Sys.time()))
+        
+  output.file6 = paste0(output.dir,&#39;data/thermal_habitat_gridded/GLORYS_thermal_habitat_gridded_&#39;,run.years[y],&#39;.nc&#39;)
+  check.dir(output.file6)
+  if(file.exists(output.file6) | no.threshold){
+    print(paste0(&#39;File already exists: &#39;,output.file6))
+  }else{
+    EDAB.GLORYS::make_thermal_habitat_gridded(input.file = this.year.files,
+                                              output.file =  output.file6,
+                                              supp.dir = supp.dir,
+                                              shp.file = shp.file,
+                                              file.year = run.years[y],
+                                              write.out =T,
+                                              t.max.seq = seq(0,30,1)
+    )
+  }
+  
+  #Make thermal_habitat_area
+  print(paste0(&#39;Starting thermal_habitat_area for year: &#39;,run.years[y], &#39; at &#39;, Sys.time()))
+        
+  output.file7a = paste0(output.dir,&#39;data/thermal_habitat_area/GLORYS_thermal_habitat_area_&#39;,run.years[y],&#39;.csv&#39;)
+  output.file7b = paste0(output.dir,&#39;data/thermal_habitat_gridded/GLORYS_thermal_habitat_gridded_&#39;,run.years[y],&#39;.csv&#39;)
+  check.dir(output.file7a)
+  
+  if(file.exists(output.file7a) &amp; file.exists(output.file7b) | no.threshold){
+    print(paste0(&#39;File already exists: &#39;,output.file7a, &#39; and &#39;, output.file7b))
+  }else{
+
+    if(any(file.size(this.year.files)==0))
+    EDAB.GLORYS::make_thermal_habitat_area(input.file = this.year.files,
+                                           output.file.area =  output.file7a,
+                                           output.file.gridded = output.file7b  ,
+                                           shp.file = shp.file,
+                                           file.year = run.years[y],
+                                           write.area =T,
+                                           write.gridded =T,
+                                           t.max.seq = seq(0,30,1)
+    )
+  }
+  
+
+}
+
+# glorys.heatwave.files = c(list.files(paste0(output.dir,&#39;data/bottom_temp_daily_epu/&#39;),full.names = T),&#39;/home/jcaracappa/EDAB_Dev/jcaracappa/ROMS_NWA/ROMS_daily_epu_1959_1992.csv&#39; )
+# glorys.heatwave.data = lapply(glorys.heatwave.files, read.csv) |&gt;
+#   dplyr::bind_rows() |&gt;
+#   dplyr::mutate(source_m = dplyr::coalesce(Source, source)) |&gt;
+#   dplyr::select(-Source,-source) |&gt;
+#   dplyr::rename(source = &#39;source_m&#39;)
+# #check all dates
+# all(1959:2025 %in% sort(unique(format(as.Date(glorys.heatwave.data$date),format = &#39;%Y&#39;)) ))
+# glorys.heatwaves.out = write.csv(glorys.heatwave.data,paste0(&#39;/home/jcaracappa/EDAB_Dev/jcaracappa/ROMS_GLORYS_bottom_temp_model_daily_epu_&#39;,1959,&#39;_&#39;,format(Sys.time(), &#39;%Y&#39;),&#39;.csv&#39;), row.names =F)
+# 
+# season.index = data.frame(month = 1:12, season = rep(c(&#39;Winter&#39;,&#39;Spring&#39;,&#39;Summer&#39;,&#39;Fall&#39;),each = 3))
+# data = glorys.heatwave.data %&gt;% 
+#   dplyr::mutate(month = as.numeric(format(as.Date(date),format = &#39;%m&#39;)),
+#                 year = as.numeric(format(as.Date(date),format = &#39;%Y&#39;))) %&gt;% 
+#   dplyr::left_join(season.index) %&gt;% 
+#   dplyr::group_by(source,year,season,EPU) %&gt;% 
+#   dplyr::summarise(Value = mean(BottomT.mean,na.rm=T))
+#   
+# library(ggplot2)
+# ggplot(data, aes(x = year, y = Value, color = source))+
+#   geom_line()+
+#   facet_grid(EPU~season)
+# ggsave(here::here(&#39;GLORYS_bottom_temp_2025.png&#39;),width =12, height = 12)</code></pre>
+<p>This mostly worked for the thermal_habibat_area, check it.</p>
+<p>Need to know how it gets from nc to an R dataset</p>
 <p>Next we try the same code on the South Atlantic GLORYS bottom temperature.</p>
+<p>Problem: I need a shape file to run this. Lets try SA_EEZ_off_states from <a href="https://www.fisheries.noaa.gov/resource/map/defined-fishery-management-areas-south-atlantic-states-map-gis-data" class="uri">https://www.fisheries.noaa.gov/resource/map/defined-fishery-management-areas-south-atlantic-states-map-gis-data</a></p>
+<p>Which appears too wide for the extent I pulled so lets try pulling again with a bigger area (changed extent in code above).</p>
+<pre class="r"><code>input.dir = &#39;/Users/sarahgaichas/Documents/Work/SAFMCindicators/SAFMCindicators/GLORYS/SAtl/&#39;
+
+output.dir = &#39;/Users/sarahgaichas/Documents/Work/SAFMCindicators/SAFMCindicators/GLORYS/SAtl-out/&#39;
+
+supp.dir = &#39;/Users/sarahgaichas/Documents/Work/SAFMCindicators/READ-EDAB-GLORYS/data-raw/&#39;
+  
+#print(&#39;Using default arguments&#39;)
+
+shp.file = paste0(supp.dir,&#39;geometry/SA_EEZ_off_states.shp&#39;)
+
+#Get year range
+year.start = 2020
+year.end = 2025 #format(Sys.time(), &#39;%Y&#39;) this would go to now, our data end in 2024
+run.years = year.start:year.end
+y=1
+input.prefix = &#39;GLORYS_REANALYSIS_&#39;
+
+check.dir = function(file){
+  if(!dir.exists(dirname(file))){dir.create(dirname(file),recursive =T)}
+}
+
+#Produce each year&#39;s indices
+for(y in 1:length(run.years)){
+  
+  input.year = run.years[y]
+  input.diryr = paste0(input.dir, input.year,&quot;/&quot;)
+  input.files = list.files(input.diryr,input.prefix)
+  input.files.year = as.numeric(gsub(&quot;.*(\\d{4}).*&quot;, &#39;\\1&#39;, input.files))
+  no.threshold =F
+  
+  which.files.year = which(input.files.year == run.years[y])
+  if(length(which.files.year) == 0){
+    next()
+  }
+  
+  this.year.files = paste0(input.diryr,input.files[which.files.year])
+  # if(any(file.size(this.year.files)==0)){
+  #   next()
+  # }
+  # 
+  # if(all(!file.exists(this.year.files))){
+  #   print(paste0(&#39;File does not exist: &#39;,this.year.file))
+  #   next()
+  # }
+  
+  year.dates = seq.Date(as.Date(paste0(run.years[y],&#39;-01-01&#39;)), as.Date(paste0(run.years[y],&#39;-12-31&#39;)), by = &#39;1 day&#39;)
+  file.dates &lt;- sub(&quot;.*(\\d{4}-\\d{2}-\\d{2}).*&quot;, &quot;\\1&quot;, this.year.files)
+  if(!all(year.dates %in% file.dates)){
+    print(paste0(&#39;Missing Dates in &#39;,run.years[y],&#39;: &#39;, paste0(year.dates[which(!(year.dates %in% file.dates))],collapse = &#39;, &#39;)))
+    next()
+  }
+  
+  #Make bottom_temp_model_gridded
+  print(paste0(&#39;Starting bottom_temp_model_gridded for year: &#39;,run.years[y], &#39; at &#39;, Sys.time()))
+  
+  output.file3 = paste0(output.dir,&#39;data/bottom_temp_model_gridded/GLORYS_bottom_temp_model_gridded_&#39;,run.years[y],&#39;.csv&#39;)
+  check.dir(output.file3)
+  if(file.exists(output.file3)){
+    print(paste0(&#39;File already exists: &#39;,output.file3))
+  }else{
+    EDAB.GLORYS::make_bottom_temp_model_gridded(input.file = this.year.files,
+                                                output.file = output.file3,
+                                                shp.file = shp.file,
+                                                file.year = run.years[y],
+                                                write.out = T)
+  }
+  
+  
+  # Missing output.file1 seasonal anomaly
+  # #Make bottom_temp_model_anom
+  # print(paste0(&#39;Starting bottom_temp_model_anom for year: &#39;,run.years[y], &#39; at &#39;, Sys.time()))
+  # 
+  # output.file4 = paste0(output.dir,&#39;data/bottom_temp_model_anom/GLORYS_bottom_temp_model_anom_&#39;,run.years[y],&#39;.csv&#39;)
+  # check.dir(output.file4)
+  # if(file.exists(output.file4)){
+  #   print(paste0(&#39;File already exists: &#39;,output.file4))
+  # }else{
+  #   EDAB.GLORYS::make_bottom_temp_model_anom(input.file = this.year.files,
+  #                                            output.file = output.file4,
+  #                                            shp.file =shp.file,
+  #                                            file.year =  run.years[y],
+  #                                            climatology.file = output.file1,
+  #                                            write.out =T)
+  # }
+  
+  # #Make bottom_temp_model_annual
+  # # add this one already in the repo
+  # output.file2 = paste0(supp.dir, &quot;GLORYS_bottom_temp_clim_1990_2020.csv&quot;)
+  # print(paste0(&#39;Starting bottom_temp_model_annual for year: &#39;,run.years[y], &#39; at &#39;, Sys.time()))
+  # 
+  # output.file5 = paste0(output.dir,&#39;data/bottom_temp_model_annual/GLORYS_bottom_temp_model_annual_&#39;,run.years[y],&#39;.csv&#39;)
+  # check.dir(output.file5)
+  # if(file.exists(output.file5)){
+  #   print(paste0(&#39;File already exists: &#39;,output.file5))
+  # }else{
+  #   EDAB.GLORYS::make_bottom_temp_model_annual(input.file = this.year.files,
+  #                                              output.file = output.file5,
+  #                                              shp.file = shp.file,
+  #                                              file.year = run.years[y],
+  #                                              climatology.file =  output.file2,
+  #                                              write.out =T
+  #   )
+  #                                              
+  # }
+  
+  # print(paste0(&#39;Starting bottom_temp_daily_epu for year: &#39;,run.years[y], &#39; at &#39;, Sys.time()))
+  # 
+  # output.file5b = paste0(output.dir,&#39;data/bottom_temp_daily_epu/GLORYS_bottom_temp_daily_epu_&#39;,run.years[y],&#39;.csv&#39;)
+  # check.dir(output.file5b)
+  # if(file.exists(output.file5b)){
+  #   print(paste0(&#39;File already exists: &#39;,output.file5b))
+  # }else{
+  #   EDAB.GLORYS::make_bottom_temp_daily_epu(input.file = this.year.files,
+  #                                              output.file = output.file5b,
+  #                                              shp.file = shp.file,
+  #                                              file.year = run.years[y],
+  #                                              write.out =T
+  #   )
+  #   
+  # }
+  
+
+  #Make thermal_habitat_gridded
+  print(paste0(&#39;Starting thermal_habitat_gridded for year: &#39;,run.years[y], &#39; at &#39;, Sys.time()))
+        
+  output.file6 = paste0(output.dir,&#39;data/thermal_habitat_gridded/GLORYS_thermal_habitat_gridded_&#39;,run.years[y],&#39;.nc&#39;)
+  check.dir(output.file6)
+  if(file.exists(output.file6) | no.threshold){
+    print(paste0(&#39;File already exists: &#39;,output.file6))
+  }else{
+    EDAB.GLORYS::make_thermal_habitat_gridded(input.file = this.year.files,
+                                              output.file =  output.file6,
+                                              supp.dir = supp.dir,
+                                              shp.file = shp.file,
+                                              file.year = run.years[y],
+                                              write.out =T,
+                                              t.max.seq = seq(0,30,1)
+    )
+  }
+  
+  #Make thermal_habitat_area
+  print(paste0(&#39;Starting thermal_habitat_area for year: &#39;,run.years[y], &#39; at &#39;, Sys.time()))
+        
+  output.file7a = paste0(output.dir,&#39;data/thermal_habitat_area/GLORYS_thermal_habitat_area_&#39;,run.years[y],&#39;.csv&#39;)
+  output.file7b = paste0(output.dir,&#39;data/thermal_habitat_gridded/GLORYS_thermal_habitat_gridded_&#39;,run.years[y],&#39;.csv&#39;)
+  check.dir(output.file7a)
+  
+  if(file.exists(output.file7a) &amp; file.exists(output.file7b) | no.threshold){
+    print(paste0(&#39;File already exists: &#39;,output.file7a, &#39; and &#39;, output.file7b))
+  }else{
+
+    if(any(file.size(this.year.files)==0))
+    EDAB.GLORYS::make_thermal_habitat_area(input.file = this.year.files,
+                                           output.file.area =  output.file7a,
+                                           output.file.gridded = output.file7b  ,
+                                           shp.file = shp.file,
+                                           file.year = run.years[y],
+                                           write.area =T,
+                                           write.gridded =T,
+                                           t.max.seq = seq(0,30,1)
+    )
+  }
+  
+
+}
+
+# glorys.heatwave.files = c(list.files(paste0(output.dir,&#39;data/bottom_temp_daily_epu/&#39;),full.names = T),&#39;/home/jcaracappa/EDAB_Dev/jcaracappa/ROMS_NWA/ROMS_daily_epu_1959_1992.csv&#39; )
+# glorys.heatwave.data = lapply(glorys.heatwave.files, read.csv) |&gt;
+#   dplyr::bind_rows() |&gt;
+#   dplyr::mutate(source_m = dplyr::coalesce(Source, source)) |&gt;
+#   dplyr::select(-Source,-source) |&gt;
+#   dplyr::rename(source = &#39;source_m&#39;)
+# #check all dates
+# all(1959:2025 %in% sort(unique(format(as.Date(glorys.heatwave.data$date),format = &#39;%Y&#39;)) ))
+# glorys.heatwaves.out = write.csv(glorys.heatwave.data,paste0(&#39;/home/jcaracappa/EDAB_Dev/jcaracappa/ROMS_GLORYS_bottom_temp_model_daily_epu_&#39;,1959,&#39;_&#39;,format(Sys.time(), &#39;%Y&#39;),&#39;.csv&#39;), row.names =F)
+# 
+# season.index = data.frame(month = 1:12, season = rep(c(&#39;Winter&#39;,&#39;Spring&#39;,&#39;Summer&#39;,&#39;Fall&#39;),each = 3))
+# data = glorys.heatwave.data %&gt;% 
+#   dplyr::mutate(month = as.numeric(format(as.Date(date),format = &#39;%m&#39;)),
+#                 year = as.numeric(format(as.Date(date),format = &#39;%Y&#39;))) %&gt;% 
+#   dplyr::left_join(season.index) %&gt;% 
+#   dplyr::group_by(source,year,season,EPU) %&gt;% 
+#   dplyr::summarise(Value = mean(BottomT.mean,na.rm=T))
+#   
+# library(ggplot2)
+# ggplot(data, aes(x = year, y = Value, color = source))+
+#   geom_line()+
+#   facet_grid(EPU~season)
+# ggsave(here::here(&#39;GLORYS_bottom_temp_2025.png&#39;),width =12, height = 12)</code></pre>
 </div>
 </div>
 <div id="references" class="section level1 unnumbered">
@@ -3075,32 +3467,35 @@ for y in range(len(years)):
 <div id="ref-hijmans_terra_2025" class="csl-entry">
 <div class="csl-left-margin">7. </div><div class="csl-right-inline">Hijmans RJ. Terra: <span>Spatial</span> <span>Data</span> <span>Analysis</span>. 2025. Available: <a href="https://CRAN.R-project.org/package=terra">https://CRAN.R-project.org/package=terra</a></div>
 </div>
+<div id="ref-pierce_ncdf4_2025" class="csl-entry">
+<div class="csl-left-margin">8. </div><div class="csl-right-inline">Pierce D. ncdf4: <span>Interface</span> to <span>Unidata</span> <span class="nocase">netCDF</span> (<span>Version</span> 4 or <span>Earlier</span>) <span>Format</span> <span>Data</span> <span>Files</span>. 2025. Available: <a href="https://CRAN.R-project.org/package=ncdf4">https://CRAN.R-project.org/package=ncdf4</a></div>
+</div>
 <div id="ref-xie_knitr_2025" class="csl-entry">
-<div class="csl-left-margin">8. </div><div class="csl-right-inline">Xie Y. Knitr: <span>A</span> <span>General</span>-<span>Purpose</span> <span>Package</span> for <span>Dynamic</span> <span>Report</span> <span>Generation</span> in <span>R</span>. 2025. Available: <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a></div>
+<div class="csl-left-margin">9. </div><div class="csl-right-inline">Xie Y. Knitr: <span>A</span> <span>General</span>-<span>Purpose</span> <span>Package</span> for <span>Dynamic</span> <span>Report</span> <span>Generation</span> in <span>R</span>. 2025. Available: <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a></div>
 </div>
 <div id="ref-xie_dynamic_2015" class="csl-entry">
-<div class="csl-left-margin">9. </div><div class="csl-right-inline">Xie Y. Dynamic <span>Documents</span> with <span>R</span> and knitr. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC; 2015. Available: <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a></div>
+<div class="csl-left-margin">10. </div><div class="csl-right-inline">Xie Y. Dynamic <span>Documents</span> with <span>R</span> and knitr. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC; 2015. Available: <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a></div>
 </div>
 <div id="ref-stodden_knitr_2014" class="csl-entry">
-<div class="csl-left-margin">10. </div><div class="csl-right-inline">Xie Y. Knitr: <span>A</span> <span>Comprehensive</span> <span>Tool</span> for <span>Reproducible</span> <span>Research</span> in <span>R</span>. In: Stodden V, Leisch F, Peng RD, editors. Implementing <span>Reproducible</span> <span>Computational</span> <span>Research</span>. Chapman; Hall/CRC; 2014. </div>
+<div class="csl-left-margin">11. </div><div class="csl-right-inline">Xie Y. Knitr: <span>A</span> <span>Comprehensive</span> <span>Tool</span> for <span>Reproducible</span> <span>Research</span> in <span>R</span>. In: Stodden V, Leisch F, Peng RD, editors. Implementing <span>Reproducible</span> <span>Computational</span> <span>Research</span>. Chapman; Hall/CRC; 2014. </div>
 </div>
 <div id="ref-allaire_rmarkdown_2024" class="csl-entry">
-<div class="csl-left-margin">11. </div><div class="csl-right-inline">Allaire JJ, Xie Y, Dervieux C, McPherson J, Luraschi J, Ushey K, et al. Rmarkdown: <span>Dynamic</span> <span>Documents</span> for <span>R</span>. 2024. Available: <a href="https://github.com/rstudio/rmarkdown">https://github.com/rstudio/rmarkdown</a></div>
+<div class="csl-left-margin">12. </div><div class="csl-right-inline">Allaire JJ, Xie Y, Dervieux C, McPherson J, Luraschi J, Ushey K, et al. Rmarkdown: <span>Dynamic</span> <span>Documents</span> for <span>R</span>. 2024. Available: <a href="https://github.com/rstudio/rmarkdown">https://github.com/rstudio/rmarkdown</a></div>
 </div>
 <div id="ref-xie_r_2018" class="csl-entry">
-<div class="csl-left-margin">12. </div><div class="csl-right-inline">Xie Y, Allaire JJ, Grolemund G. R <span>Markdown</span>: <span>The</span> <span>Definitive</span> <span>Guide</span>. Boca Raton, Florida: Chapman; Hall/CRC; 2018. Available: <a href="https://bookdown.org/yihui/rmarkdown">https://bookdown.org/yihui/rmarkdown</a></div>
+<div class="csl-left-margin">13. </div><div class="csl-right-inline">Xie Y, Allaire JJ, Grolemund G. R <span>Markdown</span>: <span>The</span> <span>Definitive</span> <span>Guide</span>. Boca Raton, Florida: Chapman; Hall/CRC; 2018. Available: <a href="https://bookdown.org/yihui/rmarkdown">https://bookdown.org/yihui/rmarkdown</a></div>
 </div>
 <div id="ref-xie_r_2020" class="csl-entry">
-<div class="csl-left-margin">13. </div><div class="csl-right-inline">Xie Y, Dervieux C, Riederer E. R <span>Markdown</span> <span>Cookbook</span>. Boca Raton, Florida: Chapman; Hall/CRC; 2020. Available: <a href="https://bookdown.org/yihui/rmarkdown-cookbook">https://bookdown.org/yihui/rmarkdown-cookbook</a></div>
+<div class="csl-left-margin">14. </div><div class="csl-right-inline">Xie Y, Dervieux C, Riederer E. R <span>Markdown</span> <span>Cookbook</span>. Boca Raton, Florida: Chapman; Hall/CRC; 2020. Available: <a href="https://bookdown.org/yihui/rmarkdown-cookbook">https://bookdown.org/yihui/rmarkdown-cookbook</a></div>
 </div>
 <div id="ref-xie_bookdown_2025" class="csl-entry">
-<div class="csl-left-margin">14. </div><div class="csl-right-inline">Xie Y. Bookdown: <span>Authoring</span> <span>Books</span> and <span>Technical</span> <span>Documents</span> with <span>R</span> <span>Markdown</span>. 2025. Available: <a href="https://github.com/rstudio/bookdown">https://github.com/rstudio/bookdown</a></div>
+<div class="csl-left-margin">15. </div><div class="csl-right-inline">Xie Y. Bookdown: <span>Authoring</span> <span>Books</span> and <span>Technical</span> <span>Documents</span> with <span>R</span> <span>Markdown</span>. 2025. Available: <a href="https://github.com/rstudio/bookdown">https://github.com/rstudio/bookdown</a></div>
 </div>
 <div id="ref-xie_bookdown_2016" class="csl-entry">
-<div class="csl-left-margin">15. </div><div class="csl-right-inline">Xie Y. Bookdown: <span>Authoring</span> <span>Books</span> and <span>Technical</span> <span>Documents</span> with <span>R</span> <span>Markdown</span>. Boca Raton, Florida: Chapman; Hall/CRC; 2016. Available: <a href="https://bookdown.org/yihui/bookdown">https://bookdown.org/yihui/bookdown</a></div>
+<div class="csl-left-margin">16. </div><div class="csl-right-inline">Xie Y. Bookdown: <span>Authoring</span> <span>Books</span> and <span>Technical</span> <span>Documents</span> with <span>R</span> <span>Markdown</span>. Boca Raton, Florida: Chapman; Hall/CRC; 2016. Available: <a href="https://bookdown.org/yihui/bookdown">https://bookdown.org/yihui/bookdown</a></div>
 </div>
 <div id="ref-beltz_ecodata_2025" class="csl-entry">
-<div class="csl-left-margin">16. </div><div class="csl-right-inline">Beltz B, Beet A, Bastille K, Hardison S. Ecodata: <span>Documentation</span> of <span>Ecosystem</span> <span>Indicator</span> <span>Reporting</span>. 2025. Available: <a href="https://noaa-edab.github.io/ecodata/">https://noaa-edab.github.io/ecodata/</a></div>
+<div class="csl-left-margin">17. </div><div class="csl-right-inline">Beltz B, Beet A, Bastille K, Hardison S. Ecodata: <span>Documentation</span> of <span>Ecosystem</span> <span>Indicator</span> <span>Reporting</span>. 2025. Available: <a href="https://noaa-edab.github.io/ecodata/">https://noaa-edab.github.io/ecodata/</a></div>
 </div>
 </div>
 </div>
