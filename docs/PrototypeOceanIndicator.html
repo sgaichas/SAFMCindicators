@@ -2862,17 +2862,23 @@ border-radius: 0px;
 </div>
 <div id="methods" class="section level1" number="2">
 <h1><span class="header-section-number">2</span> Methods</h1>
+<div id="pull-glorys-bottom-temperature" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Pull GLORYS bottom temperature</h2>
 <p>To use GLORYS information, users must register for a free account on the Copernicus website by clicking the <a href="https://data.marine.copernicus.eu/register">link at the top of the page</a>. Users supply an email and optional information on their organization (one can select Others) and then receive an email with a link to establish a password.</p>
-<p>I am working in R and Rstudio, but Python code is used to access GLORYS information (there is not a way to access in R). Python can be installed using the R package <a href="https://rstudio.github.io/reticulate/"><code>reticulate</code></a> and the command <code>reticulate::install_miniconda()</code> if you don’t already have a Python installation.</p>
+<p>I am working in R <span class="citation">[<a href="#ref-r_core_team_r_2023">4</a>]</span>, but <a href="https://docs.python.org/3/index.html">Python</a> code is used to access GLORYS information (there is not a way to access in R). Python can be installed using the R package <a href="https://rstudio.github.io/reticulate/"><code>reticulate</code></a> <span class="citation">[<a href="#ref-ushey_reticulate_2025">5</a>]</span> and the command <code>reticulate::install_miniconda()</code> if you don’t already have a Python installation. This installs <a href="https://www.anaconda.com/docs/getting-started/miniconda/main">Miniconda</a>, a lightweight distribution of Python. Because it is a minimal distribution, one or two packages need to be added as below.</p>
 <p>For this script you need the python <code>pandas</code> package, which is installed using <code>reticulate::py_install(&quot;pandas&quot;)</code></p>
-<p>You also need the motuclient package, from <a href="https://github.com/clstoulouse/motu-client-python" class="uri">https://github.com/clstoulouse/motu-client-python</a></p>
-<p>Try <code>reticulate::py_install(&quot;motuclient&quot;, pip = TRUE)</code> which worked. Almost. <code>reticulate::py_install(&quot;setuptools&quot;, pip = TRUE)</code></p>
-<p>Maybe motuclient doesnt work anymore?</p>
-<p>Try <code>copernicusmarine</code>. <code>reticulate::py_install(&quot;copernicusmarine&quot;, pip = TRUE)</code></p>
+<p><em>These lines are left here for the record but I was unable to use the<code>motuclient</code> package</em>
+You also need the <code>motuclient</code> package, from <a href="https://github.com/clstoulouse/motu-client-python" class="uri">https://github.com/clstoulouse/motu-client-python</a>
+Try <code>reticulate::py_install(&quot;motuclient&quot;, pip = TRUE)</code> which worked. Almost. <code>reticulate::py_install(&quot;setuptools&quot;, pip = TRUE)</code>
+Maybe motuclient doesnt work anymore?
+<em>I also didn’t need to install with pip, which was recommended for <code>motuclient</code> but not needed for other packages, I kept using it to stay consistent</em>
+<em>The lines below would work, possibly better, without the pip=“TRUE” argument</em></p>
+<p>We also need to install the package from Copernicus that makes downloading the information easy:</p>
+<p>Install the <code>copernicusmarine</code> package using <code>reticulate::py_install(&quot;copernicusmarine&quot;, pip = TRUE)</code></p>
 <p>Install <code>h5py</code>. <code>reticulate::py_install(&quot;h5py&quot;, pip = TRUE)</code></p>
-<p>Dataset id <code>cmems_mod_glo_phy_my_0.083deg_P1D-m</code></p>
+<p>The dataset id we want is <code>cmems_mod_glo_phy_my_0.083deg_P1D-m</code></p>
 <p>With the username and password, the following code can be used to download data locally for processing. It is important to specify the latitude and longitude bounds of the data as well as the year(s). Downloading one year at a time makes for manageable files to process for spatial or time series indicators. The output directory is hardcoded below, this needs to change for use elsewhere.</p>
-<p>This code for downloading is courtesy Joseph Caracappa, NOAA NMFS NEFSC:</p>
+<p>This code for downloading is courtesy Joseph Caracappa, NOAA NMFS NEFSC, and is a test downloading NEUS information so I can compare my results with published indicators to ensure my code is working correctly:</p>
 <pre class="python"><code>import datetime
 import pandas
 import os
@@ -2951,7 +2957,8 @@ for y in range(len(years)):
 ## 1 D0    time       1  6.66e5  6.66e5     1     1  6.66e5  6.66e5 FALSE TRUE      
 ## 2 D1    lati…    313  2.25e1  4.85e1     1   313  2.25e1  4.85e1 FALSE TRUE      
 ## 3 D2    long…    373 -8.25e1 -5.15e1     1   373 -8.25e1 -5.15e1 FALSE TRUE</code></pre>
-<p>This script should pull bottom temperature for the South Atlantic:</p>
+<p>To highlight a box for the South Atlantic region, I visited <a href="https://data.marine.copernicus.eu/product/GLOBAL_MULTIYEAR_PHY_001_030/download" class="uri">https://data.marine.copernicus.eu/product/GLOBAL_MULTIYEAR_PHY_001_030/download</a> then selected variables, drew a box around area on the map, selected a year range, then clicked “automate” to generate a command line script. This script was modified and put into the same framework as used above for the Northeast region.</p>
+<p>This script pulled initial bottom temperature files for the South Atlantic, 2020-2025:</p>
 <pre class="python"><code>import datetime
 import pandas
 import os
@@ -3009,7 +3016,8 @@ for y in range(len(years)):
         
         #print(command)
         os.system(command)</code></pre>
-<p>Take a look at a South Atlantic file</p>
+<p>Pulling 6 years of data took my laptop and home connection about 8 hours.</p>
+<p>Take a look at a South Atlantic file:</p>
 <pre class="r"><code>tidync::tidync(here::here(&quot;GLORYS/SAtl/2025/GLORYS_REANALYSIS_2025-12-31.nc&quot;))</code></pre>
 <pre><code>## 
 ## Data Source (1): GLORYS_REANALYSIS_2025-12-31.nc ...
@@ -3028,12 +3036,20 @@ for y in range(len(years)):
 ## 1 D0    time       1  6.66e5  6.66e5     1     1  6.66e5  6.66e5 FALSE TRUE      
 ## 2 D1    lati…    153  2.39e1  3.66e1     1   153  2.39e1  3.66e1 FALSE TRUE      
 ## 3 D2    long…     99 -8.18e1 -7.37e1     1    99 -8.18e1 -7.37e1 FALSE TRUE</code></pre>
+</div>
+<div id="process-glorys-bottom-temperature" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Process GLORYS bottom temperature</h2>
+<p>Joe Caracappa, NEFSC, wrote nearly all of the code used to produce these indicators for the Northeast US <a href="https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf">State of the Ecosystem</a> reports.</p>
+<p>R packages used in this workflow include <code>tidyverse</code> <span class="citation">[<a href="#ref-wickham_welcome_2019">6</a>]</span> for general data organization and visualization, <code>terra</code> <span class="citation">[<a href="#ref-hijmans_terra_2025">7</a>]</span> for processing netCDF files downloaded from Copernicus, and <code>knitr</code> <span class="citation">[<a href="#ref-xie_knitr_2025">8</a>–<a href="#ref-stodden_knitr_2014">10</a>]</span>, <code>rmarkdown</code> <span class="citation">[<a href="#ref-allaire_rmarkdown_2024">11</a>–<a href="#ref-xie_r_2020">13</a>]</span>, and <code>bookdown</code> <span class="citation">[<a href="#ref-xie_bookdown_2025">14</a>,<a href="#ref-xie_bookdown_2016">15</a>]</span> for producing reports in both .html and .pdf formats.</p>
 <p>Code for reading the file into time series or maps is found at the NEFSC GitHub</p>
 <p><a href="https://github.com/NEFSC/READ-EDAB-GLORYS/tree/main" class="uri">https://github.com/NEFSC/READ-EDAB-GLORYS/tree/main</a></p>
 <p>This repo has a <a href="https://github.com/NEFSC/READ-EDAB-GLORYS/blob/main/data-raw/python/GLORYS_download_template_workflow.py">fuller version of the pulling script</a> that adds variables like salinity or mixed layer depth and pulls them into variable specific folders. It could be modified simply by changing the min and max lat and lon as above.</p>
 <p>It also has functions to process the downloaded files into datasets for presentation as either time series or spatial datasets. It calls utility functions in this repository:</p>
 <p><a href="https://github.com/NEFSC/READ_EDAB_Utilities/tree/main" class="uri">https://github.com/NEFSC/READ_EDAB_Utilities/tree/main</a></p>
-<p>Finally, scripts to plot indicators are found in the NOAA-EDAB GitHub ecodata repository, such as <code>plot_thermal_habitat_gridded</code> : <a href="https://github.com/NOAA-EDAB/ecodata/blob/pre-production/R/plot_thermal_habitat_gridded.R" class="uri">https://github.com/NOAA-EDAB/ecodata/blob/pre-production/R/plot_thermal_habitat_gridded.R</a></p>
+<p>Finally, functions to plot indicators are found in the <code>ecodata</code> <span class="citation">[<a href="#ref-beltz_ecodata_2025">16</a>]</span> package and in the NOAA-EDAB GitHub ecodata repository, such as <code>plot_thermal_habitat_gridded</code> : <a href="https://github.com/NOAA-EDAB/ecodata/blob/pre-production/R/plot_thermal_habitat_gridded.R" class="uri">https://github.com/NOAA-EDAB/ecodata/blob/pre-production/R/plot_thermal_habitat_gridded.R</a></p>
+<p>First we try producing the NEUS indicators to validate the workflow:</p>
+<p>Next we try the same code on the South Atlantic GLORYS bottom temperature.</p>
+</div>
 </div>
 <div id="references" class="section level1 unnumbered">
 <h1>References</h1>
@@ -3046,6 +3062,45 @@ for y in range(len(years)):
 </div>
 <div id="ref-jones_learning_2022" class="csl-entry">
 <div class="csl-left-margin">3. </div><div class="csl-right-inline">Jones AW, Burchard KA, Mercer AM, Hoey JJ, Morin MD, Gianesin GL, et al. Learning <span>From</span> the <span>Study</span> <span>Fleet</span>: <span>Maintenance</span> of a <span>Large</span>-<span>Scale</span> <span>Reference</span> <span>Fleet</span> for <span>Northeast</span> <span>U</span>.<span>S</span>. <span>Fisheries</span>. Frontiers in Marine Science. 2022;9. Available: <a href="https://www.frontiersin.org/articles/10.3389/fmars.2022.869560">https://www.frontiersin.org/articles/10.3389/fmars.2022.869560</a></div>
+</div>
+<div id="ref-r_core_team_r_2023" class="csl-entry">
+<div class="csl-left-margin">4. </div><div class="csl-right-inline">R Core Team. R: <span>A</span> <span>Language</span> and <span>Environment</span> for <span>Statistical</span> <span>Computing</span>. Vienna, Austria: R Foundation for Statistical Computing; 2023. Available: <a href="https://www.R-project.org/">https://www.R-project.org/</a></div>
+</div>
+<div id="ref-ushey_reticulate_2025" class="csl-entry">
+<div class="csl-left-margin">5. </div><div class="csl-right-inline">Ushey K, Allaire JJ, Tang Y. Reticulate: <span>Interface</span> to ’<span>Python</span>’. 2025. Available: <a href="https://CRAN.R-project.org/package=reticulate">https://CRAN.R-project.org/package=reticulate</a></div>
+</div>
+<div id="ref-wickham_welcome_2019" class="csl-entry">
+<div class="csl-left-margin">6. </div><div class="csl-right-inline">Wickham H, Averick M, Bryan J, Chang W, McGowan LD, François R, et al. Welcome to the tidyverse. Journal of Open Source Software. 2019;4: 1686. doi:<a href="https://doi.org/10.21105/joss.01686">10.21105/joss.01686</a></div>
+</div>
+<div id="ref-hijmans_terra_2025" class="csl-entry">
+<div class="csl-left-margin">7. </div><div class="csl-right-inline">Hijmans RJ. Terra: <span>Spatial</span> <span>Data</span> <span>Analysis</span>. 2025. Available: <a href="https://CRAN.R-project.org/package=terra">https://CRAN.R-project.org/package=terra</a></div>
+</div>
+<div id="ref-xie_knitr_2025" class="csl-entry">
+<div class="csl-left-margin">8. </div><div class="csl-right-inline">Xie Y. Knitr: <span>A</span> <span>General</span>-<span>Purpose</span> <span>Package</span> for <span>Dynamic</span> <span>Report</span> <span>Generation</span> in <span>R</span>. 2025. Available: <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a></div>
+</div>
+<div id="ref-xie_dynamic_2015" class="csl-entry">
+<div class="csl-left-margin">9. </div><div class="csl-right-inline">Xie Y. Dynamic <span>Documents</span> with <span>R</span> and knitr. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC; 2015. Available: <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a></div>
+</div>
+<div id="ref-stodden_knitr_2014" class="csl-entry">
+<div class="csl-left-margin">10. </div><div class="csl-right-inline">Xie Y. Knitr: <span>A</span> <span>Comprehensive</span> <span>Tool</span> for <span>Reproducible</span> <span>Research</span> in <span>R</span>. In: Stodden V, Leisch F, Peng RD, editors. Implementing <span>Reproducible</span> <span>Computational</span> <span>Research</span>. Chapman; Hall/CRC; 2014. </div>
+</div>
+<div id="ref-allaire_rmarkdown_2024" class="csl-entry">
+<div class="csl-left-margin">11. </div><div class="csl-right-inline">Allaire JJ, Xie Y, Dervieux C, McPherson J, Luraschi J, Ushey K, et al. Rmarkdown: <span>Dynamic</span> <span>Documents</span> for <span>R</span>. 2024. Available: <a href="https://github.com/rstudio/rmarkdown">https://github.com/rstudio/rmarkdown</a></div>
+</div>
+<div id="ref-xie_r_2018" class="csl-entry">
+<div class="csl-left-margin">12. </div><div class="csl-right-inline">Xie Y, Allaire JJ, Grolemund G. R <span>Markdown</span>: <span>The</span> <span>Definitive</span> <span>Guide</span>. Boca Raton, Florida: Chapman; Hall/CRC; 2018. Available: <a href="https://bookdown.org/yihui/rmarkdown">https://bookdown.org/yihui/rmarkdown</a></div>
+</div>
+<div id="ref-xie_r_2020" class="csl-entry">
+<div class="csl-left-margin">13. </div><div class="csl-right-inline">Xie Y, Dervieux C, Riederer E. R <span>Markdown</span> <span>Cookbook</span>. Boca Raton, Florida: Chapman; Hall/CRC; 2020. Available: <a href="https://bookdown.org/yihui/rmarkdown-cookbook">https://bookdown.org/yihui/rmarkdown-cookbook</a></div>
+</div>
+<div id="ref-xie_bookdown_2025" class="csl-entry">
+<div class="csl-left-margin">14. </div><div class="csl-right-inline">Xie Y. Bookdown: <span>Authoring</span> <span>Books</span> and <span>Technical</span> <span>Documents</span> with <span>R</span> <span>Markdown</span>. 2025. Available: <a href="https://github.com/rstudio/bookdown">https://github.com/rstudio/bookdown</a></div>
+</div>
+<div id="ref-xie_bookdown_2016" class="csl-entry">
+<div class="csl-left-margin">15. </div><div class="csl-right-inline">Xie Y. Bookdown: <span>Authoring</span> <span>Books</span> and <span>Technical</span> <span>Documents</span> with <span>R</span> <span>Markdown</span>. Boca Raton, Florida: Chapman; Hall/CRC; 2016. Available: <a href="https://bookdown.org/yihui/bookdown">https://bookdown.org/yihui/bookdown</a></div>
+</div>
+<div id="ref-beltz_ecodata_2025" class="csl-entry">
+<div class="csl-left-margin">16. </div><div class="csl-right-inline">Beltz B, Beet A, Bastille K, Hardison S. Ecodata: <span>Documentation</span> of <span>Ecosystem</span> <span>Indicator</span> <span>Reporting</span>. 2025. Available: <a href="https://noaa-edab.github.io/ecodata/">https://noaa-edab.github.io/ecodata/</a></div>
 </div>
 </div>
 </div>

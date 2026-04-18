@@ -44,27 +44,32 @@ Validation of this model-based temperature indicator could be achieved with an e
 
 # Methods
 
+## Pull GLORYS bottom temperature
+
 To use GLORYS information, users must register for a free account on the Copernicus website by clicking the [link at the top of the page](https://data.marine.copernicus.eu/register). Users supply an email and optional information on their organization (one can select Others) and then receive an email with a link to establish a password.
 
-I am working in R and Rstudio, but Python code is used to access GLORYS information (there is not a way to access in R). Python can be installed using the R package [`reticulate`](https://rstudio.github.io/reticulate/) and the command `reticulate::install_miniconda()` if you don't already have a Python installation. 
+I am working in R [@r_core_team_r_2023], but [Python](https://docs.python.org/3/index.html) code is used to access GLORYS information (there is not a way to access in R). Python can be installed using the R package [`reticulate`](https://rstudio.github.io/reticulate/) [@ushey_reticulate_2025] and the command `reticulate::install_miniconda()` if you don't already have a Python installation. This installs [Miniconda](https://www.anaconda.com/docs/getting-started/miniconda/main), a lightweight distribution of Python. Because it is a minimal distribution, one or two packages need to be added as below. 
 
 For this script you need the python `pandas` package, which is installed using `reticulate::py_install("pandas")`
 
-You also need the motuclient package, from https://github.com/clstoulouse/motu-client-python 
-
+*These lines are left here for the record but I was unable to use the`motuclient` package*
+You also need the `motuclient` package, from https://github.com/clstoulouse/motu-client-python 
 Try `reticulate::py_install("motuclient", pip = TRUE)` which worked. Almost. `reticulate::py_install("setuptools", pip = TRUE)`
-
 Maybe motuclient doesnt work anymore?
+*I also didn't need to install with pip, which was recommended for `motuclient` but not needed for other packages, I kept using it to stay consistent*
+*The lines below would work, possibly better, without the pip="TRUE" argument*
 
-Try `copernicusmarine`.  `reticulate::py_install("copernicusmarine", pip = TRUE)`
+We also need to install the package from Copernicus that makes downloading the information easy:
+
+Install the `copernicusmarine` package using `reticulate::py_install("copernicusmarine", pip = TRUE)`
 
 Install `h5py`. `reticulate::py_install("h5py", pip = TRUE)`
 
-Dataset id `cmems_mod_glo_phy_my_0.083deg_P1D-m`
+The dataset id we want is `cmems_mod_glo_phy_my_0.083deg_P1D-m`
 
 With the username and password, the following code can be used to download data locally for processing. It is important to specify the latitude and longitude bounds of the data as well as the year(s). Downloading one year at a time makes for manageable files to process for spatial or time series indicators. The output directory is hardcoded below, this needs to change for use elsewhere.
 
-This code for downloading is courtesy Joseph Caracappa, NOAA NMFS NEFSC:
+This code for downloading is courtesy Joseph Caracappa, NOAA NMFS NEFSC, and is a test downloading NEUS information so I can compare my results with published indicators to ensure my code is working correctly:
 
 ```{python testNE, eval=FALSE}
 
@@ -138,7 +143,9 @@ Take a look at it
 tidync::tidync(here::here("GLORYS/testNE/2025/GLORYS_REANALYSIS_2025-12-31.nc"))
 ```
 
-This script should pull bottom temperature for the South Atlantic:
+To highlight a box for the South Atlantic region, I visited https://data.marine.copernicus.eu/product/GLOBAL_MULTIYEAR_PHY_001_030/download then selected variables, drew a box around area on the map, selected a year range, then clicked "automate" to generate a command line script. This script was modified and put into the same framework as used above for the Northeast region. 
+
+This script pulled initial bottom temperature files for the South Atlantic, 2020-2025:
 
 ```{python SAtl, eval=FALSE}
 
@@ -202,11 +209,19 @@ for y in range(len(years)):
 
 ```
 
-Take a look at a South Atlantic file
+Pulling 6 years of data took my laptop and home connection about 8 hours. 
+
+Take a look at a South Atlantic file:
 
 ```{r}
 tidync::tidync(here::here("GLORYS/SAtl/2025/GLORYS_REANALYSIS_2025-12-31.nc"))
 ```
+
+## Process GLORYS bottom temperature
+
+Joe Caracappa, NEFSC, wrote nearly all of the code used to produce these indicators for the Northeast US [State of the Ecosystem](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf) reports. 
+
+R packages used in this workflow include `tidyverse` [@wickham_welcome_2019] for general data organization and visualization, `terra` [@hijmans_terra_2025] for processing netCDF files downloaded from Copernicus, and `knitr` [@xie_knitr_2025; @xie_dynamic_2015 ; @stodden_knitr_2014], `rmarkdown` [@allaire_rmarkdown_2024; @xie_r_2018; @xie_r_2020], and `bookdown` [@xie_bookdown_2025; @xie_bookdown_2016] for producing reports in both .html and .pdf formats.
 
 Code for reading the file into time series or maps is found at the NEFSC GitHub
 
@@ -218,13 +233,16 @@ It also has functions to process the downloaded files into datasets for presenta
 
 https://github.com/NEFSC/READ_EDAB_Utilities/tree/main
 
-Finally, scripts to plot indicators are found in the NOAA-EDAB GitHub ecodata repository, such as `plot_thermal_habitat_gridded` : https://github.com/NOAA-EDAB/ecodata/blob/pre-production/R/plot_thermal_habitat_gridded.R 
+Finally, functions to plot indicators are found in the `ecodata` [@beltz_ecodata_2025] package and in the NOAA-EDAB GitHub ecodata repository, such as `plot_thermal_habitat_gridded` : https://github.com/NOAA-EDAB/ecodata/blob/pre-production/R/plot_thermal_habitat_gridded.R 
 
-
+First we try producing the NEUS indicators to validate the workflow:
 
 ```{r}
 
 ```
+
+Next we try the same code on the South Atlantic GLORYS bottom temperature.
+
 
 
 # References
