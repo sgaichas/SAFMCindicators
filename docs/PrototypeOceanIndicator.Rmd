@@ -50,13 +50,21 @@ For this script you need the python `pandas` package, which is installed using `
 
 You also need the motuclient package, from https://github.com/clstoulouse/motu-client-python 
 
-Try `reticulate::py_install("motuclient", pip = TRUE)` which worked.
+Try `reticulate::py_install("motuclient", pip = TRUE)` which worked. Almost. `reticulate::py_install("setuptools", pip = TRUE)`
+
+Maybe motuclient doesnt work anymore?
+
+Try `copernicusmarine`.  `reticulate::py_install("copernicusmarine", pip = TRUE)`
+
+Install `h5py`. `reticulate::py_install("h5py", pip = TRUE)`
+
+Dataset id `cmems_mod_glo_phy_my_0.083deg_P1D-m`
 
 With the username and password, the following code can be used to download data locally for processing. It is important to specify the latitude and longitude bounds of the data as well as the year(s). Downloading one year at a time makes for manageable files to process for spatial or time series indicators. The output directory is hardcoded below, this needs to change for use elsewhere.
 
 This code for downloading is courtesy Joseph Caracappa, NOAA NMFS NEFSC:
 
-```{python testNE}
+```{python testNE, eval=FALSE}
 
 import datetime
 import pandas
@@ -64,8 +72,8 @@ import os
 from os import path
 
 #Set start and end year
-year_start=2025
-year_end=2025
+year_start=2020
+year_end=2024
 years=range(year_start,year_end+1) 
 
 #Input CMEMS User and Password (case sensitive)
@@ -73,10 +81,11 @@ USER = "sgaichas"
 PASSWORD = "ZAQ!2wsxCDE#4rfv"
 
 #Set Lat/lon bounds
-min_lon = str(-78)
-max_lon = str(-62)
-min_lat = str(34)
-max_lat = str(47)
+min_lon = str(-82.5)
+max_lon = str(-51.5)
+min_lat = str(22.5)
+max_lat = str(48.5)
+
 for y in range(len(years)):
 
     out_dir = "/Users/sarahgaichas/Documents/Work/SAFMCindicators/SAFMCindicators/GLORYS/testNE/"+str(years[y])+"/"
@@ -95,8 +104,8 @@ for y in range(len(years)):
         dt += step
         
     for d in range(len(all_days)):
-        t1 = all_days[d]+" 00:00:00"
-        t2 = all_days[d]+" 23:59:59"
+        t1 = all_days[d]+"T00:00:00"
+        t2 = all_days[d]+"T23:59:59"
         #Change to desired filename prefix
         new_name = "GLORYS_REANALYSIS_"+all_days[d]+".nc"
         #Change to appropriate output path
@@ -108,13 +117,101 @@ for y in range(len(years)):
            
         #print(new_name)
         #If additional variables are desired: need to add "--variable var.name"
-        
-        command = "python -m motuclient --motu https://my.cmems-du.eu/motu-web/Motu --service-id GLOBAL_MULTIYEAR_PHY_001_030-TDS --product-id cmems_mod_glo_phy_my_0.083_P1D-m --longitude-min "+min_lon+" --longitude-max "+max_lon+" --latitude-min "+min_lat+" --latitude-max "+max_lat+" --date-min "+t1+" --date-max "+t2+" --depth-min 0.493 --depth-max 5727.918 --variable so --variable thetao --variable uo --variable vo --variable zos --out-dir "+out_dir+" --out-name "+new_name+" --user "+USER+" --pwd "+PASSWORD
 
+        command = "copernicusmarine subset -i cmems_mod_glo_phy_my_0.083deg_P1D-m -x "+min_lon+" -X "+max_lon+" -y "+min_lat+" -Y "+max_lat+" -z 0. -Z 5000. -t "+t1+" -T "+t2+" -v sea_water_potential_temperature_at_sea_floor -o "+out_dir+" -f "+new_name+" --force-download --username "+USER+" --password "+PASSWORD
+        #command = "copernicusmarine subset -i cmems_mod_glo_phy_myint_0.083deg_P1D-m -x "+min_lon+" -X "+max_lon+" -y "+min_lat+" -Y "+max_lat+" -z 0. -Z 5000. -t "+t1+" -T "+t2+" -v thetao -o "+out_dir+" -f "+new_name+" --force-download"
+        
+        #print(command)
         os.system(command)
 
 ```
 
+There are separate files for each day of each year.
+
+A single file called `GLORYS_REANALYSIS_2025-12-31.nc` is now downloaded to the local GLORYS/testNE/2025 folder. 
+
+Take a look at it
+
+```{r}
+tidync::tidync(here::here("GLORYS/testNE/2025/GLORYS_REANALYSIS_2025-12-31.nc"))
+```
+
+This script should pull bottom temperature for the South Atlantic:
+
+```{python SAtl, eval=FALSE}
+
+import datetime
+import pandas
+import os
+from os import path
+
+#Set start and end year
+year_start=2020
+year_end=2025
+years=range(year_start,year_end+1) 
+
+#Input CMEMS User and Password (case sensitive)
+USER = "sgaichas"
+PASSWORD = "ZAQ!2wsxCDE#4rfv"
+
+#Set Lat/lon bounds
+min_lon = str(-81.9)
+max_lon = str(-73.6)
+min_lat = str(23.9)
+max_lat = str(36.6)
+
+for y in range(len(years)):
+
+    out_dir = "/Users/sarahgaichas/Documents/Work/SAFMCindicators/SAFMCindicators/GLORYS/SAtl/"+str(years[y])+"/"
+    if(not os.path.exists(out_dir)):
+        os.makedirs(out_dir)
+        
+        
+    dt = datetime.datetime(years[y],1,1)
+    end = datetime.datetime(years[y],12,31)
+    step = datetime.timedelta(days = 1)
+    
+    all_days = []
+    
+    while dt <= end:
+        all_days.append(dt.strftime('%Y-%m-%d'))
+        dt += step
+        
+    for d in range(len(all_days)):
+        t1 = all_days[d]+"T00:00:00"
+        t2 = all_days[d]+"T23:59:59"
+        #Change to desired filename prefix
+        new_name = "GLORYS_REANALYSIS_"+all_days[d]+".nc"
+        #Change to appropriate output path
+        
+        
+        if(path.exists(out_dir+new_name)):
+           print(new_name+" EXISTS")
+           continue
+           
+        #print(new_name)
+        #If additional variables are desired: need to add "--variable var.name"
+
+        command = "copernicusmarine subset -i cmems_mod_glo_phy_my_0.083deg_P1D-m -x "+min_lon+" -X "+max_lon+" -y "+min_lat+" -Y "+max_lat+" -z 0. -Z 5000. -t "+t1+" -T "+t2+" -v sea_water_potential_temperature_at_sea_floor -o "+out_dir+" -f "+new_name+" --force-download --username "+USER+" --password "+PASSWORD
+        #command = "copernicusmarine subset -i cmems_mod_glo_phy_myint_0.083deg_P1D-m -x "+min_lon+" -X "+max_lon+" -y "+min_lat+" -Y "+max_lat+" -z 0. -Z 5000. -t "+t1+" -T "+t2+" -v thetao -o "+out_dir+" -f "+new_name+" --force-download"
+        
+        #print(command)
+        os.system(command)
+
+```
+
+
+Code for reading the file into time series or maps is found at the NEFSC github
+
+https://github.com/NEFSC/READ-EDAB-GLORYS/tree/main
+
+https://github.com/NEFSC/READ_EDAB_Utilities/tree/main
+
+
+
+```{r}
+
+```
 
 
 # References
