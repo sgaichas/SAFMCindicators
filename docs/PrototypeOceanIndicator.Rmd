@@ -171,7 +171,7 @@ max_lat = str(36.1)
 
 for y in range(len(years)):
 
-    out_dir = "...ADD YOUR PATH HERE.../GLORYS/SAtl/"+str(years[y])+"/"
+    out_dir = "[....]/GLORYS/SAtl/"+str(years[y])+"/"
     if(not os.path.exists(out_dir)):
         os.makedirs(out_dir)
         
@@ -211,10 +211,12 @@ for y in range(len(years)):
 
 Pulling 6 years of data took my laptop and home connection about 8 hours. 
 
+The larger footprint took closer to 11 hours. 
+
 Take a look at a South Atlantic file:
 
 ```{r}
-tidync::tidync(here::here("GLORYS/SAtl-smaller/2025/GLORYS_REANALYSIS_2025-12-31.nc"))
+tidync::tidync(here::here("GLORYS/SAtl/2025/GLORYS_REANALYSIS_2025-12-31.nc"))
 ```
 
 ## Process GLORYS bottom temperature

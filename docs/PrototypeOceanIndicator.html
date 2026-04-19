@@ -11,7 +11,7 @@
 
 <meta name="author" content="Sarah Gaichas" />
 
-<meta name="date" content="2026-04-18" />
+<meta name="date" content="2026-04-19" />
 
 <title>Prototype Ocean Indicators</title>
 
@@ -2849,7 +2849,7 @@ border-radius: 0px;
 
 <h1 class="title toc-ignore">Prototype Ocean Indicators</h1>
 <h4 class="author">Sarah Gaichas</h4>
-<h4 class="date">2026-04-18</h4>
+<h4 class="date">2026-04-19</h4>
 
 </div>
 
@@ -2981,7 +2981,7 @@ max_lat = str(36.1)
 
 for y in range(len(years)):
 
-    out_dir = &quot;...ADD YOUR PATH HERE.../GLORYS/SAtl/&quot;+str(years[y])+&quot;/&quot;
+    out_dir = &quot;[....]/GLORYS/SAtl/&quot;+str(years[y])+&quot;/&quot;
     if(not os.path.exists(out_dir)):
         os.makedirs(out_dir)
         
@@ -3017,14 +3017,15 @@ for y in range(len(years)):
         #print(command)
         os.system(command)</code></pre>
 <p>Pulling 6 years of data took my laptop and home connection about 8 hours.</p>
+<p>The larger footprint took closer to 11 hours.</p>
 <p>Take a look at a South Atlantic file:</p>
-<pre class="r"><code>tidync::tidync(here::here(&quot;GLORYS/SAtl-smaller/2025/GLORYS_REANALYSIS_2025-12-31.nc&quot;))</code></pre>
+<pre class="r"><code>tidync::tidync(here::here(&quot;GLORYS/SAtl/2025/GLORYS_REANALYSIS_2025-12-31.nc&quot;))</code></pre>
 <pre><code>## 
 ## Data Source (1): GLORYS_REANALYSIS_2025-12-31.nc ...
 ## 
 ## Grids (4) &lt;dimension family&gt; : &lt;associated variables&gt; 
 ## 
-## [1]   D2,D1,D0 : bottomT    **ACTIVE GRID** ( 15147  values per variable)
+## [1]   D2,D1,D0 : bottomT    **ACTIVE GRID** ( 22338  values per variable)
 ## [2]   D0       : time
 ## [3]   D1       : latitude
 ## [4]   D2       : longitude
@@ -3034,8 +3035,8 @@ for y in range(len(years)):
 ##   dim   name  length     min     max start count    dmin    dmax unlim coord_dim 
 ##   &lt;chr&gt; &lt;chr&gt;  &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt; &lt;int&gt; &lt;int&gt;   &lt;dbl&gt;   &lt;dbl&gt; &lt;lgl&gt; &lt;lgl&gt;     
 ## 1 D0    time       1  6.66e5  6.66e5     1     1  6.66e5  6.66e5 FALSE TRUE      
-## 2 D1    lati…    153  2.39e1  3.66e1     1   153  2.39e1  3.66e1 FALSE TRUE      
-## 3 D2    long…     99 -8.18e1 -7.37e1     1    99 -8.18e1 -7.37e1 FALSE TRUE</code></pre>
+## 2 D1    lati…    153  2.34e1  3.61e1     1   153  2.34e1  3.61e1 FALSE TRUE      
+## 3 D2    long…    146 -8.28e1 -7.07e1     1   146 -8.28e1 -7.07e1 FALSE TRUE</code></pre>
 </div>
 <div id="process-glorys-bottom-temperature" class="section level2" number="2.2">
 <h2><span class="header-section-number">2.2</span> Process GLORYS bottom temperature</h2>
