@@ -11,7 +11,7 @@
 
 <meta name="author" content="Sarah Gaichas" />
 
-<meta name="date" content="2026-04-19" />
+<meta name="date" content="2026-04-20" />
 
 <title>Prototype Ocean Indicators</title>
 
@@ -2849,7 +2849,7 @@ border-radius: 0px;
 
 <h1 class="title toc-ignore">Prototype Ocean Indicators</h1>
 <h4 class="author">Sarah Gaichas</h4>
-<h4 class="date">2026-04-19</h4>
+<h4 class="date">2026-04-20</h4>
 
 </div>
 
@@ -3253,6 +3253,9 @@ for(y in 1:length(run.years)){
 <p>Next we try the same code on the South Atlantic GLORYS bottom temperature.</p>
 <p>Problem: I need a shape file to run this. Lets try SA_EEZ_off_states from <a href="https://www.fisheries.noaa.gov/resource/map/defined-fishery-management-areas-south-atlantic-states-map-gis-data" class="uri">https://www.fisheries.noaa.gov/resource/map/defined-fishery-management-areas-south-atlantic-states-map-gis-data</a></p>
 <p>Which appears too wide for the extent I pulled so lets try pulling again with a bigger area (changed extent in code above).</p>
+<p>Next problem: EDAB-GLORYS functions have the Northeast EPUs hardcoded in them, will need to rewrite them. If I get rid of the EPUs and try to use the full South Atlantic area in that shapefile maybe that will work.</p>
+<p>First step was changing the code naming EPUs to name only one “SAtl”, see if that works–no there are named regions in the shapefile so use those. Off NC Off SC Off GA and Off FL?</p>
+<p>The bottom temp model gridded runs but the thermal habitat fails with <code>Error: [*] extents do not match</code> in the first iteration for 2020</p>
 <pre class="r"><code>input.dir = &#39;/Users/sarahgaichas/Documents/Work/SAFMCindicators/SAFMCindicators/GLORYS/SAtl/&#39;
 
 output.dir = &#39;/Users/sarahgaichas/Documents/Work/SAFMCindicators/SAFMCindicators/GLORYS/SAtl-out/&#39;
@@ -3262,6 +3265,7 @@ supp.dir = &#39;/Users/sarahgaichas/Documents/Work/SAFMCindicators/READ-EDAB-GLO
 #print(&#39;Using default arguments&#39;)
 
 shp.file = paste0(supp.dir,&#39;geometry/SA_EEZ_off_states.shp&#39;)
+#shp.file = NA
 
 #Get year range
 year.start = 2020
@@ -3375,46 +3379,46 @@ for(y in 1:length(run.years)){
   # }
   
 
-  #Make thermal_habitat_gridded
-  print(paste0(&#39;Starting thermal_habitat_gridded for year: &#39;,run.years[y], &#39; at &#39;, Sys.time()))
-        
-  output.file6 = paste0(output.dir,&#39;data/thermal_habitat_gridded/GLORYS_thermal_habitat_gridded_&#39;,run.years[y],&#39;.nc&#39;)
-  check.dir(output.file6)
-  if(file.exists(output.file6) | no.threshold){
-    print(paste0(&#39;File already exists: &#39;,output.file6))
-  }else{
-    EDAB.GLORYS::make_thermal_habitat_gridded(input.file = this.year.files,
-                                              output.file =  output.file6,
-                                              supp.dir = supp.dir,
-                                              shp.file = shp.file,
-                                              file.year = run.years[y],
-                                              write.out =T,
-                                              t.max.seq = seq(0,30,1)
-    )
-  }
-  
-  #Make thermal_habitat_area
-  print(paste0(&#39;Starting thermal_habitat_area for year: &#39;,run.years[y], &#39; at &#39;, Sys.time()))
-        
-  output.file7a = paste0(output.dir,&#39;data/thermal_habitat_area/GLORYS_thermal_habitat_area_&#39;,run.years[y],&#39;.csv&#39;)
-  output.file7b = paste0(output.dir,&#39;data/thermal_habitat_gridded/GLORYS_thermal_habitat_gridded_&#39;,run.years[y],&#39;.csv&#39;)
-  check.dir(output.file7a)
-  
-  if(file.exists(output.file7a) &amp; file.exists(output.file7b) | no.threshold){
-    print(paste0(&#39;File already exists: &#39;,output.file7a, &#39; and &#39;, output.file7b))
-  }else{
-
-    if(any(file.size(this.year.files)==0))
-    EDAB.GLORYS::make_thermal_habitat_area(input.file = this.year.files,
-                                           output.file.area =  output.file7a,
-                                           output.file.gridded = output.file7b  ,
-                                           shp.file = shp.file,
-                                           file.year = run.years[y],
-                                           write.area =T,
-                                           write.gridded =T,
-                                           t.max.seq = seq(0,30,1)
-    )
-  }
+  # #Make thermal_habitat_gridded
+  # print(paste0(&#39;Starting thermal_habitat_gridded for year: &#39;,run.years[y], &#39; at &#39;, Sys.time()))
+  #       
+  # output.file6 = paste0(output.dir,&#39;data/thermal_habitat_gridded/GLORYS_thermal_habitat_gridded_&#39;,run.years[y],&#39;.nc&#39;)
+  # check.dir(output.file6)
+  # if(file.exists(output.file6) | no.threshold){
+  #   print(paste0(&#39;File already exists: &#39;,output.file6))
+  # }else{
+  #   EDAB.GLORYS::make_thermal_habitat_gridded(input.file = this.year.files,
+  #                                             output.file =  output.file6,
+  #                                             supp.dir = supp.dir,
+  #                                             shp.file = shp.file,
+  #                                             file.year = run.years[y],
+  #                                             write.out =T,
+  #                                             t.max.seq = seq(0,30,1)
+  #   )
+  # }
+  # 
+  # #Make thermal_habitat_area
+  # print(paste0(&#39;Starting thermal_habitat_area for year: &#39;,run.years[y], &#39; at &#39;, Sys.time()))
+  #       
+  # output.file7a = paste0(output.dir,&#39;data/thermal_habitat_area/GLORYS_thermal_habitat_area_&#39;,run.years[y],&#39;.csv&#39;)
+  # output.file7b = paste0(output.dir,&#39;data/thermal_habitat_gridded/GLORYS_thermal_habitat_gridded_&#39;,run.years[y],&#39;.csv&#39;)
+  # check.dir(output.file7a)
+  # 
+  # if(file.exists(output.file7a) &amp; file.exists(output.file7b) | no.threshold){
+  #   print(paste0(&#39;File already exists: &#39;,output.file7a, &#39; and &#39;, output.file7b))
+  # }else{
+  # 
+  #   if(any(file.size(this.year.files)==0))
+  #   EDAB.GLORYS::make_thermal_habitat_area(input.file = this.year.files,
+  #                                          output.file.area =  output.file7a,
+  #                                          output.file.gridded = output.file7b  ,
+  #                                          shp.file = shp.file,
+  #                                          file.year = run.years[y],
+  #                                          write.area =T,
+  #                                          write.gridded =T,
+  #                                          t.max.seq = seq(0,30,1)
+  #   )
+  # }
   
 
 }
