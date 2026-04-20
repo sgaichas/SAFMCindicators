@@ -219,6 +219,12 @@ Pulling 6 years of data took my laptop and home connection about 8 hours.
 
 The larger footprint took closer to 11 hours. 
 
+Two dates did not download which makes the later code break: I downloaded them by hand using the web interface, which may cause problems?
+
+Original output of `bottom_temp_model_gridded` once I got it running for SAtl
+"Missing Dates in 2023: 2023-07-13"
+"Missing Dates in 2025: 2025-07-09"
+
 Take a look at a South Atlantic file:
 
 ```{r}

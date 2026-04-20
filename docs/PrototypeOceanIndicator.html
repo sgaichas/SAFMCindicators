@@ -3018,6 +3018,10 @@ for y in range(len(years)):
         os.system(command)</code></pre>
 <p>Pulling 6 years of data took my laptop and home connection about 8 hours.</p>
 <p>The larger footprint took closer to 11 hours.</p>
+<p>Two dates did not download which makes the later code break: I downloaded them by hand using the web interface, which may cause problems?</p>
+<p>Original output of <code>bottom_temp_model_gridded</code> once I got it running for SAtl
+“Missing Dates in 2023: 2023-07-13”
+“Missing Dates in 2025: 2025-07-09”</p>
 <p>Take a look at a South Atlantic file:</p>
 <pre class="r"><code>tidync::tidync(here::here(&quot;GLORYS/SAtl/2025/GLORYS_REANALYSIS_2025-12-31.nc&quot;))</code></pre>
 <pre><code>## 
