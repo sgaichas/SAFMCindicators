@@ -149,6 +149,63 @@ Take a look at it
 tidync::tidync(here::here("GLORYS/testNE/2025/GLORYS_REANALYSIS_2025-12-31.nc"))
 ```
 
+Plot it?
+
+```{r}
+
+ncfile <- here::here("GLORYS/testNE/2025/GLORYS_REANALYSIS_2025-12-31.nc")
+
+# find the unit from https://ropensci.org/blog/2019/11/05/tidync/
+tunit <- ncmeta::nc_atts(ncfile, "time") %>% tidyr::unnest(cols = c(value)) %>% dplyr::filter(name == "units")
+# its hours since 1950-01-01
+
+glorysnctotibble <- function(ncfile = ncfile){
+  # time is hours since 1950-01-01
+  origin <- as.Date("1950-01-01") 
+  
+  # add the time variable into each
+  time <- tidync::tidync(ncfile) |>
+    tidync::activate("D0") |> tidync::hyper_array()
+  
+ # google says 86400000 milliseconds in a day
+  # irrelevant because this unit is hours in a day
+  
+  bttib <- tidync::tidync(ncfile) |>
+    tidync::hyper_tibble(force = TRUE) |>
+    dplyr::mutate(time = unname(time$time)) |>
+    dplyr::mutate(date = as.Date((time/24), origin = origin),
+                  year = lubridate::year(date),
+                  month = lubridate::month(date),
+                  day = lubridate::day(date))|>
+    dplyr::mutate(longitude = as.numeric(longitude),
+                  latitude = as.numeric(latitude)) |>
+    dplyr::rename(mod_bt = bottomT)
+  
+  return(bttib)
+}
+
+dailybtplot <- function(oneday){
+  ggplot() +
+    geom_tile(data = oneday, aes(x = longitude, y = latitude, fill = mod_bt)) +
+    geom_sf(data = ecodata::coast) +
+    #geom_point(data = FishStatsUtils::northwest_atlantic_grid, aes(x = Lon, y = Lat), size=0.05, alpha=0.1) +
+    scale_fill_gradientn(name = "Temp C",
+                         limits = c(0.5, 31),
+                         colours = c(scales::muted("blue"), "white",
+                                     scales::muted("red"), "black")) +
+    coord_sf(xlim = c(-77, -65), ylim = c(35, 45)) + 
+    ecodata::theme_map() +
+    ggtitle(paste("Bottom temp, mm-dd-yyyy:", unique(oneday$month),
+                   unique(oneday$day), unique(oneday$year), sep = " "))
+}
+
+dec3125 <- glorysnctotibble(ncfile)
+
+dailybtplot(dec3125)
+
+```
+
+
 To highlight a box for the South Atlantic region, I visited https://data.marine.copernicus.eu/product/GLOBAL_MULTIYEAR_PHY_001_030/download then selected variables, drew a box around area on the map, selected a year range, then clicked "automate" to generate a command line script. This script was modified and put into the same framework as used above for the Northeast region. 
 
 This script pulled initial bottom temperature files for the South Atlantic, 2020-2025:
@@ -230,6 +287,36 @@ Take a look at a South Atlantic file:
 ```{r}
 tidync::tidync(here::here("GLORYS/SAtl/2025/GLORYS_REANALYSIS_2025-12-31.nc"))
 ```
+
+Can we plot this file?
+
+```{r}
+
+# plotting function modified for the South Atlantic just shifts coord_sf
+dailybtplotSA <- function(oneday){
+  ggplot() +
+    geom_tile(data = oneday, aes(x = longitude, y = latitude, fill = mod_bt)) +
+    geom_sf(data = ecodata::coast) +
+    #geom_point(data = FishStatsUtils::northwest_atlantic_grid, aes(x = Lon, y = Lat), size=0.05, alpha=0.1) +
+    scale_fill_gradientn(name = "Temp C",
+                         limits = c(0.5, 31),
+                         colours = c(scales::muted("blue"), "white",
+                                     scales::muted("red"), "black")) +
+    coord_sf(xlim = c(-82.5, -71), ylim = c(23.5, 36)) + 
+    #ecodata::theme_map() +
+    ggtitle(paste("Bottom temp, mm-dd-yyyy:", unique(oneday$month),
+                   unique(oneday$day), unique(oneday$year), sep = " "))
+}
+
+ncfile <- here::here("GLORYS/SAtl/2025/GLORYS_REANALYSIS_2025-12-31.nc")
+
+dec3125 <- glorysnctotibble(ncfile)
+
+dailybtplotSA(dec3125)
+
+```
+
+The NE pulls already include most of the South Atlantic, which is why they are bigger files...
 
 ## Process GLORYS bottom temperature
 
