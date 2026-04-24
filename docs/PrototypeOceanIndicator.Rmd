@@ -355,7 +355,7 @@ Now the other EDAB-GLORYS functions should work for me locally. We'll take the i
 
 Finally, functions to plot indicators are found in the `ecodata` [@beltz_ecodata_2025] package and in the NOAA-EDAB GitHub ecodata repository, such as `plot_thermal_habitat_gridded` : https://github.com/NOAA-EDAB/ecodata/blob/pre-production/R/plot_thermal_habitat_gridded.R 
 
-First we try producing the NEUS thermal_habitat_gridded indicator to validate the workflow. A;l of the hardcoded file paths in the original code need to be changed for this anyway. This code is modified from [make_GLORYS_bt_soe.R](https://github.com/NEFSC/READ-EDAB-GLORYS/blob/main/vignettes/make_GLORYS_bt_soe.R):
+First we try producing the NEUS thermal_habitat_gridded indicator to validate the workflow. All of the hardcoded file paths in the original code need to be changed for this anyway. This code is modified from [make_GLORYS_bt_soe.R](https://github.com/NEFSC/READ-EDAB-GLORYS/blob/main/vignettes/make_GLORYS_bt_soe.R):
 
 
 ```{r NEUStest, eval=FALSE}
@@ -551,6 +551,100 @@ for(y in 1:length(run.years)){
 # ggsave(here::here('GLORYS_bottom_temp_2025.png'),width =12, height = 12)
 
 ```
+
+Did this work for bottom temperature gridded? No only getting winter something is wrong with the dates.
+
+I had to change the `EDAB.GLORYS::make_bottom_temp_model_gridded` function code to call `EDABUtilities::make_2d_summary_gridded` with an additional argument, `file.time = "daily"` to make it work with the files in their original downloaded format. Then running the code above works for bottom temperature grided. Alternatively, all files could be combined into one folder but I am unsure what that looked like so I am modifying the function to have all the steps here. 
+
+Now I am getting the plots I expected. 
+
+```{r}
+plot_gridded_bt_NE <- function(bottom_temp_model_gridded_csv, year = NULL, scale = "celsius"){
+  
+  bottom_temp_model_gridded <- read.csv(bottom_temp_model_gridded_csv) |>
+    tibble::as_tibble()
+  
+  xmin = -77
+  xmax = -65
+  ymin = 36
+  ymax = 45
+  xlims <- c(xmin, xmax)
+  ylims <- c(ymin, ymax)
+  
+  if (is.null(year)) year <- max(bottom_temp_model_gridded$Time)
+  
+      fix <- dplyr::mutate(dplyr::select(dplyr::filter(bottom_temp_model_gridded, 
+        Time == year), -Time), Var = factor(Var, levels = c("winter", 
+        "spring", "summer", "fall")))
+    
+    if (scale == "fahrenheit") {
+        fix <- dplyr::mutate(fix, Value = (9/5) * Value + 32)
+        label <- "Temp. (°F)"
+        breaks <- c(32, 41, 50, 59, 68, 77)
+        labelLegend <- c("32", "41", "50", "59", "68", "77")
+        limits <- c(31.6, 84.2)
+        midpoint <- 50
+    } else {
+        label <- "Temp. (°C)"
+        breaks <- c(0, 5, 10, 15, 20, 25)
+        labelLegend <- c("0", "5", "10", "15", "20", "25")
+        limits <- c(-0.2, 29)
+        midpoint <- 10
+    }
+      p <- ggplot2::ggplot(data = fix) + 
+        ggplot2::geom_tile(ggplot2::aes(x = Longitude, 
+                                        y = Latitude, fill = sqrt(Value + 1))) + 
+        ggplot2::geom_sf(data = ecodata::coast, 
+                         size = 0.4) + 
+        #ggplot2::geom_sf(data = ne_epu_sf, fill = "transparent", size = 0.4) + 
+        ggplot2::coord_sf(xlim = xlims, 
+                          ylim = ylims) + 
+        ggplot2::facet_wrap(Var ~.) + 
+        ecodata::theme_map() + 
+        ggplot2::scale_fill_gradient2(name = label, low = "#000004FF",
+                                      mid = "#BB3754FF", high = "#FCFFA4FF",
+                                      breaks = sqrt(breaks + 1), limits = sqrt(limits + 1),
+                                      labels = labelLegend,
+                                      midpoint = sqrt(midpoint + 1)) +
+        # ggplot2::scale_fill_gradient(name = "Temp C",
+        #                  limits = c(0.5, 31),
+        #                  colours = c(scales::muted("blue"), "white",
+        #                              scales::muted("red"), "black")) +
+        ggplot2::ggtitle(paste("Seasonal Mean Bottom Temperature", year)) + 
+        ggplot2::xlab("Longitude") + ggplot2::ylab("Latitude") + 
+        ggplot2::theme(panel.border = ggplot2::element_rect(colour = "black", 
+                                                            fill = NA, linewidth = 0.75), 
+                       legend.key = ggplot2::element_blank(), 
+                       axis.title = ggplot2::element_text(size = 11), 
+                       strip.background = ggplot2::element_blank(), 
+                       strip.text = ggplot2::element_text(hjust = 0), 
+                       axis.text = ggplot2::element_text(size = 8), 
+                       axis.title.y = ggplot2::element_text(angle = 90)) + 
+        ecodata::theme_title() + 
+        ecodata::theme_ts()
+      return(p)
+      
+  
+}
+
+csv <- here::here("GLORYS/testNE-out/data/bottom_temp_model_gridded/GLORYS_bottom_temp_model_gridded_2024.csv")
+
+plot_gridded_bt_NE(bottom_temp_model_gridded_csv = csv, scale = "celsius")
+
+```
+```{r}
+csv <- here::here("GLORYS/testNE-out/data/bottom_temp_model_gridded/GLORYS_bottom_temp_model_gridded_2023.csv")
+
+plot_gridded_bt_NE(bottom_temp_model_gridded_csv = csv, scale = "celsius")
+
+```
+```{r}
+csv <- here::here("GLORYS/testNE-out/data/bottom_temp_model_gridded/GLORYS_bottom_temp_model_gridded_2022.csv")
+
+plot_gridded_bt_NE(bottom_temp_model_gridded_csv = csv, scale = "celsius")
+
+```
+
 
 This mostly worked for the thermal_habibat_area, check it.
 
@@ -767,6 +861,79 @@ for(y in 1:length(run.years)){
 # ggsave(here::here('GLORYS_bottom_temp_2025.png'),width =12, height = 12)
 
 
+```
+
+The bottom temperature gridded by season produced results for the South Atlantic. Here is a plot following the same code used in ecodata for the Northeast US. 
+
+```{r}
+
+plot_gridded_bt <- function(bottom_temp_model_gridded_csv, year = NULL, scale = "celsius"){
+  
+  bottom_temp_model_gridded <- read.csv(bottom_temp_model_gridded_csv) |>
+    tibble::as_tibble()
+  
+  xmin = -82.5
+  xmax = -71
+  ymin = 23.5
+  ymax = 36
+  xlims <- c(xmin, xmax)
+  ylims <- c(ymin, ymax)
+  
+  if (is.null(year)) year <- max(bottom_temp_model_gridded$Time)
+  
+      fix <- dplyr::mutate(dplyr::select(dplyr::filter(bottom_temp_model_gridded, 
+        Time == year), -Time), Var = factor(Var, levels = c("winter", 
+        "spring", "summer", "fall")))
+    
+    if (scale == "fahrenheit") {
+        fix <- dplyr::mutate(fix, Value = (9/5) * Value + 32)
+        label <- "Temp. (°F)"
+        breaks <- c(32, 41, 50, 59, 68, 77)
+        labelLegend <- c("32", "41", "50", "59", "68", "77")
+        limits <- c(31.6, 84.2)
+        midpoint <- 50
+    } else {
+        label <- "Temp. (°C)"
+        breaks <- c(0, 5, 10, 15, 20, 25)
+        labelLegend <- c("0", "5", "10", "15", "20", "25")
+        limits <- c(-0.2, 29)
+        midpoint <- 10
+    }
+      p <- ggplot2::ggplot(data = fix) + 
+        ggplot2::geom_tile(ggplot2::aes(x = Longitude, 
+                                        y = Latitude, fill = sqrt(Value + 1))) + 
+        ggplot2::geom_sf(data = ecodata::coast, 
+                         size = 0.4) + 
+        #ggplot2::geom_sf(data = ne_epu_sf, fill = "transparent", size = 0.4) + 
+        ggplot2::coord_sf(xlim = xlims, 
+                          ylim = ylims) + 
+        ggplot2::facet_wrap(Var ~.) + 
+        ecodata::theme_map() + 
+        ggplot2::scale_fill_gradient2(name = label, low = "#000004FF", 
+                                      mid = "#BB3754FF", high = "#FCFFA4FF", 
+                                      breaks = sqrt(breaks + 1), limits = sqrt(limits + 1), 
+                                      labels = labelLegend, 
+                                      midpoint = sqrt(midpoint + 1)) + 
+        ggplot2::ggtitle("Seasonal Mean Bottom Temperature") + 
+        ggplot2::xlab("Longitude") + ggplot2::ylab("Latitude") + 
+        ggplot2::theme(panel.border = ggplot2::element_rect(colour = "black", 
+                                                            fill = NA, linewidth = 0.75), 
+                       legend.key = ggplot2::element_blank(), 
+                       axis.title = ggplot2::element_text(size = 11), 
+                       strip.background = ggplot2::element_blank(), 
+                       strip.text = ggplot2::element_text(hjust = 0), 
+                       axis.text = ggplot2::element_text(size = 8), 
+                       axis.title.y = ggplot2::element_text(angle = 90)) + 
+        ecodata::theme_title() + 
+        ecodata::theme_ts()
+      return(p)
+      
+  
+}
+
+csv <- here::here("GLORYS/SAtl-out/data/bottom_temp_model_gridded/GLORYS_bottom_temp_model_gridded_2025.csv")
+
+plot_gridded_bt(bottom_temp_model_gridded_csv = csv, scale = "celsius")
 ```
 
 
