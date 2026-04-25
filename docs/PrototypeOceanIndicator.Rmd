@@ -556,7 +556,9 @@ Did this work for bottom temperature gridded? No only getting winter something i
 
 I had to change the `EDAB.GLORYS::make_bottom_temp_model_gridded` function code to call `EDABUtilities::make_2d_summary_gridded` with an additional argument, `file.time = "daily"` to make it work with the files in their original downloaded format. Then running the code above works for bottom temperature grided. Alternatively, all files could be combined into one folder but I am unsure what that looked like so I am modifying the function to have all the steps here. 
 
-Now I am getting the plots I expected. 
+A similar change was made in `EDAB.GLORYS::make_bottom_temp_model_annual` to change the call to `EDABUtilities::make_2d_summary_ts` to `file.time = "daily" instead of annual. 
+
+Now I am getting the plots I expected for seasonal gridded bottom temperature. 
 
 ```{r}
 plot_gridded_bt_NE <- function(bottom_temp_model_gridded_csv, year = NULL, scale = "celsius"){
@@ -646,35 +648,449 @@ plot_gridded_bt_NE(bottom_temp_model_gridded_csv = csv, scale = "celsius")
 ```
 
 
-Produced output for thermal habitat area, but it looks wrong, maybe a daily file again
+Produced output for thermal habitat area, but it looks wrong, only has 1 or NA as values when it should be number of days over that temperature; maybe a daily file issue again? I think so, dev branch has a function to put all files in one raster to process.
+
+Diagnose here line by line in `make_thermal_habitat_gridded`
+
+```{r eval=FALSE}
+
+#from the function call above
+# try the dev branch make_thermal_habitat_area which appears to do gridded too
+
+output.file6 = paste0(output.dir,'data/thermal_habitat_gridded/GLORYS_thermal_habitat_gridded_',run.years[y],'.nc')
+
+ output.file7a = paste0(output.dir,'data/thermal_habitat_area/GLORYS_thermal_habitat_area_',run.years[y],'.csv')
+  output.file7b = paste0(output.dir,'data/thermal_habitat_gridded/GLORYS_thermal_habitat_gridded_',run.years[y],'.csv')
+  check.dir(output.file7a)
+
+
+input.file = this.year.files
+output.file =  output.file6
+supp.dir = supp.dir
+shp.file = shp.file
+file.year = run.years[y]
+write.out =T
+t.max.seq = seq(0,30,1)
+
+output.file.area =  output.file7a
+output.file.gridded = output.file7b 
+
+# make_thermal_habitat_gridded = function(input.file, output.file,supp.dir, shp.file, file.year,t.max.seq, write.out =F){
+  
+make_thermal_habitat_area = function(input.file, output.file.area = NA, output.file.gridded =NA, shp.file, file.year,t.max.seq, write.area = F, write.gridded = F){
+
+  
+  #EPU.names = c('MAB','GB','GOM','SS')
+  #EPU.names = c('SAtl') # modify for single large South Atlantic area
+  #EPU.names = c('Off NC', "Off SC", "Off GA", "Off FL")
+  #depth.df = data.frame(id = 1:4,
+  EPU.names = c('MAB','GB','GOM','SS','all')
+  depth.df = data.frame(depth.min = c(0,25,100, 0),
+                        depth.max = c(25,100,300, 2000),
+                        depth.name = c('0-25m','25-100m','100-300m', 'AllDepths'))
+  
+  combs = expand.grid(year = file.year,t.max = t.max.seq,depth.name = depth.df$depth.name,EPU = EPU.names,stringsAsFactors = F)%>%
+    dplyr::left_join(depth.df)
+  
+  bathy.shp = terra::rast(paste0(supp.dir,'GLORYS/GLORYS_bathymetry_east_coast_crop.nc'),subds = 'deptho')
+  
+  # --- Refactor Start: Handle Input Files ---
+  # Convert input to a single SpatRaster. 
+  # terra::rast() handles both a single multi-layer file OR a vector of single-layer files.
+  processed_rast = terra::rast(input.file)
+  
+  # Ensure time dimension is set if missing (common when stacking individual daily files)
+  # This logic matches layers to days in the specified file.year
+  if (!all(terra::has.time(processed_rast))) {
+    # Generate daily sequence for the given year
+    dates = seq(as.Date(paste0(file.year, "-01-01")), as.Date(paste0(file.year, "-12-31")), by="day")
+    
+    # If layer count matches the days in the year, assign the time
+    if (terra::nlyr(processed_rast) == length(dates)) {
+      terra::time(processed_rast) = dates
+    }
+  }
+  # --- Refactor End ---
+
+   out.area.ls = list()
+  out.gridded.ls = list()
+  for(i in 1:nrow(combs)){
+    
+    if(combs$EPU[i] == 'all'){
+      area.names = c('MAB','GB','GOM','SS')
+    }else{
+      area.names = combs$EPU[i]
+    }
+    
+    if(i ==1){
+      # Refactor: use processed_rast instead of loading from file again
+      neus.shp = terra::crop(bathy.shp, processed_rast)
+    }
+    
+    depth.rast = terra::clamp(neus.shp, lower = combs$depth.min[i], upper = combs$depth.max[i],values =F)
+    EPU.vect = terra::vect(shp.file)
+    area.vect = EPU.vect[which(EPU.vect$EPU %in% area.names)]
+    
+    area.mask = terra::mask(depth.rast,area.vect)
+    
+    #Mask of area over t.max
+    # Refactor: Pass the SpatRaster object (processed_rast) instead of filename
+    area.i = EDABUtilities::mask_nc_2d(data.in = processed_rast,
+                                       write.out =F,
+                                       shp.file = area.mask,
+                                       var.name = 'BottomT',
+                                       min.value =  combs$t.max[i],
+                                       max.value = Inf,
+                                       binary = F,
+                                       area.names =NA
+    )
+    
+    # Refactor: Subset from the main raster object
+    this.rast = terra::subset(processed_rast, 1)
+    
+    nd.i = EDABUtilities::make_2d_deg_day_gridded_nc(data.in = area.i,
+                                                     shp.file = area.mask,
+                                                     var.name = 'BottomT',
+                                                     statistic = 'nd',
+                                                     type = 'above',
+                                                     ref.value = combs$t.max[i],
+                                                     area.names = NA
+    )
+    
+    shp.area = terra::expanse(area.mask)$area
+    
+    area.df = terra::expanse(area.i[[1]]) %>%
+      as.data.frame()%>%
+      dplyr::mutate(Time = terra::time(area.i[[1]]),
+                    EPU = combs$EPU[i],
+                    Depth = combs$depth.name[i],
+                    Var = paste0('>',combs$t.max[i],'\u00B0C'),
+                    Value = area/ shp.area,
+                    Source = 'GLORYS',
+                    year = combs$year[i],
+                    temp.threshold = combs$t.max[i],
+                    Units = 'Proportion'
+      )
+    
+    out.area.ls[[i]] = area.df
+    
+    out.gridded.ls[[i]] = as.data.frame(nd.i[[1]],cells =T, xy = T) %>%
+      dplyr::mutate(Time = combs$year[i], EPU = combs$EPU[i], Depth = combs$depth.name[i], Var = combs$t.max[i], Source = 'GLORYS',Units = 'Number of Days')%>%
+      dplyr::rename(Latitude = 'y', Longitude = 'x', Value = 'sum')%>%
+      dplyr::select(Time,EPU, Depth, Var,Value,Latitude,Longitude,Source,Units)
+    
+    print(signif(i/nrow(combs)*100,2))
+  }
+  
+  out.area.df = dplyr::bind_rows(out.area.ls)%>%
+    dplyr::select(Time, EPU, Depth, Var, Value, Source, year, temp.threshold, Units)%>%
+    dplyr::mutate(Year = format(as.Date(Time),format = '%Y'))%>%
+    dplyr::group_by(Year,EPU, Depth, Var, temp.threshold, Units,Source)%>%
+    dplyr::summarise(Value = mean(Value))%>%
+    dplyr::rename(Time = Year)
+  
+  out.gridded.df = dplyr::bind_rows(out.gridded.ls)
+  
+  if(write.area == T){
+    write.csv(out.area.df, output.file.area,row.names = F)
+  }
+  if(write.gridded == T){
+    write.csv(out.gridded.df,output.file.gridded,row.names = F)
+  }
+  if(write.area == F |write.gridded == F){
+    return(list(thermal.area = out.area.df,thermal.gridded = out.gridded.df))
+  }
+  
+}
+
+# #create EPU mask layer
+  # EPU.vect = terra::vect(shp.file)
+  # neus.shp = terra::crop(bathy.shp,bathy.shp)
+  # 
+  # epu.ls = lapply(1:length(EPU.names), function(x){
+  #   e.vect = EPU.vect[which(EPU.vect$EPU %in% EPU.names[x])]
+  #   e = terra::mask(neus.shp,e.vect)
+  #   terra::values(e)[!is.na(terra::values(e))] = x
+  #   return(e)
+  # })
+  # epu.mask = terra::merge(terra::sprc(epu.ls))
+  # # epu.mask = as.factor(epu.mask)
+  # levels(epu.mask) = data.frame(1:4, EPU.names)
+  # epu.mask.binary = epu.mask
+  # terra::values(epu.mask.binary)[!is.na(terra::values(epu.mask.binary))] = 1
+#   
+#   i=1
+#   y=32
+#   
+#   t=i=1
+#   out.ind =1
+#   out.var.names = character()
+#   year.out.ls = list()
+#   out.df.ls = list()
+#   out.ls = list()
+#   depth.rast.ls = list()
+#   epu.rast.ls = list()
+#   
+#   for(t in 1:length(t.max.seq)){
+#     
+#     #Mask of area over t.max
+#     area.i = EDABUtilities::mask_nc_2d(data.in = input.file,
+#                                        write.out =F,
+#                                        shp.file = EPU.vect,
+#                                        var.name = 'BottomT',
+#                                        min.value =  t.max.seq[t],
+#                                        max.value = Inf,
+#                                        binary = F,
+#                                        area.names =NA
+#     )
+#     
+#     out.ls[[t]] = EDABUtilities::make_2d_deg_day_gridded_nc(data.in = area.i,
+#                                                             shp.file = EPU.vect,
+#                                                             var.name = 'BottomT',
+#                                                             statistic = 'nd',
+#                                                             type = 'above',
+#                                                             ref.value = t.max.seq[t],
+#                                                             area.names = NA
+#     )#[[1]]
+#     
+#     out.ls[[t]] = out.ls[[t]] *terra::crop(epu.mask.binary, out.ls[[t]])
+#     
+#     year.time = as.POSIXct(paste0(file.year, '-01-01 00:00:00UTC'),origin = '1970-01-01 00:00:00',tz = 'UTC')
+#     terra::time(out.ls[[t]]) = as.numeric(year.time)
+#     
+#     print(signif(t/length(t.max.seq) ,2))
+#     
+#     out.var.names[t] = paste0('Number of Days per Year Above ',t.max.seq[t],' degrees C')
+#     
+#   }
+#   
+#   out.sds =terra::sds(out.ls)
+#   
+#   out.var = out.sds
+#   
+#   #concatenate names
+#   out.names = c(paste0('nday_',t.max.seq))
+#   out.names = gsub('\\.','_',out.names)
+#   names(out.var) = out.names
+#   terra::longnames(out.var) = out.var.names
+#   terra::units(out.var) = c(rep('n days',length(t.max.seq)))
+#   
+#   terra::writeCDF(out.var,filename = output.file,overwrite =T,missval = 0)
+#   
+#   #Format netcdf
+#   var.atts = read.csv(paste0(supp.dir,'GLORYS/thermal_habitat_gridded_variable_attributes.csv')) %>%
+#     filter(!is.na(Value) & Attribute.Name != '_FillValue')
+#   global.atts = read.csv(paste0(supp.dir,'GLORYS/thermal_habitat_gridded_global_attributes.csv'))%>%
+#     filter(!is.na(Value))
+#   
+#   file.nc = ncdf4::nc_open(output.file,write =T)
+#   file.var = names(file.nc$var)
+#   
+#   for(g in 1:nrow(global.atts)){
+#     
+#     ncdf4::ncatt_put(file.nc,0,global.atts$Attribute.Name[g],global.atts$Value[g])
+#     
+#   }
+#   ncdf4::ncatt_put(file.nc,0,'time_coverage_start',paste0(file.year,'-01-01'))
+#   ncdf4::ncatt_put(file.nc,0,'time_coverage_end',paste0(file.year,'-12-31'))
+#   ncdf4::ncatt_put(file.nc,'time','units','seconds since 1970-01-01T00:00:00Z')
+#   ncdf4::ncatt_put(file.nc,'latitude','standard_name','latitude')
+#   ncdf4::ncatt_put(file.nc,'latitude','coverage_content_type','coordinates')
+#   
+#   ncdf4::ncatt_put(file.nc,'longitude','standard_name','longitude')
+#   ncdf4::ncatt_put(file.nc,'longitude','coverage_content_type','coordinates')
+#   
+#   for(v in 1:length(file.var)){
+#     
+#     
+#     ncdf4::ncatt_put(file.nc,file.var[v],'standard_name','number_of_days_with_bottom_temperature_above_threshold',prec ='text' )
+#     
+#     for(va in 1:nrow(var.atts)){
+#       
+#       ncdf4::ncatt_put(file.nc,file.var[v],var.atts$Attribute.Name[va],var.atts$Value[va],prec ='text' )
+#       
+#     }
+#     
+#   }
+#   
+#   ncdf4::nc_close(file.nc)
+#   
+#   ##Write into test
+#   # file.names = list.files(here::here('data','SOE','thermal_habitat_gridded_V2'),'thermal_', full.names = T)
+#   # test.nc = ncdf4::nc_open(file.names[32])
+#   # # test.nc = ncdf4::nc_open('C:/Users/joseph.caracappa/Downloads/thermal_habitat_gridded_1993_SOE2025.nc')
+#   # ncdf4::ncatt_get(test.nc,'nday_10')
+#   # ncdf4::nc_close(test.nc)
+#   # x = terra::rast(file.names[1])
+#   # plot(x)
+#   # test.sds = terra::sds(file.names[1],1)
+#   # writeCDF(test.sds,here::here('data','SOE','thermal_habitat_checker.nc'))
+#   
+# }
+```
+
+Issue appears to be in `EDAButilities::make_2d_deg_day_gridded_nc`
+
+```{r, eval=FALSE}
+
+data.in = area.i
+shp.file = EPU.vect
+var.name = 'BottomT'
+statistic = 'nd'
+type = 'above'
+ref.value = t.max.seq[t]
+area.names = NA
+write.out = F
+
+make_2d_deg_day_gridded_nc <- function(data.in,write.out = F,output.files,shp.file,var.name,statistic,ref.value,type,area.names){
+  
+  if(class(shp.file) %in% c('SpatVector','SpatRaster')){
+    shp.vect = shp.file
+    use.shp =T
+  }else if(!is.na(shp.file)){
+    shp.vect = terra::vect(shp.file)
+    use.shp =T
+  }else{
+    use.shp = F
+  }
+  
+  if(all(!is.na(area.names))){
+    shp.str = as.data.frame(shp.vect)
+    which.att = which(apply(shp.str,2,function(x) all(area.names %in% x)))
+    which.area =  match(area.names,shp.str[,which.att])
+    shp.vect = shp.vect[which.area]  
+  }
+  
+  out.ls = list()
+  for(i in 1:length(data.in)){
+    
+    if(is.character(data.in)){
+      
+      data = terra::rast(data.in[i])
+      
+    }else if(class(data.in[[i]])[1] == 'SpatRaster'){
+      
+      data = data.in[[i]]
+      
+    }else{
+      stop('data.in needs to be either file names or spatRasters')
+    } 
+    
+    data = EDABUtilities::convert_longitude(data)
+    
+    if(use.shp){
+
+      data = terra::mask(data,shp.vect)
+    }
+    
+    data.mask = terra::subset(data,1) * 0
+    
+    if(type == 'raw'){
+      
+      data.stat = sum(data,na.rm=T)
+      
+    }else if (type == 'above'){
+      
+      if(statistic == 'dd'){
+      
+        data.temp = terra::clamp(data,lower = ref.value, upper = Inf,value = F)
+        data.stat = sum(data.temp,na.rm=T)
+        
+      }else if (statistic == 'nd'){
+        
+        data.temp = (terra::clamp(data,lower = ref.value, upper = Inf,value =F)*0)+1
+        data.stat = sum(data.temp,na.rm=T)
+        
+      }else if(statistic == 'nd.con'){
+        
+        data.temp = (terra::clamp(data,lower = ref.value, upper = Inf,value =F)*0)+1
+        data.stat = terra::app(data.temp,fun = function(x){
+          l = rle(x)
+          m = l$lengths[which(l$values == 1)]
+          
+          return(ifelse(length(m) == 0, 0,max(m,na.rm=T)))
+        })
+      }else{
+        
+        warning('statistic needs to be "dd" or "nd"')
+      }
+      
+    }else if (type == 'below'){
+      
+      if(statistic == 'dd'){
+        
+        data.temp = terra::clamp(data,lower = -Inf, upper = ref.value, value =F)
+        data.stat = sum(data.temp,na.rm=T)
+        
+      }else if (statistic == 'nd'){
+        
+        data.temp = (terra::clamp(data,lower = -Inf, upper = ref.value, value =F)*0)+1
+        data.stat = sum(data.temp,na.rm=T)
+        
+      }else if(statistic == 'nd.con'){
+        
+        data.temp = (terra::clamp(data,lower = -Inf, upper = ref.value, value =F)*0)+1
+        data.stat = terra::app(data.temp,fun = function(x){
+          l = rle(x)
+          m = l$lengths[which(l$values == 1)]
+          
+          return(ifelse(length(m) == 0, 0,max(m,na.rm=T)))
+        })
+
+      }else{
+        
+        warning('statistic needs to be "dd" or "nd"')
+      }
+      
+    }
+    
+    data.out = sum(data.stat,data.mask,na.rm=T)
+    
+    if(write.out){
+      terra::writeCDF(data.out, output.files[i],varname = paste0(var.name,'_',type,'_',ref.value,'_',statistic),overwrite =T)
+    }else{
+      out.ls[[i]] = data.out
+    }
+  }
+  
+  if(write.out ==F){
+    return(out.ls)  
+  }
+  
+}
+```
+
+Got it, use the dev branch `EDAB.GLORYS::make_thermal_habitat_area function`
 
 Need to know how it gets from nc to an R dataset, perhaps a clue is in the test code for `make_thermal_habitat_gridded`
 
 ```{r}
 
    file.names = list.files(here::here("GLORYS/testNE-out/data/thermal_habitat_gridded"), full.names = T)
-   test.nc = ncdf4::nc_open(file.names[1])
-  # # test.nc = ncdf4::nc_open('C:/Users/joseph.caracappa/Downloads/thermal_habitat_gridded_1993_SOE2025.nc')
-   ncdf4::ncatt_get(test.nc,'nday_10')
-   ncdf4::ncatt_get(test.nc,'nday_5')
-   ncdf4::nc_close(test.nc)
-   #x = terra::rast(file.names[1])
-   #x = terra::rast(test.nc,'nday_5')
-   #plot(x)
-  # test.sds = terra::sds(file.names[1],1)
-  # writeCDF(test.sds,here::here('data','SOE','thermal_habitat_checker.nc'))
+  #  test.nc = ncdf4::nc_open(file.names[1])
+  # # # test.nc = ncdf4::nc_open('C:/Users/joseph.caracappa/Downloads/thermal_habitat_gridded_1993_SOE2025.nc')
+  #  ncdf4::ncatt_get(test.nc,'nday_10')
+  #  ncdf4::ncatt_get(test.nc,'nday_5')
+  #  ncdf4::nc_close(test.nc)
+  #  #x = terra::rast(file.names[1])
+  #  #x = terra::rast(test.nc,'nday_5')
+  #  #plot(x)
+  # # test.sds = terra::sds(file.names[1],1)
+  # # writeCDF(test.sds,here::here('data','SOE','thermal_habitat_checker.nc'))
+  #  
+  #  # convert to tibble and plot as above modifying ecodata::plot_thermal_habitat_gridded code
+  #  ncfile <- file.names[1] # 2020, retrieve the year from the filename to add to the plot
+  #  
+  #  bttib <- tidync::tidync(ncfile) |>
+  #   tidync::hyper_tibble(force = TRUE) |>
+  #    dplyr::select(nday_5, nday_10, nday_15, nday_20, longitude, latitude) |>
+  #    dplyr::mutate(longitude = as.numeric(longitude),
+  #                 latitude = as.numeric(latitude))
    
-   # convert to tibble and plot as above modifying ecodata::plot_thermal_habitat_gridded code
-   ncfile <- file.names[1] # 2020, retrieve the year from the filename to add to the plot
+   btthermalgrid <- read.csv(file.names[1])
    
-   bttib <- tidync::tidync(ncfile) |>
-    tidync::hyper_tibble(force = TRUE) |>
-     dplyr::select(nday_5, nday_10, nday_15, nday_20, longitude, latitude) |>
-     dplyr::mutate(longitude = as.numeric(longitude),
-                  latitude = as.numeric(latitude))
-   
-   fix <- bttib |>
-     dplyr::select(Longitude = longitude, Latitude = latitude, Value = nday_20)
+   fix <- btthermalgrid |>
+     dplyr::filter(Var %in% c(5, 10, 15, 20))
    
    xmin = -77
    xmax = -65
@@ -690,20 +1106,20 @@ Need to know how it gets from nc to an R dataset, perhaps a clue is in the test 
                         linewidth = 2) + 
      ggplot2::geom_sf(data = ecodata::coast, 
                       size = 0.4) + 
-     #ggplot2::facet_grid(Depth ~ Var) + 
-     #ggplot2::scale_color_viridis_c(legendTitle) + 
+     ggplot2::facet_grid(Depth ~ Var) + 
+     ggplot2::scale_color_viridis_c() + 
      ggplot2::coord_sf(xlim = c(xmin, xmax), ylim = c(ymin, ymax)) + 
      ggplot2::xlab("") + 
      ggplot2::ylab("") + 
      ecodata::theme_ts() + 
      ecodata::theme_facet() + 
      ecodata::theme_title() + 
-     #ggplot2::ggtitle(paste(Yr)) + 
+     #ggplot2::ggtitle((unique(Time))) + 
      ggplot2::theme(legend.position = "bottom")
    
    #return(p)
    
-   
+   p
 
 ```
 
@@ -1027,145 +1443,7 @@ Now to investigate why thermal habitat is breaking for the South Atlantic
 This is the thermal habitat function `EDAB.GLORYS::make_thermal_habitat_gridded`
 
 ```{r}
-make_thermal_habitat_gridded = function(input.file, output.file,supp.dir, shp.file, file.year,t.max.seq, write.out =F){
-  
-  #EPU.names = c('MAB','GB','GOM','SS')
-  #EPU.names = c('SAtl') # modify for single large South Atlantic area
-  EPU.names = c('Off NC', "Off SC", "Off GA", "Off FL")
-  depth.df = data.frame(id = 1:4,
-                        depth.min = c(0,25,100,300),
-                        depth.max = c(25,100,300,Inf),
-                        depth.name = c('0-25m','25-100m','100-300m','300+'))
-  
-    combs = expand.grid(depth.name = depth.df$depth.name,EPU = EPU.names,stringsAsFactors = F)%>%
-    dplyr::left_join(depth.df) 
- 
-  bathy.shp = terra::rast(paste0(supp.dir,'GLORYS/GLORYS_bathymetry_east_coast_crop.nc'),subds = 'deptho')
 
-  #create EPU mask layer
-  EPU.vect = terra::vect(shp.file)
-  neus.shp = terra::crop(bathy.shp,bathy.shp)
-
-  epu.ls = lapply(1:length(EPU.names), function(x){
-    e.vect = EPU.vect[which(EPU.vect$EPU %in% EPU.names[x])]
-    e = terra::mask(neus.shp,e.vect)
-    terra::values(e)[!is.na(terra::values(e))] = x
-    return(e)
-  })
-  epu.mask = terra::merge(terra::sprc(epu.ls))
-  # epu.mask = as.factor(epu.mask)
-  levels(epu.mask) = data.frame(1:4, EPU.names)
-  epu.mask.binary = epu.mask
-  terra::values(epu.mask.binary)[!is.na(terra::values(epu.mask.binary))] = 1
-  
-  i=1
-  y=32
-  
-  t=i=1
-  out.ind =1
-  out.var.names = character()
-  year.out.ls = list()
-  out.df.ls = list()
-  out.ls = list()
-  depth.rast.ls = list()
-  epu.rast.ls = list()
-  
-  for(t in 1:length(t.max.seq)){
-    
-    #Mask of area over t.max
-    area.i = EDABUtilities::mask_nc_2d(data.in = input.file,
-                                       write.out =F,
-                                       shp.file = EPU.vect,
-                                       var.name = 'BottomT',
-                                       min.value =  t.max.seq[t],
-                                       max.value = Inf,
-                                       binary = F,
-                                       area.names =NA
-    )
-    
-    out.ls[[t]] = EDABUtilities::make_2d_deg_day_gridded_nc(data.in = area.i,
-                                                            shp.file = EPU.vect,
-                                                            var.name = 'BottomT',
-                                                            statistic = 'nd',
-                                                            type = 'above',
-                                                            ref.value = t.max.seq[t],
-                                                            area.names = NA
-    )[[1]]
-    
-    out.ls[[t]] = out.ls[[t]] *terra::crop(epu.mask.binary, out.ls[[t]])
-    
-    year.time = as.POSIXct(paste0(file.year, '-01-01 00:00:00UTC'),origin = '1970-01-01 00:00:00',tz = 'UTC')
-    terra::time(out.ls[[t]]) = as.numeric(year.time)
-    
-    print(signif(t/length(t.max.seq) ,2))
-    
-    out.var.names[t] = paste0('Number of Days per Year Above ',t.max.seq[t],' degrees C')
-    
-  }
-  
-  out.sds =terra::sds(out.ls)
-  
-  out.var = out.sds
-  
-  #concatenate names
-  out.names = c(paste0('nday_',t.max.seq))
-  out.names = gsub('\\.','_',out.names)
-  names(out.var) = out.names
-  terra::longnames(out.var) = out.var.names
-  terra::units(out.var) = c(rep('n days',length(t.max.seq)))
-  
-  terra::writeCDF(out.var,filename = output.file,overwrite =T,missval = 0)
-  
-  #Format netcdf
-  var.atts = read.csv(paste0(supp.dir,'GLORYS/thermal_habitat_gridded_variable_attributes.csv')) %>%
-    filter(!is.na(Value) & Attribute.Name != '_FillValue')
-  global.atts = read.csv(paste0(supp.dir,'GLORYS/thermal_habitat_gridded_global_attributes.csv'))%>%
-    filter(!is.na(Value))
-  
-  file.nc = ncdf4::nc_open(output.file,write =T)
-  file.var = names(file.nc$var)
-  
-  for(g in 1:nrow(global.atts)){
-    
-    ncdf4::ncatt_put(file.nc,0,global.atts$Attribute.Name[g],global.atts$Value[g])
-    
-  }
-  ncdf4::ncatt_put(file.nc,0,'time_coverage_start',paste0(file.year,'-01-01'))
-  ncdf4::ncatt_put(file.nc,0,'time_coverage_end',paste0(file.year,'-12-31'))
-  ncdf4::ncatt_put(file.nc,'time','units','seconds since 1970-01-01T00:00:00Z')
-  ncdf4::ncatt_put(file.nc,'latitude','standard_name','latitude')
-  ncdf4::ncatt_put(file.nc,'latitude','coverage_content_type','coordinates')
-  
-  ncdf4::ncatt_put(file.nc,'longitude','standard_name','longitude')
-  ncdf4::ncatt_put(file.nc,'longitude','coverage_content_type','coordinates')
-  
-  for(v in 1:length(file.var)){
-    
-    
-    ncdf4::ncatt_put(file.nc,file.var[v],'standard_name','number_of_days_with_bottom_temperature_above_threshold',prec ='text' )
-    
-    for(va in 1:nrow(var.atts)){
-      
-      ncdf4::ncatt_put(file.nc,file.var[v],var.atts$Attribute.Name[va],var.atts$Value[va],prec ='text' )
-      
-    }
-    
-  }
-  
-  ncdf4::nc_close(file.nc)
-  
-  ##Write into test
-  # file.names = list.files(here::here('data','SOE','thermal_habitat_gridded_V2'),'thermal_', full.names = T)
-  # test.nc = ncdf4::nc_open(file.names[32])
-  # # test.nc = ncdf4::nc_open('C:/Users/joseph.caracappa/Downloads/thermal_habitat_gridded_1993_SOE2025.nc')
-  # ncdf4::ncatt_get(test.nc,'nday_10')
-  # ncdf4::nc_close(test.nc)
-  # x = terra::rast(file.names[1])
-  # plot(x)
-  # test.sds = terra::sds(file.names[1],1)
-  # writeCDF(test.sds,here::here('data','SOE','thermal_habitat_checker.nc'))
-  
-}
 ```
 
 
