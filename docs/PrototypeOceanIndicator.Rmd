@@ -929,7 +929,7 @@ make_thermal_habitat_area = function(input.file, output.file.area = NA, output.f
 # }
 ```
 
-Issue appears to be in `EDAButilities::make_2d_deg_day_gridded_nc`
+Issue appears to be in `EDAButilities::make_2d_deg_day_gridded_nc` and I think it is because these are daily files
 
 ```{r, eval=FALSE}
 
@@ -1063,6 +1063,8 @@ make_2d_deg_day_gridded_nc <- function(data.in,write.out = F,output.files,shp.fi
 Got it, use the dev branch `EDAB.GLORYS::make_thermal_habitat_area function`
 
 Need to know how it gets from nc to an R dataset, perhaps a clue is in the test code for `make_thermal_habitat_gridded`
+
+This is NE 2020 testing the dev branch function, which appears to work
 
 ```{r}
 
@@ -1438,14 +1440,228 @@ csv <- here::here("GLORYS/SAtl-out/data/bottom_temp_model_gridded/GLORYS_bottom_
 plot_gridded_bt(bottom_temp_model_gridded_csv = csv, scale = "celsius")
 ```
 
-Now to investigate why thermal habitat is breaking for the South Atlantic
+Now to investigate why thermal habitat is breaking for the South Atlantic. First see if the updated dev branch function runs. It runs and produces gridded files with no outputs. the area files appear to be wrong. 
 
-This is the thermal habitat function `EDAB.GLORYS::make_thermal_habitat_gridded`
+line by line...
 
-```{r}
+
+```{r SAtltherm, eval=FALSE}
+
+make_thermal_habitat_area = function(input.file, output.file.area = NA, output.file.gridded =NA, shp.file, file.year,t.max.seq, write.area = F, write.gridded = F){
+
+  supp.dir = '/Users/sarahgaichas/Documents/Work/SAFMCindicators/READ-EDAB-GLORYS/data-raw/'
+
+  
+  #EPU.names = c('MAB','GB','GOM','SS')
+  EPU.names = c('SAtl') # modify for single large South Atlantic area
+  #EPU.names = c('Off NC', "Off SC", "Off GA", "all")
+  #depth.df = data.frame(id = 1:4,
+  #EPU.names = c('MAB','GB','GOM','SS','all')
+  depth.df = data.frame(depth.min = c(0,25,100, 0),
+                        depth.max = c(25,100,300, 2000),
+                        depth.name = c('0-25m','25-100m','100-300m', 'AllDepths'))
+  
+  combs = expand.grid(year = file.year,t.max = t.max.seq,depth.name = depth.df$depth.name,EPU = EPU.names,stringsAsFactors = F)%>%
+    dplyr::left_join(depth.df)
+  
+  bathy.shp = terra::rast(paste0(supp.dir,'GLORYS/GLORYS_bathymetry_east_coast_crop.nc'),subds = 'deptho')
+  
+  # --- Refactor Start: Handle Input Files ---
+  # Convert input to a single SpatRaster. 
+  # terra::rast() handles both a single multi-layer file OR a vector of single-layer files.
+  processed_rast = terra::rast(input.file)
+  
+  # Ensure time dimension is set if missing (common when stacking individual daily files)
+  # This logic matches layers to days in the specified file.year
+  if (!all(terra::has.time(processed_rast))) {
+    # Generate daily sequence for the given year
+    dates = seq(as.Date(paste0(file.year, "-01-01")), as.Date(paste0(file.year, "-12-31")), by="day")
+    
+    # If layer count matches the days in the year, assign the time
+    if (terra::nlyr(processed_rast) == length(dates)) {
+      terra::time(processed_rast) = dates
+    }
+  }
+  # --- Refactor End ---
+
+   out.area.ls = list()
+  out.gridded.ls = list()
+  for(i in 1:nrow(combs)){
+    
+    if(combs$EPU[i] == 'all'){
+      #area.names = c('MAB','GB','GOM','SS')
+      area.names = c('Off NC', "Off SC", "Off GA")
+    }else{
+      area.names = combs$EPU[i]
+    }
+    
+    if(i ==1){
+      # Refactor: use processed_rast instead of loading from file again
+      neus.shp = terra::crop(bathy.shp, processed_rast)
+    }
+    
+    depth.rast = terra::clamp(neus.shp, lower = combs$depth.min[i], upper = combs$depth.max[i],values =F)
+    EPU.vect = terra::vect(shp.file)
+    #area.vect = EPU.vect[which(EPU.vect$EPU %in% area.names)]
+    
+    area.mask = terra::mask(depth.rast,EPU.vect)#area.vect)
+    
+    #Mask of area over t.max
+    # Refactor: Pass the SpatRaster object (processed_rast) instead of filename
+    area.i = EDABUtilities::mask_nc_2d(data.in = processed_rast,
+                                       write.out =F,
+                                       shp.file = area.mask,
+                                       var.name = 'BottomT',
+                                       min.value =  combs$t.max[i],
+                                       max.value = Inf,
+                                       binary = F,
+                                       area.names =NA
+    )
+    
+    # Refactor: Subset from the main raster object
+    this.rast = terra::subset(processed_rast, 1)
+    
+    nd.i = EDABUtilities::make_2d_deg_day_gridded_nc(data.in = area.i,
+                                                     shp.file = area.mask,
+                                                     var.name = 'BottomT',
+                                                     statistic = 'nd',
+                                                     type = 'above',
+                                                     ref.value = combs$t.max[i],
+                                                     area.names = NA
+    )
+    
+    shp.area = terra::expanse(area.mask)$area
+    
+    area.df = terra::expanse(area.i[[1]]) %>%
+      as.data.frame()%>%
+      dplyr::mutate(Time = terra::time(area.i[[1]]),
+                    EPU = combs$EPU[i],
+                    Depth = combs$depth.name[i],
+                    Var = paste0('>',combs$t.max[i],'\u00B0C'),
+                    Value = area/ shp.area,
+                    Source = 'GLORYS',
+                    year = combs$year[i],
+                    temp.threshold = combs$t.max[i],
+                    Units = 'Proportion'
+      )
+    
+    out.area.ls[[i]] = area.df
+    
+    out.gridded.ls[[i]] = as.data.frame(nd.i[[1]],cells =T, xy = T) %>%
+      dplyr::mutate(Time = combs$year[i], EPU = combs$EPU[i], Depth = combs$depth.name[i], Var = combs$t.max[i], Source = 'GLORYS',Units = 'Number of Days')%>%
+      dplyr::rename(Latitude = 'y', Longitude = 'x', Value = 'sum')%>%
+      dplyr::select(Time,EPU, Depth, Var,Value,Latitude,Longitude,Source,Units)
+    
+    print(signif(i/nrow(combs)*100,2))
+  }
+  
+  out.area.df = dplyr::bind_rows(out.area.ls)%>%
+    dplyr::select(Time, EPU, Depth, Var, Value, Source, year, temp.threshold, Units)%>%
+    dplyr::mutate(Year = format(as.Date(Time),format = '%Y'))%>%
+    dplyr::group_by(Year,EPU, Depth, Var, temp.threshold, Units,Source)%>%
+    dplyr::summarise(Value = mean(Value))%>%
+    dplyr::rename(Time = Year)
+  
+  out.gridded.df = dplyr::bind_rows(out.gridded.ls)
+  
+  if(write.area == T){
+    write.csv(out.area.df, output.file.area,row.names = F)
+  }
+  if(write.gridded == T){
+    write.csv(out.gridded.df,output.file.gridded,row.names = F)
+  }
+  if(write.area == F |write.gridded == F){
+    return(list(thermal.area = out.area.df,thermal.gridded = out.gridded.df))
+  }
+  
+}
+
+
+input.dir = '/Users/sarahgaichas/Documents/Work/SAFMCindicators/SAFMCindicators/GLORYS/SAtl/'
+
+output.dir = '/Users/sarahgaichas/Documents/Work/SAFMCindicators/SAFMCindicators/GLORYS/SAtl-out/'
+
+supp.dir = '/Users/sarahgaichas/Documents/Work/SAFMCindicators/READ-EDAB-GLORYS/data-raw/'
+  
+#print('Using default arguments')
+
+shp.file = paste0(supp.dir,'geometry/SA_EEZ_off_states.shp')
+#shp.file = NA
+
+#Get year range
+year.start = 2020
+year.end = 2025 #format(Sys.time(), '%Y') this would go to now, our data end in 2024
+run.years = year.start:year.end
+y=1
+input.prefix = 'GLORYS_REANALYSIS_'
+
+check.dir = function(file){
+  if(!dir.exists(dirname(file))){dir.create(dirname(file),recursive =T)}
+}
+
+#Produce each year's indices
+for(y in 1:length(run.years)){
+  
+  input.year = run.years[y]
+  input.diryr = paste0(input.dir, input.year,"/")
+  input.files = list.files(input.diryr,input.prefix)
+  input.files.year = as.numeric(gsub(".*(\\d{4}).*", '\\1', input.files))
+  no.threshold =F
+  
+  which.files.year = which(input.files.year == run.years[y])
+  if(length(which.files.year) == 0){
+    next()
+  }
+  
+  this.year.files = paste0(input.diryr,input.files[which.files.year])
+  # if(any(file.size(this.year.files)==0)){
+  #   next()
+  # }
+  # 
+  # if(all(!file.exists(this.year.files))){
+  #   print(paste0('File does not exist: ',this.year.file))
+  #   next()
+  # }
+  
+  year.dates = seq.Date(as.Date(paste0(run.years[y],'-01-01')), as.Date(paste0(run.years[y],'-12-31')), by = '1 day')
+  file.dates <- sub(".*(\\d{4}-\\d{2}-\\d{2}).*", "\\1", this.year.files)
+  if(!all(year.dates %in% file.dates)){
+    print(paste0('Missing Dates in ',run.years[y],': ', paste0(year.dates[which(!(year.dates %in% file.dates))],collapse = ', ')))
+    next()
+  }
+  
+  #Make thermal_habitat_area
+  print(paste0('Starting thermal_habitat_area for year: ',run.years[y], ' at ', Sys.time()))
+
+  output.file7a = paste0(output.dir,'data/thermal_habitat_area/GLORYS_thermal_habitat_area_',run.years[y],'.csv')
+  output.file7b = paste0(output.dir,'data/thermal_habitat_gridded/GLORYS_thermal_habitat_gridded_',run.years[y],'.csv')
+  check.dir(output.file7a)
+
+  if(file.exists(output.file7a) & file.exists(output.file7b) | no.threshold){
+  #if(file.exists(output.file7b) | no.threshold){
+    print(paste0('File already exists: ',output.file7a, ' and ', output.file7b))
+    #print(paste0('File already exists: ', output.file7b))
+  }else{
+
+    #if(any(file.size(this.year.files)==0))
+      # using local function above from dev branch of EDAB.GLORYS
+                  make_thermal_habitat_area(input.file = this.year.files,
+                                           output.file.area =  output.file7a,
+                                           output.file.gridded = output.file7b,
+                                           shp.file = shp.file,
+                                           file.year = run.years[y],
+                                           write.area =T,
+                                           write.gridded =T,
+                                           t.max.seq = seq(0,30,1)
+    )
+  }
+  
+
+}
 
 ```
 
+gridded files are empty, area files have data
 
 # References
 
