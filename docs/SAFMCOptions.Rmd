@@ -174,7 +174,7 @@ Outline analysis using FW model (identify level of disaggrgation needed), Rpath 
 
 ## Prototype Indicator Development
 
-[Indicator workflow in progress](https://sgaichas.github.io/PrototypeOceanIndicator.html)
+[Indicator workflow in progress](https://sgaichas.github.io/SAFMCindicators/PrototypeOceanIndicator.html)
 
 
 ## Multispecies MSE Potential

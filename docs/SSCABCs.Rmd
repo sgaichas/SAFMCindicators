@@ -120,12 +120,17 @@ new scientific understanding and the Council’s risk tolerance.
 
 ### Climate Vulnerability Assessment
 
-A CVA for 71 fish and invertebrate species [@burton_climate_2023; @craig_climate_2025] is complete, as well as analysis for South Atlantic and Gulf fishing communities [@seara_community_2022]. Marine mammal (108 stocks) and highly migratory fish (58 stocks) climate vulnerability has also been assessed for the entire Atlantic Coast [@lettrich_vulnerability_2023; @loughran_climate_2025]. These documents contain indicators that represent a starting point towards meeting the needs identified in the EFH policy documents above. In addition, the fish CVA might inform the climate portion of the P* process used to set ABC for stocks in the Dolphin-Wahoo, Golden Crab, and Snapper-Grouper FMPs. 
-
+A CVA for 71 fish and invertebrate species [@burton_climate_2023; @craig_climate_2025] is complete, as well as analysis for South Atlantic and Gulf fishing communities [@seara_community_2022]. Marine mammal (108 stocks) and highly migratory fish (58 stocks) climate vulnerability has also been assessed for the entire Atlantic Coast [@lettrich_vulnerability_2023; @loughran_climate_2025]. These documents contain indicators that represent a starting point towards meeting the needs identified in the EFH policy documents above. In addition, the fish CVA might inform the climate portion of the P* process used to set ABC for stocks in the Dolphin-Wahoo, Golden Crab, and Snapper-Grouper FMPs.
 
 ![South Atlantic Fish and Invertebrate Climate Vulnerability](https://journals.plos.org/climate/article/figure/image?size=large&download=&id=10.1371/journal.pclm.0000543.g002)
 
+One way to inform the SSC ABC process might be to use the directionality scores below. When considering the climate change risk criterion for a particular species, the SSC could first look up whether the direction of climate impact was positive, neutral, or negative for that species using CVA results. Species with positive impacts could be assigned lowest risk, those with neutral impacts could be assigned the default risk, and those with negative impacts could be assigned a higher risk overall in the absence of other information.
+
 ![South Atlantic Fish and Invertebrate Climate Impact Directionality](https://journals.plos.org/climate/article/figure/image?size=large&download=&id=10.1371/journal.pclm.0000543.g006)
+
+For species predicted to have negative impacts from climate change, the sensitivity and exposure for that species could be considered to develop additional indicators of risk. For example, some species are more sensitive to ocean acidification, while others are more sensitive to temperature. Appropriate indicators can then be evaluated to determine whether risk may remain the same for the species or may be increasing or decreasing given current indicator trends.
+
+For example, Nassau grouper () were identified as a species with a very high vulnerability ranking and a negative impact directionality in the CVA. Individual species sensitivity data shows high vulerability to both temeperature and ocean acidification. 
 
 Source: [Craig et al. 2025](https://journals.plos.org/climate/article?id=10.1371/journal.pclm.0000543) 
 
