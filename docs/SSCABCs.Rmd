@@ -124,13 +124,15 @@ A CVA for 71 fish and invertebrate species [@burton_climate_2023; @craig_climate
 
 ![South Atlantic Fish and Invertebrate Climate Vulnerability](https://journals.plos.org/climate/article/figure/image?size=large&download=&id=10.1371/journal.pclm.0000543.g002)
 
-One way to inform the SSC ABC process might be to use the directionality scores below. When considering the climate change risk criterion for a particular species, the SSC could first look up whether the direction of climate impact was positive, neutral, or negative for that species using CVA results. Species with positive impacts could be assigned lowest risk, those with neutral impacts could be assigned the default risk, and those with negative impacts could be assigned a higher risk overall in the absence of other information.
+One way to inform the SSC ABC process might be to use the directionality scores below. When considering the climate change risk criterion for a particular species, the SSC could first look up whether the direction of climate impact was positive, neutral, or negative for that species using CVA results. Species with positive impacts could be assigned lowest risk, those with neutral impacts could be assigned the default risk, and those with negative impacts could be assigned a higher risk overall in the absence of other information. 
+
+Many snapper species are in the positive impacts bin.
 
 ![South Atlantic Fish and Invertebrate Climate Impact Directionality](https://journals.plos.org/climate/article/figure/image?size=large&download=&id=10.1371/journal.pclm.0000543.g006)
 
 For species predicted to have negative impacts from climate change, the sensitivity and exposure for that species could be considered to develop additional indicators of risk. For example, some species are more sensitive to ocean acidification, while others are more sensitive to temperature. Appropriate indicators can then be evaluated to determine whether risk may remain the same for the species or may be increasing or decreasing given current indicator trends.
 
-For example, Nassau grouper () were identified as a species with a very high vulnerability ranking and a negative impact directionality in the CVA. Individual species sensitivity data shows high vulerability to both temeperature and ocean acidification. 
+For example, Nassau grouper (*Epinephelus striatus*) were identified as a species with a very high vulnerability ranking and a negative impact directionality in the CVA. Individual species sensitivity data shows high vulnerability to both temperature and ocean acidification. The spawning cycle is the sensitivity attribute with the highest sensitivity score, followed by habitat specificity. 
 
 Source: [Craig et al. 2025](https://journals.plos.org/climate/article?id=10.1371/journal.pclm.0000543) 
 

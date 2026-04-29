@@ -1723,7 +1723,61 @@ Test plot, I think this worked
 
 ```
 
-Lets take a look at bottom temps 
+Lets take a look at bottom temps across years in a certain band--days over 25 degrees C
+
+```{r}
+
+btthermalcomp <- function(filename = filename, daysabove = 0, depth = "AllDepths"){
+  
+  btthermalgrid <- read.csv(filename)
+  
+  fix <- btthermalgrid |>
+     dplyr::filter(Var == daysabove,
+                   Depth == depth)
+   
+   xmin = -82.5
+   xmax = -71
+   ymin = 23.5
+   ymax = 36
+   
+    p <- ggplot2::ggplot(fix) + 
+     ggplot2::geom_tile(ggplot2::aes(x = Longitude, 
+                                     y = Latitude, color = Value, width = 1/12, height = 1/12), 
+                        linewidth = 2) + 
+     ggplot2::geom_sf(data = ecodata::coast, 
+                      size = 0.4) + 
+     #ggplot2::facet_grid(Depth ~ Var) +
+     ggplot2::facet_wrap(~Var) +
+     ggplot2::scale_color_viridis_c() + 
+     ggplot2::coord_sf(xlim = c(xmin, xmax), ylim = c(ymin, ymax)) + 
+     ggplot2::xlab("") + 
+     ggplot2::ylab("") + 
+     ecodata::theme_ts() + 
+     ecodata::theme_facet() + 
+     ecodata::theme_title() + 
+     ggplot2::ggtitle(paste(unique(fix$Time))) + 
+     ggplot2::theme(legend.position = "bottom")
+   
+    return(p)
+   
+}
+
+library(patchwork)
+
+p1 <- btthermalcomp(filename = file.names[1], daysabove = 25) + ggplot2::theme(legend.position = "none")
+p2 <- btthermalcomp(filename = file.names[2], daysabove = 25)
+p3 <- btthermalcomp(filename = file.names[3], daysabove = 25) + ggplot2::theme(legend.position = "none")
+p4 <- btthermalcomp(filename = file.names[4], daysabove = 25) + ggplot2::theme(legend.position = "none")
+p5 <- btthermalcomp(filename = file.names[5], daysabove = 25)
+p6 <- btthermalcomp(filename = file.names[6], daysabove = 25) + ggplot2::theme(legend.position = "none")
+  
+p1  + p2 + p3
+
+```
+```{r}
+p4 + p5 + p6
+```
+
 
 # References
 
