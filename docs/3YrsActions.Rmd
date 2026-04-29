@@ -26,9 +26,9 @@ library(tidyverse)
 
 # Introduction, Methods, and Caveats
 
-Council Actions from March 2023-March 2026 meetings were reviewed based on posted Committee Reports and Motion Summaries for each meeting. In addition, posted annual Council workplans and a current workplan provided by John Hadley were reviewed. Counts of actions by FMP were tallied and action types were classified into routine, tactical, occasional, and /or strategic decision types. The purpose of this was not to track changes in timelines for particular actions (which clearly happens) but to identify current and potential entry points for ecosystem information.
+Council Actions from March 2023-March 2026 meetings were reviewed based on posted Committee Reports and Motion Summaries for each meeting. In addition, posted annual Council workplans and a current workplan provided by John Hadley were reviewed. Counts of actions by FMP were tallied and action types were classified into routine, tactical, occasional, and /or strategic decision types. In general, motions establishing catch limits and measures for stocks were considered tactical and routine, while motions considering planning or policy were considered strategic and occasional. The latter included setting research priorities, workplans, and terms of reference for assessments. Establishing long term open or closed areas was considered tactical but occasional. Approving Habitat and Ecosystem Advisory Panel agendas was considered strategic and routine. The purpose of this was not to track changes in timelines for particular actions (which clearly happens) but to identify current and potential entry points for ecosystem information.
 
-Each summary motions document (or committee report, if not available) starting in March 2023 and ending in March 2026 was examined and the number of motions by committee tallied, along with comments on the action type. Full Council Closed Session motions related to committee or working group nominations were excluded. This information was entered into a table.
+Each summary motions document (or committee report, if not available) starting in March 2023 and ending in March 2026 was examined and the number of motions by committee tallied, along with comments on the action type and inclusion or potential for inclusion of ecosystem information. Ecosystem information was considered to be included when explictly mentioned in the motion or in the background material in the summary. Ecosystem information was considered to have the potential to be included in decisions regarding stock assessment and MSE terms of reference, assessment prioritization, evaluation of spawning closed areas or seasons, and allocation reviews. Full Council Closed Session motions related to committee or working group nominations were excluded from analysis. This information was entered into a table (see Appendix Table).
 
 # Results
 
@@ -62,7 +62,44 @@ byDesc <- motions |>
   dplyr::arrange(desc(perc))
 
 byEco <- motions |>
-  
+  dplyr::group_by(Ecosystem) |>
+  dplyr::summarise(n = n(),
+                   perc = n/nrow(motions)*100) |>
+  dplyr::arrange(desc(perc))
+
+byCatTiming <- motions |>
+  dplyr::group_by(Category, Timing) |>
+  dplyr::summarise(n = n(),
+                   perc = n/nrow(motions)*100) |>
+  dplyr::arrange(desc(perc))
+
+byFMPEco <- motions |>
+  dplyr::group_by(Committee, Ecosystem) |>
+  dplyr::summarise(n = n(),
+                   perc = n/nrow(motions)*100) |>
+  dplyr::arrange(desc(perc)) |>
+  tidyr::pivot_wider(-perc, names_from = "Ecosystem", values_from = n)
+
+byCategoryEco <- motions |>
+  dplyr::group_by(Category, Ecosystem) |>
+  dplyr::summarise(n = n(),
+                   perc = n/nrow(motions)*100) |>
+  dplyr::arrange(desc(perc)) |>
+  tidyr::pivot_wider(-perc, names_from = "Ecosystem", values_from = n)
+
+byTimingEco <- motions |>
+  dplyr::group_by(Timing, Ecosystem) |>
+  dplyr::summarise(n = n(),
+                   perc = n/nrow(motions)*100) |>
+  dplyr::arrange(desc(perc)) |>
+  tidyr::pivot_wider(-perc, names_from = "Ecosystem", values_from = n)
+
+byTimingCatEco <- motions |>
+  dplyr::group_by(Category, Timing, Ecosystem) |>
+  dplyr::summarise(n = n(),
+                   perc = n/nrow(motions)*100) |>
+  dplyr::arrange(desc(perc)) |>
+  tidyr::pivot_wider(-perc, names_from = "Ecosystem", values_from = n)
 
 ```
 
@@ -82,13 +119,66 @@ flextable::flextable(byTopicAgg) |>
   flextable::set_caption("Motions per Topic where Topics had > 1 Motion March 2023 - March 2026")
 ```
 
+While categorizing motions as tactical or strategic, routine or occasional required some judgement, the breakdown was as expected. Decisions are roughly evenly split between tactical/routine and strategic/occasional, with most staff tasking motions classified as both, and a small number of other combinations.
+
+```{r}
+flextable::flextable(byCatTiming) |>
+   flextable::set_caption("Motions by category, March 2023 - March 2026")
+
+```
+
+More than half of motions had no obvious ecosystem pathway, but over 17% addressed or included ecosystem issues, and over 25% more had the potential for ecosystem linkages.
 
 ```{r byEco}
-# byEcoAgg <- byDesc |>
-#   dplyr::filter(n>1)
-# 
-# flextable::flextable(byDescAgg) |>
-#   flextable::set_caption("Motions per Description where Descriptions had > 1 Motion March 2023 - March 2026")
+ flextable::flextable(byEco) |>
+   flextable::set_caption("Motions with Ecosystem linkages, March 2023 - March 2026")
+```
+
+The inclusion or potential for inclusion of ecosystem information varied by FMP.
+
+```{r}
+flextable::flextable(byFMPEco) |>
+   flextable::set_caption("Number of Motions with Ecosystem linkages by Committee, March 2023 - March 2026")
+```
+
+
+Ecosystem linkages are more commonly associated with strategic and occasional decisions. However there is potential to use ecosystem information to support routine tactical decisions as well. 
+
+```{r}
+flextable::flextable(byTimingCatEco) |>
+   flextable::set_caption("Number of Motions with Ecosystem linkages by Decision Type, March 2023 - March 2026")
+```
+
+Motions with direct ecosystem linkages included:
+
+```{r}
+motionsEcoLink <- motions |>
+  dplyr::filter(Ecosystem == "yes") |>
+  dplyr::select(Committee, Topic, Species, How)
+
+flextable::flextable(motionsEcoLink) |>
+  flextable::width(width = c(1,1,1,3)) |>
+  flextable::set_caption("Motions with Ecosystem linkages, March 2023 - March 2026")
+```
+
+
+Motions with potential ecosystem linkages included:
+
+```{r}
+motionsMaybeEcoLink <- motions |>
+  dplyr::filter(Ecosystem == "maybe") |>
+  dplyr::select(Committee, Topic, Species, How)
+
+flextable::flextable(motionsMaybeEcoLink) |>
+  flextable::width(width = c(1,1,1,3)) |>
+  flextable::set_caption("Motions with Potential Ecosystem linkages, March 2023 - March 2026")
+```
+
+# Appendix-full Motions table
+
+```{r allmotions}
+
+flextable::flextable(motions) 
 ```
 
 
