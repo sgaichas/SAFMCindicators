@@ -116,6 +116,22 @@ adjusting P* above the value set by the SSC should be infrequent and well-justif
 new scientific understanding and the Council’s risk tolerance.
 -->
 
+This approach has been applied in 2024 (from Snapper Grouper Committee December 2024 Council Report):
+>**Stock Risk Ratings for Golden Tilefish, Blueline Tilefish, Red Snapper, Mutton Snapper, and Yellowtail Snapper**
+Under the ABC Control Rule, the Council incorporates an evaluation of how much risk of
+overfishing it would be willing to accept based on biological, fishery (human interaction), and
+environmental factors affecting each stock. The Committee reviewed recommended scores from
+the AP and SSC and related information for golden tilefish, blueline tilefish, red snapper, mutton
+snapper, and yellowtail snapper. The Committee developed stock risk ratings for use in
+application of the ABC Control Rule to each of these species and rated each of these stocks as
+High Risk.
+
+The approach was also applied in 2025 (from Snapper Grouper Committee June 2025 Council Report):
+>**Black Sea Bass (Amendment 56)**
+Council staff presented the stock risk rating matrix from the ABC Control Rule for Black Sea
+Bass and the preliminary scores and comments made by the Advisory Panel and SSC. The
+Council determined the stock risk rating of black sea bass to be “high.”
+
 ## Current South Atlantic Indicators
 
 ### Climate Vulnerability Assessment

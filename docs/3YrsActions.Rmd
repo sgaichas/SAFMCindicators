@@ -61,6 +61,9 @@ byDesc <- motions |>
                    perc = n/nrow(motions)*100) |>
   dplyr::arrange(desc(perc))
 
+byEco <- motions |>
+  
+
 ```
 
 The Snapper Grouper Committee was responsible for more than half of Council Motions:
@@ -80,8 +83,8 @@ flextable::flextable(byTopicAgg) |>
 ```
 
 
-```{r byDesc}
-# byDescAgg <- byDesc |>
+```{r byEco}
+# byEcoAgg <- byDesc |>
 #   dplyr::filter(n>1)
 # 
 # flextable::flextable(byDescAgg) |>
