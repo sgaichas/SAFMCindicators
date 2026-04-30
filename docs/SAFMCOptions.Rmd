@@ -222,12 +222,15 @@ Potential approaches were discussed with the SSC at their April 2026 meeting to 
 
 ## Prototype Indicator Development
 
+Ocean data is available for the Southeast US coast, from multiple sources. Regional ocean models and global ocean models, including the NOAA MOM6 model [@ross_dynamically_2024] (https://psl.noaa.gov/cefi_portal/) and the Copernicus products (https://data.marine.copernicus.eu/products) including the  Global Oceanic Reanalysis (GLORYS, [@jean-michel_copernicus_2021], https://data.marine.copernicus.eu/product/GLOBAL_MULTIYEAR_PHY_001_030/description) already provide both hindcasts and forecasts of ocean temperature and salinity for the South Atlantic. This project will identify specific resources necessary to translate available data into ecosystem indicators tailored for the South Atlantic and its fishery management needs. For example, the NEFSC has publicly available code to derive indicators from these data sources for the region north of Cape Hatteras that could be modified to derive prototype indicators for the South Atlantic region. Here, I develop prototype ocean indicators to illustrate both opportunities and challenges for operational application in the region.
+
 A prototype habitat indicator characterizing bottom temperature in space over time was developed using GLORYS data with a reproducible workflow based on workflows used in the Northeast US by NEFSC. The objective is to produce maps and time series indicating where and when bottom temperature conditions approach or exceed stressful levels input particular species ranging from corals to targeted fish species. Stressful temperature levels would need to be determined from literature or other studies if unknown. 
 
 Validation of this model-based temperature indicator could be achieved with an expanded Citizen Science program; establishment of a formal Study Fleet such as that in the Northeast US [@jones_learning_2022] will be outlined if the indicator shows promise.  
 
 ## Multispecies MSE Potential
 
+[*to be done*]
 Outline analysis using FW model (identify level of disaggrgation needed), Rpath MSE capabilities, identify needs and next steps
 
 
@@ -888,22 +891,46 @@ If this species were assessed and required scoring, it could get a high risk sco
 
 The SSC noted that evaluating the risk from other environmental variables has been difficult. The criterion is phrased broadly in order to capture a wide variety of potential stock impacts: "Are other environmental variables causing negative effects on this stock, e.g. in the form of regime shifts, recruitment failure, etc.?" The implication is that these variables should be something other than the food web effects or climate impacts evaluated in the previous two risk attributes. There was a general consensus that stock specific information and indicators would be useful here, rather than general ecosystem level indicators of the type provided in the ESR. A direct linkage between environmental driver and stock response would be ideal, although observations of changes in population dynamics such as an unexpected series of low recruitments (that are not already accounted for in stock projecions) or a clear environmental regime shift could be used to indicate high risk. 
 
-Ecosystem and Socio-economic Profiles (ESPs), an ecosystem status report tailored to an individual stock, were invented in the North Pacific region [@shotwell_introducing_2023] and have since been applied in multiple other regions. 
+Ecosystem and Socio-economic Profiles (ESPs), an ecosystem status report tailored to an individual stock, were invented in the North Pacific region [@shotwell_introducing_2023] and have since been applied in multiple other regions. These reports start with a conceptual model of the species life history that identifies key transitions between life stages and habitats as well as environmental tolerances and any known mechanistic linkages to environmental drivers at each stage (e.g, Fig. \@ref(fig:herrconsmod) from @molina_atlantic_2025). The conceptual model, developed from literature review and expert knowledge (which can include scientists and fishers), forms the basis for both qualitative risk statements and quantitative indicator development tailored to the priority stock.
 
-to evaluate–this is where an ESP could help? Salinity and temperature, that info could help, projections 
-NC State modeling of the ocean could help–recuitment study?
+```{r herrconsmod, fig.cap="Atlantic herring conceptual model, from Molina et al. 2025"}
 
-Most often used other env var is the trend of low recruitment and regime shifts
-SERVS data
-Environmental indicators above the surface of the ocean–wind and waves, bad weather days that prevent fishing, is this a climate driven thing, what is the variance, runs of bad weather days, does that affect the number of fishing days, affect fishing regs or p* and then likelihood of catch reaching ABC
+url <- "https://github.com/NOAA-EDAB/presentations/raw/master/docs/EDAB_images/AherringConceptualMod.png"
+knitr::include_graphics(url)
+```
+
+A preliminary list of ecosystem factors to be considered has been developed for US Pacific fisheries and could be modified for the South Atlantic (quoted from Appendix A of the [California Current IEA (CCIEA) Team Report on Fisheries Ecosystem Initiative 4](https://www.pcouncil.org/documents/2024/08/h-1-a-cciea-team-report-1-cciea-risk-table-report-on-fep-initiative-4.pdf/)):
+
+*  Food webs (e.g., predator abundance or productivity, competitor abundance or
+productivity, spatial overlap with predators/competitors, prey abundance) -- *this closely matches the SAFMC "ecosystem importance" risk attribute so should not be reproduced under "other environmental variables"*
+*  Habitat availability (e.g., do current or near-term predictions of ocean temperatures and
+oxygen match known optimal ranges for [priority species] life history stages, closed area
+regulations) -- *this may be similar to the SAFMC "climate impact" risk attribute so should not be reproduced under "other environmental variables"*
+*  Changes in ecosystem productivity (e.g., upwelling indices, chlorophyll a, abundance
+of low trophic level organisms) -- *related to regime shifts*
+*  Physiological indices (e.g., growth, condition, pathogens/parasites, stomach
+weight/fullness) -- *possible drivers of recruitment trends*
+*  Reproductive indices (e.g., maturity, fecundity, spawn timing and duration) -- *possible drivers of recruitment trends*
+
+The last three points on this list may be useful to clarify "other environmental variables" because they can result in regime shifts and recruitment trends, but unlike recruitment trends may not already be accounted for in the stock assessment. 
+
+The structured conversation between ecosystem and stock assessment scientists described in Appendix A of the CCIEA document could be a useful starting point for developing the conceptual model.
+
+Indicator development and testing follows from the conceptual model. Indicators represent the hypothesized ecosystem drivers at different life stages, areas, and times of year. Priority should be given to developing indicators for processes or life history stages contributing to high assessment or projection uncertainty. Considerable environmental information is available in the ESR that could be tailored to priority species life stages (for example, surface temperature in a particular area for particular months rather than annual basin-wide averages reported in the ecosystem overview). The indicator development process should document the source, availability, and timeliness of data for alignment with operational stock assessments as well as hypothesized mechanistic connections to stock dynamics.
+
+Once stock specific indicators are developed, they are tested to ensure that they are tied to changes in the stock and that they are uncorrelated with each other, providing unique information. An understanding of the variance or uncertainty in indicators is as important as the mean or trend. 
+
+Indicators could be used outside the assessment model to inform a risk table, as part of the assessment process to support decisions regarding parameterization or timeframes for calculating reference points, or within an assessment as a covariate or driver of a particular process if evidence supports this use. In each case, decisions and rationale would require clear documentation. 
+
+The SSC also pointed out that environmental drivers may affect fisheries as well as the stocks themselves. Environmental indicators above the surface of the ocean–wind and waves, bad weather days, etc. could affect fishing effort, and also the likelihood of catch reaching ABC. 
 
 ### Considering positive ecosystem effects?
 
-Pacific risk table allows for positive, neutral, and negative ecosystem effects to be used in ABC setting (Table \@ref(tab:pacrisktab)). Although this type of approach would require an FMP amendment in the South Atlantic to make categories of ecosystem risk in addition to the current "High" category, it may be worth considering to get a full picture of ecosystem effects, positive and negative, on the risk of overfishing.
+A new Pacific Council risk table allows for positive, neutral, and negative ecosystem effects to be used in ABC setting (Table \@ref(tab:pacrisktab)). Although this type of approach would require an FMP amendment in the South Atlantic to make additional categories of ecosystem risk beyond the current "High" category, it may be worth considering to get a full picture of ecosystem effects, positive and negative, on the risk of overfishing.
 
 The Pacific Council SSC is evaluating risk tables in progress for stock assessments and ABC decisions, where risk tables are reframed as uncertainty tables using IPCC "confidence" language on degree of agreement of indicators and robustness of evidence. This approach is patterned on the use of risk tables in NPFMC harvest specification, but is tailored to the p* process used in PFMC. The ecosystem team tested options and recommended one where ecosystem and climate risks would alter the sigma applied to characterize scientific uncertainty in the OFL  (sigma is equivalent to the MAFMC SSC OFL CV). PFMC sigmas are 0.5 for high certainty assessments, 1.0 for data moderate assessments, and 2.0 for data limited assessments, with additional increases from a baseline sigma as time passes since the most recent assessment. Ecosystem and climate risks could further inform sigma, increasing or decreasing it as these factors increase or decrease uncertainty. 
 
-Operationally, a prototype process has ecosystem and stock scientists participate in a structured conversation to identify key uncertainties in the assessment and evaluate ecosystem drivers of the stock (that are not already included in the assessment) to fill out a table indicating whether ecosystem conditions are favorable, neutral, or unfavorable for the stock. This draws on previous literature and the indicators reported in the ESR. Information from the CVA for each stock is also included in this discussion. The structured discussion template is included in the CCIEA team's [2024 report](https://www.pcouncil.org/documents/2024/08/h-1-a-cciea-team-report-1-cciea-risk-table-report-on-fep-initiative-4.pdf/). For groundfish stock assessments conducted in 2025, pilot risk tables were developed for five full/benchmark assessments: yellowtail rockfish [@oken_status_2025], California quillback rockfish [@langseth_status_2025], chilipepper rockfish [@dick_status_2025], rougheye and blackspotted rockfishes [@cope_status_2025], and sablefish [@wetzel_status_2025]. 
+Operationally, a prototype process has ecosystem and stock scientists participate in a structured conversation as noted above, to identify key uncertainties in the assessment and evaluate ecosystem drivers of the stock (that are not already included in the assessment), and to fill out a table indicating whether ecosystem conditions are favorable, neutral, or unfavorable for the stock. This draws on previous literature and the indicators reported in the ESR. Information from the CVA for each stock is also included in this discussion. The structured discussion template is included in the CCIEA team's [2024 report](https://www.pcouncil.org/documents/2024/08/h-1-a-cciea-team-report-1-cciea-risk-table-report-on-fep-initiative-4.pdf/). For groundfish stock assessments conducted in 2025, pilot risk tables were developed for five full/benchmark assessments: yellowtail rockfish [@oken_status_2025], California quillback rockfish [@langseth_status_2025], chilipepper rockfish [@dick_status_2025], rougheye and blackspotted rockfishes [@cope_status_2025], and sablefish [@wetzel_status_2025]. 
 
 ```{r pacrisktab}
 
@@ -928,12 +955,352 @@ Source: [CCIEA Risk Table Report](https://www.pcouncil.org/documents/2024/08/h-1
 
 ## Prototype Indicator Development
 
-[Indicator workflow in progress](https://sgaichas.github.io/SAFMCindicators/PrototypeOceanIndicator.html)
+An indicator of seasonal bottom temperature in space was successfully developed for the South Atlantic region. The workflow is outlined here and all code will be provided so that this can be reproduces for other available information (salinity, currents, etc). The steps are first to pull the GLORYS data product of choice for the South Atlantic region from the Copernicus website, then to process the pulled data into indicatort datasets, and finally to plot the indicators. 
+
+### Pull GLORYS bottom temperature
+
+To use GLORYS information, users must register for a free account on the Copernicus website by clicking the [link at the top of the page](https://data.marine.copernicus.eu/register). Users supply an email and optional information on their organization (one can select Others) and then receive an email with a link to establish a password.
+
+I am working in R [@r_core_team_r_2023], but [Python](https://docs.python.org/3/index.html) code is used to access GLORYS information (there is not a way to access in R). Python can be installed using the R package [`reticulate`](https://rstudio.github.io/reticulate/) [@ushey_reticulate_2025] and the command `reticulate::install_miniconda()` if you don't already have a Python installation. This installs [Miniconda](https://www.anaconda.com/docs/getting-started/miniconda/main), a lightweight distribution of Python. Because it is a minimal distribution, one or two packages need to be added as below. 
+
+For this script you need the python `pandas` package, which is installed using `reticulate::py_install("pandas")`
+
+We also need to install the package from Copernicus that makes downloading the information easy:
+
+Install the `copernicusmarine` package using `reticulate::py_install("copernicusmarine", pip = TRUE)`
+
+Install `h5py`. `reticulate::py_install("h5py", pip = TRUE)`
+
+The dataset id we want is `cmems_mod_glo_phy_my_0.083deg_P1D-m`
+
+With the username and password, the following code can be used to download data locally for processing. It is important to specify the latitude and longitude bounds of the data as well as the year(s). Downloading one year at a time makes for manageable files to process for spatial or time series indicators. The output directory is hardcoded below, this needs to change for use elsewhere.
+
+The code for downloading is courtesy Joseph Caracappa, NOAA NMFS NEFSC, and was modified for the South Atlantic. To highlight a box for the South Atlantic region, I visited https://data.marine.copernicus.eu/product/GLOBAL_MULTIYEAR_PHY_001_030/download then selected variables, drew a box around area on the map, selected a year range, then clicked "automate" to generate a command line script. This script was modified and put into the same framework as used above for the Northeast region. 
+
+Pulling 6 years of data took my laptop and home connection about 8 hours. 
+
+Take a look at a South Atlantic file as pulled from Copernicus:
+
+```{r}
+tidync::tidync(here::here("GLORYS/SAtl/2025/GLORYS_REANALYSIS_2025-12-31.nc"))
+```
+
+Here we plot this file:
+
+```{r}
+
+glorysnctotibble <- function(ncfile = ncfile){
+  # time is hours since 1950-01-01
+  origin <- as.Date("1950-01-01") 
+  
+  # add the time variable into each
+  time <- tidync::tidync(ncfile) |>
+    tidync::activate("D0") |> tidync::hyper_array()
+  
+ # google says 86400000 milliseconds in a day
+  # irrelevant because this unit is hours in a day
+  
+  bttib <- tidync::tidync(ncfile) |>
+    tidync::hyper_tibble(force = TRUE) |>
+    dplyr::mutate(time = unname(time$time)) |>
+    dplyr::mutate(date = as.Date((time/24), origin = origin),
+                  year = lubridate::year(date),
+                  month = lubridate::month(date),
+                  day = lubridate::day(date))|>
+    dplyr::mutate(longitude = as.numeric(longitude),
+                  latitude = as.numeric(latitude)) |>
+    dplyr::rename(mod_bt = bottomT)
+  
+  return(bttib)
+}
+
+# plotting function modified for the South Atlantic just shifts coord_sf
+dailybtplotSA <- function(oneday){
+  ggplot() +
+    geom_tile(data = oneday, aes(x = longitude, y = latitude, fill = mod_bt)) +
+    geom_sf(data = ecodata::coast) +
+    #geom_point(data = FishStatsUtils::northwest_atlantic_grid, aes(x = Lon, y = Lat), size=0.05, alpha=0.1) +
+    scale_fill_gradientn(name = "Temp C",
+                         limits = c(0.5, 31),
+                         colours = c(scales::muted("blue"), "white",
+                                     scales::muted("red"), "black")) +
+    coord_sf(xlim = c(-82.5, -71), ylim = c(23.5, 36)) + 
+    #ecodata::theme_map() +
+    ggtitle(paste("Bottom temp, mm-dd-yyyy:", unique(oneday$month),
+                   unique(oneday$day), unique(oneday$year), sep = " "))
+}
+
+ncfile <- here::here("GLORYS/SAtl/2025/GLORYS_REANALYSIS_2025-12-31.nc")
+
+dec3125 <- glorysnctotibble(ncfile)
+
+dailybtplotSA(dec3125)
+
+```
+
+### Process GLORYS bottom temperature
+
+Joe Caracappa, NEFSC, wrote nearly all of the code used to produce these indicators for the Northeast US [State of the Ecosystem (SOE)](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf) reports. 
+
+R packages used in this workflow include `tidyverse` [@wickham_welcome_2019] for general data organization and visualization, `terra` [@hijmans_terra_2025] and `ncdf4` [@pierce_ncdf4_2025] for processing netCDF files downloaded from Copernicus, and `knitr` [@xie_knitr_2025; @xie_dynamic_2015 ; @stodden_knitr_2014], `rmarkdown` [@allaire_rmarkdown_2024; @xie_r_2018; @xie_r_2020], and `bookdown` [@xie_bookdown_2025; @xie_bookdown_2016] for producing reports in both .html and .pdf formats.
+
+Code for reading the file into time series or maps is found at the NEFSC GitHub at https://github.com/NEFSC/READ-EDAB-GLORYS/tree/main. This repo has a [fuller version of the pulling script](https://github.com/NEFSC/READ-EDAB-GLORYS/blob/main/data-raw/python/GLORYS_download_template_workflow.py) that adds variables like salinity or mixed layer depth and pulls them into variable specific folders. It could be modified simply by changing the min and max lat and lon as above.
+
+We will focus on the spatial indicator of days with bottom temperature over a certain threshold in a given year. This indicator is called [`thermal_habitat_gridded`](https://noaa-edab.github.io/catalog/thermal_habitat_gridded.html) in the SOE. 
+
+The full set of SOE indicators using GLORYS bottom temperature are made by the script [make_GLORYS_bt_soe.R](https://github.com/NEFSC/READ-EDAB-GLORYS/blob/main/vignettes/make_GLORYS_bt_soe.R) but we don't want to make all of them right now for this demonstration.
+
+It also has functions to process the downloaded files into datasets for presentation as either time series or spatial datasets. It calls utility functions in this repository: https://github.com/NEFSC/READ_EDAB_Utilities/tree/main. The Utilities should be installed so the functions can be used by other functions in READ-EDAB-GLORYS using code `devtools::install_github("https://github.com/NEFSC/READ_EDAB_Utilities")`This installed properly so we can use all the utilities functions. One function we will use is [`make_2d_deg_day_gridded`](https://github.com/NEFSC/READ_EDAB_Utilities/blob/main/R/make_2d_deg_day_gridded.R).  
+
+I cannot install the EDAB-GLORYS functions:`devtools::install_github("https://github.com/NEFSC/READ-EDAB-GLORYS")` due to a missing local file `EDAB.GLORYS/data/cold_pool/ROMS/roms_debiased_cold_pool_1959_1992.nc` This ROMS information is from a debiased Regional Ocean Modeling System (ROMS) model run for the Northeast US that provides bottom temerpature data from the 1950s to 1993, because the GLORYS dataset starts in 1993. We would not have this historical information available in the South Atlantic so we need to proceed without this dependency no matter what.  I cloned the GitHub repo and built locally by commenting out lines 74-76 in [`make_cold_pool_extent_shp.R`](https://github.com/NEFSC/READ-EDAB-GLORYS/blob/main/R/make_cold_pool_extent_shp.R), a function we will not need for the South Atlantic.
+
+The other EDAB-GLORYS functions work locally. The initial processing from `make_GLORYS_bt_soe.R` was used and I made only the gridded temperatur plots.
+
+Finally, functions to plot indicators are found in the `ecodata` [@beltz_ecodata_2025] package and in the NOAA-EDAB GitHub ecodata repository, such as `plot_thermal_habitat_gridded` : https://github.com/NOAA-EDAB/ecodata/blob/pre-production/R/plot_thermal_habitat_gridded.R 
+
+I had to change the `EDAB.GLORYS::make_bottom_temp_model_gridded` function code to call `EDABUtilities::make_2d_summary_gridded` with an additional argument, `file.time = "daily"` to make it work with the files in their original downloaded format. Then running the code above works for bottom temperature gridded. Alternatively, all files could be combined into one folder but I am unsure what that looked like so I am modifying the function to have all the steps here. A similar change was made in `EDAB.GLORYS::make_bottom_temp_model_annual` to change the call to `EDABUtilities::make_2d_summary_ts` to `file.time = "daily" instead of annual. This creates the plots I expected for seasonal gridded bottom temperature. 
+
+Also, we need to use the dev branch `EDAB.GLORYS::make_thermal_habitat_area` function that brings the daily GLORYS files into one annual file for estimating the number of days at each temperature for each year. 
+
+Finally, I needed to change the underlying geography assumed in the code. I need a shape file to run the code for the South Atlantic. Lets try SA_EEZ_off_states from https://www.fisheries.noaa.gov/resource/map/defined-fishery-management-areas-south-atlantic-states-map-gis-data. `EDAB-GLORYS` functions have the Northeast ecosystem production untis (EPUs) hardcoded in them, so I rewrote those parts. Ultimately, I used the entire South Atlantic region in the shapefile by removing the parts of code that mapped to individual EPUs, but this code could be put back in if there are subsets of the South Atlantic defined in a shape file that need separate indicators.
+
+### Visualize prototype bottom temperature indicators
+
+The spatial bottom temperature by season indicator was successfully produced for the South Atlantic. Here is a plot following the same code used in ecodata for the Northeast US. 
+
+```{r}
+
+plot_gridded_bt <- function(bottom_temp_model_gridded_csv, year = NULL, scale = "celsius"){
+  
+  bottom_temp_model_gridded <- read.csv(bottom_temp_model_gridded_csv) |>
+    tibble::as_tibble()
+  
+  xmin = -82.5
+  xmax = -71
+  ymin = 23.5
+  ymax = 36
+  xlims <- c(xmin, xmax)
+  ylims <- c(ymin, ymax)
+  
+  if (is.null(year)) year <- max(bottom_temp_model_gridded$Time)
+  
+      fix <- dplyr::mutate(dplyr::select(dplyr::filter(bottom_temp_model_gridded, 
+        Time == year), -Time), Var = factor(Var, levels = c("winter", 
+        "spring", "summer", "fall")))
+    
+    if (scale == "fahrenheit") {
+        fix <- dplyr::mutate(fix, Value = (9/5) * Value + 32)
+        label <- "Temp. (°F)"
+        breaks <- c(32, 41, 50, 59, 68, 77)
+        labelLegend <- c("32", "41", "50", "59", "68", "77")
+        limits <- c(31.6, 84.2)
+        midpoint <- 50
+    } else {
+        label <- "Temp. (°C)"
+        breaks <- c(0, 5, 10, 15, 20, 25)
+        labelLegend <- c("0", "5", "10", "15", "20", "25")
+        limits <- c(-0.2, 29)
+        midpoint <- 10
+    }
+      p <- ggplot2::ggplot(data = fix) + 
+        ggplot2::geom_tile(ggplot2::aes(x = Longitude, 
+                                        y = Latitude, fill = sqrt(Value + 1))) + 
+        ggplot2::geom_sf(data = ecodata::coast, 
+                         size = 0.4) + 
+        #ggplot2::geom_sf(data = ne_epu_sf, fill = "transparent", size = 0.4) + 
+        ggplot2::coord_sf(xlim = xlims, 
+                          ylim = ylims) + 
+        ggplot2::facet_wrap(Var ~.) + 
+        ecodata::theme_map() + 
+        ggplot2::scale_fill_gradient2(name = label, low = "#000004FF", 
+                                      mid = "#BB3754FF", high = "#FCFFA4FF", 
+                                      breaks = sqrt(breaks + 1), limits = sqrt(limits + 1), 
+                                      labels = labelLegend, 
+                                      midpoint = sqrt(midpoint + 1)) + 
+        ggplot2::ggtitle(paste("Seasonal Mean Bottom Temperature", year)) + 
+        ggplot2::xlab("Longitude") + ggplot2::ylab("Latitude") + 
+        ggplot2::theme(panel.border = ggplot2::element_rect(colour = "black", 
+                                                            fill = NA, linewidth = 0.75), 
+                       legend.key = ggplot2::element_blank(), 
+                       axis.title = ggplot2::element_text(size = 11), 
+                       strip.background = ggplot2::element_blank(), 
+                       strip.text = ggplot2::element_text(hjust = 0), 
+                       axis.text = ggplot2::element_text(size = 8), 
+                       axis.title.y = ggplot2::element_text(angle = 90)) + 
+        ecodata::theme_title() + 
+        ecodata::theme_ts()
+      return(p)
+      
+  
+}
+
+csv <- here::here("GLORYS/SAtl-out/data/bottom_temp_model_gridded/GLORYS_bottom_temp_model_gridded_2025.csv")
+
+plot_gridded_bt(bottom_temp_model_gridded_csv = csv, scale = "celsius")
+```
+
+Now plotting all years pulled.
+
+
+```{r}
+csv <- here::here("GLORYS/SAtl-out/data/bottom_temp_model_gridded/GLORYS_bottom_temp_model_gridded_2024.csv")
+
+plot_gridded_bt(bottom_temp_model_gridded_csv = csv, scale = "celsius")
+```
+
+```{r}
+csv <- here::here("GLORYS/SAtl-out/data/bottom_temp_model_gridded/GLORYS_bottom_temp_model_gridded_2023.csv")
+
+plot_gridded_bt(bottom_temp_model_gridded_csv = csv, scale = "celsius")
+```
+
+```{r}
+csv <- here::here("GLORYS/SAtl-out/data/bottom_temp_model_gridded/GLORYS_bottom_temp_model_gridded_2022.csv")
+
+plot_gridded_bt(bottom_temp_model_gridded_csv = csv, scale = "celsius")
+```
+
+```{r}
+csv <- here::here("GLORYS/SAtl-out/data/bottom_temp_model_gridded/GLORYS_bottom_temp_model_gridded_2021.csv")
+
+plot_gridded_bt(bottom_temp_model_gridded_csv = csv, scale = "celsius")
+```
+
+```{r}
+csv <- here::here("GLORYS/SAtl-out/data/bottom_temp_model_gridded/GLORYS_bottom_temp_model_gridded_2020.csv")
+
+plot_gridded_bt(bottom_temp_model_gridded_csv = csv, scale = "celsius")
+```
+
+Finally, after troubleshooting the South Atlantic shapefile and abandoning subregions within it, the thermal habitat area and gridded indicators were successfully produced. Here is a visualization of the thermal habitat indicator for a single year looking at different temperature thresholds. The indicator is the number of days with bottom temperature **above** the temperature listed at the top of each plot for the year in the plot title. This can be an indicator of thermal stress for different species, depending on their temperature tolerance. Temperatures are in degrees C but can be converted to F if desired. 
+
+
+```{r}
+  file.names = list.files(here::here("GLORYS/SAtl-out/data/thermal_habitat_gridded"), full.names = T)
+  #  test.nc = ncdf4::nc_open(file.names[1])
+  # # # test.nc = ncdf4::nc_open('C:/Users/joseph.caracappa/Downloads/thermal_habitat_gridded_1993_SOE2025.nc')
+  #  ncdf4::ncatt_get(test.nc,'nday_10')
+  #  ncdf4::ncatt_get(test.nc,'nday_5')
+  #  ncdf4::nc_close(test.nc)
+  #  #x = terra::rast(file.names[1])
+  #  #x = terra::rast(test.nc,'nday_5')
+  #  #plot(x)
+  # # test.sds = terra::sds(file.names[1],1)
+  # # writeCDF(test.sds,here::here('data','SOE','thermal_habitat_checker.nc'))
+  #  
+  #  # convert to tibble and plot as above modifying ecodata::plot_thermal_habitat_gridded code
+  #  ncfile <- file.names[1] # 2020, retrieve the year from the filename to add to the plot
+  #  
+  #  bttib <- tidync::tidync(ncfile) |>
+  #   tidync::hyper_tibble(force = TRUE) |>
+  #    dplyr::select(nday_5, nday_10, nday_15, nday_20, longitude, latitude) |>
+  #    dplyr::mutate(longitude = as.numeric(longitude),
+  #                 latitude = as.numeric(latitude))
+   
+   btthermalgrid <- read.csv(file.names[1])
+   
+   fix <- btthermalgrid |>
+     dplyr::filter(Var %in% c(5, 10, 15, 20, 25, 30),
+                   Depth %in% c("AllDepths"))
+   
+   xmin = -82.5
+   xmax = -71
+   ymin = 23.5
+   ymax = 36
+   
+   
+   p <- ggplot2::ggplot(fix) + 
+     ggplot2::geom_tile(ggplot2::aes(x = Longitude, 
+                                     y = Latitude, color = Value, width = 1/12, height = 1/12), 
+                        linewidth = 2) + 
+     ggplot2::geom_sf(data = ecodata::coast, 
+                      size = 0.4) + 
+     #ggplot2::facet_grid(Depth ~ Var) +
+     ggplot2::facet_wrap(~Var, nrow = 2) +
+     ggplot2::scale_color_viridis_c() + 
+     ggplot2::coord_sf(xlim = c(xmin, xmax), ylim = c(ymin, ymax)) + 
+     ggplot2::xlab("") + 
+     ggplot2::ylab("") + 
+     ecodata::theme_ts() + 
+     ecodata::theme_facet() + 
+     ecodata::theme_title() + 
+     ggplot2::ggtitle(paste(unique(fix$Time))) + 
+     ggplot2::theme(legend.position = "bottom")
+   
+   #return(p)
+   
+   p
+
+```
+
+
+And this compares the number of days exceeding 25 degrees C for all the years I pulled.
+
+
+```{r}
+
+btthermalcomp <- function(filename = filename, daysabove = 0, depth = "AllDepths"){
+  
+  btthermalgrid <- read.csv(filename)
+  
+  fix <- btthermalgrid |>
+     dplyr::filter(Var == daysabove,
+                   Depth == depth)
+   
+   xmin = -82.5
+   xmax = -71
+   ymin = 23.5
+   ymax = 36
+   
+    p <- ggplot2::ggplot(fix) + 
+     ggplot2::geom_tile(ggplot2::aes(x = Longitude, 
+                                     y = Latitude, color = Value, width = 1/12, height = 1/12), 
+                        linewidth = 2) + 
+     ggplot2::geom_sf(data = ecodata::coast, 
+                      size = 0.4) + 
+     #ggplot2::facet_grid(Depth ~ Var) +
+     ggplot2::facet_wrap(~Var) +
+     ggplot2::scale_color_viridis_c() + 
+     ggplot2::coord_sf(xlim = c(xmin, xmax), ylim = c(ymin, ymax)) + 
+     ggplot2::xlab("") + 
+     ggplot2::ylab("") + 
+     ecodata::theme_ts() + 
+     ecodata::theme_facet() + 
+     ecodata::theme_title() + 
+     ggplot2::ggtitle(paste(unique(fix$Time))) + 
+     ggplot2::theme(legend.position = "bottom")
+   
+    return(p)
+   
+}
+
+library(patchwork)
+
+p1 <- btthermalcomp(filename = file.names[1], daysabove = 25) + ggplot2::theme(legend.position = "none")
+p2 <- btthermalcomp(filename = file.names[2], daysabove = 25)
+p3 <- btthermalcomp(filename = file.names[3], daysabove = 25) + ggplot2::theme(legend.position = "none")
+p4 <- btthermalcomp(filename = file.names[4], daysabove = 25) + ggplot2::theme(legend.position = "none")
+p5 <- btthermalcomp(filename = file.names[5], daysabove = 25)
+p6 <- btthermalcomp(filename = file.names[6], daysabove = 25) + ggplot2::theme(legend.position = "none")
+  
+p1  + p2 + p3
+
+```
+
+```{r}
+p4 + p5 + p6
+```
+
+The indicators include data for all temperatures from 0 to 30 degrees C in 1 degree increments. Another indicator showing the proportion of area for different depth ranges above the threshold was also produced and can be presented. Maps can be zoomed in to show more detailed areas as well.
+
+This was a proof of concept, demonstrating that information is available for the South Atlantic region from global databases and can be processed with available code. Because code was already available, this took approximately one week of work (with the computer occasionally working at night to do long downloads or calculations).
+
+[Full indicator workflow complete with code and false starts is here.](https://sgaichas.github.io/SAFMCindicators/PrototypeOceanIndicator.html)
 
 
 ## Multispecies MSE Potential
 
-
+[*to be done*]
 
 # Discussion
 
@@ -941,14 +1308,19 @@ Source: [CCIEA Risk Table Report](https://www.pcouncil.org/documents/2024/08/h-1
 
 Based on these analyses, the SAFMC has many options for integrating more ecosystem information into management decisions. These are outlined here and detailed below. 
 
+1. SAFMC already addresses ecosystem issues and requests ecosystem information in its decision making process. Existing SAFMC habitat and ecosystem policies align with existing ecosystem indicators, facilitating use of these indicators to support policy-related decisions.
+1. Further opportunities were identified for SAFMC to request or use ecosystem information its decision making process. These include assessment prioritization, defining assessment Terms of Reference, defining management strategy evaluation terms of reference, evaluating spawning seasonal or spatial closures, evaluating single species and multispecies reference points, evaluating catch, effort, and discard projections, and evaluating allocations.
+1. The SAFMC ABC setting process (used in 3 FMPs) already has a framework where existing ecosystem indicators could be used to support risk rankings. A range of simpler to more complex approaches can be used to evaluate risks of overfishing. 
+1. Information is available to develop spatially and seasonally resolved habitat indicators for the South Atlantic region from global ocean model data products. These indicators can be ground-truthed using both existing scientific surveys and by further developing existing Citizen Science priority research areas. 
+1. SAFMC's multispecies complexes combined with its long term investment in food web modeling create an opportunity to evaluate multispecies management and reference points while accounting for species interactions. Management strategy evaluation could include climate scenarios as well as food web interactions to test the robustness of any multispecies management measures.  
 
-First, it is notable that 18% of decisions (motions) over the past 3 years already involve ecosystem issues or information. This is because SAFMC already has a long history of integrating habitat and ecosystem issues in management, as noted in the introduction. The currently active SAFMC Habitat and Ecosystem Committee and Habitat and Ecosystem Advisory Panel already develop policy and planning for cross-sectoral ecosystem issues (Ecosystem Based Management) as well as fishery-ecosystem issues such as balancing fishery access with habitat protection (Ecosystem Based Fisheries Management). Policies already developed by the HEAP and Habitat and Ecosystem Committee align well with many existing ecosystem indicators and could be addressed further with the existing SAFMC ecosystem model.       
+First, it is notable that 18% of decisions (motions) over the past 3 years already involve ecosystem issues or information. This is because SAFMC has a long history of integrating habitat and ecosystem issues in management, as noted in the introduction. The currently active SAFMC Habitat and Ecosystem Committee and Habitat and Ecosystem Advisory Panel already develop policy and planning for cross-sectoral ecosystem issues (Ecosystem Based Management) as well as fishery-ecosystem issues such as balancing fishery access with habitat protection (Ecosystem Based Fisheries Management). Policies already developed by the HEAP and Habitat and Ecosystem Committee align well with many existing ecosystem indicators and could be addressed further with the existing SAFMC ecosystem model.       
 
-The analysis of SAFMC motions for the past 3 years identified another 25% of motions where ecosystem information could be used to inform management. 
+The analysis of SAFMC motions for the past 3 years identified another 25% of motions where ecosystem information could be requested or used to inform management. 
 
 The SAFMC ABC setting process (used in 3 FMPs) already has a framework where existing ecosystem information can be used to support risk rankings.
 
-
+Information is available to develop spatially and seasonally resolved habitat indicators for the South Atlantic region from global ocean model data products. By adapting existing methods and code used in the Northeast US, a prototype bottom temperature indicator was developed.  
 
 To address uncertainty in future conditions, MSE could be more broadly conducted to address whether management is likely to be robust across unexpected ecosystem conditions [@walter_when_2023]. While predictive capability for ecosystem conditions is improving in several US regions, including in the Atlantic [@ross_dynamically_2024], this capability may not predict all variables important to all managed fisheries equally well. In addition, models may not predict specific short term ecosystem changes driven by local conditions. Rapid changes in conditions comparable to those observed in Alaska can be implemented within an MSE simulation framework to develop and test resilient management measures. Simpler management procedures can also be tested using MSE to allow more informed management of stocks without regular assessments, and to evaluate the use of ecosystem information to enhance management procedures. 
 
@@ -957,11 +1329,9 @@ To address uncertainty in future conditions, MSE could be more broadly conducted
 
 Existing ecosystem data products for the South Atlantic should be consulted before initiating new indicator or product development. The ESR and CVA contain a wealth of useful information that aligns well with existing SAFMC policy. Priority indicators can be 
 
-
-
 ESPs are extremely useful to inform risk assessments and even to bring ecosystem information directly into stock assessments, but they are resource intensive. A facilitated structured discussion among ecosystem and assessment experts, as used in the Pacific region, may provide a more feasible path forward to outline the highest priority ecosystem drivers, risks, and potential indicators for individual stocks. 
 
-
+MSEs are likewise useful and resource intensive. 
 
 
 ## Potential next steps 
