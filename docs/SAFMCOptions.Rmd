@@ -49,6 +49,8 @@ library(data.table)
 
 # Executive Summary
 
+[*to be added*]
+
 # Introduction
 
 Federal Fishery Management Councils along the U.S. East Coast have been working towards improved management coordination and collaboration for the past several years under the [East Coast Scenario Planning Initiative](https://www.mafmc.org/climate-change-scenario-planning) and subsequent [East Coast Coordination Group](https://www.mafmc.org/east-coast-coordination-group). The purpose of the group is to improve management success in the face of changing ocean conditions and stock distributions that are outside historical bounds; in particular, across traditional management boundaries. A Potential Action Menu was developed for the Coordination Group to improve responsiveness and resilience in fishery management under changing conditions. A key Potential Action Menu item is identifying ecosystem information that can be used by Councils to evaluate changes in ecosystems and fishery resources, and ultimately to develop management that is robust to these changes. The South Atlantic Fishery Management Council (SAFMC) seeks to identify ecosystem data relevant to its region and managed resources, and to develop strategies to make the best use of ecosystem information in management. 
@@ -117,7 +119,7 @@ In this report, multiple approaches are used to outline practical next steps for
 
 Council Actions from March 2023-March 2026 meetings were reviewed based on posted Committee Reports and Motion Summaries for each meeting. In addition, posted annual Council workplans and a current workplan provided by John Hadley were reviewed. Counts of actions by FMP were tallied and action types were classified into routine, tactical, occasional, and /or strategic decision types. In general, motions establishing catch limits and measures for stocks were considered tactical and routine, while motions considering planning or policy were considered strategic and occasional. The latter included setting research priorities, workplans, and terms of reference for assessments. Establishing long term open or closed areas was considered tactical but occasional. Approving Habitat and Ecosystem Advisory Panel agendas was considered strategic and routine. The purpose of this was not to track changes in timelines for particular actions (which clearly happens) but to identify current and potential entry points for ecosystem information.
 
-Each summary motions document (or committee report, if not available) starting in March 2023 and ending in March 2026 was examined and the number of motions by committee tallied, along with comments on the action type and inclusion or potential for inclusion of ecosystem information. Ecosystem information was considered to be included when explictly mentioned in the motion or in the background material in the summary. Ecosystem information was considered to have the potential to be included in decisions regarding stock assessment and MSE terms of reference, assessment prioritization, evaluation of spawning closed areas or seasons, and allocation reviews. Full Council Closed Session motions related to committee or working group nominations were excluded from analysis. This information was entered into a table (see Appendix Table).
+Each summary motions document (and committee report, if relevant) starting in March 2023 and ending in March 2026 was examined and the number of motions by committee tallied, along with comments on the action type and inclusion or potential for inclusion of ecosystem information. Ecosystem information was considered to be included when explicitly mentioned in the motion or in the background material in the summary. Ecosystem information was considered to have the potential to be included in decisions regarding stock assessment and MSE terms of reference, assessment prioritization, evaluation of spawning closed areas or seasons, and allocation reviews. Full Council Closed Session motions related to committee or working group nominations were excluded from analysis. This information was entered into a table (see Appendix Table).
 
 ## Policy Objectives/Indicators Alignment
 
@@ -151,7 +153,7 @@ All policy documents were reviewed by the author. Initial matches with ESR indic
 
 ## Indicator Opportunities for SSC ABC Setting 
 
-For catch advice, the project will evaluate whether products such as Ecosystem Socioeconomic Profiles (ESPs, [@behan_ecosystem_2022; @shotwell_synthesizing_2022; @shotwell_introducing_2023]) would be useful and practical for SAFMC catch specification processes given data and staff resources, whether Ecosystem Status Report (ESR, [@craig_ecosystem_2021]) indicators or Climate Vulnerability Analysis (CVA, [@burton_climate_2023; @craig_climate_2025]) might be useful for assessing uncertainty and risk in adjusting catch levels, and what other approaches to integrating ecosystem information into catch specification would be feasible. 
+For catch advice, the project evaluated whether products such as Ecosystem Socioeconomic Profiles (ESPs, [@behan_ecosystem_2022; @shotwell_synthesizing_2022; @shotwell_introducing_2023]) would be useful and practical for SAFMC catch specification processes given data and staff resources, whether Ecosystem Status Report (ESR, [@craig_ecosystem_2021]) indicators or Climate Vulnerability Analysis (CVA, [@burton_climate_2023; @craig_climate_2025]) might be useful for assessing uncertainty and risk in adjusting catch levels, and what other approaches to integrating ecosystem information into catch specification would be feasible. 
 
 The current SAFMC risk policy and ABC approach were updated for three FMPs [in 2023](https://safmc.net/documents/abccram_06052023_submittal-pdf/). This approach classifies risk of overfishing based on multiple attributes, as outlined below. 
 
@@ -206,11 +208,11 @@ Specific attributes that can inform risk of overfishing:
 
 Risk evaluation could include an indicator-based approach. While some Councils use information from annual stock level ESPs or full system ESRs to evaluate risk when specifying catch levels, others are developing a more streamlined process based on structured discussions between stock assessors and ecosystem scientists. A mix of approaches will be explored for the South Atlantic context given existing resource levels. 
 
-Potential approaches were discussed with the SSC at their April 2026 meeting to evaluate feasibility. Questions for the SSC included:
+Experience with applying the current risk framework and potential approaches for incorporating ecosystem information were discussed with the SSC at their April 2026 meeting to evaluate feasibility. Questions for the SSC included:
 
 1. Is the characterization of the ABC control rule above correct?
 1. How many times has the SSC applied the rule?
-1. For which species has the SSC filled out the risk table? (I have [Black Sea Bass from April 2025](https://safmc.net/documents/ssc_apr2025_report_final-pdf/))
+1. For which species has the SSC filled out the risk table? (example: [Black Sea Bass from April 2025](https://safmc.net/documents/ssc_apr2025_report_final-pdf/))
 1. What is the SSC's experience filling out the risk table? 
     + Which portions have high agreement? 
     + Which portions generate much discussion and disagreement?
@@ -222,17 +224,26 @@ Potential approaches were discussed with the SSC at their April 2026 meeting to 
 
 ## Prototype Indicator Development
 
-Ocean data is available for the Southeast US coast, from multiple sources. Regional ocean models and global ocean models, including the NOAA MOM6 model [@ross_dynamically_2024] (https://psl.noaa.gov/cefi_portal/) and the Copernicus products (https://data.marine.copernicus.eu/products) including the  Global Oceanic Reanalysis (GLORYS, [@jean-michel_copernicus_2021], https://data.marine.copernicus.eu/product/GLOBAL_MULTIYEAR_PHY_001_030/description) already provide both hindcasts and forecasts of ocean temperature and salinity for the South Atlantic. This project will identify specific resources necessary to translate available data into ecosystem indicators tailored for the South Atlantic and its fishery management needs. For example, the NEFSC has publicly available code to derive indicators from these data sources for the region north of Cape Hatteras that could be modified to derive prototype indicators for the South Atlantic region. Here, I develop prototype ocean indicators to illustrate both opportunities and challenges for operational application in the region.
+Ocean data is available for the Southeast US coast, from multiple sources. Regional ocean models and global ocean models, including the NOAA MOM6 model [@ross_dynamically_2024] (https://psl.noaa.gov/cefi_portal/) and Copernicus products (https://data.marine.copernicus.eu/products) including the Global Oceanic Reanalysis (GLORYS, [@jean-michel_copernicus_2021], https://data.marine.copernicus.eu/product/GLOBAL_MULTIYEAR_PHY_001_030/description) already provide both hindcasts and forecasts of ocean temperature and salinity, as well as other ocean variables, for the South Atlantic. This project will identify specific resources necessary to translate available data into ecosystem indicators tailored for the South Atlantic and its fishery management needs. For example, the NEFSC has publicly available code to derive indicators from these data sources for the region north of Cape Hatteras that could be modified to derive prototype indicators for the South Atlantic region. Here, I develop prototype ocean indicators to illustrate both opportunities and challenges for operational application in the region.
 
-A prototype habitat indicator characterizing bottom temperature in space over time was developed using GLORYS data with a reproducible workflow based on workflows used in the Northeast US by NEFSC. The objective is to produce maps and time series indicating where and when bottom temperature conditions approach or exceed stressful levels input particular species ranging from corals to targeted fish species. Stressful temperature levels would need to be determined from literature or other studies if unknown. 
+A prototype habitat indicator characterizing bottom temperature in space over time was developed using GLORYS data with a reproducible workflow based on workflows used in the Northeast US by NEFSC. The objective is to produce maps and time series indicating where and when bottom temperature conditions approach or exceed stressful levels relevant to particular species ranging from corals to targeted fish species. Stressful temperature levels for key species would need to be determined from literature or other studies if unknown. 
 
 Validation of this model-based temperature indicator could be achieved with an expanded Citizen Science program; establishment of a formal Study Fleet such as that in the Northeast US [@jones_learning_2022] will be outlined if the indicator shows promise.  
 
 ## Multispecies MSE Potential
 
-[*to be done*]
-Outline analysis using FW model (identify level of disaggrgation needed), Rpath MSE capabilities, identify needs and next steps
+There is considerable scientific literature on potential multispecies reference points and harvest control rules [@collie_biological_2001; @appeldoorn_transforming_2008; @fogarty_art_2014; @thorpe_what_2019; @fulton_shifting_2022; @karp_quota_2024]. Some of these approaches may be useful in the South Atlantic context, where large numbers of species are included in FMPs and fisheries catch diverse species. However, testing these approaches using traditional single species models designed for stock assessment is inherently difficult, if not impossible. The SAFMC's ecosystem model may be suited to evaluating the performance of multispecies reference points and harvest strategies. While the SAFMC model is implemented in Ecopath with Ecosim, which is designed for implementing general fishing scenarios rather than testing dynamic harvest control rules, the model can be transferred into Rpath [@lucey_conducting_2020], which has the capability to test harvest control rules [@lucey_evaluating_2021]. 
 
+The current South Atlantic EwE model is a model of intermediate complexity focused on reef fish and parameterized using the Southeast reef fish trap and camera survey. The level of aggregation in the current model may or may not permit the type of multispecies reference point testing that would be most useful. The first step in the analysis will be to determine which species and species complexes are needed for testing multispecies management. Information from the full South Atlantic model may be needed to achive the appropriate level of species complexity for analysis. 
+
+Once appropriately aggregated and implemented in Rpath, a set of multispecies harvest control rules can be developed with SAFMC input and tested. Performance metrics for each rule can be compared. For example, the following plot was created by Sean Lucey and collaborators as part of a [short course on MSE](https://github.com/thefaylab/cinar-mse-projects/blob/main/multispecies/RpathOM.md) (Fig. \@ref(fig:GBMSEex)). The plot shows outcomes of different harvest strategies for several species from the Georges Bank Rpath model using Rpath's MSE capabilities.
+
+```{r GBMSEex, fig.cap="Example results from an Rpath MSE comparing outcomes of ecosystem and single species models for different contol rules; from Lucey et al 2021"}
+
+url <- "https://github.com/thefaylab/cinar-mse-projects/raw/main/multispecies/Summary_output_files/figure-gfm/unnamed-chunk-7-1.png"
+knitr::include_graphics(url)
+
+```
 
 # Results
 
@@ -1300,9 +1311,11 @@ This was a proof of concept, demonstrating that information is available for the
 
 ## Multispecies MSE Potential
 
-[*to be done*]
+[*to be done: map out a process for developing a multispecies MSE with the SAFMC food web model*]
 
 # Discussion
+
+[*the full discussion section is still being written and will be updated from the SSC report and after the HEAP meeting, a preliminary outline is included*]
 
 ## Potential pathways
 
@@ -1314,9 +1327,36 @@ Based on these analyses, the SAFMC has many options for integrating more ecosyst
 1. Information is available to develop spatially and seasonally resolved habitat indicators for the South Atlantic region from global ocean model data products. These indicators can be ground-truthed using both existing scientific surveys and by further developing existing Citizen Science priority research areas. 
 1. SAFMC's multispecies complexes combined with its long term investment in food web modeling create an opportunity to evaluate multispecies management and reference points while accounting for species interactions. Management strategy evaluation could include climate scenarios as well as food web interactions to test the robustness of any multispecies management measures.  
 
-First, it is notable that 18% of decisions (motions) over the past 3 years already involve ecosystem issues or information. This is because SAFMC has a long history of integrating habitat and ecosystem issues in management, as noted in the introduction. The currently active SAFMC Habitat and Ecosystem Committee and Habitat and Ecosystem Advisory Panel already develop policy and planning for cross-sectoral ecosystem issues (Ecosystem Based Management) as well as fishery-ecosystem issues such as balancing fishery access with habitat protection (Ecosystem Based Fisheries Management). Policies already developed by the HEAP and Habitat and Ecosystem Committee align well with many existing ecosystem indicators and could be addressed further with the existing SAFMC ecosystem model.       
+First, it is notable that 18% of decisions (motions) over the past 3 years already involve ecosystem issues or information. This is because SAFMC has a long history of integrating habitat and ecosystem issues in management, as noted in the introduction. The currently active SAFMC Habitat and Ecosystem Committee and Habitat and Ecosystem Advisory Panel already develop policy and planning for cross-sectoral ecosystem issues (Ecosystem Based Management) as well as fishery-ecosystem issues such as balancing fishery access with habitat protection (Ecosystem Based Fisheries Management). Policies already developed by the HEAP and Habitat and Ecosystem Committee align well with many existing ecosystem indicators and could be addressed further with the existing SAFMC ecosystem model. Gaps were identified as well as the feasibility of filling them with current resources.    
 
-The analysis of SAFMC motions for the past 3 years identified another 25% of motions where ecosystem information could be requested or used to inform management. 
+The analysis of SAFMC motions for the past 3 years identified another 25% of motions where ecosystem information could be requested or used to inform management. Some of these actions could be very simple in the form of a Council request, for example to include an ecosystem Term of Reference in priority stock assessments. An example ToR included in some Northeast US assessments reads: 
+
+>Identify relevant ecosystem and climate influences on the stock. Characterize the uncertainty in the
+relevant sources of data and their link to stock dynamics. Consider findings, as appropriate, in addressing
+other TORs. Report how the findings were considered under impacted TORs
+
+Other relatively simple actions could include gathering ecosystem observations during stakeholder meetings about particular fisheries. Sample questions that could be asked during meetings could be modified from those asked for [Fishery Performance Reports](https://safmc.net/documents/fc1_a3b_fproverview-pdf/):
+
+>Environmental, Ecological, and Habitat:
+• Do you perceive that the abundance of [species] has changed over the past ten years?
+If so, how has it changed?
+• When/where are the fish available, and has this changed? For instance, has there been any
+shift in catch (annually/seasonally) inshore/offshore or north/south? If so, please describe.
+• Has the size of the fish that you typically encounter changed? If so, could you briefly
+describe the trend?
+• Have you noticed any unique effects of environmental conditions on [species]? If so,
+please describe.
+• What are your observations on the timing and length of the [species] spawning
+season in your area (time periods when fish are observed with large ovaries or eggs
+spilling out externally or while venting)?
+• What do you see now in terms of recruitment? Where are the small fish? Are large and
+small fish found in the same locations?
+• Have you observed changes in catch depth or apparent bottom type fished on?
+• How have sea conditions (monthly/seasonally) affected fishable days?
+• Have you noticed any change in the species caught with [species] over the years or
+seasonally? 
+
+More involved processes, data, and resources would be needed to assess the potential impact of ecosystem change on management measures such as spawning closures in space and time. 
 
 The SAFMC ABC setting process (used in 3 FMPs) already has a framework where existing ecosystem information can be used to support risk rankings.
 
@@ -1327,16 +1367,26 @@ To address uncertainty in future conditions, MSE could be more broadly conducted
 
 ## Balancing resources
 
-Existing ecosystem data products for the South Atlantic should be consulted before initiating new indicator or product development. The ESR and CVA contain a wealth of useful information that aligns well with existing SAFMC policy. Priority indicators can be 
+Existing ecosystem data products for the South Atlantic should be consulted before initiating new indicator or product development. The ESR and CVA contain a wealth of useful information that aligns well with existing SAFMC policy. A small set of priority indicators can be identified collaboratively with the Council for regular updating, maintenance, and presentation, while other indicators could be tailored to specific assessments or decisions as need and resources allow.
 
 ESPs are extremely useful to inform risk assessments and even to bring ecosystem information directly into stock assessments, but they are resource intensive. A facilitated structured discussion among ecosystem and assessment experts, as used in the Pacific region, may provide a more feasible path forward to outline the highest priority ecosystem drivers, risks, and potential indicators for individual stocks. 
 
-MSEs are likewise useful and resource intensive. 
+MSEs are likewise useful and resource intensive. SAFMC already has experience with multiple MSEs and that experience should inform the design of a multispecies management MSE.
 
 
 ## Potential next steps 
 
-A key decision is which of these options to consider and how to develop actionable management using ecosystem information. A structured decision process such as those outlined in the Pacific (Ecosystem initiatives), North Pacific (Action modules), Mid-Atlantic (EAFM decision process), and Gulf (Fishery Ecosystem Initiatives) Council FEPs could help manage these options and ensure the SAFMC proceeds in a manner best suited to regional needs. Therefore, the first step may be to outline this type of actionable process for the SAFMC. 
+A key decision is which of these options to consider and how to develop actionable management using ecosystem information. A structured decision process such as those outlined in the Pacific (Ecosystem initiatives), North Pacific (Action modules), Mid-Atlantic (EAFM decision process), Gulf (Fishery Ecosystem Initiatives), and Caribbean Council FEPs (Fig. \@ref(fig:levinFEP); [@levin_building_2018]) could help manage these options and ensure the SAFMC proceeds in a manner best suited to regional needs. Therefore, the first step is likely to outline this type of actionable process for the SAFMC. 
+
+```{r levinFEP, fig.cap="The FEP loop is an interpretation of adaptive management as applied to Fishery Ecosystem Planning. Reprinted from Levin et al. 2018, Fig. 1"}
+
+url <- "https://ars.els-cdn.com/content/image/1-s2.0-S0308597X17306954-gr1_lrg.jpg"
+knitr::include_graphics(url)
+
+```
+
+
+Once this process is established and adjusted for SAFMC needs, the menu of options outlined here could be considered in a systematic and organized manner.
 
 
 
