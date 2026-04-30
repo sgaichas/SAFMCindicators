@@ -8,15 +8,15 @@ output:
     df_print: paged
     toc: true
     toc_float: true
+  pdf_document:
+    toc: false
+  word_document: default
   bookdown::pdf_document2:
     includes:
       in_header: latex/header1.tex
     keep_tex: true
     toc: false
     number_sections: false
-  pdf_document:
-    toc: false
-  word_document: default
   html_document:
     df_print: paged
     toc: true
