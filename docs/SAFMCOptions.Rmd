@@ -241,7 +241,9 @@ Once appropriately aggregated and implemented in Rpath, a set of multispecies ha
 ```{r GBMSEex, fig.cap="Example results from an Rpath MSE comparing outcomes of ecosystem and single species models for different contol rules; from Lucey et al 2021"}
 
 url <- "https://github.com/thefaylab/cinar-mse-projects/raw/main/multispecies/Summary_output_files/figure-gfm/unnamed-chunk-7-1.png"
-knitr::include_graphics(url)
+#knitr::include_graphics(url)
+
+magick::image_read(url)
 
 ```
 
@@ -454,7 +456,8 @@ In addition, a climate  CVA for 71 fish and invertebrate species [@burton_climat
 ```{r SACVA, fig.cap="South Atlantic Fish and Invertebrate Climate Vulnerability from Craig et al. 2025", out.width='80%'}
 
 url <- "https://journals.plos.org/climate/article/figure/image?size=large&download=&id=10.1371/journal.pclm.0000543.g002"
-knitr::include_graphics(url)
+#knitr::include_graphics(url)
+magick::image_read(url)
 ```
 <!--
 ![South Atlantic Fish and Invertebrate Climate Vulnerability](https://journals.plos.org/climate/article/figure/image?size=large&download=&id=10.1371/journal.pclm.0000543.g002)
@@ -873,7 +876,8 @@ Many snapper species are in the positive impacts bin, suggesting that introducin
 ```{r SACVAdir, fig.cap="South Atlantic Fish and Invertebrate Climate Impact Directional Effects from Craig et al. 2025", out.width='80%'}
 
 url <- "https://journals.plos.org/climate/article/figure/image?size=large&download=&id=10.1371/journal.pclm.0000543.g006"
-knitr::include_graphics(url)
+#knitr::include_graphics(url)
+magick::image_read(url)
 ```
 
 <!--
@@ -907,7 +911,8 @@ Ecosystem and Socio-economic Profiles (ESPs), an ecosystem status report tailore
 ```{r herrconsmod, fig.cap="Atlantic herring conceptual model, from Molina et al. 2025"}
 
 url <- "https://github.com/NOAA-EDAB/presentations/raw/master/docs/EDAB_images/AherringConceptualMod.png"
-knitr::include_graphics(url)
+#knitr::include_graphics(url)
+magick::image_read(url)
 ```
 
 A preliminary list of ecosystem factors to be considered has been developed for US Pacific fisheries and could be modified for the South Atlantic (quoted from Appendix A of the [California Current IEA (CCIEA) Team Report on Fisheries Ecosystem Initiative 4](https://www.pcouncil.org/documents/2024/08/h-1-a-cciea-team-report-1-cciea-risk-table-report-on-fep-initiative-4.pdf/)):
@@ -1381,7 +1386,8 @@ A key decision is which of these options to consider and how to develop actionab
 ```{r levinFEP, fig.cap="The FEP loop is an interpretation of adaptive management as applied to Fishery Ecosystem Planning. Reprinted from Levin et al. 2018, Fig. 1"}
 
 url <- "https://ars.els-cdn.com/content/image/1-s2.0-S0308597X17306954-gr1_lrg.jpg"
-knitr::include_graphics(url)
+#knitr::include_graphics(url)
+magick::image_read(url)
 
 ```
 
