@@ -1170,9 +1170,21 @@ The process leading up to this approach included a history of multispecies model
 
 ASMFC has in-house stock assessment resources, and has established a dedicated workgroup to continue the ERP process [@anstead_path_2021]. The ERP modeling takes advantage of existing single species stock assessment review to streamline evaluation of model inputs, which requires coordination among assessments.  
 
+#### International Council for the Exploration of the Seas (ICES)
+
+The International Council for the Exploration of the Seas (ICES) is an intergovernmental organization of 19 member countries that coordinates, advances, and shares marine science in support of sustainable management and conservation. ICES provides [scientific advice](https://ices-taf.shinyapps.io/advicexplorer/) on catch for over 400 fish stocks in [17 ecoregions](https://www.ices.dk/advice/ICES%20ecoregions%20and%20advisory%20areas/Pages/ICES-ecosystems-and-advisory-areas.aspx) of the northeast Atlantic Ocean. This advice draws on the collaborative work of scientists from institutions throughout Europe and North America.
+
+ICES has developed methods for including environmental indicators in catch advice for the Irish Sea [@ices_report_2019; @bentley_refining_2021; @howell_combining_2021]. The method combines standard single species assessments with an ecosystem model integrating stock specific indicators. The stock assessments provide a range of potential allowable catches under Europe's standard fishery management approach, and the ecosystem model provides information on whether the stock is experiencing favorable or unfavorable ecosystem conditions. The ecosystem model's conditions are used to identify where in the acceptable range catch should be set: the lower part of the acceptable range is advised under unfavorable conditions, while the upper part of the range is advised during favorable conditions [@bentley_refining_2021]. The resulting fishing mortality is called $F_{eco}$. This approach makes practical use of available ecosystem information for the stock, while remaining within the typical assessment and management decision process [@howell_combining_2021]. An example for Irish Sea cod uses a temperature indicator to scale assessment based fishing mortaltity to $F_{eco}$ (Fig.\@ref(fig:ICESFeco), [@ices_cod_2025]).
+
+```{r ICESFeco, fig.cap="Reprinted from ICES 2025. Cod in Division 7.a. Derivation of Feco. Left: time-series of inverted sea-surface temperature (SST; three-year lag) rescaled between zero and one, which informs the status of the indicator (Is) in 2024 and 2025 compared with previous years. Right: the status of the indicator determines the placement of the Feco reference point within FMSY ranges.", out.width="50%"}
+knitr::include_graphics(here::here("docs/images/codFeco2025.png"))
+```
+
+ICES produces both stock level catch advice and information at the ecoregion level on fisheries [@ices_celtic_2025] and ecosystem level drivers and pressures [@ices_celtic_2022]. The $F_{eco}$ approach draws on the full range of ICES science products as well as existing ecosystem models for the Irish Sea [@bentley_retrospective_2020]. Importantly, the Irish Sea food web model was improved using diet and historical catch information from experienced regional fishers [@bentley_combining_2019; @bentley_fishers_2019]. 
+
 #### National Marine Sanctuaries
 
-Literature review found that there are ESR like products used for assessment and strategic planning in the National Marine Sanctuaries, as well as CVAs for several Sanctuaries. These could be summarized if of interest, although the management objectives are much more different from those of Fishery Management Councils. For brevity, we leave these out for now.
+Literature review found that there are ESR like products used for assessment and strategic planning in the National Marine Sanctuaries, as well as CVAs for several Sanctuaries. These could be summarized in the future if of interest, although the management objectives are much more different from those of Fishery Management Councils. The above examples were considered most relevant for the SAFMC.
 
 # Discussion
 
