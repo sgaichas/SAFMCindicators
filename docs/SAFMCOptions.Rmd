@@ -111,13 +111,13 @@ The South Atlantic's combination of habitat focus, existing ecosystem tools, and
 
 *  Explore Novel Approaches: Evaluate multispecies management strategies using the existing food web model, considering both commercial yield and recreational fishing opportunity objectives
 
-In this report, multiple approaches are used to outline practical next steps for SAFMC's use of ecosystem information. First, over three years of Council actions were systematically to identify current and potential pathways for the use of ecosystem information. Based on this review, management decisions were classified by data needs and process timelines to develop a prioritized list of processes linked to ecosystem information and recommend practical pathways for implementation, some of which could be supported by current or new citizen science programs. Given the Council emphasis on habitat issues, a second approach reviewed habitat FMPs and other policy documents along with current ecosystem data products to evaluate "quick wins" aligning objectives and current indicators, and identifying where data from citizen science programs might augment existing indicator data products. In the third approach, the current Council catch specification process, including SSC ABC decisions, was evaluated to determine whether products such as Ecosystem Socioeconomic Profiles would be useful and practical for SAFMC catch specification processes given data and staff resources, whether Climate Vulnerability Analysis might be useful for assessing uncertainty and risk SSC ABC determination, and what other approaches to integrating ecosystem information into catch specification would be feasible. A fourth approach evaluated the feasibility of developing ocean indicators from global and regional ocean physics datasets for SAFMC habitat or other decisions, using methods developed for the Northeast U.S. shelf. Potential citizen science programs for validating ocean model based indicators were identified based on existing programs in other regions.  A fifth approach outlined potential use of the Council's food web model for evaluating multispecies management strategies or harvest control rules, with decision points for Council consideration. 
+In this report, multiple approaches are used to outline practical next steps for SAFMC's use of ecosystem information. First, over three years of Council actions were systematically reviewed to identify current and potential pathways for the use of ecosystem information. Based on this review, management decisions were classified by data needs and process timelines to develop a prioritized list of processes linked to ecosystem information and recommend practical pathways for implementation, some of which could be supported by current or new citizen science programs. Given the Council emphasis on habitat issues, a second approach reviewed habitat FMPs and other policy documents along with current ecosystem data products to evaluate "quick wins" aligning objectives and current indicators, and identifying where data from citizen science programs might augment existing indicator data products. In the third approach, the current Council catch specification process, including SSC ABC decisions, was evaluated to determine whether products such as Ecosystem Socioeconomic Profiles would be useful and practical for SAFMC catch specification processes given data and staff resources, whether Climate Vulnerability Analysis might be useful for assessing uncertainty and risk SSC ABC determination, and what other approaches to integrating ecosystem information into catch specification would be feasible. A fourth approach evaluated the feasibility of developing ocean indicators from global and regional ocean physics datasets for SAFMC habitat or other decisions, using methods developed for the Northeast U.S. shelf. Potential citizen science programs for validating ocean model based indicators were identified based on existing programs in other regions.  A fifth approach outlined potential use of the Council's food web model for evaluating multispecies management strategies or harvest control rules, with decision points for Council consideration. 
 
 # Methods
 
 ## 3+ Year Action Review
 
-Council Actions from March 2023-March 2026 meetings were reviewed based on posted Committee Reports and Motion Summaries for each meeting. In addition, posted annual Council workplans and a current workplan provided by John Hadley were reviewed. Counts of actions by FMP were tallied and action types were classified into routine, tactical, occasional, and /or strategic decision types. In general, motions establishing catch limits and measures for stocks were considered tactical and routine, while motions considering planning or policy were considered strategic and occasional. The latter included setting research priorities, workplans, and terms of reference for assessments. Establishing long term open or closed areas was considered tactical but occasional. Approving Habitat and Ecosystem Advisory Panel agendas was considered strategic and routine. The purpose of this was not to track changes in timelines for particular actions (which clearly happens) but to identify current and potential entry points for ecosystem information.
+Council Actions from March 2023-March 2026 meetings were reviewed based on posted Committee Reports and Motion Summaries for each meeting, with particular attention to directions to staff for agenda items. In addition, posted annual Council workplans and a current workplan provided by John Hadley were reviewed. Counts of actions by FMP were tallied and action types were classified into routine, tactical, occasional, and /or strategic decision types. In general, motions establishing catch limits and measures for stocks were considered tactical and routine, while motions considering planning or policy were considered strategic and occasional. The latter included setting research priorities, workplans, and terms of reference for assessments. Establishing long term open or closed areas was considered tactical but occasional. Approving Habitat and Ecosystem Advisory Panel agendas was considered strategic and routine. The purpose of this was not to track changes in timelines for particular actions (which clearly happens) but to identify current and potential entry points for ecosystem information.
 
 Each summary motions document (and committee report, if relevant) starting in March 2023 and ending in March 2026 was examined and the number of motions by committee tallied, along with comments on the action type and inclusion or potential for inclusion of ecosystem information. Ecosystem information was considered to be included when explicitly mentioned in the motion or in the background material in the summary. Ecosystem information was considered to have the potential to be included in decisions regarding stock assessment and MSE terms of reference, assessment prioritization, evaluation of spawning closed areas or seasons, and allocation reviews. Full Council Closed Session motions related to committee or working group nominations were excluded from analysis. This information was entered into a table (see Appendix Table).
 
@@ -131,7 +131,7 @@ EFH policy documents and current ESR indicators [@craig_ecosystem_2021] were rev
     +  Includes food web model for the South Atlantic region  
 * [Climate Variability and Fisheries](https://safmc.net/wp-content/uploads/document-blocks/2026/01/6bc7f4cd-7c4e-45d3-9c29-fddd42ea8f98-policy-considerations-for-south-atlantic-climate-variability-and-fisheries-and-essential-fish-habitats_march2018.pdf) – March 2018
     +  Connects changing ocean conditions with fish distribution shifts and changing timing, identifies research needs 
-    +  Notes these shifts present challenges for management and new fishery opportunities  
+    +  Notes these shifts present challenges for management and new fishery opportunities 
     +  Requests annual summaries of climate indicators tracking ecological, social and economic trends 
     +  Requests climate vulnerability analysis and management strategy evaluation focused on climate robustness
 * [Marine Submerged Aquatic Vegetation](https://safmc.net/wp-content/uploads/document-blocks/2025/02/6bddb63d-9deb-4fd4-af8c-407d8cd56f17-policy-for-protection-and-enhancement-of-estuarine-and-marine-submerged-aquatic-vegetation-sav-habitat.pdf) (SAV) Habitat Policy – June 2014    
@@ -157,9 +157,9 @@ For catch advice, the project evaluated whether products such as Ecosystem Socio
 
 The current SAFMC risk policy and ABC approach were updated for three FMPs [in 2023](https://safmc.net/documents/abccram_06052023_submittal-pdf/). This approach classifies risk of overfishing based on multiple attributes, as outlined below. 
 
-Risk tolerance (probability of overfishing, P*) is highest for stocks above B_MSY, intermediate for stocks at or below B_MSY but above the halfway point between B_MSY and MSST, and low for stocks below the midpoint (Fig. \@ref(fig:ABCSAFMC)). 
+Risk tolerance (probability of overfishing, p*) is highest for stocks above B_MSY, intermediate for stocks at or below B_MSY but above the halfway point between B_MSY and MSST, and low for stocks below the midpoint (Fig. \@ref(fig:ABCSAFMC)). 
 
-The magnitude of P* across these stock status categories changes depending on the overall risk of overfishing, which is determined by the Council after reviewing risk rankings from the AP and SSC.
+The magnitude of p* across these stock status categories changes depending on the overall risk of overfishing, which is determined by the Council after reviewing risk rankings from the AP and SSC.
 
 ```{r ABCSAFMC, fig.cap="SAFMC Risk Policy, 2023"}
 
@@ -187,7 +187,7 @@ print(p1, vp=grid::viewport(gp=grid::gpar(cex=1.5)))
 
 ```
 
-The Council can deviate, up or down, from default P* in the figure above by up to 10%.  
+The Council can deviate, up or down, from default p* in the figure above by up to 10%, not to exceed p* = 0.50.  
 
 Specific attributes that can inform risk of overfishing:
 
@@ -234,11 +234,11 @@ Validation of this model-based temperature indicator could be achieved with an e
 
 There is considerable scientific literature on potential multispecies reference points and harvest control rules [@collie_biological_2001; @appeldoorn_transforming_2008; @fogarty_art_2014; @thorpe_what_2019; @fulton_shifting_2022; @karp_quota_2024]. Some of these approaches may be useful in the South Atlantic context, where large numbers of species are included in FMPs and fisheries catch diverse species. However, testing these approaches using traditional single species models designed for stock assessment is inherently difficult, if not impossible. The SAFMC's ecosystem model may be suited to evaluating the performance of multispecies reference points and harvest strategies. While the SAFMC model is implemented in Ecopath with Ecosim, which is designed for implementing general fishing scenarios rather than testing dynamic harvest control rules, the model can be transferred into Rpath [@lucey_conducting_2020], which has the capability to test harvest control rules [@lucey_evaluating_2021]. 
 
-The current South Atlantic EwE model is a model of intermediate complexity focused on reef fish and parameterized using the Southeast reef fish trap and camera survey. The level of aggregation in the current model may or may not permit the type of multispecies reference point testing that would be most useful. The first step in the analysis will be to determine which species and species complexes are needed for testing multispecies management. Information from the full South Atlantic model may be needed to achive the appropriate level of species complexity for analysis. 
+The current South Atlantic EwE model is a model of intermediate complexity focused on reef fish and parameterized using the Southeast reef fish trap and camera survey. The level of aggregation in the current model may or may not permit the type of multispecies reference point testing that would be most useful. The first step in the analysis will be to determine which species and species complexes are needed for testing multispecies management. Information from the full South Atlantic model may be needed to achieve the appropriate level of species complexity for analysis. 
 
 Once appropriately aggregated and implemented in Rpath, a set of multispecies harvest control rules can be developed with SAFMC input and tested. Performance metrics for each rule can be compared. For example, the following plot was created by Sean Lucey and collaborators as part of a [short course on MSE](https://github.com/thefaylab/cinar-mse-projects/blob/main/multispecies/RpathOM.md) (Fig. \@ref(fig:GBMSEex)). The plot shows outcomes of different harvest strategies for several species from the Georges Bank Rpath model using Rpath's MSE capabilities.
 
-```{r GBMSEex, fig.cap="Example results from an Rpath MSE comparing outcomes of ecosystem and single species models for different contol rules; from Lucey et al 2021"}
+```{r GBMSEex, fig.cap="Example results from an Rpath MSE comparing outcomes of ecosystem and single species models for different control rules; from Lucey et al. 2021"}
 
 url <- "https://github.com/thefaylab/cinar-mse-projects/raw/main/multispecies/Summary_output_files/figure-gfm/unnamed-chunk-7-1.png"
 #knitr::include_graphics(url)
@@ -261,6 +261,16 @@ magick::image_read(url)
 
 # once file has been downloaded use this
 motions <- read.csv("MotionsReview.csv",header=T)
+
+ctenames <- data.frame(Committee = c("SEDAR", "SG", "CMP", "HABEBM", "DW", "Council", "SG/CMP/DH", "CS", "HAB-S"),
+                       FullName = c("SEDAR", "Snapper Grouper", "Mackerel Cobia", "Habitat and Ecosystem", "Dolphin Wahoo", "Council", "Snapper Grouper + Mackerel Cobia + Dolphin Wahoo", "Citizen Science", "Habitat and Ecosystem + Shrimp"))
+
+# spell out committee names
+motions <- motions |>
+  dplyr::left_join(ctenames) |>
+  dplyr::rename(CommitteeAbr = Committee,
+                Committee = FullName)
+  
 
 byFMP <- motions |>
   dplyr::group_by(Committee) |>
@@ -324,69 +334,73 @@ byTimingCatEco <- motions |>
 
 In the period from March 2023 to March 2026, there were a total of `r dim(motions)[1]` motions that did not involve closed session nominations. The Snapper Grouper Committee was responsible for more than half of Council Motions:
 
-```{r byFMP}
+```{r byFMP, ft.arraystretch = 1}
 flextable::flextable(byFMP) |>
   flextable::colformat_double(
     j = c("perc"), # Specify the columns to format
     digits = 0                  # Specify the number of decimal places
   ) |>
   flextable::set_header_labels(perc = "%") |>
-  flextable::set_caption("Number and percent (%) of motions by committee, March 2023 - March 2026")
+  flextable::set_caption("Number and percent (%) of motions by committee, March 2023 - March 2026") |>
+  flextable::width(width = c(4,1,1))
 ```
 
 While categorizing motions as tactical or strategic, routine or occasional required some judgement, the breakdown was as expected. Decisions are roughly evenly split between tactical/routine and strategic/occasional, with most staff tasking motions classified as both, and a small number of other combinations.
 
-```{r}
+```{r, ft.arraystretch = 1}
 flextable::flextable(byCatTiming) |>
   flextable::colformat_double(
     j = c("perc"), # Specify the columns to format
     digits = 0                  # Specify the number of decimal places
   ) |>
   flextable::set_header_labels(perc = "%") |>
-   flextable::set_caption("Number and percent (%) of motions by category, March 2023 - March 2026")
-
+   flextable::set_caption("Number and percent (%) of motions by category, March 2023 - March 2026") |>
+  flextable::width(width = c(1.5, 1.5,1,1))
+  
 ```
 
 More than half of motions had no obvious ecosystem pathway, but 18% addressed or included ecosystem issues, and 26% more had the potential for ecosystem linkages.
 
-```{r byEco}
+```{r byEco, ft.arraystretch = 1}
  flextable::flextable(byEco) |>
   flextable::colformat_double(
     j = c("perc"), # Specify the columns to format
     digits = 0                  # Specify the number of decimal places
   ) |>
   flextable::set_header_labels(perc = "%") |>
-   flextable::set_caption("Number and percent (%) of motions with ecosystem linkages, March 2023 - March 2026")
+   flextable::set_caption("Number and percent (%) of motions with ecosystem linkages, March 2023 - March 2026")|>
+  flextable::width(width = c(1.5,1,1))
 ```
 
 Ecosystem linkages are more commonly associated with strategic and occasional decisions. However there is potential to use ecosystem information to support routine tactical decisions as well. 
 
-```{r}
+```{r, ft.arraystretch = 1}
 flextable::flextable(byTimingCatEco) |>
-   flextable::set_caption("Number of motions with ecosystem linkages by decision type, March 2023 - March 2026")
+   flextable::set_caption("Number of motions with ecosystem linkages by decision type, March 2023 - March 2026") |>
+  flextable::width(width = c(1.5, 1.5, 1,1,1))
 ```
 
 Motions with direct ecosystem linkages included:
 
-```{r}
+```{r, ft.arraystretch = 1}
 motionsEcoLink <- motions |>
   dplyr::filter(Ecosystem == "yes") |>
   dplyr::select(Committee, Topic, Species, How)
 
 flextable::flextable(motionsEcoLink) |>
-  flextable::width(width = c(1,1,1,3)) |>
+  flextable::width(width = c(3,1,1,3)) |>
   flextable::set_caption("Motions with direct ecosystem linkages, March 2023 - March 2026")
 ```
 
 Motions with potential ecosystem linkages included:
 
-```{r}
+```{r, ft.arraystretch = 1}
 motionsMaybeEcoLink <- motions |>
   dplyr::filter(Ecosystem == "maybe") |>
   dplyr::select(Committee, Topic, Species, How)
 
 flextable::flextable(motionsMaybeEcoLink) |>
-  flextable::width(width = c(1,1,1,3)) |>
+  flextable::width(width = c(3,1,1,3)) |>
   flextable::set_caption("Motions with potential ecosystem linkages, March 2023 - March 2026")
 ```
 
@@ -397,7 +411,7 @@ flextable::flextable(motionsMaybeEcoLink) |>
 
 ### Indicator Sources
 
-Considerable work has been completed in the Southeast US region that forms an excellent starting point to evaluate how SAFMC policies align with available ecosysten indicators. The South Atlantic has an ESR [@craig_ecosystem_2021] including indicators spanning climate drivers, physical and chemical pressures, habitat states, lower and upper trophic level status, ecosystem services, and human dimensions (Table \@ref(tab:SAInds)). 
+Considerable work has been completed in the Southeast US region that forms an excellent starting point to evaluate how SAFMC policies align with available ecosystem indicators. The South Atlantic has an ESR [@craig_ecosystem_2021] including indicators spanning climate drivers, physical and chemical pressures, habitat states, lower and upper trophic level status, ecosystem services, and human dimensions (Table \@ref(tab:SAInds)). 
 
 ```{r SAInds, ft.arraystretch = 1}
 compesrdat <- readr::read_csv(here::here("compesrdat.csv"))
@@ -451,7 +465,7 @@ flextable::flextable((esrsdetls[[ESRname]]))|>
 
 ```
 
-In addition, a climate  CVA for 71 fish and invertebrate species [@burton_climate_2023; @craig_climate_2025] is complete (Fig. \@ref(fig:SACVA)), as well as analysis for South Atlantic and Gulf fishing communities [@seara_community_2022]. Marine mammal (108 stocks) and highly migratory fish (58 stocks) climate vulnerability has also been assessed for the entire Atlantic Coast [@lettrich_vulnerability_2023; @loughran_climate_2025]. These documents contain indicators that represent a starting point towards meeting the needs identified in the EFH policy documents. In addition, the fish CVA might inform the climate portion of the P* process used to set ABC for stocks in the Dolphin-Wahoo, Golden Crab, and Snapper-Grouper FMPs (see section below).
+In addition, a climate  CVA for 71 fish and invertebrate species [@burton_climate_2023; @craig_climate_2025] is complete (Fig. \@ref(fig:SACVA)), as well as analysis for South Atlantic and Gulf fishing communities [@seara_community_2022]. Marine mammal (108 stocks) and highly migratory fish (58 stocks) climate vulnerability has also been assessed for the entire Atlantic Coast [@lettrich_vulnerability_2023; @loughran_climate_2025]. These documents contain indicators that represent a starting point towards meeting the needs identified in the EFH policy documents. In addition, the fish CVA might inform the climate portion of the p* process used to set ABC for stocks in the Dolphin-Wahoo, Golden Crab, and Snapper-Grouper FMPs (see section below).
 
 ```{r SACVA, fig.cap="South Atlantic Fish and Invertebrate Climate Vulnerability from Craig et al. 2025", out.width='80%'}
 
@@ -603,7 +617,7 @@ flextable::flextable(FWResearchCrosswalk) |>
 ```
 
 
-Reference material:
+Addiitonal reference material:
 
 *  [Published lionfish studies](https://coastalscience.noaa.gov/news/lionfish-prefer-to-eat-local/)
 
@@ -902,9 +916,9 @@ Source: [Craig et al. 2025 Supplemental Information](https://journals.plos.org/c
 
 If this species were assessed and required scoring, it could get a high risk score simply from the negative directional impact from the CVA. However, indicators of temperature and ocean acidification could also be evaluated during spawning seasons and in key habitats to further determine whether the high climate vulnerability and negative direction is likely to be realized in the near future. Spatial bottom temperature indicators, such as the one developed in the next section, can contribute information on conditions in specific areas of the South Atlantic inhabited by species of interest. If multiple indicators are used, correlations among the indicators could be evaluated to ensure that each indicator is giving distinct information. Regional ocean model projections could also be used to develop projected indicators appropriate to a species based on CVA results if adequate resources are available. 
 
-### Appropaches for identifying and evaluating other environmental variables 
+### Approaches for identifying and evaluating other environmental variables 
 
-The SSC noted that evaluating the risk from other environmental variables has been difficult. The criterion is phrased broadly in order to capture a wide variety of potential stock impacts: "Are other environmental variables causing negative effects on this stock, e.g. in the form of regime shifts, recruitment failure, etc.?" The implication is that these variables should be something other than the food web effects or climate impacts evaluated in the previous two risk attributes. There was a general consensus that stock specific information and indicators would be useful here, rather than general ecosystem level indicators of the type provided in the ESR. A direct linkage between environmental driver and stock response would be ideal, although observations of changes in population dynamics such as an unexpected series of low recruitments (that are not already accounted for in stock projecions) or a clear environmental regime shift could be used to indicate high risk. 
+The SSC noted that evaluating the risk from other environmental variables has been difficult. The criterion is phrased broadly in order to capture a wide variety of potential stock impacts: "Are other environmental variables causing negative effects on this stock, e.g. in the form of regime shifts, recruitment failure, etc.?" The implication is that these variables should be something other than the food web effects or climate impacts evaluated in the previous two risk attributes. There was a general consensus that stock specific information and indicators would be useful here, rather than general ecosystem level indicators of the type provided in the ESR. A direct linkage between environmental driver and stock response would be ideal, although observations of changes in population dynamics such as an unexpected series of low recruitments (that are not already accounted for in stock projections) or a clear environmental regime shift could be used to indicate high risk. 
 
 Ecosystem and Socio-economic Profiles (ESPs), an ecosystem status report tailored to an individual stock, were invented in the North Pacific region [@shotwell_introducing_2023] and have since been applied in multiple other regions. These reports start with a conceptual model of the species life history that identifies key transitions between life stages and habitats as well as environmental tolerances and any known mechanistic linkages to environmental drivers at each stage (e.g, Fig. \@ref(fig:herrconsmod) from @molina_atlantic_2025). The conceptual model, developed from literature review and expert knowledge (which can include scientists and fishers), forms the basis for both qualitative risk statements and quantitative indicator development tailored to the priority stock.
 
