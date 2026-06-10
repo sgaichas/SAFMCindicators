@@ -990,7 +990,9 @@ Source: [CCIEA Risk Table Report](https://www.pcouncil.org/documents/2024/08/h-1
 
 ## Prototype Indicator Development
 
-An indicator of seasonal bottom temperature in space was successfully developed for the South Atlantic region. The workflow is outlined here and all code will be provided so that this can be reproducds for other available information (salinity, currents, etc). The steps are first to pull the GLORYS data product of choice for the South Atlantic region from the Copernicus website, then to process the pulled data into indicatort datasets, and finally to plot the indicators. This section outlines the process in sufficient detail that anyone should be able to set up the process and run the code to create the indicators and plots.
+An indicator of seasonal bottom temperature in space was successfully developed for the South Atlantic region. This indicator can be used to compare seasonal spatial changes in temperature across years, and the same information can be expressed relative to a thermal tolerance threshold. For example, the number of days above a certain temperature for a given year can be visualized in space to determine whether certain areas have become too warm for the species in the area, and how long these conditions lasted.  
+
+The workflow is outlined here and all code will be provided so that this can be reproduced for other available information (salinity, currents, etc). The steps are first to pull the GLORYS data product of choice for the South Atlantic region from the Copernicus website, then to process the pulled data into indicatort datasets, and finally to plot the indicators. This section outlines the process in sufficient detail that anyone should be able to set up the process and run the code to create the indicators and plots.
 
 ### Pull GLORYS bottom temperature
 
@@ -1014,7 +1016,9 @@ The code for downloading is courtesy Joseph Caracappa, NOAA NMFS NEFSC, and was 
 
 Pulling 6 years of data took a laptop and home internet connection about 8 hours. 
 
-This describes the South Atlantic file as pulled from Copernicus:
+All of the files pulled for the South Atlantic are found at https://github.com/sgaichas/SAFMCindicators/tree/main/GLORYS/SAtl in folders for each year 2020-2025. 
+
+This describes a South Atlantic file for December 31, 2025 as pulled from Copernicus:
 
 ```{r}
 tidync::tidync(here::here("GLORYS/SAtl/2025/GLORYS_REANALYSIS_2025-12-31.nc"))
@@ -1073,13 +1077,14 @@ dailybtplotSA(dec3125)
 
 ```
 
+
 ### Process GLORYS bottom temperature
 
 Joe Caracappa, NEFSC, wrote nearly all of the code used to produce these indicators for the Northeast US [State of the Ecosystem (SOE)](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf) reports. 
 
 R packages used in this workflow include `tidyverse` [@wickham_welcome_2019] for general data organization and visualization, `terra` [@hijmans_terra_2025] and `ncdf4` [@pierce_ncdf4_2025] for processing netCDF files downloaded from Copernicus, and `knitr` [@xie_knitr_2025; @xie_dynamic_2015 ; @stodden_knitr_2014], `rmarkdown` [@allaire_rmarkdown_2024; @xie_r_2018; @xie_r_2020], and `bookdown` [@xie_bookdown_2025; @xie_bookdown_2016] for producing reports in both .html and .pdf formats.
 
-Code for reading the file into time series or maps is found at the NEFSC GitHub at https://github.com/NEFSC/READ-EDAB-GLORYS/tree/main. This repo has a [fuller version of the pulling script](https://github.com/NEFSC/READ-EDAB-GLORYS/blob/main/data-raw/python/GLORYS_download_template_workflow.py) that adds variables like salinity or mixed layer depth and pulls them into variable specific folders. It could be modified simply by changing the min and max lat and lon as above.
+Code for reading the file into time series or maps is found at the NEFSC GitHub at https://github.com/NEFSC/READ-EDAB-GLORYS/tree/main. This repo has a [fuller version of the pulling script](https://github.com/NEFSC/READ-EDAB-GLORYS/blob/main/data-raw/python/GLORYS_download_template_workflow.py) that adds variables like salinity or mixed layer depth and pulls them into variable specific folders. It could be modified simply by changing the min and max latitude and longitude values as above.
 
 Here the focus is on the spatial indicator of days with bottom temperature over a certain threshold in a given year. This indicator is called [`thermal_habitat_gridded`](https://noaa-edab.github.io/catalog/thermal_habitat_gridded.html) in the SOE. 
 
@@ -1087,15 +1092,15 @@ The full set of SOE indicators using GLORYS bottom temperature are made by the s
 
 The script linked above also has functions to process the downloaded files into datasets for presentation as either time series or spatial datasets. It calls utility functions in this repository: https://github.com/NEFSC/READ_EDAB_Utilities/tree/main. The Utilities package should be installed so the functions can be used by other functions in READ-EDAB-GLORYS using code `devtools::install_github("https://github.com/NEFSC/READ_EDAB_Utilities")`This installed properly for this demonstrationa and all the utilities functions were available. A key required function is [`make_2d_deg_day_gridded`](https://github.com/NEFSC/READ_EDAB_Utilities/blob/main/R/make_2d_deg_day_gridded.R).  
 
-For this demonstration the EDAB-GLORYS functions:`devtools::install_github("https://github.com/NEFSC/READ-EDAB-GLORYS")` could not be installed due to a missing local file `EDAB.GLORYS/data/cold_pool/ROMS/roms_debiased_cold_pool_1959_1992.nc` This ROMS information is from a debiased Regional Ocean Modeling System (ROMS) model run for the Northeast US that provides bottom temerpature data from the 1950s to 1993, because the GLORYS dataset starts in 1993. This historical information is not available in the South Atlantic so indicator development must proceed without this dependency.  This can be solved by cloning the GitHub repository and building the package locally by commenting out lines 74-76 in [`make_cold_pool_extent_shp.R`](https://github.com/NEFSC/READ-EDAB-GLORYS/blob/main/R/make_cold_pool_extent_shp.R), a function not needed for the South Atlantic.
+For this demonstration the EDAB-GLORYS functions could not be installed using `devtools::install_github("https://github.com/NEFSC/READ-EDAB-GLORYS")`due to a missing local file `EDAB.GLORYS/data/cold_pool/ROMS/roms_debiased_cold_pool_1959_1992.nc` This ROMS information is from a debiased Regional Ocean Modeling System (ROMS) model run for the Northeast US that provides bottom temerpature data from the 1950s to 1993, because the GLORYS dataset starts in 1993. This historical information is not available in the South Atlantic so indicator development must proceed without this dependency.  This can be solved by cloning the GitHub repository and building the package locally by commenting out lines 74-76 in [`make_cold_pool_extent_shp.R`](https://github.com/NEFSC/READ-EDAB-GLORYS/blob/main/R/make_cold_pool_extent_shp.R), a function not needed for the South Atlantic.
 
 The other EDAB-GLORYS functions worked locally for this demonstration. The initial processing from `make_GLORYS_bt_soe.R` was used to make only the gridded temperature plots.
 
-Finally, functions to plot indicators are found in the `ecodata` [@beltz_ecodata_2025] package and in the NOAA-EDAB GitHub ecodata repository, such as `plot_thermal_habitat_gridded` : https://github.com/NOAA-EDAB/ecodata/blob/pre-production/R/plot_thermal_habitat_gridded.R 
+Finally, functions to plot indicators are found in the `ecodata` [@beltz_ecodata_2025] package and in the NOAA-EDAB GitHub ecodata repository, such as `plot_thermal_habitat_gridded`:  https://github.com/NOAA-EDAB/ecodata/blob/pre-production/R/plot_thermal_habitat_gridded.R 
 
-For this demonstration the `EDAB.GLORYS::make_bottom_temp_model_gridded` function code had to be changed to call `EDABUtilities::make_2d_summary_gridded` with an additional argument, `file.time = "daily"` to make it work with the files in their original downloaded format. Then running the code above worked for bottom temperature gridded. Alternatively, all files could be combined into one folder (not demonstrated here). A similar change was made in `EDAB.GLORYS::make_bottom_temp_model_annual` to change the call to `EDABUtilities::make_2d_summary_ts` to `file.time = "daily" instead of annual. This creates the plots as expected for seasonal gridded bottom temperature. 
+For this demonstration the `EDAB.GLORYS::make_bottom_temp_model_gridded` function code had to be changed to call `EDABUtilities::make_2d_summary_gridded` with an additional argument, `file.time = "daily"` to make it work with the files in their original downloaded format. Then running the code above worked for bottom temperature gridded. Alternatively, all daily files could be combined into one file for a year (not demonstrated here). A similar change was made in `EDAB.GLORYS::make_bottom_temp_model_annual` to change the call to `EDABUtilities::make_2d_summary_ts` to `file.time = "daily" instead of annual. This creates the plots as expected for seasonal gridded bottom temperature. 
 
-The dev branch `EDAB.GLORYS::make_thermal_habitat_area` function that brings the daily GLORYS files into one annual file was required for estimating the number of days at each temperature for each year. 
+The dev branch version of the `EDAB.GLORYS::make_thermal_habitat_area` function that combines the daily GLORYS files into one annual file was required for estimating the number of days at each temperature for each year. 
 
 Finally, the underlying geography assumed in the code needed to change. A shape file is requred to run the code for the South Atlantic. For this demonstration, SA_EEZ_off_states from https://www.fisheries.noaa.gov/resource/map/defined-fishery-management-areas-south-atlantic-states-map-gis-data was used. `EDAB-GLORYS` functions have the Northeast ecosystem production untis (EPUs) hardcoded in them, so those parts of the function were re-written. Ultimately,  the entire South Atlantic region was used in the shapefile by removing the parts of code that mapped to individual EPUs, but this code could be put back in if there are subsets of the South Atlantic defined in a shape file that need separate indicators.
 
@@ -1174,8 +1179,7 @@ csv <- here::here("GLORYS/SAtl-out/data/bottom_temp_model_gridded/GLORYS_bottom_
 plot_gridded_bt(bottom_temp_model_gridded_csv = csv, scale = "celsius")
 ```
 
-Now plotting all years pulled.
-
+The plots below show the seasonal and spatial bottom temperature indicator data for all years pulled.
 
 ```{r}
 csv <- here::here("GLORYS/SAtl-out/data/bottom_temp_model_gridded/GLORYS_bottom_temp_model_gridded_2024.csv")
@@ -1209,6 +1213,7 @@ plot_gridded_bt(bottom_temp_model_gridded_csv = csv, scale = "celsius")
 
 Finally, after troubleshooting the South Atlantic shapefile and abandoning subregions within it, the thermal habitat area and gridded indicators were successfully produced. Here is a visualization of the thermal habitat indicator for a single year looking at different temperature thresholds. The indicator is the number of days with bottom temperature **above** the temperature listed at the top of each plot for the year in the plot title. This can be an indicator of thermal stress for different species, depending on their temperature tolerance. Temperatures are in degrees C but can be converted to F if desired. 
 
+All of the South Atlantic indicator datasets are found at https://github.com/sgaichas/SAFMCindicators/tree/main/GLORYS/SAtl-out/data with a folder for each indicator.
 
 ```{r}
   file.names = list.files(here::here("GLORYS/SAtl-out/data/thermal_habitat_gridded"), full.names = T)
@@ -1269,7 +1274,7 @@ Finally, after troubleshooting the South Atlantic shapefile and abandoning subre
 ```
 
 
-And this compares the number of days exceeding 25 degrees C for all the years I pulled.
+This plot compares the number of days exceeding 25 degrees C for all the years pulled.
 
 
 ```{r}
@@ -1326,11 +1331,65 @@ p1  + p2 + p3
 p4 + p5 + p6
 ```
 
-The indicators include data for all temperatures from 0 to 30 degrees C in 1 degree increments. Another indicator showing the proportion of area for different depth ranges above the threshold was also produced and can be presented. Maps can be zoomed in to show more detailed areas as well.
+The indicators include data for all temperatures from 0 to 30 degrees C in 1 degree increments. Another indicator showing the proportion of area for different depth ranges above the threshold was also produced and can be presented. 
+
+Maps can be zoomed in to show more detailed areas as well. For example, the number of days with bottom temperature over 25 degrees C or 77 degrees F was greater in 2020 than in other years on the shelf near the Charleston Bump Complex.
+
+```{r}
+
+btthermalcompzoom <- function(filename = filename, daysabove = 0, depth = "AllDepths"){
+  
+  btthermalgrid <- read.csv(filename)
+  
+  fix <- btthermalgrid |>
+     dplyr::filter(Var == daysabove,
+                   Depth == depth)
+   
+   xmin = -80
+   xmax = -75
+   ymin = 31
+   ymax = 35
+   
+    p <- ggplot2::ggplot(fix) + 
+     ggplot2::geom_tile(ggplot2::aes(x = Longitude, 
+                                     y = Latitude, color = Value, width = 1/12, height = 1/12), 
+                        linewidth = 2) + 
+     ggplot2::geom_sf(data = ecodata::coast, 
+                      size = 0.4) + 
+     #ggplot2::facet_grid(Depth ~ Var) +
+     ggplot2::facet_wrap(~Var) +
+     ggplot2::scale_color_viridis_c() + 
+     ggplot2::coord_sf(xlim = c(xmin, xmax), ylim = c(ymin, ymax)) + 
+     ggplot2::xlab("") + 
+     ggplot2::ylab("") + 
+     ecodata::theme_ts() + 
+     ecodata::theme_facet() + 
+     ecodata::theme_title() + 
+     ggplot2::ggtitle(paste(unique(fix$Time))) + 
+     ggplot2::theme(legend.position = "bottom")
+   
+    return(p)
+   
+}
+
+p1 <- btthermalcompzoom(filename = file.names[1], daysabove = 25) + ggplot2::theme(legend.position = "none")
+p2 <- btthermalcompzoom(filename = file.names[2], daysabove = 25)
+p3 <- btthermalcompzoom(filename = file.names[3], daysabove = 25) + ggplot2::theme(legend.position = "none")
+p4 <- btthermalcompzoom(filename = file.names[4], daysabove = 25) + ggplot2::theme(legend.position = "none")
+p5 <- btthermalcompzoom(filename = file.names[5], daysabove = 25)
+p6 <- btthermalcompzoom(filename = file.names[6], daysabove = 25) + ggplot2::theme(legend.position = "none")
+  
+p1  + p2 + p3
+
+```
+
+```{r}
+p4 + p5 + p6
+```
 
 This was a proof of concept, demonstrating that information is available for the South Atlantic region from global databases and can be processed with available code. Because code was already available, this took approximately one week of work (with the computer occasionally working at night to do long downloads or calculations).
 
-[Full indicator workflow complete with code and false starts is here.](https://sgaichas.github.io/SAFMCindicators/PrototypeOceanIndicator.html)
+[A full indicator workflow complete with code and false starts is here.](https://sgaichas.github.io/SAFMCindicators/PrototypeOceanIndicator.html)
 
 
 ## Multispecies MSE Potential
