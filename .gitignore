@@ -54,7 +54,10 @@ rsconnect/
 # local folders
 test_*/
 testdocs/
-GLORYS/
+GLORYS/SAtl-smaller/
+GLORYS/testNE/
+GLORYS/testNE-out/
+GLORYS/SAtl-out/bottom_temp_model_gridded-1/
 
 # pdfs and docs and interim files
 *.pdf
