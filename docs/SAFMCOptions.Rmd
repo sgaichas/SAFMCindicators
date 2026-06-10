@@ -830,7 +830,9 @@ flextable::flextable(SAVResearchCrosswalk) |>
 
 ## Indicator Opportunities for SSC ABC Setting 
 
-The SSC verified that the characterization of the ABC control rule described above is correct. The rule and risk scoring procedure have been used for six species in the Snapper Grouper FMP to date.
+The SSC provided many helpful comments regarding the All Council Ecosystem Data Review in its [April 2026 meeting report](https://safmc.net/documents/ssc_apr2026_report_final/). As a result of the SSC review, new information has been incorporated into that report (see [Section 4.2.9.2](https://sgaichas.github.io/SAFMCindicators/AllCouncilDataReview.html#429_Examples_from_other_organizations)) as well as in this section and in the [Discussion section](#Discussion) of this report. 
+
+The SSC verified that the characterization of the ABC control rule described above in the Methods section is correct. The rule and risk scoring procedure have been used for six species in the Snapper Grouper FMP to date.
 
 This approach has been applied in 2024 (from Snapper Grouper Committee December 2024 Council Report):
 
@@ -850,15 +852,19 @@ The approach was also applied in 2025 (from Snapper Grouper Committee June 2025 
 
 >Council staff presented the stock risk rating matrix from the ABC Control Rule for Black Sea
 Bass and the preliminary scores and comments made by the Advisory Panel and SSC. The
-Council determined the stock risk rating of black sea bass to be “high.”
-
-[*This section will be updated when the final SSC report is available, currently based on my notes from discussion*]
+Council determined the stock risk rating of black sea bass to be “high.” 
 
 The SSC discussed how the risk table is operationally applied. When a new assessment is coming forward, the SSC, AP, and Council scores risk for all of the categories. In general there have been only minor differences between SSC AP and Council scores, so there is not a lot of disagreement between the groups to date. The ABC Control Rule and Risk Table approach was established by FMP amendment, so changes to the table also require FMP amendments. 
 
 When first applying the framework, the SSC had difficulties with some of the risk categories, mostly related to economic scoring and ecosystem scoring, because it wasn't always clear how to interpret the text. There was a general consensus that indicators for biological and human dimensions sections are currently well specified, but the ecosystem factors lacked consistent data. Biological risk was sometimes adjusted from previous Productivity Susceptibility Analysis (PSA) scores if that information was considered too old. The table itself specifies criteria for each risk level of the human dimensions indicators.  
 
-The SSC briefly discussed the SAFMC food web model and its capabilities to inform ecosystem importance. This is expanded with an example of potential use below. The SSC also discussed how information in the South Atlantic Climate Vulnerability Assessment [@craig_climate_2025] might be applied to the climate change attribute. This is also discussed below. Finally, The SSC noted that it has been particularly difficult to score the environmental factors risk. This was originally intended to capture relevant factors that may not be the same across stocks; lacking specific environmental drivers, trends in recruitment or regime shifts would be appropriate indicators for this risk. Some potential pathways for approaching this risk are also outlined below. 
+The SSC noted in the meeting minutes that "Clearer guidance is needed to define how ecosystem indicators should inform risk table scoring and ABC-setting decisions" and that "Effective integration of climate information requires consideration of both species vulnerability and environmental exposure (i.e., observed or projected changes), as either component alone is insufficient to inform risk." The three sections below expand on these ideas. The SSC further noted that "Initial implementation should prioritize a small, targeted set of indicators that can be clearly linked to existing decision frameworks (e.g., risk tables), with iterative refinement over time rather than attempting comprehensive integration at the outset." 
+
+The SSC briefly discussed the SAFMC food web model and its capabilities to inform ecosystem importance. This is expanded with an example of potential use below. 
+
+The SSC also discussed how information in the South Atlantic Climate Vulnerability Assessment [@craig_climate_2025] might be applied to the climate change attribute. This is also expanded in an example below. 
+
+Finally, The SSC noted that it has been particularly difficult to score the environmental factors risk. This was originally intended to capture relevant factors that may not be the same across stocks; lacking specific environmental drivers, trends in recruitment or regime shifts would be appropriate indicators for this risk. Some potential pathways for approaching this risk are also outlined below. 
 
 ### Using food web model results to inform ecosystem importance
 
@@ -876,12 +882,11 @@ knitr::include_graphics(here::here("docs/images/flukedietmort_model.png"))
 ![Summer flounder diet and mortality, draft Mid Atlantic Rpath](images/flukedietmort_model.png)
 -->
 
-Thresholds of diet or mortality proportion could be further discussed and standardized by the SSC, AP, and Council to determine risk from species interactions. 
-
+Thresholds of diet or mortality proportion could be further discussed and standardized by the SSC, AP, and Council to determine risk from species interactions. These thresholds could be tailored to a species, fishery, or FMP depending on the ecosystem role of the species or primary concerns of the Council and stakeholders. These thresholds can also be refined over time. For example, the Mid-Atlantic Fishery Management Council (MAFMC) established thresholds in its original ecosystem risk assessment that evaluated whether a particular MAFMC managed species had more than 50% of their diet from other MAFMC managed species. In addition, risk thresholds for food web interactions were defined differently between MAFMC managed species and protected species. Criteria for that food web interaction defined risk as the MAFMC managed species as "important" prey if they contributed more than 30% of the protected predator diet, with risk increasing across the number of protected predators where the MAFMC managed species was considered important [@gaichas_implementing_2018]. The risk criteria for MAFMC managed species risk from food web interactions have since evolved to evaluate [broader prey availability and predation pressure risks](https://www.mafmc.org/s/05_EAFM-Risk-Assessment.pdf) for each species, reflecting the changing needs of MAFMC. In all cases, the criteria for each risk level and indicators for use have been clearly and quantitatively specified using a collaborative process between the Council and ecosystem scientists. 
 
 ### Using climate vulnerability assessment (CVA) results to inform climate change
 
-The SSC pointed out that while the CVA could inform the climate change risk attribute, they would also need indicators of the conditions that species are sensitive to in order to best characterize risk. The Risk Table criterion for High Risk is "Is this species likely to experience/be experiencing negative stock impacts due to climate change?" The CVA can provide a starting point to both prioritize species likely to see negative impacts of climate and to identify key sensitivities for those species.
+The SSC pointed out that while the CVA could inform the climate change risk attribute, they would also need indicators of the conditions that species are sensitive to in order to best characterize risk. The Risk Table criterion for High Risk is "Is this species likely to experience/be experiencing negative stock impacts due to climate change?" The CVA can provide a starting point to both prioritize species likely to see negative impacts of climate and to identify key sensitivities for those species. 
 
 One way to inform the SSC ABC process might be to use the CVA directionality scores [@burton_climate_2023; @craig_climate_2025] (Fig. \@ref(fig:SACVAdir)). When considering the climate change risk criterion for a particular species, the SSC could first look up whether the direction of climate impact was positive, neutral, or negative for that species using CVA results. Species with positive impacts could be assigned lowest risk, those with neutral impacts could be assigned the default risk, and those with negative impacts could be assigned a higher risk overall in the absence of other information. 
 
@@ -985,37 +990,37 @@ Source: [CCIEA Risk Table Report](https://www.pcouncil.org/documents/2024/08/h-1
 
 ## Prototype Indicator Development
 
-An indicator of seasonal bottom temperature in space was successfully developed for the South Atlantic region. The workflow is outlined here and all code will be provided so that this can be reproduces for other available information (salinity, currents, etc). The steps are first to pull the GLORYS data product of choice for the South Atlantic region from the Copernicus website, then to process the pulled data into indicatort datasets, and finally to plot the indicators. 
+An indicator of seasonal bottom temperature in space was successfully developed for the South Atlantic region. The workflow is outlined here and all code will be provided so that this can be reproducds for other available information (salinity, currents, etc). The steps are first to pull the GLORYS data product of choice for the South Atlantic region from the Copernicus website, then to process the pulled data into indicatort datasets, and finally to plot the indicators. This section outlines the process in sufficient detail that anyone should be able to set up the process and run the code to create the indicators and plots.
 
 ### Pull GLORYS bottom temperature
 
 To use GLORYS information, users must register for a free account on the Copernicus website by clicking the [link at the top of the page](https://data.marine.copernicus.eu/register). Users supply an email and optional information on their organization (one can select Others) and then receive an email with a link to establish a password.
 
-I am working in R [@r_core_team_r_2023], but [Python](https://docs.python.org/3/index.html) code is used to access GLORYS information (there is not a way to access in R). Python can be installed using the R package [`reticulate`](https://rstudio.github.io/reticulate/) [@ushey_reticulate_2025] and the command `reticulate::install_miniconda()` if you don't already have a Python installation. This installs [Miniconda](https://www.anaconda.com/docs/getting-started/miniconda/main), a lightweight distribution of Python. Because it is a minimal distribution, one or two packages need to be added as below. 
+While the code presented here is in R [@r_core_team_r_2023], [Python](https://docs.python.org/3/index.html) code is used to access GLORYS information because there is not a way to access in directly using R. Python can be installed using the R package [`reticulate`](https://rstudio.github.io/reticulate/) [@ushey_reticulate_2025] and the command `reticulate::install_miniconda()` if there is no preexisting Python installation. This installs [Miniconda](https://www.anaconda.com/docs/getting-started/miniconda/main), a lightweight distribution of Python. Because it is a minimal distribution, one or two packages need to be added as below. 
 
-For this script you need the python `pandas` package, which is installed using `reticulate::py_install("pandas")`
+For this script the python `pandas` package is required, which is installed using `reticulate::py_install("pandas")`
 
-We also need to install the package from Copernicus that makes downloading the information easy:
+Next, install the package from Copernicus that makes downloading the information easy:
 
 Install the `copernicusmarine` package using `reticulate::py_install("copernicusmarine", pip = TRUE)`
 
 Install `h5py`. `reticulate::py_install("h5py", pip = TRUE)`
 
-The dataset id we want is `cmems_mod_glo_phy_my_0.083deg_P1D-m`
+The dataset id used as a basis for the indicators here is `cmems_mod_glo_phy_my_0.083deg_P1D-m`
 
 With the username and password, the following code can be used to download data locally for processing. It is important to specify the latitude and longitude bounds of the data as well as the year(s). Downloading one year at a time makes for manageable files to process for spatial or time series indicators. The output directory is hardcoded below, this needs to change for use elsewhere.
 
-The code for downloading is courtesy Joseph Caracappa, NOAA NMFS NEFSC, and was modified for the South Atlantic. To highlight a box for the South Atlantic region, I visited https://data.marine.copernicus.eu/product/GLOBAL_MULTIYEAR_PHY_001_030/download then selected variables, drew a box around area on the map, selected a year range, then clicked "automate" to generate a command line script. This script was modified and put into the same framework as used above for the Northeast region. 
+The code for downloading is courtesy Joseph Caracappa, NOAA NMFS NEFSC, and was modified for the South Atlantic. To highlight a box for the South Atlantic region, visit https://data.marine.copernicus.eu/product/GLOBAL_MULTIYEAR_PHY_001_030/download then select variables, draw a box around the South Atlantic area on the map, selected a year range, then click "automate" to generate a command line script. This script can be modified and put into the same framework as used above for the Northeast region. 
 
-Pulling 6 years of data took my laptop and home connection about 8 hours. 
+Pulling 6 years of data took a laptop and home internet connection about 8 hours. 
 
-Take a look at a South Atlantic file as pulled from Copernicus:
+This describes the South Atlantic file as pulled from Copernicus:
 
 ```{r}
 tidync::tidync(here::here("GLORYS/SAtl/2025/GLORYS_REANALYSIS_2025-12-31.nc"))
 ```
 
-Here we plot this file:
+Here is a plot this file:
 
 ```{r}
 
@@ -1076,23 +1081,23 @@ R packages used in this workflow include `tidyverse` [@wickham_welcome_2019] for
 
 Code for reading the file into time series or maps is found at the NEFSC GitHub at https://github.com/NEFSC/READ-EDAB-GLORYS/tree/main. This repo has a [fuller version of the pulling script](https://github.com/NEFSC/READ-EDAB-GLORYS/blob/main/data-raw/python/GLORYS_download_template_workflow.py) that adds variables like salinity or mixed layer depth and pulls them into variable specific folders. It could be modified simply by changing the min and max lat and lon as above.
 
-We will focus on the spatial indicator of days with bottom temperature over a certain threshold in a given year. This indicator is called [`thermal_habitat_gridded`](https://noaa-edab.github.io/catalog/thermal_habitat_gridded.html) in the SOE. 
+Here the focus is on the spatial indicator of days with bottom temperature over a certain threshold in a given year. This indicator is called [`thermal_habitat_gridded`](https://noaa-edab.github.io/catalog/thermal_habitat_gridded.html) in the SOE. 
 
-The full set of SOE indicators using GLORYS bottom temperature are made by the script [make_GLORYS_bt_soe.R](https://github.com/NEFSC/READ-EDAB-GLORYS/blob/main/vignettes/make_GLORYS_bt_soe.R) but we don't want to make all of them right now for this demonstration.
+The full set of SOE indicators using GLORYS bottom temperature are made by the script [make_GLORYS_bt_soe.R](https://github.com/NEFSC/READ-EDAB-GLORYS/blob/main/vignettes/make_GLORYS_bt_soe.R) but this demonstration does not attempt to make all of them.
 
-It also has functions to process the downloaded files into datasets for presentation as either time series or spatial datasets. It calls utility functions in this repository: https://github.com/NEFSC/READ_EDAB_Utilities/tree/main. The Utilities should be installed so the functions can be used by other functions in READ-EDAB-GLORYS using code `devtools::install_github("https://github.com/NEFSC/READ_EDAB_Utilities")`This installed properly so we can use all the utilities functions. One function we will use is [`make_2d_deg_day_gridded`](https://github.com/NEFSC/READ_EDAB_Utilities/blob/main/R/make_2d_deg_day_gridded.R).  
+The script linked above also has functions to process the downloaded files into datasets for presentation as either time series or spatial datasets. It calls utility functions in this repository: https://github.com/NEFSC/READ_EDAB_Utilities/tree/main. The Utilities package should be installed so the functions can be used by other functions in READ-EDAB-GLORYS using code `devtools::install_github("https://github.com/NEFSC/READ_EDAB_Utilities")`This installed properly for this demonstrationa and all the utilities functions were available. A key required function is [`make_2d_deg_day_gridded`](https://github.com/NEFSC/READ_EDAB_Utilities/blob/main/R/make_2d_deg_day_gridded.R).  
 
-I cannot install the EDAB-GLORYS functions:`devtools::install_github("https://github.com/NEFSC/READ-EDAB-GLORYS")` due to a missing local file `EDAB.GLORYS/data/cold_pool/ROMS/roms_debiased_cold_pool_1959_1992.nc` This ROMS information is from a debiased Regional Ocean Modeling System (ROMS) model run for the Northeast US that provides bottom temerpature data from the 1950s to 1993, because the GLORYS dataset starts in 1993. We would not have this historical information available in the South Atlantic so we need to proceed without this dependency no matter what.  I cloned the GitHub repo and built locally by commenting out lines 74-76 in [`make_cold_pool_extent_shp.R`](https://github.com/NEFSC/READ-EDAB-GLORYS/blob/main/R/make_cold_pool_extent_shp.R), a function we will not need for the South Atlantic.
+For this demonstration the EDAB-GLORYS functions:`devtools::install_github("https://github.com/NEFSC/READ-EDAB-GLORYS")` could not be installed due to a missing local file `EDAB.GLORYS/data/cold_pool/ROMS/roms_debiased_cold_pool_1959_1992.nc` This ROMS information is from a debiased Regional Ocean Modeling System (ROMS) model run for the Northeast US that provides bottom temerpature data from the 1950s to 1993, because the GLORYS dataset starts in 1993. This historical information is not available in the South Atlantic so indicator development must proceed without this dependency.  This can be solved by cloning the GitHub repository and building the package locally by commenting out lines 74-76 in [`make_cold_pool_extent_shp.R`](https://github.com/NEFSC/READ-EDAB-GLORYS/blob/main/R/make_cold_pool_extent_shp.R), a function not needed for the South Atlantic.
 
-The other EDAB-GLORYS functions work locally. The initial processing from `make_GLORYS_bt_soe.R` was used and I made only the gridded temperatur plots.
+The other EDAB-GLORYS functions worked locally for this demonstration. The initial processing from `make_GLORYS_bt_soe.R` was used to make only the gridded temperature plots.
 
 Finally, functions to plot indicators are found in the `ecodata` [@beltz_ecodata_2025] package and in the NOAA-EDAB GitHub ecodata repository, such as `plot_thermal_habitat_gridded` : https://github.com/NOAA-EDAB/ecodata/blob/pre-production/R/plot_thermal_habitat_gridded.R 
 
-I had to change the `EDAB.GLORYS::make_bottom_temp_model_gridded` function code to call `EDABUtilities::make_2d_summary_gridded` with an additional argument, `file.time = "daily"` to make it work with the files in their original downloaded format. Then running the code above works for bottom temperature gridded. Alternatively, all files could be combined into one folder but I am unsure what that looked like so I am modifying the function to have all the steps here. A similar change was made in `EDAB.GLORYS::make_bottom_temp_model_annual` to change the call to `EDABUtilities::make_2d_summary_ts` to `file.time = "daily" instead of annual. This creates the plots I expected for seasonal gridded bottom temperature. 
+For this demonstration the `EDAB.GLORYS::make_bottom_temp_model_gridded` function code had to be changed to call `EDABUtilities::make_2d_summary_gridded` with an additional argument, `file.time = "daily"` to make it work with the files in their original downloaded format. Then running the code above worked for bottom temperature gridded. Alternatively, all files could be combined into one folder (not demonstrated here). A similar change was made in `EDAB.GLORYS::make_bottom_temp_model_annual` to change the call to `EDABUtilities::make_2d_summary_ts` to `file.time = "daily" instead of annual. This creates the plots as expected for seasonal gridded bottom temperature. 
 
-Also, we need to use the dev branch `EDAB.GLORYS::make_thermal_habitat_area` function that brings the daily GLORYS files into one annual file for estimating the number of days at each temperature for each year. 
+The dev branch `EDAB.GLORYS::make_thermal_habitat_area` function that brings the daily GLORYS files into one annual file was required for estimating the number of days at each temperature for each year. 
 
-Finally, I needed to change the underlying geography assumed in the code. I need a shape file to run the code for the South Atlantic. Lets try SA_EEZ_off_states from https://www.fisheries.noaa.gov/resource/map/defined-fishery-management-areas-south-atlantic-states-map-gis-data. `EDAB-GLORYS` functions have the Northeast ecosystem production untis (EPUs) hardcoded in them, so I rewrote those parts. Ultimately, I used the entire South Atlantic region in the shapefile by removing the parts of code that mapped to individual EPUs, but this code could be put back in if there are subsets of the South Atlantic defined in a shape file that need separate indicators.
+Finally, the underlying geography assumed in the code needed to change. A shape file is requred to run the code for the South Atlantic. For this demonstration, SA_EEZ_off_states from https://www.fisheries.noaa.gov/resource/map/defined-fishery-management-areas-south-atlantic-states-map-gis-data was used. `EDAB-GLORYS` functions have the Northeast ecosystem production untis (EPUs) hardcoded in them, so those parts of the function were re-written. Ultimately,  the entire South Atlantic region was used in the shapefile by removing the parts of code that mapped to individual EPUs, but this code could be put back in if there are subsets of the South Atlantic defined in a shape file that need separate indicators.
 
 ### Visualize prototype bottom temperature indicators
 
