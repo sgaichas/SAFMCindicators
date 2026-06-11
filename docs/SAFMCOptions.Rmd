@@ -1463,7 +1463,7 @@ Convert the model to Rpath to use the MSE capabilities. Food web static and dyna
 
 ### Simulations 
 
-Include parameter uncertainty in the Rpath simulations for any given scenario. [@]
+Include parameter uncertainty in the Rpath simulations for any given scenario [@whitehouse_assessing_2020; @whitehouse_bottomup_2021]. 
 Look at both short term and long term dynamics
 
 ### Tradeoffs 
