@@ -830,7 +830,7 @@ flextable::flextable(SAVResearchCrosswalk) |>
 
 ## Indicator Opportunities for SSC ABC Setting 
 
-The SSC provided many helpful comments regarding the All Council Ecosystem Data Review in its [April 2026 meeting report](https://safmc.net/documents/ssc_apr2026_report_final/). As a result of the SSC review, new information has been incorporated into that report (see [Section 4.2.9.2](https://sgaichas.github.io/SAFMCindicators/AllCouncilDataReview.html#429_Examples_from_other_organizations)) as well as in this section and in the [Discussion section](#Discussion) of this report. 
+The SSC provided many helpful comments regarding the All Council Ecosystem Data Review in its [April 2026 meeting report](https://safmc.net/documents/ssc_apr2026_report_final/). As a result of the SSC review, new information has been incorporated into that report (see [Section 4.2.9.2](https://sgaichas.github.io/SAFMCindicators/AllCouncilDataReview.html#429_Examples_from_other_organizations)) as well as in this section, the MSE section, and in the [Discussion section](#Discussion) of this report. 
 
 The SSC verified that the characterization of the ABC control rule described above in the Methods section is correct. The rule and risk scoring procedure have been used for six species in the Snapper Grouper FMP to date.
 
@@ -860,9 +860,9 @@ When first applying the framework, the SSC had difficulties with some of the ris
 
 The SSC noted in the meeting minutes that "Clearer guidance is needed to define how ecosystem indicators should inform risk table scoring and ABC-setting decisions" and that "Effective integration of climate information requires consideration of both species vulnerability and environmental exposure (i.e., observed or projected changes), as either component alone is insufficient to inform risk." The three sections below expand on these ideas. The SSC further noted that "Initial implementation should prioritize a small, targeted set of indicators that can be clearly linked to existing decision frameworks (e.g., risk tables), with iterative refinement over time rather than attempting comprehensive integration at the outset." 
 
-The SSC briefly discussed the SAFMC food web model and its capabilities to inform ecosystem importance. This is expanded with an example of potential use below. 
+The SSC briefly discussed the SAFMC food web model and its capabilities to inform ecosystem importance in the risk table. This is expanded with an example of potential use below. 
 
-The SSC also discussed how information in the South Atlantic Climate Vulnerability Assessment [@craig_climate_2025] might be applied to the climate change attribute. This is also expanded in an example below. 
+The SSC also discussed how information in the South Atlantic Climate Vulnerability Assessment [@craig_climate_2025] might be applied to the climate change attribute in the risk table. This is also expanded in an example below. 
 
 Finally, The SSC noted that it has been particularly difficult to score the environmental factors risk. This was originally intended to capture relevant factors that may not be the same across stocks; lacking specific environmental drivers, trends in recruitment or regime shifts would be appropriate indicators for this risk. Some potential pathways for approaching this risk are also outlined below. 
 
@@ -936,16 +936,11 @@ magick::image_read(url)
 
 A preliminary list of ecosystem factors to be considered has been developed for US Pacific fisheries and could be modified for the South Atlantic (quoted from Appendix A of the [California Current IEA (CCIEA) Team Report on Fisheries Ecosystem Initiative 4](https://www.pcouncil.org/documents/2024/08/h-1-a-cciea-team-report-1-cciea-risk-table-report-on-fep-initiative-4.pdf/)):
 
-*  Food webs (e.g., predator abundance or productivity, competitor abundance or
-productivity, spatial overlap with predators/competitors, prey abundance) -- *this closely matches the SAFMC "ecosystem importance" risk attribute so should not be reproduced under "other environmental variables"*
-*  Habitat availability (e.g., do current or near-term predictions of ocean temperatures and
-oxygen match known optimal ranges for [priority species] life history stages, closed area
-regulations) -- *this may be similar to the SAFMC "climate impact" risk attribute so should not be reproduced under "other environmental variables"*
-*  Changes in ecosystem productivity (e.g., upwelling indices, chlorophyll a, abundance
-of low trophic level organisms) -- *related to regime shifts*
-*  Physiological indices (e.g., growth, condition, pathogens/parasites, stomach
-weight/fullness) -- *possible drivers of recruitment trends*
-*  Reproductive indices (e.g., maturity, fecundity, spawn timing and duration) -- *possible drivers of recruitment trends*
+*  Food webs (e.g., predator abundance or productivity, competitor abundance or productivity, spatial overlap with predators/competitors, prey abundance) -- *this closely matches the SAFMC "ecosystem importance" risk attribute so should not be reproduced under "other environmental variables"* 
+*  Habitat availability (e.g., do current or near-term predictions of ocean temperatures and oxygen match known optimal ranges for [priority species] life history stages, closed area regulations) -- *this may be similar to the SAFMC "climate impact" risk attribute so should not be reproduced under "other environmental variables"* 
+*  Changes in ecosystem productivity (e.g., upwelling indices, chlorophyll a, abundance of low trophic level organisms) -- *related to regime shifts* 
+*  Physiological indices (e.g., growth, condition, pathogens/parasites, stomach weight/fullness) -- *possible drivers of recruitment trends* 
+*  Reproductive indices (e.g., maturity, fecundity, spawn timing and duration) -- *possible drivers of recruitment trends* 
 
 The last three points on this list may be useful to clarify "other environmental variables" because they can result in regime shifts and recruitment trends, but unlike recruitment trends may not already be accounted for in the stock assessment. 
 
@@ -1445,7 +1440,7 @@ Actual performance metrics would be determined by SAFMC prior to beginning any a
 ### Potential Management Measures 
 The actual list of management measures would be determined by SAFMC prior to beginning any analyses. Example management measures could include status quo management (single species reference points, assessments, and management measures for some species in the multispecies fishery) and a range of options for multispecies management. One option for multispecies management could combine a limit on removals for the entire multispecies complex based on a multispecies fishing mortality reference point with minimum biomass thresholds at the species level for assessed species in the multispecies fishery, similar to the measures proposed for New England FEP [@fogarty_art_2014]. A range of stock complex level assessments and management measures were simulation tested in New England in a [prototpye MSE project](https://d23h0vhsm26o6d.cloudfront.net/pMSE-Final-Report2.pdf) (Fig. \@ref(fig:pMSE)). Additional management measures could be adapted from single species to multispecies use. For example, previous MSEs have evaluated simplified management procedures at the stock level in the South Atlantic region [@peterson_climate-readiness_2025].
 
-```{r pMSE, fig.cap="New England protoype MSE structure, reprinted from https://d23h0vhsm26o6d.cloudfront.net/pMSE-Final-Report2.pdf", out.width="75%"}
+```{r pMSE, fig.cap="New England protoype MSE structure, reprinted from https://d23h0vhsm26o6d.cloudfront.net/pMSE-Final-Report2.pdf", out.width="65%"}
 
 knitr::include_graphics("https://github.com/NOAA-EDAB/presentations/raw/master/docs/EDAB_images/pMSEhydra.png")
 
@@ -1456,7 +1451,7 @@ knitr::include_graphics("https://github.com/NOAA-EDAB/presentations/raw/master/d
 Actual uncertainties would be determined by SAFMC prior to beginning any analyses. Example uncertainties could include changes in the prevailing environmental conditions, changes in species interactions, availability of stock level productivity information, and availability of timely and correct fishery information. Uncertainty due to information availability and quality is routinely addressed in MSE analyses and would be particularly appropriate for evaluating management of multispecies complexes with variable data quality among species.
 
 ### Operating Model 
-The existing SAFMC full food web model (South Atlantic Region (SAR) EwE Model) is an excellent starting point for an operating model, because it already includes species interactions, and versions of it have already been reviewed and endorsed by the SAFMC SSC. This model serves as the basis for the SAR MICE (model of intermediate complexity) focused on the Snapper Grouper complex (SAFMC EwE MICE Model Technical Report June 2022, and [SSC Report October 2021](https://safmc.net/documents/a08b_ewe_red-snapper-workshop-findings-october-ssc_revised-pdf/)). The SAR EwE model could be modified as outlined below to serve as an operating model for estimating and evaluating multispecies reference points for different species complexes.   
+The existing SAFMC full food web model (South Atlantic Region (SAR) EwE Model) is an excellent starting point for an operating model, because it already includes species interactions, and versions of it have already been reviewed and endorsed by the SAFMC SSC. This model serves as the basis for the SAR MICE (model of intermediate complexity) focused on the Snapper Grouper complex (SAFMC EwE MICE Model Technical Report June 2022, and [SSC Report October 2021](https://safmc.net/documents/a08b_ewe_red-snapper-workshop-findings-october-ssc_revised-pdf/)). The SAFMC SSC noted that "current applications of the food web model are primarily focused on hypothesis testing and scenario exploration. Additional work is needed to translate model outputs into management-relevant metrics and integrate them into ABC-setting or risk evaluation frameworks." The SAR EwE model could be modified as outlined below to serve as an operating model for estimating and evaluating management-relevant multispecies reference points for different species complexes.   
 
 A first step is to focus the model structure for the issue. This is achieved by aggregating the full model's 140 trophic groups to a smaller number by grouping species that are non-essential for the desired analysis into general biomass pools. Species involved in the multispecies fishery of interest, as well as gear types involved in the fishery would be kept separate in the operating model, as well as any critical species linked to the focal managed complex as predators or prey. For example, the current SAR MICE model is aggregated to 41 components to focus on key assessed species in the Snapper Grouper FMP. 
 
@@ -1481,11 +1476,19 @@ knitr::include_graphics("https://github.com/NOAA-EDAB/presentations/raw/master/d
 
 # Discussion
 
-Based on the review of all U.S. Fishery Management Council's ecosystem data and current approaches, including SAFMC's 
+Based on the review of all U.S. Fishery Management Council's ecosystem data and current approaches, including SAFMC's, three conclusions can be drawn. First, all US Fishery Management Councils have some kind of ecosystem approach already embedded in management or in progress, regardless of the level of ecosystem data available. Second, interviewed Council staff noted that Councils want to use ecosystem information, but are often overwhelmed by it. Third, collaboration between managers and scientists is required for operational use of ecosystem information. This collaboration will allow managers to prioritize needs and for scientists to provide the right information at the right time to make a decision. Best practices identifed across all Councils included:
+
+*  Iterative co-production of processes and products: Learn by doing, refine and adjust over tine 
+*  Risk-based methods: Adaptable to many decision processes
+*  Science communication: Councils need ecosystem information in "digestible packets"
+*  Actionable ecosystem plans: Address management issues in digestible packets too!
+
+The suggestions for integrating ecosystem information into SAFMC decisions identified in this document follow these general principles. In the remainder of the discussion, we highlight conclusions from exploration of each of the pathways above, discuss resources required to implement the ideas in each pathway, and identify practical next steps for the Council. 
+
 
 ## Potential pathways
 
-Based on these analyses, the SAFMC has many options for integrating more ecosystem information into management decisions. These are outlined here and detailed below. 
+Based on the analyses described above, the SAFMC has many options for integrating more ecosystem information into management decisions. These are outlined here and detailed below. 
 
 1. SAFMC already addresses ecosystem issues and requests ecosystem information in its decision making process. Existing SAFMC habitat and ecosystem policies align with existing ecosystem indicators, facilitating use of these indicators to support policy-related decisions.
 1. Further opportunities were identified for SAFMC to request or use ecosystem information its decision making process. These include assessment prioritization, defining assessment Terms of Reference, defining management strategy evaluation terms of reference, evaluating spawning seasonal or spatial closures, evaluating single species and multispecies reference points, evaluating catch, effort, and discard projections, and evaluating allocations.
@@ -1503,24 +1506,16 @@ other TORs. Report how the findings were considered under impacted TORs
 
 Other relatively simple actions could include gathering ecosystem observations during stakeholder meetings about particular fisheries. Sample questions that could be asked during meetings could be modified from those asked for [Fishery Performance Reports](https://safmc.net/documents/fc1_a3b_fproverview-pdf/):
 
->Environmental, Ecological, and Habitat:
-• Do you perceive that the abundance of [species] has changed over the past ten years?
-If so, how has it changed?
-• When/where are the fish available, and has this changed? For instance, has there been any
-shift in catch (annually/seasonally) inshore/offshore or north/south? If so, please describe.
-• Has the size of the fish that you typically encounter changed? If so, could you briefly
-describe the trend?
-• Have you noticed any unique effects of environmental conditions on [species]? If so,
-please describe.
-• What are your observations on the timing and length of the [species] spawning
-season in your area (time periods when fish are observed with large ovaries or eggs
-spilling out externally or while venting)?
-• What do you see now in terms of recruitment? Where are the small fish? Are large and
-small fish found in the same locations?
-• Have you observed changes in catch depth or apparent bottom type fished on?
-• How have sea conditions (monthly/seasonally) affected fishable days?
-• Have you noticed any change in the species caught with [species] over the years or
-seasonally? 
+>Environmental, Ecological, and Habitat:  
+•  Do you perceive that the abundance of [species] has changed over the past ten years? If so, how has it changed? 
+•  When/where are the fish available, and has this changed? For instance, has there been any shift in catch (annually/seasonally) inshore/offshore or north/south? If so, please describe. 
+•  Has the size of the fish that you typically encounter changed? If so, could you briefly describe the trend? 
+•  Have you noticed any unique effects of environmental conditions on [species]? If so, please describe. 
+•  What are your observations on the timing and length of the [species] spawning season in your area (time periods when fish are observed with large ovaries or eggs spilling out externally or while venting)? 
+•  What do you see now in terms of recruitment? Where are the small fish? Are large and small fish found in the same locations? 
+•  Have you observed changes in catch depth or apparent bottom type fished on? 
+•  How have sea conditions (monthly/seasonally) affected fishable days? 
+•  Have you noticed any change in the species caught with [species] over the years or seasonally?  
 
 More involved processes, data, and resources would be needed to assess the potential impact of ecosystem change on management measures such as spawning closures in space and time. 
 
