@@ -138,7 +138,7 @@ EFH policy documents and current ESR indicators [@craig_ecosystem_2021] were rev
     +  Describes ecosystem services provided by SAV and recent declines in this EFH
     +  Outlines monitoring and research, planning, management, and education and enforcement to protect and restore SAV
     
-Additional policies identify species with EFH and HAPC potentially impacted by each activity, and identify specific threats, best management practices and research needs. These may be reviewed for alignment with existing indicators if time permits:   
+Additional policies identify species with EFH and HAPC potentially impacted by each activity, and identify specific threats, best management practices and research needs. These were not reviewed for alignment with existing indicators due to time constraints:   
 
 *  Beach Dredging and Filling, Beach Renourishment and Large-Scale Coastal Engineering – September 2023 
 *  Energy Exploration, Development, Transportation and Hydropower Re-Licensing - November 2024   
@@ -380,30 +380,71 @@ flextable::flextable(byTimingCatEco) |>
   flextable::width(width = c(1.5, 1.5, 1,1,1))
 ```
 
-Motions with direct ecosystem linkages included:
+Motions with direct ecosystem linkages were most common in the Habitat and Ecosystem Committee (as might be expected), followed by the Snapper Grouper Committee. 
 
 ```{r, ft.arraystretch = 1}
 motionsEcoLink <- motions |>
   dplyr::filter(Ecosystem == "yes") |>
   dplyr::select(Committee, Topic, Species, How)
 
+EcoMot <- motionsEcoLink |> 
+  dplyr::group_by(Committee) |> 
+  dplyr::summarise(n = n(),
+                   perc = n/nrow(motionsEcoLink)*100) |>
+  dplyr::arrange(desc(perc))
+
+flextable::flextable(EcoMot) |>
+  flextable::colformat_double(
+    j = c("perc"), # Specify the columns to format
+    digits = 0                  # Specify the number of decimal places
+  ) |>
+  flextable::set_header_labels(perc = "%") |>
+   flextable::set_caption("Number and percent (%) of motions with direct ecosystem linkages by Committee, March 2023 - March 2026")|>
+  flextable::width(width = c(2,1,1))
+```
+
+Motions with direct ecosystem linkages included:
+
+```{r, ft.arraystretch = 1}
+
 flextable::flextable(motionsEcoLink) |>
   flextable::width(width = c(3,1,1,3)) |>
   flextable::set_caption("Motions with direct ecosystem linkages, March 2023 - March 2026")
 ```
 
-Motions with potential ecosystem linkages included:
+Motions with opportunities to include ecosystem linkages were found across the Snapper Grouper Committee, the full Council, SEDAR, and other committees.  
 
-```{r, ft.arraystretch = 1}
+```{r}
 motionsMaybeEcoLink <- motions |>
   dplyr::filter(Ecosystem == "maybe") |>
   dplyr::select(Committee, Topic, Species, How)
 
+MaybeEcoMot <- motionsMaybeEcoLink |> 
+  dplyr::group_by(Committee) |> 
+  dplyr::summarise(n = n(),
+                   perc = n/nrow(motionsMaybeEcoLink)*100) |>
+  dplyr::arrange(desc(perc))
+
+flextable::flextable(MaybeEcoMot) |>
+  flextable::colformat_double(
+    j = c("perc"), # Specify the columns to format
+    digits = 0                  # Specify the number of decimal places
+  ) |>
+  flextable::set_header_labels(perc = "%") |>
+   flextable::set_caption("Number and percent (%) of motions with potential ecosystem linkages by Committee, March 2023 - March 2026")|>
+  flextable::width(width = c(2,1,1))
+```
+
+
+Motions with potential ecosystem linkages included requesting ecosystem ToRs for assessments, evaluating multispecies reference points, and other topics:
+
+```{r, ft.arraystretch = 1}
 flextable::flextable(motionsMaybeEcoLink) |>
   flextable::width(width = c(3,1,1,3)) |>
   flextable::set_caption("Motions with potential ecosystem linkages, March 2023 - March 2026")
 ```
 
+Overall, it is clear the SAFMC already integrates ecosystem considerations in management, and there is scope for integrating more within the current range of decisions. 
 
 [All results plus the full motions table are posted here.](https://sgaichas.github.io/SAFMCindicators/3YrsActions.html)
 
@@ -485,7 +526,7 @@ This document outlines 9 policies and 9 research and information needs.
 
 Research needs are broader and so considered separate from policies here. Both are aligned with existing indicators in the following tables.
 
-Overall, while two food web policy related indicators are reported in the 2021 ESR, at least 3 additional policies can be assessed with indicators derived from the existing food web model. Two others could potentially be addressed with more labor intensive updates to the existing food web model by integrating spatial capabilities and existing literature. Some literature information on invasive species diet is available [@peake_feeding_2018; @sancho_invasive_2018]. Contaminant studies are not included in the ESR, perhaps due to limited work in the South Atlantic region [@fair_persistent_2018; @barbieri_contaminants_2025; @thornton_multistressor_2026]. 
+Overall, 5 of the 9 food web policies have potential indicators with high feasibility, 2 have moderate feasibility, and only 2 have low or unknown feasibility.  While two food web policy related indicators are already reported in the 2021 ESR, at least 3 additional policies can be assessed with indicators derived from the existing food web model. Two others could potentially be addressed with more labor intensive updates to the existing food web model by integrating spatial capabilities and existing literature. Some literature information on invasive species diet is available [@peake_feeding_2018; @sancho_invasive_2018]. Contaminant studies are not included in the ESR, perhaps due to limited work in the South Atlantic region [@fair_persistent_2018; @barbieri_contaminants_2025; @thornton_multistressor_2026]. 
 
 
 ```{r FWpolicy}
@@ -684,6 +725,7 @@ flextable::flextable(Climcrosswalk) |>
 
 There are multiple ways to move forward with Climate Variability and Fisheries policies and research priorities given existing indicators and analyses. An initial step is collaborative Council and NOAA review of current indicators to prioritize a subset for refinement and annual updates. The CVA results could help identify a subset of species or a representative species for each FMP for initial focus. Considerable effort towards understanding the social and economic context and community climate vulnerability already exists [@jepson_development_2013; @seara_community_2022] and can contribute to these efforts. Note that the last research priority here is identical to the second research priority identified in the Food Webs and Connectivity Policy.
 
+Note that an example of indicator development for the "3D Estuarine-Coastal-Ocean Observations" research priority is included in the [Prototype Indicator Development](#prototype-indicator-development) section below.
 
 ```{r ClimResearch}
 
@@ -824,6 +866,9 @@ flextable::flextable(SAVResearchCrosswalk) |>
 
 ```
 
+Overall, there are many existing indicators that align with current SAFMC policy statements, and there is high feasibility for developing tailored indicators from existing resources for 8 of the 18 policy statements examined here. 
+
+
 <!--
 [Preliminary results](https://sgaichas.github.io/SAFMCindicators/ObjectivesIndicators.html)
 -->
@@ -870,9 +915,9 @@ Finally, The SSC noted that it has been particularly difficult to score the envi
 
 The Risk Table criterion for ecosystem importance High risk is "Does this species significantly affect other species, e.g. as a keystone predator, primary prey, habitat builder etc.?" Food web models can be used to characterize important prey and predators of species by summing biomass flows into and out of each species. Influential prey and predators can be identified for the entire system without the need for dynamic simulation. This information can be useful to provide context for stock assessments in multispecies systems [@gaichas_using_2010], as well as directly inform ecosystem importance for risk assessment. 
 
-The SAFMC food web model is an Ecopath with Ecosim model with over 20 years of development. The original model [@okey_preliminary_2001] included over 200 functional groups, as shown in Figure \@ref(fig:SAfoodweb), but has since been modified into simpler more aggregated versions to address particular issues, including spatial issues. Contractors from the Florida Fish and Wildlife Research Institute and the University of Florida are leading current model development, in close collaboration with SAFMC. This model has been has been [endorsed by the SSC in 2020](https://safmc.net/documents/a08_ewe_ssc_-model_review_wg_-report-pdf/), and developed recently to evaluate questions such as predation on juvenile black sea bass by red snapper and development for MSE applications. 
+The SAFMC food web model is an Ecopath with Ecosim model with over 20 years of development. The original model [@okey_preliminary_2001] included over 200 functional groups, but has since been modified into simpler more aggregated versions to address particular issues, including spatial issues. Contractors from the Florida Fish and Wildlife Research Institute and the University of Florida are leading current model development, in close collaboration with SAFMC. This model has been has been [endorsed by the SSC in 2020](https://safmc.net/documents/a08_ewe_ssc_-model_review_wg_-report-pdf/), and developed recently to evaluate questions such as predation on juvenile black sea bass by red snapper and development for MSE applications. 
 
-In this simple example, results from a draft Mid-Atlantic food web model are used to identify key prey and mortality sources for summer flounder, as well as predation impacts by summer flounder on other managed species (Fig. \@ref(fig:fwimportance)). A similar analysis can be performed with the SAFMC food web model. Blue shaded prey and predators are Mid-Atlantic managed species, while other prey and mortality from fisheries or non-MAFMC managed species are shaded in gray. Managed squids are an important diet item for Summer Flounder. Summer flounder is also an important predator of squids, causing more than 10% of mortality on Illex squids. Primarily fisheries cause mortality on Summer Flounder. 
+In this simple example, results from a draft Mid-Atlantic food web model are used to identify key prey and mortality sources for summer flounder, as well as predation impacts by summer flounder on other managed species (Fig. \@ref(fig:fwimportance)). A similar analysis can be performed with the SAFMC food web model for South Atlantic species. Blue shaded prey and predators are Mid-Atlantic managed species, while other prey and mortality from fisheries or non-MAFMC managed species are shaded in gray. Managed squids are an important diet item for Summer Flounder. Summer flounder is also an important predator of squids, causing more than 10% of mortality on Illex squids. Fisheries cause most of the mortality on Summer Flounder. 
 
 ```{r fwimportance, fig.cap="Summer flounder diet and predation mortality on Illex squid and Summer flounder based on a draft Mid-Atlantic food web model", out.width='120%'}
 knitr::include_graphics(here::here("docs/images/flukedietmort_model.png"))
@@ -944,15 +989,17 @@ A preliminary list of ecosystem factors to be considered has been developed for 
 
 The last three points on this list may be useful to clarify "other environmental variables" because they can result in regime shifts and recruitment trends, but unlike recruitment trends may not already be accounted for in the stock assessment. 
 
-The structured conversation between ecosystem and stock assessment scientists described in Appendix A of the CCIEA document could be a useful starting point for developing the conceptual model.
+The structured conversation between ecosystem and stock assessment scientists described in Appendix A of the CCIEA document could be a useful starting point for developing the conceptual model. This process is more streamlined than developing a full ESP report and therefore may be more feasible in a resource limited context.
 
-Indicator development and testing follows from the conceptual model. Indicators represent the hypothesized ecosystem drivers at different life stages, areas, and times of year. Priority should be given to developing indicators for processes or life history stages contributing to high assessment or projection uncertainty. Considerable environmental information is available in the ESR that could be tailored to priority species life stages (for example, surface temperature in a particular area for particular months rather than annual basin-wide averages reported in the ecosystem overview). The indicator development process should document the source, availability, and timeliness of data for alignment with operational stock assessments as well as hypothesized mechanistic connections to stock dynamics.
+In a full ESP, indicator development and testing follows from the conceptual model. Indicators represent the hypothesized ecosystem drivers at different life stages, areas, and times of year. Priority should be given to developing indicators for processes or life history stages contributing to high assessment or projection uncertainty. Considerable environmental information is available in the ESR that could be tailored to priority species life stages (for example, surface temperature in a particular area for particular months rather than annual basin-wide averages reported in the ecosystem overview). The indicator development process should document the source, availability, and timeliness of data for alignment with operational stock assessments as well as hypothesized mechanistic connections to stock dynamics.
 
 Once stock specific indicators are developed, they are tested to ensure that they are tied to changes in the stock and that they are uncorrelated with each other, providing unique information. An understanding of the variance or uncertainty in indicators is as important as the mean or trend. 
 
 Indicators could be used outside the assessment model to inform a risk table, as part of the assessment process to support decisions regarding parameterization or timeframes for calculating reference points, or within an assessment as a covariate or driver of a particular process if evidence supports this use. In each case, decisions and rationale would require clear documentation. 
 
-The SSC also pointed out that environmental drivers may affect fisheries as well as the stocks themselves. Environmental indicators above the surface of the ocean–wind and waves, bad weather days, etc. could affect fishing effort, and also the likelihood of catch reaching ABC. 
+The SSC also pointed out that environmental drivers may affect fisheries as well as the stocks themselves. Environmental indicators above the surface of the ocean–wind and waves, bad weather days, etc. could affect fishing effort, and also the likelihood of catch reaching ABC. Indicators could be tailored to specific fisheries to address changes in effort. 
+
+Overall, a prioritization process for developing stock specific indicators would be required to make the best use of limited resources. Indicators of general risk for use in the ABC risk table may prove to be more feasible than quantitative indicators to be incorporated directly into stock assessments.  
 
 ### Considering positive ecosystem effects?
 
@@ -978,6 +1025,8 @@ Neutral Conditions &rarr; Keep Standard Risk Buffer (Standard Catch Recommendati
 Unfavorable Conditions &rarr; <span style="background-color:#FF000050;">Increase Risk Buffer (Lower Catch Recommendation)</span>
 
 Source: [CCIEA Risk Table Report](https://www.pcouncil.org/documents/2024/08/h-1-a-cciea-team-report-1-cciea-risk-table-report-on-fep-initiative-4.pdf/)
+
+Overall, there are multiple options to address the challenges for including ecosystem information in assessment and management identified by the SSC, by providing standardized guidance for interpreting and scoring ecosystem and environmental components using existing quantitative environmental indicators for direct inclusion in risk tables, and for incorporating environmental drivers into stock assessment and catch frameworks.
 
 <!--
 [SSC review document](https://sgaichas.github.io/SAFMCindicators/SSCABCs.html)
@@ -1473,6 +1522,7 @@ An important outcome of the MSE testing will be identifying tradeoffs between pe
 knitr::include_graphics("https://github.com/NOAA-EDAB/presentations/raw/master/docs/EDAB_images/Fayetal_pMSEresultspider.png")
 ```
 
+Overall, an MSE approach using the SAFMC's food web model would provide information on the performance of novel alternatives to the current species-based management for the Council to consider.
 
 # Discussion
 
@@ -1507,15 +1557,16 @@ other TORs. Report how the findings were considered under impacted TORs
 Other relatively simple actions could include gathering ecosystem observations during stakeholder meetings about particular fisheries. Sample questions that could be asked during meetings could be modified from those asked for [Fishery Performance Reports](https://safmc.net/documents/fc1_a3b_fproverview-pdf/):
 
 >Environmental, Ecological, and Habitat:  
-•  Do you perceive that the abundance of [species] has changed over the past ten years? If so, how has it changed? 
-•  When/where are the fish available, and has this changed? For instance, has there been any shift in catch (annually/seasonally) inshore/offshore or north/south? If so, please describe. 
-•  Has the size of the fish that you typically encounter changed? If so, could you briefly describe the trend? 
-•  Have you noticed any unique effects of environmental conditions on [species]? If so, please describe. 
-•  What are your observations on the timing and length of the [species] spawning season in your area (time periods when fish are observed with large ovaries or eggs spilling out externally or while venting)? 
-•  What do you see now in terms of recruitment? Where are the small fish? Are large and small fish found in the same locations? 
-•  Have you observed changes in catch depth or apparent bottom type fished on? 
-•  How have sea conditions (monthly/seasonally) affected fishable days? 
-•  Have you noticed any change in the species caught with [species] over the years or seasonally?  
+
+>*  Do you perceive that the abundance of [species] has changed over the past ten years? If so, how has it changed? 
+>*  When/where are the fish available, and has this changed? For instance, has there been any shift in catch (annually/seasonally) inshore/offshore or north/south? If so, please describe. 
+>*  Has the size of the fish that you typically encounter changed? If so, could you briefly describe the trend? 
+>*  Have you noticed any unique effects of environmental conditions on [species]? If so, please describe. 
+>*  What are your observations on the timing and length of the [species] spawning season in your area (time periods when fish are observed with large ovaries or eggs spilling out externally or while venting)? 
+>*  What do you see now in terms of recruitment? Where are the small fish? Are large and small fish found in the same locations? 
+>*  Have you observed changes in catch depth or apparent bottom type fished on? 
+>*  How have sea conditions (monthly/seasonally) affected fishable days? 
+>*  Have you noticed any change in the species caught with [species] over the years or seasonally?  
 
 More involved processes, data, and resources would be needed to assess the potential impact of ecosystem change on management measures such as spawning closures in space and time. 
 
