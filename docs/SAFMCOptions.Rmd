@@ -8,15 +8,15 @@ output:
     df_print: paged
     toc: true
     toc_float: true
-  pdf_document:
-    toc: false
-  word_document: default
   bookdown::pdf_document2:
     includes:
       in_header: latex/header1.tex
     keep_tex: true
     toc: false
     number_sections: false
+  word_document: default
+  pdf_document:
+    toc: false
   html_document:
     df_print: paged
     toc: true
@@ -161,7 +161,7 @@ Risk tolerance (probability of overfishing, p*) is highest for stocks above B_MS
 
 The magnitude of p* across these stock status categories changes depending on the overall risk of overfishing, which is determined by the Council after reviewing risk rankings from the AP and SSC.
 
-```{r ABCSAFMC, fig.cap="SAFMC Risk Policy, 2023"}
+```{r ABCSAFMC, fig.cap="SAFMC Risk Policy, 2023", out.width="80%"}
 
 riskpol <- data.frame(Bfrac = c(0, 0.75, 0.7501, 1.0, 1.0001, 2.0),
                       High = c(0.2, 0.2, 0.30, 0.30, 0.40, 0.40),
@@ -238,7 +238,7 @@ The current South Atlantic EwE model is a model of intermediate complexity focus
 
 Once appropriately aggregated and implemented in Rpath, a set of multispecies harvest control rules can be developed with SAFMC input and tested. Performance metrics for each rule can be compared. For example, the following plot was created by Sean Lucey and collaborators as part of a [short course on MSE](https://github.com/thefaylab/cinar-mse-projects/blob/main/multispecies/RpathOM.md) (Fig. \@ref(fig:GBMSEex)). The plot shows outcomes of different harvest strategies for several species from the Georges Bank Rpath model using Rpath's MSE capabilities.
 
-```{r GBMSEex, fig.cap="Example results from an Rpath MSE comparing outcomes of ecosystem and single species models for different control rules; from Lucey et al. 2021"}
+```{r GBMSEex, fig.cap="Example results from an Rpath MSE comparing outcomes of ecosystem and single species models for different control rules; from Lucey et al. 2021", out.width="80%"}
 
 url <- "https://github.com/thefaylab/cinar-mse-projects/raw/main/multispecies/Summary_output_files/figure-gfm/unnamed-chunk-7-1.png"
 #knitr::include_graphics(url)
@@ -408,13 +408,14 @@ Motions with direct ecosystem linkages included:
 ```{r, ft.arraystretch = 1}
 
 flextable::flextable(motionsEcoLink) |>
-  flextable::width(width = c(3,1,1,3)) |>
+  flextable::width(width = c(1,1,2,2)) |>
+  flextable::theme_zebra() |>
   flextable::set_caption("Motions with direct ecosystem linkages, March 2023 - March 2026")
 ```
 
 Motions with opportunities to include ecosystem linkages were found across the Snapper Grouper Committee, the full Council, SEDAR, and other committees.  
 
-```{r}
+```{r, ft.arraystretch = 1}
 motionsMaybeEcoLink <- motions |>
   dplyr::filter(Ecosystem == "maybe") |>
   dplyr::select(Committee, Topic, Species, How)
@@ -440,7 +441,8 @@ Motions with potential ecosystem linkages included requesting ecosystem ToRs for
 
 ```{r, ft.arraystretch = 1}
 flextable::flextable(motionsMaybeEcoLink) |>
-  flextable::width(width = c(3,1,1,3)) |>
+  flextable::width(width = c(1,1,2,2)) |>
+  flextable::theme_zebra() |>
   flextable::set_caption("Motions with potential ecosystem linkages, March 2023 - March 2026")
 ```
 
@@ -529,7 +531,7 @@ Research needs are broader and so considered separate from policies here. Both a
 Overall, 5 of the 9 food web policies have potential indicators with high feasibility, 2 have moderate feasibility, and only 2 have low or unknown feasibility.  While two food web policy related indicators are already reported in the 2021 ESR, at least 3 additional policies can be assessed with indicators derived from the existing food web model. Two others could potentially be addressed with more labor intensive updates to the existing food web model by integrating spatial capabilities and existing literature. Some literature information on invasive species diet is available [@peake_feeding_2018; @sancho_invasive_2018]. Contaminant studies are not included in the ESR, perhaps due to limited work in the South Atlantic region [@fair_persistent_2018; @barbieri_contaminants_2025; @thornton_multistressor_2026]. 
 
 
-```{r FWpolicy}
+```{r FWpolicy, ft.arraystretch = 1}
 
 FWcrosswalk <- data.frame(Policy = c("Forage Fisheries",
                                      "Prey Importance",
@@ -594,7 +596,9 @@ FWcrosswalk <- data.frame(Policy = c("Forage Fisheries",
 
 
 flextable::flextable(FWcrosswalk) |>
-  flextable::width(width = c(1,2,2,1,2,2)) |>
+  #flextable::width(width = c(1,2,2,1,2,2)) |>
+  flextable::width(width = c(1,1,1,1,1,1)) |>
+  flextable::theme_zebra() |>
   flextable::set_header_labels(Brief = "Brief Policy Description",
                                ProposedInd = "Indicators Outlined in the Policy",
                                CurrentInd = "Available Indicators",
@@ -606,7 +610,7 @@ flextable::flextable(FWcrosswalk) |>
 
 Research and information needs are already partially addressed by existing CVA [@burton_climate_2023; @craig_climate_2025] and ESR indicators, and by current MSE efforts [@peterson_climate-readiness_2025]. Collaboration between the Council and NOAA/other partners to identify clear priorities and objectives for research is a practical next step. Many current ESR indicators have the potential to address specific Council needs; collaboration to tailor the indicators for specific uses is recommended. A structured decision process to identify and analyze ecosystem issues (similar to Pacific FEP Initiatives, North Pacific Action Modules, or Gulf Fishery Ecosystem Issues) could help achieve these goals. 
 
-```{r FWresearch}
+```{r FWresearch, ft.arraystretch = 1}
 
 FWResearchCrosswalk <- data.frame(Research = c("Climate Impacts on Productivity",
                                                "Offshore Habitats for Estuarine Species",
@@ -648,7 +652,9 @@ FWResearchCrosswalk <- data.frame(Research = c("Climate Impacts on Productivity"
 )
 
 flextable::flextable(FWResearchCrosswalk) |>
-  flextable::width(width = c(2,2,2,2)) |>
+  #flextable::width(width = c(2,2,2,2)) |>
+  flextable::width(width = c(1.5,1.5,1.5,1.5)) |>
+  flextable::theme_zebra() |>
   flextable::set_header_labels(CurrentInd = "Available Indicators",
                                PotentialAction = "Potential Council Actions",
                                Feasibility = "Potential Action Feasibility") |>
@@ -669,7 +675,7 @@ This document describes historical and projected ocean conditions in the South A
 Many current ESR indicators directly address Climate Variability and Fisheries policy statements. Current gaps related to species distribution shifts and forecast conditions could be filled with existing information. [DisMAP indicators](https://apps-st.fisheries.noaa.gov/dismap/DisMAP.html#) summarizing species distribution from the SEAMAP survey are available. [Regional ocean model forecasts](https://psl.noaa.gov/cefi_portal/) are available for the South Atlantic region, but resources are required to process, evaluate, and translate these outputs into indicators for management review. Some Councils already receive reports of [unmanaged species landings](https://safmc.net/documents/mafmcunmanagedcomlandings-pdf/) compiled by NOAA Regional Offices. However, these reports focus on commercial landings because there are few information sources for recreational landings of unmanaged species.
 
 
-```{r ClimPolicy}
+```{r ClimPolicy, ft.arraystretch = 1}
 
 Climcrosswalk <- data.frame(Policy = c("Collaboration",
                                      "Climate Indicators",
@@ -711,7 +717,9 @@ Climcrosswalk <- data.frame(Policy = c("Collaboration",
 
 
 flextable::flextable(Climcrosswalk) |>
-  flextable::width(width = c(1,2,2,1,2,2)) |>
+  #flextable::width(width = c(1,2,2,1,2,2)) |>
+  flextable::width(width = c(1,1,1,1,1,1)) |>
+  flextable::theme_zebra() |>
   flextable::set_header_labels(Brief = "Brief Policy Description",
                                ProposedInd = "Indicators Outlined in the Policy",
                                CurrentInd = "Available Indicators",
@@ -727,7 +735,7 @@ There are multiple ways to move forward with Climate Variability and Fisheries p
 
 Note that an example of indicator development for the "3D Estuarine-Coastal-Ocean Observations" research priority is included in the [Prototype Indicator Development](#prototype-indicator-development) section below.
 
-```{r ClimResearch}
+```{r ClimResearch, ft.arraystretch = 1}
 
 ClimateResearchCrosswalk <- data.frame(Research = c("Climate Impacts on Productivity",
                                                "Climate Impacts in Assessments",
@@ -757,7 +765,9 @@ ClimateResearchCrosswalk <- data.frame(Research = c("Climate Impacts on Producti
 )
 
 flextable::flextable(ClimateResearchCrosswalk) |>
-  flextable::width(width = c(2,2,2,2)) |>
+  #flextable::width(width = c(2,2,2,2)) |>
+  flextable::width(width = c(1.5,1.5,1.5,1.5)) |>
+  flextable::theme_zebra() |>
   flextable::set_header_labels(CurrentInd = "Available Indicators",
                                PotentialAction = "Potential Council Actions",
                                Feasibility = "Potential Action Feasibility") |>
@@ -777,7 +787,7 @@ The Council does not directly manage many of the activities and conditions that 
 Existing ESR indicators for SAV, coastal habitat attributes, land use and ocean economy align with SAV policy.  Additional indicators of SAV benefits to dependent managed species could be derived from current indicators for commercial and recreational landings and value. However, comprehensive SAV indicators and research would require dedicated effort from multiple partners. 
 
 
-```{r SAVPolicy}
+```{r SAVPolicy, ft.arraystretch = 1}
 
 SAVcrosswalk <- data.frame(Policy = c("Monitoring",
                                      "Planning",
@@ -813,7 +823,9 @@ SAVcrosswalk <- data.frame(Policy = c("Monitoring",
 
 
 flextable::flextable(SAVcrosswalk) |>
-  flextable::width(width = c(1,2,2,1,2,2)) |>
+  #flextable::width(width = c(1,2,2,1,2,2)) |>
+  flextable::width(width = c(1,1,1,1,1,1)) |>
+  flextable::theme_zebra() |>
   flextable::set_header_labels(Brief = "Brief Policy Description",
                                ProposedInd = "Indicators Outlined in the Policy",
                                CurrentInd = "Available Indicators",
@@ -826,7 +838,7 @@ flextable::flextable(SAVcrosswalk) |>
 
 In general, research priorities for SAV require more coordination and collaboration with state and local partners relative to the priorities above for food web connectivity and climate fisheries interactions. However, the research objectives are clearly stated and well focused. Initial steps could include evaluation and prioritization of ESR indicators for relevance to SAV extent and % change. A longer term project could consider habitat-climate vulnerability analysis as was done for Northeast US Atlantic habitats [@farr_assessment_2021], which would apply not just to SAV but to all Council designated EFH and HAPC.
 
-```{r SAVResearch}
+```{r SAVResearch, ft.arraystretch = 1}
 
 SAVResearchCrosswalk <- data.frame(Research = c("Standardize Mapping Protocols",
                                                "EFH GIS Database",
@@ -856,7 +868,9 @@ SAVResearchCrosswalk <- data.frame(Research = c("Standardize Mapping Protocols",
 )
 
 flextable::flextable(SAVResearchCrosswalk) |>
-  flextable::width(width = c(2,2,2,2)) |>
+  #flextable::width(width = c(2,2,2,2)) |>
+  flextable::width(width = c(1.5,1.5,1.5,1.5)) |>
+  flextable::theme_zebra() |>
   flextable::set_header_labels(CurrentInd = "Available Indicators",
                                PotentialAction = "Potential Council Actions",
                                Feasibility = "Potential Action Feasibility") |>
@@ -919,7 +933,7 @@ The SAFMC food web model is an Ecopath with Ecosim model with over 20 years of d
 
 In this simple example, results from a draft Mid-Atlantic food web model are used to identify key prey and mortality sources for summer flounder, as well as predation impacts by summer flounder on other managed species (Fig. \@ref(fig:fwimportance)). A similar analysis can be performed with the SAFMC food web model for South Atlantic species. Blue shaded prey and predators are Mid-Atlantic managed species, while other prey and mortality from fisheries or non-MAFMC managed species are shaded in gray. Managed squids are an important diet item for Summer Flounder. Summer flounder is also an important predator of squids, causing more than 10% of mortality on Illex squids. Fisheries cause most of the mortality on Summer Flounder. 
 
-```{r fwimportance, fig.cap="Summer flounder diet and predation mortality on Illex squid and Summer flounder based on a draft Mid-Atlantic food web model", out.width='120%'}
+```{r fwimportance, fig.cap="Summer flounder diet and predation mortality on Illex squid and Summer flounder based on a draft Mid-Atlantic food web model", out.width="80%"}
 knitr::include_graphics(here::here("docs/images/flukedietmort_model.png"))
 ```
 
@@ -953,7 +967,7 @@ For species predicted to have negative impacts from climate change, the sensitiv
 
 For example, Nassau grouper (*Epinephelus striatus*) were identified as a species with a very high vulnerability ranking and a negative impact directionality in the CVA (Fig. \@ref(fig:Nassau)). Individual species sensitivity data shows high vulnerability to both temperature and ocean acidification. The spawning cycle is the sensitivity attribute with the highest sensitivity score, followed by habitat specificity. 
 
-```{r Nassau, fig.cap="Nassau Grouper Species Narrative, from Craig et al. 2025 Supplemental information", out.width='120%'}
+```{r Nassau, fig.cap="Nassau Grouper Species Narrative, from Craig et al. 2025 Supplemental information", out.width="80%"}
 
 knitr::include_graphics(here::here("docs/images/NassauGrouperCVAtable.png"))
 
@@ -972,7 +986,7 @@ The SSC noted that evaluating the risk from other environmental variables has be
 
 Ecosystem and Socio-economic Profiles (ESPs), an ecosystem status report tailored to an individual stock, were invented in the North Pacific region [@shotwell_introducing_2023] and have since been applied in multiple other regions. These reports start with a conceptual model of the species life history that identifies key transitions between life stages and habitats as well as environmental tolerances and any known mechanistic linkages to environmental drivers at each stage (e.g, Fig. \@ref(fig:herrconsmod) from @molina_atlantic_2025). The conceptual model, developed from literature review and expert knowledge (which can include scientists and fishers), forms the basis for both qualitative risk statements and quantitative indicator development tailored to the priority stock.
 
-```{r herrconsmod, fig.cap="Atlantic herring conceptual model, from Molina et al. 2025"}
+```{r herrconsmod, fig.cap="Atlantic herring conceptual model, from Molina et al. 2025", out.width="80%"}
 
 url <- "https://github.com/NOAA-EDAB/presentations/raw/master/docs/EDAB_images/AherringConceptualMod.png"
 #knitr::include_graphics(url)
@@ -1009,13 +1023,13 @@ The Pacific Council SSC is evaluating risk tables in progress for stock assessme
 
 Operationally, a prototype process has ecosystem and stock scientists participate in a structured conversation as noted above, to identify key uncertainties in the assessment and evaluate ecosystem drivers of the stock (that are not already included in the assessment), and to fill out a table indicating whether ecosystem conditions are favorable, neutral, or unfavorable for the stock. This draws on previous literature and the indicators reported in the ESR. Information from the CVA for each stock is also included in this discussion. The structured discussion template is included in the CCIEA team's [2024 report](https://www.pcouncil.org/documents/2024/08/h-1-a-cciea-team-report-1-cciea-risk-table-report-on-fep-initiative-4.pdf/). For groundfish stock assessments conducted in 2025, pilot risk tables were developed for five full/benchmark assessments: yellowtail rockfish [@oken_status_2025], California quillback rockfish [@langseth_status_2025], chilipepper rockfish [@dick_status_2025], rougheye and blackspotted rockfishes [@cope_status_2025], and sablefish [@wetzel_status_2025]. 
 
-```{r pacrisktab}
+```{r pacrisktab, ft.arraystretch = 1}
 
 Tab4 <- readr::read_csv("https://github.com/sgaichas/HSpresentations/raw/main/Conferences/BevanUW_2026-02-19/data/WestCoastRiskFramework.csv")
 
 flextable::flextable(Tab4)|>
   flextable::set_caption("Pacific Pilot Risk Levels and Indicator Criteria.") |>
-  flextable::width(width = c(4,4,4,4)) |>
+  flextable::width(width = c(2,2,1,1)) |>
   flextable::bg(i = c(1:3), bg=c("#00FF0050", "white", "#FF000050"))
 ```
 
@@ -1491,7 +1505,9 @@ The actual list of management measures would be determined by SAFMC prior to beg
 
 ```{r pMSE, fig.cap="New England protoype MSE structure, reprinted from https://d23h0vhsm26o6d.cloudfront.net/pMSE-Final-Report2.pdf", out.width="65%"}
 
-knitr::include_graphics("https://github.com/NOAA-EDAB/presentations/raw/master/docs/EDAB_images/pMSEhydra.png")
+#knitr::include_graphics("https://github.com/sgaichas/presentations/raw/main/docs/EDAB_images/pMSEhydra.png")
+url <- "https://github.com/sgaichas/presentations/raw/main/docs/EDAB_images/pMSEhydra.png"
+magick::image_read(url)
 
 ```
 
@@ -1519,7 +1535,10 @@ The actual specifications of simulations would be determined by SAFMC. The simul
 An important outcome of the MSE testing will be identifying tradeoffs between performance metrics and associated management objectives. These tradeoffs can be shown for each alternative management approach. For example, the New England pMSE project highlighted tradeoffs between fleet-specific yield, full ecosystem yield, interannual variability in catch, the proportion of stocks below a biomass limit, and underutilized quota (Fig. \@ref(fig:pMSEtradeoffs)). For the example objectives above, a South Atlantic food web based set of tradeoffs could include similar metrics and add metrics regarding the number of management actions or assessments required for each approach.
 
 ```{r pMSEtradeoffs, fig.cap="New England protoype MSE results, reprinted from Fig. 2 in https://d23h0vhsm26o6d.cloudfront.net/pMSE-Final-Report2.pdf. Relative performance of eight key metrics between the five management alternatives. Points closer to the exterior edge indicate a better performance for the metric than points closer to the center.", out.width="50%"}
-knitr::include_graphics("https://github.com/NOAA-EDAB/presentations/raw/master/docs/EDAB_images/Fayetal_pMSEresultspider.png")
+#knitr::include_graphics("https://github.com/NOAA-EDAB/presentations/raw/master/docs/EDAB_images/Fayetal_pMSEresultspider.png")
+url <- "https://github.com/NOAA-EDAB/presentations/raw/master/docs/EDAB_images/Fayetal_pMSEresultspider.png"
+magick::image_read(url)
+  
 ```
 
 Overall, an MSE approach using the SAFMC's food web model would provide information on the performance of novel alternatives to the current species-based management for the Council to consider.
@@ -1584,10 +1603,12 @@ Despite the gaps in data in the South Atlantic region, this project has demonstr
 
 One potential extension of existing South Atlantic cooperative data collection could be ocean temperature observations for comparison with regional or global ocean data products such as MOM6 and GLORYS. Comparisons of vessel-collected temperature with model assimilated temperature can identify where improvements can be made to models as well as provide more direct information for management in near-real time. The Northeast U.S. eMOLT (Environmental Monitors on Lobster Traps and Large Trawlers) program regularly compares bottom temperature data collected aboard fishing vessels with regional ocean model bottom temperature predictions, highlighting both areas of agreement and areas where measurements and model predictions diverge.
 
-```{r eMOLT, fig.cap="Comparison of electronic monitoring on lobster trap and trawlers (eMOLT) data with modeled ocean bottom temperature from 13 March 2026. Source: weekly eMOLT update email, George Maynard, eMOLT coordinator"}
+```{r eMOLT, fig.cap="Comparison of electronic monitoring on lobster trap and trawlers (eMOLT) data with modeled ocean bottom temperature from 13 March 2026. Source: weekly eMOLT update email, George Maynard, eMOLT coordinator", out.width="80%"}
 #Source: weekly eMOLT update email, George Maynard, eMOLT coordinator
 
-knitr::include_graphics("https://github.com/sgaichas/HSpresentations/raw/main/docs/images/Doppio_eMOLTMarch2026.png") 
+#knitr::include_graphics("https://github.com/sgaichas/HSpresentations/raw/main/docs/images/Doppio_eMOLTMarch2026.png") 
+url <- "https://github.com/sgaichas/HSpresentations/raw/main/docs/images/Doppio_eMOLTMarch2026.png"
+magick::image_read(url)
 ```
 
 A more formal [study fleet](https://www.fisheries.noaa.gov/new-england-mid-atlantic/science-data/cooperative-research-northeast#study-fleet) such as the one in the Northeast US could also be established to collect data for ecosystem indicators. Data collected by vessels participating in the NEFSC study fleet program have been used in species distribution modeling, biological studies, evaluation of potential ocean industry user conflicts, and as supporting data for stock assessment. This program also collects oceanographic indicators which are directly associated with haul level catch data, allowing analysis of habitat associations. Fishery-collected information often includes seasons and regions outside the scope of scientific surveys, providing key information at relatively low cost.
