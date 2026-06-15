@@ -1,0 +1,7 @@
+"","Research","CurrentInd","PotentialAction","Feasibility"
+"1","Climate Impacts on Productivity","CVA combined with many ESR indicators","Prioritize and tailor existing indicators to species based on CVA","Moderate: resource intensive depending on priority species"
+"2","Climate Impacts in Assessments","ESR indicators need refinement for assessment application","Prioritize and tailor existing ESR indicators to assessments based on CVA","Moderate: resource intensive depending on priority species"
+"3","3D Estuarine-Coastal-Ocean Observations","Surface and Bottom Temperature, FL Current Transport, Gulf Stream Position, Upwelling","Add ocean model reanalysis products (GLORYS) to existing indicators","High: apply methods and code developed in other regions"
+"4","Climate Robust MSE","Peterson et al 2025","Consider standard climate scenarios in all MSEs","High: develop simple climate scenarios as robustness tests"
+"5","Socioeconomic Impacts and Fishery Responses","CVA, Community CVA, Sea Level Rise, FL Current Transport, Gulf Stream Position, Upwelling","Prioritize and tailor existing indicators","High: existing CVA, Community CVA, and ESR indicators"
+"6","Offshore Habitats for Estuarine Species","Surface and Bottom Temperature, FL Current Transport, Gulf Stream Position, Upwelling, Primary Productivity, Ocean Acidification","Prioritize and tailor existing indicators to species based on CVA","Moderate: resource intensive depending on priority species"

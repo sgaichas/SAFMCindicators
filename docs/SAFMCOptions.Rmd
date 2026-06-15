@@ -594,6 +594,7 @@ FWcrosswalk <- data.frame(Policy = c("Forage Fisheries",
 
                           )
 
+write.csv(FWcrosswalk, here::here("docs/FWcrosswalk.csv"))
 
 flextable::flextable(FWcrosswalk) |>
   #flextable::width(width = c(1,2,2,1,2,2)) |>
@@ -650,6 +651,9 @@ FWResearchCrosswalk <- data.frame(Research = c("Climate Impacts on Productivity"
                                                   "High: many ESR indicators align with habitats")
   
 )
+
+write.csv(FWResearchCrosswalk, here::here("docs/FWResearchCrosswalk.csv"))
+
 
 flextable::flextable(FWResearchCrosswalk) |>
   #flextable::width(width = c(2,2,2,2)) |>
@@ -715,6 +719,7 @@ Climcrosswalk <- data.frame(Policy = c("Collaboration",
 
                           )
 
+write.csv(Climcrosswalk, here::here("docs/Climcrosswalk.csv"))
 
 flextable::flextable(Climcrosswalk) |>
   #flextable::width(width = c(1,2,2,1,2,2)) |>
@@ -763,6 +768,8 @@ ClimateResearchCrosswalk <- data.frame(Research = c("Climate Impacts on Producti
                                                   "Moderate: resource intensive depending on priority species")
   
 )
+
+write.csv(ClimateResearchCrosswalk, here::here("docs/ClimateResearchCrosswalk.csv"))
 
 flextable::flextable(ClimateResearchCrosswalk) |>
   #flextable::width(width = c(2,2,2,2)) |>
@@ -821,6 +828,8 @@ SAVcrosswalk <- data.frame(Policy = c("Monitoring",
 
                           )
 
+write.csv(SAVcrosswalk, here::here("docs/SAVcrosswalk.csv"))
+
 
 flextable::flextable(SAVcrosswalk) |>
   #flextable::width(width = c(1,2,2,1,2,2)) |>
@@ -866,6 +875,8 @@ SAVResearchCrosswalk <- data.frame(Research = c("Standardize Mapping Protocols",
                                                   "Moderate: resource intensive process")
   
 )
+
+write.csv(SAVResearchCrosswalk, here::here("docs/SAVResearchCrosswalk.csv"))
 
 flextable::flextable(SAVResearchCrosswalk) |>
   #flextable::width(width = c(2,2,2,2)) |>
