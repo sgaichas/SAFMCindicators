@@ -29,3 +29,6 @@ output: html_document
 
 
 <a href="https://sgaichas.github.io/SAFMCindicators/SAFMCOptions.html" target="_blank"> Phase 2 report in progress - April 2026 </a>
+
+
+<a href="https://sgaichas.github.io/SAFMCindicators/SADL_BT.html" target="_blank"> Brief overview of GLORYS bottom temp for SADL survey - July 2026 </a>

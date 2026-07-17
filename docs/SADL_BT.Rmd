@@ -1,0 +1,195 @@
+---
+title: "GLORYS reanalysis bottom temperature"
+author: "Sarah Gaichas"
+date: "`r Sys.Date()`"
+output:
+  bookdown::html_document2:
+    code_fold: hide
+    df_print: paged
+    toc: true
+    toc_float: true
+  bookdown::pdf_document2:
+    includes:
+      in_header: latex/header1.tex
+    keep_tex: true
+    toc: false
+    number_sections: false
+  pdf_document:
+    toc: true
+  word_document:
+    toc: true
+  html_document:
+    code_fold: hide
+csl: plos.csl
+bibliography: operationalSOE.bib
+link-citations: true
+urlcolor: blue
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      message = FALSE,
+                      warning = FALSE)
+
+library(tidyverse)
+library(patchwork)
+
+```
+
+## GLORYS bottom temperature at the scale of the SADL survey
+
+Copernicus products (https://data.marine.copernicus.eu/products) including the  Global Oceanic Reanalysis (GLORYS, [@jean-michel_copernicus_2021], https://data.marine.copernicus.eu/product/GLOBAL_MULTIYEAR_PHY_001_030/description) provide both hindcasts and forecasts of ocean temperature and salinity for the full Atlantic spanning the Northeast and Southeast regions.
+
+Bottom temperature is reported as the daily mean in this dataset. 
+
+Information was pulled from the Copernicus website using code in https://sgaichas.github.io/SAFMCindicators/PrototypeOceanIndicator.html#21_Pull_GLORYS_bottom_temperature 
+
+There are separate files for each day of each year.
+
+Lets look at July 20 2025, one year ago. 
+
+A single file called `GLORYS_REANALYSIS_2025-07-20.nc` is now downloaded to the local GLORYS/testNE/2025 folder. 
+
+Take a look at it
+
+```{r}
+tidync::tidync(here::here("GLORYS/testNE/2025/GLORYS_REANALYSIS_2025-07-20.nc"))
+```
+
+Plot it at the full extent pulled
+
+```{r}
+
+ncfile <- here::here("GLORYS/testNE/2025/GLORYS_REANALYSIS_2025-07-20.nc")
+
+# find the unit from https://ropensci.org/blog/2019/11/05/tidync/
+tunit <- ncmeta::nc_atts(ncfile, "time") %>% tidyr::unnest(cols = c(value)) %>% dplyr::filter(name == "units")
+# its hours since 1950-01-01
+
+glorysnctotibble <- function(ncfile = ncfile){
+  # time is hours since 1950-01-01
+  origin <- as.Date("1950-01-01") 
+  
+  # add the time variable into each
+  time <- tidync::tidync(ncfile) |>
+    tidync::activate("D0") |> tidync::hyper_array()
+  
+ # google says 86400000 milliseconds in a day
+  # irrelevant because this unit is hours in a day
+  
+  bttib <- tidync::tidync(ncfile) |>
+    tidync::hyper_tibble(force = TRUE) |>
+    dplyr::mutate(time = unname(time$time)) |>
+    dplyr::mutate(date = as.Date((time/24), origin = origin),
+                  year = lubridate::year(date),
+                  month = lubridate::month(date),
+                  day = lubridate::day(date))|>
+    dplyr::mutate(longitude = as.numeric(longitude),
+                  latitude = as.numeric(latitude)) |>
+    dplyr::rename(mod_bt = bottomT)
+  
+  return(bttib)
+}
+
+dailybtplot <- function(oneday, xlim = c(-82.5, -65), ylim = c(23.5, 45)){
+  ggplot() +
+    geom_tile(data = oneday, aes(x = longitude, y = latitude, fill = mod_bt)) +
+    geom_sf(data = ecodata::coast) +
+    #geom_point(data = FishStatsUtils::northwest_atlantic_grid, aes(x = Lon, y = Lat), size=0.05, alpha=0.1) +
+    scale_fill_gradientn(name = "Temp C",
+                         limits = c(0.5, 31),
+                         colours = c(scales::muted("blue"), "white",
+                                     scales::muted("red"), "black")) +
+    #coord_sf(xlim = c(-77, -65), ylim = c(35, 45)) + 
+    #oord_sf(xlim = c(-82.5, -71), ylim = c(23.5, 36)) + 
+    coord_sf(xlim = xlim, ylim = ylim) + 
+    ecodata::theme_map() +
+    ggtitle(paste("Bottom temp, mm-dd-yyyy:", unique(oneday$month),
+                   unique(oneday$day), unique(oneday$year), sep = " "))
+}
+
+jul2025 <- glorysnctotibble(ncfile)
+
+dailybtplot(jul2025)
+
+```
+
+
+Zoom in on the SADL area
+
+```{r}
+
+
+
+dailybtplot(jul2025,
+            xlim = c(-80, -72),
+            ylim = c(30, 40))
+
+```
+
+
+What does September 20 look like?
+
+```{r}
+
+ncfile <- here::here("GLORYS/testNE/2025/GLORYS_REANALYSIS_2025-09-20.nc")
+
+sep2025 <- glorysnctotibble(ncfile)
+
+dailybtplot(sep2025,
+            xlim = c(-80, -72),
+            ylim = c(30, 40))
+
+```
+
+Really zoom in off Hatteras and VA
+
+```{r}
+
+j <- dailybtplot(jul2025,
+            xlim = c(-77, -73),
+            ylim = c(34, 39)) 
+
+s <- dailybtplot(sep2025,
+            xlim = c(-77, -73),
+            ylim = c(34, 39)) 
+
+
+j + s
+```
+
+Really zoom in off Hatteras and VA
+
+```{r}
+
+j <- dailybtplot(jul2025,
+            xlim = c(-77, -74),
+            ylim = c(35, 37)) 
+
+s <- dailybtplot(sep2025,
+            xlim = c(-77, -74),
+            ylim = c(35, 37)) 
+
+
+j + s
+```
+
+One degree each dimension, now you can see the 1/12 degree resolution of the bottom temperature information.
+
+```{r}
+
+j <- dailybtplot(jul2025,
+            xlim = c(-76, -75),
+            ylim = c(35, 36)) 
+
+s <- dailybtplot(sep2025,
+            xlim = c(-76, -75),
+            ylim = c(35, 36)) 
+
+
+j + s
+```
+
+This information is available daily for the period of the SADL survey 2023-2025.
+
+## References
+
