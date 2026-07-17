@@ -35,9 +35,15 @@ library(patchwork)
 
 ```
 
-## GLORYS bottom temperature at the scale of the SADL survey
+## What is GLORYS?
 
 Copernicus products (https://data.marine.copernicus.eu/products) including the  Global Oceanic Reanalysis (GLORYS, [@jean-michel_copernicus_2021], https://data.marine.copernicus.eu/product/GLOBAL_MULTIYEAR_PHY_001_030/description) provide both hindcasts and forecasts of ocean temperature and salinity for the full Atlantic spanning the Northeast and Southeast regions.
+
+An ocean reanalysis consists of an ocean physics model that has incorporated ("assimilated") observational data collected from many instruments measuring the ocean. The model adjusts to match observational data where it exists, and fills in areas without observational data. 
+
+While the general patterns in GLORYS compare well with independently collected ocean data, there can be differences at fine scales and in highly dynamic areas. Therefore, GLORYS is more appropriate for some applications than others, and comparisons with in situ measurements are encouraged.
+
+## GLORYS bottom temperature at the scale of the SADL survey
 
 Bottom temperature is reported as the daily mean in this dataset. 
 
@@ -157,7 +163,7 @@ s <- dailybtplot(sep2025,
 j + s
 ```
 
-Really zoom in off Hatteras and VA
+Even more zoom
 
 ```{r}
 
@@ -190,6 +196,18 @@ j + s
 ```
 
 This information is available daily for the period of the SADL survey 2023-2025.
+
+## How well does it match in situ measurements?
+
+This has not been done for this region or time specifically.
+
+Ideally there would be measurements of temperature from the SADL survey.
+
+GLORYS bottom temperature was compared with NEFSC Bottom Trawl Survey temperatures for spring and fall surveys here: https://noaa-edab.github.io/benthosindex/BottomTempFill.html 
+
+In general, GLORYS and survey measured bottom temperatures compared favorably in this region. However, the area around Cape Hatteras did tend to have mismatches more than other areas, perhaps due to the resolution of GLORYS being unable to capture changes in temperature over relatively small distances in this region.
+
+The NEFSC Bottom Trawl Survey does not operate at the same time as the SADL survey so these comparisons may not be representative of how well or poorly GLORYS bottom temperature might match in situ temperature in the SADL region July-October.
 
 ## References
 
