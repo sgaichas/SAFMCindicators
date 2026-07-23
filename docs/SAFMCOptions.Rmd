@@ -838,11 +838,11 @@ Overall, there are many existing indicators that align with current SAFMC policy
 
 For catch advice, the project evaluated whether products such as Ecosystem Socioeconomic Profiles (ESPs, [@behan_ecosystem_2022; @shotwell_synthesizing_2022; @shotwell_introducing_2023]) would be useful and practical for SAFMC catch specification processes given data and staff resources, whether Ecosystem Status Report (ESR, [@craig_ecosystem_2021]) indicators or Climate Vulnerability Analysis (CVA, [@burton_climate_2023; @craig_climate_2025]) might be useful for assessing uncertainty and risk in adjusting catch levels, and what other approaches to integrating ecosystem information into catch specification would be feasible. 
 
-The current SAFMC risk policy and ABC approach were updated for three FMPs [in 2023](https://safmc.net/documents/abccram_06052023_submittal-pdf/). This approach classifies risk of overfishing based on multiple attributes, as outlined below. 
+The current SAFMC risk policy and ABC approach were updated for three FMPs (Snapper Grouper, Dolphin Wahoo, and Golden Crab) [in 2023](https://safmc.net/documents/abccram_06052023_submittal-pdf/). The policy assigns a different probability of overfishing, p*, based on stock biomass status combined with multiple risk attributes spanning biological sensitivity, human dimensions, and environmental conditions. 
 
-Risk tolerance (probability of overfishing, p*) is highest for stocks above B_MSY, intermediate for stocks at or below B_MSY but above the halfway point between B_MSY and MSST, and low for stocks below the midpoint (Fig. \@ref(fig:ABCSAFMC)). 
+Risk tolerance is generally highest for stocks with biomass above B_MSY, so they can have higher p*. Risk tolerance is intermediate for stocks at or below B_MSY but above the halfway point between B_MSY and MSST, and low for stocks below the midpoint (Fig. \@ref(fig:ABCSAFMC)). 
 
-The magnitude of p* across these stock status categories changes depending on the overall risk of overfishing, which is determined by the Council after reviewing risk rankings from the AP and SSC.
+The magnitude of p* across these stock status categories changes depending on an overall risk ranking from low to high, which is determined by the Council after reviewing risk rankings assigned by the AP and the SSC using the attributes and criteria described below.
 
 ```{r ABCSAFMC, fig.cap="SAFMC Risk Policy, 2023", out.width="80%"}
 
@@ -888,27 +888,19 @@ Specific attributes that can inform risk of overfishing:
     * Climate change
     * Other environmental variables
 
-
 Risk evaluation could include an indicator-based approach. While some Councils use information from annual stock level ESPs or full system ESRs to evaluate risk when specifying catch levels, others are developing a more streamlined process based on structured discussions between stock assessors and ecosystem scientists. A mix of approaches will be explored for the South Atlantic context given existing resource levels. 
 
-Experience with applying the current risk framework and potential approaches for incorporating ecosystem information were discussed with the SSC at their April 2026 meeting to evaluate feasibility. Questions for the SSC included:
+Experience with applying the current risk framework and potential approaches for incorporating ecosystem information were discussed with the SSC at their April 2026 meeting to evaluate feasibility. Questions for the SSC and the answers are listed below. The SSC also provided many helpful comments regarding the All Council Ecosystem Data Review in its [April 2026 meeting report](https://safmc.net/documents/ssc_apr2026_report_final/). As a result of the SSC review, new information has been incorporated into that report (see [Section 4.2.9.2](https://sgaichas.github.io/SAFMCindicators/AllCouncilDataReview.html#429_Examples_from_other_organizations)) as well as in this section, the MSE section, and in the [Discussion section](#Discussion) of this report. 
 
-1. Is the characterization of the ABC control rule above correct?
-1. How many times has the SSC applied the rule?
-1. For which species has the SSC filled out the risk table? (example: [Black Sea Bass from April 2025](https://safmc.net/documents/ssc_apr2025_report_final-pdf/))
-1. What is the SSC's experience filling out the risk table? 
-    + Which portions have high agreement? 
-    + Which portions generate much discussion and disagreement?
-    + What information does the SSC have when filling out the risk table?
-1. It appears that quantitative indicators are available for the Biological and Human Dimensions Attributes, but not the Environmental Attributes
-    + Could the Ecosystem Importance attribute be informed by the SAFMC Food Web Model?
-    + Could the Climate Change attribute be informed by the South Atlantic Climate Vulnerability Assessment [@craig_climate_2025]?
-    + What information is most often used to evaluate the Other Environmental Variables attribute?
+1\. Is the characterization of the ABC control rule above correct?
 
+The SSC verified that the characterization of the ABC control rule described above is correct. 
 
-The SSC provided many helpful comments regarding the All Council Ecosystem Data Review in its [April 2026 meeting report](https://safmc.net/documents/ssc_apr2026_report_final/). As a result of the SSC review, new information has been incorporated into that report (see [Section 4.2.9.2](https://sgaichas.github.io/SAFMCindicators/AllCouncilDataReview.html#429_Examples_from_other_organizations)) as well as in this section, the MSE section, and in the [Discussion section](#Discussion) of this report. 
+2\. How many times has the SSC applied the rule?
 
-The SSC verified that the characterization of the ABC control rule described above in the Methods section is correct. The rule and risk scoring procedure have been used for six species in the Snapper Grouper FMP to date.
+The rule and risk scoring procedure have been used for six species in the Snapper Grouper FMP to date.
+
+3\. For which species has the SSC filled out the risk table? (example: [Black Sea Bass from April 2025](https://safmc.net/documents/ssc_apr2025_report_final-pdf/))
 
 This approach has been applied in 2024 (from Snapper Grouper Committee December 2024 Council Report):
 
@@ -930,9 +922,21 @@ The approach was also applied in 2025 (from Snapper Grouper Committee June 2025 
 Bass and the preliminary scores and comments made by the Advisory Panel and SSC. The
 Council determined the stock risk rating of black sea bass to be “high.” 
 
+4\. What is the SSC's experience in filling out the risk table? 
+
+* Which portions have high agreement? 
+* Which portions generate much discussion and disagreement? 
+* What information does the SSC have when filling out the risk table? 
+
 The SSC discussed how the risk table is operationally applied. When a new assessment is coming forward, the SSC, AP, and Council scores risk for all of the categories. In general there have been only minor differences between SSC AP and Council scores, so there is not a lot of disagreement between the groups to date. The ABC Control Rule and Risk Table approach was established by FMP amendment, so changes to the table also require FMP amendments. 
 
 When first applying the framework, the SSC had difficulties with some of the risk categories, mostly related to economic scoring and ecosystem scoring, because it wasn't always clear how to interpret the text. There was a general consensus that indicators for biological and human dimensions sections are currently well specified, but the ecosystem factors lacked consistent data. Biological risk was sometimes adjusted from previous Productivity Susceptibility Analysis (PSA) scores if that information was considered too old. The table itself specifies criteria for each risk level of the human dimensions indicators.  
+
+5\. It appears that quantitative indicators are available for the Biological and Human Dimensions Attributes, but not the Environmental Attributes 
+
+* Could the Ecosystem Importance attribute be informed by the SAFMC Food Web Model? 
+* Could the Climate Change attribute be informed by the South Atlantic Climate Vulnerability Assessment [@craig_climate_2025]? 
+* What information is most often used to evaluate the Other Environmental Variables attribute? 
 
 The SSC noted in the meeting minutes that "Clearer guidance is needed to define how ecosystem indicators should inform risk table scoring and ABC-setting decisions" and that "Effective integration of climate information requires consideration of both species vulnerability and environmental exposure (i.e., observed or projected changes), as either component alone is insufficient to inform risk." The three sections below expand on these ideas. The SSC further noted that "Initial implementation should prioritize a small, targeted set of indicators that can be clearly linked to existing decision frameworks (e.g., risk tables), with iterative refinement over time rather than attempting comprehensive integration at the outset." 
 
@@ -944,9 +948,9 @@ Finally, The SSC noted that it has been particularly difficult to score the envi
 
 ### Using food web model results to inform ecosystem importance
 
-The Risk Table criterion for ecosystem importance High risk is "Does this species significantly affect other species, e.g. as a keystone predator, primary prey, habitat builder etc.?" Food web models can be used to characterize important prey and predators of species by summing biomass flows into and out of each species. Influential prey and predators can be identified for the entire system without the need for dynamic simulation. This information can be useful to provide context for stock assessments in multispecies systems [@gaichas_using_2010], as well as directly inform ecosystem importance for risk assessment. 
+The criterion to determine high ecosystem importance in the stock risk rating process is "Does this species significantly affect other species, e.g. as a keystone predator, primary prey, habitat builder etc.?" Food web models can be used to characterize important prey and predators of species by summing biomass flows into and out of each species. Influential prey and predators can be identified for the entire system without the need for dynamic simulation. This information can be useful to provide context for stock assessments in multispecies systems [@gaichas_using_2010], as well as directly inform ecosystem importance for risk assessment. 
 
-The SAFMC food web model is an Ecopath with Ecosim model with over 20 years of development. The original model [@okey_preliminary_2001] included over 200 functional groups, but has since been modified into simpler more aggregated versions to address particular issues, including spatial issues. Contractors from the Florida Fish and Wildlife Research Institute and the University of Florida are leading current model development, in close collaboration with SAFMC. This model has been has been [endorsed by the SSC in 2020](https://safmc.net/documents/a08_ewe_ssc_-model_review_wg_-report-pdf/), and developed recently to evaluate questions such as predation on juvenile black sea bass by red snapper and development for MSE applications. 
+The SAFMC food web model is an Ecopath with Ecosim model with over 20 years of development. The original model [@okey_preliminary_2001] included over 200 functional groups, but has since been modified into simpler more aggregated versions to address particular issues, including spatial issues. Contractors from the Florida Fish and Wildlife Research Institute and the University of Florida are leading current model development, in close collaboration with SAFMC. This model has been [endorsed by the SSC in 2020](https://safmc.net/documents/a08_ewe_ssc_-model_review_wg_-report-pdf/), and developed recently to evaluate questions such as predation on juvenile black sea bass by red snapper and development for MSE applications. 
 
 In this simple example, results from a draft Mid-Atlantic food web model are used to identify key prey and mortality sources for summer flounder, as well as predation impacts by summer flounder on other managed species (Fig. \@ref(fig:fwimportance)). A similar analysis can be performed with the SAFMC food web model for South Atlantic species. Blue shaded prey and predators are Mid-Atlantic managed species, while other prey and mortality from fisheries or non-MAFMC managed species are shaded in gray. Managed squids are an important diet item for Summer Flounder. Summer flounder is also an important predator of squids, causing more than 10% of mortality on Illex squids. Fisheries cause most of the mortality on Summer Flounder. 
 
