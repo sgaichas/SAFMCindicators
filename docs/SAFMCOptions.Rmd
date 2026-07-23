@@ -132,7 +132,7 @@ The South Atlantic's combination of habitat focus, existing ecosystem tools, and
 
 *  Hybrid Approach: Given a mix of data-rich and data-limited stocks across diverse habitats, combining aspects of successful practices from different Councils has more potential than adopting a particular Council’s ecosystem approach
 
-*  Leverage Existing Products: Align indicators from the South Atlantic ESR with objectives in EFH policy documents and CVA results to evaluate whether an integrated risk assessment framework could be developed
+*  Leverage Existing Products: Align indicators from the South Atlantic ESR with objectives in Essential Fish Habitat (EFH) policy documents and CVA results to evaluate whether an integrated risk assessment framework could be developed
 
 *  Formalize Action Process: Consider a process to develop explicit ecosystem initiatives or issues (similar to Pacific, North Pacific, Gulf) to move from planning to tangible management actions on priority topics
 
@@ -354,7 +354,7 @@ Overall, it is clear the SAFMC already integrates ecosystem considerations in ma
 
 ## Policy Objectives/Indicators Alignment
 
-EFH policy documents and current ESR indicators [@craig_ecosystem_2021] were reviewed and aligned where possible, with gaps highlighted. Three key policy documents were reviewed in detail and aligned with existing indicators:
+The Council has developed EFH policy statements to guide comment development for EFH consultations by describing habitat resources and potential threats to habitat, as well as actions that can be taken for EFH protection. EFH policy documents and current ESR indicators [@craig_ecosystem_2021] were reviewed and aligned where possible, with gaps highlighted. Three key policy documents were reviewed in detail and aligned with existing indicators:
 
 * South Atlantic [Food Webs and Connectivity Policy](https://safmc.net/documents/policy-considerations-for-south-atlantic-food-webs-and-connectivity-and-essential-fish-habitats/) – January 2025
     +  Connects EFH and food web considerations, identifies research needs 
@@ -369,16 +369,20 @@ EFH policy documents and current ESR indicators [@craig_ecosystem_2021] were rev
     +  Describes ecosystem services provided by SAV and recent declines in this EFH
     +  Outlines monitoring and research, planning, management, and education and enforcement to protect and restore SAV
     
-Additional policies identify species with EFH and HAPC potentially impacted by each activity, and identify specific threats, best management practices and research needs. These were not reviewed for alignment with existing indicators due to time constraints:   
+Additional policies identify species with EFH and Habitat Areas of Particular Concern (HAPC) potentially impacted by each activity, and identify specific threats, best management practices and research needs. These were not reviewed for alignment with existing indicators due to time constraints:   
 
-*  Beach Dredging and Filling, Beach Renourishment and Large-Scale Coastal Engineering – September 2023 
-*  Energy Exploration, Development, Transportation and Hydropower Re-Licensing - November 2024   
+*  Beach Dredging and Filling, Beach Renourishment and Large-Scale Coastal Engineering – September 2023  
+*  Energy Exploration, Development, Transportation and Hydropower Re-Licensing – November 2024   
 *  Alteration of Riverine, Estuarine and Nearshore Flows Policy – June 2014    
 *  Artificial Reef Habitat Policy Threats to EFH – September 2017    
 *  Marine and Estuarine Non-Native and Invasive Species Policy – June 2014    
-*  Interactions Between Essential Fish Habitats And Marine Aquaculture Policy – June 2014     
+*  Interactions Between Essential Fish Habitats and Marine Aquaculture Policy – June 2014     
 
-Policy objectives without current indicators were identified. Information gaps that might be filled with Citizen Science programs were then identified, along with what those programs would need to deliver. 
+Policy objectives without current indicators were identified. Information gaps that might be filled with Citizen Science projects were then identified, along with what those projects would need to deliver. 
+
+In tables below, columns summarize the policy name, a brief policy description, and any indicators outlined in the current policy. The Available Indicators column lists indicators currently in the ESR, the CVA, or from another known public source. The Potential Indicators column lists information that may not be currently available but would address the indicators outlined in the current policy. The Potential Indicator Feasibility column is based on the author's expert judgement of the tools, resources, and personnel needed to obtain the Potential Indicators. High feasibility indicators are those that can be produced with current data and tools with minimal effort. Moderate feasibility indicators would require more work to produce because some tool modification, additional analysis or data synthesis would be needed to produce the indicator. Low feasibility indicators have sparse existing data and/or would require considerable effort to modify tools or synthesize data from multiple distinct sources. Unknown feasibility was assigned when information when data or tool sources and scope were unknown to the author.
+
+In addition to policy objectives, the documents identify research needs. Listed research needs were also aligned with Available Indicators in tables below. Columns for Potential Council Actions suggest how the Council could make progress on or further refine the research needs using existing indicators or other available data. The Potential Action Feasibility column ranks actions similarly as above. High feasibility actions can apply existing indicators directly, Moderate feasibility actions require clarification from the Council prior to engaging in research, require more tool development or data synthesis or are otherwise are more resource intensive, or both. None of the potential actions suggested have low feasibility. 
 
 All policy documents were reviewed by the author. Initial matches with ESR indicators were taken from the ESR summary which used Claude Sonnet 4.5 to produce a draft summary and R code to compile indicator descriptions as described [here](https://sgaichas.github.io/SAFMCindicators/ESRcomparisons.html). After initial matches were made, pertinent ESR sections were reviewed by the author to validate matches and provide indicator details. 
 
@@ -439,7 +443,7 @@ flextable::flextable((esrsdetls[[ESRname]]))|>
 
 ```
 
-In addition, a climate  CVA for 71 fish and invertebrate species [@burton_climate_2023; @craig_climate_2025] is complete (Fig. \@ref(fig:SACVA)), as well as analysis for South Atlantic and Gulf fishing communities [@seara_community_2022]. Marine mammal (108 stocks) and highly migratory fish (58 stocks) climate vulnerability has also been assessed for the entire Atlantic Coast [@lettrich_vulnerability_2023; @loughran_climate_2025]. These documents contain indicators that represent a starting point towards meeting the needs identified in the EFH policy documents. In addition, the fish CVA might inform the climate portion of the p* process used to set ABC for stocks in the Dolphin-Wahoo, Golden Crab, and Snapper-Grouper FMPs (see section below).
+In addition, a CVA for 71 fish and invertebrate species [@burton_climate_2023; @craig_climate_2025] is complete (Fig. \@ref(fig:SACVA)), as well as analysis for South Atlantic and Gulf fishing communities [@seara_community_2022]. Marine mammal (108 stocks) and highly migratory fish (58 stocks) climate vulnerability has also been assessed for the entire Atlantic Coast [@lettrich_vulnerability_2023; @loughran_climate_2025]. These documents contain indicators that represent a starting point towards meeting the needs identified in the EFH policy documents. In addition, the fish CVA might inform the climate portion of the p* process used to set ABC for stocks in the Dolphin-Wahoo, Golden Crab, and Snapper-Grouper FMPs (see section below).
 
 ```{r SACVA, fig.cap="South Atlantic Fish and Invertebrate Climate Vulnerability from Craig et al. 2025", out.width='80%'}
 
@@ -455,7 +459,7 @@ Source: [Craig et al. 2025](https://journals.plos.org/climate/article?id=10.1371
 
 ### South Atlantic Food Webs and Connectivity Policy
 
-This document outlines 9 policies and 9 research and information needs. 
+The [Food Webs and Connectivity Policy](https://safmc.net/wp-content/uploads/document-blocks/2025/02/097569ba-ac93-4859-ad19-dbf284c5af5c-policy-considerations-for-south-atlantic-food-webs-and-connectivity-and-essential-fish-habitats_1.25.pdf) document outlines 9 policies and 9 research and information needs. 
 
 Research needs are broader and so considered separate from policies here. Both are aligned with existing indicators in the following tables.
 
@@ -599,15 +603,15 @@ flextable::flextable(FWResearchCrosswalk) |>
 ```
 
 
-Addiitonal reference material:
+Additional reference material:
 
 *  [Published lionfish studies](https://coastalscience.noaa.gov/news/lionfish-prefer-to-eat-local/)
 
 ### Climate Variability and Fisheries
 
-This document describes historical and projected ocean conditions in the South Atlantic, climate effects on fish, habitats, and fisheries, information gaps and research priorities, and relationships with SAFMC management. Here, stated management policies and research priorities are aligned with existing indicators. This policy was last updated in 2018, before the 2021 ESR and 2023 CVA were released.
+The [Climate Variability and Fisheries Policy](https://safmc.net/wp-content/uploads/document-blocks/2026/01/6bc7f4cd-7c4e-45d3-9c29-fddd42ea8f98-policy-considerations-for-south-atlantic-climate-variability-and-fisheries-and-essential-fish-habitats_march2018.pdf) document describes historical and projected ocean conditions in the South Atlantic, climate effects on fish, habitats, and fisheries, information gaps and research priorities, and relationships with SAFMC management. Here, stated management policies and research priorities are aligned with existing indicators. This policy was last updated in 2018, before the 2021 ESR and 2023 CVA were released.
 
-Many current ESR indicators directly address Climate Variability and Fisheries policy statements. Current gaps related to species distribution shifts and forecast conditions could be filled with existing information. [DisMAP indicators](https://apps-st.fisheries.noaa.gov/dismap/DisMAP.html#) summarizing species distribution from the SEAMAP survey are available. [Regional ocean model forecasts](https://psl.noaa.gov/cefi_portal/) are available for the South Atlantic region, but resources are required to process, evaluate, and translate these outputs into indicators for management review. Some Councils already receive reports of [unmanaged species landings](https://safmc.net/documents/mafmcunmanagedcomlandings-pdf/) compiled by NOAA Regional Offices. However, these reports focus on commercial landings because there are few information sources for recreational landings of unmanaged species.
+Many current ESR indicators directly address Climate Variability and Fisheries policy statements. Current gaps in ESR indicators related to species distribution shifts and forecast conditions could be filled with existing information. [DisMAP indicators](https://apps-st.fisheries.noaa.gov/dismap/DisMAP.html#) summarizing species distribution from the SEAMAP survey are available. Additional species distribution indicators and management tools are being developed in the [Mid-Atlantic](https://www.mafmc.org/ira-projects#project-7) which may be useful. [Regional ocean model forecasts](https://psl.noaa.gov/cefi_portal/) are available for the South Atlantic region, but resources are required to process, evaluate, and translate these outputs into indicators for management review. Some Councils already receive reports of [unmanaged species landings](https://safmc.net/documents/mafmcunmanagedcomlandings-pdf/) compiled by NOAA Regional Offices to flag potential emerging fisheries and species distribution changes; a report for the South Atlantic is currently in progress. However, these reports focus on commercial landings because there are few information sources for recreational landings of unmanaged species.
 
 
 ```{r ClimPolicy, ft.arraystretch = 1}
@@ -667,7 +671,7 @@ flextable::flextable(Climcrosswalk) |>
 
 ```
 
-There are multiple ways to move forward with Climate Variability and Fisheries policies and research priorities given existing indicators and analyses. An initial step is collaborative Council and NOAA review of current indicators to prioritize a subset for refinement and annual updates. The CVA results could help identify a subset of species or a representative species for each FMP for initial focus. Considerable effort towards understanding the social and economic context and community climate vulnerability already exists [@jepson_development_2013; @seara_community_2022] and can contribute to these efforts. Note that the last research priority here is identical to the second research priority identified in the Food Webs and Connectivity Policy.
+There are multiple ways to move forward with Climate Variability and Fisheries policies and research priorities given existing indicators and analyses. An initial step is a collaborative Council and NOAA review of current indicators to prioritize a subset for refinement and annual updates. The CVA results could help identify a subset of species or a representative species for each FMP for initial focus. Considerable effort towards understanding the social and economic context and community climate vulnerability already exists [@jepson_development_2013; @seara_community_2022] and can contribute to these efforts. Note that the last research priority here is identical to the second research priority identified in the Food Webs and Connectivity Policy.
 
 Note that an example of indicator development for the "3D Estuarine-Coastal-Ocean Observations" research priority is included in the [Prototype Indicator Development](#prototype-indicator-development) section below.
 
@@ -718,9 +722,9 @@ flextable::flextable(ClimateResearchCrosswalk) |>
 
 ### Marine Submerged Aquatic Vegetation
 
-Submerged Aquatic Vegetation (SAV) or seagrass is an important habitat in the South Atlantic, found primarily in North Carolina and Florida coastal waters. SAFMC has designated SAV to be Essential Fish Habitat (EFH) for managed fish (snapper-grouper species and cobia) and invertebrates (Penaeid shrimp and spiny lobster), as well as a Habitat Area of Particular Concern (HAPC) for snapper-grouper species. 
+Submerged Aquatic Vegetation (SAV) or seagrass is an important habitat in the South Atlantic, found primarily in North Carolina and Florida coastal waters. SAFMC has designated SAV to be EFH for managed fish (snapper-grouper species and cobia) and invertebrates (Penaeid shrimp and spiny lobster), as well as a Habitat Area of Particular Concern (HAPC) for snapper-grouper species. 
 
-The Council does not directly manage many of the activities and conditions that affect SAV. The overall policy goal in this document is to support actions that protect and restore SAV throughout the South Atlantic. These actions require collaboration with the four South Atlantic states: North Carolina, South Carolina, Georgia, and Florida, as well as local authorities. 
+The Council does not directly manage many of the activities and conditions that affect SAV. The overall policy goal in the [Marine Submerged Aquatic Vegetation](https://safmc.net/wp-content/uploads/document-blocks/2025/02/6bddb63d-9deb-4fd4-af8c-407d8cd56f17-policy-for-protection-and-enhancement-of-estuarine-and-marine-submerged-aquatic-vegetation-sav-habitat.pdf) Policy document is to support actions that protect and restore SAV throughout the South Atlantic. These actions require collaboration with the four South Atlantic states: North Carolina, South Carolina, Georgia, and Florida, as well as local authorities. 
 
 Existing ESR indicators for SAV, coastal habitat attributes, land use and ocean economy align with SAV policy.  Additional indicators of SAV benefits to dependent managed species could be derived from current indicators for commercial and recreational landings and value. However, comprehensive SAV indicators and research would require dedicated effort from multiple partners. 
 
@@ -798,7 +802,7 @@ SAVResearchCrosswalk <- data.frame(Research = c("Standardize Mapping Protocols",
                                                    "Prioritize existing indicators for further refinement",
                                                    "Collaborate with partners",
                                                    "Consider habitat climate vulnerability assessment"),
-                                  Feasibility = c("Moderate: resource intensive proces",
+                                  Feasibility = c("Moderate: resource intensive process",
                                                   "Moderate: resource intensive process",
                                                   "Moderate-High: may need additional indicators for water clarity",
                                                   "High: many potential indicators for SAV drivers exist",
