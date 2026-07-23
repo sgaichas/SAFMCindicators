@@ -148,9 +148,9 @@ In this report, multiple approaches are used to outline practical next steps for
 
 ## 3+ Year Action Review
 
-Council Actions from March 2023-March 2026 meetings were reviewed based on posted Committee Reports and Motion Summaries for each meeting, with particular attention to directions to staff for agenda items. In addition, posted annual Council workplans and a current workplan provided by John Hadley were reviewed. Counts of actions by FMP were tallied and action types were classified into routine, tactical, occasional, and /or strategic decision types. In general, motions establishing catch limits and measures for stocks were considered tactical and routine, while motions considering planning or policy were considered strategic and occasional. The latter included setting research priorities, workplans, and terms of reference for assessments. Establishing long term open or closed areas was considered tactical but occasional. Approving Habitat and Ecosystem Advisory Panel agendas was considered strategic and routine. The purpose of this was not to track changes in timelines for particular actions (which clearly happens) but to identify current and potential entry points for ecosystem information.
+Council actions from March 2023-March 2026 meetings were reviewed based on posted committee reports and motion summaries for each meeting, with particular attention to directions to staff for agenda items. In addition, posted annual Council workplans and a current workplan provided by John Hadley were reviewed. Counts of actions by FMP were tallied and action types were classified into routine, tactical, occasional, and /or strategic decision types. In general, motions establishing catch limits and measures for stocks were considered tactical and routine, while motions considering planning or policy were considered strategic and occasional. The latter included setting research priorities, workplans, and terms of reference for assessments. Approving agendas for the Habitat and Ecosystem Advisory Panel was considered strategic (similar to setting priorities and workplans) and routine (because it happens annually). Establishing long term open or closed areas was considered tactical but occasional. The purpose of this was not to track changes in timelines for particular actions (which clearly happens) but to identify current and potential entry points for ecosystem information.
 
-Each summary motions document (and committee report, if relevant) starting in March 2023 and ending in March 2026 was examined and the number of motions by committee tallied, along with comments on the action type and inclusion or potential for inclusion of ecosystem information. Ecosystem information was considered to be included when explicitly mentioned in the motion or in the background material in the summary. Ecosystem information was considered to have the potential to be included in decisions regarding stock assessment and MSE terms of reference, assessment prioritization, evaluation of spawning closed areas or seasons, and allocation reviews. Full Council Closed Session motions related to committee or working group nominations were excluded from analysis. This information was entered into a table (see Appendix Table).
+Each summary motions document (and committee report, if relevant) starting in March 2023 and ending in March 2026 was examined and the number of motions by committee tallied, along with comments on the action type and inclusion or potential for inclusion of ecosystem information (e.g. involving social, economic, biological, habitat, climate, environmental, or other ocean use issues, questions, or tradeoffs). Ecosystem information was considered to be included when explicitly mentioned in the motion or in the background material in the summary. Ecosystem information was considered to have the potential to be included in decisions regarding stock assessment and MSE terms of reference, assessment prioritization, evaluation of spawning closed areas or seasons, multispecies considerations, and allocation reviews. While nearly any decision could involve ecosystem information by asking "is this decision robust to future ocean conditions?", this review applied expert judgement to highlight decisions that could benefit from specific ecosystem information or analyses. Therefore, the decisions highlighted are likely a minimum number where ecosystem information could be considered. Full Council Closed Session motions related to committee or working group nominations were excluded from analysis. This information was entered into a table (see [Online Appendix Table](https://sgaichas.github.io/SAFMCindicators/3YrsActions.html#Appendix-full_Motions_table)).
 
 
 ```{r motions}
@@ -312,7 +312,7 @@ Motions with direct ecosystem linkages included:
 flextable::flextable(motionsEcoLink) |>
   flextable::width(width = c(1,1,2,2)) |>
   flextable::theme_zebra() |>
-  flextable::set_caption("Motions with direct ecosystem linkages, March 2023 - March 2026")
+  flextable::set_caption("Motions with direct ecosystem linkages, March 2023 - March 2026.")
 ```
 
 Motions with opportunities to include ecosystem linkages were found across the Snapper Grouper Committee, the full Council, SEDAR, and other committees.  
@@ -345,7 +345,7 @@ Motions with potential ecosystem linkages included requesting ecosystem ToRs for
 flextable::flextable(motionsMaybeEcoLink) |>
   flextable::width(width = c(1,1,2,2)) |>
   flextable::theme_zebra() |>
-  flextable::set_caption("Motions with potential ecosystem linkages, March 2023 - March 2026")
+  flextable::set_caption("Motions with potential ecosystem linkages, March 2023 - March 2026. The How column reflects hypothetical potential linkages.")
 ```
 
 Overall, it is clear the SAFMC already integrates ecosystem considerations in management, and there is scope for integrating more within the current range of decisions. 

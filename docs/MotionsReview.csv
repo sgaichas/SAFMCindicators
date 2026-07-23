@@ -42,8 +42,8 @@ September2023,HABEBM,10,HabitatBlueprint,All,approve blueprint,strategic,occasio
 September2023,HABEBM,11,HEAP,All,approve AP job description,strategic,occasional,yes,approve HEAP job description,
 September2023,HABEBM,12,PolicyStatement,All,approve statement,strategic,occasional,yes,approve beach policy statement,beach policy
 September2023,HABEBM,13,HEAP,All,approve meeting agenda,strategic,routine,yes,"approve HEAP agenda: EFH, offshore wind, navy, space operations","EFH, offshore wind, navy, space operations"
-September2023,HABEBM,14,TimingTasks,All,develop finalize and request info,both,both,yes,evaluate land discharge impacts on reef and fishey,"AP meeting, workplan"
-September2023,SEDAR,15,SEDAR,SnowyGrouper;SpanishMackerel;Dolphin,approve scope of work,strategic,occasional,yes,evaluate distribution shifts or climate on Dolphin,"bias in rec landings, dist shifts or climate impacts Dolphin"
+September2023,HABEBM,14,TimingTasks,All,develop finalize and request info,both,both,yes,evaluate land discharge impacts on reef and fishery,"AP meeting, workplan"
+September2023,SEDAR,15,SEDAR,SnowyGrouper;SpanishMackerel;Dolphin,approve scope of work,strategic,occasional,yes,evaluate distribution shifts or climate on Dolphin (only),"bias in rec landings, dist shifts or climate impacts Dolphin"
 September2023,SG,18,Amendment 46,AllSnapperGrouper,approve purpose and need,strategic,occasional,no,,
 September2023,SG,19,Amendment 46,AllSnapperGrouper,remove to considered but rejected,strategic,occasional,no,,
 September2023,SG,20,Amendment 46,AllSnapperGrouper,remove to considered but rejected,strategic,occasional,no,,
@@ -51,7 +51,7 @@ September2023,SG,21,Amendment 46,AllSnapperGrouper,remove to considered but reje
 September2023,SG,22,Amendment 46,AllSnapperGrouper,remove to considered but rejected,strategic,occasional,no,,
 September2023,SG,23,NewAmendment,Gag;BlackGrouper,initiate framework action ,tactical,routine,no,,vessel limit 2 fish
 September2023,SG,24,NewAmendment,BlackSeaBass,include in framework amendment,tactical,routine,no,,on demand pot gear
-September2023,SG,25,TimingTasks,AllSnapperGrouper,approve project,strategic,occasional,maybe,request ecosystem reflections,what it means to me videos
+September2023,SG,25,TimingTasks,AllSnapperGrouper,approve project,strategic,occasional,maybe,"request ecosystem context during ""What it means to me"" video interviews",what it means to me videos
 September2023,SG,26,RegAmendment 35,RedSnapper,add to agenda,tactical,routine,no,,
 September2023,SG,27,TimingTasks,AllSnapperGrouper,develop finalize and request info,both,both,no,,switch out MRIP data in yellowtail snapper assessment
 December2023,CMP,17,FrameworkAmendment 13,SpanishMackerel,add action,strategic,occasional,maybe,evaluate ecosystem impacts on long term OY,modify long term OY
@@ -63,10 +63,10 @@ December2023,SG,22,Amendment 46,AllSnapperGrouper,select preferred alternative,s
 December2023,SG,23,Amendment 46,AllSnapperGrouper,select preferred alternative,strategic,occasional,no,,
 December2023,SG,24,Amendment 46,AllSnapperGrouper,approve all actions as modified,strategic,occasional,no,,
 December2023,SG,25,RegAmendment 36,Gag;BlackGrouper;BlackSeaBass,approve amendment scoping,tactical,routine,no,,
-December2023,SG,26,Amendment 55,Scamp;YellowmouthGrouper,select preferred alternative,strategic,routine,maybe,evaluate ecological connections within new comples,reorganize complex
-December2023,SG,27,Amendment 55,Scamp;YellowmouthGrouper,select preferred alternative,tactical,routine,maybe,multispecies msy proxy,msy proxy spr 40%
+December2023,SG,26,Amendment 55,Scamp;YellowmouthGrouper,select preferred alternative,strategic,routine,maybe,evaluate ecological connections within new complex,reorganize complex
+December2023,SG,27,Amendment 55,Scamp;YellowmouthGrouper,select preferred alternative,tactical,routine,maybe,multispecies MSY proxy,msy proxy spr 40%
 December2023,SG,28,Amendment 55,Scamp;YellowmouthGrouper,select preferred alternative,tactical,routine,maybe,multispecies F reference point,max F F40%
-December2023,SG,29,Amendment 55,Scamp;YellowmouthGrouper,select preferred alternative,tactical,routine,maybe,mulltispecies MSST,MSST 75% SSBMSY
+December2023,SG,29,Amendment 55,Scamp;YellowmouthGrouper,select preferred alternative,tactical,routine,maybe,multispecies MSST,MSST 75% SSBMSY
 December2023,SG,30,Amendment 55,Scamp;YellowmouthGrouper,select preferred alternative,tactical,routine,maybe,multispecies rebuilding plan,rebuild 10 years
 December2023,SG,31,Amendment 55,Scamp;YellowmouthGrouper,select preferred alternative,tactical,routine,maybe,multispecies ABC=ACL,ABC=ACL
 December2023,SG,32,Amendment 55,Scamp;YellowmouthGrouper,select preferred alternative,tactical,routine,no,,commercial accountability measures
@@ -76,7 +76,7 @@ December2023,SG/CMP/DH,35,NewAmendment,All,initiate amendment development,strate
 December2023,SG/CMP/DH,36,NewAmendment,All,control date,strategic,occasional,no,,
 December2023,SG,37,TimingTasks,All,develop finalize and request info,both,both,maybe,include ecosystem context in stock status letters,council input on stock status letters
 December2023,CS,38,ResearchPriorities,All,adopt,strategic,occasional,yes,"collect social, economic, biological, and environmental information",
-December2023,HABEBM,39,HEAP,All,approve meeting agenda,strategic,routine,yes,"approve HEAP agenda: EFH, offshore wind, river flow alteration, cirtizen science",
+December2023,HABEBM,39,HEAP,All,approve meeting agenda,strategic,routine,yes,"approve HEAP agenda: EFH, offshore wind, river flow alteration, citizen science",
 December2023,HABEBM,40,TimingTasks,All,develop finalize and request info,both,both,yes,review and further develop coral amendments,coral deepsea HAPC
 December2023,SEDAR,41,SEDAR,Hogfish,approve assessment ToRs,strategic,occasional,maybe,request ecosystem ToR,
 December2023,Council,42,AllocationReviewGuidelines,All,approve,strategic,occasional,no,,
@@ -132,15 +132,15 @@ March2025,Council,3,Comprehensive For-Hire Reporting Improvement Amendment,AllDo
 March2025,Council,4,TimingTasks,All,develop finalize and request info,both,both,yes,MOA with FL Keys NMS habitat collaboration,restore Beaufort NOAA lab
 March2025,HAB-S,5,Coral Amendment 11/Shrimp Amendment 12,Coral;Shrimp,specify alternatives,tactical,occasional,yes,establish shrimp fishery access area at coral HAPC boundary,
 March2025,HAB-S,6,TimingTasks,Coral;Shrimp,develop finalize and request info,tactical,occasional,maybe,consider ecosystem information in draft amendment,
-March2025,HABEBM,7,EFH,All,approve review letter,strategic,occasional,yes,updates food web and connectivity policy and includes info in EFH,
+March2025,HABEBM,7,EFH,All,approve review letter,strategic,occasional,yes,updates food web and connectivity policy and includes info on EFH,
 March2025,HABEBM,8,LivingShorelines,All,adopt definition,strategic,occasional,yes,defines living shorelines as supporting ecological resilience,
 March2025,HABEBM,9,HEAP,All,approve meeting agenda,strategic,routine,yes,"HEAP agenda: climate readiness, food web policy into EFH, EBM","climate readiness, food web policy into EFH"
 March2025,HABEBM,10,TimingTasks,All,develop finalize and request info,strategic,occasional,yes,discuss and develop IEA goals and objectives,IEA goals and objectives
 March2025,CMP,11,TimingTasks,AllMackerelCobia,develop finalize and request info,both,both,maybe,include any ecosystem information from port meetings in summaries,"stakeholder engagement, port meetings, spanish mackerel catch rec"
 March2025,SG,12,NewAmendment,AllSnapperGrouper,initiate amendment development,strategic,routine,no,,commercial permits and trip efficacy
 March2025,SG,13,NewAmendment,AllSnapperGrouper,initiate amendment development,tactical,routine,no,,aggregate rec bag limits to reduce rec dead discard
-March2025,SG,14,TimingTasks,AllSnapperGrouper,develop finalize and request info,both,both,maybe,"consider ecosystem information in shiny tool evaluating need for managmenet, MSY proxies, recreational seasons","shiny tool need for mgt? MSY proxies, rec season alignment"
-June2025,Council,1,TimingTasks,All,develop finalize and request info,both,both,maybe,consider ecosystem information from recent Dolphin journal articles,delay for hire reporting improvements amendment
+March2025,SG,14,TimingTasks,AllSnapperGrouper,develop finalize and request info,both,both,maybe,"consider ecosystem information in shiny tool evaluating need for management, MSY proxies, recreational seasons","shiny tool need for mgt? MSY proxies, rec season alignment"
+June2025,Council,1,TimingTasks,All,develop finalize and request info,both,both,maybe,highlight ecosystem information when summarizing recent Dolphin journal articles,delay for hire reporting improvements amendment
 June2025,CMP,1,TimingTasks,AllMackerelCobia,develop finalize and request info,both,both,no,,spanish mackerel assessment sooner?
 June2025,HAB-S,1,Coral Amendment 11/Shrimp Amendment 12,Coral;Shrimp,approve purpose and need,tactical,occasional,yes,balancing fishery and habitat objectives,
 June2025,HAB-S,2,Coral Amendment 11/Shrimp Amendment 12,Coral;Shrimp,approve modifications to alternatives,tactical,occasional,no,,

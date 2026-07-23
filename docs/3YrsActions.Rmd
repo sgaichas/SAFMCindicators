@@ -182,5 +182,4 @@ flextable::flextable(motions)
 ```
 
 
-# References
 
