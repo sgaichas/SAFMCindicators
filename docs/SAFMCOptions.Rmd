@@ -1070,48 +1070,21 @@ Overall, there are multiple options to address the challenges for including ecos
 
 ## Prototype Indicator Development
 
-Ocean data is available for the Southeast US coast, from multiple sources. Regional ocean models and global ocean models, including the NOAA MOM6 model [@ross_dynamically_2024]^(https://psl.noaa.gov/cefi_portal/) and Copernicus products (https://data.marine.copernicus.eu/products) including the Global Oceanic Reanalysis (GLORYS, [@jean-michel_copernicus_2021]^https://data.marine.copernicus.eu/product/GLOBAL_MULTIYEAR_PHY_001_030/description) already provide both hindcasts and forecasts of ocean temperature and salinity, as well as other ocean variables, for the South Atlantic. 
+Ocean data is available for the Southeast US coast, from multiple sources. Regional ocean models and global ocean models, including the [NOAA MOM6 model](https://psl.noaa.gov/cefi_portal/) [@ross_dynamically_2024] and [Copernicus products](https://data.marine.copernicus.eu/products) including the [Global Oceanic Reanalysis](https://data.marine.copernicus.eu/product/GLOBAL_MULTIYEAR_PHY_001_030/description) (GLORYS, [@jean-michel_copernicus_2021]) already provide both hindcasts and forecasts of ocean temperature and salinity, as well as other ocean variables, for the South Atlantic. 
 
-An ocean reanalysis consists of an ocean physics model that has incorporated ("assimilated") observational data collected from many instruments measuring the ocean. The model adjusts to match observational data where it exists, and fills in areas without observational data. While the general patterns in GLORYS compare well with independently collected ocean data, there can be differences at fine scales and in highly dynamic areas. Therefore, GLORYS is more appropriate for some applications than others, and comparisons with in situ measurements are encouraged. Validation of this model-based temperature indicator could be achieved with an expanded Citizen Science project; establishment of a formal Study Fleet such as that in the Northeast US [@jones_learning_2022] will be outlined if the indicator shows promise.  
+An ocean reanalysis consists of an ocean physics model that has incorporated ("assimilated") observational data collected from many instruments measuring the ocean. The model adjusts to match observational data where it exists, and fills in areas without observational data. While the general patterns in GLORYS compare well with independently collected ocean data, there can be differences at fine scales and in highly dynamic areas. Therefore, GLORYS is more appropriate for some applications than others, and comparisons with in situ measurements are encouraged. Validation of a model-based temperature indicator could be achieved with an expanded Citizen Science project or by establishment of a formal Study Fleet such as that in the Northeast US [@jones_learning_2022].  
 
 A prototype habitat indicator characterizing bottom temperature in space over time was developed using GLORYS data with a reproducible workflow based on workflows used in the Northeast US by NEFSC. The objective is to produce maps and time series indicating where and when bottom temperature conditions approach or exceed stressful levels relevant to particular species ranging from corals to targeted fish species. Stressful temperature levels for key species would need to be determined from literature or other studies if unknown. 
 
 This indicator can be used to compare seasonal spatial changes in temperature across years, and the same information can be expressed relative to a thermal tolerance threshold. For example, the number of days above a certain temperature for a given year can be visualized in space to determine whether certain areas have become too warm for the species in the area, and how long these conditions lasted.  
 
-The workflow is outlined here and all code will be provided so that this can be reproduced for other available information (salinity, currents, etc). The steps are first to pull the GLORYS data product of choice for the South Atlantic region from the Copernicus website, then to process the pulled data into indicator datasets, and finally to plot the indicators. This section outlines several interim steps and final results.
+The workflow is outlined here and all code will be provided so that this can be reproduced for other available information in the GLORYS datasets (salinity, currents, etc). The steps are first to pull the GLORYS data product of choice for the South Atlantic region from the Copernicus website, then to process the pulled data into indicator datasets, and finally to plot the indicators. This section outlines several interim steps and final results.
 
 ### Pull GLORYS bottom temperature
 
+The workflow pulls daily mean bottom temperature from the Copernicus website using code [here](https://sgaichas.github.io/SAFMCindicators/PrototypeOceanIndicator.html#21_Pull_GLORYS_bottom_temperature). There are separate files for each day of each year. The code for downloading is courtesy Joseph Caracappa, NOAA NMFS NEFSC, and was modified for the South Atlantic. Pulling 6 years of data took a laptop and home internet connection about 8 hours. All of the files pulled for the South Atlantic are found [here](https://github.com/sgaichas/SAFMCindicators/tree/main/GLORYS/SAtl) in folders for each year 2020-2025. 
 
-To use GLORYS information, users must register for a free account on the Copernicus website by clicking the [link at the top of the page](https://data.marine.copernicus.eu/register). Users supply an email and optional information on their organization (one can select Others) and then receive an email with a link to establish a password.
-
-While the code presented here is in R [@r_core_team_r_2023], [Python](https://docs.python.org/3/index.html) code is used to access GLORYS information because there is not a way to access in directly using R. Python can be installed using the R package [`reticulate`](https://rstudio.github.io/reticulate/) [@ushey_reticulate_2025] and the command `reticulate::install_miniconda()` if there is no preexisting Python installation. This installs [Miniconda](https://www.anaconda.com/docs/getting-started/miniconda/main), a lightweight distribution of Python. Because it is a minimal distribution, one or two packages need to be added as below. 
-
-For this script the python `pandas` package is required, which is installed using `reticulate::py_install("pandas")`
-
-Next, install the package from Copernicus that makes downloading the information easy:
-
-Install the `copernicusmarine` package using `reticulate::py_install("copernicusmarine", pip = TRUE)`
-
-Install `h5py`. `reticulate::py_install("h5py", pip = TRUE)`
-
-The dataset id used as a basis for the indicators here is `cmems_mod_glo_phy_my_0.083deg_P1D-m`
-
-With the username and password, the following code can be used to download data locally for processing. It is important to specify the latitude and longitude bounds of the data as well as the year(s). Downloading one year at a time makes for manageable files to process for spatial or time series indicators. The output directory is hardcoded below, this needs to change for use elsewhere.
-
-The code for downloading is courtesy Joseph Caracappa, NOAA NMFS NEFSC, and was modified for the South Atlantic. To highlight a box for the South Atlantic region, visit https://data.marine.copernicus.eu/product/GLOBAL_MULTIYEAR_PHY_001_030/download then select variables, draw a box around the South Atlantic area on the map, selected a year range, then click "automate" to generate a command line script. This script can be modified and put into the same framework as used above for the Northeast region. 
-
-Pulling 6 years of data took a laptop and home internet connection about 8 hours. 
-
-All of the files pulled for the South Atlantic are found at https://github.com/sgaichas/SAFMCindicators/tree/main/GLORYS/SAtl in folders for each year 2020-2025. 
-
-This describes a South Atlantic file for December 31, 2025 as pulled from Copernicus:
-
-```{r}
-tidync::tidync(here::here("GLORYS/SAtl/2025/GLORYS_REANALYSIS_2025-12-31.nc"))
-```
-
-Here is a plot this file:
+As an example of the daily information, we plot a South Atlantic file for December 31, 2025:
 
 ```{r}
 
@@ -1167,33 +1140,15 @@ dailybtplotSA(dec3125)
 
 ### Process GLORYS bottom temperature
 
-Joe Caracappa, NEFSC, wrote nearly all of the code used to produce these indicators for the Northeast US [State of the Ecosystem (SOE)](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf) reports. 
+Joe Caracappa, NEFSC, wrote nearly all of the code used to produce these indicators for the Northeast US [State of the Ecosystem (SOE)](https://www.fisheries.noaa.gov/new-england-mid-atlantic/ecosystems/state-ecosystem-reports-northeast-us-shelf) reports. Code was modified from publicly available repositories ([READ-EDAB_GLORYS](https://github.com/NEFSC/READ-EDAB-GLORYS/tree/main) and [READ_EDAB_Utilities](https://github.com/NEFSC/READ_EDAB_Utilities/tree/main)) maintained by NEFSC on GitHub. R [@r_core_team_r_2023] packages used in this workflow include `tidyverse` [@wickham_welcome_2019] for general data organization and visualization, `terra` [@hijmans_terra_2025] and `ncdf4` [@pierce_ncdf4_2025] for processing netCDF files downloaded from Copernicus, and `knitr` [@xie_knitr_2025; @xie_dynamic_2015 ; @stodden_knitr_2014], `rmarkdown` [@allaire_rmarkdown_2024; @xie_r_2018; @xie_r_2020], and `bookdown` [@xie_bookdown_2025; @xie_bookdown_2016] for producing reports in both .html and .pdf formats.
 
-R packages used in this workflow include `tidyverse` [@wickham_welcome_2019] for general data organization and visualization, `terra` [@hijmans_terra_2025] and `ncdf4` [@pierce_ncdf4_2025] for processing netCDF files downloaded from Copernicus, and `knitr` [@xie_knitr_2025; @xie_dynamic_2015 ; @stodden_knitr_2014], `rmarkdown` [@allaire_rmarkdown_2024; @xie_r_2018; @xie_r_2020], and `bookdown` [@xie_bookdown_2025; @xie_bookdown_2016] for producing reports in both .html and .pdf formats.
+Here the focus is on both spatial bottom temperature by season and the spatial indicator of days with bottom temperature over a certain threshold in a given year. These indicators are called [1bottom_temp_model_gridded`](https://noaa-edab.github.io/catalog/bottom_temp_model_gridded.html) and [`thermal_habitat_gridded`](https://noaa-edab.github.io/catalog/thermal_habitat_gridded.html), respectively, in the SOE. Functions to plot indicators are found in the `ecodata` [@beltz_ecodata_2025] package and in the NOAA-EDAB [ecodata](https://github.com/NOAA-EDAB/ecodata) GitHub repository. 
 
-Code for reading the file into time series or maps is found at the NEFSC GitHub at https://github.com/NEFSC/READ-EDAB-GLORYS/tree/main. This repo has a [fuller version of the pulling script](https://github.com/NEFSC/READ-EDAB-GLORYS/blob/main/data-raw/python/GLORYS_download_template_workflow.py) that adds variables like salinity or mixed layer depth and pulls them into variable specific folders. It could be modified simply by changing the min and max latitude and longitude values as above.
-
-Here the focus is on the spatial indicator of days with bottom temperature over a certain threshold in a given year. This indicator is called [`thermal_habitat_gridded`](https://noaa-edab.github.io/catalog/thermal_habitat_gridded.html) in the SOE. 
-
-The full set of SOE indicators using GLORYS bottom temperature are made by the script [make_GLORYS_bt_soe.R](https://github.com/NEFSC/READ-EDAB-GLORYS/blob/main/vignettes/make_GLORYS_bt_soe.R) but this demonstration does not attempt to make all of them.
-
-The script linked above also has functions to process the downloaded files into datasets for presentation as either time series or spatial datasets. It calls utility functions in this repository: https://github.com/NEFSC/READ_EDAB_Utilities/tree/main. The Utilities package should be installed so the functions can be used by other functions in READ-EDAB-GLORYS using code `devtools::install_github("https://github.com/NEFSC/READ_EDAB_Utilities")`This installed properly for this demonstrationa and all the utilities functions were available. A key required function is [`make_2d_deg_day_gridded`](https://github.com/NEFSC/READ_EDAB_Utilities/blob/main/R/make_2d_deg_day_gridded.R).  
-
-For this demonstration the EDAB-GLORYS functions could not be installed using `devtools::install_github("https://github.com/NEFSC/READ-EDAB-GLORYS")`due to a missing local file `EDAB.GLORYS/data/cold_pool/ROMS/roms_debiased_cold_pool_1959_1992.nc` This ROMS information is from a debiased Regional Ocean Modeling System (ROMS) model run for the Northeast US that provides bottom temerpature data from the 1950s to 1993, because the GLORYS dataset starts in 1993. This historical information is not available in the South Atlantic so indicator development must proceed without this dependency.  This can be solved by cloning the GitHub repository and building the package locally by commenting out lines 74-76 in [`make_cold_pool_extent_shp.R`](https://github.com/NEFSC/READ-EDAB-GLORYS/blob/main/R/make_cold_pool_extent_shp.R), a function not needed for the South Atlantic.
-
-The other EDAB-GLORYS functions worked locally for this demonstration. The initial processing from `make_GLORYS_bt_soe.R` was used to make only the gridded temperature plots.
-
-Finally, functions to plot indicators are found in the `ecodata` [@beltz_ecodata_2025] package and in the NOAA-EDAB GitHub ecodata repository, such as `plot_thermal_habitat_gridded`:  https://github.com/NOAA-EDAB/ecodata/blob/pre-production/R/plot_thermal_habitat_gridded.R 
-
-For this demonstration the `EDAB.GLORYS::make_bottom_temp_model_gridded` function code had to be changed to call `EDABUtilities::make_2d_summary_gridded` with an additional argument, `file.time = "daily"` to make it work with the files in their original downloaded format. Then running the code above worked for bottom temperature gridded. Alternatively, all daily files could be combined into one file for a year (not demonstrated here). A similar change was made in `EDAB.GLORYS::make_bottom_temp_model_annual` to change the call to `EDABUtilities::make_2d_summary_ts` to `file.time = "daily" instead of annual. This creates the plots as expected for seasonal gridded bottom temperature. 
-
-The dev branch version of the `EDAB.GLORYS::make_thermal_habitat_area` function that combines the daily GLORYS files into one annual file was required for estimating the number of days at each temperature for each year. 
-
-Finally, the underlying geography assumed in the code needed to change. A shape file is requred to run the code for the South Atlantic. For this demonstration, SA_EEZ_off_states from https://www.fisheries.noaa.gov/resource/map/defined-fishery-management-areas-south-atlantic-states-map-gis-data was used. `EDAB-GLORYS` functions have the Northeast ecosystem production untis (EPUs) hardcoded in them, so those parts of the function were re-written. Ultimately,  the entire South Atlantic region was used in the shapefile by removing the parts of code that mapped to individual EPUs, but this code could be put back in if there are subsets of the South Atlantic defined in a shape file that need separate indicators.
+Finally, a shape file is required to run the code for the South Atlantic. For this demonstration, [SA_EEZ_off_states](https://www.fisheries.noaa.gov/resource/map/defined-fishery-management-areas-south-atlantic-states-map-gis-data) was used. The entire South Atlantic region was used in the shapefile by removing the parts of code that mapped to subareas, but this can be modified if there are subsets of the South Atlantic defined in a shape file that need separate indicators.
 
 ### Visualize prototype bottom temperature indicators
 
-The spatial bottom temperature by season indicator was successfully produced for the South Atlantic. Here is a plot following the same code used in ecodata for the Northeast US. 
+The spatial bottom temperature by season indicator was successfully produced for the South Atlantic. These plots follow the same approach used in `ecodata` for the Northeast US. 
 
 ```{r}
 
@@ -1298,7 +1253,9 @@ csv <- here::here("GLORYS/SAtl-out/data/bottom_temp_model_gridded/GLORYS_bottom_
 plot_gridded_bt(bottom_temp_model_gridded_csv = csv, scale = "celsius")
 ```
 
-Finally, after troubleshooting the South Atlantic shapefile and abandoning subregions within it, the thermal habitat area and gridded indicators were successfully produced. Here is a visualization of the thermal habitat indicator for a single year looking at different temperature thresholds. The indicator is the number of days with bottom temperature **above** the temperature listed at the top of each plot for the year in the plot title. This can be an indicator of thermal stress for different species, depending on their temperature tolerance. Temperatures are in degrees C but can be converted to F if desired. 
+Here is a visualization of the thermal habitat indicator for a single year looking at different temperature thresholds. The indicator is the number of days with bottom temperature **above** the temperature listed at the top of each plot for the year in the plot title. This can be an indicator of thermal stress for different species, depending on their temperature tolerance. Temperatures are in degrees C but can be converted to F if desired. 
+
+If there were 0 days with bottom temperature above the given temperature, nothing appears on the plot. This is why the higher temperatures have less of the shelf covered. This approach can also be modified to fill with a neutral color instead. 
 
 ```{r}
   file.names = list.files(here::here("GLORYS/SAtl-out/data/thermal_habitat_gridded"), full.names = T)
@@ -1510,7 +1467,7 @@ p
 ```
 
 
-All of the South Atlantic indicator datasets are found at https://github.com/sgaichas/SAFMCindicators/tree/main/GLORYS/SAtl-out/data with a folder for each indicator.
+All of the South Atlantic indicator datasets are found [here](https://github.com/sgaichas/SAFMCindicators/tree/main/GLORYS/SAtl-out/data) with a folder for each indicator.
 
 This was a proof of concept, demonstrating that information is available for the South Atlantic region from global databases and can be processed with available code. Because code was already available, this took approximately one week of work (with the computer occasionally working at night to do long downloads or calculations).
 
